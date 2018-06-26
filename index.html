@@ -6,31 +6,32 @@
     chemical-reaction-lab
   </title>
   <meta name="description" content="chemical-reaction-lab">
-  <!-- <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script> -->
-  <!-- <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script> -->
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
   <!-- aframe extras -->
-  <!-- <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script> -->
   <!-- webcomponentsjs -->
   <!-- <script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.24/webcomponents-lite.min.js"></script> -->
   <!-- LRNWebComponents -->
   <!-- <link href="https://cdn.rawgit.com/LRNWebComponents/build/0.2.0/build/default/build.html" rel="import" /> -->
   <!-- include ar.js for A-Frame -->
   <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
-  <script src="app.js"></script>
+  <!-- <script src="app.js"></script> -->
 </head>
 
 <body>
   <a-scene physics>
       <!-- Player -->
-      <a-entity camera="userHeight: 1.6"
-                universal-controls
-                kinematic-body>
+      <a-entity camera
+                look-controls
+                wasd-controls=""
+                position="0 3 0">
       </a-entity>
 
       <a-collada-model src="assets/ChemRoom.dae" static-body></a-collada-model>
 
       <!-- Ground -->
-      <!-- <a-grid static-body></a-grid> -->
+      <!-- <a-grid static-body position="0 .1 0"></a-grid> -->
 
       <!-- Obstacles -->
       <!-- <a-box color="#39BB82"
