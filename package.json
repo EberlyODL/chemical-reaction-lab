@@ -1,0 +1,11 @@
+{
+  "name": "chemical-reaction-lab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EberlyODL/chemical-reaction-lab.git",
+  "author": "Michael Potter <mgp140@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aframe": "^0.8.2"
+  }
+}
