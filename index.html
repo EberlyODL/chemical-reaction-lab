@@ -16,25 +16,30 @@
   <!-- <link href="https://cdn.rawgit.com/LRNWebComponents/build/0.2.0/build/default/build.html" rel="import" /> -->
   <!-- include ar.js for A-Frame -->
   <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
-  <!-- <script src="app.js"></script> -->
+  <script src="selectable-component.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
-  <a-scene physics>
-      <!-- Player -->
-      <a-entity camera
-                look-controls
-                wasd-controls=""
-                position="0 3 0">
-      </a-entity>
+  <a-scene>
+    <!-- Player -->
+    <a-entity camera look-controls wasd-controls="" position="0 3 0">
+    </a-entity>
 
-      <a-collada-model src="assets/ChemRoom.dae" static-body></a-collada-model>
+    <a-collada-model src="assets/ChemRoom.dae" static-body position="0 .5 0"></a-collada-model>
 
-      <!-- Ground -->
-      <!-- <a-grid static-body position="0 .1 0"></a-grid> -->
+    <a-box selectable material="color:blue;" height="1" width="1" depth="1" position="0 3 -3"></a-box>
 
-      <!-- Obstacles -->
-      <!-- <a-box color="#39BB82"
+    <a-camera wasd-controls-enabled="false">
+      <a-cursor id="cursor" event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black"
+        fuse="true"></a-cursor>
+    </a-camera>
+
+    <!-- Ground -->
+    <!-- <a-grid static-body position="0 .1 0"></a-grid> -->
+
+    <!-- Obstacles -->
+    <!-- <a-box color="#39BB82"
              width="15" height="5" depth="3"
              position="8 2.5 -5"
              static-body></a-box>
