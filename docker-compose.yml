@@ -18,6 +18,8 @@ services:
       dockerfile: Dockerfile-parcel
     volumes:
       - .:/home/node/html
+      - /home/node/html/node_modules
     ports:
       - ${PORT}:${PORT}
-    command: ["parcel", "index.html", "-p", "${PORT}"]
+      - ${HMR_PORT}:${HMR_PORT}
+    command: ["parcel", "index.html", "-p", "${PORT}", "--hmr-port", "${HMR_PORT}"]
