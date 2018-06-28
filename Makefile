@@ -5,7 +5,17 @@ USER=$(shell whoami)
 start:
 	docker-compose up
 
+build:
+	docker-compose build
+
+connect:
+	docker-compose run parcel bash
+
+clear-cache:
+	rm -rf ./.cache
+
 clean:
+	rm -rf ./.cache
 	docker-compose down --remove-orphans -v
 
 getboxfiles:
