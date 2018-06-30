@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({17:[function(require,module,exports) {
+})({97:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -290,7 +290,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],20:[function(require,module,exports) {
+},{}],101:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -443,7 +443,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],22:[function(require,module,exports) {
+},{}],100:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -529,14 +529,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],21:[function(require,module,exports) {
+},{}],99:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],16:[function(require,module,exports) {
+},{}],96:[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -2329,7 +2329,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":20,"ieee754":22,"isarray":21,"buffer":16}],9:[function(require,module,exports) {
+},{"base64-js":101,"ieee754":100,"isarray":99,"buffer":96}],8:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 var process = require("process");
@@ -76201,7 +76201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}, { "./util.js": 181 }] }, {}, [148])(148);
 });
 //# sourceMappingURL=aframe-master.js.map
-},{"process":17,"buffer":16}],8:[function(require,module,exports) {
+},{"process":97,"buffer":96}],7:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -118531,7 +118531,7 @@ exports.Projector = Projector;
 exports.CanvasRenderer = CanvasRenderer;
 exports.SceneUtils = SceneUtils;
 exports.LensFlare = LensFlare;
-},{}],37:[function(require,module,exports) {
+},{}],30:[function(require,module,exports) {
 var EPS = 0.1;
 
 module.exports = AFRAME.registerComponent('checkpoint-controls', {
@@ -118622,7 +118622,7 @@ module.exports = AFRAME.registerComponent('checkpoint-controls', {
     offset.copy(targetPosition).sub(position);
   }
 });
-},{}],66:[function(require,module,exports) {
+},{}],90:[function(require,module,exports) {
 module.exports = Object.assign(function GamepadButton() {}, {
 	FACE_1: 0,
 	FACE_2: 1,
@@ -118644,7 +118644,7 @@ module.exports = Object.assign(function GamepadButton() {}, {
 
 	VENDOR: 16
 });
-},{}],65:[function(require,module,exports) {
+},{}],89:[function(require,module,exports) {
 function GamepadButtonEvent(type, index, details) {
   this.type = type;
   this.index = index;
@@ -118653,7 +118653,7 @@ function GamepadButtonEvent(type, index, details) {
 }
 
 module.exports = GamepadButtonEvent;
-},{}],38:[function(require,module,exports) {
+},{}],29:[function(require,module,exports) {
 /**
  * Gamepad controls for A-Frame.
  *
@@ -118937,7 +118937,7 @@ module.exports = AFRAME.registerComponent('gamepad-controls', {
     return this.getGamepad().id;
   }
 });
-},{"../../lib/GamepadButton":66,"../../lib/GamepadButtonEvent":65}],61:[function(require,module,exports) {
+},{"../../lib/GamepadButton":90,"../../lib/GamepadButtonEvent":89}],84:[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /**
@@ -119682,7 +119682,7 @@ var define;
     event.locale = '';
   };
 })(window);
-},{}],39:[function(require,module,exports) {
+},{}],31:[function(require,module,exports) {
 require('../../lib/keyboard.polyfill');
 
 var MAX_DELTA = 0.2,
@@ -119844,7 +119844,7 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
   }
 
 });
-},{"../../lib/keyboard.polyfill":61}],40:[function(require,module,exports) {
+},{"../../lib/keyboard.polyfill":84}],32:[function(require,module,exports) {
 /**
  * Touch-to-move-forward controls for mobile.
  */
@@ -119918,7 +119918,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
     e.preventDefault();
   }
 });
-},{}],41:[function(require,module,exports) {
+},{}],34:[function(require,module,exports) {
 /**
  * Movement Controls
  *
@@ -120128,7 +120128,7 @@ module.exports = AFRAME.registerComponent('movement-controls', {
     };
   }()
 });
-},{}],42:[function(require,module,exports) {
+},{}],33:[function(require,module,exports) {
 /**
  * 3dof (Gear VR, Daydream) controls for mobile.
  */
@@ -120210,14 +120210,14 @@ module.exports = AFRAME.registerComponent('trackpad-controls', {
   }
 
 });
-},{}],28:[function(require,module,exports) {
+},{}],19:[function(require,module,exports) {
 require('./checkpoint-controls');
 require('./gamepad-controls');
 require('./keyboard-controls');
 require('./touch-controls');
 require('./movement-controls');
 require('./trackpad-controls');
-},{"./checkpoint-controls":37,"./gamepad-controls":38,"./keyboard-controls":39,"./touch-controls":40,"./movement-controls":41,"./trackpad-controls":42}],31:[function(require,module,exports) {
+},{"./checkpoint-controls":30,"./gamepad-controls":29,"./keyboard-controls":31,"./touch-controls":32,"./movement-controls":34,"./trackpad-controls":33}],35:[function(require,module,exports) {
 var LoopMode = {
   once: THREE.LoopOnce,
   repeat: THREE.LoopRepeat,
@@ -120337,7 +120337,7 @@ function wildcardToRegExp(s) {
 function regExpEscape(s) {
   return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
 }
-},{}],58:[function(require,module,exports) {
+},{}],87:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
@@ -123485,7 +123485,7 @@ THREE.LoaderUtils = {
     return a;
   }
 })();
-},{}],32:[function(require,module,exports) {
+},{}],36:[function(require,module,exports) {
 THREE.FBXLoader = require('../../lib/FBXLoader');
 
 /**
@@ -123523,7 +123523,7 @@ module.exports = AFRAME.registerComponent('fbx-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/FBXLoader":58}],59:[function(require,module,exports) {
+},{"../../lib/FBXLoader":87}],86:[function(require,module,exports) {
 /**
  * Source: https://github.com/Adobe-Marketing-Cloud/fetch-script
  */
@@ -123601,7 +123601,7 @@ function fetchScript(settings) {
 }
 
 module.exports = fetchScript;
-},{}],33:[function(require,module,exports) {
+},{}],40:[function(require,module,exports) {
 var fetchScript = require('../../lib/fetch-script')();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
@@ -123662,7 +123662,7 @@ module.exports = AFRAME.registerComponent('gltf-model-legacy', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/fetch-script":59}],35:[function(require,module,exports) {
+},{"../../lib/fetch-script":86}],37:[function(require,module,exports) {
 /**
  * json-model
  *
@@ -123721,7 +123721,7 @@ module.exports = AFRAME.registerComponent('json-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],34:[function(require,module,exports) {
+},{}],38:[function(require,module,exports) {
 /**
  * object-model
  *
@@ -123777,7 +123777,7 @@ module.exports = AFRAME.registerComponent('object-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],60:[function(require,module,exports) {
+},{}],85:[function(require,module,exports) {
 /**
  * @author Wei Meng / http://about.me/menway
  *
@@ -124203,7 +124203,7 @@ THREE.PLYLoader.prototype = {
   }
 
 };
-},{}],36:[function(require,module,exports) {
+},{}],39:[function(require,module,exports) {
 /**
  * ply-model
  *
@@ -124284,14 +124284,14 @@ function createModel(geometry) {
     shininess: 0
   }));
 }
-},{"../../lib/PLYLoader":60}],26:[function(require,module,exports) {
+},{"../../lib/PLYLoader":85}],21:[function(require,module,exports) {
 require('./animation-mixer');
 require('./fbx-model');
 require('./gltf-model-legacy');
 require('./json-model');
 require('./object-model');
 require('./ply-model');
-},{"./animation-mixer":31,"./fbx-model":32,"./gltf-model-legacy":33,"./json-model":35,"./object-model":34,"./ply-model":36}],43:[function(require,module,exports) {
+},{"./animation-mixer":35,"./fbx-model":36,"./gltf-model-legacy":40,"./json-model":37,"./object-model":38,"./ply-model":39}],45:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('checkpoint', {
   schema: {
     offset: { default: { x: 0, y: 0, z: 0 }, type: 'vec3' }
@@ -124330,7 +124330,7 @@ module.exports = AFRAME.registerComponent('checkpoint', {
     return this.offset.copy(this.data.offset);
   }
 });
-},{}],44:[function(require,module,exports) {
+},{}],46:[function(require,module,exports) {
 /**
  * @param  {Array<THREE.Material>|THREE.Material} material
  * @return {Array<THREE.Material>}
@@ -124463,7 +124463,7 @@ module.exports = AFRAME.registerComponent('cube-env-map', {
     this.el.sceneEl.object3D.background = texture;
   }
 });
-},{}],45:[function(require,module,exports) {
+},{}],47:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124542,7 +124542,7 @@ module.exports = AFRAME.registerComponent('grab', {
     this.system.addConstraint(this.constraint);
   }
 });
-},{}],46:[function(require,module,exports) {
+},{}],48:[function(require,module,exports) {
 var ACCEL_G = -9.8,
     // m/s^2
 EASING = -15; // m/s^2
@@ -124606,7 +124606,7 @@ module.exports = AFRAME.registerComponent('jump-ability', {
     this.numJumps = 0;
   }
 });
-},{}],47:[function(require,module,exports) {
+},{}],49:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124824,7 +124824,7 @@ module.exports = AFRAME.registerComponent('kinematic-body', {
     return Math.abs(hitNormal.y) > Math.abs(groundNormal.y) ? hitNormal : groundNormal;
   }
 });
-},{}],48:[function(require,module,exports) {
+},{}],50:[function(require,module,exports) {
 /**
  * Apply this component to models that looks "blocky", to have Three.js compute
  * vertex normals on the fly for a "smoother" look.
@@ -124838,7 +124838,7 @@ module.exports = AFRAME.registerComponent('mesh-smooth', {
     });
   }
 });
-},{}],49:[function(require,module,exports) {
+},{}],51:[function(require,module,exports) {
 /**
  * Recursively applies a MeshNormalMaterial to the entity, such that
  * face colors are determined by their orientation. Helpful for
@@ -124863,7 +124863,7 @@ module.exports = AFRAME.registerComponent('normal-material', {
     });
   }
 });
-},{}],50:[function(require,module,exports) {
+},{}],52:[function(require,module,exports) {
 /**
  * Based on aframe/examples/showcase/tracked-controls.
  *
@@ -125026,7 +125026,7 @@ module.exports = AFRAME.registerComponent('sphere-collider', {
     this.el.emit('hitend', { el: targetEl });
   }
 });
-},{}],30:[function(require,module,exports) {
+},{}],20:[function(require,module,exports) {
 require('./checkpoint');
 require('./cube-env-map');
 require('./grab');
@@ -125035,7 +125035,7 @@ require('./kinematic-body');
 require('./mesh-smooth');
 require('./normal-material');
 require('./sphere-collider');
-},{"./checkpoint":43,"./cube-env-map":44,"./grab":45,"./jump-ability":46,"./kinematic-body":47,"./mesh-smooth":48,"./normal-material":49,"./sphere-collider":50}],55:[function(require,module,exports) {
+},{"./checkpoint":45,"./cube-env-map":46,"./grab":47,"./jump-ability":48,"./kinematic-body":49,"./mesh-smooth":50,"./normal-material":51,"./sphere-collider":52}],63:[function(require,module,exports) {
 /**
  * nav-mesh
  *
@@ -125075,7 +125075,7 @@ module.exports = AFRAME.registerComponent('nav-mesh', {
     this.hasLoadedNavMesh = true;
   }
 });
-},{}],56:[function(require,module,exports) {
+},{}],64:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('nav-agent', {
   schema: {
     destination: { type: 'vec3' },
@@ -125178,7 +125178,7 @@ module.exports = AFRAME.registerComponent('nav-agent', {
     };
   }()
 });
-},{}],70:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125509,7 +125509,7 @@ var Utils = function () {
 }();
 
 module.exports = Utils;
-},{}],71:[function(require,module,exports) {
+},{}],98:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125660,7 +125660,7 @@ var BinaryHeap = function () {
 }();
 
 module.exports = BinaryHeap;
-},{}],67:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125802,7 +125802,7 @@ var AStar = function () {
 }();
 
 module.exports = AStar;
-},{"./BinaryHeap":71,"./utils.js":70}],68:[function(require,module,exports) {
+},{"./BinaryHeap":98,"./utils.js":92}],93:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126025,7 +126025,7 @@ var Builder = function () {
 }();
 
 module.exports = Builder;
-},{"./utils":70}],69:[function(require,module,exports) {
+},{"./utils":92}],94:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126133,7 +126133,7 @@ var Channel = function () {
 }();
 
 module.exports = Channel;
-},{"./utils":70}],64:[function(require,module,exports) {
+},{"./utils":92}],91:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126435,7 +126435,7 @@ var Group = {}; // jshint ignore:line
 var Node = {}; // jshint ignore:line
 
 module.exports = Path;
-},{"./utils":70,"./AStar":67,"./Builder":68,"./Channel":69}],57:[function(require,module,exports) {
+},{"./utils":92,"./AStar":95,"./Builder":93,"./Channel":94}],65:[function(require,module,exports) {
 var Path = require('three-pathfinding');
 
 var pathfinder = new Path();
@@ -126530,11 +126530,11 @@ module.exports = AFRAME.registerSystem('nav', {
     return pathfinder.clampStep(start, end, node, ZONE, groupID, endTarget);
   }
 });
-},{"three-pathfinding":64}],29:[function(require,module,exports) {
+},{"three-pathfinding":91}],22:[function(require,module,exports) {
 require('./nav-mesh');
 require('./nav-agent');
 require('./system');
-},{"./nav-mesh":55,"./nav-agent":56,"./system":57}],51:[function(require,module,exports) {
+},{"./nav-mesh":63,"./nav-agent":64,"./system":65}],42:[function(require,module,exports) {
 /**
  * Flat grid.
  *
@@ -126559,7 +126559,7 @@ module.exports = AFRAME.registerPrimitive('a-grid', {
     src: 'material.src'
   }
 });
-},{}],62:[function(require,module,exports) {
+},{}],83:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG_TO_RAD: .0174532925, RAD_TO_DEG: 57.2957795, SQRT3: Math.sqrt(3), TILE: "tile", ENT: "entity", STR: "structure", HEX: "hex", SQR: "square", ABS: "abstract" };vg.Board = function (e, t) {
@@ -127157,7 +127157,7 @@ var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG
     }, t.open("GET", s, !0), t.setRequestHeader("Accept", "application/json"), t.setRequestHeader("Content-Type", "application/json"), t.send("");
   } };
 //# sourceMappingURL=hex-grid.min.js.map
-},{}],63:[function(require,module,exports) {
+},{}],88:[function(require,module,exports) {
 module.exports = {
   "size": 5,
   "cellSize": 10,
@@ -127221,7 +127221,7 @@ module.exports = {
     "userData": {}
   }]
 };
-},{}],54:[function(require,module,exports) {
+},{}],44:[function(require,module,exports) {
 var vg = require('../../lib/hex-grid.min.js');
 var defaultHexGrid = require('../../lib/default-hex-grid');
 
@@ -127278,7 +127278,7 @@ module.exports.Component = AFRAME.registerComponent('hexgrid', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/hex-grid.min.js":62,"../../lib/default-hex-grid":63}],52:[function(require,module,exports) {
+},{"../../lib/hex-grid.min.js":83,"../../lib/default-hex-grid":88}],41:[function(require,module,exports) {
 /**
  * Flat-shaded ocean primitive.
  *
@@ -127377,7 +127377,7 @@ module.exports.Component = AFRAME.registerComponent('ocean', {
     this.mesh.geometry.verticesNeedUpdate = true;
   }
 });
-},{}],53:[function(require,module,exports) {
+},{}],43:[function(require,module,exports) {
 /**
  * Tube following a custom path.
  *
@@ -127438,18 +127438,18 @@ module.exports.Component = AFRAME.registerComponent('tube', {
     if (this.mesh) this.el.removeObject3D('mesh');
   }
 });
-},{}],27:[function(require,module,exports) {
+},{}],23:[function(require,module,exports) {
 require('./a-grid');
 require('./a-hexgrid');
 require('./a-ocean');
 require('./a-tube');
-},{"./a-grid":51,"./a-hexgrid":54,"./a-ocean":52,"./a-tube":53}],10:[function(require,module,exports) {
+},{"./a-grid":42,"./a-hexgrid":44,"./a-ocean":41,"./a-tube":43}],9:[function(require,module,exports) {
 require('./src/controls');
 require('./src/loaders');
 require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
-},{"./src/controls":28,"./src/loaders":26,"./src/misc":30,"./src/pathfinding":29,"./src/primitives":27}],11:[function(require,module,exports) {
+},{"./src/controls":19,"./src/loaders":21,"./src/misc":20,"./src/pathfinding":22,"./src/primitives":23}],10:[function(require,module,exports) {
 document.registerElement('a-timeline');
 document.registerElement('a-timeline-group');
 document.registerElement('a-timeline-animation');
@@ -127650,7 +127650,92 @@ var registerSelectable = function registerSelectable() {
 };
 
 module.exports = registerSelectable();
-},{"aframe":9}],4:[function(require,module,exports) {
+},{"aframe":8}],79:[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+require("aframe");
+var registerCameraDirector = function registerCameraDirector() {
+    AFRAME.registerComponent('camera-director', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {}
+    });
+};
+exports["default"] = registerCameraDirector();
+},{"aframe":8}],87:[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+var Positions;
+(function (Positions) {
+    Positions["default"] = "default";
+    Positions["stockroom"] = "stockroom";
+})(Positions = exports.Positions || (exports.Positions = {}));
+var Cameras;
+(function (Cameras) {
+    Cameras["camera1"] = "camera1";
+})(Cameras = exports.Cameras || (exports.Cameras = {}));
+exports.positions = [{
+    id: 'default',
+    position: '1 1 1',
+    rotation: {
+        x: 0, y: 0, z: 0
+    }
+}, {
+    id: 'stockroom',
+    position: '-15.230 5.010 4.950',
+    rotation: {
+        x: 0, y: 90, z: 0
+    }
+}];
+},{}],133:[function(require,module,exports) {
+"use strict";
+
+exports.__esModule = true;
+var variables_1 = require("./variables");
+exports["default"] = function (position) {
+    return variables_1.positions.find(function (i) {
+        return i.id === position;
+    });
+};
+},{"./variables":87}],80:[function(require,module,exports) {
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+    return mod && mod.__esModule ? mod : { "default": mod };
+};
+exports.__esModule = true;
+require("aframe");
+var getCameraPosition_1 = __importDefault(require("./getCameraPosition"));
+var registerComponent = function registerComponent() {
+    AFRAME.registerComponent('camera-cycle', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {
+            var scene = document.querySelector('a-scene');
+            var camera = document.querySelector('#camera1');
+            this.el.addEventListener('click', function () {
+                updateCameraPosition(camera, 'stockroom');
+            });
+        }
+    });
+};
+var updateCameraPosition = function updateCameraPosition(el, position) {
+    var p = getCameraPosition_1["default"](position);
+    el.setAttribute('position', p.position);
+    el.setAttribute('rotation', p.rotation);
+};
+exports["default"] = registerComponent();
+},{"aframe":8,"./getCameraPosition":133}],126:[function(require,module,exports) {
+'use strict';
+
+require('./camera-director');
+
+require('./camera-cycle-component');
+},{"./camera-director":79,"./camera-cycle-component":80}],4:[function(require,module,exports) {
 'use strict';
 
 require('aframe');
@@ -127662,7 +127747,9 @@ require('aframe-extras');
 require('aframe-animation-timeline-component');
 
 require('./selectable-component');
-},{"aframe":9,"three":8,"aframe-extras":10,"aframe-animation-timeline-component":11,"./selectable-component":6}],72:[function(require,module,exports) {
+
+require('./camera');
+},{"aframe":8,"three":7,"aframe-extras":9,"aframe-animation-timeline-component":10,"./selectable-component":6,"./camera":126}],102:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -127832,5 +127919,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[72,4], null)
+},{}]},{},[102,4], null)
 //# sourceMappingURL=/app.78938e1f.map

@@ -13,5 +13,8 @@
   },
   "scripts": {
     "start": "parcel src/index.html"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
   }
 }
