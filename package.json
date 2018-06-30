@@ -9,7 +9,8 @@
     "aframe": "^0.8.2",
     "aframe-animation-timeline-component": "^1.5.0",
     "aframe-extras": "^4.1.2",
-    "three": "^0.94.0"
+    "three": "^0.94.0",
+    "lit-html": "0.10.2"
   },
   "scripts": {
     "start": "parcel src/index.html"
