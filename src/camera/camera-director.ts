@@ -1,4 +1,5 @@
 import 'aframe'
+declare const AFRAME:any
 
 const registerCameraDirector = () => {
   AFRAME.registerComponent('camera-director', {

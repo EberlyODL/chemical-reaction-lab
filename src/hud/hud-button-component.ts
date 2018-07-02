@@ -17,13 +17,10 @@ const register = () => {
           }
           if (id === 'hud-stockroom-jump') {
             switchCameraPosition(Positions.stockroom);
+            // AFRAME.scenes[0].emit('decreaseScore', {points: 1});
+            // AFRAME.scenes[0].emit('removeInventoryItem', InventoryList.bottle1); 
           }
         }
-      })
-
-      this.el.addEventListener('mouseover', (e:any) => {
-        // scale down just a tad
-        this.el.setAttribute('scale', '.9 .9 .9');
       })
     },
 

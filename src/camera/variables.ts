@@ -22,7 +22,7 @@ export interface RotationAttribute {
 export const positions: Position[] = [
   {
     id: 'default',
-    position: '0 5 0',
+    position: '1 5 -4',
     rotation: {
       x: 0, y: -90, z: 0
     }

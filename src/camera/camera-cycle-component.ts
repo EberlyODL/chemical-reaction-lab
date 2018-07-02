@@ -13,8 +13,7 @@ const registerComponent = () => {
       this.el.addEventListener('click', () => {
         updateCameraPosition(camera, 'stockroom')
       })
-    },
-
+    }
   })
 }
 

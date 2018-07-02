@@ -20,6 +20,7 @@ clean:
 
 getboxfiles:
 	cp /Users/$(USER)/Box\ Sync/b-odl\ Shared/Chemical\ Reaction\ Lab/chemlablayout.gltf dist/assets/chemlablayout.gltf
+	cp /Users/$(USER)/Box\ Sync/b-odl\ Shared/Chemical\ Reaction\ Lab/OBJs/ dist/assets/OBJs
 
 deploy:
 	surge -d odl-crl.surge.sh dist
