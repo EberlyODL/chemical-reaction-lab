@@ -20,18 +20,23 @@
     <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="0 11 0" rotation="-90 0 0"></a-plane>
     <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087" rotation="-90 0 0" material="" geometry=""></a-plane>
 
-    <a-entity id="camera1" position="0 5 0" rotation="0 -90 0" wasd-controls="enabled:true;">
+    <a-entity id="camera1" position="0 5 0" rotation="0 -90 0">
 
       <!-- Heads up display -->
-      <a-entity hud="" position="0 1.69 -0.1" rotation="45 0 0" scale="0.53 0.49 0.39">
-        <a-plane material="color:black" width=".3" height=".2" geometry="" scale="0.4 0.4 0.4">
+      <a-entity hud="" position="1.4 1.6 -.3" look-at="[camera]">
+        <!-- hud button -->
+        <a-plane hud-button="" id="hud-stockroom-jump" material="color:black" width=".3" height=".2" geometry="">
           <a-text text="width:1;value:Stockroom;align:center"></a-text>
+        </a-plane>
+        <!-- hud button -->
+        <a-plane hud-button="" id="hud-default-jump" material="color:black" width=".3" height=".2" geometry="" position=".4 0 0">
+          <a-text text="width:1;value:Lab;align:center"></a-text>
         </a-plane>
       </a-entity>
 
       <!-- Camera -->
-      <a-camera look-controls="true" wasd-controls="enabled:false;">
-        <a-cursor id="cursor" event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black" fuse="true"></a-cursor>
+      <a-camera id="camera" look-controls="true" wasd-controls="enabled:false;">
+        <a-cursor id="cursor" color="orange" fuse="true"></a-cursor>
       </a-camera>
 
       <!-- <a-box material="color: red" camera-cycle position="0 1 -1" scale=".1 .1 .1"></a-box> -->
