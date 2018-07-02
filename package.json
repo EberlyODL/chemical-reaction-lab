@@ -16,6 +16,9 @@
     "start": "parcel src/index.html"
   },
   "devDependencies": {
-    "typescript": "^2.9.2"
+    "parcel-bundler": "^1.9.3",
+    "tslib": "^1.9.3",
+    "typescript": "^2.9.2",
+    "typescript-lit-html-plugin": "^0.3.1"
   }
 }

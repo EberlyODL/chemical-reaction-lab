@@ -1,8 +1,8 @@
 version: '3'
 services:
-  
+
   parcel:
-    build: .
+    image: heymp/chemical-reaction-lab
     volumes:
       - .:/home/node/html
       - /home/node/html/node_modules

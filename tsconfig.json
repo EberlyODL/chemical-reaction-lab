@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "ESNext",
+    "lib": ["dom", "es2015", "es2015.collection"],
+    "importHelpers": true,
+    "strict": true,
+    "moduleResolution": "node"
+  }
+ }
