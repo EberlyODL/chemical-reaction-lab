@@ -1,11 +1,12 @@
 import 'aframe'
 import 'aframe-state-component'
+import { render, html } from "lit-html";
 declare const AFRAME:any
 
 const register = () => {
   AFRAME.registerComponent('lab-table', {
     init: function () {
-      console.log('onStateUpdate')
+      // this.el.appendChgil
     },
     onStateUpdate: function (state:any) {
       console.log(state)

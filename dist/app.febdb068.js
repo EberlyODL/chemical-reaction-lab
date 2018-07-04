@@ -128786,7 +128786,7 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":7,"./variables":160}],179:[function(require,module,exports) {
+},{"aframe":7,"./variables":160}],12:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -128800,7 +128800,7 @@ require('aframe-state-component');
 var register = function register() {
     AFRAME.registerComponent('lab-table', {
         init: function init() {
-            console.log('onStateUpdate');
+            // this.el.appendChgil
         },
         onStateUpdate: function onStateUpdate(state) {
             console.log(state);
@@ -128841,7 +128841,7 @@ document.addEventListener('DOMContentLoaded', function () {
     AFRAME.scenes[0].emit('changeCameraPosition', _variables.Positions.default);
   });
 });
-},{"aframe":7,"three":10,"aframe-extras":8,"aframe-look-at-component":122,"./state/state-component":144,"./selectable-component":6,"./camera":20,"./hud/hud-button-component":130,"./inventory/inventory-item-component":163,"./lab-table/lab-table-component":179,"./camera/variables":115}],123:[function(require,module,exports) {
+},{"aframe":7,"three":10,"aframe-extras":8,"aframe-look-at-component":122,"./state/state-component":144,"./selectable-component":6,"./camera":20,"./hud/hud-button-component":130,"./inventory/inventory-item-component":163,"./lab-table/lab-table-component":12,"./camera/variables":115}],77:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -128870,7 +128870,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54824' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52651' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -129011,5 +129011,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[123,4], null)
+},{}]},{},[77,4], null)
 //# sourceMappingURL=/app.febdb068.map
