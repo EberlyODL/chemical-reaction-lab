@@ -10,7 +10,7 @@ const register = () => {
     init: function () {
       // add event listener for scene changes
       this.el.addEventListener('click', (e:any) => {
-        const id = e.target.id
+        const id = this.el.id
         if (id) {
           if (id === 'hud-default-jump') {
             switchCameraPosition(Positions.default);

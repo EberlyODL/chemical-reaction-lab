@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({31:[function(require,module,exports) {
+})({143:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -290,7 +290,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],35:[function(require,module,exports) {
+},{}],159:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -443,7 +443,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],33:[function(require,module,exports) {
+},{}],160:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -529,14 +529,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],34:[function(require,module,exports) {
+},{}],158:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],32:[function(require,module,exports) {
+},{}],142:[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -2329,7 +2329,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":35,"ieee754":33,"isarray":34,"buffer":32}],10:[function(require,module,exports) {
+},{"base64-js":159,"ieee754":160,"isarray":158,"buffer":142}],8:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 var process = require("process");
@@ -76201,7 +76201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}, { "./util.js": 181 }] }, {}, [148])(148);
 });
 //# sourceMappingURL=aframe-master.js.map
-},{"process":31,"buffer":32}],9:[function(require,module,exports) {
+},{"process":143,"buffer":142}],10:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -118531,7 +118531,7 @@ exports.Projector = Projector;
 exports.CanvasRenderer = CanvasRenderer;
 exports.SceneUtils = SceneUtils;
 exports.LensFlare = LensFlare;
-},{}],56:[function(require,module,exports) {
+},{}],112:[function(require,module,exports) {
 var EPS = 0.1;
 
 module.exports = AFRAME.registerComponent('checkpoint-controls', {
@@ -118622,7 +118622,7 @@ module.exports = AFRAME.registerComponent('checkpoint-controls', {
     offset.copy(targetPosition).sub(position);
   }
 });
-},{}],78:[function(require,module,exports) {
+},{}],138:[function(require,module,exports) {
 module.exports = Object.assign(function GamepadButton() {}, {
 	FACE_1: 0,
 	FACE_2: 1,
@@ -118644,7 +118644,7 @@ module.exports = Object.assign(function GamepadButton() {}, {
 
 	VENDOR: 16
 });
-},{}],79:[function(require,module,exports) {
+},{}],139:[function(require,module,exports) {
 function GamepadButtonEvent(type, index, details) {
   this.type = type;
   this.index = index;
@@ -118653,7 +118653,7 @@ function GamepadButtonEvent(type, index, details) {
 }
 
 module.exports = GamepadButtonEvent;
-},{}],57:[function(require,module,exports) {
+},{}],113:[function(require,module,exports) {
 /**
  * Gamepad controls for A-Frame.
  *
@@ -118937,7 +118937,7 @@ module.exports = AFRAME.registerComponent('gamepad-controls', {
     return this.getGamepad().id;
   }
 });
-},{"../../lib/GamepadButton":78,"../../lib/GamepadButtonEvent":79}],80:[function(require,module,exports) {
+},{"../../lib/GamepadButton":138,"../../lib/GamepadButtonEvent":139}],137:[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /**
@@ -119682,7 +119682,7 @@ var define;
     event.locale = '';
   };
 })(window);
-},{}],58:[function(require,module,exports) {
+},{}],114:[function(require,module,exports) {
 require('../../lib/keyboard.polyfill');
 
 var MAX_DELTA = 0.2,
@@ -119844,7 +119844,7 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
   }
 
 });
-},{"../../lib/keyboard.polyfill":80}],59:[function(require,module,exports) {
+},{"../../lib/keyboard.polyfill":137}],115:[function(require,module,exports) {
 /**
  * Touch-to-move-forward controls for mobile.
  */
@@ -119918,7 +119918,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
     e.preventDefault();
   }
 });
-},{}],60:[function(require,module,exports) {
+},{}],116:[function(require,module,exports) {
 /**
  * Movement Controls
  *
@@ -120128,7 +120128,7 @@ module.exports = AFRAME.registerComponent('movement-controls', {
     };
   }()
 });
-},{}],61:[function(require,module,exports) {
+},{}],118:[function(require,module,exports) {
 /**
  * 3dof (Gear VR, Daydream) controls for mobile.
  */
@@ -120210,14 +120210,14 @@ module.exports = AFRAME.registerComponent('trackpad-controls', {
   }
 
 });
-},{}],40:[function(require,module,exports) {
+},{}],53:[function(require,module,exports) {
 require('./checkpoint-controls');
 require('./gamepad-controls');
 require('./keyboard-controls');
 require('./touch-controls');
 require('./movement-controls');
 require('./trackpad-controls');
-},{"./checkpoint-controls":56,"./gamepad-controls":57,"./keyboard-controls":58,"./touch-controls":59,"./movement-controls":60,"./trackpad-controls":61}],63:[function(require,module,exports) {
+},{"./checkpoint-controls":112,"./gamepad-controls":113,"./keyboard-controls":114,"./touch-controls":115,"./movement-controls":116,"./trackpad-controls":118}],103:[function(require,module,exports) {
 var LoopMode = {
   once: THREE.LoopOnce,
   repeat: THREE.LoopRepeat,
@@ -120337,7 +120337,7 @@ function wildcardToRegExp(s) {
 function regExpEscape(s) {
   return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
 }
-},{}],76:[function(require,module,exports) {
+},{}],144:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
@@ -123485,7 +123485,7 @@ THREE.LoaderUtils = {
     return a;
   }
 })();
-},{}],62:[function(require,module,exports) {
+},{}],104:[function(require,module,exports) {
 THREE.FBXLoader = require('../../lib/FBXLoader');
 
 /**
@@ -123523,7 +123523,7 @@ module.exports = AFRAME.registerComponent('fbx-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/FBXLoader":76}],77:[function(require,module,exports) {
+},{"../../lib/FBXLoader":144}],140:[function(require,module,exports) {
 /**
  * Source: https://github.com/Adobe-Marketing-Cloud/fetch-script
  */
@@ -123601,7 +123601,7 @@ function fetchScript(settings) {
 }
 
 module.exports = fetchScript;
-},{}],64:[function(require,module,exports) {
+},{}],105:[function(require,module,exports) {
 var fetchScript = require('../../lib/fetch-script')();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
@@ -123662,7 +123662,7 @@ module.exports = AFRAME.registerComponent('gltf-model-legacy', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/fetch-script":77}],65:[function(require,module,exports) {
+},{"../../lib/fetch-script":140}],107:[function(require,module,exports) {
 /**
  * json-model
  *
@@ -123721,7 +123721,7 @@ module.exports = AFRAME.registerComponent('json-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],66:[function(require,module,exports) {
+},{}],108:[function(require,module,exports) {
 /**
  * object-model
  *
@@ -123777,7 +123777,7 @@ module.exports = AFRAME.registerComponent('object-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],81:[function(require,module,exports) {
+},{}],136:[function(require,module,exports) {
 /**
  * @author Wei Meng / http://about.me/menway
  *
@@ -124203,7 +124203,7 @@ THREE.PLYLoader.prototype = {
   }
 
 };
-},{}],67:[function(require,module,exports) {
+},{}],106:[function(require,module,exports) {
 /**
  * ply-model
  *
@@ -124284,14 +124284,14 @@ function createModel(geometry) {
     shininess: 0
   }));
 }
-},{"../../lib/PLYLoader":81}],38:[function(require,module,exports) {
+},{"../../lib/PLYLoader":136}],49:[function(require,module,exports) {
 require('./animation-mixer');
 require('./fbx-model');
 require('./gltf-model-legacy');
 require('./json-model');
 require('./object-model');
 require('./ply-model');
-},{"./animation-mixer":63,"./fbx-model":62,"./gltf-model-legacy":64,"./json-model":65,"./object-model":66,"./ply-model":67}],48:[function(require,module,exports) {
+},{"./animation-mixer":103,"./fbx-model":104,"./gltf-model-legacy":105,"./json-model":107,"./object-model":108,"./ply-model":106}],122:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('checkpoint', {
   schema: {
     offset: { default: { x: 0, y: 0, z: 0 }, type: 'vec3' }
@@ -124330,7 +124330,7 @@ module.exports = AFRAME.registerComponent('checkpoint', {
     return this.offset.copy(this.data.offset);
   }
 });
-},{}],49:[function(require,module,exports) {
+},{}],123:[function(require,module,exports) {
 /**
  * @param  {Array<THREE.Material>|THREE.Material} material
  * @return {Array<THREE.Material>}
@@ -124463,7 +124463,7 @@ module.exports = AFRAME.registerComponent('cube-env-map', {
     this.el.sceneEl.object3D.background = texture;
   }
 });
-},{}],50:[function(require,module,exports) {
+},{}],124:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124542,7 +124542,7 @@ module.exports = AFRAME.registerComponent('grab', {
     this.system.addConstraint(this.constraint);
   }
 });
-},{}],51:[function(require,module,exports) {
+},{}],125:[function(require,module,exports) {
 var ACCEL_G = -9.8,
     // m/s^2
 EASING = -15; // m/s^2
@@ -124606,7 +124606,7 @@ module.exports = AFRAME.registerComponent('jump-ability', {
     this.numJumps = 0;
   }
 });
-},{}],52:[function(require,module,exports) {
+},{}],126:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124824,7 +124824,7 @@ module.exports = AFRAME.registerComponent('kinematic-body', {
     return Math.abs(hitNormal.y) > Math.abs(groundNormal.y) ? hitNormal : groundNormal;
   }
 });
-},{}],53:[function(require,module,exports) {
+},{}],127:[function(require,module,exports) {
 /**
  * Apply this component to models that looks "blocky", to have Three.js compute
  * vertex normals on the fly for a "smoother" look.
@@ -124838,7 +124838,7 @@ module.exports = AFRAME.registerComponent('mesh-smooth', {
     });
   }
 });
-},{}],54:[function(require,module,exports) {
+},{}],128:[function(require,module,exports) {
 /**
  * Recursively applies a MeshNormalMaterial to the entity, such that
  * face colors are determined by their orientation. Helpful for
@@ -124863,7 +124863,7 @@ module.exports = AFRAME.registerComponent('normal-material', {
     });
   }
 });
-},{}],55:[function(require,module,exports) {
+},{}],129:[function(require,module,exports) {
 /**
  * Based on aframe/examples/showcase/tracked-controls.
  *
@@ -125026,7 +125026,7 @@ module.exports = AFRAME.registerComponent('sphere-collider', {
     this.el.emit('hitend', { el: targetEl });
   }
 });
-},{}],37:[function(require,module,exports) {
+},{}],52:[function(require,module,exports) {
 require('./checkpoint');
 require('./cube-env-map');
 require('./grab');
@@ -125035,7 +125035,7 @@ require('./kinematic-body');
 require('./mesh-smooth');
 require('./normal-material');
 require('./sphere-collider');
-},{"./checkpoint":48,"./cube-env-map":49,"./grab":50,"./jump-ability":51,"./kinematic-body":52,"./mesh-smooth":53,"./normal-material":54,"./sphere-collider":55}],41:[function(require,module,exports) {
+},{"./checkpoint":122,"./cube-env-map":123,"./grab":124,"./jump-ability":125,"./kinematic-body":126,"./mesh-smooth":127,"./normal-material":128,"./sphere-collider":129}],109:[function(require,module,exports) {
 /**
  * nav-mesh
  *
@@ -125075,7 +125075,7 @@ module.exports = AFRAME.registerComponent('nav-mesh', {
     this.hasLoadedNavMesh = true;
   }
 });
-},{}],42:[function(require,module,exports) {
+},{}],110:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('nav-agent', {
   schema: {
     destination: { type: 'vec3' },
@@ -125178,7 +125178,7 @@ module.exports = AFRAME.registerComponent('nav-agent', {
     };
   }()
 });
-},{}],71:[function(require,module,exports) {
+},{}],162:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125509,7 +125509,7 @@ var Utils = function () {
 }();
 
 module.exports = Utils;
-},{}],75:[function(require,module,exports) {
+},{}],177:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125660,7 +125660,7 @@ var BinaryHeap = function () {
 }();
 
 module.exports = BinaryHeap;
-},{}],74:[function(require,module,exports) {
+},{}],163:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125802,7 +125802,7 @@ var AStar = function () {
 }();
 
 module.exports = AStar;
-},{"./BinaryHeap":75,"./utils.js":71}],73:[function(require,module,exports) {
+},{"./BinaryHeap":177,"./utils.js":162}],164:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126025,7 +126025,7 @@ var Builder = function () {
 }();
 
 module.exports = Builder;
-},{"./utils":71}],72:[function(require,module,exports) {
+},{"./utils":162}],165:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126133,7 +126133,7 @@ var Channel = function () {
 }();
 
 module.exports = Channel;
-},{"./utils":71}],70:[function(require,module,exports) {
+},{"./utils":162}],149:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126435,7 +126435,7 @@ var Group = {}; // jshint ignore:line
 var Node = {}; // jshint ignore:line
 
 module.exports = Path;
-},{"./utils":71,"./AStar":74,"./Builder":73,"./Channel":72}],43:[function(require,module,exports) {
+},{"./utils":162,"./AStar":163,"./Builder":164,"./Channel":165}],111:[function(require,module,exports) {
 var Path = require('three-pathfinding');
 
 var pathfinder = new Path();
@@ -126530,11 +126530,11 @@ module.exports = AFRAME.registerSystem('nav', {
     return pathfinder.clampStep(start, end, node, ZONE, groupID, endTarget);
   }
 });
-},{"three-pathfinding":70}],39:[function(require,module,exports) {
+},{"three-pathfinding":149}],50:[function(require,module,exports) {
 require('./nav-mesh');
 require('./nav-agent');
 require('./system');
-},{"./nav-mesh":41,"./nav-agent":42,"./system":43}],44:[function(require,module,exports) {
+},{"./nav-mesh":109,"./nav-agent":110,"./system":111}],117:[function(require,module,exports) {
 /**
  * Flat grid.
  *
@@ -126559,7 +126559,7 @@ module.exports = AFRAME.registerPrimitive('a-grid', {
     src: 'material.src'
   }
 });
-},{}],68:[function(require,module,exports) {
+},{}],146:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG_TO_RAD: .0174532925, RAD_TO_DEG: 57.2957795, SQRT3: Math.sqrt(3), TILE: "tile", ENT: "entity", STR: "structure", HEX: "hex", SQR: "square", ABS: "abstract" };vg.Board = function (e, t) {
@@ -127157,7 +127157,7 @@ var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG
     }, t.open("GET", s, !0), t.setRequestHeader("Accept", "application/json"), t.setRequestHeader("Content-Type", "application/json"), t.send("");
   } };
 //# sourceMappingURL=hex-grid.min.js.map
-},{}],69:[function(require,module,exports) {
+},{}],147:[function(require,module,exports) {
 module.exports = {
   "size": 5,
   "cellSize": 10,
@@ -127221,7 +127221,7 @@ module.exports = {
     "userData": {}
   }]
 };
-},{}],45:[function(require,module,exports) {
+},{}],120:[function(require,module,exports) {
 var vg = require('../../lib/hex-grid.min.js');
 var defaultHexGrid = require('../../lib/default-hex-grid');
 
@@ -127278,7 +127278,7 @@ module.exports.Component = AFRAME.registerComponent('hexgrid', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/hex-grid.min.js":68,"../../lib/default-hex-grid":69}],46:[function(require,module,exports) {
+},{"../../lib/hex-grid.min.js":146,"../../lib/default-hex-grid":147}],119:[function(require,module,exports) {
 /**
  * Flat-shaded ocean primitive.
  *
@@ -127377,7 +127377,7 @@ module.exports.Component = AFRAME.registerComponent('ocean', {
     this.mesh.geometry.verticesNeedUpdate = true;
   }
 });
-},{}],47:[function(require,module,exports) {
+},{}],121:[function(require,module,exports) {
 /**
  * Tube following a custom path.
  *
@@ -127438,4377 +127438,2795 @@ module.exports.Component = AFRAME.registerComponent('tube', {
     if (this.mesh) this.el.removeObject3D('mesh');
   }
 });
-},{}],36:[function(require,module,exports) {
+},{}],51:[function(require,module,exports) {
 require('./a-grid');
 require('./a-hexgrid');
 require('./a-ocean');
 require('./a-tube');
-},{"./a-grid":44,"./a-hexgrid":45,"./a-ocean":46,"./a-tube":47}],8:[function(require,module,exports) {
+},{"./a-grid":117,"./a-hexgrid":120,"./a-ocean":119,"./a-tube":121}],9:[function(require,module,exports) {
 require('./src/controls');
 require('./src/loaders');
 require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
-},{"./src/controls":40,"./src/loaders":38,"./src/misc":37,"./src/pathfinding":39,"./src/primitives":36}],83:[function(require,module,exports) {
-var global = arguments[3];
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
-	                                                                                                                                                                                                                                                                               * A shader to render HTML DOM Element
-	                                                                                                                                                                                                                                                                               * Inspired by @scenevr's `htmltexture-component`
-	                                                                                                                                                                                                                                                                               * @see https://github.com/scenevr/htmltexture-component
-	                                                                                                                                                                                                                                                                               */
-
-	var _core = __webpack_require__(1);
-
-	var _core2 = _interopRequireDefault(_core);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	if (typeof AFRAME === 'undefined') {
-	  throw 'Component attempted to register before AFRAME was available.';
-	}
-
-	/* get util from AFRAME */
-	var debug = AFRAME.utils.debug;
-	// debug.enable('shader:html:*')
-
-	debug.enable('shader:html:warn');
-	var warn = debug('shader:html:warn');
-	var log = debug('shader:html:debug');
-
-	/* create error message */
-	function createError(err, target) {
-	  return { status: 'error', target: target, message: err, timestamp: Date.now() };
-	}
-
-	AFRAME.registerShader('html', {
-
-	  /**
-	   * For material component:
-	   * @see https://github.com/aframevr/aframe/blob/60d198ef8e2bfbc57a13511ae5fca7b62e01691b/src/components/material.js
-	   * For example of `registerShader`:
-	   * @see https://github.com/aframevr/aframe/blob/41a50cd5ac65e462120ecc2e5091f5daefe3bd1e/src/shaders/flat.js
-	   * For MeshBasicMaterial
-	   * @see http://threejs.org/docs/#Reference/Materials/MeshBasicMaterial
-	   */
-
-	  schema: {
-
-	    /* For material */
-	    color: { type: 'color' },
-	    fog: { default: true },
-
-	    /* For texuture */
-	    target: { default: null },
-	    debug: { default: null },
-	    fps: { type: 'number', default: 0 },
-	    width: { default: null },
-	    height: { default: null },
-	    ratio: { default: null }
-
-	  },
-
-	  /**
-	   * Initialize material. Called once.
-	   * @protected
-	   */
-	  init: function init(data) {
-	    log('init', data);
-	    this.__cnv = document.createElement('canvas');
-	    this.__cnv.width = 2;
-	    this.__cnv.height = 2;
-	    this.__ctx = this.__cnv.getContext('2d');
-	    this.__texture = new THREE.Texture(this.__cnv);
-	    this.__reset();
-	    this.material = new THREE.MeshBasicMaterial({ map: this.__texture });
-	    this.el.sceneEl.addBehavior(this);
-	    return this.material;
-	  },
-
-
-	  /**
-	   * Update or create material.
-	   * @param {object|null} oldData
-	   */
-	  update: function update(oldData) {
-	    log('update', oldData);
-	    this.__updateMaterial(oldData);
-	    this.__updateTexture(oldData);
-	    return this.material;
-	  },
-
-
-	  /**
-	   * Called on each scene tick.
-	   * @protected
-	   */
-	  tick: function tick(t) {
-
-	    if (this.__paused || !this.__target || !this.__nextTime) {
-	      return;
-	    }
-
-	    var now = Date.now();
-	    if (now > this.__nextTime) {
-	      this.__render();
-	    }
-	  },
-
-
-	  /*================================
-	  =            material            =
-	  ================================*/
-
-	  /**
-	   * Updating existing material.
-	   * @param {object} data - Material component data.
-	   */
-	  __updateMaterial: function __updateMaterial(data) {
-	    var material = this.material;
-
-	    var newData = this.__getMaterialData(data);
-	    Object.keys(newData).forEach(function (key) {
-	      material[key] = newData[key];
-	    });
-	  },
-
-
-	  /**
-	   * Builds and normalize material data, normalizing stuff along the way.
-	   * @param {Object} data - Material data.
-	   * @return {Object} data - Processed material data.
-	   */
-	  __getMaterialData: function __getMaterialData(data) {
-	    return {
-	      fog: data.fog,
-	      color: new THREE.Color(data.color)
-	    };
-	  },
-
-
-	  /*==============================
-	  =            texure            =
-	  ==============================*/
-
-	  /**
-	   * set texure
-	   * @private
-	   * @param {Object} data
-	   * @property {string} status - success / error
-	   * @property {string} target - target url
-	   * @property {DOM Element} targetEl - target
-	   * @property {Date} timestamp - created at the texure
-	   */
-
-	  __setTexure: function __setTexure(data) {
-	    log('__setTexure', data);
-	    if (data.status === 'error') {
-	      warn('Error: ' + data.message + '\ntarget: ' + data.target);
-	      this.__reset();
-	    } else if (data.status === 'success' && data.target !== this.__textureSrc) {
-	      /* Texture added or changed */
-	      this.__ready(data);
-	    }
-	  },
-
-
-	  /**
-	   * Update or create texure.
-	   * @param {Object} data - Material component data.
-	   */
-	  __updateTexture: function __updateTexture(data) {
-	    var _this = this;
-
-	    var target = data.target,
-	        fps = data.fps,
-	        width = data.width,
-	        height = data.height,
-	        ratio = data.ratio;
-
-	    this.__width = width || this.schema.width.default;
-	    this.__height = height || this.schema.height.default;
-
-	    /* debug */
-	    var resetDebug = function resetDebug() {
-	      if (_this.__debugEl) {
-	        _this.__debugEl.innerHTML = '';
-	        _this.__debugEl = _this.schema.debug.default;
-	      }
-	    };
-	    if (data.debug) {
-	      var el = this.__validateAndGetQuerySelector(data.debug);
-	      if (el && !el.error) {
-	        this.__debugEl = el;
-	      } else resetDebug();
-	    } else resetDebug();
-
-	    /* ratio */
-	    if (ratio && ratio === 'width' || ratio === 'height') {
-	      this.__ratio = ratio;
-	    } else {
-	      this.__ratio = this.schema.ratio.default;
-	    }
-
-	    /* fps */
-	    if (fps) {
-	      if (this.__fps > 0) {
-	        this.__fps = fps;
-	      } else if (fps === -1) {
-	        /* render only once */
-	        this.__fps = this.schema.fps.default;
-	        if (this.__target) {
-	          this.__render();
-	        }
-	        /* set attribute */
-	        var material = Object.assign({}, this.el.getAttribute('material'));
-	        delete material.fps;
-	        this.el.setAttribute('material', material);
-	      } else {
-	        this.__fps = fps;
-	        if (this.__target) {
-	          this.play();
-	          this.__render();
-	        }
-	      }
-	    } else {
-	      if (this.__fps > 0) {
-	        this.pause();
-	      } else {
-	        this.__fps = this.schema.fps.default;
-	      }
-	    }
-
-	    /* target */
-	    if (target) {
-	      if (target === this.__target) {
-	        return;
-	      }
-	      this.__target = target;
-	      // return
-	      this.__validateSrc(target, this.__setTexure.bind(this));
-	    } else {
-	      /* Texture removed */
-	      this.__reset();
-	    }
-	  },
-
-
-	  /*=============================================
-	  =            varidation for texure            =
-	  =============================================*/
-
-	  /**
-	   * varidate src
-	   * @private
-	   * @param {string} target - dom selector
-	   * @param {Function} cb - callback
-	   */
-	  __validateSrc: function __validateSrc(target, cb) {
-
-	    var message = void 0;
-
-	    /* check if target is a query selector */
-	    var el = this.__validateAndGetQuerySelector(target);
-	    if (!el || (typeof el === 'undefined' ? 'undefined' : _typeof(el)) !== 'object') {
-	      return;
-	    }
-	    if (el.error) {
-	      message = el.error;
-	    } else {
-	      var tagName = el.tagName.toLowerCase();
-	      if (tagName === 'img' || tagName === 'video') {
-	        message = 'For <' + tagName + '> element, please use `shader:flat`';
-	      } else {
-	        cb({ status: 'success', target: target, targetEl: el, timestamp: Date.now() });
-	      }
-	    }
-
-	    /* if there is message, create error data */
-	    if (message) {
-	      var err = createError(message, target);
-	      cb(err);
-	    }
-	  },
-
-
-	  /**
-	   * Query and validate a query selector,
-	   *
-	   * @param  {string} selector - DOM selector.
-	   * @return {object} Selected DOM element | error message object.
-	   */
-	  __validateAndGetQuerySelector: function __validateAndGetQuerySelector(selector) {
-	    try {
-	      var el = document.querySelector(selector);
-	      if (!el) {
-	        return { error: 'No element was found matching the selector' };
-	      }
-	      return el;
-	    } catch (e) {
-	      // Capture exception if it's not a valid selector.
-	      return { error: 'no valid selector' };
-	    }
-	  },
-
-
-	  /*================================
-	  =            playback            =
-	  ================================*/
-
-	  /**
-	   * Pause video
-	   * @public
-	   */
-	  pause: function pause() {
-	    log('pause');
-	    this.__paused = true;
-	    this.__nextTime = null;
-	  },
-
-
-	  /**
-	   * Play video
-	   * @public
-	   */
-	  play: function play() {
-	    log('play');
-	    this.__paused = false;
-	  },
-
-
-	  /**
-	   * Toggle playback. play if paused and pause if played.
-	   * @public
-	   */
-
-	  togglePlayback: function togglePlayback() {
-	    if (this.paused()) {
-	      this.play();
-	    } else {
-	      this.pause();
-	    }
-	  },
-
-
-	  /**
-	   * Return if the playback is paused.
-	   * @public
-	   * @return {boolean}
-	   */
-	  paused: function paused() {
-	    return this.__paused;
-	  },
-
-
-	  /*==============================
-	   =            canvas            =
-	   ==============================*/
-
-	  /**
-	   * clear canvas
-	   * @private
-	   */
-	  __clearCanvas: function __clearCanvas() {
-	    if (!this.__ctx || !this.__texture) {
-	      return;
-	    }
-	    this.__ctx.clearRect(0, 0, this.__width, this.__height);
-	    this.__texture.needsUpdate = true;
-	  },
-
-
-	  /**
-	   * draw
-	   * @private
-	   */
-	  __draw: function __draw(canvas) {
-	    log('__draw');
-	    if (!this.__ctx || !this.__texture) {
-	      return;
-	    }
-	    var ratio = canvas.width / canvas.height;
-	    var cnvW = this.__cnv.width = THREE.Math.nearestPowerOfTwo(canvas.width);
-	    var cnvH = this.__cnv.height = THREE.Math.nearestPowerOfTwo(canvas.height);
-	    this.__ctx.drawImage(canvas, 0, 0, cnvW, cnvH);
-	    this.__texture.needsUpdate = true;
-	    if (this.__ratio) {
-	      /* change size */
-	      var _el$getObject3D$geome = this.el.getObject3D('mesh').geometry.metadata.parameters,
-	          width = _el$getObject3D$geome.width,
-	          height = _el$getObject3D$geome.height;
-
-	      this.el.setAttribute('geometry', Object.assign({}, this.el.getAttribute('geometry'), {
-	        width: this.__ratio === 'width' ? width : height * ratio,
-	        height: this.__ratio === 'width' ? width / ratio : height
-	      }));
-	    }
-
-	    /* append if debug element exists */
-	    if (this.__debugEl) {
-	      this.__debugEl.innerHTML = '';
-	      this.__debugEl.appendChild(canvas);
-	    }
-
-	    /* setup next tick */
-	    this.__setNextTick();
-	  },
-
-
-	  /**
-	   * render
-	   * @private
-	   */
-	  __render: function __render() {
-	    this.__nextTime = null;
-	    if (!this.__targetEl) {
-	      return;
-	    }
-
-	    var _targetEl$getBoundin = this.__targetEl.getBoundingClientRect(),
-	        width = _targetEl$getBoundin.width,
-	        height = _targetEl$getBoundin.height;
-
-	    (0, _core2.default)(this.__targetEl, {
-	      background: undefined,
-	      width: this.__width || width,
-	      height: this.__height || height,
-	      onrendered: this.__draw.bind(this)
-	    });
-	  },
-
-
-	  /**
-	   * get next time to draw
-	   * @private
-	   */
-	  __setNextTick: function __setNextTick() {
-	    if (this.__fps > 0) {
-	      this.__nextTime = Date.now() + 1000 / this.__fps;
-	    }
-	  },
-
-
-	  /*============================
-	  =            ready           =
-	  ============================*/
-
-	  /**
-	   * setup html animation and play if autoplay is true
-	   * @private
-	   * @property {string} target - target url
-	   * @property {DOM Element} targetEl - target
-	   */
-	  __ready: function __ready(_ref) {
-	    var target = _ref.target,
-	        targetEl = _ref.targetEl;
-
-	    log('__ready');
-	    this.__target = target;
-	    this.__targetEl = targetEl;
-	    this.play();
-	    this.__render();
-	  },
-
-
-	  /*=============================
-	  =            reset            =
-	  =============================*/
-
-	  /**
-	   * @private
-	   */
-
-	  __reset: function __reset() {
-	    this.pause();
-	    this.__clearCanvas();
-	    this.__target = null;
-	    this.__targetEl = null;
-	    this.__debugEl = null;
-	  }
-	});
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-
-	var Support = __webpack_require__(2);
-	var CanvasRenderer = __webpack_require__(3);
-	var ImageLoader = __webpack_require__(9);
-	var NodeParser = __webpack_require__(21);
-	var NodeContainer = __webpack_require__(24);
-	var log = __webpack_require__(5);
-	var utils = __webpack_require__(12);
-	var createWindowClone = __webpack_require__(16);
-	var loadUrlDocument = __webpack_require__(14).loadUrlDocument;
-	var getBounds = utils.getBounds;
-
-	var html2canvasNodeAttribute = "data-html2canvas-node";
-	var html2canvasCloneIndex = 0;
-
-	function html2canvas(nodeList, options) {
-	    var index = html2canvasCloneIndex++;
-	    options = options || {};
-	    if (options.logging) {
-	        log.options.logging = true;
-	        log.options.start = Date.now();
-	    }
-
-	    options.async = typeof options.async === "undefined" ? true : options.async;
-	    options.allowTaint = typeof options.allowTaint === "undefined" ? false : options.allowTaint;
-	    options.removeContainer = typeof options.removeContainer === "undefined" ? true : options.removeContainer;
-	    options.javascriptEnabled = typeof options.javascriptEnabled === "undefined" ? false : options.javascriptEnabled;
-	    options.imageTimeout = typeof options.imageTimeout === "undefined" ? 10000 : options.imageTimeout;
-	    options.renderer = typeof options.renderer === "function" ? options.renderer : CanvasRenderer;
-	    options.strict = !!options.strict;
-
-	    var width = options.width || 512;
-	    var height = options.height || 512;
-
-	    return renderNode(nodeList, width, height).then(function (canvas) {
-	        options.onrendered(canvas);
-	    });
-	}
-
-	html2canvas.CanvasRenderer = CanvasRenderer;
-	html2canvas.NodeContainer = NodeContainer;
-	html2canvas.log = log;
-	html2canvas.utils = utils;
-
-	var html2canvasExport = typeof document === "undefined" || typeof Object.create !== "function" || typeof document.createElement("canvas").getContext !== "function" ? function () {
-	    return Promise.reject("No canvas support");
-	} : html2canvas;
-
-	module.exports = html2canvasExport;
-
-	if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-	        return html2canvasExport;
-	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	}
-
-	function renderDocument(document, options, windowWidth, windowHeight, html2canvasIndex) {
-	    return createWindowClone(document, document, windowWidth, windowHeight, options, document.defaultView.pageXOffset, document.defaultView.pageYOffset).then(function (container) {
-	        log("Document cloned");
-	        var attributeName = html2canvasNodeAttribute + html2canvasIndex;
-	        var selector = "[" + attributeName + "='" + html2canvasIndex + "']";
-	        document.querySelector(selector).removeAttribute(attributeName);
-	        var clonedWindow = container.contentWindow;
-	        var node = clonedWindow.document.querySelector(selector);
-	        var oncloneHandler = typeof options.onclone === "function" ? Promise.resolve(options.onclone(clonedWindow.document)) : Promise.resolve(true);
-	        return oncloneHandler.then(function () {
-	            return renderWindow(node, container, options, windowWidth, windowHeight);
-	        });
-	    });
-	}
-
-	function renderNode(node, width, height) {
-	    var support = new Support(node.ownerDocument);
-	    var imageLoader = new ImageLoader({
-	        useCORS: true
-	    }, support);
-	    var options = {
-	        renderer: html2canvas.CanvasRenderer
-	    };
-	    var bounds = getBounds(node);
-	    var renderer = new options.renderer(width, height, imageLoader, options, document);
-	    var parser = new NodeParser(node, renderer, support, imageLoader, options);
-	    return parser.ready.then(function () {
-	        return renderer.canvas;
-	    });
-	}
-
-	function renderWindow(node, container, options, windowWidth, windowHeight) {
-	    var clonedWindow = container.contentWindow;
-	    var support = new Support(clonedWindow.document);
-	    var imageLoader = new ImageLoader(options, support);
-	    var bounds = getBounds(node);
-	    var width = options.type === "view" ? windowWidth : documentWidth(clonedWindow.document);
-	    var height = options.type === "view" ? windowHeight : documentHeight(clonedWindow.document);
-	    var renderer = new options.renderer(width, height, imageLoader, options, document);
-	    var parser = new NodeParser(node, renderer, support, imageLoader, options);
-	    return parser.ready.then(function () {
-	        log("Finished rendering");
-	        var canvas;
-
-	        if (options.type === "view") {
-	            canvas = crop(renderer.canvas, { width: renderer.canvas.width, height: renderer.canvas.height, top: 0, left: 0, x: 0, y: 0 });
-	        } else if (node === clonedWindow.document.body || node === clonedWindow.document.documentElement || options.canvas != null) {
-	            canvas = renderer.canvas;
-	        } else {
-	            canvas = crop(renderer.canvas, { width: options.width != null ? options.width : bounds.width, height: options.height != null ? options.height : bounds.height, top: bounds.top, left: bounds.left, x: 0, y: 0 });
-	        }
-
-	        cleanupContainer(container, options);
-	        return canvas;
-	    });
-	}
-
-	function cleanupContainer(container, options) {
-	    if (options.removeContainer) {
-	        container.parentNode.removeChild(container);
-	        log("Cleaned up container");
-	    }
-	}
-
-	function crop(canvas, bounds) {
-	    var croppedCanvas = document.createElement("canvas");
-	    var x1 = Math.min(canvas.width - 1, Math.max(0, bounds.left));
-	    var x2 = Math.min(canvas.width, Math.max(1, bounds.left + bounds.width));
-	    var y1 = Math.min(canvas.height - 1, Math.max(0, bounds.top));
-	    var y2 = Math.min(canvas.height, Math.max(1, bounds.top + bounds.height));
-	    croppedCanvas.width = bounds.width;
-	    croppedCanvas.height = bounds.height;
-	    var width = x2 - x1;
-	    var height = y2 - y1;
-	    log("Cropping canvas at:", "left:", bounds.left, "top:", bounds.top, "width:", width, "height:", height);
-	    log("Resulting crop with width", bounds.width, "and height", bounds.height, "with x", x1, "and y", y1);
-	    croppedCanvas.getContext("2d").drawImage(canvas, x1, y1, width, height, bounds.x, bounds.y, width, height);
-	    return croppedCanvas;
-	}
-
-	function documentWidth(doc) {
-	    return Math.max(Math.max(doc.body.scrollWidth, doc.documentElement.scrollWidth), Math.max(doc.body.offsetWidth, doc.documentElement.offsetWidth), Math.max(doc.body.clientWidth, doc.documentElement.clientWidth));
-	}
-
-	function documentHeight(doc) {
-	    return Math.max(Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight), Math.max(doc.body.offsetHeight, doc.documentElement.offsetHeight), Math.max(doc.body.clientHeight, doc.documentElement.clientHeight));
-	}
-
-	function absoluteUrl(url) {
-	    var link = document.createElement("a");
-	    link.href = url;
-	    link.href = link.href;
-	    return link;
-	}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	function Support(document) {
-	    this.rangeBounds = this.testRangeBounds(document);
-	    this.cors = this.testCORS();
-	    this.svg = this.testSVG();
-	}
-
-	Support.prototype.testRangeBounds = function (document) {
-	    var range,
-	        testElement,
-	        rangeBounds,
-	        rangeHeight,
-	        support = false;
-
-	    if (document.createRange) {
-	        range = document.createRange();
-	        if (range.getBoundingClientRect) {
-	            testElement = document.createElement('boundtest');
-	            testElement.style.height = "123px";
-	            testElement.style.display = "block";
-	            document.body.appendChild(testElement);
-
-	            range.selectNode(testElement);
-	            rangeBounds = range.getBoundingClientRect();
-	            rangeHeight = rangeBounds.height;
-
-	            if (rangeHeight === 123) {
-	                support = true;
-	            }
-	            document.body.removeChild(testElement);
-	        }
-	    }
-
-	    return support;
-	};
-
-	Support.prototype.testCORS = function () {
-	    return typeof new Image().crossOrigin !== "undefined";
-	};
-
-	Support.prototype.testSVG = function () {
-	    var img = new Image();
-	    var canvas = document.createElement("canvas");
-	    var ctx = canvas.getContext("2d");
-	    img.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'></svg>";
-
-	    try {
-	        ctx.drawImage(img, 0, 0);
-	        canvas.toDataURL();
-	    } catch (e) {
-	        return false;
-	    }
-	    return true;
-	};
-
-	module.exports = Support;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-	var Renderer = __webpack_require__(4);
-	var LinearGradientContainer = __webpack_require__(6);
-	var log = __webpack_require__(5);
-
-	function CanvasRenderer(width, height) {
-	    Renderer.apply(this, arguments);
-	    this.canvas = this.options.canvas || this.document.createElement("canvas");
-	    if (!this.options.canvas) {
-	        this.canvas.width = width;
-	        this.canvas.height = height;
-	    }
-	    this.ctx = this.canvas.getContext("2d");
-	    this.taintCtx = this.document.createElement("canvas").getContext("2d");
-	    this.ctx.textBaseline = "bottom";
-	    this.variables = {};
-	    log("Initialized CanvasRenderer with size", width, "x", height);
-	}
-
-	CanvasRenderer.prototype = Object.create(Renderer.prototype);
-
-	CanvasRenderer.prototype.setFillStyle = function (fillStyle) {
-	    this.ctx.fillStyle = (typeof fillStyle === 'undefined' ? 'undefined' : _typeof(fillStyle)) === "object" && !!fillStyle.isColor ? fillStyle.toString() : fillStyle;
-	    return this.ctx;
-	};
-
-	CanvasRenderer.prototype.rectangle = function (left, top, width, height, color) {
-	    this.setFillStyle(color).fillRect(left, top, width, height);
-	};
-
-	CanvasRenderer.prototype.circle = function (left, top, size, color) {
-	    this.setFillStyle(color);
-	    this.ctx.beginPath();
-	    this.ctx.arc(left + size / 2, top + size / 2, size / 2, 0, Math.PI * 2, true);
-	    this.ctx.closePath();
-	    this.ctx.fill();
-	};
-
-	CanvasRenderer.prototype.circleStroke = function (left, top, size, color, stroke, strokeColor) {
-	    this.circle(left, top, size, color);
-	    this.ctx.strokeStyle = strokeColor.toString();
-	    this.ctx.stroke();
-	};
-
-	CanvasRenderer.prototype.drawShape = function (shape, color) {
-	    this.shape(shape);
-	    this.setFillStyle(color).fill();
-	};
-
-	CanvasRenderer.prototype.taints = function (imageContainer) {
-	    if (imageContainer.tainted === null) {
-	        this.taintCtx.drawImage(imageContainer.image, 0, 0);
-	        try {
-	            this.taintCtx.getImageData(0, 0, 1, 1);
-	            imageContainer.tainted = false;
-	        } catch (e) {
-	            this.taintCtx = document.createElement("canvas").getContext("2d");
-	            imageContainer.tainted = true;
-	        }
-	    }
-
-	    return imageContainer.tainted;
-	};
-
-	CanvasRenderer.prototype.drawImage = function (imageContainer, sx, sy, sw, sh, dx, dy, dw, dh) {
-	    if (!this.taints(imageContainer) || this.options.allowTaint) {
-	        this.ctx.drawImage(imageContainer.image, sx, sy, sw, sh, dx, dy, dw, dh);
-	    }
-	};
-
-	CanvasRenderer.prototype.clip = function (shapes, callback, context) {
-	    this.ctx.save();
-	    shapes.filter(hasEntries).forEach(function (shape) {
-	        this.shape(shape).clip();
-	    }, this);
-	    callback.call(context);
-	    this.ctx.restore();
-	};
-
-	CanvasRenderer.prototype.shape = function (shape) {
-	    this.ctx.beginPath();
-	    shape.forEach(function (point, index) {
-	        if (point[0] === "rect") {
-	            this.ctx.rect.apply(this.ctx, point.slice(1));
-	        } else {
-	            this.ctx[index === 0 ? "moveTo" : point[0] + "To"].apply(this.ctx, point.slice(1));
-	        }
-	    }, this);
-	    this.ctx.closePath();
-	    return this.ctx;
-	};
-
-	CanvasRenderer.prototype.font = function (color, style, variant, weight, size, family) {
-	    this.setFillStyle(color).font = [style, variant, weight, size, family].join(" ").split(",")[0];
-	};
-
-	CanvasRenderer.prototype.fontShadow = function (color, offsetX, offsetY, blur) {
-	    this.setVariable("shadowColor", color.toString()).setVariable("shadowOffsetY", offsetX).setVariable("shadowOffsetX", offsetY).setVariable("shadowBlur", blur);
-	};
-
-	CanvasRenderer.prototype.clearShadow = function () {
-	    this.setVariable("shadowColor", "rgba(0,0,0,0)");
-	};
-
-	CanvasRenderer.prototype.setOpacity = function (opacity) {
-	    this.ctx.globalAlpha = opacity;
-	};
-
-	CanvasRenderer.prototype.setTransform = function (transform) {
-	    this.ctx.translate(transform.origin[0], transform.origin[1]);
-	    this.ctx.transform.apply(this.ctx, transform.matrix);
-	    this.ctx.translate(-transform.origin[0], -transform.origin[1]);
-	};
-
-	CanvasRenderer.prototype.setVariable = function (property, value) {
-	    if (this.variables[property] !== value) {
-	        this.variables[property] = this.ctx[property] = value;
-	    }
-
-	    return this;
-	};
-
-	CanvasRenderer.prototype.text = function (text, left, bottom) {
-	    this.ctx.fillText(text, left, bottom);
-	};
-
-	CanvasRenderer.prototype.backgroundRepeatShape = function (imageContainer, backgroundPosition, size, bounds, left, top, width, height, borderData) {
-	    var shape = [["line", Math.round(left), Math.round(top)], ["line", Math.round(left + width), Math.round(top)], ["line", Math.round(left + width), Math.round(height + top)], ["line", Math.round(left), Math.round(height + top)]];
-	    this.clip([shape], function () {
-	        this.renderBackgroundRepeat(imageContainer, backgroundPosition, size, bounds, borderData[3], borderData[0]);
-	    }, this);
-	};
-
-	CanvasRenderer.prototype.renderBackgroundRepeat = function (imageContainer, backgroundPosition, size, bounds, borderLeft, borderTop) {
-	    var offsetX = Math.round(bounds.left + backgroundPosition.left + borderLeft),
-	        offsetY = Math.round(bounds.top + backgroundPosition.top + borderTop);
-	    this.setFillStyle(this.ctx.createPattern(this.resizeImage(imageContainer, size), "repeat"));
-	    this.ctx.translate(offsetX, offsetY);
-	    this.ctx.fill();
-	    this.ctx.translate(-offsetX, -offsetY);
-	};
-
-	CanvasRenderer.prototype.renderBackgroundGradient = function (gradientImage, bounds) {
-	    if (gradientImage instanceof LinearGradientContainer) {
-	        var gradient = this.ctx.createLinearGradient(bounds.left + bounds.width * gradientImage.x0, bounds.top + bounds.height * gradientImage.y0, bounds.left + bounds.width * gradientImage.x1, bounds.top + bounds.height * gradientImage.y1);
-	        gradientImage.colorStops.forEach(function (colorStop) {
-	            gradient.addColorStop(colorStop.stop, colorStop.color.toString());
-	        });
-	        this.rectangle(bounds.left, bounds.top, bounds.width, bounds.height, gradient);
-	    }
-	};
-
-	CanvasRenderer.prototype.resizeImage = function (imageContainer, size) {
-	    var image = imageContainer.image;
-	    if (image.width === size.width && image.height === size.height) {
-	        return image;
-	    }
-
-	    var ctx,
-	        canvas = document.createElement('canvas');
-	    canvas.width = size.width;
-	    canvas.height = size.height;
-	    ctx = canvas.getContext("2d");
-	    ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, size.width, size.height);
-	    return canvas;
-	};
-
-	function hasEntries(array) {
-	    return array.length > 0;
-	}
-
-	module.exports = CanvasRenderer;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var log = __webpack_require__(5);
-
-	function Renderer(width, height, images, options, document) {
-	    this.width = width;
-	    this.height = height;
-	    this.images = images;
-	    this.options = options;
-	    this.document = document;
-	}
-
-	Renderer.prototype.renderImage = function (container, bounds, borderData, imageContainer) {
-	    var paddingLeft = container.cssInt('paddingLeft'),
-	        paddingTop = container.cssInt('paddingTop'),
-	        paddingRight = container.cssInt('paddingRight'),
-	        paddingBottom = container.cssInt('paddingBottom'),
-	        borders = borderData.borders;
-
-	    var width = bounds.width - (borders[1].width + borders[3].width + paddingLeft + paddingRight);
-	    var height = bounds.height - (borders[0].width + borders[2].width + paddingTop + paddingBottom);
-	    this.drawImage(imageContainer, 0, 0, imageContainer.image.width || width, imageContainer.image.height || height, bounds.left + paddingLeft + borders[3].width, bounds.top + paddingTop + borders[0].width, width, height);
-	};
-
-	Renderer.prototype.renderBackground = function (container, bounds, borderData) {
-	    if (bounds.height > 0 && bounds.width > 0) {
-	        this.renderBackgroundColor(container, bounds);
-	        this.renderBackgroundImage(container, bounds, borderData);
-	    }
-	};
-
-	Renderer.prototype.renderBackgroundColor = function (container, bounds) {
-	    var color = container.color("backgroundColor");
-	    if (!color.isTransparent()) {
-	        this.rectangle(bounds.left, bounds.top, bounds.width, bounds.height, color);
-	    }
-	};
-
-	Renderer.prototype.renderBorders = function (borders) {
-	    borders.forEach(this.renderBorder, this);
-	};
-
-	Renderer.prototype.renderBorder = function (data) {
-	    if (!data.color.isTransparent() && data.args !== null) {
-	        this.drawShape(data.args, data.color);
-	    }
-	};
-
-	Renderer.prototype.renderBackgroundImage = function (container, bounds, borderData) {
-	    var backgroundImages = container.parseBackgroundImages();
-	    backgroundImages.reverse().forEach(function (backgroundImage, index, arr) {
-	        switch (backgroundImage.method) {
-	            case "url":
-	                var image = this.images.get(backgroundImage.args[0]);
-	                if (image) {
-	                    this.renderBackgroundRepeating(container, bounds, image, arr.length - (index + 1), borderData);
-	                } else {
-	                    log("Error loading background-image", backgroundImage.args[0]);
-	                }
-	                break;
-	            case "linear-gradient":
-	            case "gradient":
-	                var gradientImage = this.images.get(backgroundImage.value);
-	                if (gradientImage) {
-	                    this.renderBackgroundGradient(gradientImage, bounds, borderData);
-	                } else {
-	                    log("Error loading background-image", backgroundImage.args[0]);
-	                }
-	                break;
-	            case "none":
-	                break;
-	            default:
-	                log("Unknown background-image type", backgroundImage.args[0]);
-	        }
-	    }, this);
-	};
-
-	Renderer.prototype.renderBackgroundRepeating = function (container, bounds, imageContainer, index, borderData) {
-	    var size = container.parseBackgroundSize(bounds, imageContainer.image, index);
-	    var position = container.parseBackgroundPosition(bounds, imageContainer.image, index, size);
-	    var repeat = container.parseBackgroundRepeat(index);
-	    switch (repeat) {
-	        case "repeat-x":
-	        case "repeat no-repeat":
-	            this.backgroundRepeatShape(imageContainer, position, size, bounds, bounds.left + borderData[3], bounds.top + position.top + borderData[0], 99999, size.height, borderData);
-	            break;
-	        case "repeat-y":
-	        case "no-repeat repeat":
-	            this.backgroundRepeatShape(imageContainer, position, size, bounds, bounds.left + position.left + borderData[3], bounds.top + borderData[0], size.width, 99999, borderData);
-	            break;
-	        case "no-repeat":
-	            this.backgroundRepeatShape(imageContainer, position, size, bounds, bounds.left + position.left + borderData[3], bounds.top + position.top + borderData[0], size.width, size.height, borderData);
-	            break;
-	        default:
-	            this.renderBackgroundRepeat(imageContainer, position, size, { top: bounds.top, left: bounds.left }, borderData[3], borderData[0]);
-	            break;
-	    }
-	};
-
-	module.exports = Renderer;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	var logger = function logger() {
-	    if (logger.options.logging && window.console && window.console.log) {
-	        Function.prototype.bind.call(window.console.log, window.console).apply(window.console, [Date.now() - logger.options.start + "ms", "html2canvas:"].concat([].slice.call(arguments, 0)));
-	    }
-	};
-
-	logger.options = { logging: false };
-	module.exports = logger;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var GradientContainer = __webpack_require__(7);
-	var Color = __webpack_require__(8);
-
-	function LinearGradientContainer(imageData) {
-	    GradientContainer.apply(this, arguments);
-	    this.type = GradientContainer.TYPES.LINEAR;
-
-	    var hasDirection = LinearGradientContainer.REGEXP_DIRECTION.test(imageData.args[0]) || !GradientContainer.REGEXP_COLORSTOP.test(imageData.args[0]);
-
-	    if (hasDirection) {
-	        imageData.args[0].split(/\s+/).reverse().forEach(function (position, index) {
-	            switch (position) {
-	                case "left":
-	                    this.x0 = 0;
-	                    this.x1 = 1;
-	                    break;
-	                case "top":
-	                    this.y0 = 0;
-	                    this.y1 = 1;
-	                    break;
-	                case "right":
-	                    this.x0 = 1;
-	                    this.x1 = 0;
-	                    break;
-	                case "bottom":
-	                    this.y0 = 1;
-	                    this.y1 = 0;
-	                    break;
-	                case "to":
-	                    var y0 = this.y0;
-	                    var x0 = this.x0;
-	                    this.y0 = this.y1;
-	                    this.x0 = this.x1;
-	                    this.x1 = x0;
-	                    this.y1 = y0;
-	                    break;
-	                case "center":
-	                    break; // centered by default
-	                // Firefox internally converts position keywords to percentages:
-	                // http://www.w3.org/TR/2010/WD-CSS2-20101207/colors.html#propdef-background-position
-	                default:
-	                    // percentage or absolute length
-	                    // TODO: support absolute start point positions (e.g., use bounds to convert px to a ratio)
-	                    var ratio = parseFloat(position, 10) * 1e-2;
-	                    if (isNaN(ratio)) {
-	                        // invalid or unhandled value
-	                        break;
-	                    }
-	                    if (index === 0) {
-	                        this.y0 = ratio;
-	                        this.y1 = 1 - this.y0;
-	                    } else {
-	                        this.x0 = ratio;
-	                        this.x1 = 1 - this.x0;
-	                    }
-	                    break;
-	            }
-	        }, this);
-	    } else {
-	        this.y0 = 0;
-	        this.y1 = 1;
-	    }
-
-	    this.colorStops = imageData.args.slice(hasDirection ? 1 : 0).map(function (colorStop) {
-	        var colorStopMatch = colorStop.match(GradientContainer.REGEXP_COLORSTOP);
-	        var value = +colorStopMatch[2];
-	        var unit = value === 0 ? "%" : colorStopMatch[3]; // treat "0" as "0%"
-	        return {
-	            color: new Color(colorStopMatch[1]),
-	            // TODO: support absolute stop positions (e.g., compute gradient line length & convert px to ratio)
-	            stop: unit === "%" ? value / 100 : null
-	        };
-	    });
-
-	    if (this.colorStops[0].stop === null) {
-	        this.colorStops[0].stop = 0;
-	    }
-
-	    if (this.colorStops[this.colorStops.length - 1].stop === null) {
-	        this.colorStops[this.colorStops.length - 1].stop = 1;
-	    }
-
-	    // calculates and fills-in explicit stop positions when omitted from rule
-	    this.colorStops.forEach(function (colorStop, index) {
-	        if (colorStop.stop === null) {
-	            this.colorStops.slice(index).some(function (find, count) {
-	                if (find.stop !== null) {
-	                    colorStop.stop = (find.stop - this.colorStops[index - 1].stop) / (count + 1) + this.colorStops[index - 1].stop;
-	                    return true;
-	                } else {
-	                    return false;
-	                }
-	            }, this);
-	        }
-	    }, this);
-	}
-
-	LinearGradientContainer.prototype = Object.create(GradientContainer.prototype);
-
-	// TODO: support <angle> (e.g. -?\d{1,3}(?:\.\d+)deg, etc. : https://developer.mozilla.org/docs/Web/CSS/angle )
-	LinearGradientContainer.REGEXP_DIRECTION = /^\s*(?:to|left|right|top|bottom|center|\d{1,3}(?:\.\d+)?%?)(?:\s|$)/i;
-
-	module.exports = LinearGradientContainer;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	function GradientContainer(imageData) {
-	    this.src = imageData.value;
-	    this.colorStops = [];
-	    this.type = null;
-	    this.x0 = 0.5;
-	    this.y0 = 0.5;
-	    this.x1 = 0.5;
-	    this.y1 = 0.5;
-	    this.promise = Promise.resolve(true);
-	}
-
-	GradientContainer.TYPES = {
-	    LINEAR: 1,
-	    RADIAL: 2
-	};
-
-	// TODO: support hsl[a], negative %/length values
-	// TODO: support <angle> (e.g. -?\d{1,3}(?:\.\d+)deg, etc. : https://developer.mozilla.org/docs/Web/CSS/angle )
-	GradientContainer.REGEXP_COLORSTOP = /^\s*(rgba?\(\s*\d{1,3},\s*\d{1,3},\s*\d{1,3}(?:,\s*[0-9\.]+)?\s*\)|[a-z]{3,20}|#[a-f0-9]{3,6})(?:\s+(\d{1,3}(?:\.\d+)?)(%|px)?)?(?:\s|$)/i;
-
-	module.exports = GradientContainer;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	// http://dev.w3.org/csswg/css-color/
-
-	function Color(value) {
-	    this.r = 0;
-	    this.g = 0;
-	    this.b = 0;
-	    this.a = null;
-	    var result = this.fromArray(value) || this.namedColor(value) || this.rgb(value) || this.rgba(value) || this.hex6(value) || this.hex3(value);
-	}
-
-	Color.prototype.darken = function (amount) {
-	    var a = 1 - amount;
-	    return new Color([Math.round(this.r * a), Math.round(this.g * a), Math.round(this.b * a), this.a]);
-	};
-
-	Color.prototype.isTransparent = function () {
-	    return this.a === 0;
-	};
-
-	Color.prototype.isBlack = function () {
-	    return this.r === 0 && this.g === 0 && this.b === 0;
-	};
-
-	Color.prototype.fromArray = function (array) {
-	    if (Array.isArray(array)) {
-	        this.r = Math.min(array[0], 255);
-	        this.g = Math.min(array[1], 255);
-	        this.b = Math.min(array[2], 255);
-	        if (array.length > 3) {
-	            this.a = array[3];
-	        }
-	    }
-
-	    return Array.isArray(array);
-	};
-
-	var _hex3 = /^#([a-f0-9]{3})$/i;
-
-	Color.prototype.hex3 = function (value) {
-	    var match = null;
-	    if ((match = value.match(_hex3)) !== null) {
-	        this.r = parseInt(match[1][0] + match[1][0], 16);
-	        this.g = parseInt(match[1][1] + match[1][1], 16);
-	        this.b = parseInt(match[1][2] + match[1][2], 16);
-	    }
-	    return match !== null;
-	};
-
-	var _hex6 = /^#([a-f0-9]{6})$/i;
-
-	Color.prototype.hex6 = function (value) {
-	    var match = null;
-	    if ((match = value.match(_hex6)) !== null) {
-	        this.r = parseInt(match[1].substring(0, 2), 16);
-	        this.g = parseInt(match[1].substring(2, 4), 16);
-	        this.b = parseInt(match[1].substring(4, 6), 16);
-	    }
-	    return match !== null;
-	};
-
-	var _rgb = /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/;
-
-	Color.prototype.rgb = function (value) {
-	    var match = null;
-	    if ((match = value.match(_rgb)) !== null) {
-	        this.r = Number(match[1]);
-	        this.g = Number(match[2]);
-	        this.b = Number(match[3]);
-	    }
-	    return match !== null;
-	};
-
-	var _rgba = /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d?\.?\d+)\s*\)$/;
-
-	Color.prototype.rgba = function (value) {
-	    var match = null;
-	    if ((match = value.match(_rgba)) !== null) {
-	        this.r = Number(match[1]);
-	        this.g = Number(match[2]);
-	        this.b = Number(match[3]);
-	        this.a = Number(match[4]);
-	    }
-	    return match !== null;
-	};
-
-	Color.prototype.toString = function () {
-	    return this.a !== null && this.a !== 1 ? "rgba(" + [this.r, this.g, this.b, this.a].join(",") + ")" : "rgb(" + [this.r, this.g, this.b].join(",") + ")";
-	};
-
-	Color.prototype.namedColor = function (value) {
-	    value = value.toLowerCase();
-	    var color = colors[value];
-	    if (color) {
-	        this.r = color[0];
-	        this.g = color[1];
-	        this.b = color[2];
-	    } else if (value === "transparent") {
-	        this.r = this.g = this.b = this.a = 0;
-	        return true;
-	    }
-
-	    return !!color;
-	};
-
-	Color.prototype.isColor = true;
-
-	// JSON.stringify([].slice.call($$('.named-color-table tr'), 1).map(function(row) { return [row.childNodes[3].textContent, row.childNodes[5].textContent.trim().split(",").map(Number)] }).reduce(function(data, row) {data[row[0]] = row[1]; return data}, {}))
-	var colors = {
-	    "aliceblue": [240, 248, 255],
-	    "antiquewhite": [250, 235, 215],
-	    "aqua": [0, 255, 255],
-	    "aquamarine": [127, 255, 212],
-	    "azure": [240, 255, 255],
-	    "beige": [245, 245, 220],
-	    "bisque": [255, 228, 196],
-	    "black": [0, 0, 0],
-	    "blanchedalmond": [255, 235, 205],
-	    "blue": [0, 0, 255],
-	    "blueviolet": [138, 43, 226],
-	    "brown": [165, 42, 42],
-	    "burlywood": [222, 184, 135],
-	    "cadetblue": [95, 158, 160],
-	    "chartreuse": [127, 255, 0],
-	    "chocolate": [210, 105, 30],
-	    "coral": [255, 127, 80],
-	    "cornflowerblue": [100, 149, 237],
-	    "cornsilk": [255, 248, 220],
-	    "crimson": [220, 20, 60],
-	    "cyan": [0, 255, 255],
-	    "darkblue": [0, 0, 139],
-	    "darkcyan": [0, 139, 139],
-	    "darkgoldenrod": [184, 134, 11],
-	    "darkgray": [169, 169, 169],
-	    "darkgreen": [0, 100, 0],
-	    "darkgrey": [169, 169, 169],
-	    "darkkhaki": [189, 183, 107],
-	    "darkmagenta": [139, 0, 139],
-	    "darkolivegreen": [85, 107, 47],
-	    "darkorange": [255, 140, 0],
-	    "darkorchid": [153, 50, 204],
-	    "darkred": [139, 0, 0],
-	    "darksalmon": [233, 150, 122],
-	    "darkseagreen": [143, 188, 143],
-	    "darkslateblue": [72, 61, 139],
-	    "darkslategray": [47, 79, 79],
-	    "darkslategrey": [47, 79, 79],
-	    "darkturquoise": [0, 206, 209],
-	    "darkviolet": [148, 0, 211],
-	    "deeppink": [255, 20, 147],
-	    "deepskyblue": [0, 191, 255],
-	    "dimgray": [105, 105, 105],
-	    "dimgrey": [105, 105, 105],
-	    "dodgerblue": [30, 144, 255],
-	    "firebrick": [178, 34, 34],
-	    "floralwhite": [255, 250, 240],
-	    "forestgreen": [34, 139, 34],
-	    "fuchsia": [255, 0, 255],
-	    "gainsboro": [220, 220, 220],
-	    "ghostwhite": [248, 248, 255],
-	    "gold": [255, 215, 0],
-	    "goldenrod": [218, 165, 32],
-	    "gray": [128, 128, 128],
-	    "green": [0, 128, 0],
-	    "greenyellow": [173, 255, 47],
-	    "grey": [128, 128, 128],
-	    "honeydew": [240, 255, 240],
-	    "hotpink": [255, 105, 180],
-	    "indianred": [205, 92, 92],
-	    "indigo": [75, 0, 130],
-	    "ivory": [255, 255, 240],
-	    "khaki": [240, 230, 140],
-	    "lavender": [230, 230, 250],
-	    "lavenderblush": [255, 240, 245],
-	    "lawngreen": [124, 252, 0],
-	    "lemonchiffon": [255, 250, 205],
-	    "lightblue": [173, 216, 230],
-	    "lightcoral": [240, 128, 128],
-	    "lightcyan": [224, 255, 255],
-	    "lightgoldenrodyellow": [250, 250, 210],
-	    "lightgray": [211, 211, 211],
-	    "lightgreen": [144, 238, 144],
-	    "lightgrey": [211, 211, 211],
-	    "lightpink": [255, 182, 193],
-	    "lightsalmon": [255, 160, 122],
-	    "lightseagreen": [32, 178, 170],
-	    "lightskyblue": [135, 206, 250],
-	    "lightslategray": [119, 136, 153],
-	    "lightslategrey": [119, 136, 153],
-	    "lightsteelblue": [176, 196, 222],
-	    "lightyellow": [255, 255, 224],
-	    "lime": [0, 255, 0],
-	    "limegreen": [50, 205, 50],
-	    "linen": [250, 240, 230],
-	    "magenta": [255, 0, 255],
-	    "maroon": [128, 0, 0],
-	    "mediumaquamarine": [102, 205, 170],
-	    "mediumblue": [0, 0, 205],
-	    "mediumorchid": [186, 85, 211],
-	    "mediumpurple": [147, 112, 219],
-	    "mediumseagreen": [60, 179, 113],
-	    "mediumslateblue": [123, 104, 238],
-	    "mediumspringgreen": [0, 250, 154],
-	    "mediumturquoise": [72, 209, 204],
-	    "mediumvioletred": [199, 21, 133],
-	    "midnightblue": [25, 25, 112],
-	    "mintcream": [245, 255, 250],
-	    "mistyrose": [255, 228, 225],
-	    "moccasin": [255, 228, 181],
-	    "navajowhite": [255, 222, 173],
-	    "navy": [0, 0, 128],
-	    "oldlace": [253, 245, 230],
-	    "olive": [128, 128, 0],
-	    "olivedrab": [107, 142, 35],
-	    "orange": [255, 165, 0],
-	    "orangered": [255, 69, 0],
-	    "orchid": [218, 112, 214],
-	    "palegoldenrod": [238, 232, 170],
-	    "palegreen": [152, 251, 152],
-	    "paleturquoise": [175, 238, 238],
-	    "palevioletred": [219, 112, 147],
-	    "papayawhip": [255, 239, 213],
-	    "peachpuff": [255, 218, 185],
-	    "peru": [205, 133, 63],
-	    "pink": [255, 192, 203],
-	    "plum": [221, 160, 221],
-	    "powderblue": [176, 224, 230],
-	    "purple": [128, 0, 128],
-	    "rebeccapurple": [102, 51, 153],
-	    "red": [255, 0, 0],
-	    "rosybrown": [188, 143, 143],
-	    "royalblue": [65, 105, 225],
-	    "saddlebrown": [139, 69, 19],
-	    "salmon": [250, 128, 114],
-	    "sandybrown": [244, 164, 96],
-	    "seagreen": [46, 139, 87],
-	    "seashell": [255, 245, 238],
-	    "sienna": [160, 82, 45],
-	    "silver": [192, 192, 192],
-	    "skyblue": [135, 206, 235],
-	    "slateblue": [106, 90, 205],
-	    "slategray": [112, 128, 144],
-	    "slategrey": [112, 128, 144],
-	    "snow": [255, 250, 250],
-	    "springgreen": [0, 255, 127],
-	    "steelblue": [70, 130, 180],
-	    "tan": [210, 180, 140],
-	    "teal": [0, 128, 128],
-	    "thistle": [216, 191, 216],
-	    "tomato": [255, 99, 71],
-	    "turquoise": [64, 224, 208],
-	    "violet": [238, 130, 238],
-	    "wheat": [245, 222, 179],
-	    "white": [255, 255, 255],
-	    "whitesmoke": [245, 245, 245],
-	    "yellow": [255, 255, 0],
-	    "yellowgreen": [154, 205, 50]
-	};
-
-	module.exports = Color;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var log = __webpack_require__(5);
-	var ImageContainer = __webpack_require__(10);
-	var DummyImageContainer = __webpack_require__(11);
-	var ProxyImageContainer = __webpack_require__(13);
-	var FrameContainer = __webpack_require__(17);
-	var SVGContainer = __webpack_require__(18);
-	var SVGNodeContainer = __webpack_require__(19);
-	var LinearGradientContainer = __webpack_require__(6);
-	var WebkitGradientContainer = __webpack_require__(20);
-	var bind = __webpack_require__(12).bind;
-
-	function ImageLoader(options, support) {
-	    this.link = null;
-	    this.options = options;
-	    this.support = support;
-	    this.origin = this.getOrigin(window.location.href);
-	}
-
-	ImageLoader.prototype.findImages = function (nodes) {
-	    var images = [];
-	    nodes.reduce(function (imageNodes, container) {
-	        switch (container.node.nodeName) {
-	            case "IMG":
-	                return imageNodes.concat([{
-	                    args: [container.node.src],
-	                    method: "url"
-	                }]);
-	            case "svg":
-	            case "IFRAME":
-	                return imageNodes.concat([{
-	                    args: [container.node],
-	                    method: container.node.nodeName
-	                }]);
-	        }
-	        return imageNodes;
-	    }, []).forEach(this.addImage(images, this.loadImage), this);
-	    return images;
-	};
-
-	ImageLoader.prototype.findBackgroundImage = function (images, container) {
-	    container.parseBackgroundImages().filter(this.hasImageBackground).forEach(this.addImage(images, this.loadImage), this);
-	    return images;
-	};
-
-	ImageLoader.prototype.addImage = function (images, callback) {
-	    return function (newImage) {
-	        newImage.args.forEach(function (image) {
-	            if (!this.imageExists(images, image)) {
-	                images.splice(0, 0, callback.call(this, newImage));
-	                log('Added image #' + images.length, typeof image === "string" ? image.substring(0, 100) : image);
-	            }
-	        }, this);
-	    };
-	};
-
-	ImageLoader.prototype.hasImageBackground = function (imageData) {
-	    return imageData.method !== "none";
-	};
-
-	ImageLoader.prototype.loadImage = function (imageData) {
-	    if (imageData.method === "url") {
-	        var src = imageData.args[0];
-	        if (this.isSVG(src) && !this.support.svg && !this.options.allowTaint) {
-	            return new SVGContainer(src);
-	        } else if (src.match(/data:image\/.*;base64,/i)) {
-	            return new ImageContainer(src.replace(/url\(['"]{0,}|['"]{0,}\)$/ig, ''), false);
-	        } else if (this.isSameOrigin(src) || this.options.allowTaint === true || this.isSVG(src)) {
-	            return new ImageContainer(src, false);
-	        } else if (this.support.cors && !this.options.allowTaint && this.options.useCORS) {
-	            return new ImageContainer(src, true);
-	        } else if (this.options.proxy) {
-	            return new ProxyImageContainer(src, this.options.proxy);
-	        } else {
-	            return new DummyImageContainer(src);
-	        }
-	    } else if (imageData.method === "linear-gradient") {
-	        return new LinearGradientContainer(imageData);
-	    } else if (imageData.method === "gradient") {
-	        return new WebkitGradientContainer(imageData);
-	    } else if (imageData.method === "svg") {
-	        return new SVGNodeContainer(imageData.args[0], this.support.svg);
-	    } else if (imageData.method === "IFRAME") {
-	        return new FrameContainer(imageData.args[0], this.isSameOrigin(imageData.args[0].src), this.options);
-	    } else {
-	        return new DummyImageContainer(imageData);
-	    }
-	};
-
-	ImageLoader.prototype.isSVG = function (src) {
-	    return src.substring(src.length - 3).toLowerCase() === "svg" || SVGContainer.prototype.isInline(src);
-	};
-
-	ImageLoader.prototype.imageExists = function (images, src) {
-	    return images.some(function (image) {
-	        return image.src === src;
-	    });
-	};
-
-	ImageLoader.prototype.isSameOrigin = function (url) {
-	    return this.getOrigin(url) === this.origin;
-	};
-
-	ImageLoader.prototype.getOrigin = function (url) {
-	    var link = this.link || (this.link = document.createElement("a"));
-	    link.href = url;
-	    link.href = link.href; // IE9, LOL! - http://jsfiddle.net/niklasvh/2e48b/
-	    return link.protocol + link.hostname + link.port;
-	};
-
-	ImageLoader.prototype.getPromise = function (container) {
-	    return this.timeout(container, this.options.imageTimeout)['catch'](function () {
-	        var dummy = new DummyImageContainer(container.src);
-	        return dummy.promise.then(function (image) {
-	            container.image = image;
-	        });
-	    });
-	};
-
-	ImageLoader.prototype.get = function (src) {
-	    var found = null;
-	    return this.images.some(function (img) {
-	        return (found = img).src === src;
-	    }) ? found : null;
-	};
-
-	ImageLoader.prototype.fetch = function (nodes) {
-	    this.images = nodes.reduce(bind(this.findBackgroundImage, this), this.findImages(nodes));
-	    this.images.forEach(function (image, index) {
-	        image.promise.then(function () {
-	            log("Succesfully loaded image #" + (index + 1), image);
-	        }, function (e) {
-	            log("Failed loading image #" + (index + 1), image, e);
-	        });
-	    });
-	    this.ready = Promise.all(this.images.map(this.getPromise, this));
-	    log("Finished searching images");
-	    return this;
-	};
-
-	ImageLoader.prototype.timeout = function (container, timeout) {
-	    var timer;
-	    var promise = Promise.race([container.promise, new Promise(function (res, reject) {
-	        timer = setTimeout(function () {
-	            log("Timed out loading image", container);
-	            reject(container);
-	        }, timeout);
-	    })]).then(function (container) {
-	        clearTimeout(timer);
-	        return container;
-	    });
-	    promise['catch'](function () {
-	        clearTimeout(timer);
-	    });
-	    return promise;
-	};
-
-	module.exports = ImageLoader;
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	function ImageContainer(src, cors) {
-	    this.src = src;
-	    this.image = new Image();
-	    var self = this;
-	    this.tainted = null;
-	    this.promise = new Promise(function (resolve, reject) {
-	        self.image.onload = resolve;
-	        self.image.onerror = reject;
-	        if (cors) {
-	            self.image.crossOrigin = "anonymous";
-	        }
-	        self.image.src = src;
-	        if (self.image.complete === true) {
-	            resolve(self.image);
-	        }
-	    });
-	}
-
-	module.exports = ImageContainer;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var log = __webpack_require__(5);
-	var smallImage = __webpack_require__(12).smallImage;
-
-	function DummyImageContainer(src) {
-	    this.src = src;
-	    log("DummyImageContainer for", src);
-	    if (!this.promise || !this.image) {
-	        log("Initiating DummyImageContainer");
-	        DummyImageContainer.prototype.image = new Image();
-	        var image = this.image;
-	        DummyImageContainer.prototype.promise = new Promise(function (resolve, reject) {
-	            image.onload = resolve;
-	            image.onerror = reject;
-	            image.src = smallImage();
-	            if (image.complete === true) {
-	                resolve(image);
-	            }
-	        });
-	    }
-	}
-
-	module.exports = DummyImageContainer;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	exports.smallImage = function smallImage() {
-	    return "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-	};
-
-	exports.bind = function (callback, context) {
-	    return function () {
-	        return callback.apply(context, arguments);
-	    };
-	};
-
-	/*
-	 * base64-arraybuffer
-	 * https://github.com/niklasvh/base64-arraybuffer
-	 *
-	 * Copyright (c) 2012 Niklas von Hertzen
-	 * Licensed under the MIT license.
-	 */
-
-	exports.decode64 = function (base64) {
-	    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-	    var len = base64.length,
-	        i,
-	        encoded1,
-	        encoded2,
-	        encoded3,
-	        encoded4,
-	        byte1,
-	        byte2,
-	        byte3;
-
-	    var output = "";
-
-	    for (i = 0; i < len; i += 4) {
-	        encoded1 = chars.indexOf(base64[i]);
-	        encoded2 = chars.indexOf(base64[i + 1]);
-	        encoded3 = chars.indexOf(base64[i + 2]);
-	        encoded4 = chars.indexOf(base64[i + 3]);
-
-	        byte1 = encoded1 << 2 | encoded2 >> 4;
-	        byte2 = (encoded2 & 15) << 4 | encoded3 >> 2;
-	        byte3 = (encoded3 & 3) << 6 | encoded4;
-	        if (encoded3 === 64) {
-	            output += String.fromCharCode(byte1);
-	        } else if (encoded4 === 64 || encoded4 === -1) {
-	            output += String.fromCharCode(byte1, byte2);
-	        } else {
-	            output += String.fromCharCode(byte1, byte2, byte3);
-	        }
-	    }
-
-	    return output;
-	};
-
-	exports.getBounds = function (node) {
-	    if (node.getBoundingClientRect) {
-	        var clientRect = node.getBoundingClientRect();
-	        var width = node.offsetWidth == null ? clientRect.width : node.offsetWidth;
-	        return {
-	            top: clientRect.top,
-	            bottom: clientRect.bottom || clientRect.top + clientRect.height,
-	            right: clientRect.left + width,
-	            left: clientRect.left,
-	            width: width,
-	            height: node.offsetHeight == null ? clientRect.height : node.offsetHeight
-	        };
-	    }
-	    return {};
-	};
-
-	exports.offsetBounds = function (node) {
-	    var parent = node.offsetParent ? exports.offsetBounds(node.offsetParent) : { top: 0, left: 0 };
-
-	    return {
-	        top: node.offsetTop + parent.top,
-	        bottom: node.offsetTop + node.offsetHeight + parent.top,
-	        right: node.offsetLeft + parent.left + node.offsetWidth,
-	        left: node.offsetLeft + parent.left,
-	        width: node.offsetWidth,
-	        height: node.offsetHeight
-	    };
-	};
-
-	exports.parseBackgrounds = function (backgroundImage) {
-	    var whitespace = ' \r\n\t',
-	        method,
-	        definition,
-	        prefix,
-	        prefix_i,
-	        block,
-	        results = [],
-	        mode = 0,
-	        numParen = 0,
-	        quote,
-	        args;
-	    var appendResult = function appendResult() {
-	        if (method) {
-	            if (definition.substr(0, 1) === '"') {
-	                definition = definition.substr(1, definition.length - 2);
-	            }
-	            if (definition) {
-	                args.push(definition);
-	            }
-	            if (method.substr(0, 1) === '-' && (prefix_i = method.indexOf('-', 1) + 1) > 0) {
-	                prefix = method.substr(0, prefix_i);
-	                method = method.substr(prefix_i);
-	            }
-	            results.push({
-	                prefix: prefix,
-	                method: method.toLowerCase(),
-	                value: block,
-	                args: args,
-	                image: null
-	            });
-	        }
-	        args = [];
-	        method = prefix = definition = block = '';
-	    };
-	    args = [];
-	    method = prefix = definition = block = '';
-	    backgroundImage.split("").forEach(function (c) {
-	        if (mode === 0 && whitespace.indexOf(c) > -1) {
-	            return;
-	        }
-	        switch (c) {
-	            case '"':
-	                if (!quote) {
-	                    quote = c;
-	                } else if (quote === c) {
-	                    quote = null;
-	                }
-	                break;
-	            case '(':
-	                if (quote) {
-	                    break;
-	                } else if (mode === 0) {
-	                    mode = 1;
-	                    block += c;
-	                    return;
-	                } else {
-	                    numParen++;
-	                }
-	                break;
-	            case ')':
-	                if (quote) {
-	                    break;
-	                } else if (mode === 1) {
-	                    if (numParen === 0) {
-	                        mode = 0;
-	                        block += c;
-	                        appendResult();
-	                        return;
-	                    } else {
-	                        numParen--;
-	                    }
-	                }
-	                break;
-
-	            case ',':
-	                if (quote) {
-	                    break;
-	                } else if (mode === 0) {
-	                    appendResult();
-	                    return;
-	                } else if (mode === 1) {
-	                    if (numParen === 0 && !method.match(/^url$/i)) {
-	                        args.push(definition);
-	                        definition = '';
-	                        block += c;
-	                        return;
-	                    }
-	                }
-	                break;
-	        }
-
-	        block += c;
-	        if (mode === 0) {
-	            method += c;
-	        } else {
-	            definition += c;
-	        }
-	    });
-
-	    appendResult();
-	    return results;
-	};
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var ProxyURL = __webpack_require__(14).ProxyURL;
-
-	function ProxyImageContainer(src, proxy) {
-	    var link = document.createElement("a");
-	    link.href = src;
-	    src = link.href;
-	    this.src = src;
-	    this.image = new Image();
-	    var self = this;
-	    this.promise = new Promise(function (resolve, reject) {
-	        self.image.crossOrigin = "Anonymous";
-	        self.image.onload = resolve;
-	        self.image.onerror = reject;
-
-	        new ProxyURL(src, proxy, document).then(function (url) {
-	            self.image.src = url;
-	        })['catch'](reject);
-	    });
-	}
-
-	module.exports = ProxyImageContainer;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var XHR = __webpack_require__(15);
-	var utils = __webpack_require__(12);
-	var log = __webpack_require__(5);
-	var createWindowClone = __webpack_require__(16);
-	var decode64 = utils.decode64;
-
-	function Proxy(src, proxyUrl, document) {
-	    var supportsCORS = 'withCredentials' in new XMLHttpRequest();
-	    if (!proxyUrl) {
-	        return Promise.reject("No proxy configured");
-	    }
-	    var callback = createCallback(supportsCORS);
-	    var url = createProxyUrl(proxyUrl, src, callback);
-
-	    return supportsCORS ? XHR(url) : jsonp(document, url, callback).then(function (response) {
-	        return decode64(response.content);
-	    });
-	}
-	var proxyCount = 0;
-
-	function ProxyURL(src, proxyUrl, document) {
-	    var supportsCORSImage = 'crossOrigin' in new Image();
-	    var callback = createCallback(supportsCORSImage);
-	    var url = createProxyUrl(proxyUrl, src, callback);
-	    return supportsCORSImage ? Promise.resolve(url) : jsonp(document, url, callback).then(function (response) {
-	        return "data:" + response.type + ";base64," + response.content;
-	    });
-	}
-
-	function jsonp(document, url, callback) {
-	    return new Promise(function (resolve, reject) {
-	        var s = document.createElement("script");
-	        var cleanup = function cleanup() {
-	            delete window.html2canvas.proxy[callback];
-	            document.body.removeChild(s);
-	        };
-	        window.html2canvas.proxy[callback] = function (response) {
-	            cleanup();
-	            resolve(response);
-	        };
-	        s.src = url;
-	        s.onerror = function (e) {
-	            cleanup();
-	            reject(e);
-	        };
-	        document.body.appendChild(s);
-	    });
-	}
-
-	function createCallback(useCORS) {
-	    return !useCORS ? "html2canvas_" + Date.now() + "_" + ++proxyCount + "_" + Math.round(Math.random() * 100000) : "";
-	}
-
-	function createProxyUrl(proxyUrl, src, callback) {
-	    return proxyUrl + "?url=" + encodeURIComponent(src) + (callback.length ? "&callback=html2canvas.proxy." + callback : "");
-	}
-
-	function documentFromHTML(src) {
-	    return function (html) {
-	        var parser = new DOMParser(),
-	            doc;
-	        try {
-	            doc = parser.parseFromString(html, "text/html");
-	        } catch (e) {
-	            log("DOMParser not supported, falling back to createHTMLDocument");
-	            doc = document.implementation.createHTMLDocument("");
-	            try {
-	                doc.open();
-	                doc.write(html);
-	                doc.close();
-	            } catch (ee) {
-	                log("createHTMLDocument write not supported, falling back to document.body.innerHTML");
-	                doc.body.innerHTML = html; // ie9 doesnt support writing to documentElement
-	            }
-	        }
-
-	        var b = doc.querySelector("base");
-	        if (!b || !b.href.host) {
-	            var base = doc.createElement("base");
-	            base.href = src;
-	            doc.head.insertBefore(base, doc.head.firstChild);
-	        }
-
-	        return doc;
-	    };
-	}
-
-	function loadUrlDocument(src, proxy, document, width, height, options) {
-	    return new Proxy(src, proxy, window.document).then(documentFromHTML(src)).then(function (doc) {
-	        return createWindowClone(doc, document, width, height, options, 0, 0);
-	    });
-	}
-
-	exports.Proxy = Proxy;
-	exports.ProxyURL = ProxyURL;
-	exports.loadUrlDocument = loadUrlDocument;
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	function XHR(url) {
-	    return new Promise(function (resolve, reject) {
-	        var xhr = new XMLHttpRequest();
-	        xhr.open('GET', url);
-
-	        xhr.onload = function () {
-	            if (xhr.status === 200) {
-	                resolve(xhr.responseText);
-	            } else {
-	                reject(new Error(xhr.statusText));
-	            }
-	        };
-
-	        xhr.onerror = function () {
-	            reject(new Error("Network Error"));
-	        };
-
-	        xhr.send();
-	    });
-	}
-
-	module.exports = XHR;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var log = __webpack_require__(5);
-
-	function restoreOwnerScroll(ownerDocument, x, y) {
-	    if (ownerDocument.defaultView && (x !== ownerDocument.defaultView.pageXOffset || y !== ownerDocument.defaultView.pageYOffset)) {
-	        ownerDocument.defaultView.scrollTo(x, y);
-	    }
-	}
-
-	function cloneCanvasContents(canvas, clonedCanvas) {
-	    try {
-	        if (clonedCanvas) {
-	            clonedCanvas.width = canvas.width;
-	            clonedCanvas.height = canvas.height;
-	            clonedCanvas.getContext("2d").putImageData(canvas.getContext("2d").getImageData(0, 0, canvas.width, canvas.height), 0, 0);
-	        }
-	    } catch (e) {
-	        log("Unable to copy canvas content from", canvas, e);
-	    }
-	}
-
-	function cloneNode(node, javascriptEnabled) {
-	    var clone = node.nodeType === 3 ? document.createTextNode(node.nodeValue) : node.cloneNode(false);
-
-	    var child = node.firstChild;
-	    while (child) {
-	        if (javascriptEnabled === true || child.nodeType !== 1 || child.nodeName !== 'SCRIPT') {
-	            clone.appendChild(cloneNode(child, javascriptEnabled));
-	        }
-	        child = child.nextSibling;
-	    }
-
-	    if (node.nodeType === 1) {
-	        clone._scrollTop = node.scrollTop;
-	        clone._scrollLeft = node.scrollLeft;
-	        if (node.nodeName === "CANVAS") {
-	            cloneCanvasContents(node, clone);
-	        } else if (node.nodeName === "TEXTAREA" || node.nodeName === "SELECT") {
-	            clone.value = node.value;
-	        }
-	    }
-
-	    return clone;
-	}
-
-	function initNode(node) {
-	    if (node.nodeType === 1) {
-	        node.scrollTop = node._scrollTop;
-	        node.scrollLeft = node._scrollLeft;
-
-	        var child = node.firstChild;
-	        while (child) {
-	            initNode(child);
-	            child = child.nextSibling;
-	        }
-	    }
-	}
-
-	module.exports = function (ownerDocument, containerDocument, width, height, options, x, y) {
-	    var documentElement = cloneNode(ownerDocument.documentElement, options.javascriptEnabled);
-	    var container = containerDocument.createElement("iframe");
-
-	    container.className = "html2canvas-container";
-	    container.style.visibility = "hidden";
-	    container.style.position = "fixed";
-	    container.style.left = "-10000px";
-	    container.style.top = "0px";
-	    container.style.border = "0";
-	    container.width = width;
-	    container.height = height;
-	    container.scrolling = "no"; // ios won't scroll without it
-	    containerDocument.body.appendChild(container);
-
-	    return new Promise(function (resolve) {
-	        var documentClone = container.contentWindow.document;
-
-	        /* Chrome doesn't detect relative background-images assigned in inline <style> sheets when fetched through getComputedStyle
-	         if window url is about:blank, we can assign the url to current by writing onto the document
-	         */
-	        container.contentWindow.onload = container.onload = function () {
-	            var interval = setInterval(function () {
-	                if (documentClone.body.childNodes.length > 0) {
-	                    initNode(documentClone.documentElement);
-	                    clearInterval(interval);
-	                    if (options.type === "view") {
-	                        container.contentWindow.scrollTo(x, y);
-	                        if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent) && (container.contentWindow.scrollY !== y || container.contentWindow.scrollX !== x)) {
-	                            documentClone.documentElement.style.top = -y + "px";
-	                            documentClone.documentElement.style.left = -x + "px";
-	                            documentClone.documentElement.style.position = 'absolute';
-	                        }
-	                    }
-	                    resolve(container);
-	                }
-	            }, 50);
-	        };
-
-	        documentClone.open();
-	        documentClone.write("<!DOCTYPE html><html></html>");
-	        // Chrome scrolls the parent document for some reason after the write to the cloned window???
-	        restoreOwnerScroll(ownerDocument, x, y);
-	        documentClone.replaceChild(documentClone.adoptNode(documentElement), documentClone.documentElement);
-	        documentClone.close();
-	    });
-	};
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var utils = __webpack_require__(12);
-	var getBounds = utils.getBounds;
-	var loadUrlDocument = __webpack_require__(14).loadUrlDocument;
-
-	function FrameContainer(container, sameOrigin, options) {
-	    this.image = null;
-	    this.src = container;
-	    var self = this;
-	    var bounds = getBounds(container);
-	    this.promise = (!sameOrigin ? this.proxyLoad(options.proxy, bounds, options) : new Promise(function (resolve) {
-	        if (container.contentWindow.document.URL === "about:blank" || container.contentWindow.document.documentElement == null) {
-	            container.contentWindow.onload = container.onload = function () {
-	                resolve(container);
-	            };
-	        } else {
-	            resolve(container);
-	        }
-	    })).then(function (container) {
-	        var html2canvas = __webpack_require__(1);
-	        return html2canvas(container.contentWindow.document.documentElement, { type: 'view', width: container.width, height: container.height, proxy: options.proxy, javascriptEnabled: options.javascriptEnabled, removeContainer: options.removeContainer, allowTaint: options.allowTaint, imageTimeout: options.imageTimeout / 2 });
-	    }).then(function (canvas) {
-	        return self.image = canvas;
-	    });
-	}
-
-	FrameContainer.prototype.proxyLoad = function (proxy, bounds, options) {
-	    var container = this.src;
-	    return loadUrlDocument(container.src, proxy, container.ownerDocument, bounds.width, bounds.height, options);
-	};
-
-	module.exports = FrameContainer;
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var XHR = __webpack_require__(15);
-	var decode64 = __webpack_require__(12).decode64;
-
-	function SVGContainer(src) {
-	    this.src = src;
-	    this.image = null;
-	    var self = this;
-
-	    this.promise = this.hasFabric().then(function () {
-	        return self.isInline(src) ? Promise.resolve(self.inlineFormatting(src)) : XHR(src);
-	    }).then(function (svg) {
-	        return new Promise(function (resolve) {
-	            window.html2canvas.svg.fabric.loadSVGFromString(svg, self.createCanvas.call(self, resolve));
-	        });
-	    });
-	}
-
-	SVGContainer.prototype.hasFabric = function () {
-	    return !window.html2canvas.svg || !window.html2canvas.svg.fabric ? Promise.reject(new Error("html2canvas.svg.js is not loaded, cannot render svg")) : Promise.resolve();
-	};
-
-	SVGContainer.prototype.inlineFormatting = function (src) {
-	    return (/^data:image\/svg\+xml;base64,/.test(src) ? this.decode64(this.removeContentType(src)) : this.removeContentType(src)
-	    );
-	};
-
-	SVGContainer.prototype.removeContentType = function (src) {
-	    return src.replace(/^data:image\/svg\+xml(;base64)?,/, '');
-	};
-
-	SVGContainer.prototype.isInline = function (src) {
-	    return (/^data:image\/svg\+xml/i.test(src)
-	    );
-	};
-
-	SVGContainer.prototype.createCanvas = function (resolve) {
-	    var self = this;
-	    return function (objects, options) {
-	        var canvas = new window.html2canvas.svg.fabric.StaticCanvas('c');
-	        self.image = canvas.lowerCanvasEl;
-	        canvas.setWidth(options.width).setHeight(options.height).add(window.html2canvas.svg.fabric.util.groupSVGElements(objects, options)).renderAll();
-	        resolve(canvas.lowerCanvasEl);
-	    };
-	};
-
-	SVGContainer.prototype.decode64 = function (str) {
-	    return typeof window.atob === "function" ? window.atob(str) : decode64(str);
-	};
-
-	module.exports = SVGContainer;
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var SVGContainer = __webpack_require__(18);
-
-	function SVGNodeContainer(node, _native) {
-	    this.src = node;
-	    this.image = null;
-	    var self = this;
-
-	    this.promise = _native ? new Promise(function (resolve, reject) {
-	        self.image = new Image();
-	        self.image.onload = resolve;
-	        self.image.onerror = reject;
-	        self.image.src = "data:image/svg+xml," + new XMLSerializer().serializeToString(node);
-	        if (self.image.complete === true) {
-	            resolve(self.image);
-	        }
-	    }) : this.hasFabric().then(function () {
-	        return new Promise(function (resolve) {
-	            window.html2canvas.svg.fabric.parseSVGDocument(node, self.createCanvas.call(self, resolve));
-	        });
-	    });
-	}
-
-	SVGNodeContainer.prototype = Object.create(SVGContainer.prototype);
-
-	module.exports = SVGNodeContainer;
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var GradientContainer = __webpack_require__(7);
-
-	function WebkitGradientContainer(imageData) {
-	    GradientContainer.apply(this, arguments);
-	    this.type = imageData.args[0] === "linear" ? GradientContainer.TYPES.LINEAR : GradientContainer.TYPES.RADIAL;
-	}
-
-	WebkitGradientContainer.prototype = Object.create(GradientContainer.prototype);
-
-	module.exports = WebkitGradientContainer;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var log = __webpack_require__(5);
-	var punycode = __webpack_require__(22);
-	var NodeContainer = __webpack_require__(24);
-	var TextContainer = __webpack_require__(25);
-	var PseudoElementContainer = __webpack_require__(26);
-	var FontMetrics = __webpack_require__(27);
-	var Color = __webpack_require__(8);
-	var StackingContext = __webpack_require__(29);
-	var utils = __webpack_require__(12);
-	var bind = utils.bind;
-	var getBounds = utils.getBounds;
-	var parseBackgrounds = utils.parseBackgrounds;
-	var offsetBounds = utils.offsetBounds;
-
-	function NodeParser(element, renderer, support, imageLoader, options) {
-	    log("Starting NodeParser");
-	    this.renderer = renderer;
-	    this.options = options;
-	    this.range = null;
-	    this.support = support;
-	    this.renderQueue = [];
-	    this.stack = new StackingContext(true, 1, element.ownerDocument, null);
-	    var parent = new NodeContainer(element, null);
-	    if (options.background) {
-	        renderer.rectangle(0, 0, renderer.width, renderer.height, new Color(options.background));
-	    }
-	    if (element === element.ownerDocument.documentElement) {
-	        // http://www.w3.org/TR/css3-background/#special-backgrounds
-	        var canvasBackground = new NodeContainer(parent.color('backgroundColor').isTransparent() ? element.ownerDocument.body : element.ownerDocument.documentElement, null);
-	        renderer.rectangle(0, 0, renderer.width, renderer.height, canvasBackground.color('backgroundColor'));
-	    }
-	    parent.visibile = parent.isElementVisible();
-	    this.createPseudoHideStyles(element.ownerDocument);
-	    this.disableAnimations(element.ownerDocument);
-	    this.nodes = flatten([parent].concat(this.getChildren(parent)).filter(function (container) {
-	        return container.visible = container.isElementVisible();
-	    }).map(this.getPseudoElements, this));
-	    this.fontMetrics = new FontMetrics();
-	    log("Fetched nodes, total:", this.nodes.length);
-	    log("Calculate overflow clips");
-	    this.calculateOverflowClips();
-	    log("Start fetching images");
-	    this.images = imageLoader.fetch(this.nodes.filter(isElement));
-	    this.ready = this.images.ready.then(bind(function () {
-	        log("Images loaded, starting parsing");
-	        log("Creating stacking contexts");
-	        this.createStackingContexts();
-	        log("Sorting stacking contexts");
-	        this.sortStackingContexts(this.stack);
-	        this.parse(this.stack);
-	        log("Render queue created with " + this.renderQueue.length + " items");
-	        return new Promise(bind(function (resolve) {
-	            if (!options.async) {
-	                this.renderQueue.forEach(this.paint, this);
-	                resolve();
-	            } else if (typeof options.async === "function") {
-	                options.async.call(this, this.renderQueue, resolve);
-	            } else if (this.renderQueue.length > 0) {
-	                this.renderIndex = 0;
-	                this.asyncRenderer(this.renderQueue, resolve);
-	            } else {
-	                resolve();
-	            }
-	        }, this));
-	    }, this));
-	}
-
-	NodeParser.prototype.calculateOverflowClips = function () {
-	    this.nodes.forEach(function (container) {
-	        if (isElement(container)) {
-	            if (isPseudoElement(container)) {
-	                container.appendToDOM();
-	            }
-	            container.borders = this.parseBorders(container);
-	            var clip = container.css('overflow') === "hidden" ? [container.borders.clip] : [];
-	            var cssClip = container.parseClip();
-	            if (cssClip && ["absolute", "fixed"].indexOf(container.css('position')) !== -1) {
-	                clip.push([["rect", container.bounds.left + cssClip.left, container.bounds.top + cssClip.top, cssClip.right - cssClip.left, cssClip.bottom - cssClip.top]]);
-	            }
-	            container.clip = hasParentClip(container) ? container.parent.clip.concat(clip) : clip;
-	            container.backgroundClip = container.css('overflow') !== "hidden" ? container.clip.concat([container.borders.clip]) : container.clip;
-	            if (isPseudoElement(container)) {
-	                container.cleanDOM();
-	            }
-	        } else if (isTextNode(container)) {
-	            container.clip = hasParentClip(container) ? container.parent.clip : [];
-	        }
-	        if (!isPseudoElement(container)) {
-	            container.bounds = null;
-	        }
-	    }, this);
-	};
-
-	function hasParentClip(container) {
-	    return container.parent && container.parent.clip.length;
-	}
-
-	NodeParser.prototype.asyncRenderer = function (queue, resolve, asyncTimer) {
-	    asyncTimer = asyncTimer || Date.now();
-	    this.paint(queue[this.renderIndex++]);
-	    if (queue.length === this.renderIndex) {
-	        resolve();
-	    } else if (asyncTimer + 20 > Date.now()) {
-	        this.asyncRenderer(queue, resolve, asyncTimer);
-	    } else {
-	        setTimeout(bind(function () {
-	            this.asyncRenderer(queue, resolve);
-	        }, this), 0);
-	    }
-	};
-
-	NodeParser.prototype.createPseudoHideStyles = function (document) {
-	    this.createStyles(document, '.' + PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_BEFORE + ':before { content: "" !important; display: none !important; }' + '.' + PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_AFTER + ':after { content: "" !important; display: none !important; }');
-	};
-
-	NodeParser.prototype.disableAnimations = function (document) {
-	    this.createStyles(document, '* { -webkit-animation: none !important; -moz-animation: none !important; -o-animation: none !important; animation: none !important; ' + '-webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; transition: none !important;}');
-	};
-
-	NodeParser.prototype.createStyles = function (document, styles) {
-	    if (window.hidePseudoElementsAdded) {
-	        return;
-	    }
-	    window.hidePseudoElementsAdded = true;
-	    var hidePseudoElements = document.createElement('style');
-	    hidePseudoElements.innerHTML = styles;
-	    document.body.appendChild(hidePseudoElements);
-	};
-
-	NodeParser.prototype.getPseudoElements = function (container) {
-	    var nodes = [[container]];
-	    if (container.node.nodeType === Node.ELEMENT_NODE) {
-	        var before = this.getPseudoElement(container, ":before");
-	        var after = this.getPseudoElement(container, ":after");
-
-	        if (before) {
-	            nodes.push(before);
-	        }
-
-	        if (after) {
-	            nodes.push(after);
-	        }
-	    }
-	    return flatten(nodes);
-	};
-
-	function toCamelCase(str) {
-	    return str.replace(/(\-[a-z])/g, function (match) {
-	        return match.toUpperCase().replace('-', '');
-	    });
-	}
-
-	NodeParser.prototype.getPseudoElement = function (container, type) {
-	    var style = container.computedStyle(type);
-	    if (!style || !style.content || style.content === "none" || style.content === "-moz-alt-content" || style.display === "none") {
-	        return null;
-	    }
-
-	    var content = stripQuotes(style.content);
-	    var isImage = content.substr(0, 3) === 'url';
-	    var pseudoNode = document.createElement(isImage ? 'img' : 'html2canvaspseudoelement');
-	    var pseudoContainer = new PseudoElementContainer(pseudoNode, container, type);
-
-	    for (var i = style.length - 1; i >= 0; i--) {
-	        var property = toCamelCase(style.item(i));
-	        pseudoNode.style[property] = style[property];
-	    }
-
-	    pseudoNode.className = PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_BEFORE + " " + PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_AFTER;
-
-	    if (isImage) {
-	        pseudoNode.src = parseBackgrounds(content)[0].args[0];
-	        return [pseudoContainer];
-	    } else {
-	        var text = document.createTextNode(content);
-	        pseudoNode.appendChild(text);
-	        return [pseudoContainer, new TextContainer(text, pseudoContainer)];
-	    }
-	};
-
-	NodeParser.prototype.getChildren = function (parentContainer) {
-	    return flatten([].filter.call(parentContainer.node.childNodes, renderableNode).map(function (node) {
-	        var container = [node.nodeType === Node.TEXT_NODE ? new TextContainer(node, parentContainer) : new NodeContainer(node, parentContainer)].filter(nonIgnoredElement);
-	        return node.nodeType === Node.ELEMENT_NODE && container.length && node.tagName !== "TEXTAREA" ? container[0].isElementVisible() ? container.concat(this.getChildren(container[0])) : [] : container;
-	    }, this));
-	};
-
-	NodeParser.prototype.newStackingContext = function (container, hasOwnStacking) {
-	    var stack = new StackingContext(hasOwnStacking, container.getOpacity(), container.node, container.parent);
-	    container.cloneTo(stack);
-	    var parentStack = hasOwnStacking ? stack.getParentStack(this) : stack.parent.stack;
-	    parentStack.contexts.push(stack);
-	    container.stack = stack;
-	};
-
-	NodeParser.prototype.createStackingContexts = function () {
-	    this.nodes.forEach(function (container) {
-	        if (isElement(container) && (this.isRootElement(container) || hasOpacity(container) || isPositionedForStacking(container) || this.isBodyWithTransparentRoot(container) || container.hasTransform())) {
-	            this.newStackingContext(container, true);
-	        } else if (isElement(container) && (isPositioned(container) && zIndex0(container) || isInlineBlock(container) || isFloating(container))) {
-	            this.newStackingContext(container, false);
-	        } else {
-	            container.assignStack(container.parent.stack);
-	        }
-	    }, this);
-	};
-
-	NodeParser.prototype.isBodyWithTransparentRoot = function (container) {
-	    return container.node.nodeName === "BODY" && container.parent.color('backgroundColor').isTransparent();
-	};
-
-	NodeParser.prototype.isRootElement = function (container) {
-	    return container.parent === null;
-	};
-
-	NodeParser.prototype.sortStackingContexts = function (stack) {
-	    stack.contexts.sort(zIndexSort(stack.contexts.slice(0)));
-	    stack.contexts.forEach(this.sortStackingContexts, this);
-	};
-
-	NodeParser.prototype.parseTextBounds = function (container) {
-	    return function (text, index, textList) {
-	        if (container.parent.css("textDecoration").substr(0, 4) !== "none" || text.trim().length !== 0) {
-	            if (this.support.rangeBounds && !container.parent.hasTransform()) {
-	                var offset = textList.slice(0, index).join("").length;
-	                return this.getRangeBounds(container.node, offset, text.length);
-	            } else if (container.node && typeof container.node.data === "string") {
-	                var replacementNode = container.node.splitText(text.length);
-	                var bounds = this.getWrapperBounds(container.node, container.parent.hasTransform());
-	                container.node = replacementNode;
-	                return bounds;
-	            }
-	        } else if (!this.support.rangeBounds || container.parent.hasTransform()) {
-	            container.node = container.node.splitText(text.length);
-	        }
-	        return {};
-	    };
-	};
-
-	NodeParser.prototype.getWrapperBounds = function (node, transform) {
-	    var wrapper = node.ownerDocument.createElement('html2canvaswrapper');
-	    var parent = node.parentNode,
-	        backupText = node.cloneNode(true);
-
-	    wrapper.appendChild(node.cloneNode(true));
-	    parent.replaceChild(wrapper, node);
-	    var bounds = transform ? offsetBounds(wrapper) : getBounds(wrapper);
-	    parent.replaceChild(backupText, wrapper);
-	    return bounds;
-	};
-
-	NodeParser.prototype.getRangeBounds = function (node, offset, length) {
-	    var range = this.range || (this.range = node.ownerDocument.createRange());
-	    range.setStart(node, offset);
-	    range.setEnd(node, offset + length);
-	    return range.getBoundingClientRect();
-	};
-
-	function ClearTransform() {}
-
-	NodeParser.prototype.parse = function (stack) {
-	    // http://www.w3.org/TR/CSS21/visuren.html#z-index
-	    var negativeZindex = stack.contexts.filter(negativeZIndex); // 2. the child stacking contexts with negative stack levels (most negative first).
-	    var descendantElements = stack.children.filter(isElement);
-	    var descendantNonFloats = descendantElements.filter(not(isFloating));
-	    var nonInlineNonPositionedDescendants = descendantNonFloats.filter(not(isPositioned)).filter(not(inlineLevel)); // 3 the in-flow, non-inline-level, non-positioned descendants.
-	    var nonPositionedFloats = descendantElements.filter(not(isPositioned)).filter(isFloating); // 4. the non-positioned floats.
-	    var inFlow = descendantNonFloats.filter(not(isPositioned)).filter(inlineLevel); // 5. the in-flow, inline-level, non-positioned descendants, including inline tables and inline blocks.
-	    var stackLevel0 = stack.contexts.concat(descendantNonFloats.filter(isPositioned)).filter(zIndex0); // 6. the child stacking contexts with stack level 0 and the positioned descendants with stack level 0.
-	    var text = stack.children.filter(isTextNode).filter(hasText);
-	    var positiveZindex = stack.contexts.filter(positiveZIndex); // 7. the child stacking contexts with positive stack levels (least positive first).
-	    negativeZindex.concat(nonInlineNonPositionedDescendants).concat(nonPositionedFloats).concat(inFlow).concat(stackLevel0).concat(text).concat(positiveZindex).forEach(function (container) {
-	        this.renderQueue.push(container);
-	        if (isStackingContext(container)) {
-	            this.parse(container);
-	            this.renderQueue.push(new ClearTransform());
-	        }
-	    }, this);
-	};
-
-	NodeParser.prototype.paint = function (container) {
-	    try {
-	        if (container instanceof ClearTransform) {
-	            this.renderer.ctx.restore();
-	        } else if (isTextNode(container)) {
-	            if (isPseudoElement(container.parent)) {
-	                container.parent.appendToDOM();
-	            }
-	            this.paintText(container);
-	            if (isPseudoElement(container.parent)) {
-	                container.parent.cleanDOM();
-	            }
-	        } else {
-	            this.paintNode(container);
-	        }
-	    } catch (e) {
-	        log(e);
-	        if (this.options.strict) {
-	            throw e;
-	        }
-	    }
-	};
-
-	NodeParser.prototype.paintNode = function (container) {
-	    if (isStackingContext(container)) {
-	        this.renderer.setOpacity(container.opacity);
-	        this.renderer.ctx.save();
-	        if (container.hasTransform()) {
-	            this.renderer.setTransform(container.parseTransform());
-	        }
-	    }
-
-	    if (container.node.nodeName === "INPUT" && container.node.type === "checkbox") {
-	        this.paintCheckbox(container);
-	    } else if (container.node.nodeName === "INPUT" && container.node.type === "radio") {
-	        this.paintRadio(container);
-	    } else {
-	        this.paintElement(container);
-	    }
-	};
-
-	NodeParser.prototype.paintElement = function (container) {
-	    var bounds = container.parseBounds();
-	    this.renderer.clip(container.backgroundClip, function () {
-	        this.renderer.renderBackground(container, bounds, container.borders.borders.map(getWidth));
-	    }, this);
-
-	    this.renderer.clip(container.clip, function () {
-	        this.renderer.renderBorders(container.borders.borders);
-	    }, this);
-
-	    this.renderer.clip(container.backgroundClip, function () {
-	        switch (container.node.nodeName) {
-	            case "svg":
-	            case "IFRAME":
-	                var imgContainer = this.images.get(container.node);
-	                if (imgContainer) {
-	                    this.renderer.renderImage(container, bounds, container.borders, imgContainer);
-	                } else {
-	                    log("Error loading <" + container.node.nodeName + ">", container.node);
-	                }
-	                break;
-	            case "IMG":
-	                var imageContainer = this.images.get(container.node.src);
-	                if (imageContainer) {
-	                    this.renderer.renderImage(container, bounds, container.borders, imageContainer);
-	                } else {
-	                    log("Error loading <img>", container.node.src);
-	                }
-	                break;
-	            case "CANVAS":
-	                this.renderer.renderImage(container, bounds, container.borders, { image: container.node });
-	                break;
-	            case "SELECT":
-	            case "INPUT":
-	            case "TEXTAREA":
-	                this.paintFormValue(container);
-	                break;
-	        }
-	    }, this);
-	};
-
-	NodeParser.prototype.paintCheckbox = function (container) {
-	    var b = container.parseBounds();
-
-	    var size = Math.min(b.width, b.height);
-	    var bounds = { width: size - 1, height: size - 1, top: b.top, left: b.left };
-	    var r = [3, 3];
-	    var radius = [r, r, r, r];
-	    var borders = [1, 1, 1, 1].map(function (w) {
-	        return { color: new Color('#A5A5A5'), width: w };
-	    });
-
-	    var borderPoints = calculateCurvePoints(bounds, radius, borders);
-
-	    this.renderer.clip(container.backgroundClip, function () {
-	        this.renderer.rectangle(bounds.left + 1, bounds.top + 1, bounds.width - 2, bounds.height - 2, new Color("#DEDEDE"));
-	        this.renderer.renderBorders(calculateBorders(borders, bounds, borderPoints, radius));
-	        if (container.node.checked) {
-	            this.renderer.font(new Color('#424242'), 'normal', 'normal', 'bold', size - 3 + "px", 'arial');
-	            this.renderer.text('\u2714', bounds.left + size / 6, bounds.top + size - 1);
-	        }
-	    }, this);
-	};
-
-	NodeParser.prototype.paintRadio = function (container) {
-	    var bounds = container.parseBounds();
-
-	    var size = Math.min(bounds.width, bounds.height) - 2;
-
-	    this.renderer.clip(container.backgroundClip, function () {
-	        this.renderer.circleStroke(bounds.left + 1, bounds.top + 1, size, new Color('#DEDEDE'), 1, new Color('#A5A5A5'));
-	        if (container.node.checked) {
-	            this.renderer.circle(Math.ceil(bounds.left + size / 4) + 1, Math.ceil(bounds.top + size / 4) + 1, Math.floor(size / 2), new Color('#424242'));
-	        }
-	    }, this);
-	};
-
-	NodeParser.prototype.paintFormValue = function (container) {
-	    var value = container.getValue();
-	    if (value.length > 0) {
-	        var document = container.node.ownerDocument;
-	        var wrapper = document.createElement('html2canvaswrapper');
-	        var properties = ['lineHeight', 'textAlign', 'fontFamily', 'fontWeight', 'fontSize', 'color', 'paddingLeft', 'paddingTop', 'paddingRight', 'paddingBottom', 'width', 'height', 'borderLeftStyle', 'borderTopStyle', 'borderLeftWidth', 'borderTopWidth', 'boxSizing', 'whiteSpace', 'wordWrap'];
-
-	        properties.forEach(function (property) {
-	            try {
-	                wrapper.style[property] = container.css(property);
-	            } catch (e) {
-	                // Older IE has issues with "border"
-	                log("html2canvas: Parse: Exception caught in renderFormValue: " + e.message);
-	            }
-	        });
-	        var bounds = container.parseBounds();
-	        wrapper.style.position = "fixed";
-	        wrapper.style.left = bounds.left + "px";
-	        wrapper.style.top = bounds.top + "px";
-	        wrapper.textContent = value;
-	        document.body.appendChild(wrapper);
-	        this.paintText(new TextContainer(wrapper.firstChild, container));
-	        document.body.removeChild(wrapper);
-	    }
-	};
-
-	NodeParser.prototype.paintText = function (container) {
-	    container.applyTextTransform();
-	    var characters = punycode.ucs2.decode(container.node.data);
-	    var textList = (!this.options.letterRendering || noLetterSpacing(container)) && !hasUnicode(container.node.data) ? getWords(characters) : characters.map(function (character) {
-	        return punycode.ucs2.encode([character]);
-	    });
-
-	    var weight = container.parent.fontWeight();
-	    var size = container.parent.css('fontSize');
-	    var family = container.parent.css('fontFamily');
-	    var shadows = container.parent.parseTextShadows();
-
-	    this.renderer.font(container.parent.color('color'), container.parent.css('fontStyle'), container.parent.css('fontVariant'), weight, size, family);
-	    if (shadows.length) {
-	        // TODO: support multiple text shadows
-	        this.renderer.fontShadow(shadows[0].color, shadows[0].offsetX, shadows[0].offsetY, shadows[0].blur);
-	    } else {
-	        this.renderer.clearShadow();
-	    }
-
-	    this.renderer.clip(container.parent.clip, function () {
-	        textList.map(this.parseTextBounds(container), this).forEach(function (bounds, index) {
-	            if (bounds) {
-	                this.renderer.text(textList[index], bounds.left, bounds.bottom);
-	                this.renderTextDecoration(container.parent, bounds, this.fontMetrics.getMetrics(family, size));
-	            }
-	        }, this);
-	    }, this);
-	};
-
-	NodeParser.prototype.renderTextDecoration = function (container, bounds, metrics) {
-	    switch (container.css("textDecoration").split(" ")[0]) {
-	        case "underline":
-	            // Draws a line at the baseline of the font
-	            // TODO As some browsers display the line as more than 1px if the font-size is big, need to take that into account both in position and size
-	            this.renderer.rectangle(bounds.left, Math.round(bounds.top + metrics.baseline + metrics.lineWidth), bounds.width, 1, container.color("color"));
-	            break;
-	        case "overline":
-	            this.renderer.rectangle(bounds.left, Math.round(bounds.top), bounds.width, 1, container.color("color"));
-	            break;
-	        case "line-through":
-	            // TODO try and find exact position for line-through
-	            this.renderer.rectangle(bounds.left, Math.ceil(bounds.top + metrics.middle + metrics.lineWidth), bounds.width, 1, container.color("color"));
-	            break;
-	    }
-	};
-
-	var borderColorTransforms = {
-	    inset: [["darken", 0.60], ["darken", 0.10], ["darken", 0.10], ["darken", 0.60]]
-	};
-
-	NodeParser.prototype.parseBorders = function (container) {
-	    var nodeBounds = container.parseBounds();
-	    var radius = getBorderRadiusData(container);
-	    var borders = ["Top", "Right", "Bottom", "Left"].map(function (side, index) {
-	        var style = container.css('border' + side + 'Style');
-	        var color = container.color('border' + side + 'Color');
-	        if (style === "inset" && color.isBlack()) {
-	            color = new Color([255, 255, 255, color.a]); // this is wrong, but
-	        }
-	        var colorTransform = borderColorTransforms[style] ? borderColorTransforms[style][index] : null;
-	        return {
-	            width: container.cssInt('border' + side + 'Width'),
-	            color: colorTransform ? color[colorTransform[0]](colorTransform[1]) : color,
-	            args: null
-	        };
-	    });
-	    var borderPoints = calculateCurvePoints(nodeBounds, radius, borders);
-
-	    return {
-	        clip: this.parseBackgroundClip(container, borderPoints, borders, radius, nodeBounds),
-	        borders: calculateBorders(borders, nodeBounds, borderPoints, radius)
-	    };
-	};
-
-	function calculateBorders(borders, nodeBounds, borderPoints, radius) {
-	    return borders.map(function (border, borderSide) {
-	        if (border.width > 0) {
-	            var bx = nodeBounds.left;
-	            var by = nodeBounds.top;
-	            var bw = nodeBounds.width;
-	            var bh = nodeBounds.height - borders[2].width;
-
-	            switch (borderSide) {
-	                case 0:
-	                    // top border
-	                    bh = borders[0].width;
-	                    border.args = drawSide({
-	                        c1: [bx, by],
-	                        c2: [bx + bw, by],
-	                        c3: [bx + bw - borders[1].width, by + bh],
-	                        c4: [bx + borders[3].width, by + bh]
-	                    }, radius[0], radius[1], borderPoints.topLeftOuter, borderPoints.topLeftInner, borderPoints.topRightOuter, borderPoints.topRightInner);
-	                    break;
-	                case 1:
-	                    // right border
-	                    bx = nodeBounds.left + nodeBounds.width - borders[1].width;
-	                    bw = borders[1].width;
-
-	                    border.args = drawSide({
-	                        c1: [bx + bw, by],
-	                        c2: [bx + bw, by + bh + borders[2].width],
-	                        c3: [bx, by + bh],
-	                        c4: [bx, by + borders[0].width]
-	                    }, radius[1], radius[2], borderPoints.topRightOuter, borderPoints.topRightInner, borderPoints.bottomRightOuter, borderPoints.bottomRightInner);
-	                    break;
-	                case 2:
-	                    // bottom border
-	                    by = by + nodeBounds.height - borders[2].width;
-	                    bh = borders[2].width;
-	                    border.args = drawSide({
-	                        c1: [bx + bw, by + bh],
-	                        c2: [bx, by + bh],
-	                        c3: [bx + borders[3].width, by],
-	                        c4: [bx + bw - borders[3].width, by]
-	                    }, radius[2], radius[3], borderPoints.bottomRightOuter, borderPoints.bottomRightInner, borderPoints.bottomLeftOuter, borderPoints.bottomLeftInner);
-	                    break;
-	                case 3:
-	                    // left border
-	                    bw = borders[3].width;
-	                    border.args = drawSide({
-	                        c1: [bx, by + bh + borders[2].width],
-	                        c2: [bx, by],
-	                        c3: [bx + bw, by + borders[0].width],
-	                        c4: [bx + bw, by + bh]
-	                    }, radius[3], radius[0], borderPoints.bottomLeftOuter, borderPoints.bottomLeftInner, borderPoints.topLeftOuter, borderPoints.topLeftInner);
-	                    break;
-	            }
-	        }
-	        return border;
-	    });
-	}
-
-	NodeParser.prototype.parseBackgroundClip = function (container, borderPoints, borders, radius, bounds) {
-	    var backgroundClip = container.css('backgroundClip'),
-	        borderArgs = [];
-
-	    switch (backgroundClip) {
-	        case "content-box":
-	        case "padding-box":
-	            parseCorner(borderArgs, radius[0], radius[1], borderPoints.topLeftInner, borderPoints.topRightInner, bounds.left + borders[3].width, bounds.top + borders[0].width);
-	            parseCorner(borderArgs, radius[1], radius[2], borderPoints.topRightInner, borderPoints.bottomRightInner, bounds.left + bounds.width - borders[1].width, bounds.top + borders[0].width);
-	            parseCorner(borderArgs, radius[2], radius[3], borderPoints.bottomRightInner, borderPoints.bottomLeftInner, bounds.left + bounds.width - borders[1].width, bounds.top + bounds.height - borders[2].width);
-	            parseCorner(borderArgs, radius[3], radius[0], borderPoints.bottomLeftInner, borderPoints.topLeftInner, bounds.left + borders[3].width, bounds.top + bounds.height - borders[2].width);
-	            break;
-
-	        default:
-	            parseCorner(borderArgs, radius[0], radius[1], borderPoints.topLeftOuter, borderPoints.topRightOuter, bounds.left, bounds.top);
-	            parseCorner(borderArgs, radius[1], radius[2], borderPoints.topRightOuter, borderPoints.bottomRightOuter, bounds.left + bounds.width, bounds.top);
-	            parseCorner(borderArgs, radius[2], radius[3], borderPoints.bottomRightOuter, borderPoints.bottomLeftOuter, bounds.left + bounds.width, bounds.top + bounds.height);
-	            parseCorner(borderArgs, radius[3], radius[0], borderPoints.bottomLeftOuter, borderPoints.topLeftOuter, bounds.left, bounds.top + bounds.height);
-	            break;
-	    }
-
-	    return borderArgs;
-	};
-
-	function getCurvePoints(x, y, r1, r2) {
-	    var kappa = 4 * ((Math.sqrt(2) - 1) / 3);
-	    var ox = r1 * kappa,
-	        // control point offset horizontal
-	    oy = r2 * kappa,
-	        // control point offset vertical
-	    xm = x + r1,
-	        // x-middle
-	    ym = y + r2; // y-middle
-	    return {
-	        topLeft: bezierCurve({ x: x, y: ym }, { x: x, y: ym - oy }, { x: xm - ox, y: y }, { x: xm, y: y }),
-	        topRight: bezierCurve({ x: x, y: y }, { x: x + ox, y: y }, { x: xm, y: ym - oy }, { x: xm, y: ym }),
-	        bottomRight: bezierCurve({ x: xm, y: y }, { x: xm, y: y + oy }, { x: x + ox, y: ym }, { x: x, y: ym }),
-	        bottomLeft: bezierCurve({ x: xm, y: ym }, { x: xm - ox, y: ym }, { x: x, y: y + oy }, { x: x, y: y })
-	    };
-	}
-
-	function calculateCurvePoints(bounds, borderRadius, borders) {
-	    var x = bounds.left,
-	        y = bounds.top,
-	        width = bounds.width,
-	        height = bounds.height,
-	        tlh = borderRadius[0][0] < width / 2 ? borderRadius[0][0] : width / 2,
-	        tlv = borderRadius[0][1] < height / 2 ? borderRadius[0][1] : height / 2,
-	        trh = borderRadius[1][0] < width / 2 ? borderRadius[1][0] : width / 2,
-	        trv = borderRadius[1][1] < height / 2 ? borderRadius[1][1] : height / 2,
-	        brh = borderRadius[2][0] < width / 2 ? borderRadius[2][0] : width / 2,
-	        brv = borderRadius[2][1] < height / 2 ? borderRadius[2][1] : height / 2,
-	        blh = borderRadius[3][0] < width / 2 ? borderRadius[3][0] : width / 2,
-	        blv = borderRadius[3][1] < height / 2 ? borderRadius[3][1] : height / 2;
-
-	    var topWidth = width - trh,
-	        rightHeight = height - brv,
-	        bottomWidth = width - brh,
-	        leftHeight = height - blv;
-
-	    return {
-	        topLeftOuter: getCurvePoints(x, y, tlh, tlv).topLeft.subdivide(0.5),
-	        topLeftInner: getCurvePoints(x + borders[3].width, y + borders[0].width, Math.max(0, tlh - borders[3].width), Math.max(0, tlv - borders[0].width)).topLeft.subdivide(0.5),
-	        topRightOuter: getCurvePoints(x + topWidth, y, trh, trv).topRight.subdivide(0.5),
-	        topRightInner: getCurvePoints(x + Math.min(topWidth, width + borders[3].width), y + borders[0].width, topWidth > width + borders[3].width ? 0 : trh - borders[3].width, trv - borders[0].width).topRight.subdivide(0.5),
-	        bottomRightOuter: getCurvePoints(x + bottomWidth, y + rightHeight, brh, brv).bottomRight.subdivide(0.5),
-	        bottomRightInner: getCurvePoints(x + Math.min(bottomWidth, width - borders[3].width), y + Math.min(rightHeight, height + borders[0].width), Math.max(0, brh - borders[1].width), brv - borders[2].width).bottomRight.subdivide(0.5),
-	        bottomLeftOuter: getCurvePoints(x, y + leftHeight, blh, blv).bottomLeft.subdivide(0.5),
-	        bottomLeftInner: getCurvePoints(x + borders[3].width, y + leftHeight, Math.max(0, blh - borders[3].width), blv - borders[2].width).bottomLeft.subdivide(0.5)
-	    };
-	}
-
-	function bezierCurve(start, startControl, endControl, end) {
-	    var lerp = function lerp(a, b, t) {
-	        return {
-	            x: a.x + (b.x - a.x) * t,
-	            y: a.y + (b.y - a.y) * t
-	        };
-	    };
-
-	    return {
-	        start: start,
-	        startControl: startControl,
-	        endControl: endControl,
-	        end: end,
-	        subdivide: function subdivide(t) {
-	            var ab = lerp(start, startControl, t),
-	                bc = lerp(startControl, endControl, t),
-	                cd = lerp(endControl, end, t),
-	                abbc = lerp(ab, bc, t),
-	                bccd = lerp(bc, cd, t),
-	                dest = lerp(abbc, bccd, t);
-	            return [bezierCurve(start, ab, abbc, dest), bezierCurve(dest, bccd, cd, end)];
-	        },
-	        curveTo: function curveTo(borderArgs) {
-	            borderArgs.push(["bezierCurve", startControl.x, startControl.y, endControl.x, endControl.y, end.x, end.y]);
-	        },
-	        curveToReversed: function curveToReversed(borderArgs) {
-	            borderArgs.push(["bezierCurve", endControl.x, endControl.y, startControl.x, startControl.y, start.x, start.y]);
-	        }
-	    };
-	}
-
-	function drawSide(borderData, radius1, radius2, outer1, inner1, outer2, inner2) {
-	    var borderArgs = [];
-
-	    if (radius1[0] > 0 || radius1[1] > 0) {
-	        borderArgs.push(["line", outer1[1].start.x, outer1[1].start.y]);
-	        outer1[1].curveTo(borderArgs);
-	    } else {
-	        borderArgs.push(["line", borderData.c1[0], borderData.c1[1]]);
-	    }
-
-	    if (radius2[0] > 0 || radius2[1] > 0) {
-	        borderArgs.push(["line", outer2[0].start.x, outer2[0].start.y]);
-	        outer2[0].curveTo(borderArgs);
-	        borderArgs.push(["line", inner2[0].end.x, inner2[0].end.y]);
-	        inner2[0].curveToReversed(borderArgs);
-	    } else {
-	        borderArgs.push(["line", borderData.c2[0], borderData.c2[1]]);
-	        borderArgs.push(["line", borderData.c3[0], borderData.c3[1]]);
-	    }
-
-	    if (radius1[0] > 0 || radius1[1] > 0) {
-	        borderArgs.push(["line", inner1[1].end.x, inner1[1].end.y]);
-	        inner1[1].curveToReversed(borderArgs);
-	    } else {
-	        borderArgs.push(["line", borderData.c4[0], borderData.c4[1]]);
-	    }
-
-	    return borderArgs;
-	}
-
-	function parseCorner(borderArgs, radius1, radius2, corner1, corner2, x, y) {
-	    if (radius1[0] > 0 || radius1[1] > 0) {
-	        borderArgs.push(["line", corner1[0].start.x, corner1[0].start.y]);
-	        corner1[0].curveTo(borderArgs);
-	        corner1[1].curveTo(borderArgs);
-	    } else {
-	        borderArgs.push(["line", x, y]);
-	    }
-
-	    if (radius2[0] > 0 || radius2[1] > 0) {
-	        borderArgs.push(["line", corner2[0].start.x, corner2[0].start.y]);
-	    }
-	}
-
-	function negativeZIndex(container) {
-	    return container.cssInt("zIndex") < 0;
-	}
-
-	function positiveZIndex(container) {
-	    return container.cssInt("zIndex") > 0;
-	}
-
-	function zIndex0(container) {
-	    return container.cssInt("zIndex") === 0;
-	}
-
-	function inlineLevel(container) {
-	    return ["inline", "inline-block", "inline-table"].indexOf(container.css("display")) !== -1;
-	}
-
-	function isStackingContext(container) {
-	    return container instanceof StackingContext;
-	}
-
-	function hasText(container) {
-	    return container.node.data.trim().length > 0;
-	}
-
-	function noLetterSpacing(container) {
-	    return (/^(normal|none|0px)$/.test(container.parent.css("letterSpacing"))
-	    );
-	}
-
-	function getBorderRadiusData(container) {
-	    return ["TopLeft", "TopRight", "BottomRight", "BottomLeft"].map(function (side) {
-	        var value = container.css('border' + side + 'Radius');
-	        var arr = value.split(" ");
-	        if (arr.length <= 1) {
-	            arr[1] = arr[0];
-	        }
-	        return arr.map(asInt);
-	    });
-	}
-
-	function renderableNode(node) {
-	    return node.nodeType === Node.TEXT_NODE || node.nodeType === Node.ELEMENT_NODE;
-	}
-
-	function isPositionedForStacking(container) {
-	    var position = container.css("position");
-	    var zIndex = ["absolute", "relative", "fixed"].indexOf(position) !== -1 ? container.css("zIndex") : "auto";
-	    return zIndex !== "auto";
-	}
-
-	function isPositioned(container) {
-	    return container.css("position") !== "static";
-	}
-
-	function isFloating(container) {
-	    return container.css("float") !== "none";
-	}
-
-	function isInlineBlock(container) {
-	    return ["inline-block", "inline-table"].indexOf(container.css("display")) !== -1;
-	}
-
-	function not(callback) {
-	    var context = this;
-	    return function () {
-	        return !callback.apply(context, arguments);
-	    };
-	}
-
-	function isElement(container) {
-	    return container.node.nodeType === Node.ELEMENT_NODE;
-	}
-
-	function isPseudoElement(container) {
-	    return container.isPseudoElement === true;
-	}
-
-	function isTextNode(container) {
-	    return container.node.nodeType === Node.TEXT_NODE;
-	}
-
-	function zIndexSort(contexts) {
-	    return function (a, b) {
-	        return a.cssInt("zIndex") + contexts.indexOf(a) / contexts.length - (b.cssInt("zIndex") + contexts.indexOf(b) / contexts.length);
-	    };
-	}
-
-	function hasOpacity(container) {
-	    return container.getOpacity() < 1;
-	}
-
-	function asInt(value) {
-	    return parseInt(value, 10);
-	}
-
-	function getWidth(border) {
-	    return border.width;
-	}
-
-	function nonIgnoredElement(nodeContainer) {
-	    return nodeContainer.node.nodeType !== Node.ELEMENT_NODE || ["SCRIPT", "HEAD", "TITLE", "OBJECT", "BR", "OPTION"].indexOf(nodeContainer.node.nodeName) === -1;
-	}
-
-	function flatten(arrays) {
-	    return [].concat.apply([], arrays);
-	}
-
-	function stripQuotes(content) {
-	    var first = content.substr(0, 1);
-	    return first === content.substr(content.length - 1) && first.match(/'|"/) ? content.substr(1, content.length - 2) : content;
-	}
-
-	function getWords(characters) {
-	    var words = [],
-	        i = 0,
-	        onWordBoundary = false,
-	        word;
-	    while (characters.length) {
-	        if (isWordBoundary(characters[i]) === onWordBoundary) {
-	            word = characters.splice(0, i);
-	            if (word.length) {
-	                words.push(punycode.ucs2.encode(word));
-	            }
-	            onWordBoundary = !onWordBoundary;
-	            i = 0;
-	        } else {
-	            i++;
-	        }
-
-	        if (i >= characters.length) {
-	            word = characters.splice(0, i);
-	            if (word.length) {
-	                words.push(punycode.ucs2.encode(word));
-	            }
-	        }
-	    }
-	    return words;
-	}
-
-	function isWordBoundary(characterCode) {
-	    return [32, // <space>
-	    13, // \r
-	    10, // \n
-	    9, // \t
-	    45 // -
-	    ].indexOf(characterCode) !== -1;
-	}
-
-	function hasUnicode(string) {
-	    return (/[^\u0000-\u00ff]/.test(string)
-	    );
-	}
-
-	module.exports = NodeParser;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/*! https://mths.be/punycode v1.4.1 by @mathias */
-	;(function(root) {
-
-		/** Detect free variables */
-		var freeExports = typeof exports == 'object' && exports &&
-			!exports.nodeType && exports;
-		var freeModule = typeof module == 'object' && module &&
-			!module.nodeType && module;
-		var freeGlobal = typeof global == 'object' && global;
-		if (
-			freeGlobal.global === freeGlobal ||
-			freeGlobal.window === freeGlobal ||
-			freeGlobal.self === freeGlobal
-		) {
-			root = freeGlobal;
-		}
-
-		/**
-		 * The `punycode` object.
-		 * @name punycode
-		 * @type Object
-		 */
-		var punycode,
-
-		/** Highest positive signed 32-bit float value */
-		maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
-
-		/** Bootstring parameters */
-		base = 36,
-		tMin = 1,
-		tMax = 26,
-		skew = 38,
-		damp = 700,
-		initialBias = 72,
-		initialN = 128, // 0x80
-		delimiter = '-', // '\x2D'
-
-		/** Regular expressions */
-		regexPunycode = /^xn--/,
-		regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
-		regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
-
-		/** Error messages */
-		errors = {
-			'overflow': 'Overflow: input needs wider integers to process',
-			'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-			'invalid-input': 'Invalid input'
-		},
-
-		/** Convenience shortcuts */
-		baseMinusTMin = base - tMin,
-		floor = Math.floor,
-		stringFromCharCode = String.fromCharCode,
-
-		/** Temporary variable */
-		key;
-
-		/*--------------------------------------------------------------------------*/
-
-		/**
-		 * A generic error utility function.
-		 * @private
-		 * @param {String} type The error type.
-		 * @returns {Error} Throws a `RangeError` with the applicable error message.
-		 */
-		function error(type) {
-			throw new RangeError(errors[type]);
-		}
-
-		/**
-		 * A generic `Array#map` utility function.
-		 * @private
-		 * @param {Array} array The array to iterate over.
-		 * @param {Function} callback The function that gets called for every array
-		 * item.
-		 * @returns {Array} A new array of values returned by the callback function.
-		 */
-		function map(array, fn) {
-			var length = array.length;
-			var result = [];
-			while (length--) {
-				result[length] = fn(array[length]);
-			}
-			return result;
-		}
-
-		/**
-		 * A simple `Array#map`-like wrapper to work with domain name strings or email
-		 * addresses.
-		 * @private
-		 * @param {String} domain The domain name or email address.
-		 * @param {Function} callback The function that gets called for every
-		 * character.
-		 * @returns {Array} A new string of characters returned by the callback
-		 * function.
-		 */
-		function mapDomain(string, fn) {
-			var parts = string.split('@');
-			var result = '';
-			if (parts.length > 1) {
-				// In email addresses, only the domain name should be punycoded. Leave
-				// the local part (i.e. everything up to `@`) intact.
-				result = parts[0] + '@';
-				string = parts[1];
-			}
-			// Avoid `split(regex)` for IE8 compatibility. See #17.
-			string = string.replace(regexSeparators, '\x2E');
-			var labels = string.split('.');
-			var encoded = map(labels, fn).join('.');
-			return result + encoded;
-		}
-
-		/**
-		 * Creates an array containing the numeric code points of each Unicode
-		 * character in the string. While JavaScript uses UCS-2 internally,
-		 * this function will convert a pair of surrogate halves (each of which
-		 * UCS-2 exposes as separate characters) into a single code point,
-		 * matching UTF-16.
-		 * @see `punycode.ucs2.encode`
-		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-		 * @memberOf punycode.ucs2
-		 * @name decode
-		 * @param {String} string The Unicode input string (UCS-2).
-		 * @returns {Array} The new array of code points.
-		 */
-		function ucs2decode(string) {
-			var output = [],
-			    counter = 0,
-			    length = string.length,
-			    value,
-			    extra;
-			while (counter < length) {
-				value = string.charCodeAt(counter++);
-				if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-					// high surrogate, and there is a next character
-					extra = string.charCodeAt(counter++);
-					if ((extra & 0xFC00) == 0xDC00) { // low surrogate
-						output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-					} else {
-						// unmatched surrogate; only append this code unit, in case the next
-						// code unit is the high surrogate of a surrogate pair
-						output.push(value);
-						counter--;
-					}
-				} else {
-					output.push(value);
-				}
-			}
-			return output;
-		}
-
-		/**
-		 * Creates a string based on an array of numeric code points.
-		 * @see `punycode.ucs2.decode`
-		 * @memberOf punycode.ucs2
-		 * @name encode
-		 * @param {Array} codePoints The array of numeric code points.
-		 * @returns {String} The new Unicode string (UCS-2).
-		 */
-		function ucs2encode(array) {
-			return map(array, function(value) {
-				var output = '';
-				if (value > 0xFFFF) {
-					value -= 0x10000;
-					output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
-					value = 0xDC00 | value & 0x3FF;
-				}
-				output += stringFromCharCode(value);
-				return output;
-			}).join('');
-		}
-
-		/**
-		 * Converts a basic code point into a digit/integer.
-		 * @see `digitToBasic()`
-		 * @private
-		 * @param {Number} codePoint The basic numeric code point value.
-		 * @returns {Number} The numeric value of a basic code point (for use in
-		 * representing integers) in the range `0` to `base - 1`, or `base` if
-		 * the code point does not represent a value.
-		 */
-		function basicToDigit(codePoint) {
-			if (codePoint - 48 < 10) {
-				return codePoint - 22;
-			}
-			if (codePoint - 65 < 26) {
-				return codePoint - 65;
-			}
-			if (codePoint - 97 < 26) {
-				return codePoint - 97;
-			}
-			return base;
-		}
-
-		/**
-		 * Converts a digit/integer into a basic code point.
-		 * @see `basicToDigit()`
-		 * @private
-		 * @param {Number} digit The numeric value of a basic code point.
-		 * @returns {Number} The basic code point whose value (when used for
-		 * representing integers) is `digit`, which needs to be in the range
-		 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
-		 * used; else, the lowercase form is used. The behavior is undefined
-		 * if `flag` is non-zero and `digit` has no uppercase form.
-		 */
-		function digitToBasic(digit, flag) {
-			//  0..25 map to ASCII a..z or A..Z
-			// 26..35 map to ASCII 0..9
-			return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-		}
-
-		/**
-		 * Bias adaptation function as per section 3.4 of RFC 3492.
-		 * https://tools.ietf.org/html/rfc3492#section-3.4
-		 * @private
-		 */
-		function adapt(delta, numPoints, firstTime) {
-			var k = 0;
-			delta = firstTime ? floor(delta / damp) : delta >> 1;
-			delta += floor(delta / numPoints);
-			for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
-				delta = floor(delta / baseMinusTMin);
-			}
-			return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-		}
-
-		/**
-		 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
-		 * symbols.
-		 * @memberOf punycode
-		 * @param {String} input The Punycode string of ASCII-only symbols.
-		 * @returns {String} The resulting string of Unicode symbols.
-		 */
-		function decode(input) {
-			// Don't use UCS-2
-			var output = [],
-			    inputLength = input.length,
-			    out,
-			    i = 0,
-			    n = initialN,
-			    bias = initialBias,
-			    basic,
-			    j,
-			    index,
-			    oldi,
-			    w,
-			    k,
-			    digit,
-			    t,
-			    /** Cached calculation results */
-			    baseMinusT;
-
-			// Handle the basic code points: let `basic` be the number of input code
-			// points before the last delimiter, or `0` if there is none, then copy
-			// the first basic code points to the output.
-
-			basic = input.lastIndexOf(delimiter);
-			if (basic < 0) {
-				basic = 0;
-			}
-
-			for (j = 0; j < basic; ++j) {
-				// if it's not a basic code point
-				if (input.charCodeAt(j) >= 0x80) {
-					error('not-basic');
-				}
-				output.push(input.charCodeAt(j));
-			}
-
-			// Main decoding loop: start just after the last delimiter if any basic code
-			// points were copied; start at the beginning otherwise.
-
-			for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
-
-				// `index` is the index of the next character to be consumed.
-				// Decode a generalized variable-length integer into `delta`,
-				// which gets added to `i`. The overflow checking is easier
-				// if we increase `i` as we go, then subtract off its starting
-				// value at the end to obtain `delta`.
-				for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
-
-					if (index >= inputLength) {
-						error('invalid-input');
-					}
-
-					digit = basicToDigit(input.charCodeAt(index++));
-
-					if (digit >= base || digit > floor((maxInt - i) / w)) {
-						error('overflow');
-					}
-
-					i += digit * w;
-					t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-
-					if (digit < t) {
-						break;
-					}
-
-					baseMinusT = base - t;
-					if (w > floor(maxInt / baseMinusT)) {
-						error('overflow');
-					}
-
-					w *= baseMinusT;
-
-				}
-
-				out = output.length + 1;
-				bias = adapt(i - oldi, out, oldi == 0);
-
-				// `i` was supposed to wrap around from `out` to `0`,
-				// incrementing `n` each time, so we'll fix that now:
-				if (floor(i / out) > maxInt - n) {
-					error('overflow');
-				}
-
-				n += floor(i / out);
-				i %= out;
-
-				// Insert `n` at position `i` of the output
-				output.splice(i++, 0, n);
-
-			}
-
-			return ucs2encode(output);
-		}
-
-		/**
-		 * Converts a string of Unicode symbols (e.g. a domain name label) to a
-		 * Punycode string of ASCII-only symbols.
-		 * @memberOf punycode
-		 * @param {String} input The string of Unicode symbols.
-		 * @returns {String} The resulting Punycode string of ASCII-only symbols.
-		 */
-		function encode(input) {
-			var n,
-			    delta,
-			    handledCPCount,
-			    basicLength,
-			    bias,
-			    j,
-			    m,
-			    q,
-			    k,
-			    t,
-			    currentValue,
-			    output = [],
-			    /** `inputLength` will hold the number of code points in `input`. */
-			    inputLength,
-			    /** Cached calculation results */
-			    handledCPCountPlusOne,
-			    baseMinusT,
-			    qMinusT;
-
-			// Convert the input in UCS-2 to Unicode
-			input = ucs2decode(input);
-
-			// Cache the length
-			inputLength = input.length;
-
-			// Initialize the state
-			n = initialN;
-			delta = 0;
-			bias = initialBias;
-
-			// Handle the basic code points
-			for (j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-				if (currentValue < 0x80) {
-					output.push(stringFromCharCode(currentValue));
-				}
-			}
-
-			handledCPCount = basicLength = output.length;
-
-			// `handledCPCount` is the number of code points that have been handled;
-			// `basicLength` is the number of basic code points.
-
-			// Finish the basic string - if it is not empty - with a delimiter
-			if (basicLength) {
-				output.push(delimiter);
-			}
-
-			// Main encoding loop:
-			while (handledCPCount < inputLength) {
-
-				// All non-basic code points < n have been handled already. Find the next
-				// larger one:
-				for (m = maxInt, j = 0; j < inputLength; ++j) {
-					currentValue = input[j];
-					if (currentValue >= n && currentValue < m) {
-						m = currentValue;
-					}
-				}
-
-				// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
-				// but guard against overflow
-				handledCPCountPlusOne = handledCPCount + 1;
-				if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-					error('overflow');
-				}
-
-				delta += (m - n) * handledCPCountPlusOne;
-				n = m;
-
-				for (j = 0; j < inputLength; ++j) {
-					currentValue = input[j];
-
-					if (currentValue < n && ++delta > maxInt) {
-						error('overflow');
-					}
-
-					if (currentValue == n) {
-						// Represent delta as a generalized variable-length integer
-						for (q = delta, k = base; /* no condition */; k += base) {
-							t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-							if (q < t) {
-								break;
-							}
-							qMinusT = q - t;
-							baseMinusT = base - t;
-							output.push(
-								stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-							);
-							q = floor(qMinusT / baseMinusT);
-						}
-
-						output.push(stringFromCharCode(digitToBasic(q, 0)));
-						bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-						delta = 0;
-						++handledCPCount;
-					}
-				}
-
-				++delta;
-				++n;
-
-			}
-			return output.join('');
-		}
-
-		/**
-		 * Converts a Punycode string representing a domain name or an email address
-		 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
-		 * it doesn't matter if you call it on a string that has already been
-		 * converted to Unicode.
-		 * @memberOf punycode
-		 * @param {String} input The Punycoded domain name or email address to
-		 * convert to Unicode.
-		 * @returns {String} The Unicode representation of the given Punycode
-		 * string.
-		 */
-		function toUnicode(input) {
-			return mapDomain(input, function(string) {
-				return regexPunycode.test(string)
-					? decode(string.slice(4).toLowerCase())
-					: string;
-			});
-		}
-
-		/**
-		 * Converts a Unicode string representing a domain name or an email address to
-		 * Punycode. Only the non-ASCII parts of the domain name will be converted,
-		 * i.e. it doesn't matter if you call it with a domain that's already in
-		 * ASCII.
-		 * @memberOf punycode
-		 * @param {String} input The domain name or email address to convert, as a
-		 * Unicode string.
-		 * @returns {String} The Punycode representation of the given domain name or
-		 * email address.
-		 */
-		function toASCII(input) {
-			return mapDomain(input, function(string) {
-				return regexNonASCII.test(string)
-					? 'xn--' + encode(string)
-					: string;
-			});
-		}
-
-		/*--------------------------------------------------------------------------*/
-
-		/** Define the public API */
-		punycode = {
-			/**
-			 * A string representing the current Punycode.js version number.
-			 * @memberOf punycode
-			 * @type String
-			 */
-			'version': '1.4.1',
-			/**
-			 * An object of methods to convert from JavaScript's internal character
-			 * representation (UCS-2) to Unicode code points, and back.
-			 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-			 * @memberOf punycode
-			 * @type Object
-			 */
-			'ucs2': {
-				'decode': ucs2decode,
-				'encode': ucs2encode
-			},
-			'decode': decode,
-			'encode': encode,
-			'toASCII': toASCII,
-			'toUnicode': toUnicode
-		};
-
-		/** Expose `punycode` */
-		// Some AMD build optimizers, like r.js, check for specific condition patterns
-		// like the following:
-		if (
-			true
-		) {
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-				return punycode;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else if (freeExports && freeModule) {
-			if (module.exports == freeExports) {
-				// in Node.js, io.js, or RingoJS v0.8.0+
-				freeModule.exports = punycode;
-			} else {
-				// in Narwhal or RingoJS v0.7.0-
-				for (key in punycode) {
-					punycode.hasOwnProperty(key) && (freeExports[key] = punycode[key]);
-				}
-			}
-		} else {
-			// in Rhino or a web browser
-			root.punycode = punycode;
-		}
-
-	}(this));
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module), (function() { return this; }())))
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports) {
-
-	module.exports = function(module) {
-		if(!module.webpackPolyfill) {
-			module.deprecate = function() {};
-			module.paths = [];
-			// module.parent = undefined by default
-			module.children = [];
-			module.webpackPolyfill = 1;
-		}
-		return module;
-	}
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var Color = __webpack_require__(8);
-	var utils = __webpack_require__(12);
-	var getBounds = utils.getBounds;
-	var parseBackgrounds = utils.parseBackgrounds;
-	var offsetBounds = utils.offsetBounds;
-
-	function NodeContainer(node, parent) {
-	    this.node = node;
-	    this.parent = parent;
-	    this.stack = null;
-	    this.bounds = null;
-	    this.borders = null;
-	    this.clip = [];
-	    this.backgroundClip = [];
-	    this.offsetBounds = null;
-	    this.visible = null;
-	    this.computedStyles = null;
-	    this.colors = {};
-	    this.styles = {};
-	    this.backgroundImages = null;
-	    this.transformData = null;
-	    this.transformMatrix = null;
-	    this.isPseudoElement = false;
-	    this.opacity = null;
-	}
-
-	NodeContainer.prototype.cloneTo = function (stack) {
-	    stack.visible = this.visible;
-	    stack.borders = this.borders;
-	    stack.bounds = this.bounds;
-	    stack.clip = this.clip;
-	    stack.backgroundClip = this.backgroundClip;
-	    stack.computedStyles = this.computedStyles;
-	    stack.styles = this.styles;
-	    stack.backgroundImages = this.backgroundImages;
-	    stack.opacity = this.opacity;
-	};
-
-	NodeContainer.prototype.getOpacity = function () {
-	    return this.opacity === null ? this.opacity = this.cssFloat('opacity') : this.opacity;
-	};
-
-	NodeContainer.prototype.assignStack = function (stack) {
-	    this.stack = stack;
-	    stack.children.push(this);
-	};
-
-	NodeContainer.prototype.isElementVisible = function () {
-	    return this.node.nodeType === Node.TEXT_NODE ? this.parent.visible : this.css('display') !== "none" && this.css('visibility') !== "hidden" && !this.node.hasAttribute("data-html2canvas-ignore") && (this.node.nodeName !== "INPUT" || this.node.getAttribute("type") !== "hidden");
-	};
-
-	NodeContainer.prototype.css = function (attribute) {
-	    if (!this.computedStyles) {
-	        this.computedStyles = this.isPseudoElement ? this.parent.computedStyle(this.before ? ":before" : ":after") : this.computedStyle(null);
-	    }
-
-	    return this.styles[attribute] || (this.styles[attribute] = this.computedStyles[attribute]);
-	};
-
-	NodeContainer.prototype.prefixedCss = function (attribute) {
-	    var prefixes = ["webkit", "moz", "ms", "o"];
-	    var value = this.css(attribute);
-	    if (value === undefined) {
-	        prefixes.some(function (prefix) {
-	            value = this.css(prefix + attribute.substr(0, 1).toUpperCase() + attribute.substr(1));
-	            return value !== undefined;
-	        }, this);
-	    }
-	    return value === undefined ? null : value;
-	};
-
-	NodeContainer.prototype.computedStyle = function (type) {
-	    return this.node.ownerDocument.defaultView.getComputedStyle(this.node, type);
-	};
-
-	NodeContainer.prototype.cssInt = function (attribute) {
-	    var value = parseInt(this.css(attribute), 10);
-	    return isNaN(value) ? 0 : value; // borders in old IE are throwing 'medium' for demo.html
-	};
-
-	NodeContainer.prototype.color = function (attribute) {
-	    return this.colors[attribute] || (this.colors[attribute] = new Color(this.css(attribute)));
-	};
-
-	NodeContainer.prototype.cssFloat = function (attribute) {
-	    var value = parseFloat(this.css(attribute));
-	    return isNaN(value) ? 0 : value;
-	};
-
-	NodeContainer.prototype.fontWeight = function () {
-	    var weight = this.css("fontWeight");
-	    switch (parseInt(weight, 10)) {
-	        case 401:
-	            weight = "bold";
-	            break;
-	        case 400:
-	            weight = "normal";
-	            break;
-	    }
-	    return weight;
-	};
-
-	NodeContainer.prototype.parseClip = function () {
-	    var matches = this.css('clip').match(this.CLIP);
-	    if (matches) {
-	        return {
-	            top: parseInt(matches[1], 10),
-	            right: parseInt(matches[2], 10),
-	            bottom: parseInt(matches[3], 10),
-	            left: parseInt(matches[4], 10)
-	        };
-	    }
-	    return null;
-	};
-
-	NodeContainer.prototype.parseBackgroundImages = function () {
-	    return this.backgroundImages || (this.backgroundImages = parseBackgrounds(this.css("backgroundImage")));
-	};
-
-	NodeContainer.prototype.cssList = function (property, index) {
-	    var value = (this.css(property) || '').split(',');
-	    value = value[index || 0] || value[0] || 'auto';
-	    value = value.trim().split(' ');
-	    if (value.length === 1) {
-	        value = [value[0], isPercentage(value[0]) ? 'auto' : value[0]];
-	    }
-	    return value;
-	};
-
-	NodeContainer.prototype.parseBackgroundSize = function (bounds, image, index) {
-	    var size = this.cssList("backgroundSize", index);
-	    var width, height;
-
-	    if (isPercentage(size[0])) {
-	        width = bounds.width * parseFloat(size[0]) / 100;
-	    } else if (/contain|cover/.test(size[0])) {
-	        var targetRatio = bounds.width / bounds.height,
-	            currentRatio = image.width / image.height;
-	        return targetRatio < currentRatio ^ size[0] === 'contain' ? { width: bounds.height * currentRatio, height: bounds.height } : { width: bounds.width, height: bounds.width / currentRatio };
-	    } else {
-	        width = parseInt(size[0], 10);
-	    }
-
-	    if (size[0] === 'auto' && size[1] === 'auto') {
-	        height = image.height;
-	    } else if (size[1] === 'auto') {
-	        height = width / image.width * image.height;
-	    } else if (isPercentage(size[1])) {
-	        height = bounds.height * parseFloat(size[1]) / 100;
-	    } else {
-	        height = parseInt(size[1], 10);
-	    }
-
-	    if (size[0] === 'auto') {
-	        width = height / image.height * image.width;
-	    }
-
-	    return { width: width, height: height };
-	};
-
-	NodeContainer.prototype.parseBackgroundPosition = function (bounds, image, index, backgroundSize) {
-	    var position = this.cssList('backgroundPosition', index);
-	    var left, top;
-
-	    if (isPercentage(position[0])) {
-	        left = (bounds.width - (backgroundSize || image).width) * (parseFloat(position[0]) / 100);
-	    } else {
-	        left = parseInt(position[0], 10);
-	    }
-
-	    if (position[1] === 'auto') {
-	        top = left / image.width * image.height;
-	    } else if (isPercentage(position[1])) {
-	        top = (bounds.height - (backgroundSize || image).height) * parseFloat(position[1]) / 100;
-	    } else {
-	        top = parseInt(position[1], 10);
-	    }
-
-	    if (position[0] === 'auto') {
-	        left = top / image.height * image.width;
-	    }
-
-	    return { left: left, top: top };
-	};
-
-	NodeContainer.prototype.parseBackgroundRepeat = function (index) {
-	    return this.cssList("backgroundRepeat", index)[0];
-	};
-
-	NodeContainer.prototype.parseTextShadows = function () {
-	    var textShadow = this.css("textShadow");
-	    var results = [];
-
-	    if (textShadow && textShadow !== 'none') {
-	        var shadows = textShadow.match(this.TEXT_SHADOW_PROPERTY);
-	        for (var i = 0; shadows && i < shadows.length; i++) {
-	            var s = shadows[i].match(this.TEXT_SHADOW_VALUES);
-	            results.push({
-	                color: new Color(s[0]),
-	                offsetX: s[1] ? parseFloat(s[1].replace('px', '')) : 0,
-	                offsetY: s[2] ? parseFloat(s[2].replace('px', '')) : 0,
-	                blur: s[3] ? s[3].replace('px', '') : 0
-	            });
-	        }
-	    }
-	    return results;
-	};
-
-	NodeContainer.prototype.parseTransform = function () {
-	    if (!this.transformData) {
-	        if (this.hasTransform()) {
-	            var offset = this.parseBounds();
-	            var origin = this.prefixedCss("transformOrigin").split(" ").map(removePx).map(asFloat);
-	            origin[0] += offset.left;
-	            origin[1] += offset.top;
-	            this.transformData = {
-	                origin: origin,
-	                matrix: this.parseTransformMatrix()
-	            };
-	        } else {
-	            this.transformData = {
-	                origin: [0, 0],
-	                matrix: [1, 0, 0, 1, 0, 0]
-	            };
-	        }
-	    }
-	    return this.transformData;
-	};
-
-	NodeContainer.prototype.parseTransformMatrix = function () {
-	    if (!this.transformMatrix) {
-	        var transform = this.prefixedCss("transform");
-	        var matrix = transform ? parseMatrix(transform.match(this.MATRIX_PROPERTY)) : null;
-	        this.transformMatrix = matrix ? matrix : [1, 0, 0, 1, 0, 0];
-	    }
-	    return this.transformMatrix;
-	};
-
-	NodeContainer.prototype.parseBounds = function () {
-	    return this.bounds || (this.bounds = this.hasTransform() ? offsetBounds(this.node) : getBounds(this.node));
-	};
-
-	NodeContainer.prototype.hasTransform = function () {
-	    return this.parseTransformMatrix().join(",") !== "1,0,0,1,0,0" || this.parent && this.parent.hasTransform();
-	};
-
-	NodeContainer.prototype.getValue = function () {
-	    var value = this.node.value || "";
-	    if (this.node.tagName === "SELECT") {
-	        value = selectionValue(this.node);
-	    } else if (this.node.type === "password") {
-	        value = Array(value.length + 1).join('\u2022'); // jshint ignore:line
-	    }
-	    return value.length === 0 ? this.node.placeholder || "" : value;
-	};
-
-	NodeContainer.prototype.MATRIX_PROPERTY = /(matrix|matrix3d)\((.+)\)/;
-	NodeContainer.prototype.TEXT_SHADOW_PROPERTY = /((rgba|rgb)\([^\)]+\)(\s-?\d+px){0,})/g;
-	NodeContainer.prototype.TEXT_SHADOW_VALUES = /(-?\d+px)|(#.+)|(rgb\(.+\))|(rgba\(.+\))/g;
-	NodeContainer.prototype.CLIP = /^rect\((\d+)px,? (\d+)px,? (\d+)px,? (\d+)px\)$/;
-
-	function selectionValue(node) {
-	    var option = node.options[node.selectedIndex || 0];
-	    return option ? option.text || "" : "";
-	}
-
-	function parseMatrix(match) {
-	    if (match && match[1] === "matrix") {
-	        return match[2].split(",").map(function (s) {
-	            return parseFloat(s.trim());
-	        });
-	    } else if (match && match[1] === "matrix3d") {
-	        var matrix3d = match[2].split(",").map(function (s) {
-	            return parseFloat(s.trim());
-	        });
-	        return [matrix3d[0], matrix3d[1], matrix3d[4], matrix3d[5], matrix3d[12], matrix3d[13]];
-	    }
-	}
-
-	function isPercentage(value) {
-	    return value.toString().indexOf("%") !== -1;
-	}
-
-	function removePx(str) {
-	    return str.replace("px", "");
-	}
-
-	function asFloat(str) {
-	    return parseFloat(str);
-	}
-
-	module.exports = NodeContainer;
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var NodeContainer = __webpack_require__(24);
-
-	function TextContainer(node, parent) {
-	    NodeContainer.call(this, node, parent);
-	}
-
-	TextContainer.prototype = Object.create(NodeContainer.prototype);
-
-	TextContainer.prototype.applyTextTransform = function () {
-	    this.node.data = this.transform(this.parent.css("textTransform"));
-	};
-
-	TextContainer.prototype.transform = function (transform) {
-	    var text = this.node.data;
-	    switch (transform) {
-	        case "lowercase":
-	            return text.toLowerCase();
-	        case "capitalize":
-	            return text.replace(/(^|\s|:|-|\(|\))([a-z])/g, capitalize);
-	        case "uppercase":
-	            return text.toUpperCase();
-	        default:
-	            return text;
-	    }
-	};
-
-	function capitalize(m, p1, p2) {
-	    if (m.length > 0) {
-	        return p1 + p2.toUpperCase();
-	    }
-	}
-
-	module.exports = TextContainer;
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var NodeContainer = __webpack_require__(24);
-
-	function PseudoElementContainer(node, parent, type) {
-	    NodeContainer.call(this, node, parent);
-	    this.isPseudoElement = true;
-	    this.before = type === ":before";
-	}
-
-	PseudoElementContainer.prototype.cloneTo = function (stack) {
-	    PseudoElementContainer.prototype.cloneTo.call(this, stack);
-	    stack.isPseudoElement = true;
-	    stack.before = this.before;
-	};
-
-	PseudoElementContainer.prototype = Object.create(NodeContainer.prototype);
-
-	PseudoElementContainer.prototype.appendToDOM = function () {
-	    if (this.before) {
-	        this.parent.node.insertBefore(this.node, this.parent.node.firstChild);
-	    } else {
-	        this.parent.node.appendChild(this.node);
-	    }
-	    this.parent.node.className += " " + this.getHideClass();
-	};
-
-	PseudoElementContainer.prototype.cleanDOM = function () {
-	    this.node.parentNode.removeChild(this.node);
-	    this.parent.node.className = this.parent.node.className.replace(this.getHideClass(), "");
-	};
-
-	PseudoElementContainer.prototype.getHideClass = function () {
-	    return this["PSEUDO_HIDE_ELEMENT_CLASS_" + (this.before ? "BEFORE" : "AFTER")];
-	};
-
-	PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_BEFORE = "___html2canvas___pseudoelement_before";
-	PseudoElementContainer.prototype.PSEUDO_HIDE_ELEMENT_CLASS_AFTER = "___html2canvas___pseudoelement_after";
-
-	module.exports = PseudoElementContainer;
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Font = __webpack_require__(28);
-
-	function FontMetrics() {
-	    this.data = {};
-	}
-
-	FontMetrics.prototype.getMetrics = function (family, size) {
-	    if (this.data[family + "-" + size] === undefined) {
-	        this.data[family + "-" + size] = new Font(family, size);
-	    }
-	    return this.data[family + "-" + size];
-	};
-
-	module.exports = FontMetrics;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var smallImage = __webpack_require__(12).smallImage;
-
-	function Font(family, size) {
-	    var container = document.createElement('div'),
-	        img = document.createElement('img'),
-	        span = document.createElement('span'),
-	        sampleText = 'Hidden Text',
-	        baseline,
-	        middle;
-
-	    container.style.visibility = "hidden";
-	    container.style.fontFamily = family;
-	    container.style.fontSize = size;
-	    container.style.margin = 0;
-	    container.style.padding = 0;
-
-	    document.body.appendChild(container);
-
-	    img.src = smallImage();
-	    img.width = 1;
-	    img.height = 1;
-
-	    img.style.margin = 0;
-	    img.style.padding = 0;
-	    img.style.verticalAlign = "baseline";
-
-	    span.style.fontFamily = family;
-	    span.style.fontSize = size;
-	    span.style.margin = 0;
-	    span.style.padding = 0;
-
-	    span.appendChild(document.createTextNode(sampleText));
-	    container.appendChild(span);
-	    container.appendChild(img);
-	    baseline = img.offsetTop - span.offsetTop + 1;
-
-	    container.removeChild(span);
-	    container.appendChild(document.createTextNode(sampleText));
-
-	    container.style.lineHeight = "normal";
-	    img.style.verticalAlign = "super";
-
-	    middle = img.offsetTop - container.offsetTop + 1;
-
-	    document.body.removeChild(container);
-
-	    this.baseline = baseline;
-	    this.lineWidth = 1;
-	    this.middle = middle;
-	}
-
-	module.exports = Font;
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var NodeContainer = __webpack_require__(24);
-
-	function StackingContext(hasOwnStacking, opacity, element, parent) {
-	    NodeContainer.call(this, element, parent);
-	    this.ownStacking = hasOwnStacking;
-	    this.contexts = [];
-	    this.children = [];
-	    this.opacity = (this.parent ? this.parent.stack.opacity : 1) * opacity;
-	}
-
-	StackingContext.prototype = Object.create(NodeContainer.prototype);
-
-	StackingContext.prototype.getParentStack = function (context) {
-	    var parentStack = this.parent ? this.parent.stack : null;
-	    return parentStack ? parentStack.ownStacking ? parentStack : parentStack.getParentStack(context) : context.stack;
-	};
-
-	module.exports = StackingContext;
-
-/***/ })
-/******/ ]);
-},{}],7:[function(require,module,exports) {
-document.registerElement('a-timeline');
-document.registerElement('a-timeline-group');
-document.registerElement('a-timeline-animation');
-
-AFRAME.registerComponent('animation-timeline', {
+},{"./src/controls":53,"./src/loaders":49,"./src/misc":52,"./src/pathfinding":50,"./src/primitives":51}],11:[function(require,module,exports) {
+var debug = AFRAME.utils.debug;
+var coordinates = AFRAME.utils.coordinates;
+
+var warn = debug('components:look-at:warn');
+var isCoordinates = coordinates.isCoordinates || coordinates.isCoordinate;
+
+delete AFRAME.components['look-at'];
+
+/**
+ * Look-at component.
+ *
+ * Modifies rotation to either track another entity OR do a one-time turn towards a position
+ * vector.
+ *
+ * If tracking an object via setting the component value via a selector, look-at will register
+ * a behavior to the scene to update rotation on every tick.
+ */
+AFRAME.registerComponent('look-at', {
   schema: {
-    direction: {type: 'string', default: 'normal'},
-    loop: {
-      default: 0,
-      parse: function (value) {
-        // Boolean or integer.
-        if (value === 'true') { return true; }
-        if (value === 'false') { return false; }
-        return parseInt(value, 10);
-      }
-    },
-    pauseEvents: {type: 'array'},
-    startEvents: {type: 'array'},
-    timeline: {type: 'string'}
-  },
+    default: '',
 
-  multiple: true,
+    parse: function (value) {
+      // A static position to look at.
+      if (isCoordinates(value) || typeof value === 'object') {
+        return coordinates.parse(value);
+      }
+      // A selector to a target entity.
+      return value;
+    },
+
+    stringify: function (data) {
+      if (typeof data === 'object') {
+        return coordinates.stringify(data);
+      }
+      return data;
+    }
+  },
 
   init: function () {
-    var data = this.data;
-    var i;
-
-    this.animationIsPlaying = false;
-    this.beginAnimation = this.beginAnimation.bind(this);
-    this.eventDetail = {name: this.id}
-    this.time = 0;
-    this.timeline = null;
-
-    // Wait for start events.
-    for (i = 0; i < data.startEvents.length; i++) {
-      this.el.addEventListener(data.startEvents[i], this.beginAnimation);
-    }
-
-    for (i = 0; i < data.pauseEvents.length; i++) {
-      this.el.addEventListener(data.pauseEvents[i], this.pauseAnimation);
-    }
-  },
-
-  play: function () {
-    if (this.data.startEvents.length) { return; }
-    // Autoplay if startEvents not set.
-    this.beginAnimation();
-  },
-
-  tick: function (t, dt) {
-    if (!this.animationIsPlaying || !this.timeline) { return; }
-    this.time += dt;
-    this.timeline.tick(this.time);
+    this.target3D = null;
+    this.vector = new THREE.Vector3();
   },
 
   /**
-   * Build the anime.js timeline.
-   * Begin the animation.
+   * If tracking an object, this will be called on every tick.
+   * If looking at a position vector, this will only be called once (until further updates).
    */
-  beginAnimation: function () {
-    var additionalOffset;
-    var i;
-    var j;
-    var duration;
-    var longestDuration;
-    var offset;
-    var timelineEl;
-    var timelineGroupEl;
+  update: function () {
     var self = this;
+    var target = self.data;
+    var object3D = self.el.object3D;
+    var targetEl;
 
-    timelineEl = document.querySelector(this.data.timeline);
-    if (timelineEl.tagName !== 'A-TIMELINE') {
-      throw new Error('[animation-timeline] timeline must be a selector to <a-timeline> ' +
-                      'element.');
+    // No longer looking at anything (i.e., look-at="").
+    if (!target || (typeof target === 'object' && !Object.keys(target).length)) {
+      return self.remove();
     }
 
-    this.animationIsPlaying = true;
-    this.time = 0;
-    this.timeline = AFRAME.anime.timeline({
-      autoplay: false,
-      complete: function () {
-        self.animationIsPlaying = false;
-        self.el.emit('animationtimelinecomplete', self.eventDetail);
-      },
-      direction: this.data.direction,
-      loop: this.data.loop
-    });
+    // Look at a position.
+    if (typeof target === 'object') {
+      return object3D.lookAt(new THREE.Vector3(target.x, target.y, target.z));
+    }
 
-    offset = 0;  // Absolute time offset.
-    for (i = 0; i < timelineEl.children.length; i++) {
-      // Add group.
-      if (timelineEl.children[i].tagName === 'A-TIMELINE-GROUP') {
-        timelineGroupEl = timelineEl.children[i];
-        longestDuration = 0;
-        for (j = 0; j < timelineGroupEl.children.length; j++) {
-          duration = this.addAnimationToTimeline(timelineGroupEl.children[j], offset);
-          // A timeline group is finished once the longest running animation finishes.
-          if (duration > longestDuration) { longestDuration = duration; }
-        }
-        offset += longestDuration;
-        continue;
-      }
+    // Assume target is a string.
+    // Query for the element, grab its object3D, then register a behavior on the scene to
+    // track the target on every tick.
+    targetEl = self.el.sceneEl.querySelector(target);
+    if (!targetEl) {
+      warn('"' + target + '" does not point to a valid entity to look-at');
+      return;
+    }
+    if (!targetEl.hasLoaded) {
+      return targetEl.addEventListener('loaded', function () {
+        self.beginTracking(targetEl);
+      });
+    }
+    return self.beginTracking(targetEl);
+  },
 
-      // Add single animation.
-      if (timelineEl.children[i].tagName === 'A-TIMELINE-ANIMATION') {
-        offset += this.addAnimationToTimeline(timelineEl.children[i], offset);
+  tick: function (t) {
+    // Track target object position. Depends on parent object keeping global transforms up
+    // to state with updateMatrixWorld(). In practice, this is handled by the renderer.
+    var target;
+    var target3D = this.target3D;
+    var object3D = this.el.object3D;
+    var vector = this.vector;
+
+    if (target3D) {
+      target = object3D.parent.worldToLocal(target3D.getWorldPosition());
+      if (this.el.getObject3D('camera')) {
+        // Flip the vector to -z, looking away from target for camera entities. When using
+        // lookat from THREE camera objects, this is applied for you, but since the camera is
+        // nested into a Object3D, we need to apply this manually.
+        vector.subVectors(object3D.position, target).add(object3D.position);
+      } else {
+        vector = target;
       }
+      object3D.lookAt(vector);
     }
   },
 
-  /**
-   * Add single animation to timeline.
-   *
-   * @param {number} offset - Absolute time offset for animation to start.
-   * @returns {number} Duration.
-   */
-  addAnimationToTimeline: function (animationEl, offset) {
-    var additionalOffset;
-    var animationName;
-    var component;
-    var config;
-    var els;
-    var i;
-    var select;
-
-    animationName = 'animation__' + animationEl.getAttribute('name');
-    select = animationEl.getAttribute('select');
-    els = this.el.sceneEl.querySelectorAll(select);
-
-    if (!els.length) {
-      console.warn('[animation-timeline] No entities found for select="' +
-                    select + '"');
-      return 0;
-    }
-
-    additionalOffset = parseFloat(animationEl.getAttribute('offset') || 0, 10)
-
-    for (i = 0; i < els.length; i++) {
-      component = els[i].components[animationName];
-      if (!component) {
-        throw new Error('Could not find animation `' + animationName + '` for `' +
-                        animationEl.getAttribute('select') + '`.');
-      }
-      component.updateConfig();
-      component.stopRelatedAnimations();
-      config = cloneConfig(component.config);
-      config.offset = offset + additionalOffset;
-      this.timeline.add(config);
-    }
-
-    return (config.duration || 0) + (config.delay || 0) + additionalOffset;
-  },
-
-  pauseAnimation: function () {
-    this.animationIsPlaying = false;
+  beginTracking: function (targetEl) {
+    this.target3D = targetEl.object3D;
   }
 });
 
-/**
- * Clone config. Deep clone objects and arrays. Copy over functions.
- */
-function cloneConfig (config) {
-  var key;
-  var newConfig = {};
-  for (key in config) {
-    if (typeof config[key] === 'function') {
-      newConfig[key] = config[key];
-    } else if (typeof config[key] === 'object') {
-      newConfig[key] = AFRAME.utils.clone(config[key]);
-    } else {
-      newConfig[key] = config[key];
-    }
-  }
-  return newConfig;
+},{}],197:[function(require,module,exports) {
+window.normalYPosition = 1.5;
+window.hiddenYPosition = 1000;
+
+//default colors
+window.key_orange       = '#ed5b21' // rgb(237, 91, 33) Light orange
+window.key_orange_light = '#ef8c60' // rgb (239, 140, 96) Extra Light Orange
+window.key_grey         = '#22252a' // rgb(34, 37, 42) Standard grey
+window.key_grey_dark    = '#2c3037' // rgb(44, 48, 55) Medium grey
+window.key_grey_light   = '#606876' // rgb(96, 104, 118) Light grey
+window.key_offwhite     = '#d3d3d4' // rgb(211, 211, 212) Extra Light grey
+window.key_white        = '#fff'
+
+//icon font variables
+window.icon_font = {"alert": "\uf101", "alert-circled": "\uf100", "android-add": "\uf2c7", "android-add-circle": "\uf359", "android-alarm-clock": "\uf35a", "android-alert": "\uf35b", "android-apps": "\uf35c", "android-archive": "\uf2c9", "android-arrow-back": "\uf2ca", "android-arrow-down": "\uf35d", "android-arrow-dropdown": "\uf35f", "android-arrow-dropdown-circle": "\uf35e", "android-arrow-dropleft": "\uf361", "android-arrow-dropleft-circle": "\uf360", "android-arrow-dropright": "\uf363", "android-arrow-dropright-circle": "\uf362", "android-arrow-dropup": "\uf365", "android-arrow-dropup-circle": "\uf364", "android-arrow-forward": "\uf30f", "android-arrow-up": "\uf366", "android-attach": "\uf367", "android-bar": "\uf368", "android-bicycle": "\uf369", "android-boat": "\uf36a", "android-bookmark": "\uf36b", "android-bulb": "\uf36c", "android-bus": "\uf36d", "android-calendar": "\uf2d1", "android-call": "\uf2d2", "android-camera": "\uf2d3", "android-cancel": "\uf36e", "android-car": "\uf36f", "android-cart": "\uf370", "android-chat": "\uf2d4", "android-checkbox": "\uf374", "android-checkbox-blank": "\uf371", "android-checkbox-outline": "\uf373", "android-checkbox-outline-blank": "\uf372", "android-checkmark-circle": "\uf375", "android-clipboard": "\uf376", "android-close": "\uf2d7", "android-cloud": "\uf37a", "android-cloud-circle": "\uf377", "android-cloud-done": "\uf378", "android-cloud-outline": "\uf379", "android-color-palette": "\uf37b", "android-compass": "\uf37c", "android-contact": "\uf2d8", "android-contacts": "\uf2d9", "android-contract": "\uf37d", "android-create": "\uf37e", "android-delete": "\uf37f", "android-desktop": "\uf380", "android-document": "\uf381", "android-done": "\uf383", "android-done-all": "\uf382", "android-download": "\uf2dd", "android-drafts": "\uf384", "android-exit": "\uf385", "android-expand": "\uf386", "android-favorite": "\uf388", "android-favorite-outline": "\uf387", "android-film": "\uf389", "android-folder": "\uf2e0", "android-folder-open": "\uf38a", "android-funnel": "\uf38b", "android-globe": "\uf38c", "android-hand": "\uf2e3", "android-hangout": "\uf38d", "android-happy": "\uf38e", "android-home": "\uf38f", "android-image": "\uf2e4", "android-laptop": "\uf390", "android-list": "\uf391", "android-locate": "\uf2e9", "android-lock": "\uf392", "android-mail": "\uf2eb", "android-map": "\uf393", "android-menu": "\uf394", "android-microphone": "\uf2ec", "android-microphone-off": "\uf395", "android-more-horizontal": "\uf396", "android-more-vertical": "\uf397", "android-navigate": "\uf398", "android-notifications": "\uf39b", "android-notifications-none": "\uf399", "android-notifications-off": "\uf39a", "android-open": "\uf39c", "android-options": "\uf39d", "android-people": "\uf39e", "android-person": "\uf3a0", "android-person-add": "\uf39f", "android-phone-landscape": "\uf3a1", "android-phone-portrait": "\uf3a2", "android-pin": "\uf3a3", "android-plane": "\uf3a4", "android-playstore": "\uf2f0", "android-print": "\uf3a5", "android-radio-button-off": "\uf3a6", "android-radio-button-on": "\uf3a7", "android-refresh": "\uf3a8", "android-remove": "\uf2f4", "android-remove-circle": "\uf3a9", "android-restaurant": "\uf3aa", "android-sad": "\uf3ab", "android-search": "\uf2f5", "android-send": "\uf2f6", "android-settings": "\uf2f7", "android-share": "\uf2f8", "android-share-alt": "\uf3ac", "android-star": "\uf2fc", "android-star-half": "\uf3ad", "android-star-outline": "\uf3ae", "android-stopwatch": "\uf2fd", "android-subway": "\uf3af", "android-sunny": "\uf3b0", "android-sync": "\uf3b1", "android-textsms": "\uf3b2", "android-time": "\uf3b3", "android-train": "\uf3b4", "android-unlock": "\uf3b5", "android-upload": "\uf3b6", "android-volume-down": "\uf3b7", "android-volume-mute": "\uf3b8", "android-volume-off": "\uf3b9", "android-volume-up": "\uf3ba", "android-walk": "\uf3bb", "android-warning": "\uf3bc", "android-watch": "\uf3bd", "android-wifi": "\uf305", "aperture": "\uf313", "archive": "\uf102", "arrow-down-a": "\uf103", "arrow-down-b": "\uf104", "arrow-down-c": "\uf105", "arrow-expand": "\uf25e", "arrow-graph-down-left": "\uf25f", "arrow-graph-down-right": "\uf260", "arrow-graph-up-left": "\uf261", "arrow-graph-up-right": "\uf262", "arrow-left-a": "\uf106", "arrow-left-b": "\uf107", "arrow-left-c": "\uf108", "arrow-move": "\uf263", "arrow-resize": "\uf264", "arrow-return-left": "\uf265", "arrow-return-right": "\uf266", "arrow-right-a": "\uf109", "arrow-right-b": "\uf10a", "arrow-right-c": "\uf10b", "arrow-shrink": "\uf267", "arrow-swap": "\uf268", "arrow-up-a": "\uf10c", "arrow-up-b": "\uf10d", "arrow-up-c": "\uf10e", "asterisk": "\uf314", "at": "\uf10f", "backspace": "\uf3bf", "backspace-outline": "\uf3be", "bag": "\uf110", "battery-charging": "\uf111", "battery-empty": "\uf112", "battery-full": "\uf113", "battery-half": "\uf114", "battery-low": "\uf115", "beaker": "\uf269", "beer": "\uf26a", "bluetooth": "\uf116", "bonfire": "\uf315", "bookmark": "\uf26b", "bowtie": "\uf3c0", "briefcase": "\uf26c", "bug": "\uf2be", "calculator": "\uf26d", "calendar": "\uf117", "camera": "\uf118", "card": "\uf119", "cash": "\uf316", "chatbox": "\uf11b", "chatbox-working": "\uf11a", "chatboxes": "\uf11c", "chatbubble": "\uf11e", "chatbubble-working": "\uf11d", "chatbubbles": "\uf11f", "checkmark": "\uf122", "checkmark-circled": "\uf120", "checkmark-round": "\uf121", "chevron-down": "\uf123", "chevron-left": "\uf124", "chevron-right": "\uf125", "chevron-up": "\uf126", "clipboard": "\uf127", "clock": "\uf26e", "close": "\uf12a", "close-circled": "\uf128", "close-round": "\uf129", "closed-captioning": "\uf317", "cloud": "\uf12b", "code": "\uf271", "code-download": "\uf26f", "code-working": "\uf270", "coffee": "\uf272", "compass": "\uf273", "compose": "\uf12c", "connection-bars": "\uf274", "contrast": "\uf275", "crop": "\uf3c1", "cube": "\uf318", "disc": "\uf12d", "document": "\uf12f", "document-text": "\uf12e", "drag": "\uf130", "earth": "\uf276", "easel": "\uf3c2", "edit": "\uf2bf", "egg": "\uf277", "eject": "\uf131", "email": "\uf132", "email-unread": "\uf3c3", "erlenmeyer-flask": "\uf3c5", "erlenmeyer-flask-bubbles": "\uf3c4", "eye": "\uf133", "eye-disabled": "\uf306", "female": "\uf278", "filing": "\uf134", "film-marker": "\uf135", "fireball": "\uf319", "flag": "\uf279", "flame": "\uf31a", "flash": "\uf137", "flash-off": "\uf136", "folder": "\uf139", "fork": "\uf27a", "fork-repo": "\uf2c0", "forward": "\uf13a", "funnel": "\uf31b", "gear-a": "\uf13d", "gear-b": "\uf13e", "grid": "\uf13f", "hammer": "\uf27b", "happy": "\uf31c", "happy-outline": "\uf3c6", "headphone": "\uf140", "heart": "\uf141", "heart-broken": "\uf31d", "help": "\uf143", "help-buoy": "\uf27c", "help-circled": "\uf142", "home": "\uf144", "icecream": "\uf27d", "image": "\uf147", "images": "\uf148", "information": "\uf14a", "information-circled": "\uf149", "ionic": "\uf14b", "ios-alarm": "\uf3c8", "ios-alarm-outline": "\uf3c7", "ios-albums": "\uf3ca", "ios-albums-outline": "\uf3c9", "ios-americanfootball": "\uf3cc", "ios-americanfootball-outline": "\uf3cb", "ios-analytics": "\uf3ce", "ios-analytics-outline": "\uf3cd", "ios-arrow-back": "\uf3cf", "ios-arrow-down": "\uf3d0", "ios-arrow-forward": "\uf3d1", "ios-arrow-left": "\uf3d2", "ios-arrow-right": "\uf3d3", "ios-arrow-thin-down": "\uf3d4", "ios-arrow-thin-left": "\uf3d5", "ios-arrow-thin-right": "\uf3d6", "ios-arrow-thin-up": "\uf3d7", "ios-arrow-up": "\uf3d8", "ios-at": "\uf3da", "ios-at-outline": "\uf3d9", "ios-barcode": "\uf3dc", "ios-barcode-outline": "\uf3db", "ios-baseball": "\uf3de", "ios-baseball-outline": "\uf3dd", "ios-basketball": "\uf3e0", "ios-basketball-outline": "\uf3df", "ios-bell": "\uf3e2", "ios-bell-outline": "\uf3e1", "ios-body": "\uf3e4", "ios-body-outline": "\uf3e3", "ios-bolt": "\uf3e6", "ios-bolt-outline": "\uf3e5", "ios-book": "\uf3e8", "ios-book-outline": "\uf3e7", "ios-bookmarks": "\uf3ea", "ios-bookmarks-outline": "\uf3e9", "ios-box": "\uf3ec", "ios-box-outline": "\uf3eb", "ios-briefcase": "\uf3ee", "ios-briefcase-outline": "\uf3ed", "ios-browsers": "\uf3f0", "ios-browsers-outline": "\uf3ef", "ios-calculator": "\uf3f2", "ios-calculator-outline": "\uf3f1", "ios-calendar": "\uf3f4", "ios-calendar-outline": "\uf3f3", "ios-camera": "\uf3f6", "ios-camera-outline": "\uf3f5", "ios-cart": "\uf3f8", "ios-cart-outline": "\uf3f7", "ios-chatboxes": "\uf3fa", "ios-chatboxes-outline": "\uf3f9", "ios-chatbubble": "\uf3fc", "ios-chatbubble-outline": "\uf3fb", "ios-checkmark": "\uf3ff", "ios-checkmark-empty": "\uf3fd", "ios-checkmark-outline": "\uf3fe", "ios-circle-filled": "\uf400", "ios-circle-outline": "\uf401", "ios-clock": "\uf403", "ios-clock-outline": "\uf402", "ios-close": "\uf406", "ios-close-empty": "\uf404", "ios-close-outline": "\uf405", "ios-cloud": "\uf40c", "ios-cloud-download": "\uf408", "ios-cloud-download-outline": "\uf407", "ios-cloud-outline": "\uf409", "ios-cloud-upload": "\uf40b", "ios-cloud-upload-outline": "\uf40a", "ios-cloudy": "\uf410", "ios-cloudy-night": "\uf40e", "ios-cloudy-night-outline": "\uf40d", "ios-cloudy-outline": "\uf40f", "ios-cog": "\uf412", "ios-cog-outline": "\uf411", "ios-color-filter": "\uf414", "ios-color-filter-outline": "\uf413", "ios-color-wand": "\uf416", "ios-color-wand-outline": "\uf415", "ios-compose": "\uf418", "ios-compose-outline": "\uf417", "ios-contact": "\uf41a", "ios-contact-outline": "\uf419", "ios-copy": "\uf41c", "ios-copy-outline": "\uf41b", "ios-crop": "\uf41e", "ios-crop-strong": "\uf41d", "ios-download": "\uf420", "ios-download-outline": "\uf41f", "ios-drag": "\uf421", "ios-email": "\uf423", "ios-email-outline": "\uf422", "ios-eye": "\uf425", "ios-eye-outline": "\uf424", "ios-fastforward": "\uf427", "ios-fastforward-outline": "\uf426", "ios-filing": "\uf429", "ios-filing-outline": "\uf428", "ios-film": "\uf42b", "ios-film-outline": "\uf42a", "ios-flag": "\uf42d", "ios-flag-outline": "\uf42c", "ios-flame": "\uf42f", "ios-flame-outline": "\uf42e", "ios-flask": "\uf431", "ios-flask-outline": "\uf430", "ios-flower": "\uf433", "ios-flower-outline": "\uf432", "ios-folder": "\uf435", "ios-folder-outline": "\uf434", "ios-football": "\uf437", "ios-football-outline": "\uf436", "ios-game-controller-a": "\uf439", "ios-game-controller-a-outline": "\uf438", "ios-game-controller-b": "\uf43b", "ios-game-controller-b-outline": "\uf43a", "ios-gear": "\uf43d", "ios-gear-outline": "\uf43c", "ios-glasses": "\uf43f", "ios-glasses-outline": "\uf43e", "ios-grid-view": "\uf441", "ios-grid-view-outline": "\uf440", "ios-heart": "\uf443", "ios-heart-outline": "\uf442", "ios-help": "\uf446", "ios-help-empty": "\uf444", "ios-help-outline": "\uf445", "ios-home": "\uf448", "ios-home-outline": "\uf447", "ios-infinite": "\uf44a", "ios-infinite-outline": "\uf449", "ios-information": "\uf44d", "ios-information-empty": "\uf44b", "ios-information-outline": "\uf44c", "ios-ionic-outline": "\uf44e", "ios-keypad": "\uf450", "ios-keypad-outline": "\uf44f", "ios-lightbulb": "\uf452", "ios-lightbulb-outline": "\uf451", "ios-list": "\uf454", "ios-list-outline": "\uf453", "ios-location": "\uf456", "ios-location-outline": "\uf455", "ios-locked": "\uf458", "ios-locked-outline": "\uf457", "ios-loop": "\uf45a", "ios-loop-strong": "\uf459", "ios-medical": "\uf45c", "ios-medical-outline": "\uf45b", "ios-medkit": "\uf45e", "ios-medkit-outline": "\uf45d", "ios-mic": "\uf461", "ios-mic-off": "\uf45f", "ios-mic-outline": "\uf460", "ios-minus": "\uf464", "ios-minus-empty": "\uf462", "ios-minus-outline": "\uf463", "ios-monitor": "\uf466", "ios-monitor-outline": "\uf465", "ios-moon": "\uf468", "ios-moon-outline": "\uf467", "ios-more": "\uf46a", "ios-more-outline": "\uf469", "ios-musical-note": "\uf46b", "ios-musical-notes": "\uf46c", "ios-navigate": "\uf46e", "ios-navigate-outline": "\uf46d", "ios-nutrition": "\uf470", "ios-nutrition-outline": "\uf46f", "ios-paper": "\uf472", "ios-paper-outline": "\uf471", "ios-paperplane": "\uf474", "ios-paperplane-outline": "\uf473", "ios-partlysunny": "\uf476", "ios-partlysunny-outline": "\uf475", "ios-pause": "\uf478", "ios-pause-outline": "\uf477", "ios-paw": "\uf47a", "ios-paw-outline": "\uf479", "ios-people": "\uf47c", "ios-people-outline": "\uf47b", "ios-person": "\uf47e", "ios-person-outline": "\uf47d", "ios-personadd": "\uf480", "ios-personadd-outline": "\uf47f", "ios-photos": "\uf482", "ios-photos-outline": "\uf481", "ios-pie": "\uf484", "ios-pie-outline": "\uf483", "ios-pint": "\uf486", "ios-pint-outline": "\uf485", "ios-play": "\uf488", "ios-play-outline": "\uf487", "ios-plus": "\uf48b", "ios-plus-empty": "\uf489", "ios-plus-outline": "\uf48a", "ios-pricetag": "\uf48d", "ios-pricetag-outline": "\uf48c", "ios-pricetags": "\uf48f", "ios-pricetags-outline": "\uf48e", "ios-printer": "\uf491", "ios-printer-outline": "\uf490", "ios-pulse": "\uf493", "ios-pulse-strong": "\uf492", "ios-rainy": "\uf495", "ios-rainy-outline": "\uf494", "ios-recording": "\uf497", "ios-recording-outline": "\uf496", "ios-redo": "\uf499", "ios-redo-outline": "\uf498", "ios-refresh": "\uf49c", "ios-refresh-empty": "\uf49a", "ios-refresh-outline": "\uf49b", "ios-reload": "\uf49d", "ios-reverse-camera": "\uf49f", "ios-reverse-camera-outline": "\uf49e", "ios-rewind": "\uf4a1", "ios-rewind-outline": "\uf4a0", "ios-rose": "\uf4a3", "ios-rose-outline": "\uf4a2", "ios-search": "\uf4a5", "ios-search-strong": "\uf4a4", "ios-settings": "\uf4a7", "ios-settings-strong": "\uf4a6", "ios-shuffle": "\uf4a9", "ios-shuffle-strong": "\uf4a8", "ios-skipbackward": "\uf4ab", "ios-skipbackward-outline": "\uf4aa", "ios-skipforward": "\uf4ad", "ios-skipforward-outline": "\uf4ac", "ios-snowy": "\uf4ae", "ios-speedometer": "\uf4b0", "ios-speedometer-outline": "\uf4af", "ios-star": "\uf4b3", "ios-star-half": "\uf4b1", "ios-star-outline": "\uf4b2", "ios-stopwatch": "\uf4b5", "ios-stopwatch-outline": "\uf4b4", "ios-sunny": "\uf4b7", "ios-sunny-outline": "\uf4b6", "ios-telephone": "\uf4b9", "ios-telephone-outline": "\uf4b8", "ios-tennisball": "\uf4bb", "ios-tennisball-outline": "\uf4ba", "ios-thunderstorm": "\uf4bd", "ios-thunderstorm-outline": "\uf4bc", "ios-time": "\uf4bf", "ios-time-outline": "\uf4be", "ios-timer": "\uf4c1", "ios-timer-outline": "\uf4c0", "ios-toggle": "\uf4c3", "ios-toggle-outline": "\uf4c2", "ios-trash": "\uf4c5", "ios-trash-outline": "\uf4c4", "ios-undo": "\uf4c7", "ios-undo-outline": "\uf4c6", "ios-unlocked": "\uf4c9", "ios-unlocked-outline": "\uf4c8", "ios-upload": "\uf4cb", "ios-upload-outline": "\uf4ca", "ios-videocam": "\uf4cd", "ios-videocam-outline": "\uf4cc", "ios-volume-high": "\uf4ce", "ios-volume-low": "\uf4cf", "ios-wineglass": "\uf4d1", "ios-wineglass-outline": "\uf4d0", "ios-world": "\uf4d3", "ios-world-outline": "\uf4d2", "ipad": "\uf1f9", "iphone": "\uf1fa", "ipod": "\uf1fb", "jet": "\uf295", "key": "\uf296", "knife": "\uf297", "laptop": "\uf1fc", "leaf": "\uf1fd", "levels": "\uf298", "lightbulb": "\uf299", "link": "\uf1fe", "load-a": "\uf29a", "load-b": "\uf29b", "load-c": "\uf29c", "load-d": "\uf29d", "location": "\uf1ff", "lock-combination": "\uf4d4", "locked": "\uf200", "log-in": "\uf29e", "log-out": "\uf29f", "loop": "\uf201", "magnet": "\uf2a0", "male": "\uf2a1", "man": "\uf202", "map": "\uf203", "medkit": "\uf2a2", "merge": "\uf33f", "mic-a": "\uf204", "mic-b": "\uf205", "mic-c": "\uf206", "minus": "\uf209", "minus-circled": "\uf207", "minus-round": "\uf208", "model-s": "\uf2c1", "monitor": "\uf20a", "more": "\uf20b", "mouse": "\uf340", "music-note": "\uf20c", "navicon": "\uf20e", "navicon-round": "\uf20d", "navigate": "\uf2a3", "network": "\uf341", "no-smoking": "\uf2c2", "nuclear": "\uf2a4", "outlet": "\uf342", "paintbrush": "\uf4d5", "paintbucket": "\uf4d6", "paper-airplane": "\uf2c3", "paperclip": "\uf20f", "pause": "\uf210", "person": "\uf213", "person-add": "\uf211", "person-stalker": "\uf212", "pie-graph": "\uf2a5", "pin": "\uf2a6", "pinpoint": "\uf2a7", "pizza": "\uf2a8", "plane": "\uf214", "planet": "\uf343", "play": "\uf215", "playstation": "\uf30a", "plus": "\uf218", "plus-circled": "\uf216", "plus-round": "\uf217", "podium": "\uf344", "pound": "\uf219", "power": "\uf2a9", "pricetag": "\uf2aa", "pricetags": "\uf2ab", "printer": "\uf21a", "pull-request": "\uf345", "qr-scanner": "\uf346", "quote": "\uf347", "radio-waves": "\uf2ac", "record": "\uf21b", "refresh": "\uf21c", "reply": "\uf21e", "reply-all": "\uf21d", "ribbon-a": "\uf348", "ribbon-b": "\uf349", "sad": "\uf34a", "sad-outline": "\uf4d7", "scissors": "\uf34b", "search": "\uf21f", "settings": "\uf2ad", "share": "\uf220", "shuffle": "\uf221", "skip-backward": "\uf222", "skip-forward": "\uf223", "social-android": "\uf225", "social-android-outline": "\uf224", "social-angular": "\uf4d9", "social-angular-outline": "\uf4d8", "social-apple": "\uf227", "social-apple-outline": "\uf226", "social-bitcoin": "\uf2af", "social-bitcoin-outline": "\uf2ae", "social-buffer": "\uf229", "social-buffer-outline": "\uf228", "social-chrome": "\uf4db", "social-chrome-outline": "\uf4da", "social-codepen": "\uf4dd", "social-codepen-outline": "\uf4dc", "social-css3": "\uf4df", "social-css3-outline": "\uf4de", "social-designernews": "\uf22b", "social-designernews-outline": "\uf22a", "social-dribbble": "\uf22d", "social-dribbble-outline": "\uf22c", "social-dropbox": "\uf22f", "social-dropbox-outline": "\uf22e", "social-euro": "\uf4e1", "social-euro-outline": "\uf4e0", "social-facebook": "\uf231", "social-facebook-outline": "\uf230", "social-foursquare": "\uf34d", "social-foursquare-outline": "\uf34c", "social-freebsd-devil": "\uf2c4", "social-github": "\uf233", "social-github-outline": "\uf232", "social-google": "\uf34f", "social-google-outline": "\uf34e", "social-googleplus": "\uf235", "social-googleplus-outline": "\uf234", "social-hackernews": "\uf237", "social-hackernews-outline": "\uf236", "social-html5": "\uf4e3", "social-html5-outline": "\uf4e2", "social-instagram": "\uf351", "social-instagram-outline": "\uf350", "social-javascript": "\uf4e5", "social-javascript-outline": "\uf4e4", "social-linkedin": "\uf239", "social-linkedin-outline": "\uf238", "social-markdown": "\uf4e6", "social-nodejs": "\uf4e7", "social-octocat": "\uf4e8", "social-pinterest": "\uf2b1", "social-pinterest-outline": "\uf2b0", "social-python": "\uf4e9", "social-reddit": "\uf23b", "social-reddit-outline": "\uf23a", "social-rss": "\uf23d", "social-rss-outline": "\uf23c", "social-sass": "\uf4ea", "social-skype": "\uf23f", "social-skype-outline": "\uf23e", "social-snapchat": "\uf4ec", "social-snapchat-outline": "\uf4eb", "social-tumblr": "\uf241", "social-tumblr-outline": "\uf240", "social-tux": "\uf2c5", "social-twitch": "\uf4ee", "social-twitch-outline": "\uf4ed", "social-twitter": "\uf243", "social-twitter-outline": "\uf242", "social-usd": "\uf353", "social-usd-outline": "\uf352", "social-vimeo": "\uf245", "social-vimeo-outline": "\uf244", "social-whatsapp": "\uf4f0", "social-whatsapp-outline": "\uf4ef", "social-windows": "\uf247", "social-windows-outline": "\uf246", "social-wordpress": "\uf249", "social-wordpress-outline": "\uf248", "social-yahoo": "\uf24b", "social-yahoo-outline": "\uf24a", "social-yen": "\uf4f2", "social-yen-outline": "\uf4f1", "social-youtube": "\uf24d", "social-youtube-outline": "\uf24c", "soup-can": "\uf4f4", "soup-can-outline": "\uf4f3", "speakerphone": "\uf2b2", "speedometer": "\uf2b3", "spoon": "\uf2b4", "star": "\uf24e", "stats-bars": "\uf2b5", "steam": "\uf30b", "stop": "\uf24f", "thermometer": "\uf2b6", "thumbsdown": "\uf250", "thumbsup": "\uf251", "toggle": "\uf355", "toggle-filled": "\uf354", "transgender": "\uf4f5", "trash-a": "\uf252", "trash-b": "\uf253", "trophy": "\uf356", "tshirt": "\uf4f7", "tshirt-outline": "\uf4f6", "umbrella": "\uf2b7", "university": "\uf357", "unlocked": "\uf254", "upload": "\uf255", "usb": "\uf2b8", "videocamera": "\uf256", "volume-high": "\uf257", "volume-low": "\uf258", "volume-medium": "\uf259", "volume-mute": "\uf25a", "wand": "\uf358", "waterdrop": "\uf25b", "wifi": "\uf25c", "wineglass": "\uf2b9", "woman": "\uf25d", "wrench": "\uf2ba", "xbox": "\uf30c"};
+
+window.getUniqueId = function (stringPrefix) {
+    var datestr = new Date().getTime().toString();
+    var randomstr = Math.random().toString().replace('.', '');
+    return stringPrefix + '_' + datestr + randomstr;
 }
 
+window.getTextWidth = function(text, font) {
+    // re-use canvas object for better performance
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
+}
+
+window.drawText = function(ctx, canvas, text, font, color, size) {
+    setTimeout(function(){
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.scale(1, 1);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var textString = text + ''
+		if (textString.match("char#")) {
+			var char = textString.substring(textString.indexOf('#')+1);
+	       	ctx.fillText(String.fromCharCode(char), canvas.width/2, canvas.height/2); // position x, y
+        }else{
+ 	       	ctx.fillText(textString, canvas.width/2, canvas.height/2); // position x, y
+ 	    }
+
+    },500); // callback when font is loaded needed
+}
+
+window.drawIcon = function(ctx, canvas, icon, color, size = 1) {
+    setTimeout(function(){
+        ctx.font = '240px Ionicons';
+        ctx.fillStyle = color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.scale(size, size);
+
+        console.log("icon" + icon);
+        if(icon_font[icon]){
+            ctx.fillText(icon_font[icon], canvas.width/2, canvas.height/2);
+        }else{
+            ctx.fillText('?', canvas.width/2, canvas.height/2);
+        }
+
+    },500); // callback when font is loaded needed
+}
+
+window.drawLabel = function(ctx, canvas, text, font, color, size) {
+    setTimeout(function(){
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.textAlign = "left";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.scale(1, 1);
+        ctx.fillText(text, canvas.height/8, canvas.height/2); // position x, y
+
+    },500); // callback when font is loaded needed
+}
+},{}],213:[function(require,module,exports) {
+AFRAME.registerComponent('gui-item', {
+    schema: {
+        type: {type: 'string'},
+        width: {type: 'number', default: 1},
+        height: {type: 'number', default: 1},
+        margin: { type: 'vec4', default: '0 0 0 0'}
+    },
+    init: function () {
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+});
+
+
+},{}],212:[function(require,module,exports) {
+AFRAME.registerComponent('gui-interactable', {
+    schema: {
+        clickAction: {type: 'string'},
+        hoverAction: {type: 'string'},
+        keyCode: {type: 'number', default: null},
+    },
+    init: function () {
+        var _this = this;
+        var data = this.data;
+        var el = this.el;
+
+        if(data.keyCode){
+            window.addEventListener("keydown", function (event) {
+                if(event.keyCode == data.keyCode){                  
+                    console.log("key press by gui-interactable : " + data.keyCode);
+                    el.emit('click');
+                }
+                event.preventDefault();
+            }, true);
+        }
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+    setClickAction: function (action) {
+        this.data.clickAction = action; //change function dynamically
+    },
+});
+
+},{}],211:[function(require,module,exports) {
+require('../scripts/vars.js')
+
+/*  //trying to figure out global styles that customize gui items
+var styles = StyleSheet.create({
+    fontFamily: {
+        type: 'string', 
+        default: 'Helvetica'
+    },
+    fontColor: {
+        type: 'string', 
+        default: key_offwhite
+    },
+    borderColor: {
+        type: 'string', 
+        default: key_offwhite
+    },
+    backgroundColor: {
+        type: 'string', 
+        default: key_grey
+    },
+    hoverColor: {
+        type: 'string', 
+        default: key_grey_dark
+    },
+    activeColor: {
+        type: 'string', 
+        default: key_orange
+    },
+    handleColor: {
+        type: 'string', 
+        default: key_offwhite
+    },            
+});
+*/
+
+AFRAME.registerComponent('gui-flex-container', {
+    schema: {
+        flexDirection: { type: 'string', default: 'row' },
+        justifyContent: { type: 'string', default: 'flexStart' },
+        alignItems: { type: 'string', default: 'flexStart' },
+        itemPadding: { type: 'number', default: 0.0 },
+        opacity: { type: 'number', default: 0.0 },
+        isTopContainer: {type: 'boolean', default: false},
+        panelColor: {type: 'string', default: key_grey},
+
+//global settings for GUI items
+        styles: {
+            fontFamily: {type: 'string', default: 'Helvetica'},
+            fontColor: {type: 'string', default: key_offwhite},
+            borderColor: {type: 'string', default: key_offwhite},
+            backgroundColor: {type: 'string', default: key_grey},
+            hoverColor: {type: 'string', default: key_grey_dark},
+            activeColor: {type: 'string', default: key_orange},
+            handleColor: {type: 'string', default: key_offwhite},            
+        }
+
+    },
+    init: function () {
+        console.log("in aframe-gui-component init for: "+this.el.getAttribute("id"));
+        var containerGuiItem = this.el.getAttribute("gui-item");
+
+        if (this.data.isTopContainer) {
+            this.setBackground();
+        }
+
+        this.el.setAttribute('geometry', `primitive: plane; height: ${containerGuiItem.height}; width: ${containerGuiItem.width};`);
+        this.el.setAttribute('material', `shader: flat; transparent: true; opacity: ${this.data.opacity}; color: ${this.data.panelColor}; side:front;`);
+
+        this.children = this.el.getChildEntities();
+        console.log("childElements: "+this.children);
+        console.log("num child Elements: "+this.children.length);
+
+        // coordinate system is 0, 0 in the top left
+        var cursorX = 0;
+        var cursorY = 0;
+        if (this.data.flexDirection == 'row') {
+            // first figure out cursor position on main X axis
+            if (this.data.justifyContent == 'flexStart') {
+                cursorX = 0;
+            } else if (this.data.justifyContent == 'center' || this.data.justifyContent == 'flexEnd') {
+                var rowWidth = 0;
+                for (var i = 0; i < this.children.length; i++) {
+                    var childElement = this.children[i];
+                    var childGuiItem = childElement.getAttribute("gui-item");
+                    rowWidth = rowWidth + childGuiItem.margin.w + childGuiItem.width + childGuiItem.margin.y;
+                }
+                if (this.data.justifyContent == 'center') {
+                    cursorX = (containerGuiItem.width - rowWidth)*0.5;
+                } else if (this.data.justifyContent == 'flexEnd') {
+                    cursorX = containerGuiItem.width - rowWidth;
+                }
+            }
+            // then figure out baseline / cursor position on cross Y axis
+            if (this.data.alignItems == 'center') {
+                cursorY = containerGuiItem.height; // baseline is center
+            } else if (this.data.alignItems == 'flexStart') {
+                cursorY = 0; // baseline is top of container
+            } else if (this.data.alignItems == 'flexEnd') {
+                cursorY = containerGuiItem.height; // baseline is bottom of container
+            }
+        } else if (this.data.flexDirection == 'column') {
+            // first figure out cursor position on main Y axis
+            if (this.data.justifyContent == 'flexStart') {
+                cursorY = 0;
+            } else if (this.data.justifyContent == 'center' || this.data.justifyContent == 'flexEnd') {
+                var columnHeight = 0;
+                for (var i = 0; i < this.children.length; i++) {
+                    var childElement = this.children[i];
+                    var childGuiItem = childElement.getAttribute("gui-item");
+                    columnHeight = columnHeight + childGuiItem.margin.x + childGuiItem.height + childGuiItem.margin.z;
+                }
+                if (this.data.justifyContent == 'center') {
+                    cursorY = (containerGuiItem.height - columnHeight)*0.5;
+                } else if (this.data.justifyContent == 'flexEnd') {
+                    cursorY = containerGuiItem.height - columnHeight;
+                }
+            }
+            // then figure out baseline / cursor position on cross X axis
+            if (this.data.alignItems == 'flexStart') {
+                cursorX = 0; // baseline is left
+            } else if (this.data.alignItems == 'center') {
+                cursorX = containerGuiItem.width*0.5; // baseline is center
+            } else if (this.data.alignItems == 'flexEnd') {
+                cursorX = 0; // baseline is right
+            }
+        }
+        console.log(`initial cursor position for ${this.el.getAttribute("id")}: ${cursorX} ${cursorY} 0.01`)
+
+        // not that cursor positions are determined, loop through and lay out items
+        var wrapOffsetX = 0; // not used yet since wrapping isn't supported
+        var wrapOffsetY = 0; // not used yet since wrapping isn't supported
+        for (var i = 0; i < this.children.length; i++) {
+            var childElement = this.children[i];
+            // TODO: change this to call gedWidth() and setWidth() of component
+            var childPositionX = 0;
+            var childPositionY = 0;
+            var childPositionZ = 0.01;
+            var childGuiItem = childElement.getAttribute("gui-item");
+
+            // now get object position in aframe container cordinates (0, 0 is center)
+            if (childGuiItem) {
+                if (this.data.flexDirection == 'row') {
+                    if (this.data.alignItems == 'center') {
+                        childPositionY = 0; // child position is always 0 for center vertical alignment
+                    } else if (this.data.alignItems == 'flexStart') {
+                        childPositionY = containerGuiItem.height * 0.5 - childGuiItem.margin.x - childGuiItem.height;
+                    } else if (this.data.alignItems == 'flexEnd') {
+                        childPositionY = -containerGuiItem.height * 0.5 + childGuiItem.margin.z + childGuiItem.height;
+                    }
+                    childPositionX = -containerGuiItem.width*0.5 + cursorX + childGuiItem.margin.w + childGuiItem.width * 0.5
+                    cursorX = cursorX + childGuiItem.margin.w + childGuiItem.width + childGuiItem.margin.y;
+                } else if (this.data.flexDirection == 'column') {
+                    if (this.data.alignItems == 'center') {
+                        childPositionX = 0; // child position is always 0 to center
+                    } else if (this.data.alignItems == 'flexStart') {
+                        childPositionX = -containerGuiItem.width*0.5 + childGuiItem.margin.w + childGuiItem.width * 0.5;
+                    } else if (this.data.alignItems == 'flexEnd') {
+                        childPositionX = containerGuiItem.width*0.5 - childGuiItem.margin.y - childGuiItem.width * 0.5;
+                    }
+                    childPositionY = containerGuiItem.height*0.5 - cursorY -  - childGuiItem.margin.x - childGuiItem.height * 0.5
+                    cursorY = cursorY + childGuiItem.margin.x + childGuiItem.height + childGuiItem.margin.z;
+                }
+                console.log(`child element position for ${childElement.id}: ${childPositionX} ${childPositionY} ${childPositionZ}`)
+                childElement.setAttribute('position', `${childPositionX} ${childPositionY} ${childPositionZ}`)
+                childElement.setAttribute('geometry', `primitive: plane; height: ${childGuiItem.height}; width: ${childGuiItem.width};`)
+                var childFlexContainer = childElement.components['gui-flex-container']
+                if (childFlexContainer) {
+                    childFlexContainer.setBackground();
+                }
+            }
+        }
+
+    },
+    update: function () {},
+    tick: function () {},
+    remove: function () {},
+    pause: function () {},
+    play: function () {},
+    getElementSize: function () {},
+    setBackground: function () {
+        if (this.data.opacity > 0) {
+            console.log("panel position: " + JSON.stringify(this.el.getAttribute("position")));
+            var guiItem = this.el.getAttribute("gui-item");
+            var panelBackground = document.createElement("a-entity");
+
+            panelBackground.setAttribute('geometry', `primitive: box; height: ${guiItem.height}; width: ${guiItem.width}; depth:0.025;`);
+            console.log("about to set panel background color to: : " + this.data.panelColor);
+            panelBackground.setAttribute('material', `shader: standard; depthTest: true; opacity: ${this.data.opacity}; color: ${this.data.panelColor};`);
+            panelBackground.setAttribute('position', this.el.getAttribute("position").x + ' ' + this.el.getAttribute("position").y + ' ' + (this.el.getAttribute("position").z - 0.0125));
+            panelBackground.setAttribute('rotation', this.el.getAttribute("rotation").x + ' ' + this.el.getAttribute("rotation").y + ' ' + this.el.getAttribute("rotation").z);
+            this.el.parentNode.insertBefore(panelBackground, this.el);
+        }
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-flex-container', {
+    defaultComponents: {
+        'gui-item': { type: 'flex-container' },
+        'gui-flex-container': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'flex-direction': 'gui-flex-container.flexDirection',
+        'justify-content': 'gui-flex-container.justifyContent',
+        'align-items': 'gui-flex-container.alignItems',
+        'item-padding': 'gui-flex-container.itemPadding',
+        'opacity': 'gui-flex-container.opacity',
+        'is-top-container': 'gui-flex-container.isTopContainer',
+        'panel-color': 'gui-flex-container.panelColor',
+        'font-family': 'gui-flex-container.styles.fontFamily',
+        'font-color': 'gui-flex-container.styles.fontColor',
+        'border-color': 'gui-flex-container.styles.borderColor',
+        'background-color': 'gui-flex-container.styles.backgroundColor',
+        'hover-color': 'gui-flex-container.styles.hoverColor',
+        'active-color': 'gui-flex-container.styles.activeColor',
+        'handle-color': 'gui-flex-container.styles.handleColor',
+    }
+});
+},{"../scripts/vars.js":197}],198:[function(require,module,exports) {
+AFRAME.registerComponent('gui-label', {
+    schema: {
+        text: {type: 'string', default: 'label text'},
+        labelFor: {type: 'selector', default: null},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        backgroundColor: {type: 'string', default: key_offwhite},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; side:front; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.text, '100px ' + data.fontFamily, data.fontColor, 1);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.001');
+        el.appendChild(textEntity);
+
+        ////WAI ARIA Support
+
+        if(data.labelFor){
+            // el.setAttribute('role', 'button');
+        }
+
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-label', {
+    defaultComponents: {
+        'gui-item': { type: 'label' },
+        'gui-label': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-button.on',
+        'value': 'gui-label.text',
+        'label-for': 'gui-label.labelFor',
+        'font-color': 'gui-label.fontColor',
+        'font-family': 'gui-label.fontFamily',
+        'background-color': 'gui-label.backgroundColor'
+    }
+});
+},{}],199:[function(require,module,exports) {
+AFRAME.registerComponent('gui-button', {
+    schema: {
+        on: {default: 'click'},
+        toggle: {type: 'boolean', default: false},
+        text: {type: 'string', default: 'text'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        console.log("in button, guiItem: "+JSON.stringify(guiItem));
+        var guiInteractable = el.getAttribute("gui-interactable");
+        console.log("in button, guiInteractable: "+JSON.stringify(guiInteractable));
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+        var toggleState = this.toggleState = data.toggle;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+        console.log("in gui-button init, data: "+JSON.stringify(data));
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 0.5; side:double; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.text, '100px ' + data.fontFamily, data.fontColor, 1);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: box; width: ${guiItem.width}; height: ${guiItem.height}; depth: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '0 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width-0.025)}; height: ${(guiItem.height-0.025)}; depth: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '0 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.041');
+        el.appendChild(textEntity);
+
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+//            this.toggleState = !(this.toggleState);
+
+//            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("in button, clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+    setActiveState: function (activeState) {
+        console.log("in setActiveState function");
+        this.data.toggle = this.toggleState = activeState;
+        if (!activeState) {
+            this.buttonEntity.setAttribute('material', 'color', this.data.backgroundColor);
+        } else {
+
+        }
+    },
+    setText: function (newText) {
+        drawText(this.ctx, this.canvas, newText, '100px ' + this.data.fontFamily, this.data.fontColor, 1);
+    },
+});
+
+
+AFRAME.registerPrimitive( 'a-gui-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'button' },
+        'gui-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-intexractable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-button.on',
+        'value': 'gui-button.text',
+        'font-color': 'gui-button.fontColor',
+        'font-family': 'gui-button.fontFamily',
+        'border-color': 'gui-button.borderColor',
+        'background-color': 'gui-button.backgroundColor',
+        'hover-color': 'gui-button.hoverColor',
+        'active-color': 'gui-button.activeColor',
+        'toggle': 'gui-button.toggle'
+    }
+});
+
+
+},{}],200:[function(require,module,exports) {
+AFRAME.registerComponent('gui-icon-button', {
+    schema: {
+        on: {default: 'click'},
+        icon: {type: 'string', default: ''},
+        iconActive: {type: 'string', default: ''},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+        var toggleState = this.toggleState = data.toggle;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvasIcon');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 0.5; side:back; color:${data.backgroundColor};`);
+
+        drawIcon(ctx, canvas, data.icon, data.fontColor, 1);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '90 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: cylinder; radius: ${(guiItem.height/2.05)}; height: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '90 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/2}; height: ${guiItem.height/2};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.041');
+        el.appendChild(textEntity);
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+            this.toggleState = !(this.toggleState);
+
+            //console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            //console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            //console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-icon-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'icon-button' },
+        'gui-icon-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-icon-button.on',
+        'font-color': 'gui-icon-button.fontColor',
+        'font-family': 'gui-icon-button.fontFamily',
+        'border-color': 'gui-icon-button.borderColor',
+        'background-color': 'gui-icon-button.backgroundColor',
+        'hover-color': 'gui-icon-button.hoverColor',
+        'active-color': 'gui-icon-button.activeColor',
+        'toggle': 'gui-icon-button.toggle',
+        'icon': 'gui-icon-button.icon',
+        'icon-active': 'gui-icon-button.iconActive',
+    }
+});
+},{}],201:[function(require,module,exports) {
+AFRAME.registerComponent('gui-icon-label-button', {
+    schema: {
+        on: {default: 'click'},
+        icon: {type: 'string', default: ''},
+        iconActive: {type: 'string', default: ''},
+        text: {type: 'string', default: ''},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var toggleState = this.toggleState = data.toggle;
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; side:front; color:${data.backgroundColor};`);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: box; width: ${guiItem.width}; height: ${guiItem.height}; depth: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '0 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width-0.025)}; height: ${(guiItem.height-0.025)}; depth: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '0 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var multiplier = 550;
+        if(data.text != ''){
+            multiplier = 350;
+        }
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var iconCanvasWidth = guiItem.height*multiplier; //square
+        var iconCanvasHeight = guiItem.height*multiplier;
+        var iconCanvas = document.createElement("canvas");
+        this.iconCanvas = iconCanvas;
+        iconCanvas.className = "visuallyhidden";
+        iconCanvas.setAttribute('width', iconCanvasWidth);
+        iconCanvas.setAttribute('height', iconCanvasHeight);
+        iconCanvas.id = getUniqueId('canvasIcon');
+        canvasContainer.appendChild(iconCanvas);
+
+        var ctxIcon = this.ctxIcon = iconCanvas.getContext('2d');
+        drawIcon(ctxIcon, iconCanvas, data.icon, data.fontColor, 1);
+
+        var iconEntityX = 0;
+        if(data.text != ''){
+            iconEntityX = -guiItem.width*0.5 + guiItem.height*0.5;
+        }
+
+        var iconEntity = document.createElement("a-entity");
+
+        if(data.text != ''){
+            iconEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/2}; height: ${guiItem.height/2};`);
+        }else{
+            iconEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/2}; height: ${guiItem.height/2};`);
+        }
+        iconEntity.setAttribute('material', `shader: flat; src: #${iconCanvas.id}; transparent: true; opacity: 1; side:front;`);
+        iconEntity.setAttribute('position', `${iconEntityX} 0 0.041`);
+        el.appendChild(iconEntity);
+
+        if(data.text != ''){
+
+            var labelWidth = guiItem.width - guiItem.height;
+            var canvasWidth = labelWidth*multiplier;
+            var canvasHeight = guiItem.height*multiplier;
+            var labelCanvas = document.createElement("canvas");
+            this.labelCanvas = labelCanvas;
+            labelCanvas.setAttribute('width', canvasWidth);
+            labelCanvas.setAttribute('height', canvasHeight);
+            labelCanvas.id = getUniqueId('canvasLabel');
+            canvasContainer.appendChild(labelCanvas);
+
+            var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+            drawLabel(this.ctxLabel, this.labelCanvas, data.text, '100px '+ data.fontFamily, data.fontColor);
+
+            var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+            var labelEntity = document.createElement("a-entity");
+            labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+            labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1; side:front;`);
+            labelEntity.setAttribute('position', `${labelEntityX} 0 0.041`);
+            el.appendChild(labelEntity);
+
+        }
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+            this.toggleState = !(this.toggleState);
+
+//            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+//            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+//            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-icon-label-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'icon-label-button' },
+        'gui-icon-label-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-icon-label-button.on',
+        'font-color': 'gui-icon-label-button.fontColor',
+        'font-family': 'gui-icon-label-button.fontFamily',
+        'border-color': 'gui-icon-label-button.borderColor',
+        'background-color': 'gui-icon-label-button.backgroundColor',
+        'hover-color': 'gui-icon-label-button.hoverColor',
+        'active-color': 'gui-icon-label-button.activeColor',
+        'toggle': 'gui-icon-label-button.toggle',
+        'icon': 'gui-icon-label-button.icon',
+        'icon-active': 'gui-icon-label-button.iconActive',
+        'value': 'gui-icon-label-button.text'
+    }
+});
+},{}],202:[function(require,module,exports) {
+AFRAME.registerComponent('gui-toggle', {
+    schema: {
+        on: {default: 'click'},
+        text: {type: 'string', default: 'text'},
+        active: {type: 'boolean', default: true},
+        checked: {type: 'boolean', default: false},
+        borderWidth: {type: 'number', default: 1},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_offwhite},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('material', `shader: flat; depthTest:true;transparent: false; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+
+        var toggleBoxWidth = guiItem.height/1.75;
+        var toggleBoxX = -guiItem.width*0.5 + guiItem.height/2;
+        var toggleBox = document.createElement("a-box");
+        toggleBox.setAttribute('width', `${toggleBoxWidth}`);
+        toggleBox.setAttribute('height', '0.35');
+        toggleBox.setAttribute('depth', '0.01');
+        toggleBox.setAttribute('material', `color:${data.borderColor}; shader: flat;`);
+        toggleBox.setAttribute('position', `${toggleBoxX} 0 0`);
+        el.appendChild(toggleBox);
+
+        var toggleColorAnimation = document.createElement("a-animation");
+        toggleColorAnimation.setAttribute('begin', 'toggleAnimation');
+        toggleColorAnimation.setAttribute('direction', 'alternate');
+        toggleColorAnimation.setAttribute('attribute', 'material.color');
+        toggleColorAnimation.setAttribute('from', `${data.borderColor}`);
+        toggleColorAnimation.setAttribute('to', `${data.activeColor}`);
+        toggleColorAnimation.setAttribute('dur', '500');
+        toggleColorAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        toggleBox.appendChild(toggleColorAnimation);
+
+        var toggleHandleWidth = guiItem.height/6;
+        var toggleHandleXStart = -toggleBoxWidth*0.5 + toggleHandleWidth*0.5 + 0.05;
+        var toggleHandleXEnd = toggleHandleXStart + toggleBoxWidth - toggleHandleWidth - 0.1;
+        var toggleHandle = document.createElement("a-box");
+        toggleHandle.setAttribute('width', `${toggleHandleWidth}`);
+        toggleHandle.setAttribute('height', '0.3');
+        toggleHandle.setAttribute('depth', '0.02');
+        toggleHandle.setAttribute('material', `color:${data.handleColor}`);
+        toggleHandle.setAttribute('position', `${toggleHandleXStart} 0 0.02`);
+        toggleBox.appendChild(toggleHandle);
+
+        var toggleHandleAnimation = document.createElement("a-animation");
+        toggleHandleAnimation.setAttribute('begin', 'toggleAnimation');
+        toggleHandleAnimation.setAttribute('direction', 'alternate');
+        toggleHandleAnimation.setAttribute('attribute', 'position');
+        toggleHandleAnimation.setAttribute('from', `${toggleHandleXStart} 0 0.02`);
+        toggleHandleAnimation.setAttribute('to', `${toggleHandleXEnd} 0 0.02`);
+        toggleHandleAnimation.setAttribute('dur', '500');
+        toggleHandleAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        toggleHandle.appendChild(toggleHandleAnimation);
+
+        var labelWidth = guiItem.width - guiItem.height;
+        var multiplier = 350;
+        var canvasWidth = labelWidth*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+        
+        var labelCanvas = document.createElement("canvas");
+        this.labelCanvas = labelCanvas;
+        labelCanvas.className = "visuallyhidden";
+        labelCanvas.setAttribute('width', canvasWidth);
+        labelCanvas.setAttribute('height', canvasHeight);
+        labelCanvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(labelCanvas);
+
+        var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+        drawLabel(this.ctxLabel, this.labelCanvas, this.data.text, '100px '+ data.fontFamily, this.data.fontColor);
+
+        var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+        var labelEntity = document.createElement("a-entity");
+        labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+        labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        labelEntity.setAttribute('position', `${labelEntityX} 0 0.02`);
+        el.appendChild(labelEntity);
+
+        this.updateToggle(data.active);
+
+        el.addEventListener('mouseenter', function () {
+            toggleHandle.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            toggleHandle.setAttribute('material', 'color', data.handleColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            data.checked = !data.checked;
+            toggleColorAnimation.emit('toggleAnimation');
+            toggleHandleAnimation.emit('toggleAnimation');
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+    },
+    update: function(){
+        var data = this.data;
+        this.updateToggle(data.active)
+    },
+
+
+    updateToggle: function(active){
+
+        if(active){
+
+        }else{
+        }
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-toggle', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'toggle' },
+        'gui-toggle': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-toggle.on',
+        'active': 'gui-toggle.active',
+        'checked': 'gui-toggle.checked',
+        'value': 'gui-toggle.text',
+        'font-color': 'gui-toggle.fontColor',
+        'font-family': 'gui-toggle.fontFamily',
+        'border-width': 'gui-toggle.borderWidth',
+        'border-color': 'gui-toggle.borderColor',
+        'background-color': 'gui-toggle.backgroundColor',
+        'hover-color': 'gui-toggle.hoverColor',
+        'active-color': 'gui-toggle.activeColor',
+        'handle-color': 'gui-toggle.handleColor'
+    }
+});
+
+
+},{}],203:[function(require,module,exports) {
+AFRAME.registerComponent('gui-radio', {
+    schema: {
+        on: {default: 'click'},
+        text: {type: 'string', default: 'text'},
+        active: {type: 'boolean', default: true},
+        checked: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_white},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_grey},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('material', `shader: flat; depthTest:true;transparent: false; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+
+        var radioBoxWidth = 0.50
+        var radioBoxX = -guiItem.width*0.5 + guiItem.height*0.5;
+        var radioBox = document.createElement("a-cylinder");
+        radioBox.setAttribute('radius', '0.17');
+        radioBox.setAttribute('height', '0.01');
+        radioBox.setAttribute('rotation', '90 0 0');
+        radioBox.setAttribute('material', `color:${data.handleColor}; shader: flat;`);
+        radioBox.setAttribute('position', `${radioBoxX} 0 0`);
+        el.appendChild(radioBox);
+
+        var radioborder = document.createElement("a-torus");
+        radioborder.setAttribute('radius', '0.16');
+        radioborder.setAttribute('radius-tubular', '0.01');
+        radioborder.setAttribute('rotation', '90 0 0');
+        radioborder.setAttribute('material', `color:${data.borderColor}; shader: flat;`);
+        radioBox.appendChild(radioborder);
+
+        var radioCenter = document.createElement("a-cylinder");
+        radioCenter.setAttribute('radius', '0.15');
+        radioCenter.setAttribute('height', '0.02');
+        radioCenter.setAttribute('rotation', '0 0 0');
+        radioCenter.setAttribute('material', `color:${data.handleColor}; shader: flat;`);
+        radioBox.appendChild(radioCenter);
+
+        var radioColorAnimation = document.createElement("a-animation");
+        radioColorAnimation.setAttribute('begin', 'radioAnimation');
+        radioColorAnimation.setAttribute('direction', 'alternate');
+        radioColorAnimation.setAttribute('attribute', 'material.color');
+        radioColorAnimation.setAttribute('from', `${data.handleColor}`);
+        radioColorAnimation.setAttribute('to', `${data.activeColor}`);
+        radioColorAnimation.setAttribute('dur', '500');
+        radioColorAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioColorAnimation);
+
+        var radioRotationAnimation = document.createElement("a-animation");
+        radioRotationAnimation.setAttribute('begin', 'radioAnimation');
+        radioRotationAnimation.setAttribute('direction', 'alternate');
+        radioRotationAnimation.setAttribute('attribute', 'rotation');
+        radioRotationAnimation.setAttribute('from', '0 0 0');
+        radioRotationAnimation.setAttribute('to', '-180 0 0');
+        radioRotationAnimation.setAttribute('dur', '500');
+        radioRotationAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioRotationAnimation);
+
+        var radioShiftOutAnimation = document.createElement("a-animation");
+        radioShiftOutAnimation.setAttribute('begin', 'radioAnimation');
+        radioShiftOutAnimation.setAttribute('direction', 'normal');
+        radioShiftOutAnimation.setAttribute('attribute', 'position');
+        radioShiftOutAnimation.setAttribute('from', '0 0 0');
+        radioShiftOutAnimation.setAttribute('to', '0 0.3 0 ');
+        radioShiftOutAnimation.setAttribute('dur', '300');
+        radioShiftOutAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioShiftOutAnimation);
+
+        var radioShiftInAnimation = document.createElement("a-animation");
+        radioShiftInAnimation.setAttribute('begin', 'radioAnimation');
+        radioShiftInAnimation.setAttribute('direction', 'normal');
+        radioShiftInAnimation.setAttribute('attribute', 'position');
+        radioShiftInAnimation.setAttribute('from', '0 0.3 0');
+        radioShiftInAnimation.setAttribute('to', '0 0 0 ');
+        radioShiftInAnimation.setAttribute('delay', '300');
+        radioShiftInAnimation.setAttribute('dur', '200');
+        radioShiftInAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioShiftInAnimation);
+
+//        var labelWidth = guiItem.width - radioBoxWidth;
+        var labelWidth = guiItem.width - guiItem.height;
+        var multiplier = 350;
+        var canvasWidth = labelWidth*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var labelCanvas = document.createElement("canvas");
+        this.labelCanvas = labelCanvas;
+        labelCanvas.className = "visuallyhidden";
+        labelCanvas.setAttribute('width', canvasWidth);
+        labelCanvas.setAttribute('height', canvasHeight);
+        labelCanvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(labelCanvas);
+
+        var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+        drawLabel(this.ctxLabel, this.labelCanvas, this.data.text, '100px '+ data.fontFamily, this.data.fontColor);
+
+        var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+        var labelEntity = document.createElement("a-entity");
+        labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+        labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        labelEntity.setAttribute('position', `${labelEntityX} 0 0.02`);
+        el.appendChild(labelEntity);
+
+
+        this.updateToggle(data.active);
+
+        el.addEventListener('mouseenter', function () {
+            radioborder.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            radioborder.setAttribute('material', 'color', data.borderColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            data.checked = !data.checked;
+            radioColorAnimation.emit('radioAnimation');
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+    },
+    update: function(){
+        var data = this.data;
+        this.updateToggle(data.active)
+    },
+
+
+    updateToggle: function(active){
+
+        if(active){
+
+        }else{
+        }
+
+    },
+
+
+});
+
+AFRAME.registerPrimitive( 'a-gui-radio', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'radio' },
+        'gui-radio': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-radio.on',
+        'value': 'gui-radio.text',
+        'active': 'gui-radio.active',
+        'checked': 'gui-radio.checked',
+        'font-color': 'gui-radio.fontColor',
+        'font-family': 'gui-radio.fontFamily',
+        'border-color': 'gui-radio.borderColor',
+        'background-color': 'gui-radio.backgroundColor',
+        'hover-color': 'gui-radio.hoverColor',
+        'active-color': 'gui-radio.activeColor',
+        'handle-color': 'gui-radio.handleColor'
+    }
+});
+},{}],204:[function(require,module,exports) {
+AFRAME.registerComponent('gui-circle-loader', {
+    schema: {
+        count: {type: 'number', default: '100'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.className = 'visuallyhidden';
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 1; side:back; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.count+'%', '110px ' + data.fontFamily, data.fontColor, 1);
+
+        var loaderContainer = document.createElement("a-entity");
+        loaderContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        loaderContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        loaderContainer.setAttribute('rotation', '90 0 0');
+        loaderContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(loaderContainer);
+
+        var loaderRing = document.createElement("a-ring");
+        loaderRing.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor}`);
+        loaderRing.setAttribute('radius-inner', `${guiItem.height/3}`);
+        loaderRing.setAttribute('radius-outer', `${guiItem.height/2}`);
+        loaderRing.setAttribute('theta-start', '90');
+        loaderRing.setAttribute('theta-length', '10'); // this has to count 0 to 360 when loading
+        loaderRing.setAttribute('rotation', '0 0 0');
+        loaderRing.setAttribute('position', '0 0 0.04');
+        loaderRing.id = "loader_ring";
+        el.appendChild(loaderRing);
+
+        var countLoaded = document.createElement("a-entity");
+        countLoaded.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/1.75}; height: ${guiItem.height/1.75};`);
+        countLoaded.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        countLoaded.setAttribute('position', '0 0 0.022');
+        countLoaded.id = "loader_ring_count";
+        el.appendChild(countLoaded);
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-circle-loader', {
+    defaultComponents: {
+        'gui-item': { type: 'circle-loader' },
+        'gui-circle-loader': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'count': 'gui-circle-loader.count',
+        'font-family': 'gui-circle-loader.fontFamily',
+        'font-color': 'gui-circle-loader.fontColor',
+        'background-color': 'gui-circle-loader.backgroundColor',
+        'active-color': 'gui-circle-loader.activeColor'
+    }
+});
+},{}],205:[function(require,module,exports) {
+AFRAME.registerComponent('gui-progressbar', {
+    schema: {
+        backgroundColor: {type: 'string', default: key_grey},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function () {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; opacity: 1;  color: ${data.backgroundColor}; side:front;`);
+
+
+        var progressMeter = document.createElement("a-entity");
+        progressMeter.setAttribute('geometry', `primitive: box; width: 0.04; height: ${guiItem.height}; depth: 0.02;`);
+        progressMeter.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor}`);
+        progressMeter.setAttribute('position', -guiItem.width/2 +' 0 0.01');
+        progressMeter.id = "progress_meter";
+        el.appendChild(progressMeter);
+
+        // <a-entity id="progress_meter"
+        //           geometry="primitive: box; width: 0.04; height: 0.3; depth: 0.004;"
+        //           material="shader: flat; opacity: 1; color: blue;"
+        //             position="-1.23  0 0.0">
+        // </a-entity>
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-progressbar', {
+    defaultComponents: {
+        'gui-item': { type: 'progressbar' },
+        'gui-progressbar': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'background-color': 'gui-progressbar.backgroundColor',
+        'active-color': 'gui-progressbar.activeColor'
+    }
+});
+
+},{}],206:[function(require,module,exports) {
+AFRAME.registerComponent('gui-circle-timer', {
+    schema: {
+        countDown: {type: 'number', default: '10'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey},
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.className = 'visuallyhidden';
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 1; side:back; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.countDown, '200px ' + data.fontFamily, data.fontColor, 1);
+
+        var timerContainer = document.createElement("a-entity");
+        timerContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        timerContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        timerContainer.setAttribute('rotation', '90 0 0');
+        timerContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(timerContainer);
+
+        var timerIndicator1 = document.createElement("a-ring");
+        timerIndicator1.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator1.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator1.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator1.setAttribute('theta-start', '-1');
+        timerIndicator1.setAttribute('theta-length', '3');
+        timerIndicator1.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator1);
+        var timerIndicator2 = document.createElement("a-ring");
+        timerIndicator2.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator2.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator2.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator2.setAttribute('theta-start', '89');
+        timerIndicator2.setAttribute('theta-length', '3');
+        timerIndicator2.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator2);
+        var timerIndicator3 = document.createElement("a-ring");
+        timerIndicator3.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator3.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator3.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator3.setAttribute('theta-start', '179');
+        timerIndicator3.setAttribute('theta-length', '3');
+        timerIndicator3.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator3);
+        var timerIndicator4 = document.createElement("a-ring");
+        timerIndicator4.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator4.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator4.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator4.setAttribute('theta-start', '269');
+        timerIndicator4.setAttribute('theta-length', '3');
+        timerIndicator4.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator4);
+
+
+
+
+        var timerRing = document.createElement("a-ring");
+        timerRing.setAttribute('material', `shader: flat; opacity: 0.75; side:double; color: ${data.activeColor}`);
+        timerRing.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerRing.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerRing.setAttribute('theta-start', '0');
+        timerRing.setAttribute('theta-length', '10'); // this has to increase 0 to 360 when running the countdown
+        timerRing.setAttribute('rotation', '0 0 0');
+        timerRing.setAttribute('position', '0 0 0.03');
+        timerRing.id = "loader_ring";
+        el.appendChild(timerRing);
+
+        var countDownLabel = document.createElement("a-entity");
+        countDownLabel.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/1.75}; height: ${guiItem.height/1.75};`);
+        countDownLabel.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        countDownLabel.setAttribute('position', '0 0 0.022');
+        countDownLabel.id = "loader_ring_count";
+        el.appendChild(countDownLabel);
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-circle-timer', {
+    defaultComponents: {
+        'gui-item': { type: 'circle-timer' },
+        'gui-circle-timer': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'count-down': 'gui-circle-timer.countDown',
+        'font-family': 'gui-circle-timer.fontFamily',
+        'font-color': 'gui-circle-timer.fontColor',
+        'border-color': 'gui-circle-timer.borderColor',
+        'background-color': 'gui-circle-timer.backgroundColor',
+        'active-color': 'gui-circle-timer.activeColor'
+    }
+});
+},{}],207:[function(require,module,exports) {
+AFRAME.registerComponent('gui-slider', {
+    schema: {
+        percent: {type: 'number', default: '0.5'},
+        handleOuterRadius: {type: 'number', default: '0.17'},
+        handleInnerRadius: {type: 'number', default: '0.13'},
+        handleOuterDepth: {type: 'number', default: '0.04'},
+        handleInnerDepth: {type: 'number', default: '0.02'},
+        sliderBarHeight: {type: 'number', default: '0.05'},
+        sliderBarDepth: {type: 'number', default: '0.03'},
+        leftRightPadding: {type: 'number', default: '0.25'},
+        topBottomPadding: {type: 'number', default: '0.125'},
+
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},        
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_white},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var sliderWidth = guiItem.width - data.leftRightPadding*2.0
+        var sliderHeight = guiItem.height - data.topBottomPadding*2.0
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; opacity: 1;  color: ${data.backgroundColor}; side:front;`);
+
+        var sliderActiveBar = document.createElement("a-entity");
+        sliderActiveBar.setAttribute('geometry', `primitive: box; width: ${data.percent*sliderWidth}; height: ${data.sliderBarHeight}; depth: ${data.sliderBarDepth};`);
+        sliderActiveBar.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor};`);
+        sliderActiveBar.setAttribute('position', `${data.percent - sliderWidth*0.5} 0 ${data.sliderBarDepth - 0.01}`);
+        el.appendChild(sliderActiveBar);
+
+        var sliderBar = document.createElement("a-entity");
+        sliderBar.setAttribute('geometry', `primitive: box; width: ${sliderWidth - data.percent * sliderWidth}; height: ${data.sliderBarHeight}; depth: ${data.sliderBarDepth};`);
+        sliderBar.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor};`);
+        sliderBar.setAttribute('position', `${data.percent * sliderWidth * 0.5} 0 ${data.sliderBarDepth - 0.01}`);
+        el.appendChild(sliderBar);
+
+        var handleContainer = document.createElement("a-entity");
+        handleContainer.setAttribute('geometry', `primitive: cylinder; radius: ${data.handleOuterRadius}; height: ${data.handleOuterDepth};`);
+        handleContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor};`);
+        handleContainer.setAttribute('rotation', '90 0 0');
+        handleContainer.setAttribute('position', `${data.percent*sliderWidth - sliderWidth*0.5} 0 ${data.handleOuterDepth - 0.01}`);
+        el.appendChild(handleContainer);
+
+        var handle = document.createElement("a-entity");
+        handle.setAttribute('geometry', `primitive: cylinder; radius: ${data.handleInnerRadius}; height: ${data.handleInnerDepth};`);
+        handle.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.handleColor};`);
+        handle.setAttribute('position', `0 ${data.handleInnerDepth} 0`);
+        handleContainer.appendChild(handle);
+
+
+
+        el.addEventListener('mouseenter', function () {
+            handle.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            handle.setAttribute('material', 'color', data.handleColor);
+        });
+
+        el.addEventListener('click', function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var localCoordinates = el.object3D.worldToLocal(evt.detail.intersection.point);
+            console.log('local coordinates: ', localCoordinates);
+            console.log('current percent: '+data.percent);
+            var sliderBarWidth = 2; // total width of slider bar
+            if (localCoordinates.x <= (-sliderBarWidth / 2)) {
+                data.percent = 0;
+            } else if (localCoordinates.x >= (sliderBarWidth / 2)) {
+                data.percent = 1.0;
+            } else {
+                data.percent = (localCoordinates.x + (sliderBarWidth /2)) / sliderBarWidth;
+            }
+            console.log("handle container: "+handleContainer);
+            sliderActiveBar.setAttribute('geometry', `primitive: box; width: ${data.percent*2}; height: 0.05; depth: 0.03;`);
+            sliderActiveBar.setAttribute('position', `${data.percent-1} 0 0.02`);
+            sliderBar.setAttribute('geometry', `primitive: box; width: ${2-data.percent*2}; height: 0.05; depth: 0.03;`);
+            sliderBar.setAttribute('position', `${data.percent*1} 0 0.02`);
+            handleContainer.setAttribute('position', `${data.percent*2-1} 0 0.03`);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-slider', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'slider' },
+        'gui-slider': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'percent': 'gui-slider.percent',
+        'handle-outer-radius': 'gui-slider.handleOuterRadius',
+        'handle-inner-radius': 'gui-slider.handleInnerRadius',
+        'handle-outer-depth': 'gui-slider.handleOuterDepth',
+        'handle-inner-depth': 'gui-slider.handleInnerDepth',
+        'slider-bar-height': 'gui-slider.sliderBarHeight',
+        'slider-bar-depth': 'gui-slider.sliderBarDepth',
+        'left-right-padding': 'gui-slider.leftRightPadding',
+        'top-bottom-padding': 'gui-slider.topBottomPadding',
+        'border-color': 'gui-slider.borderColor',
+        'background-color': 'gui-slider.backgroundColor',
+        'hover-color': 'gui-slider.hoverColor',
+        'active-color': 'gui-slider.activeColor',
+        'handle-color': 'gui-slider.handleColor'
+    }
+});
+},{}],208:[function(require,module,exports) {
+AFRAME.registerComponent('gui-input', {
+    schema: {
+        on: {default: 'click'},
+        inputText: {type: 'string', default: 'Placeholder'},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_grey_dark},
+        borderHoverColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_white},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; transparent: false; side:front; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.inputText, '100px ' + data.fontFamily, data.fontColor, 1);
+
+
+        var inputEntity = document.createElement("a-entity");
+        inputEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        inputEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        inputEntity.setAttribute('position', '0 0 0.01');
+        el.appendChild(inputEntity);
+
+        var borderTopEntity = document.createElement("a-entity");
+        borderTopEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width)}; height: 0.05; depth: 0.02;`);
+        borderTopEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderTopEntity.setAttribute('position', `0 -${(guiItem.height/2)-0.025} 0.01`);
+        el.appendChild(borderTopEntity);
+        var borderBottomEntity = document.createElement("a-entity");
+        borderBottomEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width)}; height: 0.05; depth: 0.02;`);
+        borderBottomEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderBottomEntity.setAttribute('position', `0 ${(guiItem.height/2)-0.025} 0.01`);
+        el.appendChild(borderBottomEntity);
+        var borderLeftEntity = document.createElement("a-entity");
+        borderLeftEntity.setAttribute('geometry', `primitive: box; width: 0.05; height: ${(guiItem.height)}; depth: 0.02;`);
+        borderLeftEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderLeftEntity.setAttribute('position', `-${(guiItem.width/2)-0.025} 0 0.01`);
+        el.appendChild(borderLeftEntity);
+        var borderRightEntity = document.createElement("a-entity");
+        borderRightEntity.setAttribute('geometry', `primitive: box; width: 0.05; height: ${(guiItem.height)}; depth: 0.02;`);
+        borderRightEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderRightEntity.setAttribute('position', `${(guiItem.width/2)-0.025} 0 0.01`);
+        el.appendChild(borderRightEntity);
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'input');
+
+        el.addEventListener('mouseenter', function () {
+            el.setAttribute('material', 'color', data.hoverColor);
+            borderTopEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderBottomEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderLeftEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderRightEntity.setAttribute('material', 'color', data.borderHoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            el.setAttribute('material', 'color', data.backgroundColor);
+            borderTopEntity.setAttribute('material', 'color', data.borderColor);
+            borderBottomEntity.setAttribute('material', 'color', data.borderColor);
+            borderLeftEntity.setAttribute('material', 'color', data.borderColor);
+            borderRightEntity.setAttribute('material', 'color', data.borderColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-input', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'input' },
+        'gui-input': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-input.on',
+        'value': 'gui-input.inputText',
+        'toggle': 'gui-input.toggle',
+        'font-color': 'gui-input.fontColor',
+        'font-family': 'gui-input.fontFamily',
+        'border-color': 'gui-input.borderColor',
+        'border-hover-color': 'gui-input.borderHoverColor',
+        'background-color': 'gui-input.backgroundColor',
+        'hover-color': 'gui-input.hoverColor',
+        'active-color': 'gui-input.activeColor',
+    }
+});
+},{}],209:[function(require,module,exports) {
+AFRAME.registerComponent('gui-cursor', {
+    schema: {
+        color: {type: 'string', default: key_white},
+        hoverColor: {type: 'string', default: key_white},
+        activeColor: {type: 'string', default: key_orange},
+        distance: {type: 'number', default: -1},
+        design: {type: 'string', default: 'dot'},
+    },
+    init: function () {
+        var cursor = this.cursor = this.el.getAttribute('cursor');
+        var fuse = this.fuse = cursor.fuse; // true if cursor fuse is enabled.
+        var fuseTimeout = cursor.fuseTimeout; // animation lenght should be based on this value
+
+        var el = this.el;
+        var data = this.data;
+        var defaultHoverAnimationDuration = 200;
+        var fuseAnimationDuration = fuseTimeout - defaultHoverAnimationDuration;
+
+        console.log("fuse: "+fuse+", fuseTimeout: "+fuseTimeout);
+
+        if(data.design == 'dot'){    
+
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.025');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.000001');
+            hoverAniInner.setAttribute('to', '0.0225');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var hoverAniOuter = document.createElement("a-animation");
+            hoverAniOuter.setAttribute('begin', 'hovergui');
+            hoverAniOuter.setAttribute('easing', 'linear');
+            hoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            hoverAniOuter.setAttribute('fill', 'forwards');
+            hoverAniOuter.setAttribute('from', '0.025');
+            hoverAniOuter.setAttribute('to', '0.0275');
+            hoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOuter);
+
+            var hoverAniColor = document.createElement("a-animation");
+            hoverAniColor.setAttribute('begin', 'hovergui');
+            hoverAniColor.setAttribute('easing', 'linear');
+            hoverAniColor.setAttribute('attribute', 'material.color');
+            hoverAniColor.setAttribute('fill', 'forwards');
+            hoverAniColor.setAttribute('from', `${data.color}`);
+            hoverAniColor.setAttribute('to',  `${data.hoverColor}`);
+            hoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniColor);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.0225');
+            leaveAniInner.setAttribute('to', '0.000001');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var leaveAniOuter = document.createElement("a-animation");
+            leaveAniOuter.setAttribute('begin', 'leavegui');
+            leaveAniOuter.setAttribute('easing', 'linear');
+            leaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            leaveAniOuter.setAttribute('fill', 'forwards');
+            leaveAniOuter.setAttribute('from', '0.0275');
+            leaveAniOuter.setAttribute('to', '0.025');
+            leaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOuter);
+
+            var leaveAniColor = document.createElement("a-animation");
+            leaveAniColor.setAttribute('begin', 'leavegui');
+            leaveAniColor.setAttribute('easing', 'linear');
+            leaveAniColor.setAttribute('attribute', 'material.color');
+            leaveAniColor.setAttribute('fill', 'forwards');
+            leaveAniColor.setAttribute('from', `${data.hoverColor}`);
+            leaveAniColor.setAttribute('to', `${data.color}`);
+            leaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniColor);
+
+            var clickAnimation = document.createElement("a-animation");
+            clickAnimation.setAttribute('begin', 'click');
+            clickAnimation.setAttribute('easing', 'ease-in');
+            clickAnimation.setAttribute('attribute', 'scale');
+            clickAnimation.setAttribute('fill', 'forwards');
+            clickAnimation.setAttribute('from', '1 1 1');
+            clickAnimation.setAttribute('to', '1.25 1.25 1.25');
+            clickAnimation.setAttribute('dur', '200');
+            el.appendChild(clickAnimation);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0275; radiusOuter:0.03; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var shadowHoverAniInner = document.createElement("a-animation");
+            shadowHoverAniInner.setAttribute('begin', 'hovergui');
+            shadowHoverAniInner.setAttribute('easing', 'linear');
+            shadowHoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowHoverAniInner.setAttribute('fill', 'forwards');
+            shadowHoverAniInner.setAttribute('from', '0.0275');
+            shadowHoverAniInner.setAttribute('to', '0.03');
+            shadowHoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniInner);
+
+            var shadowHoverAniOuter = document.createElement("a-animation");
+            shadowHoverAniOuter.setAttribute('begin', 'hovergui');
+            shadowHoverAniOuter.setAttribute('easing', 'linear');
+            shadowHoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowHoverAniOuter.setAttribute('fill', 'forwards');
+            shadowHoverAniOuter.setAttribute('from', '0.03');
+            shadowHoverAniOuter.setAttribute('to', '0.0325');
+            shadowHoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniOuter);
+
+            var shadowLeaveAniInner = document.createElement("a-animation");
+            shadowLeaveAniInner.setAttribute('begin', 'leavegui');
+            shadowLeaveAniInner.setAttribute('easing', 'linear');
+            shadowLeaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowLeaveAniInner.setAttribute('fill', 'forwards');
+            shadowLeaveAniInner.setAttribute('from', '0.03');
+            shadowLeaveAniInner.setAttribute('to', '0.0275');
+            shadowLeaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniInner);
+
+            var shadowLeaveAniOuter = document.createElement("a-animation");
+            shadowLeaveAniOuter.setAttribute('begin', 'leavegui');
+            shadowLeaveAniOuter.setAttribute('easing', 'linear');
+            shadowLeaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowLeaveAniOuter.setAttribute('fill', 'forwards');
+            shadowLeaveAniOuter.setAttribute('from', '0.0325');
+            shadowLeaveAniOuter.setAttribute('to', '0.03');
+            shadowLeaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniOuter);
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.03; radiusOuter:0.0375; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end dot design
+
+        }else if(data.design == 'ring'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.0225; radiusOuter:0.0275');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.0225');
+            hoverAniInner.setAttribute('to', '0.025');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var hoverAniOuter = document.createElement("a-animation");
+            hoverAniOuter.setAttribute('begin', 'hovergui');
+            hoverAniOuter.setAttribute('easing', 'linear');
+            hoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            hoverAniOuter.setAttribute('fill', 'forwards');
+            hoverAniOuter.setAttribute('from', '0.025');
+            hoverAniOuter.setAttribute('to', '0.0325');
+            hoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOuter);
+
+            var hoverAniColor = document.createElement("a-animation");
+            hoverAniColor.setAttribute('begin', 'hovergui');
+            hoverAniColor.setAttribute('easing', 'linear');
+            hoverAniColor.setAttribute('attribute', 'material.color');
+            hoverAniColor.setAttribute('fill', 'forwards');
+            hoverAniColor.setAttribute('from', `${data.color}`);
+            hoverAniColor.setAttribute('to',  `${data.hoverColor}`);
+            hoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniColor);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.025');
+            leaveAniInner.setAttribute('to', '0.0225');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var leaveAniOuter = document.createElement("a-animation");
+            leaveAniOuter.setAttribute('begin', 'leavegui');
+            leaveAniOuter.setAttribute('easing', 'linear');
+            leaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            leaveAniOuter.setAttribute('fill', 'forwards');
+            leaveAniOuter.setAttribute('from', '0.0325');
+            leaveAniOuter.setAttribute('to', '0.0275');
+            leaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOuter);
+
+            var leaveAniColor = document.createElement("a-animation");
+            leaveAniColor.setAttribute('begin', 'leavegui');
+            leaveAniColor.setAttribute('easing', 'linear');
+            leaveAniColor.setAttribute('attribute', 'material.color');
+            leaveAniColor.setAttribute('fill', 'forwards');
+            leaveAniColor.setAttribute('from', `${data.hoverColor}`);
+            leaveAniColor.setAttribute('to', `${data.color}`);
+            leaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniColor);
+
+            var clickAnimation = document.createElement("a-animation");
+            clickAnimation.setAttribute('begin', 'click');
+            clickAnimation.setAttribute('easing', 'ease-in');
+            clickAnimation.setAttribute('attribute', 'scale');
+            clickAnimation.setAttribute('fill', 'forwards');
+            clickAnimation.setAttribute('from', '1 1 1');
+            clickAnimation.setAttribute('to', '1.25 1.25 1.25');
+            clickAnimation.setAttribute('dur', '200');
+            el.appendChild(clickAnimation);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.03; radiusOuter:0.0325; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var shadowHoverAniInner = document.createElement("a-animation");
+            shadowHoverAniInner.setAttribute('begin', 'hovergui');
+            shadowHoverAniInner.setAttribute('easing', 'linear');
+            shadowHoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowHoverAniInner.setAttribute('fill', 'forwards');
+            shadowHoverAniInner.setAttribute('from', '0.03');
+            shadowHoverAniInner.setAttribute('to', '0.0325');
+            shadowHoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniInner);
+
+            var shadowHoverAniOuter = document.createElement("a-animation");
+            shadowHoverAniOuter.setAttribute('begin', 'hovergui');
+            shadowHoverAniOuter.setAttribute('easing', 'linear');
+            shadowHoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowHoverAniOuter.setAttribute('fill', 'forwards');
+            shadowHoverAniOuter.setAttribute('from', '0.0325');
+            shadowHoverAniOuter.setAttribute('to', '0.0375');
+            shadowHoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniOuter);
+
+            var shadowLeaveAniInner = document.createElement("a-animation");
+            shadowLeaveAniInner.setAttribute('begin', 'leavegui');
+            shadowLeaveAniInner.setAttribute('easing', 'linear');
+            shadowLeaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowLeaveAniInner.setAttribute('fill', 'forwards');
+            shadowLeaveAniInner.setAttribute('from', '0.0325');
+            shadowLeaveAniInner.setAttribute('to', '0.03');
+            shadowLeaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniInner);
+
+            var shadowLeaveAniOuter = document.createElement("a-animation");
+            shadowLeaveAniOuter.setAttribute('begin', 'leavegui');
+            shadowLeaveAniOuter.setAttribute('easing', 'linear');
+            shadowLeaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowLeaveAniOuter.setAttribute('fill', 'forwards');
+            shadowLeaveAniOuter.setAttribute('from', '0.0375');
+            shadowLeaveAniOuter.setAttribute('to', '0.0325');
+            shadowLeaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniOuter);
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.035; radiusOuter:0.0425; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end ring design
+
+        }else if(data.design == 'reticle'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.0125; thetaLength:180;');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniOpacity = document.createElement("a-animation");
+            hoverAniOpacity.setAttribute('begin', 'hovergui');
+            hoverAniOpacity.setAttribute('easing', 'linear');
+            hoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            hoverAniOpacity.setAttribute('fill', 'forwards');
+            hoverAniOpacity.setAttribute('from', '1');
+            hoverAniOpacity.setAttribute('to', '0');
+            hoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOpacity);
+
+            var leaveAniOpacity = document.createElement("a-animation");
+            leaveAniOpacity.setAttribute('begin', 'leavegui');
+            leaveAniOpacity.setAttribute('easing', 'linear');
+            leaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            leaveAniOpacity.setAttribute('fill', 'forwards');
+            leaveAniOpacity.setAttribute('from', '0');
+            leaveAniOpacity.setAttribute('to', '1');
+            leaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOpacity);
+
+
+            var cursorCenter = document.createElement("a-entity");
+            cursorCenter.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.0125; thetaLength:180; thetaStart:180;');
+            cursorCenter.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorCenter.setAttribute('position', '0 0 0');
+            el.appendChild(cursorCenter);
+            this.cursorCenter = cursorCenter;
+
+            var centerHoverAniOpacity = document.createElement("a-animation");
+            centerHoverAniOpacity.setAttribute('begin', 'hovergui');
+            centerHoverAniOpacity.setAttribute('easing', 'linear');
+            centerHoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            centerHoverAniOpacity.setAttribute('fill', 'forwards');
+            centerHoverAniOpacity.setAttribute('from', '0.25');
+            centerHoverAniOpacity.setAttribute('to', '0');
+            centerHoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorCenter.appendChild(centerHoverAniOpacity);
+
+            var centerLeaveAniOpacity = document.createElement("a-animation");
+            centerLeaveAniOpacity.setAttribute('begin', 'leavegui');
+            centerLeaveAniOpacity.setAttribute('easing', 'linear');
+            centerLeaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            centerLeaveAniOpacity.setAttribute('fill', 'forwards');
+            centerLeaveAniOpacity.setAttribute('from', '0');
+            centerLeaveAniOpacity.setAttribute('to', '0.25');
+            centerLeaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorCenter.appendChild(centerLeaveAniOpacity);
+
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0125; radiusOuter:0.0145');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var cursorHoverAniColor = document.createElement("a-animation");
+            cursorHoverAniColor.setAttribute('begin', 'hovergui');
+            cursorHoverAniColor.setAttribute('easing', 'linear');
+            cursorHoverAniColor.setAttribute('attribute', 'material.color');
+            cursorHoverAniColor.setAttribute('fill', 'forwards');
+            cursorHoverAniColor.setAttribute('from', '#000000');
+            cursorHoverAniColor.setAttribute('to', `${data.color}`);
+            cursorHoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorHoverAniColor);
+
+            var cursorHoverAniOpacity = document.createElement("a-animation");
+            cursorHoverAniOpacity.setAttribute('begin', 'hovergui');
+            cursorHoverAniOpacity.setAttribute('easing', 'linear');
+            cursorHoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            cursorHoverAniOpacity.setAttribute('fill', 'forwards');
+            cursorHoverAniOpacity.setAttribute('from', '0.25');
+            cursorHoverAniOpacity.setAttribute('to', '1');
+            cursorHoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorHoverAniOpacity);
+
+            var cursorLeaveAniColor = document.createElement("a-animation");
+            cursorLeaveAniColor.setAttribute('begin', 'leavegui');
+            cursorLeaveAniColor.setAttribute('easing', 'linear');
+            cursorLeaveAniColor.setAttribute('attribute', 'material.color');
+            cursorLeaveAniColor.setAttribute('fill', 'forwards');
+            cursorLeaveAniColor.setAttribute('from', `${data.color}`);
+            cursorLeaveAniColor.setAttribute('to', '#000000');
+            cursorLeaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorLeaveAniColor);
+
+            var cursorLeaveAniOpacity = document.createElement("a-animation");
+            cursorLeaveAniOpacity.setAttribute('begin', 'leavegui');
+            cursorLeaveAniOpacity.setAttribute('easing', 'linear');
+            cursorLeaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            cursorLeaveAniOpacity.setAttribute('fill', 'forwards');
+            cursorLeaveAniOpacity.setAttribute('from', '1');
+            cursorLeaveAniOpacity.setAttribute('to', '0.25');
+            cursorLeaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorLeaveAniOpacity);
+
+
+            var cursorShadowTL = document.createElement("a-entity");
+            cursorShadowTL.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowTL.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowTL.setAttribute('position', '-0.0325 0.0325 0');
+            el.appendChild(cursorShadowTL);
+            this.cursorShadowTL = cursorShadowTL;
+            var cursorShadowBL = document.createElement("a-entity");
+            cursorShadowBL.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowBL.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowBL.setAttribute('position', '-0.0325 -0.0325 0');
+            el.appendChild(cursorShadowBL);
+            this.cursorShadowBL = cursorShadowBL;
+            var cursorShadowTR = document.createElement("a-entity");
+            cursorShadowTR.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowTR.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowTR.setAttribute('position', '0.0325 0.0325 0');
+            el.appendChild(cursorShadowTR);
+            this.cursorShadowTR = cursorShadowTR;
+            var cursorShadowBR = document.createElement("a-entity");
+            cursorShadowBR.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowBR.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowBR.setAttribute('position', '0.0325 -0.0325 0');
+            el.appendChild(cursorShadowBR);
+            this.cursorShadowBR = cursorShadowBR;
+
+
+            var cursorBoundTL = document.createElement("a-entity");
+            cursorBoundTL.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundTL.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTL.setAttribute('position', '-0.03 0.0375 0');
+            el.appendChild(cursorBoundTL);
+            this.cursorBoundTL = cursorBoundTL;
+            var cursorBoundTL2 = document.createElement("a-entity");
+            cursorBoundTL2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundTL2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTL2.setAttribute('position', '-0.0375 0.03 0');
+            el.appendChild(cursorBoundTL2);
+            this.cursorBoundTL2 = cursorBoundTL2;
+
+            var cursorBoundTR = document.createElement("a-entity");
+            cursorBoundTR.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundTR.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTR.setAttribute('position', '0.03 0.0375 0');
+            el.appendChild(cursorBoundTR);
+            this.cursorBoundTR = cursorBoundTR;
+            var cursorBoundTR2 = document.createElement("a-entity");
+            cursorBoundTR2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundTR2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTR2.setAttribute('position', '0.0375 0.03 0');
+            el.appendChild(cursorBoundTR2);
+            this.cursorBoundTR2 = cursorBoundTR2;
+
+            var cursorBoundBL = document.createElement("a-entity");
+            cursorBoundBL.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundBL.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBL.setAttribute('position', '-0.03 -0.0375 0');
+            el.appendChild(cursorBoundBL);
+            this.cursorBoundBL = cursorBoundBL;
+            var cursorBoundBL2 = document.createElement("a-entity");
+            cursorBoundBL2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundBL2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBL2.setAttribute('position', '-0.0375 -0.03 0');
+            el.appendChild(cursorBoundBL2);
+            this.cursorBoundBL2 = cursorBoundBL2;
+
+            var cursorBoundBR = document.createElement("a-entity");
+            cursorBoundBR.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundBR.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBR.setAttribute('position', '0.03 -0.0375 0');
+            el.appendChild(cursorBoundBR);
+            this.cursorBoundBR = cursorBoundBR;
+            var cursorBoundBR2 = document.createElement("a-entity");
+            cursorBoundBR2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundBR2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBR2.setAttribute('position', '0.0375 -0.03 0');
+            el.appendChild(cursorBoundBR2);
+            this.cursorBoundBR2 = cursorBoundBR2;
+
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: plane; width:0.000001; height:0.01;');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', '0 -0.05 0');
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.width');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '0.075');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end reticle design
+
+        }else if(data.design == 'cross'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.035; radiusOuter:0.0375');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.035');
+            hoverAniInner.setAttribute('to', '0.0315');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.0315');
+            leaveAniInner.setAttribute('to', '0.035');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0375; radiusOuter:0.04; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var cursorVerticalTop = document.createElement("a-entity");
+            cursorVerticalTop.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.01875');
+            cursorVerticalTop.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorVerticalTop.setAttribute('position', '0 0.028125 0');
+            el.appendChild(cursorVerticalTop);
+            this.cursorVerticalTop = cursorVerticalTop;
+
+            var hoverAniInner1 = document.createElement("a-animation");
+            hoverAniInner1.setAttribute('begin', 'hovergui');
+            hoverAniInner1.setAttribute('easing', 'linear');
+            hoverAniInner1.setAttribute('attribute', 'geometry.width');
+            hoverAniInner1.setAttribute('fill', 'forwards');
+            hoverAniInner1.setAttribute('from', '0.0035');
+            hoverAniInner1.setAttribute('to', '0.007');
+            hoverAniInner1.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalTop.appendChild(hoverAniInner1);
+
+            var leaveAniInner1 = document.createElement("a-animation");
+            leaveAniInner1.setAttribute('begin', 'leavegui');
+            leaveAniInner1.setAttribute('easing', 'linear');
+            leaveAniInner1.setAttribute('attribute', 'geometry.width');
+            leaveAniInner1.setAttribute('fill', 'forwards');
+            leaveAniInner1.setAttribute('from', '0.007');
+            leaveAniInner1.setAttribute('to', '0.0035');
+            leaveAniInner1.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalTop.appendChild(leaveAniInner1);
+
+
+            var cursorVerticalBottom = document.createElement("a-entity");
+            cursorVerticalBottom.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.01875');
+            cursorVerticalBottom.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorVerticalBottom.setAttribute('position', '0 -0.028125 0');
+            el.appendChild(cursorVerticalBottom);
+            this.cursorVerticalBottom = cursorVerticalBottom;
+
+            var hoverAniInner2 = document.createElement("a-animation");
+            hoverAniInner2.setAttribute('begin', 'hovergui');
+            hoverAniInner2.setAttribute('easing', 'linear');
+            hoverAniInner2.setAttribute('attribute', 'geometry.width');
+            hoverAniInner2.setAttribute('fill', 'forwards');
+            hoverAniInner2.setAttribute('from', '0.0035');
+            hoverAniInner2.setAttribute('to', '0.007');
+            hoverAniInner2.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalBottom.appendChild(hoverAniInner2);
+
+            var leaveAniInner2 = document.createElement("a-animation");
+            leaveAniInner2.setAttribute('begin', 'leavegui');
+            leaveAniInner2.setAttribute('easing', 'linear');
+            leaveAniInner2.setAttribute('attribute', 'geometry.width');
+            leaveAniInner2.setAttribute('fill', 'forwards');
+            leaveAniInner2.setAttribute('from', '0.007');
+            leaveAniInner2.setAttribute('to', '0.0035');
+            leaveAniInner2.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalBottom.appendChild(leaveAniInner2);
+
+
+            var cursorHorizontalLeft = document.createElement("a-entity");
+            cursorHorizontalLeft.setAttribute('geometry', 'primitive: plane; width:0.01875; height:0.0035');
+            cursorHorizontalLeft.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorHorizontalLeft.setAttribute('position', '-0.028125 0 0');
+            el.appendChild(cursorHorizontalLeft);
+            this.cursorHorizontalLeft = cursorHorizontalLeft;
+
+            var hoverAniInner3 = document.createElement("a-animation");
+            hoverAniInner3.setAttribute('begin', 'hovergui');
+            hoverAniInner3.setAttribute('easing', 'linear');
+            hoverAniInner3.setAttribute('attribute', 'geometry.height');
+            hoverAniInner3.setAttribute('fill', 'forwards');
+            hoverAniInner3.setAttribute('from', '0.0035');
+            hoverAniInner3.setAttribute('to', '0.007');
+            hoverAniInner3.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalLeft.appendChild(hoverAniInner3);
+
+            var leaveAniInner3 = document.createElement("a-animation");
+            leaveAniInner3.setAttribute('begin', 'leavegui');
+            leaveAniInner3.setAttribute('easing', 'linear');
+            leaveAniInner3.setAttribute('attribute', 'geometry.height');
+            leaveAniInner3.setAttribute('fill', 'forwards');
+            leaveAniInner3.setAttribute('from', '0.007');
+            leaveAniInner3.setAttribute('to', '0.0035');
+            leaveAniInner3.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalLeft.appendChild(leaveAniInner3);
+
+
+            var cursorHorizontalRight = document.createElement("a-entity");
+            cursorHorizontalRight.setAttribute('geometry', 'primitive: plane; width:0.01875; height:0.0035');
+            cursorHorizontalRight.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorHorizontalRight.setAttribute('position', '0.028125 0 0');
+            el.appendChild(cursorHorizontalRight);
+            this.cursorHorizontalRight = cursorHorizontalRight;
+
+            var hoverAniInner4 = document.createElement("a-animation");
+            hoverAniInner4.setAttribute('begin', 'hovergui');
+            hoverAniInner4.setAttribute('easing', 'linear');
+            hoverAniInner4.setAttribute('attribute', 'geometry.height');
+            hoverAniInner4.setAttribute('fill', 'forwards');
+            hoverAniInner4.setAttribute('from', '0.0035');
+            hoverAniInner4.setAttribute('to', '0.007');
+            hoverAniInner4.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalRight.appendChild(hoverAniInner4);
+
+            var leaveAniInner4 = document.createElement("a-animation");
+            leaveAniInner4.setAttribute('begin', 'leavegui');
+            leaveAniInner4.setAttribute('easing', 'linear');
+            leaveAniInner4.setAttribute('attribute', 'geometry.height');
+            leaveAniInner4.setAttribute('fill', 'forwards');
+            leaveAniInner4.setAttribute('from', '0.007');
+            leaveAniInner4.setAttribute('to', '0.0035');
+            leaveAniInner4.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalRight.appendChild(leaveAniInner4);
+
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.0415; radiusOuter:0.0485; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end cross design
+        
+        }
+
+        el.addEventListener('mouseenter', function () {
+            console.log("in gui-cursor mousenter, el: "+el);
+            el.emit('hovergui');
+            if (data.design == 'dot' || data.design == 'ring') {
+                cursorShadow.emit('hovergui');
+            }else if (data.design == 'cross') {
+                cursorShadow.emit('hovergui');
+                cursorVerticalTop.emit('hovergui');
+                cursorVerticalBottom.emit('hovergui');
+                cursorHorizontalLeft.emit('hovergui');
+                cursorHorizontalRight.emit('hovergui');
+            }else if (data.design == 'reticle') {
+                centerHoverAniOpacity.emit('hovergui');
+                cursorHoverAniColor.emit('hovergui');
+                cursorHoverAniOpacity.emit('hovergui');
+            }
+
+        });
+
+        el.addEventListener('mouseleave', function () {
+            console.log("in gui-cursor mouseleave, el: "+el);
+            el.emit('leavegui');
+            if (data.design == 'dot' || data.design == 'ring') {
+                cursorShadow.emit('leavegui');
+            }else if (data.design == 'cross') {
+                cursorVerticalTop.emit('leavegui');
+                cursorVerticalBottom.emit('leavegui');
+                cursorHorizontalLeft.emit('leavegui');
+                cursorHorizontalRight.emit('leavegui');
+            }else if (data.design == 'reticle') {
+                centerHoverAniOpacity.emit('leavegui');
+                cursorHoverAniColor.emit('leavegui');
+                cursorHoverAniOpacity.emit('leavegui');
+            }
+
+            if(fuse){
+                fuseLoaderFillAni.stop();
+            }
+
+            el.setAttribute('scale', '1 1 1');
+        });
+
+        if(fuse){
+            el.addEventListener('fusing', function () {
+                fuseLoader.emit('start-fusing');
+            });
+        }
+
+        el.addEventListener("stateremoved", function (evt) {
+            console.log("evt.detail.state " +evt.detail.state)
+            if (evt.detail.state === 'cursor-fusing') {
+                if(data.design == 'dot' || data.design == 'ring' || data.design == 'cross' ){  
+                    if(fuse){
+                        fuseLoaderFillAni.stop();
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'reticle'){
+                    if(fuse){
+                        fuseLoaderFillAni.stop();
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.width', '0.000001');
+                    }                    
+                }
+            }else if(evt.detail.state === 'cursor-hovering') {
+                if(data.design == 'dot' || data.design == 'ring' ){  
+                    AFRAME.utils.entity.setComponentProperty(this, 'scale', '1 1 1');
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'cross' ){  
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'reticle' ){  
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.width', '0.000001');
+                    }
+                }
+            }
+        });
+
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+    resetcursor: function(){
+        // if (evt.detail.state === 'cursor-fusing') {
+        //     AFRAME.utils.entity.setComponentProperty(this, "geometry.thetaLength", 360);
+        //     AFRAME.utils.entity.setComponentProperty(this, "material.color", "#ffffff");
+        //     AFRAME.utils.entity.setComponentProperty(this, "scale", "1 1 1");
+        // }
+    }
+});
+
+AFRAME.registerPrimitive( 'a-gui-cursor', {
+    defaultComponents: {
+        'cursor': {},
+        'gui-cursor': { }
+    },
+    mappings: {
+        'fuse': 'cursor.fuse',
+        'fuse-timeout': 'cursor.fuseTimeout',
+        'color': 'gui-cursor.color',
+        'hover-color': 'gui-cursor.hoverColor',
+        'active-color': 'gui-cursor.activeColor',
+        'distance': 'gui-cursor.distance',
+        'design': 'gui-cursor.design'
+    }
+});
+},{}],210:[function(require,module,exports) {
+
+// Reset cursor
+var cursor = document.querySelector("#cursor");
+if (cursor) {
+    cursor.addEventListener("stateremoved", function (evt) {
+        if (evt.detail.state === 'cursor-fusing') {
+            AFRAME.utils.entity.setComponentProperty(this, "geometry.thetaLength", 360);
+            AFRAME.utils.entity.setComponentProperty(this, "material.color", key_white);
+            AFRAME.utils.entity.setComponentProperty(this, "scale", "1 1 1");
+        }
+    });
+}
+},{}],196:[function(require,module,exports) {
+if (typeof AFRAME === 'undefined') {
+    throw new Error('Component attempted to register before AFRAME was available.');
+}
+
+// Components
+require('./scripts/vars.js');
+require('./components/item.js');
+require('./components/interactable.js');
+require('./components/flex-container.js');
+require('./components/label.js');
+require('./components/button.js');
+require('./components/icon-button.js');
+require('./components/icon-label-button.js');
+require('./components/toggle.js');
+require('./components/radio.js');
+require('./components/circle-loader.js');
+require('./components/progress-bar.js');
+require('./components/circle-timer.js');
+require('./components/slider.js');
+require('./components/input.js');
+require('./components/cursor.js');
+require('./scripts/reset-cursor.js');
+
+},{"./scripts/vars.js":197,"./components/item.js":213,"./components/interactable.js":212,"./components/flex-container.js":211,"./components/label.js":198,"./components/button.js":199,"./components/icon-button.js":200,"./components/icon-label-button.js":201,"./components/toggle.js":202,"./components/radio.js":203,"./components/circle-loader.js":204,"./components/progress-bar.js":205,"./components/circle-timer.js":206,"./components/slider.js":207,"./components/input.js":208,"./components/cursor.js":209,"./scripts/reset-cursor.js":210}],180:[function(require,module,exports) {
+"use strict";
+// document.addEventListener('DOMContentLoaded', function () {
+//   const scene:any = document.querySelector('a-scene')
+//   scene.addEventListener('subscribe', (e:any) => {
+//   })
+// })
 },{}],6:[function(require,module,exports) {
 'use strict';
 
@@ -131833,7 +130251,7 @@ var registerSelectable = function registerSelectable() {
 };
 
 module.exports = registerSelectable();
-},{"aframe":10}],19:[function(require,module,exports) {
+},{"aframe":8}],58:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -131851,7 +130269,7 @@ var registerCameraDirector = function registerCameraDirector() {
     });
 };
 exports.default = registerCameraDirector();
-},{"aframe":10}],28:[function(require,module,exports) {
+},{"aframe":8}],21:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -131868,9 +130286,9 @@ var Cameras = exports.Cameras = undefined;
 })(Cameras || (exports.Cameras = Cameras = {}));
 var positions = exports.positions = [{
     id: 'default',
-    position: '1 1 1',
+    position: '1 5 -4',
     rotation: {
-        x: 0, y: 0, z: 0
+        x: 0, y: -90, z: 0
     }
 }, {
     id: 'stockroom',
@@ -131879,7 +130297,7 @@ var positions = exports.positions = [{
         x: 0, y: 90, z: 0
     }
 }];
-},{}],25:[function(require,module,exports) {
+},{}],130:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -131893,7 +130311,7 @@ exports.default = function (position) {
         return i.id === position;
     });
 };
-},{"./variables":28}],20:[function(require,module,exports) {
+},{"./variables":21}],59:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -131928,34 +130346,1092 @@ var updateCameraPosition = function updateCameraPosition(el, position) {
     el.setAttribute('rotation', p.rotation);
 };
 exports.default = registerComponent();
-},{"aframe":10,"./getCameraPosition":25}],16:[function(require,module,exports) {
+},{"aframe":8,"./getCameraPosition":130}],28:[function(require,module,exports) {
 'use strict';
 
 require('./camera-director');
 
 require('./camera-cycle-component');
-},{"./camera-director":19,"./camera-cycle-component":20}],11:[function(require,module,exports) {
+},{"./camera-director":58,"./camera-cycle-component":59}],54:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _variables = require('./variables');
+
+var _getCameraPosition = require('./getCameraPosition');
+
+var _getCameraPosition2 = _interopRequireDefault(_getCameraPosition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (position) {
+    var camera = document.querySelector("#" + _variables.Cameras.camera1);
+    var p = (0, _getCameraPosition2.default)(position);
+    if (p) {
+        camera.setAttribute('position', p.position);
+        camera.setAttribute('rotation', p.rotation);
+    }
+};
+},{"./variables":21,"./getCameraPosition":130}],19:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var _switchCameraPosition = require('../camera/switchCameraPosition');
+
+var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
+
+var _variables = require('../camera/variables');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var register = function register() {
+    AFRAME.registerComponent('hud-button', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {
+            var _this = this;
+            // add event listener for scene changes
+            this.el.addEventListener('click', function (e) {
+                var id = _this.el.id;
+                if (id) {
+                    if (id === 'hud-default-jump') {
+                        (0, _switchCameraPosition2.default)(_variables.Positions.default);
+                    }
+                    if (id === 'hud-stockroom-jump') {
+                        (0, _switchCameraPosition2.default)(_variables.Positions.stockroom);
+                        // AFRAME.scenes[0].emit('decreaseScore', {points: 1});
+                        // AFRAME.scenes[0].emit('removeInventoryItem', InventoryList.bottle1); 
+                    }
+                }
+            });
+        }
+    });
+};
+exports.default = register();
+},{"aframe":8,"../camera/switchCameraPosition":54,"../camera/variables":21}],20:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var register = function register() {
+    AFRAME.registerComponent('inventory-item', {
+        init: function init() {
+            var el = this.el;
+            // add the gui interactive
+            el.setAttribute('gui-interactable', '');
+            // Create the label
+            var menuNode = document.createElement('a-gui-button');
+            menuNode.setAttribute('width', '2.5');
+            menuNode.setAttribute('rotation', '0 90 0');
+            menuNode.setAttribute('position', '0 .7 0');
+            menuNode.setAttribute('height', '0.75');
+            menuNode.setAttribute('value', 'test button');
+            menuNode.setAttribute('font-family', 'Helvetica');
+            el.appendChild(menuNode);
+            el.addEventListener('mouseenter', function (e) {});
+            el.addEventListener('mouseenter', function (e) {});
+        }
+    });
+};
+exports.default = register();
+},{"aframe":8}],57:[function(require,module,exports) {
+var define;
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(typeof self !== 'undefined' ? self : this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
-// import 'aframe'
-// import {html, render} from 'lit-html';
-// const registerComponent = () => {
-//   AFRAME.registerComponent('hud', {
-//     init: function () {
-//       // this.el.appendChild(box('blue'))
-//       render(box('blue'), this.el)
-//       setTimeout(() => {
-//         this.el.flushToDOM()
-//       }, 2000);
-//     }
-//   })
-// }
-// const box = (color: string) => {
-//   return html`
-//     <a-box material="color:${color}" width="10" height="10"></a-box>
-//   `
-// }
-// export default registerComponent()
-},{}],4:[function(require,module,exports) {
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var diff = __webpack_require__(1);
+var wrapArray = __webpack_require__(2).wrapArray;
+
+// Singleton state definition.
+var State = {
+  initialState: {},
+  nonBindedStateKeys: [],
+  handlers: {},
+  computeState: function computeState() {/* no-op */}
+};
+
+var STATE_UPDATE_EVENT = 'stateupdate';
+var TYPE_OBJECT = 'object';
+var WHITESPACE_REGEX = /s+/;
+
+AFRAME.registerState = function (definition) {
+  AFRAME.utils.extend(State, definition);
+};
+
+AFRAME.registerSystem('state', {
+  init: function init() {
+    var _this = this;
+
+    var key;
+
+    this.diff = {};
+    this.state = AFRAME.utils.clone(State.initialState);
+    this.subscriptions = [];
+    this.initEventHandlers();
+
+    // Wrap array to detect dirty.
+    for (key in this.state) {
+      if (this.state[key] && this.state[key].constructor === Array) {
+        this.state[key].__dirty = true;
+        wrapArray(this.state[key]);
+      }
+    }
+
+    this.lastState = AFRAME.utils.clone(this.state);
+
+    this.eventDetail = {
+      lastState: this.lastState,
+      state: this.state
+    };
+
+    this.el.addEventListener('loaded', function () {
+      var i;
+      // Initial compute.
+      State.computeState(_this.state, '@@INIT');
+      // Initial dispatch.
+      for (i = 0; i < _this.subscriptions.length; i++) {
+        _this.subscriptions[i].onStateUpdate(_this.state);
+      }
+    });
+  },
+
+  /**
+   * Dispatch action.
+   */
+  dispatch: function dispatch(actionName, payload) {
+    var i;
+    var key;
+    var subscription;
+
+    // Modify state.
+    State.handlers[actionName](this.state, payload);
+
+    // Post-compute.
+    State.computeState(this.state, actionName, payload);
+
+    // Get a diff to optimize bind updates.
+    for (key in this.diff) {
+      delete this.diff[key];
+    }
+    diff(this.lastState, this.state, this.diff, State.nonBindedStateKeys);
+
+    // Notify subscriptions / binders.
+    for (i = 0; i < this.subscriptions.length; i++) {
+      if (this.subscriptions[i].name === 'bind-for') {
+        // For arrays and bind-for, check __dirty flag on array rather than the diff.
+        if (!this.state[this.subscriptions[i].keysToWatch[0]].__dirty) {
+          continue;
+        }
+      } else {
+        if (!this.shouldUpdate(this.subscriptions[i].keysToWatch, this.diff)) {
+          continue;
+        }
+      }
+
+      this.subscriptions[i].onStateUpdate();
+    }
+
+    // Unset array dirty.
+    for (key in this.state) {
+      if (this.state[key] && this.state[key].constructor === Array) {
+        this.state[key].__dirty = false;
+      }
+    }
+
+    // Store last state.
+    // TODO: copyState messes with the diff.
+    this.copyState(this.lastState, this.state);
+
+    // Emit.
+    this.eventDetail.action = actionName;
+    this.eventDetail.payload = payload;
+    this.el.emit(STATE_UPDATE_EVENT, this.eventDetail);
+  },
+
+  /**
+   * Store last state through a deep extend, but not for arrays.
+   */
+  copyState: function copyState(lastState, state, isRecursive) {
+    var key;
+
+    for (key in state) {
+      // Don't copy pieces of state keys that are non-binded or untracked.
+      if (!isRecursive && State.nonBindedStateKeys.indexOf(key) !== -1) {
+        continue;
+      }
+
+      // Nested state.
+      if (state[key] && state[key].constructor === Object) {
+        if (!(key in lastState)) {
+          // Clone object if destination does not exist.
+          lastState[key] = AFRAME.utils.clone(state[key]);
+          continue;
+        }
+        // Recursively copy state.
+        this.copyState(lastState[key], state[key], true);
+        continue;
+      }
+
+      // Copy by value.
+      lastState[key] = state[key];
+    }
+  },
+
+  subscribe: function subscribe(component) {
+    this.subscriptions.push(component);
+  },
+
+  unsubscribe: function unsubscribe(component) {
+    this.subscriptions.splice(this.subscriptions.indexOf(component), 1);
+  },
+
+  /**
+   * Check if state changes were relevant to this binding. If not, don't call.
+   */
+  shouldUpdate: function shouldUpdate(keysToWatch, diff) {
+    var stateKey;
+    for (stateKey in diff) {
+      if (keysToWatch.indexOf(stateKey) !== -1) {
+        return true;
+      }
+    }
+    return false;
+  },
+
+  /**
+   * Proxy events to action dispatches so components can just bubble actions up as events.
+   * Handlers define which actions they handle. Go through all and add event listeners.
+   */
+  initEventHandlers: function initEventHandlers() {
+    var actionName;
+    var registeredActions = [];
+    var self = this;
+
+    registerListener = registerListener.bind(this);
+
+    // Use declared handlers to know what events to listen to.
+    for (actionName in State.handlers) {
+      // Only need to register one handler for each event.
+      if (registeredActions.indexOf(actionName) !== -1) {
+        continue;
+      }
+      registeredActions.push(actionName);
+      registerListener(actionName);
+    }
+
+    function registerListener(actionName) {
+      var _this2 = this;
+
+      this.el.addEventListener(actionName, function (evt) {
+        _this2.dispatch(actionName, evt.detail);
+      });
+    }
+  },
+
+  /**
+   * Render template to string with item data.
+   */
+  renderTemplate: function () {
+    // Braces, whitespace, optional item name, item key, whitespace, braces.
+    var interpRegex = /{{\s*(\w*\.)?([\w.]+)\s*}}/g;
+
+    return function (template, data, asString) {
+      var match;
+      var str;
+
+      str = template;
+      while (match = interpRegex.exec(template)) {
+        str = str.replace(match[0], (typeof data === 'undefined' ? 'undefined' : _typeof(data)) === TYPE_OBJECT ? select(data, match[2]) || '' : data);
+      }
+
+      // Return as string.
+      if (asString) {
+        return str;
+      }
+
+      // Return as DOM.
+      return document.createRange().createContextualFragment(str);
+    };
+  }(),
+
+  select: select
+});
+
+/**
+ * Bind component property to a value in state.
+ *
+ * bind="geometry.width: car.width""
+ * bind__material="color: enemy.color; opacity: enemy.opacity"
+ * bind__visible="player.visible"
+ */
+AFRAME.registerComponent('bind', {
+  schema: {
+    default: {},
+    parse: function parse(value) {
+      // Parse style-like object.
+      var data;
+      var i;
+      var properties;
+      var pair;
+
+      // Using setAttribute with object, no need to parse.
+      if (value.constructor === Object) {
+        return value;
+      }
+
+      // Using instanced ID as component namespace for single-property component,
+      // nothing to separate.
+      if (value.indexOf(':') === -1) {
+        return value;
+      }
+
+      // Parse style-like object as keys to values.
+      data = {};
+      properties = split(value, ';');
+      for (i = 0; i < properties.length; i++) {
+        pair = split(properties[i].trim(), ':');
+        data[pair[0]] = pair[1].trim();
+      }
+      return data;
+    }
+  },
+
+  multiple: true,
+
+  init: function init() {
+    var bindForEl;
+    var bindForName;
+    var data = this.data;
+    var key;
+
+    this.keysToWatch = [];
+    this.onStateUpdate = this.onStateUpdate.bind(this);
+    this.system = this.el.sceneEl.systems.state;
+
+    // Whether we are binding by namespace (e.g., bind__foo="prop1: true").
+    this.isNamespacedBind = this.id && this.id in AFRAME.components && !AFRAME.components[this.id].isSingleProp || this.id in AFRAME.systems;
+
+    this.lastData = {};
+    this.updateObj = {};
+
+    // Subscribe to store and register handler to do data-binding to components.
+    this.system.subscribe(this);
+
+    this.onStateUpdate = this.onStateUpdate.bind(this);
+  },
+
+  update: function update() {
+    var bindForEl;
+    var data = this.data;
+    var key;
+    var property;
+
+    // Index `keysToWatch` to only update state on relevant changes.
+    this.keysToWatch.length = 0;
+    if (typeof data === 'string') {
+      parseKeysToWatch(this.keysToWatch, data);
+    } else {
+      for (key in data) {
+        parseKeysToWatch(this.keysToWatch, data[key]);
+      }
+    }
+
+    // Check if any properties are part of an iteration in bind-for.
+    bindForEl = this.el.closest('[bind-for]');
+    if (bindForEl && bindForEl !== this.el) {
+      this.bindForEl = bindForEl;
+      this.bindRootEl = this.el.closest('[data-bind-for-key]');
+      this.bindFor = this.bindForEl.getAttribute('bind-for');
+      this.bindForKey = this.bindRootEl.getAttribute('data-bind-for-key');
+      this.keysToWatch.push(this.bindFor.in);
+      this.bindForEl.addEventListener('bindforrender', this.onStateUpdate);
+    } else {
+      this.bindFor = '';
+      this.bindForKey = '';
+    }
+
+    // Update.
+    this.onStateUpdate();
+  },
+
+  /**
+   * Handle state update.
+   */
+  onStateUpdate: function onStateUpdate() {
+    // Update component with the state.
+    var hasKeys = false;
+    var el = this.el;
+    var propertyName;
+    var stateSelector;
+    var state;
+    var value;
+
+    if (!el.parentNode) {
+      return;
+    }
+    if (this.isNamespacedBind) {
+      clearObject(this.updateObj);
+    }
+
+    state = this.system.state;
+
+    // Single-property bind.
+    if (_typeof(this.data) !== TYPE_OBJECT) {
+      try {
+        value = select(state, this.data, this.bindFor, this.bindForKey);
+      } catch (e) {
+        throw new Error('[aframe-state-component] Key \'' + this.data + '\' not found in state.' + (' #' + this.el.getAttribute('id') + '[' + this.attrName + ']'));
+      }
+
+      if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) !== TYPE_OBJECT && _typeof(this.lastData) !== TYPE_OBJECT && this.lastData === value) {
+        return;
+      }
+
+      AFRAME.utils.entity.setComponentProperty(el, this.id, value);
+      this.lastData = value;
+      return;
+    }
+
+    for (propertyName in this.data) {
+      // Pointer to a value in the state (e.g., `player.health`).
+      stateSelector = this.data[propertyName].trim();
+      try {
+        value = select(state, stateSelector, this.bindFor, this.bindForKey);
+        if (this.bindFor && value === undefined) {
+          return;
+        }
+      } catch (e) {
+        throw new Error('[aframe-state-component] Key \'' + stateSelector + '\' not found in state.' + (' #' + this.el.getAttribute('id') + '[' + this.attrName + ']'));
+      }
+
+      if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) !== TYPE_OBJECT && _typeof(this.lastData[propertyName]) !== TYPE_OBJECT && this.lastData[propertyName] === value) {
+        continue;
+      }
+
+      // Remove component if value is `undefined`.
+      if (propertyName in AFRAME.components && value === undefined) {
+        el.removeAttribute(propertyName);
+        return;
+      }
+
+      // Set using dot-delimited property name.
+      if (this.isNamespacedBind) {
+        // Batch if doing namespaced bind.
+        this.updateObj[propertyName] = value;
+      } else {
+        AFRAME.utils.entity.setComponentProperty(el, propertyName, value);
+      }
+
+      this.lastData[propertyName] = value;
+    }
+
+    // Batch if doing namespaced bind.
+    for (hasKeys in this.updateObj) {
+      // See if object is empty.
+    }
+    if (this.isNamespacedBind && hasKeys) {
+      el.setAttribute(this.id, this.updateObj);
+    }
+  },
+
+  remove: function remove() {
+    this.system.unsubscribe(this);
+    if (this.bindForEl) {
+      this.bindForEl.removeEventListener('bindforrender', this.onStateUpdate);
+    }
+  }
+});
+
+/**
+ * Toggle component attach and detach based on boolean value.
+ *
+ * bind__raycastable="isRaycastable""
+ */
+AFRAME.registerComponent('bind-toggle', {
+  schema: { type: 'string' },
+
+  multiple: true,
+
+  init: function init() {
+    this.system = this.el.sceneEl.systems.state;
+    this.keysToWatch = [];
+    this.onStateUpdate = this.onStateUpdate.bind(this);
+
+    // Subscribe to store and register handler to do data-binding to components.
+    this.system.subscribe(this);
+
+    this.onStateUpdate();
+  },
+
+  update: function update() {
+    this.keysToWatch.length = 0;
+    parseKeysToWatch(this.keysToWatch, this.data);
+  },
+
+  /**
+   * Handle state update.
+   */
+  onStateUpdate: function onStateUpdate() {
+    var el = this.el;
+    var state;
+    var value;
+
+    state = this.system.state;
+
+    try {
+      value = select(state, this.data);
+    } catch (e) {
+      throw new Error('[aframe-state-component] Key \'' + this.data + '\' not found in state.' + (' #' + this.el.getAttribute('id') + '[' + this.attrName + ']'));
+    }
+
+    if (value) {
+      el.setAttribute(this.id, '');
+    } else {
+      el.removeAttribute(this.id);
+    }
+  },
+
+  remove: function remove() {
+    this.system.unsubscribe(this);
+  }
+});
+
+/**
+ * Render array from state.
+ */
+AFRAME.registerComponent('bind-for', {
+  schema: {
+    for: { type: 'string' },
+    in: { type: 'string' },
+    key: { type: 'string' },
+    template: { type: 'string' }
+  },
+
+  init: function init() {
+    // Subscribe to store and register handler to do data-binding to components.
+    this.system = this.el.sceneEl.systems.state;
+    this.onStateUpdate = this.onStateUpdate.bind(this);
+
+    this.keysToWatch = [];
+    this.renderedKeys = []; // Keys that are currently rendered.
+    this.system.subscribe(this);
+  },
+
+  update: function update() {
+    this.keysToWatch[0] = split(this.data.in, '.')[0];
+    if (this.el.children[0] && this.el.children[0].tagName === 'TEMPLATE') {
+      this.template = this.el.children[0].innerHTML.trim();
+    } else {
+      this.template = document.querySelector(this.data.template).innerHTML.trim();
+    }
+    this.onStateUpdate();
+  },
+
+  /**
+   * Handle state update.
+   */
+  onStateUpdate: function () {
+    var keys = [];
+    var toRemove = [];
+
+    return function () {
+      var data = this.data;
+      var el = this.el;
+      var i;
+      var list;
+      var key;
+      var item;
+
+      try {
+        list = select(this.system.state, data.in);
+      } catch (e) {
+        throw new Error('[aframe-state-component] Key \'' + data.in + '\' not found in state.' + (' #' + el.getAttribute('id') + '[' + this.attrName + ']'));
+      }
+
+      keys.length = 0;
+      for (i = 0; i < list.length; i++) {
+        var keyValue;
+        item = list[i];
+
+        // If key not defined, use index (e.g., array of strings).
+        keyValue = data.key ? item[data.key] : i.toString();
+        keys.push(keyValue);
+
+        // Add item.
+        if (this.renderedKeys.indexOf(keyValue) === -1) {
+          el.appendChild(this.system.renderTemplate(this.template, item));
+          el.children[el.children.length - 1].setAttribute('data-bind-for-key', keyValue);
+          this.renderedKeys.push(keyValue);
+          continue;
+        }
+      }
+
+      // Remove items.
+      toRemove.length = 0;
+      for (i = 0; i < el.children.length; i++) {
+        if (el.children[i].tagName === 'TEMPLATE') {
+          continue;
+        }
+        key = el.children[i].getAttribute('data-bind-for-key');
+        if (keys.indexOf(key) === -1) {
+          toRemove.push(el.children[i]);
+          this.renderedKeys.splice(this.renderedKeys.indexOf(key), 1);
+        }
+      }
+      for (i = 0; i < toRemove.length; i++) {
+        toRemove[i].parentNode.removeChild(toRemove[i]);
+      }
+
+      this.el.emit('bindforrender', null, false);
+    };
+  }()
+});
+
+var AND = '&&';
+var QUOTE_RE = /'/g;
+var OR = '||';
+var COMPARISONS = ['==', '===', '!=', '!=='];
+var tempTokenArray = [];
+var tokenArray = [];
+
+/**
+ * Select value from store. Handles boolean operations, calls `selectProperty`.
+ *
+ * @param {object} state - State object.
+ * @param {string} selector - Dot-delimited store keys (e.g., game.player.health).
+ */
+function select(state, selector, bindFor, bindForKey) {
+  var comparisonResult;
+  var firstValue;
+  var i;
+  var runningBool;
+  var secondValue;
+  var tokens;
+  var value;
+
+  // If just single selector, then grab value.
+  tokens = split(selector, /\s+/);
+  if (tokens.length === 1) {
+    return selectProperty(state, selector, bindFor, bindForKey);
+  }
+
+  // Evaluate comparisons.
+  tokenArray.length = 0;
+  copyArray(tempTokenArray, tokens);
+  for (i = 0; i < tempTokenArray.length; i++) {
+    if (COMPARISONS.indexOf(tempTokenArray[i]) === -1) {
+      tokenArray.push(tempTokenArray[i]);
+      continue;
+    }
+
+    // Comparison (color === 'red').
+    // Pop previous value since that is one of comparsion value.
+    firstValue = selectProperty(state, tokenArray.pop());
+    // Lookup second value.
+    secondValue = tempTokenArray[i + 1].replace(QUOTE_RE, '');
+    // Evaluate (equals or not equals).
+    comparisonResult = tempTokenArray[i].indexOf('!') === -1 ? firstValue === secondValue : firstValue !== secondValue;
+    tokenArray.push(comparisonResult);
+    i++;
+  }
+
+  // Was single comparison.
+  if (tokenArray.length === 1) {
+    return tokenArray[0];
+  }
+
+  // If has boolean expression, evaluate.
+  runningBool = tokenArray[0].constructor === Boolean ? tokenArray[0] : selectProperty(state, tokenArray[0], bindFor, bindForKey);
+  for (i = 1; i < tokenArray.length; i += 2) {
+    if (tokenArray[i] !== OR && tokenArray[i] !== AND) {
+      continue;
+    }
+    // Check if was evaluated comparison (bool) or a selector (string).
+    tokenArray[i + 1] = tokenArray[i + 1].constructor === Boolean ? tokenArray[i + 1] : selectProperty(state, tokenArray[i + 1]);
+
+    // Evaluate boolean.
+    if (tokenArray[i] === OR) {
+      runningBool = runningBool || tokenArray[i + 1];
+    } else if (tokenArray[i] === AND) {
+      runningBool = runningBool && tokenArray[i + 1];
+    }
+  }
+  return runningBool;
+}
+
+/**
+ * Does actual selecting and walking of state.
+ */
+function selectProperty(state, selector, bindFor, bindForKey) {
+  var i;
+  var originalSelector;
+  var splitted;
+  var value;
+
+  // If bindFor, select the array. Then later, we filter the array.
+  if (bindFor && selector.startsWith(bindFor.for)) {
+    originalSelector = selector;
+    selector = bindFor.in;
+  }
+
+  // Walk.
+  value = state;
+  splitted = split(stripNot(selector), '.');
+  for (i = 0; i < splitted.length; i++) {
+    if (i < splitted.length - 1 && !(splitted[i] in value)) {
+      console.error('[state] Not found:', splitted, splitted[i]);
+    }
+    value = value[splitted[i]];
+  }
+
+  // Select from array (bind-for).
+  if (bindFor) {
+    // Simple array.
+    if (!bindFor.key) {
+      return value[bindForKey];
+    }
+    // Array of objects.
+    for (i = 0; i < value.length; i++) {
+      if (value[i][bindFor.key] !== bindForKey) {
+        continue;
+      }
+      value = selectProperty(value[i], originalSelector.replace(bindFor.for + '.', ''));
+      break;
+    }
+  }
+
+  // Boolean.
+  if (selector[0] === '!' && selector[1] === '!') {
+    return !!value;
+  }
+  if (selector[0] === '!') {
+    return !value;
+  }
+  return value;
+}
+
+function clearObject(obj) {
+  for (var key in obj) {
+    delete obj[key];
+  }
+}
+
+/**
+ * Helper to compose object of handlers, merging functions handling same action.
+ */
+function composeHandlers() {
+  var actionName;
+  var i;
+  var inputHandlers = arguments;
+  var outputHandlers;
+
+  outputHandlers = {};
+  for (i = 0; i < inputHandlers.length; i++) {
+    for (actionName in inputHandlers[i]) {
+      if (actionName in outputHandlers) {
+        // Initial compose/merge functions into arrays.
+        if (outputHandlers[actionName].constructor === Array) {
+          outputHandlers[actionName].push(inputHandlers[i][actionName]);
+        } else {
+          outputHandlers[actionName] = [outputHandlers[actionName], inputHandlers[i][actionName]];
+        }
+      } else {
+        outputHandlers[actionName] = inputHandlers[i][actionName];
+      }
+    }
+  }
+
+  // Compose functions specified via array.
+  for (actionName in outputHandlers) {
+    if (outputHandlers[actionName].constructor === Array) {
+      outputHandlers[actionName] = composeFunctions.apply(this, outputHandlers[actionName]);
+    }
+  }
+
+  return outputHandlers;
+}
+module.exports.composeHandlers = composeHandlers;
+
+function composeFunctions() {
+  var functions = arguments;
+  return function () {
+    var i;
+    for (i = 0; i < functions.length; i++) {
+      functions[i].apply(this, arguments);
+    }
+  };
+}
+module.exports.composeFunctions = composeFunctions;
+
+var NO_WATCH_TOKENS = ['||', '&&', '!=', '!==', '==', '==='];
+function parseKeysToWatch(keys, str) {
+  var i;
+  var tokens;
+  tokens = str.split(/\s+/);
+  for (i = 0; i < tokens.length; i++) {
+    if (NO_WATCH_TOKENS.indexOf(tokens[i]) === -1 && !tokens[i].startsWith("'") && keys.indexOf(tokens[i]) === -1) {
+      keys.push(parseKeyToWatch(tokens[i]));
+    }
+  }
+}
+
+function parseKeyToWatch(str) {
+  var dotIndex;
+  str = stripNot(str.trim());
+  dotIndex = str.indexOf('.');
+  if (dotIndex === -1) {
+    return str;
+  }
+  return str.substring(0, str.indexOf('.'));
+}
+
+function stripNot(str) {
+  if (str.indexOf('!!') === 0) {
+    return str.replace('!!', '');
+  } else if (str.indexOf('!') === 0) {
+    return str.replace('!', '');
+  }
+  return str;
+}
+
+/**
+ * Cached split.
+ */
+var SPLIT_CACHE = {};
+function split(str, delimiter) {
+  if (!SPLIT_CACHE[delimiter]) {
+    SPLIT_CACHE[delimiter] = {};
+  }
+  if (SPLIT_CACHE[delimiter][str]) {
+    return SPLIT_CACHE[delimiter][str];
+  }
+  SPLIT_CACHE[delimiter][str] = str.split(delimiter);
+  return SPLIT_CACHE[delimiter][str];
+}
+
+function copyArray(dest, src) {
+  var i;
+  dest.length = 0;
+  for (i = 0; i < src.length; i++) {
+    dest[i] = src[i];
+  }
+}
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Computes the difference between two objects with ability to ignore keys.
+ *
+ * @param {object} a - First object to compare (e.g., oldData).
+ * @param {object} b - Second object to compare (e.g., newData).
+ * @returns {object}
+ *   Difference object where set of keys note which values were not equal, and values are
+ *   `b`'s values.
+ */
+module.exports = function () {
+  var keys = [];
+
+  return function (a, b, targetObject, ignoreKeys) {
+    var aVal;
+    var bVal;
+    var bKey;
+    var diff;
+    var key;
+    var i;
+    var isComparingObjects;
+
+    diff = targetObject || {};
+
+    // Collect A keys.
+    keys.length = 0;
+    for (key in a) {
+      keys.push(key);
+    }
+
+    if (!b) {
+      return diff;
+    }
+
+    // Collect B keys.
+    for (bKey in b) {
+      if (keys.indexOf(bKey) === -1) {
+        keys.push(bKey);
+      }
+    }
+
+    for (i = 0; i < keys.length; i++) {
+      key = keys[i];
+
+      // Ignore specified keys.
+      if (ignoreKeys && ignoreKeys.indexOf(key) !== -1) {
+        continue;
+      }
+
+      aVal = a[key];
+      bVal = b[key];
+      isComparingObjects = aVal && bVal && aVal.constructor === Object && bVal.constructor === Object;
+      if (isComparingObjects && !AFRAME.utils.deepEqual(aVal, bVal) || !isComparingObjects && aVal !== bVal) {
+        diff[key] = bVal;
+      }
+    }
+    return diff;
+  };
+}();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var fns = ['push', 'pop', 'shift', 'unshift', 'splice'];
+
+function wrapArray(arr) {
+  var i;
+  if (arr.__wrapped) {
+    return;
+  }
+  for (i = 0; i < fns.length; i++) {
+    makeCallDirty(arr, fns[i]);
+  }
+  arr.__wrapped = true;
+}
+module.exports.wrapArray = wrapArray;
+
+function makeCallDirty(arr, fn) {
+  var originalFn = arr[fn];
+  arr[fn] = function () {
+    originalFn.apply(arr, arguments);
+    arr.__dirty = true;
+  };
+}
+
+/***/ })
+/******/ ]);
+});
+},{}],18:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+require('aframe-state-component');
+
+var register = function register() {
+    AFRAME.registerComponent('lab-table', {
+        init: function init() {
+            // this.el.appendChgil
+        },
+        onStateUpdate: function onStateUpdate(state) {
+            console.log(state);
+        }
+    });
+};
+exports.default = register();
+},{"aframe":8,"aframe-state-component":57}],4:[function(require,module,exports) {
 'use strict';
 
 require('aframe');
@@ -131964,16 +131440,40 @@ require('three');
 
 require('aframe-extras');
 
-require('aframe-html-shader');
+require('aframe-look-at-component');
 
-require('aframe-animation-timeline-component');
+require('aframe-gui');
+
+require('./state/byhand');
 
 require('./selectable-component');
 
 require('./camera');
 
-require('./hud/hud-component');
-},{"aframe":10,"three":9,"aframe-extras":8,"aframe-html-shader":83,"aframe-animation-timeline-component":7,"./selectable-component":6,"./camera":16,"./hud/hud-component":11}],82:[function(require,module,exports) {
+require('./hud/hud-button-component');
+
+require('./inventory/inventory-item-component');
+
+require('./lab-table/lab-table-component');
+
+var _variables = require('./camera/variables');
+
+var _switchCameraPosition = require('./camera/switchCameraPosition');
+
+var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import 'aframe-html-shader'
+// import 'aframe-animation-timeline-component'
+document.addEventListener('DOMContentLoaded', function () {
+  var scene = document.querySelector('a-scene');
+  scene.addEventListener('loaded', function (e) {
+    (0, _switchCameraPosition2.default)(_variables.Positions.stockroom);
+  });
+});
+// import { client } from './state/graphql'
+},{"aframe":8,"three":10,"aframe-extras":9,"aframe-look-at-component":11,"aframe-gui":196,"./state/byhand":180,"./selectable-component":6,"./camera":28,"./hud/hud-button-component":19,"./inventory/inventory-item-component":20,"./lab-table/lab-table-component":18,"./camera/variables":21,"./camera/switchCameraPosition":54}],214:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -132143,5 +131643,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[82,4], null)
+},{}]},{},[214,4], null)
 //# sourceMappingURL=/app.78938e1f.map

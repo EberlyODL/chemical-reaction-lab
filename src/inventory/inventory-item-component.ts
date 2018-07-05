@@ -4,12 +4,25 @@ import { InventoryList } from './variables';
 
 const register = () => {
   AFRAME.registerComponent('inventory-item', {
-    schema: {
-      id: {type: 'string', default: ''}
-    },
     init: function () {
-      // check to make sure it's in the inventory list
-      const exists =  Object.values(InventoryList).includes(this.data.id)
+      const el = this.el
+      // add the gui interactive
+      el.setAttribute('gui-interactable', '')
+
+      // Create the label
+      const menuNode = document.createElement('a-gui-button')
+      menuNode.setAttribute('width', '2.5')
+      menuNode.setAttribute('rotation', '0 90 0')
+      menuNode.setAttribute('position', '0 .7 0')
+      menuNode.setAttribute('height', '0.75')
+      menuNode.setAttribute('value', 'test button')
+      menuNode.setAttribute('font-family', 'Helvetica')
+      el.appendChild(menuNode)
+
+      el.addEventListener('mouseenter', (e:any) => {
+      })
+      el.addEventListener('mouseenter', (e:any) => {
+      })
     },
   })
 }

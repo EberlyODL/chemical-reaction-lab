@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <a-scene debug>
+  <a-scene>
     <a-assets>
       <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item>
       <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item>
@@ -24,28 +24,29 @@
     <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="0 11 0" rotation="-90 0 0"></a-plane>
     <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087"
       rotation="-90 0 0" material="" geometry=""></a-plane>
-
     <!-- Bottles -->
     <a-entity id="shelve1" shelf position="-22.601 7.570 8">
-      <a-cylinder id="inventory1" position="0 0 0" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory2" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory3" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory4" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory5" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory1" position="0 0 0" material="color:blue;" geometry="primitive: cylinder; height: 0.72; radius: 0.199">
+        <!-- Inventory Item Menu -->
+      </a-cylinder>
+      <a-cylinder inventory-item id="inventory2" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory3" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory4" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory5" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
     </a-entity>
     <a-entity id="shelve2" shelf position="-22.601 5.970 8">
-      <a-cylinder id="inventory11" position="0 0 0" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory12" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory13" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory14" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory15" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory11" position="0 0 0" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory12" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory13" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory14" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory15" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
     </a-entity>
     <a-entity id="shelve3" shelf position="-22.601 4.570 8">
-      <a-cylinder id="inventory21" position="0 0 0" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory22" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory23" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory24" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
-      <a-cylinder id="inventory25" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory21" position="0 0 0" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory22" position="0 0 -1.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory23" position="0 0 -3" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory24" position="0 0 -4.5" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
+      <a-cylinder inventory-item id="inventory25" position="0 0 -6" geometry="primitive: cylinder; height: 0.72; radius: 0.199"></a-cylinder>
     </a-entity>
 
 
@@ -56,22 +57,22 @@
     <a-entity id="camera1" position="0 5 0" rotation="0 -90 0">
 
       <!-- Heads up display -->
-      <a-entity hud="" position="-1 1.6 0" look-at="[camera]" rotation="0 0 -180">
-        <!-- hud button -->
-        <a-plane hud-button id="hud-stockroom-jump" material="color:black" width=".3" height=".2" geometry="">
-          <a-text text="width:1;value:Stockroom;align:center"></a-text>
-        </a-plane>
-        <!-- hud button -->
-        <a-plane hud-button id="hud-default-jump" material="color:black" width=".3" height=".2" geometry="" position="0.353 0 0">
-          <a-text text="width:1;value:Lab;align:center"></a-text>
-        </a-plane>
-      </a-entity>
+      <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7"
+        width="3.5" height="4.5" position="-3 0 -.5" rotation="0 0 0" look-at="[camera]">
+        <a-gui-button id="hud-default-jump" hud-button width="2.5" height="0.75" value="lab" font-family="Helvetica"></a-gui-button>
+        <a-gui-button id="hud-stockroom-jump" hud-button width="2.5" height="0.75" value="stockroom" font-family="Helvetica"></a-gui-button>
+      </a-gui-flex-container>
 
 
       <!-- Camera -->
-      <a-camera id="camera" look-controls="true" wasd-controls="enabled:false;">
-        <a-cursor id="cursor" color="orange" fuse="true"></a-cursor>
-      </a-camera>
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-entity raycaster="interval: 100; objects: [gui-interactable]" cursor="fuse: true; fuseTimeout: 2000" gui-cursor="design:reticle;"
+          wasd-controls="enabled:false;">
+        </a-entity>
+        <!-- /cursor -->
+      </a-entity>
+      <!-- /camera -->
 
     </a-entity>
 

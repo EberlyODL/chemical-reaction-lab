@@ -1,22 +1,30 @@
-import ApolloClient from 'apollo-boost';
+import { ApolloClient, gql } from 'apollo-boost';
+
+export const UPDATE_NETWORK_STATUS = gql`
+  mutation updateNetworkStatus($isConnected: Boolean) {
+    updateNetworkStatus(isConnected: $isConnected) @client
+  }
+`
 
 export const client = new ApolloClient({
+  uri: 'https://fakerql.com/graphql',
   clientState: {
     defaults: {
-      isConnected: true,
-      isLoaded: false
+      isConnected: true
     },
     resolvers: {
       Mutation: {
-        updateIsLoaded: (_:any, { isLoaded }, { cache }) => {
-          cache.writeData({ data: { isLoaded }});
-          return null;
+        updateNetworkStatus: (_, { isConnected }, { cache }) => {
+          const data = {
+            networkStatus: {
+              __typename: 'NetworkStatus',
+              isConnected
+            },
+          };
+          cache.writeData({ data });
+          return null
         },
-        updateNetworkStatus: (_:any, { isConnected }, { cache }) => {
-          cache.writeData({ data: { isConnected }});
-          return null;
-        }
-      }
+      },
     }
   }
 });
