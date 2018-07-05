@@ -2,11 +2,12 @@ SHELL := /usr/bin/env bash
 
 USER=$(shell whoami)
 
-start:
+prod:
 	docker-compose up
 
-build:
-	docker-compose build
+dev:
+	make clean
+	docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build
 
 connect:
 	docker-compose run parcel bash
@@ -16,6 +17,7 @@ clear-cache:
 
 clean:
 	rm -rf ./.cache
+	rm -rf node_modules
 	docker-compose down --remove-orphans -v
 
 getboxfiles:
