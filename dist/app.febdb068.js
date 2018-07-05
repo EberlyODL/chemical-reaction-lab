@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({23:[function(require,module,exports) {
+})({33:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -290,7 +290,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],44:[function(require,module,exports) {
+},{}],64:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -443,7 +443,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],45:[function(require,module,exports) {
+},{}],65:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -529,14 +529,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],43:[function(require,module,exports) {
+},{}],63:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],24:[function(require,module,exports) {
+},{}],34:[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -2329,7 +2329,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":44,"ieee754":45,"isarray":43,"buffer":24}],7:[function(require,module,exports) {
+},{"base64-js":64,"ieee754":65,"isarray":63,"buffer":34}],7:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 var process = require("process");
@@ -76201,7 +76201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}, { "./util.js": 181 }] }, {}, [148])(148);
 });
 //# sourceMappingURL=aframe-master.js.map
-},{"process":23,"buffer":24}],10:[function(require,module,exports) {
+},{"process":33,"buffer":34}],8:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -118531,7 +118531,7 @@ exports.Projector = Projector;
 exports.CanvasRenderer = CanvasRenderer;
 exports.SceneUtils = SceneUtils;
 exports.LensFlare = LensFlare;
-},{}],55:[function(require,module,exports) {
+},{}],83:[function(require,module,exports) {
 var EPS = 0.1;
 
 module.exports = AFRAME.registerComponent('checkpoint-controls', {
@@ -118622,7 +118622,7 @@ module.exports = AFRAME.registerComponent('checkpoint-controls', {
     offset.copy(targetPosition).sub(position);
   }
 });
-},{}],109:[function(require,module,exports) {
+},{}],146:[function(require,module,exports) {
 module.exports = Object.assign(function GamepadButton() {}, {
 	FACE_1: 0,
 	FACE_2: 1,
@@ -118644,7 +118644,7 @@ module.exports = Object.assign(function GamepadButton() {}, {
 
 	VENDOR: 16
 });
-},{}],110:[function(require,module,exports) {
+},{}],147:[function(require,module,exports) {
 function GamepadButtonEvent(type, index, details) {
   this.type = type;
   this.index = index;
@@ -118653,7 +118653,7 @@ function GamepadButtonEvent(type, index, details) {
 }
 
 module.exports = GamepadButtonEvent;
-},{}],56:[function(require,module,exports) {
+},{}],84:[function(require,module,exports) {
 /**
  * Gamepad controls for A-Frame.
  *
@@ -118937,7 +118937,7 @@ module.exports = AFRAME.registerComponent('gamepad-controls', {
     return this.getGamepad().id;
   }
 });
-},{"../../lib/GamepadButton":109,"../../lib/GamepadButtonEvent":110}],111:[function(require,module,exports) {
+},{"../../lib/GamepadButton":146,"../../lib/GamepadButtonEvent":147}],148:[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /**
@@ -119682,7 +119682,7 @@ var define;
     event.locale = '';
   };
 })(window);
-},{}],57:[function(require,module,exports) {
+},{}],85:[function(require,module,exports) {
 require('../../lib/keyboard.polyfill');
 
 var MAX_DELTA = 0.2,
@@ -119844,7 +119844,7 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
   }
 
 });
-},{"../../lib/keyboard.polyfill":111}],58:[function(require,module,exports) {
+},{"../../lib/keyboard.polyfill":148}],86:[function(require,module,exports) {
 /**
  * Touch-to-move-forward controls for mobile.
  */
@@ -119918,7 +119918,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
     e.preventDefault();
   }
 });
-},{}],59:[function(require,module,exports) {
+},{}],87:[function(require,module,exports) {
 /**
  * Movement Controls
  *
@@ -120128,7 +120128,7 @@ module.exports = AFRAME.registerComponent('movement-controls', {
     };
   }()
 });
-},{}],60:[function(require,module,exports) {
+},{}],88:[function(require,module,exports) {
 /**
  * 3dof (Gear VR, Daydream) controls for mobile.
  */
@@ -120210,14 +120210,14 @@ module.exports = AFRAME.registerComponent('trackpad-controls', {
   }
 
 });
-},{}],27:[function(require,module,exports) {
+},{}],37:[function(require,module,exports) {
 require('./checkpoint-controls');
 require('./gamepad-controls');
 require('./keyboard-controls');
 require('./touch-controls');
 require('./movement-controls');
 require('./trackpad-controls');
-},{"./checkpoint-controls":55,"./gamepad-controls":56,"./keyboard-controls":57,"./touch-controls":58,"./movement-controls":59,"./trackpad-controls":60}],49:[function(require,module,exports) {
+},{"./checkpoint-controls":83,"./gamepad-controls":84,"./keyboard-controls":85,"./touch-controls":86,"./movement-controls":87,"./trackpad-controls":88}],97:[function(require,module,exports) {
 var LoopMode = {
   once: THREE.LoopOnce,
   repeat: THREE.LoopRepeat,
@@ -120337,7 +120337,7 @@ function wildcardToRegExp(s) {
 function regExpEscape(s) {
   return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
 }
-},{}],106:[function(require,module,exports) {
+},{}],149:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
@@ -123485,7 +123485,7 @@ THREE.LoaderUtils = {
     return a;
   }
 })();
-},{}],50:[function(require,module,exports) {
+},{}],98:[function(require,module,exports) {
 THREE.FBXLoader = require('../../lib/FBXLoader');
 
 /**
@@ -123523,7 +123523,7 @@ module.exports = AFRAME.registerComponent('fbx-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/FBXLoader":106}],107:[function(require,module,exports) {
+},{"../../lib/FBXLoader":149}],150:[function(require,module,exports) {
 /**
  * Source: https://github.com/Adobe-Marketing-Cloud/fetch-script
  */
@@ -123601,7 +123601,7 @@ function fetchScript(settings) {
 }
 
 module.exports = fetchScript;
-},{}],51:[function(require,module,exports) {
+},{}],99:[function(require,module,exports) {
 var fetchScript = require('../../lib/fetch-script')();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
@@ -123662,7 +123662,7 @@ module.exports = AFRAME.registerComponent('gltf-model-legacy', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/fetch-script":107}],52:[function(require,module,exports) {
+},{"../../lib/fetch-script":150}],100:[function(require,module,exports) {
 /**
  * json-model
  *
@@ -123721,7 +123721,7 @@ module.exports = AFRAME.registerComponent('json-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],53:[function(require,module,exports) {
+},{}],101:[function(require,module,exports) {
 /**
  * object-model
  *
@@ -123777,7 +123777,7 @@ module.exports = AFRAME.registerComponent('object-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],108:[function(require,module,exports) {
+},{}],151:[function(require,module,exports) {
 /**
  * @author Wei Meng / http://about.me/menway
  *
@@ -124203,7 +124203,7 @@ THREE.PLYLoader.prototype = {
   }
 
 };
-},{}],54:[function(require,module,exports) {
+},{}],102:[function(require,module,exports) {
 /**
  * ply-model
  *
@@ -124284,14 +124284,14 @@ function createModel(geometry) {
     shininess: 0
   }));
 }
-},{"../../lib/PLYLoader":108}],28:[function(require,module,exports) {
+},{"../../lib/PLYLoader":151}],39:[function(require,module,exports) {
 require('./animation-mixer');
 require('./fbx-model');
 require('./gltf-model-legacy');
 require('./json-model');
 require('./object-model');
 require('./ply-model');
-},{"./animation-mixer":49,"./fbx-model":50,"./gltf-model-legacy":51,"./json-model":52,"./object-model":53,"./ply-model":54}],61:[function(require,module,exports) {
+},{"./animation-mixer":97,"./fbx-model":98,"./gltf-model-legacy":99,"./json-model":100,"./object-model":101,"./ply-model":102}],89:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('checkpoint', {
   schema: {
     offset: { default: { x: 0, y: 0, z: 0 }, type: 'vec3' }
@@ -124330,7 +124330,7 @@ module.exports = AFRAME.registerComponent('checkpoint', {
     return this.offset.copy(this.data.offset);
   }
 });
-},{}],62:[function(require,module,exports) {
+},{}],90:[function(require,module,exports) {
 /**
  * @param  {Array<THREE.Material>|THREE.Material} material
  * @return {Array<THREE.Material>}
@@ -124463,7 +124463,7 @@ module.exports = AFRAME.registerComponent('cube-env-map', {
     this.el.sceneEl.object3D.background = texture;
   }
 });
-},{}],63:[function(require,module,exports) {
+},{}],91:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124542,7 +124542,7 @@ module.exports = AFRAME.registerComponent('grab', {
     this.system.addConstraint(this.constraint);
   }
 });
-},{}],64:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 var ACCEL_G = -9.8,
     // m/s^2
 EASING = -15; // m/s^2
@@ -124606,7 +124606,7 @@ module.exports = AFRAME.registerComponent('jump-ability', {
     this.numJumps = 0;
   }
 });
-},{}],65:[function(require,module,exports) {
+},{}],93:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124824,7 +124824,7 @@ module.exports = AFRAME.registerComponent('kinematic-body', {
     return Math.abs(hitNormal.y) > Math.abs(groundNormal.y) ? hitNormal : groundNormal;
   }
 });
-},{}],66:[function(require,module,exports) {
+},{}],94:[function(require,module,exports) {
 /**
  * Apply this component to models that looks "blocky", to have Three.js compute
  * vertex normals on the fly for a "smoother" look.
@@ -124838,7 +124838,7 @@ module.exports = AFRAME.registerComponent('mesh-smooth', {
     });
   }
 });
-},{}],67:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 /**
  * Recursively applies a MeshNormalMaterial to the entity, such that
  * face colors are determined by their orientation. Helpful for
@@ -124863,7 +124863,7 @@ module.exports = AFRAME.registerComponent('normal-material', {
     });
   }
 });
-},{}],68:[function(require,module,exports) {
+},{}],96:[function(require,module,exports) {
 /**
  * Based on aframe/examples/showcase/tracked-controls.
  *
@@ -125026,7 +125026,7 @@ module.exports = AFRAME.registerComponent('sphere-collider', {
     this.el.emit('hitend', { el: targetEl });
   }
 });
-},{}],29:[function(require,module,exports) {
+},{}],38:[function(require,module,exports) {
 require('./checkpoint');
 require('./cube-env-map');
 require('./grab');
@@ -125035,7 +125035,7 @@ require('./kinematic-body');
 require('./mesh-smooth');
 require('./normal-material');
 require('./sphere-collider');
-},{"./checkpoint":61,"./cube-env-map":62,"./grab":63,"./jump-ability":64,"./kinematic-body":65,"./mesh-smooth":66,"./normal-material":67,"./sphere-collider":68}],69:[function(require,module,exports) {
+},{"./checkpoint":89,"./cube-env-map":90,"./grab":91,"./jump-ability":92,"./kinematic-body":93,"./mesh-smooth":94,"./normal-material":95,"./sphere-collider":96}],107:[function(require,module,exports) {
 /**
  * nav-mesh
  *
@@ -125075,7 +125075,7 @@ module.exports = AFRAME.registerComponent('nav-mesh', {
     this.hasLoadedNavMesh = true;
   }
 });
-},{}],70:[function(require,module,exports) {
+},{}],108:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('nav-agent', {
   schema: {
     destination: { type: 'vec3' },
@@ -125178,7 +125178,7 @@ module.exports = AFRAME.registerComponent('nav-agent', {
     };
   }()
 });
-},{}],116:[function(require,module,exports) {
+},{}],204:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125509,7 +125509,7 @@ var Utils = function () {
 }();
 
 module.exports = Utils;
-},{}],120:[function(require,module,exports) {
+},{}],219:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125660,7 +125660,7 @@ var BinaryHeap = function () {
 }();
 
 module.exports = BinaryHeap;
-},{}],117:[function(require,module,exports) {
+},{}],205:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125802,7 +125802,7 @@ var AStar = function () {
 }();
 
 module.exports = AStar;
-},{"./BinaryHeap":120,"./utils.js":116}],118:[function(require,module,exports) {
+},{"./BinaryHeap":219,"./utils.js":204}],206:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126025,7 +126025,7 @@ var Builder = function () {
 }();
 
 module.exports = Builder;
-},{"./utils":116}],119:[function(require,module,exports) {
+},{"./utils":204}],207:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126133,7 +126133,7 @@ var Channel = function () {
 }();
 
 module.exports = Channel;
-},{"./utils":116}],114:[function(require,module,exports) {
+},{"./utils":204}],154:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126435,7 +126435,7 @@ var Group = {}; // jshint ignore:line
 var Node = {}; // jshint ignore:line
 
 module.exports = Path;
-},{"./utils":116,"./AStar":117,"./Builder":118,"./Channel":119}],71:[function(require,module,exports) {
+},{"./utils":204,"./AStar":205,"./Builder":206,"./Channel":207}],109:[function(require,module,exports) {
 var Path = require('three-pathfinding');
 
 var pathfinder = new Path();
@@ -126530,11 +126530,11 @@ module.exports = AFRAME.registerSystem('nav', {
     return pathfinder.clampStep(start, end, node, ZONE, groupID, endTarget);
   }
 });
-},{"three-pathfinding":114}],30:[function(require,module,exports) {
+},{"three-pathfinding":154}],40:[function(require,module,exports) {
 require('./nav-mesh');
 require('./nav-agent');
 require('./system');
-},{"./nav-mesh":69,"./nav-agent":70,"./system":71}],72:[function(require,module,exports) {
+},{"./nav-mesh":107,"./nav-agent":108,"./system":109}],103:[function(require,module,exports) {
 /**
  * Flat grid.
  *
@@ -126559,7 +126559,7 @@ module.exports = AFRAME.registerPrimitive('a-grid', {
     src: 'material.src'
   }
 });
-},{}],112:[function(require,module,exports) {
+},{}],145:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG_TO_RAD: .0174532925, RAD_TO_DEG: 57.2957795, SQRT3: Math.sqrt(3), TILE: "tile", ENT: "entity", STR: "structure", HEX: "hex", SQR: "square", ABS: "abstract" };vg.Board = function (e, t) {
@@ -127157,7 +127157,7 @@ var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG
     }, t.open("GET", s, !0), t.setRequestHeader("Accept", "application/json"), t.setRequestHeader("Content-Type", "application/json"), t.send("");
   } };
 //# sourceMappingURL=hex-grid.min.js.map
-},{}],113:[function(require,module,exports) {
+},{}],152:[function(require,module,exports) {
 module.exports = {
   "size": 5,
   "cellSize": 10,
@@ -127221,7 +127221,7 @@ module.exports = {
     "userData": {}
   }]
 };
-},{}],73:[function(require,module,exports) {
+},{}],104:[function(require,module,exports) {
 var vg = require('../../lib/hex-grid.min.js');
 var defaultHexGrid = require('../../lib/default-hex-grid');
 
@@ -127278,7 +127278,7 @@ module.exports.Component = AFRAME.registerComponent('hexgrid', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/hex-grid.min.js":112,"../../lib/default-hex-grid":113}],74:[function(require,module,exports) {
+},{"../../lib/hex-grid.min.js":145,"../../lib/default-hex-grid":152}],105:[function(require,module,exports) {
 /**
  * Flat-shaded ocean primitive.
  *
@@ -127377,7 +127377,7 @@ module.exports.Component = AFRAME.registerComponent('ocean', {
     this.mesh.geometry.verticesNeedUpdate = true;
   }
 });
-},{}],75:[function(require,module,exports) {
+},{}],106:[function(require,module,exports) {
 /**
  * Tube following a custom path.
  *
@@ -127438,18 +127438,18 @@ module.exports.Component = AFRAME.registerComponent('tube', {
     if (this.mesh) this.el.removeObject3D('mesh');
   }
 });
-},{}],31:[function(require,module,exports) {
+},{}],41:[function(require,module,exports) {
 require('./a-grid');
 require('./a-hexgrid');
 require('./a-ocean');
 require('./a-tube');
-},{"./a-grid":72,"./a-hexgrid":73,"./a-ocean":74,"./a-tube":75}],8:[function(require,module,exports) {
+},{"./a-grid":103,"./a-hexgrid":104,"./a-ocean":105,"./a-tube":106}],9:[function(require,module,exports) {
 require('./src/controls');
 require('./src/loaders');
 require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
-},{"./src/controls":27,"./src/loaders":28,"./src/misc":29,"./src/pathfinding":30,"./src/primitives":31}],122:[function(require,module,exports) {
+},{"./src/controls":37,"./src/loaders":39,"./src/misc":38,"./src/pathfinding":40,"./src/primitives":41}],10:[function(require,module,exports) {
 var debug = AFRAME.utils.debug;
 var coordinates = AFRAME.utils.coordinates;
 
@@ -127556,7 +127556,11424 @@ AFRAME.registerComponent('look-at', {
   }
 });
 
-},{}],146:[function(require,module,exports) {
+},{}],172:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.visit = visit;
+exports.visitInParallel = visitInParallel;
+exports.visitWithTypeInfo = visitWithTypeInfo;
+exports.getVisitFn = getVisitFn;
+
+
+/**
+ * A visitor is comprised of visit functions, which are called on each node
+ * during the visitor's traversal.
+ */
+
+
+/**
+ * A visitor is provided to visit, it contains the collection of
+ * relevant functions to be called during the visitor's traversal.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+var QueryDocumentKeys = exports.QueryDocumentKeys = {
+  Name: [],
+
+  Document: ['definitions'],
+  OperationDefinition: ['name', 'variableDefinitions', 'directives', 'selectionSet'],
+  VariableDefinition: ['variable', 'type', 'defaultValue'],
+  Variable: ['name'],
+  SelectionSet: ['selections'],
+  Field: ['alias', 'name', 'arguments', 'directives', 'selectionSet'],
+  Argument: ['name', 'value'],
+
+  FragmentSpread: ['name', 'directives'],
+  InlineFragment: ['typeCondition', 'directives', 'selectionSet'],
+  FragmentDefinition: ['name',
+  // Note: fragment variable definitions are experimental and may be changed
+  // or removed in the future.
+  'variableDefinitions', 'typeCondition', 'directives', 'selectionSet'],
+
+  IntValue: [],
+  FloatValue: [],
+  StringValue: [],
+  BooleanValue: [],
+  NullValue: [],
+  EnumValue: [],
+  ListValue: ['values'],
+  ObjectValue: ['fields'],
+  ObjectField: ['name', 'value'],
+
+  Directive: ['name', 'arguments'],
+
+  NamedType: ['name'],
+  ListType: ['type'],
+  NonNullType: ['type'],
+
+  SchemaDefinition: ['directives', 'operationTypes'],
+  OperationTypeDefinition: ['type'],
+
+  ScalarTypeDefinition: ['description', 'name', 'directives'],
+  ObjectTypeDefinition: ['description', 'name', 'interfaces', 'directives', 'fields'],
+  FieldDefinition: ['description', 'name', 'arguments', 'type', 'directives'],
+  InputValueDefinition: ['description', 'name', 'type', 'defaultValue', 'directives'],
+  InterfaceTypeDefinition: ['description', 'name', 'directives', 'fields'],
+  UnionTypeDefinition: ['description', 'name', 'directives', 'types'],
+  EnumTypeDefinition: ['description', 'name', 'directives', 'values'],
+  EnumValueDefinition: ['description', 'name', 'directives'],
+  InputObjectTypeDefinition: ['description', 'name', 'directives', 'fields'],
+
+  ScalarTypeExtension: ['name', 'directives'],
+  ObjectTypeExtension: ['name', 'interfaces', 'directives', 'fields'],
+  InterfaceTypeExtension: ['name', 'directives', 'fields'],
+  UnionTypeExtension: ['name', 'directives', 'types'],
+  EnumTypeExtension: ['name', 'directives', 'values'],
+  InputObjectTypeExtension: ['name', 'directives', 'fields'],
+
+  DirectiveDefinition: ['description', 'name', 'arguments', 'locations']
+};
+
+/**
+ * A KeyMap describes each the traversable properties of each kind of node.
+ */
+var BREAK = exports.BREAK = {};
+
+/**
+ * visit() will walk through an AST using a depth first traversal, calling
+ * the visitor's enter function at each node in the traversal, and calling the
+ * leave function after visiting that node and all of its child nodes.
+ *
+ * By returning different values from the enter and leave functions, the
+ * behavior of the visitor can be altered, including skipping over a sub-tree of
+ * the AST (by returning false), editing the AST by returning a value or null
+ * to remove the value, or to stop the whole traversal by returning BREAK.
+ *
+ * When using visit() to edit an AST, the original AST will not be modified, and
+ * a new version of the AST with the changes applied will be returned from the
+ * visit function.
+ *
+ *     const editedAST = visit(ast, {
+ *       enter(node, key, parent, path, ancestors) {
+ *         // @return
+ *         //   undefined: no action
+ *         //   false: skip visiting this node
+ *         //   visitor.BREAK: stop visiting altogether
+ *         //   null: delete this node
+ *         //   any value: replace this node with the returned value
+ *       },
+ *       leave(node, key, parent, path, ancestors) {
+ *         // @return
+ *         //   undefined: no action
+ *         //   false: no action
+ *         //   visitor.BREAK: stop visiting altogether
+ *         //   null: delete this node
+ *         //   any value: replace this node with the returned value
+ *       }
+ *     });
+ *
+ * Alternatively to providing enter() and leave() functions, a visitor can
+ * instead provide functions named the same as the kinds of AST nodes, or
+ * enter/leave visitors at a named key, leading to four permutations of
+ * visitor API:
+ *
+ * 1) Named visitors triggered when entering a node a specific kind.
+ *
+ *     visit(ast, {
+ *       Kind(node) {
+ *         // enter the "Kind" node
+ *       }
+ *     })
+ *
+ * 2) Named visitors that trigger upon entering and leaving a node of
+ *    a specific kind.
+ *
+ *     visit(ast, {
+ *       Kind: {
+ *         enter(node) {
+ *           // enter the "Kind" node
+ *         }
+ *         leave(node) {
+ *           // leave the "Kind" node
+ *         }
+ *       }
+ *     })
+ *
+ * 3) Generic visitors that trigger upon entering and leaving any node.
+ *
+ *     visit(ast, {
+ *       enter(node) {
+ *         // enter any node
+ *       },
+ *       leave(node) {
+ *         // leave any node
+ *       }
+ *     })
+ *
+ * 4) Parallel visitors for entering and leaving nodes of a specific kind.
+ *
+ *     visit(ast, {
+ *       enter: {
+ *         Kind(node) {
+ *           // enter the "Kind" node
+ *         }
+ *       },
+ *       leave: {
+ *         Kind(node) {
+ *           // leave the "Kind" node
+ *         }
+ *       }
+ *     })
+ */
+function visit(root, visitor) {
+  var visitorKeys = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : QueryDocumentKeys;
+
+  /* eslint-disable no-undef-init */
+  var stack = undefined;
+  var inArray = Array.isArray(root);
+  var keys = [root];
+  var index = -1;
+  var edits = [];
+  var node = undefined;
+  var key = undefined;
+  var parent = undefined;
+  var path = [];
+  var ancestors = [];
+  var newRoot = root;
+  /* eslint-enable no-undef-init */
+
+  do {
+    index++;
+    var isLeaving = index === keys.length;
+    var isEdited = isLeaving && edits.length !== 0;
+    if (isLeaving) {
+      key = ancestors.length === 0 ? undefined : path[path.length - 1];
+      node = parent;
+      parent = ancestors.pop();
+      if (isEdited) {
+        if (inArray) {
+          node = node.slice();
+        } else {
+          var clone = {};
+          for (var k in node) {
+            if (node.hasOwnProperty(k)) {
+              clone[k] = node[k];
+            }
+          }
+          node = clone;
+        }
+        var editOffset = 0;
+        for (var ii = 0; ii < edits.length; ii++) {
+          var editKey = edits[ii][0];
+          var editValue = edits[ii][1];
+          if (inArray) {
+            editKey -= editOffset;
+          }
+          if (inArray && editValue === null) {
+            node.splice(editKey, 1);
+            editOffset++;
+          } else {
+            node[editKey] = editValue;
+          }
+        }
+      }
+      index = stack.index;
+      keys = stack.keys;
+      edits = stack.edits;
+      inArray = stack.inArray;
+      stack = stack.prev;
+    } else {
+      key = parent ? inArray ? index : keys[index] : undefined;
+      node = parent ? parent[key] : newRoot;
+      if (node === null || node === undefined) {
+        continue;
+      }
+      if (parent) {
+        path.push(key);
+      }
+    }
+
+    var result = void 0;
+    if (!Array.isArray(node)) {
+      if (!isNode(node)) {
+        throw new Error('Invalid AST Node: ' + JSON.stringify(node));
+      }
+      var visitFn = getVisitFn(visitor, node.kind, isLeaving);
+      if (visitFn) {
+        result = visitFn.call(visitor, node, key, parent, path, ancestors);
+
+        if (result === BREAK) {
+          break;
+        }
+
+        if (result === false) {
+          if (!isLeaving) {
+            path.pop();
+            continue;
+          }
+        } else if (result !== undefined) {
+          edits.push([key, result]);
+          if (!isLeaving) {
+            if (isNode(result)) {
+              node = result;
+            } else {
+              path.pop();
+              continue;
+            }
+          }
+        }
+      }
+    }
+
+    if (result === undefined && isEdited) {
+      edits.push([key, node]);
+    }
+
+    if (isLeaving) {
+      path.pop();
+    } else {
+      stack = { inArray: inArray, index: index, keys: keys, edits: edits, prev: stack };
+      inArray = Array.isArray(node);
+      keys = inArray ? node : visitorKeys[node.kind] || [];
+      index = -1;
+      edits = [];
+      if (parent) {
+        ancestors.push(parent);
+      }
+      parent = node;
+    }
+  } while (stack !== undefined);
+
+  if (edits.length !== 0) {
+    newRoot = edits[edits.length - 1][1];
+  }
+
+  return newRoot;
+}
+
+function isNode(maybeNode) {
+  return Boolean(maybeNode && typeof maybeNode.kind === 'string');
+}
+
+/**
+ * Creates a new visitor instance which delegates to many visitors to run in
+ * parallel. Each visitor will be visited for each node before moving on.
+ *
+ * If a prior visitor edits a node, no following visitors will see that node.
+ */
+function visitInParallel(visitors) {
+  var skipping = new Array(visitors.length);
+
+  return {
+    enter: function enter(node) {
+      for (var i = 0; i < visitors.length; i++) {
+        if (!skipping[i]) {
+          var fn = getVisitFn(visitors[i], node.kind, /* isLeaving */false);
+          if (fn) {
+            var result = fn.apply(visitors[i], arguments);
+            if (result === false) {
+              skipping[i] = node;
+            } else if (result === BREAK) {
+              skipping[i] = BREAK;
+            } else if (result !== undefined) {
+              return result;
+            }
+          }
+        }
+      }
+    },
+    leave: function leave(node) {
+      for (var i = 0; i < visitors.length; i++) {
+        if (!skipping[i]) {
+          var fn = getVisitFn(visitors[i], node.kind, /* isLeaving */true);
+          if (fn) {
+            var result = fn.apply(visitors[i], arguments);
+            if (result === BREAK) {
+              skipping[i] = BREAK;
+            } else if (result !== undefined && result !== false) {
+              return result;
+            }
+          }
+        } else if (skipping[i] === node) {
+          skipping[i] = null;
+        }
+      }
+    }
+  };
+}
+
+/**
+ * Creates a new visitor instance which maintains a provided TypeInfo instance
+ * along with visiting visitor.
+ */
+function visitWithTypeInfo(typeInfo, visitor) {
+  return {
+    enter: function enter(node) {
+      typeInfo.enter(node);
+      var fn = getVisitFn(visitor, node.kind, /* isLeaving */false);
+      if (fn) {
+        var result = fn.apply(visitor, arguments);
+        if (result !== undefined) {
+          typeInfo.leave(node);
+          if (isNode(result)) {
+            typeInfo.enter(result);
+          }
+        }
+        return result;
+      }
+    },
+    leave: function leave(node) {
+      var fn = getVisitFn(visitor, node.kind, /* isLeaving */true);
+      var result = void 0;
+      if (fn) {
+        result = fn.apply(visitor, arguments);
+      }
+      typeInfo.leave(node);
+      return result;
+    }
+  };
+}
+
+/**
+ * Given a visitor instance, if it is leaving or not, and a node kind, return
+ * the function the visitor runtime should call.
+ */
+function getVisitFn(visitor, kind, isLeaving) {
+  var kindVisitor = visitor[kind];
+  if (kindVisitor) {
+    if (!isLeaving && typeof kindVisitor === 'function') {
+      // { Kind() {} }
+      return kindVisitor;
+    }
+    var kindSpecificVisitor = isLeaving ? kindVisitor.leave : kindVisitor.enter;
+    if (typeof kindSpecificVisitor === 'function') {
+      // { Kind: { enter() {}, leave() {} } }
+      return kindSpecificVisitor;
+    }
+  } else {
+    var specificVisitor = isLeaving ? visitor.leave : visitor.enter;
+    if (specificVisitor) {
+      if (typeof specificVisitor === 'function') {
+        // { enter() {}, leave() {} }
+        return specificVisitor;
+      }
+      var specificKindVisitor = specificVisitor[kind];
+      if (typeof specificKindVisitor === 'function') {
+        // { enter: { Kind() {} }, leave: { Kind() {} } }
+        return specificKindVisitor;
+      }
+    }
+  }
+}
+},{}],153:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.print = print;
+
+var _visitor = require('./visitor');
+
+/**
+ * Converts an AST into a string, using one set of reasonable
+ * formatting rules.
+ */
+function print(ast) {
+  return (0, _visitor.visit)(ast, { leave: printDocASTReducer });
+} /**
+   * Copyright (c) 2015-present, Facebook, Inc.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+var printDocASTReducer = {
+  Name: function Name(node) {
+    return node.value;
+  },
+  Variable: function Variable(node) {
+    return '$' + node.name;
+  },
+
+  // Document
+
+  Document: function Document(node) {
+    return join(node.definitions, '\n\n') + '\n';
+  },
+
+  OperationDefinition: function OperationDefinition(node) {
+    var op = node.operation;
+    var name = node.name;
+    var varDefs = wrap('(', join(node.variableDefinitions, ', '), ')');
+    var directives = join(node.directives, ' ');
+    var selectionSet = node.selectionSet;
+    // Anonymous queries with no directives or variable definitions can use
+    // the query short form.
+    return !name && !directives && !varDefs && op === 'query' ? selectionSet : join([op, join([name, varDefs]), directives, selectionSet], ' ');
+  },
+
+
+  VariableDefinition: function VariableDefinition(_ref) {
+    var variable = _ref.variable,
+        type = _ref.type,
+        defaultValue = _ref.defaultValue;
+    return variable + ': ' + type + wrap(' = ', defaultValue);
+  },
+
+  SelectionSet: function SelectionSet(_ref2) {
+    var selections = _ref2.selections;
+    return block(selections);
+  },
+
+  Field: function Field(_ref3) {
+    var alias = _ref3.alias,
+        name = _ref3.name,
+        args = _ref3.arguments,
+        directives = _ref3.directives,
+        selectionSet = _ref3.selectionSet;
+    return join([wrap('', alias, ': ') + name + wrap('(', join(args, ', '), ')'), join(directives, ' '), selectionSet], ' ');
+  },
+
+  Argument: function Argument(_ref4) {
+    var name = _ref4.name,
+        value = _ref4.value;
+    return name + ': ' + value;
+  },
+
+  // Fragments
+
+  FragmentSpread: function FragmentSpread(_ref5) {
+    var name = _ref5.name,
+        directives = _ref5.directives;
+    return '...' + name + wrap(' ', join(directives, ' '));
+  },
+
+  InlineFragment: function InlineFragment(_ref6) {
+    var typeCondition = _ref6.typeCondition,
+        directives = _ref6.directives,
+        selectionSet = _ref6.selectionSet;
+    return join(['...', wrap('on ', typeCondition), join(directives, ' '), selectionSet], ' ');
+  },
+
+  FragmentDefinition: function FragmentDefinition(_ref7) {
+    var name = _ref7.name,
+        typeCondition = _ref7.typeCondition,
+        variableDefinitions = _ref7.variableDefinitions,
+        directives = _ref7.directives,
+        selectionSet = _ref7.selectionSet;
+    return (
+      // Note: fragment variable definitions are experimental and may be changed
+      // or removed in the future.
+      'fragment ' + name + wrap('(', join(variableDefinitions, ', '), ')') + ' ' + ('on ' + typeCondition + ' ' + wrap('', join(directives, ' '), ' ')) + selectionSet
+    );
+  },
+
+  // Value
+
+  IntValue: function IntValue(_ref8) {
+    var value = _ref8.value;
+    return value;
+  },
+  FloatValue: function FloatValue(_ref9) {
+    var value = _ref9.value;
+    return value;
+  },
+  StringValue: function StringValue(_ref10, key) {
+    var value = _ref10.value,
+        isBlockString = _ref10.block;
+    return isBlockString ? printBlockString(value, key === 'description') : JSON.stringify(value);
+  },
+  BooleanValue: function BooleanValue(_ref11) {
+    var value = _ref11.value;
+    return value ? 'true' : 'false';
+  },
+  NullValue: function NullValue() {
+    return 'null';
+  },
+  EnumValue: function EnumValue(_ref12) {
+    var value = _ref12.value;
+    return value;
+  },
+  ListValue: function ListValue(_ref13) {
+    var values = _ref13.values;
+    return '[' + join(values, ', ') + ']';
+  },
+  ObjectValue: function ObjectValue(_ref14) {
+    var fields = _ref14.fields;
+    return '{' + join(fields, ', ') + '}';
+  },
+  ObjectField: function ObjectField(_ref15) {
+    var name = _ref15.name,
+        value = _ref15.value;
+    return name + ': ' + value;
+  },
+
+  // Directive
+
+  Directive: function Directive(_ref16) {
+    var name = _ref16.name,
+        args = _ref16.arguments;
+    return '@' + name + wrap('(', join(args, ', '), ')');
+  },
+
+  // Type
+
+  NamedType: function NamedType(_ref17) {
+    var name = _ref17.name;
+    return name;
+  },
+  ListType: function ListType(_ref18) {
+    var type = _ref18.type;
+    return '[' + type + ']';
+  },
+  NonNullType: function NonNullType(_ref19) {
+    var type = _ref19.type;
+    return type + '!';
+  },
+
+  // Type System Definitions
+
+  SchemaDefinition: function SchemaDefinition(_ref20) {
+    var directives = _ref20.directives,
+        operationTypes = _ref20.operationTypes;
+    return join(['schema', join(directives, ' '), block(operationTypes)], ' ');
+  },
+
+  OperationTypeDefinition: function OperationTypeDefinition(_ref21) {
+    var operation = _ref21.operation,
+        type = _ref21.type;
+    return operation + ': ' + type;
+  },
+
+  ScalarTypeDefinition: addDescription(function (_ref22) {
+    var name = _ref22.name,
+        directives = _ref22.directives;
+    return join(['scalar', name, join(directives, ' ')], ' ');
+  }),
+
+  ObjectTypeDefinition: addDescription(function (_ref23) {
+    var name = _ref23.name,
+        interfaces = _ref23.interfaces,
+        directives = _ref23.directives,
+        fields = _ref23.fields;
+    return join(['type', name, wrap('implements ', join(interfaces, ' & ')), join(directives, ' '), block(fields)], ' ');
+  }),
+
+  FieldDefinition: addDescription(function (_ref24) {
+    var name = _ref24.name,
+        args = _ref24.arguments,
+        type = _ref24.type,
+        directives = _ref24.directives;
+    return name + wrap('(', join(args, ', '), ')') + ': ' + type + wrap(' ', join(directives, ' '));
+  }),
+
+  InputValueDefinition: addDescription(function (_ref25) {
+    var name = _ref25.name,
+        type = _ref25.type,
+        defaultValue = _ref25.defaultValue,
+        directives = _ref25.directives;
+    return join([name + ': ' + type, wrap('= ', defaultValue), join(directives, ' ')], ' ');
+  }),
+
+  InterfaceTypeDefinition: addDescription(function (_ref26) {
+    var name = _ref26.name,
+        directives = _ref26.directives,
+        fields = _ref26.fields;
+    return join(['interface', name, join(directives, ' '), block(fields)], ' ');
+  }),
+
+  UnionTypeDefinition: addDescription(function (_ref27) {
+    var name = _ref27.name,
+        directives = _ref27.directives,
+        types = _ref27.types;
+    return join(['union', name, join(directives, ' '), types && types.length !== 0 ? '= ' + join(types, ' | ') : ''], ' ');
+  }),
+
+  EnumTypeDefinition: addDescription(function (_ref28) {
+    var name = _ref28.name,
+        directives = _ref28.directives,
+        values = _ref28.values;
+    return join(['enum', name, join(directives, ' '), block(values)], ' ');
+  }),
+
+  EnumValueDefinition: addDescription(function (_ref29) {
+    var name = _ref29.name,
+        directives = _ref29.directives;
+    return join([name, join(directives, ' ')], ' ');
+  }),
+
+  InputObjectTypeDefinition: addDescription(function (_ref30) {
+    var name = _ref30.name,
+        directives = _ref30.directives,
+        fields = _ref30.fields;
+    return join(['input', name, join(directives, ' '), block(fields)], ' ');
+  }),
+
+  ScalarTypeExtension: function ScalarTypeExtension(_ref31) {
+    var name = _ref31.name,
+        directives = _ref31.directives;
+    return join(['extend scalar', name, join(directives, ' ')], ' ');
+  },
+
+  ObjectTypeExtension: function ObjectTypeExtension(_ref32) {
+    var name = _ref32.name,
+        interfaces = _ref32.interfaces,
+        directives = _ref32.directives,
+        fields = _ref32.fields;
+    return join(['extend type', name, wrap('implements ', join(interfaces, ' & ')), join(directives, ' '), block(fields)], ' ');
+  },
+
+  InterfaceTypeExtension: function InterfaceTypeExtension(_ref33) {
+    var name = _ref33.name,
+        directives = _ref33.directives,
+        fields = _ref33.fields;
+    return join(['extend interface', name, join(directives, ' '), block(fields)], ' ');
+  },
+
+  UnionTypeExtension: function UnionTypeExtension(_ref34) {
+    var name = _ref34.name,
+        directives = _ref34.directives,
+        types = _ref34.types;
+    return join(['extend union', name, join(directives, ' '), types && types.length !== 0 ? '= ' + join(types, ' | ') : ''], ' ');
+  },
+
+  EnumTypeExtension: function EnumTypeExtension(_ref35) {
+    var name = _ref35.name,
+        directives = _ref35.directives,
+        values = _ref35.values;
+    return join(['extend enum', name, join(directives, ' '), block(values)], ' ');
+  },
+
+  InputObjectTypeExtension: function InputObjectTypeExtension(_ref36) {
+    var name = _ref36.name,
+        directives = _ref36.directives,
+        fields = _ref36.fields;
+    return join(['extend input', name, join(directives, ' '), block(fields)], ' ');
+  },
+
+  DirectiveDefinition: addDescription(function (_ref37) {
+    var name = _ref37.name,
+        args = _ref37.arguments,
+        locations = _ref37.locations;
+    return 'directive @' + name + wrap('(', join(args, ', '), ')') + ' on ' + join(locations, ' | ');
+  })
+};
+
+function addDescription(cb) {
+  return function (node) {
+    return join([node.description, cb(node)], '\n');
+  };
+}
+
+/**
+ * Given maybeArray, print an empty string if it is null or empty, otherwise
+ * print all items together separated by separator if provided
+ */
+function join(maybeArray, separator) {
+  return maybeArray ? maybeArray.filter(function (x) {
+    return x;
+  }).join(separator || '') : '';
+}
+
+/**
+ * Given array, print each item on its own line, wrapped in an
+ * indented "{ }" block.
+ */
+function block(array) {
+  return array && array.length !== 0 ? '{\n' + indent(join(array, '\n')) + '\n}' : '';
+}
+
+/**
+ * If maybeString is not null or empty, then wrap with start and end, otherwise
+ * print an empty string.
+ */
+function wrap(start, maybeString, end) {
+  return maybeString ? start + maybeString + (end || '') : '';
+}
+
+function indent(maybeString) {
+  return maybeString && '  ' + maybeString.replace(/\n/g, '\n  ');
+}
+
+/**
+ * Print a block string in the indented block form by adding a leading and
+ * trailing blank line. However, if a block string starts with whitespace and is
+ * a single-line, adding a leading blank line would strip that whitespace.
+ */
+function printBlockString(value, isDescription) {
+  var escaped = value.replace(/"""/g, '\\"""');
+  return (value[0] === ' ' || value[0] === '\t') && value.indexOf('\n') === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
+}
+},{"./visitor":172}],212:[function(require,module,exports) {
+'use strict';
+
+module.exports = function (data, opts) {
+    if (!opts) opts = {};
+    if (typeof opts === 'function') opts = { cmp: opts };
+    var cycles = (typeof opts.cycles === 'boolean') ? opts.cycles : false;
+
+    var cmp = opts.cmp && (function (f) {
+        return function (node) {
+            return function (a, b) {
+                var aobj = { key: a, value: node[a] };
+                var bobj = { key: b, value: node[b] };
+                return f(aobj, bobj);
+            };
+        };
+    })(opts.cmp);
+
+    var seen = [];
+    return (function stringify (node) {
+        if (node && node.toJSON && typeof node.toJSON === 'function') {
+            node = node.toJSON();
+        }
+
+        if (node === undefined) return;
+        if (typeof node == 'number') return isFinite(node) ? '' + node : 'null';
+        if (typeof node !== 'object') return JSON.stringify(node);
+
+        var i, out;
+        if (Array.isArray(node)) {
+            out = '[';
+            for (i = 0; i < node.length; i++) {
+                if (i) out += ',';
+                out += stringify(node[i]) || 'null';
+            }
+            return out + ']';
+        }
+
+        if (node === null) return 'null';
+
+        if (seen.indexOf(node) !== -1) {
+            if (cycles) return JSON.stringify('__cycle__');
+            throw new TypeError('Converting circular structure to JSON');
+        }
+
+        var seenIndex = seen.push(node) - 1;
+        var keys = Object.keys(node).sort(cmp && cmp(node));
+        out = '';
+        for (i = 0; i < keys.length; i++) {
+            var key = keys[i];
+            var value = stringify(node[key]);
+
+            if (!value) continue;
+            if (out) out += ',';
+            out += JSON.stringify(key) + ':' + value;
+        }
+        seen.splice(seenIndex, 1);
+        return '{' + out + '}';
+    })(data);
+};
+
+},{}],183:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isScalarValue = isScalarValue;
+exports.isNumberValue = isNumberValue;
+exports.valueToObjectRepresentation = valueToObjectRepresentation;
+exports.storeKeyNameFromField = storeKeyNameFromField;
+exports.getStoreKeyName = getStoreKeyName;
+exports.argumentsObjectFromField = argumentsObjectFromField;
+exports.resultKeyNameFromField = resultKeyNameFromField;
+exports.isField = isField;
+exports.isInlineFragment = isInlineFragment;
+exports.isIdValue = isIdValue;
+exports.toIdValue = toIdValue;
+exports.isJsonValue = isJsonValue;
+exports.valueFromNode = valueFromNode;
+
+var _fastJsonStableStringify = require('fast-json-stable-stringify');
+
+var _fastJsonStableStringify2 = _interopRequireDefault(_fastJsonStableStringify);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+function isScalarValue(value) {
+    return ['StringValue', 'BooleanValue', 'EnumValue'].indexOf(value.kind) > -1;
+}
+function isNumberValue(value) {
+    return ['IntValue', 'FloatValue'].indexOf(value.kind) > -1;
+}
+function isStringValue(value) {
+    return value.kind === 'StringValue';
+}
+function isBooleanValue(value) {
+    return value.kind === 'BooleanValue';
+}
+function isIntValue(value) {
+    return value.kind === 'IntValue';
+}
+function isFloatValue(value) {
+    return value.kind === 'FloatValue';
+}
+function isVariable(value) {
+    return value.kind === 'Variable';
+}
+function isObjectValue(value) {
+    return value.kind === 'ObjectValue';
+}
+function isListValue(value) {
+    return value.kind === 'ListValue';
+}
+function isEnumValue(value) {
+    return value.kind === 'EnumValue';
+}
+function isNullValue(value) {
+    return value.kind === 'NullValue';
+}
+function valueToObjectRepresentation(argObj, name, value, variables) {
+    if (isIntValue(value) || isFloatValue(value)) {
+        argObj[name.value] = Number(value.value);
+    } else if (isBooleanValue(value) || isStringValue(value)) {
+        argObj[name.value] = value.value;
+    } else if (isObjectValue(value)) {
+        var nestedArgObj_1 = {};
+        value.fields.map(function (obj) {
+            return valueToObjectRepresentation(nestedArgObj_1, obj.name, obj.value, variables);
+        });
+        argObj[name.value] = nestedArgObj_1;
+    } else if (isVariable(value)) {
+        var variableValue = (variables || {})[value.name.value];
+        argObj[name.value] = variableValue;
+    } else if (isListValue(value)) {
+        argObj[name.value] = value.values.map(function (listValue) {
+            var nestedArgArrayObj = {};
+            valueToObjectRepresentation(nestedArgArrayObj, name, listValue, variables);
+            return nestedArgArrayObj[name.value];
+        });
+    } else if (isEnumValue(value)) {
+        argObj[name.value] = value.value;
+    } else if (isNullValue(value)) {
+        argObj[name.value] = null;
+    } else {
+        throw new Error("The inline argument \"" + name.value + "\" of kind \"" + value.kind + "\"" + 'is not supported. Use variables instead of inline arguments to ' + 'overcome this limitation.');
+    }
+}
+function storeKeyNameFromField(field, variables) {
+    var directivesObj = null;
+    if (field.directives) {
+        directivesObj = {};
+        field.directives.forEach(function (directive) {
+            directivesObj[directive.name.value] = {};
+            if (directive.arguments) {
+                directive.arguments.forEach(function (_a) {
+                    var name = _a.name,
+                        value = _a.value;
+                    return valueToObjectRepresentation(directivesObj[directive.name.value], name, value, variables);
+                });
+            }
+        });
+    }
+    var argObj = null;
+    if (field.arguments && field.arguments.length) {
+        argObj = {};
+        field.arguments.forEach(function (_a) {
+            var name = _a.name,
+                value = _a.value;
+            return valueToObjectRepresentation(argObj, name, value, variables);
+        });
+    }
+    return getStoreKeyName(field.name.value, argObj, directivesObj);
+}
+var KNOWN_DIRECTIVES = ['connection', 'include', 'skip', 'client', 'rest', 'export'];
+function getStoreKeyName(fieldName, args, directives) {
+    if (directives && directives['connection'] && directives['connection']['key']) {
+        if (directives['connection']['filter'] && directives['connection']['filter'].length > 0) {
+            var filterKeys = directives['connection']['filter'] ? directives['connection']['filter'] : [];
+            filterKeys.sort();
+            var queryArgs_1 = args;
+            var filteredArgs_1 = {};
+            filterKeys.forEach(function (key) {
+                filteredArgs_1[key] = queryArgs_1[key];
+            });
+            return directives['connection']['key'] + "(" + JSON.stringify(filteredArgs_1) + ")";
+        } else {
+            return directives['connection']['key'];
+        }
+    }
+    var completeFieldName = fieldName;
+    if (args) {
+        // We can't use `JSON.stringify` here since it's non-deterministic,
+        // and can lead to different store key names being created even though
+        // the `args` object used during creation has the same properties/values.
+        var stringifiedArgs = (0, _fastJsonStableStringify2.default)(args);
+        completeFieldName += "(" + stringifiedArgs + ")";
+    }
+    if (directives) {
+        Object.keys(directives).forEach(function (key) {
+            if (KNOWN_DIRECTIVES.indexOf(key) !== -1) return;
+            if (directives[key] && Object.keys(directives[key]).length) {
+                completeFieldName += "@" + key + "(" + JSON.stringify(directives[key]) + ")";
+            } else {
+                completeFieldName += "@" + key;
+            }
+        });
+    }
+    return completeFieldName;
+}
+function argumentsObjectFromField(field, variables) {
+    if (field.arguments && field.arguments.length) {
+        var argObj_1 = {};
+        field.arguments.forEach(function (_a) {
+            var name = _a.name,
+                value = _a.value;
+            return valueToObjectRepresentation(argObj_1, name, value, variables);
+        });
+        return argObj_1;
+    }
+    return null;
+}
+function resultKeyNameFromField(field) {
+    return field.alias ? field.alias.value : field.name.value;
+}
+function isField(selection) {
+    return selection.kind === 'Field';
+}
+function isInlineFragment(selection) {
+    return selection.kind === 'InlineFragment';
+}
+function isIdValue(idObject) {
+    return idObject && idObject.type === 'id';
+}
+function toIdValue(idConfig, generated) {
+    if (generated === void 0) {
+        generated = false;
+    }
+    return __assign({ type: 'id', generated: generated }, typeof idConfig === 'string' ? { id: idConfig, typename: undefined } : idConfig);
+}
+function isJsonValue(jsonObject) {
+    return jsonObject != null && typeof jsonObject === 'object' && jsonObject.type === 'json';
+}
+function defaultValueFromVariable(node) {
+    throw new Error("Variable nodes are not supported by valueFromNode");
+}
+/**
+ * Evaluate a ValueNode and yield its value in its natural JS form.
+ */
+function valueFromNode(node, onVariable) {
+    if (onVariable === void 0) {
+        onVariable = defaultValueFromVariable;
+    }
+    switch (node.kind) {
+        case 'Variable':
+            return onVariable(node);
+        case 'NullValue':
+            return null;
+        case 'IntValue':
+            return parseInt(node.value, 10);
+        case 'FloatValue':
+            return parseFloat(node.value);
+        case 'ListValue':
+            return node.values.map(function (v) {
+                return valueFromNode(v, onVariable);
+            });
+        case 'ObjectValue':
+            {
+                var value = {};
+                for (var _i = 0, _a = node.fields; _i < _a.length; _i++) {
+                    var field = _a[_i];
+                    value[field.name.value] = valueFromNode(field.value, onVariable);
+                }
+                return value;
+            }
+        default:
+            return node.value;
+    }
+}
+//# sourceMappingURL=storeUtils.js.map
+},{"fast-json-stable-stringify":212}],180:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getDirectiveInfoFromField = getDirectiveInfoFromField;
+exports.shouldInclude = shouldInclude;
+exports.flattenSelections = flattenSelections;
+exports.getDirectiveNames = getDirectiveNames;
+exports.hasDirectives = hasDirectives;
+
+var _storeUtils = require('./storeUtils');
+
+function getDirectiveInfoFromField(field, variables) {
+    if (field.directives && field.directives.length) {
+        var directiveObj_1 = {};
+        field.directives.forEach(function (directive) {
+            directiveObj_1[directive.name.value] = (0, _storeUtils.argumentsObjectFromField)(directive, variables);
+        });
+        return directiveObj_1;
+    }
+    return null;
+}
+function shouldInclude(selection, variables) {
+    if (variables === void 0) {
+        variables = {};
+    }
+    if (!selection.directives) {
+        return true;
+    }
+    var res = true;
+    selection.directives.forEach(function (directive) {
+        // TODO should move this validation to GraphQL validation once that's implemented.
+        if (directive.name.value !== 'skip' && directive.name.value !== 'include') {
+            // Just don't worry about directives we don't understand
+            return;
+        }
+        //evaluate the "if" argument and skip (i.e. return undefined) if it evaluates to true.
+        var directiveArguments = directive.arguments || [];
+        var directiveName = directive.name.value;
+        if (directiveArguments.length !== 1) {
+            throw new Error("Incorrect number of arguments for the @" + directiveName + " directive.");
+        }
+        var ifArgument = directiveArguments[0];
+        if (!ifArgument.name || ifArgument.name.value !== 'if') {
+            throw new Error("Invalid argument for the @" + directiveName + " directive.");
+        }
+        var ifValue = directiveArguments[0].value;
+        var evaledValue = false;
+        if (!ifValue || ifValue.kind !== 'BooleanValue') {
+            // means it has to be a variable value if this is a valid @skip or @include directive
+            if (ifValue.kind !== 'Variable') {
+                throw new Error("Argument for the @" + directiveName + " directive must be a variable or a boolean value.");
+            } else {
+                evaledValue = variables[ifValue.name.value];
+                if (evaledValue === undefined) {
+                    throw new Error("Invalid variable referenced in @" + directiveName + " directive.");
+                }
+            }
+        } else {
+            evaledValue = ifValue.value;
+        }
+        if (directiveName === 'skip') {
+            evaledValue = !evaledValue;
+        }
+        if (!evaledValue) {
+            res = false;
+        }
+    });
+    return res;
+}
+function flattenSelections(selection) {
+    if (!selection.selectionSet || !(selection.selectionSet.selections.length > 0)) return [selection];
+    return [selection].concat(selection.selectionSet.selections.map(function (selectionNode) {
+        return [selectionNode].concat(flattenSelections(selectionNode));
+    }).reduce(function (selections, selected) {
+        return selections.concat(selected);
+    }, []));
+}
+function getDirectiveNames(doc) {
+    // operation => [names of directives];
+    var directiveNames = doc.definitions.filter(function (definition) {
+        return definition.selectionSet && definition.selectionSet.selections;
+    })
+    // operation => [[Selection]]
+    .map(function (x) {
+        return flattenSelections(x);
+    })
+    // [[Selection]] => [Selection]
+    .reduce(function (selections, selected) {
+        return selections.concat(selected);
+    }, [])
+    // [Selection] => [Selection with Directives]
+    .filter(function (selection) {
+        return selection.directives && selection.directives.length > 0;
+    })
+    // [Selection with Directives] => [[Directives]]
+    .map(function (selection) {
+        return selection.directives;
+    })
+    // [[Directives]] => [Directives]
+    .reduce(function (directives, directive) {
+        return directives.concat(directive);
+    }, [])
+    // [Directives] => [Name]
+    .map(function (directive) {
+        return directive.name.value;
+    });
+    return directiveNames;
+}
+function hasDirectives(names, doc) {
+    return getDirectiveNames(doc).some(function (name) {
+        return names.indexOf(name) > -1;
+    });
+}
+//# sourceMappingURL=directives.js.map
+},{"./storeUtils":183}],179:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getFragmentQueryDocument = getFragmentQueryDocument;
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+/**
+ * Returns a query document which adds a single query operation that only
+ * spreads the target fragment inside of it.
+ *
+ * So for example a document of:
+ *
+ * ```graphql
+ * fragment foo on Foo { a b c }
+ * ```
+ *
+ * Turns into:
+ *
+ * ```graphql
+ * { ...foo }
+ *
+ * fragment foo on Foo { a b c }
+ * ```
+ *
+ * The target fragment will either be the only fragment in the document, or a
+ * fragment specified by the provided `fragmentName`. If there is more then one
+ * fragment, but a `fragmentName` was not defined then an error will be thrown.
+ */
+function getFragmentQueryDocument(document, fragmentName) {
+    var actualFragmentName = fragmentName;
+    // Build an array of all our fragment definitions that will be used for
+    // validations. We also do some validations on the other definitions in the
+    // document while building this list.
+    var fragments = [];
+    document.definitions.forEach(function (definition) {
+        // Throw an error if we encounter an operation definition because we will
+        // define our own operation definition later on.
+        if (definition.kind === 'OperationDefinition') {
+            throw new Error("Found a " + definition.operation + " operation" + (definition.name ? " named '" + definition.name.value + "'" : '') + ". " + 'No operations are allowed when using a fragment as a query. Only fragments are allowed.');
+        }
+        // Add our definition to the fragments array if it is a fragment
+        // definition.
+        if (definition.kind === 'FragmentDefinition') {
+            fragments.push(definition);
+        }
+    });
+    // If the user did not give us a fragment name then let us try to get a
+    // name from a single fragment in the definition.
+    if (typeof actualFragmentName === 'undefined') {
+        if (fragments.length !== 1) {
+            throw new Error("Found " + fragments.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
+        }
+        actualFragmentName = fragments[0].name.value;
+    }
+    // Generate a query document with an operation that simply spreads the
+    // fragment inside of it.
+    var query = __assign({}, document, { definitions: [{
+            kind: 'OperationDefinition',
+            operation: 'query',
+            selectionSet: {
+                kind: 'SelectionSet',
+                selections: [{
+                    kind: 'FragmentSpread',
+                    name: {
+                        kind: 'Name',
+                        value: actualFragmentName
+                    }
+                }]
+            }
+        }].concat(document.definitions) });
+    return query;
+}
+//# sourceMappingURL=fragments.js.map
+},{}],184:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.assign = assign;
+function assign(target) {
+    var sources = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        sources[_i - 1] = arguments[_i];
+    }
+    sources.forEach(function (source) {
+        if (typeof source === 'undefined' || source === null) {
+            return;
+        }
+        Object.keys(source).forEach(function (key) {
+            target[key] = source[key];
+        });
+    });
+    return target;
+}
+//# sourceMappingURL=assign.js.map
+},{}],181:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getMutationDefinition = getMutationDefinition;
+exports.checkDocument = checkDocument;
+exports.getOperationDefinition = getOperationDefinition;
+exports.getOperationDefinitionOrDie = getOperationDefinitionOrDie;
+exports.getOperationName = getOperationName;
+exports.getFragmentDefinitions = getFragmentDefinitions;
+exports.getQueryDefinition = getQueryDefinition;
+exports.getFragmentDefinition = getFragmentDefinition;
+exports.getMainDefinition = getMainDefinition;
+exports.createFragmentMap = createFragmentMap;
+exports.getDefaultValues = getDefaultValues;
+exports.variablesInOperation = variablesInOperation;
+
+var _assign = require('./util/assign');
+
+var _storeUtils = require('./storeUtils');
+
+function getMutationDefinition(doc) {
+    checkDocument(doc);
+    var mutationDef = doc.definitions.filter(function (definition) {
+        return definition.kind === 'OperationDefinition' && definition.operation === 'mutation';
+    })[0];
+    if (!mutationDef) {
+        throw new Error('Must contain a mutation definition.');
+    }
+    return mutationDef;
+}
+// Checks the document for errors and throws an exception if there is an error.
+function checkDocument(doc) {
+    if (doc.kind !== 'Document') {
+        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
+    }
+    var operations = doc.definitions.filter(function (d) {
+        return d.kind !== 'FragmentDefinition';
+    }).map(function (definition) {
+        if (definition.kind !== 'OperationDefinition') {
+            throw new Error("Schema type definitions not allowed in queries. Found: \"" + definition.kind + "\"");
+        }
+        return definition;
+    });
+    if (operations.length > 1) {
+        throw new Error("Ambiguous GraphQL document: contains " + operations.length + " operations");
+    }
+}
+function getOperationDefinition(doc) {
+    checkDocument(doc);
+    return doc.definitions.filter(function (definition) {
+        return definition.kind === 'OperationDefinition';
+    })[0];
+}
+function getOperationDefinitionOrDie(document) {
+    var def = getOperationDefinition(document);
+    if (!def) {
+        throw new Error("GraphQL document is missing an operation");
+    }
+    return def;
+}
+function getOperationName(doc) {
+    return doc.definitions.filter(function (definition) {
+        return definition.kind === 'OperationDefinition' && definition.name;
+    }).map(function (x) {
+        return x.name.value;
+    })[0] || null;
+}
+// Returns the FragmentDefinitions from a particular document as an array
+function getFragmentDefinitions(doc) {
+    return doc.definitions.filter(function (definition) {
+        return definition.kind === 'FragmentDefinition';
+    });
+}
+function getQueryDefinition(doc) {
+    var queryDef = getOperationDefinition(doc);
+    if (!queryDef || queryDef.operation !== 'query') {
+        throw new Error('Must contain a query definition.');
+    }
+    return queryDef;
+}
+function getFragmentDefinition(doc) {
+    if (doc.kind !== 'Document') {
+        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
+    }
+    if (doc.definitions.length > 1) {
+        throw new Error('Fragment must have exactly one definition.');
+    }
+    var fragmentDef = doc.definitions[0];
+    if (fragmentDef.kind !== 'FragmentDefinition') {
+        throw new Error('Must be a fragment definition.');
+    }
+    return fragmentDef;
+}
+/**
+ * Returns the first operation definition found in this document.
+ * If no operation definition is found, the first fragment definition will be returned.
+ * If no definitions are found, an error will be thrown.
+ */
+function getMainDefinition(queryDoc) {
+    checkDocument(queryDoc);
+    var fragmentDefinition;
+    for (var _i = 0, _a = queryDoc.definitions; _i < _a.length; _i++) {
+        var definition = _a[_i];
+        if (definition.kind === 'OperationDefinition') {
+            var operation = definition.operation;
+            if (operation === 'query' || operation === 'mutation' || operation === 'subscription') {
+                return definition;
+            }
+        }
+        if (definition.kind === 'FragmentDefinition' && !fragmentDefinition) {
+            // we do this because we want to allow multiple fragment definitions
+            // to precede an operation definition.
+            fragmentDefinition = definition;
+        }
+    }
+    if (fragmentDefinition) {
+        return fragmentDefinition;
+    }
+    throw new Error('Expected a parsed GraphQL query with a query, mutation, subscription, or a fragment.');
+}
+// Utility function that takes a list of fragment definitions and makes a hash out of them
+// that maps the name of the fragment to the fragment definition.
+function createFragmentMap(fragments) {
+    if (fragments === void 0) {
+        fragments = [];
+    }
+    var symTable = {};
+    fragments.forEach(function (fragment) {
+        symTable[fragment.name.value] = fragment;
+    });
+    return symTable;
+}
+function getDefaultValues(definition) {
+    if (definition && definition.variableDefinitions && definition.variableDefinitions.length) {
+        var defaultValues = definition.variableDefinitions.filter(function (_a) {
+            var defaultValue = _a.defaultValue;
+            return defaultValue;
+        }).map(function (_a) {
+            var variable = _a.variable,
+                defaultValue = _a.defaultValue;
+            var defaultValueObj = {};
+            (0, _storeUtils.valueToObjectRepresentation)(defaultValueObj, variable.name, defaultValue);
+            return defaultValueObj;
+        });
+        return _assign.assign.apply(void 0, [{}].concat(defaultValues));
+    }
+    return {};
+}
+/**
+ * Returns the names of all variables declared by the operation.
+ */
+function variablesInOperation(operation) {
+    var names = new Set();
+    if (operation.variableDefinitions) {
+        for (var _i = 0, _a = operation.variableDefinitions; _i < _a.length; _i++) {
+            var definition = _a[_i];
+            names.add(definition.variable.name.value);
+        }
+    }
+    return names;
+}
+//# sourceMappingURL=getFromAST.js.map
+},{"./util/assign":184,"./storeUtils":183}],185:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.cloneDeep = cloneDeep;
+/**
+ * Deeply clones a value to create a new instance.
+ */
+function cloneDeep(value) {
+    // If the value is an array, create a new array where every item has been cloned.
+    if (Array.isArray(value)) {
+        return value.map(function (item) {
+            return cloneDeep(item);
+        });
+    }
+    // If the value is an object, go through all of the object’s properties and add them to a new
+    // object.
+    if (value !== null && typeof value === 'object') {
+        var nextValue = {};
+        for (var key in value) {
+            if (value.hasOwnProperty(key)) {
+                nextValue[key] = cloneDeep(value[key]);
+            }
+        }
+        return nextValue;
+    }
+    // Otherwise this is some primitive value and it is therefore immutable so we can just return it
+    // directly.
+    return value;
+}
+//# sourceMappingURL=cloneDeep.js.map
+},{}],182:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removeDirectivesFromDocument = removeDirectivesFromDocument;
+exports.addTypenameToDocument = addTypenameToDocument;
+exports.removeConnectionDirectiveFromDocument = removeConnectionDirectiveFromDocument;
+exports.getDirectivesFromDocument = getDirectivesFromDocument;
+
+var _cloneDeep = require('./util/cloneDeep');
+
+var _getFromAST = require('./getFromAST');
+
+var TYPENAME_FIELD = {
+    kind: 'Field',
+    name: {
+        kind: 'Name',
+        value: '__typename'
+    }
+};
+function isNotEmpty(op, fragments) {
+    // keep selections that are still valid
+    return op.selectionSet.selections.filter(function (selectionSet) {
+        // anything that doesn't match the compound filter is okay
+        return !(selectionSet &&
+        // look into fragments to verify they should stay
+        selectionSet.kind === 'FragmentSpread' &&
+        // see if the fragment in the map is valid (recursively)
+        !isNotEmpty(fragments[selectionSet.name.value], fragments));
+    }).length > 0;
+}
+function getDirectiveMatcher(directives) {
+    return function directiveMatcher(directive) {
+        return directives.some(function (dir) {
+            if (dir.name && dir.name === directive.name.value) return true;
+            if (dir.test && dir.test(directive)) return true;
+            return false;
+        });
+    };
+}
+function addTypenameToSelectionSet(selectionSet, isRoot) {
+    if (isRoot === void 0) {
+        isRoot = false;
+    }
+    if (selectionSet.selections) {
+        if (!isRoot) {
+            var alreadyHasThisField = selectionSet.selections.some(function (selection) {
+                return selection.kind === 'Field' && selection.name.value === '__typename';
+            });
+            if (!alreadyHasThisField) {
+                selectionSet.selections.push(TYPENAME_FIELD);
+            }
+        }
+        selectionSet.selections.forEach(function (selection) {
+            // Must not add __typename if we're inside an introspection query
+            if (selection.kind === 'Field') {
+                if (selection.name.value.lastIndexOf('__', 0) !== 0 && selection.selectionSet) {
+                    addTypenameToSelectionSet(selection.selectionSet);
+                }
+            } else if (selection.kind === 'InlineFragment') {
+                if (selection.selectionSet) {
+                    addTypenameToSelectionSet(selection.selectionSet);
+                }
+            }
+        });
+    }
+}
+function removeDirectivesFromSelectionSet(directives, selectionSet) {
+    if (!selectionSet.selections) return selectionSet;
+    // if any of the directives are set to remove this selectionSet, remove it
+    var agressiveRemove = directives.some(function (dir) {
+        return dir.remove;
+    });
+    selectionSet.selections = selectionSet.selections.map(function (selection) {
+        if (selection.kind !== 'Field' || !selection || !selection.directives) return selection;
+        var directiveMatcher = getDirectiveMatcher(directives);
+        var remove;
+        selection.directives = selection.directives.filter(function (directive) {
+            var shouldKeep = !directiveMatcher(directive);
+            if (!remove && !shouldKeep && agressiveRemove) remove = true;
+            return shouldKeep;
+        });
+        return remove ? null : selection;
+    }).filter(function (x) {
+        return !!x;
+    });
+    selectionSet.selections.forEach(function (selection) {
+        if ((selection.kind === 'Field' || selection.kind === 'InlineFragment') && selection.selectionSet) {
+            removeDirectivesFromSelectionSet(directives, selection.selectionSet);
+        }
+    });
+    return selectionSet;
+}
+function removeDirectivesFromDocument(directives, doc) {
+    var docClone = (0, _cloneDeep.cloneDeep)(doc);
+    docClone.definitions.forEach(function (definition) {
+        removeDirectivesFromSelectionSet(directives, definition.selectionSet);
+    });
+    var operation = (0, _getFromAST.getOperationDefinitionOrDie)(docClone);
+    var fragments = (0, _getFromAST.createFragmentMap)((0, _getFromAST.getFragmentDefinitions)(docClone));
+    return isNotEmpty(operation, fragments) ? docClone : null;
+}
+function addTypenameToDocument(doc) {
+    (0, _getFromAST.checkDocument)(doc);
+    var docClone = (0, _cloneDeep.cloneDeep)(doc);
+    docClone.definitions.forEach(function (definition) {
+        var isRoot = definition.kind === 'OperationDefinition';
+        addTypenameToSelectionSet(definition.selectionSet, isRoot);
+    });
+    return docClone;
+}
+var connectionRemoveConfig = {
+    test: function (directive) {
+        var willRemove = directive.name.value === 'connection';
+        if (willRemove) {
+            if (!directive.arguments || !directive.arguments.some(function (arg) {
+                return arg.name.value === 'key';
+            })) {
+                console.warn('Removing an @connection directive even though it does not have a key. ' + 'You may want to use the key parameter to specify a store key.');
+            }
+        }
+        return willRemove;
+    }
+};
+function removeConnectionDirectiveFromDocument(doc) {
+    (0, _getFromAST.checkDocument)(doc);
+    return removeDirectivesFromDocument([connectionRemoveConfig], doc);
+}
+function hasDirectivesInSelectionSet(directives, selectionSet, nestedCheck) {
+    if (nestedCheck === void 0) {
+        nestedCheck = true;
+    }
+    if (!(selectionSet && selectionSet.selections)) {
+        return false;
+    }
+    var matchedSelections = selectionSet.selections.filter(function (selection) {
+        return hasDirectivesInSelection(directives, selection, nestedCheck);
+    });
+    return matchedSelections.length > 0;
+}
+function hasDirectivesInSelection(directives, selection, nestedCheck) {
+    if (nestedCheck === void 0) {
+        nestedCheck = true;
+    }
+    if (selection.kind !== 'Field' || !selection) {
+        return true;
+    }
+    if (!selection.directives) {
+        return false;
+    }
+    var directiveMatcher = getDirectiveMatcher(directives);
+    var matchedDirectives = selection.directives.filter(directiveMatcher);
+    return matchedDirectives.length > 0 || nestedCheck && hasDirectivesInSelectionSet(directives, selection.selectionSet, nestedCheck);
+}
+function getDirectivesFromSelectionSet(directives, selectionSet) {
+    selectionSet.selections = selectionSet.selections.filter(function (selection) {
+        return hasDirectivesInSelection(directives, selection, true);
+    }).map(function (selection) {
+        if (hasDirectivesInSelection(directives, selection, false)) {
+            return selection;
+        }
+        if ((selection.kind === 'Field' || selection.kind === 'InlineFragment') && selection.selectionSet) {
+            selection.selectionSet = getDirectivesFromSelectionSet(directives, selection.selectionSet);
+        }
+        return selection;
+    });
+    return selectionSet;
+}
+function getDirectivesFromDocument(directives, doc, includeAllFragments) {
+    if (includeAllFragments === void 0) {
+        includeAllFragments = false;
+    }
+    (0, _getFromAST.checkDocument)(doc);
+    var docClone = (0, _cloneDeep.cloneDeep)(doc);
+    docClone.definitions = docClone.definitions.map(function (definition) {
+        if ((definition.kind === 'OperationDefinition' || definition.kind === 'FragmentDefinition' && !includeAllFragments) && definition.selectionSet) {
+            definition.selectionSet = getDirectivesFromSelectionSet(directives, definition.selectionSet);
+        }
+        return definition;
+    });
+    var operation = (0, _getFromAST.getOperationDefinitionOrDie)(docClone);
+    var fragments = (0, _getFromAST.createFragmentMap)((0, _getFromAST.getFragmentDefinitions)(docClone));
+    return isNotEmpty(operation, fragments) ? docClone : null;
+}
+//# sourceMappingURL=transform.js.map
+},{"./util/cloneDeep":185,"./getFromAST":181}],186:[function(require,module,exports) {
+var process = require("process");
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.getEnv = getEnv;
+exports.isEnv = isEnv;
+exports.isProduction = isProduction;
+exports.isDevelopment = isDevelopment;
+exports.isTest = isTest;
+function getEnv() {
+    if (typeof process !== 'undefined' && 'development') {
+        return 'development';
+    }
+    // default environment
+    return 'development';
+}
+function isEnv(env) {
+    return getEnv() === env;
+}
+function isProduction() {
+    return isEnv('production') === true;
+}
+function isDevelopment() {
+    return isEnv('development') === true;
+}
+function isTest() {
+    return isEnv('test') === true;
+}
+//# sourceMappingURL=environment.js.map
+},{"process":33}],187:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.tryFunctionOrLogError = tryFunctionOrLogError;
+exports.graphQLResultHasError = graphQLResultHasError;
+function tryFunctionOrLogError(f) {
+    try {
+        return f();
+    } catch (e) {
+        if (console.error) {
+            console.error(e);
+        }
+    }
+}
+function graphQLResultHasError(result) {
+    return result.errors && result.errors.length;
+}
+//# sourceMappingURL=errorHandling.js.map
+},{}],188:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isEqual = isEqual;
+/**
+ * Performs a deep equality check on two JavaScript values.
+ */
+function isEqual(a, b) {
+    // If the two values are strictly equal, we are good.
+    if (a === b) {
+        return true;
+    }
+    // Dates are equivalent if their time values are equal.
+    if (a instanceof Date && b instanceof Date) {
+        return a.getTime() === b.getTime();
+    }
+    // If a and b are both objects, we will compare their properties. This will compare arrays as
+    // well.
+    if (a != null && typeof a === 'object' && b != null && typeof b === 'object') {
+        // Compare all of the keys in `a`. If one of the keys has a different value, or that key does
+        // not exist in `b` return false immediately.
+        for (var key in a) {
+            if (Object.prototype.hasOwnProperty.call(a, key)) {
+                if (!Object.prototype.hasOwnProperty.call(b, key)) {
+                    return false;
+                }
+                if (!isEqual(a[key], b[key])) {
+                    return false;
+                }
+            }
+        }
+        // Look through all the keys in `b`. If `b` has a key that `a` does not, return false.
+        for (var key in b) {
+            if (!Object.prototype.hasOwnProperty.call(a, key)) {
+                return false;
+            }
+        }
+        // If we made it this far the objects are equal!
+        return true;
+    }
+    // Otherwise the values are not equal.
+    return false;
+}
+//# sourceMappingURL=isEqual.js.map
+},{}],189:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.maybeDeepFreeze = maybeDeepFreeze;
+
+var _environment = require('./environment');
+
+// Taken (mostly) from https://github.com/substack/deep-freeze to avoid
+// import hassles with rollup.
+function deepFreeze(o) {
+    Object.freeze(o);
+    Object.getOwnPropertyNames(o).forEach(function (prop) {
+        if (o[prop] !== null && (typeof o[prop] === 'object' || typeof o[prop] === 'function') && !Object.isFrozen(o[prop])) {
+            deepFreeze(o[prop]);
+        }
+    });
+    return o;
+}
+function maybeDeepFreeze(obj) {
+    if ((0, _environment.isDevelopment)() || (0, _environment.isTest)()) {
+        // Polyfilled Symbols potentially cause infinite / very deep recursion while deep freezing
+        // which is known to crash IE11 (https://github.com/apollographql/apollo-client/issues/3043).
+        var symbolIsPolyfilled = typeof Symbol === 'function' && typeof Symbol('') === 'string';
+        if (!symbolIsPolyfilled) {
+            return deepFreeze(obj);
+        }
+    }
+    return obj;
+}
+//# sourceMappingURL=maybeDeepFreeze.js.map
+},{"./environment":186}],190:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.warnOnceInDevelopment = warnOnceInDevelopment;
+
+var _environment = require('./environment');
+
+var haveWarned = Object.create({});
+/**
+ * Print a warning only once in development.
+ * In production no warnings are printed.
+ * In test all warnings are printed.
+ *
+ * @param msg The warning message
+ * @param type warn or error (will call console.warn or console.error)
+ */
+function warnOnceInDevelopment(msg, type) {
+    if (type === void 0) {
+        type = 'warn';
+    }
+    if ((0, _environment.isProduction)()) {
+        return;
+    }
+    if (!haveWarned[msg]) {
+        if (!(0, _environment.isTest)()) {
+            haveWarned[msg] = true;
+        }
+        switch (type) {
+            case 'error':
+                console.error(msg);
+                break;
+            default:
+                console.warn(msg);
+        }
+    }
+}
+//# sourceMappingURL=warnOnce.js.map
+},{"./environment":186}],191:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.stripSymbols = stripSymbols;
+/**
+ * In order to make assertions easier, this function strips `symbol`'s from
+ * the incoming data.
+ *
+ * This can be handy when running tests against `apollo-client` for example,
+ * since it adds `symbol`'s to the data in the store. Jest's `toEqual`
+ * function now covers `symbol`'s (https://github.com/facebook/jest/pull/3437),
+ * which means all test data used in a `toEqual` comparison would also have to
+ * include `symbol`'s, to pass. By stripping `symbol`'s from the cache data
+ * we can compare against more simplified test data.
+ */
+function stripSymbols(data) {
+  return JSON.parse(JSON.stringify(data));
+}
+//# sourceMappingURL=stripSymbols.js.map
+},{}],167:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _directives = require('./directives');
+
+Object.keys(_directives).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _directives[key];
+    }
+  });
+});
+
+var _fragments = require('./fragments');
+
+Object.keys(_fragments).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _fragments[key];
+    }
+  });
+});
+
+var _getFromAST = require('./getFromAST');
+
+Object.keys(_getFromAST).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _getFromAST[key];
+    }
+  });
+});
+
+var _transform = require('./transform');
+
+Object.keys(_transform).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _transform[key];
+    }
+  });
+});
+
+var _storeUtils = require('./storeUtils');
+
+Object.keys(_storeUtils).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _storeUtils[key];
+    }
+  });
+});
+
+var _assign = require('./util/assign');
+
+Object.keys(_assign).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _assign[key];
+    }
+  });
+});
+
+var _cloneDeep = require('./util/cloneDeep');
+
+Object.keys(_cloneDeep).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _cloneDeep[key];
+    }
+  });
+});
+
+var _environment = require('./util/environment');
+
+Object.keys(_environment).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _environment[key];
+    }
+  });
+});
+
+var _errorHandling = require('./util/errorHandling');
+
+Object.keys(_errorHandling).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _errorHandling[key];
+    }
+  });
+});
+
+var _isEqual = require('./util/isEqual');
+
+Object.keys(_isEqual).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _isEqual[key];
+    }
+  });
+});
+
+var _maybeDeepFreeze = require('./util/maybeDeepFreeze');
+
+Object.keys(_maybeDeepFreeze).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _maybeDeepFreeze[key];
+    }
+  });
+});
+
+var _warnOnce = require('./util/warnOnce');
+
+Object.keys(_warnOnce).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _warnOnce[key];
+    }
+  });
+});
+
+var _stripSymbols = require('./util/stripSymbols');
+
+Object.keys(_stripSymbols).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _stripSymbols[key];
+    }
+  });
+});
+},{"./directives":180,"./fragments":179,"./getFromAST":181,"./transform":182,"./storeUtils":183,"./util/assign":184,"./util/cloneDeep":185,"./util/environment":186,"./util/errorHandling":187,"./util/isEqual":188,"./util/maybeDeepFreeze":189,"./util/warnOnce":190,"./util/stripSymbols":191}],142:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isNetworkRequestInFlight = isNetworkRequestInFlight;
+/**
+ * The current status of a query’s execution in our system.
+ */
+var NetworkStatus = exports.NetworkStatus = undefined;
+(function (NetworkStatus) {
+  /**
+   * The query has never been run before and the query is now currently running. A query will still
+   * have this network status even if a partial data result was returned from the cache, but a
+   * query was dispatched anyway.
+   */
+  NetworkStatus[NetworkStatus["loading"] = 1] = "loading";
+  /**
+   * If `setVariables` was called and a query was fired because of that then the network status
+   * will be `setVariables` until the result of that query comes back.
+   */
+  NetworkStatus[NetworkStatus["setVariables"] = 2] = "setVariables";
+  /**
+   * Indicates that `fetchMore` was called on this query and that the query created is currently in
+   * flight.
+   */
+  NetworkStatus[NetworkStatus["fetchMore"] = 3] = "fetchMore";
+  /**
+   * Similar to the `setVariables` network status. It means that `refetch` was called on a query
+   * and the refetch request is currently in flight.
+   */
+  NetworkStatus[NetworkStatus["refetch"] = 4] = "refetch";
+  /**
+   * Indicates that a polling query is currently in flight. So for example if you are polling a
+   * query every 10 seconds then the network status will switch to `poll` every 10 seconds whenever
+   * a poll request has been sent but not resolved.
+   */
+  NetworkStatus[NetworkStatus["poll"] = 6] = "poll";
+  /**
+   * No request is in flight for this query, and no errors happened. Everything is OK.
+   */
+  NetworkStatus[NetworkStatus["ready"] = 7] = "ready";
+  /**
+   * No request is in flight for this query, but one or more errors were detected.
+   */
+  NetworkStatus[NetworkStatus["error"] = 8] = "error";
+})(NetworkStatus || (exports.NetworkStatus = NetworkStatus = {}));
+/**
+ * Returns true if there is currently a network request in flight according to a given network
+ * status.
+ */
+function isNetworkRequestInFlight(networkStatus) {
+  return networkStatus < 7;
+}
+//# sourceMappingURL=networkStatus.js.map
+},{}],196:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// === Symbol Support ===
+
+var hasSymbols = function () {
+  return typeof Symbol === 'function';
+};
+var hasSymbol = function (name) {
+  return hasSymbols() && Boolean(Symbol[name]);
+};
+var getSymbol = function (name) {
+  return hasSymbol(name) ? Symbol[name] : '@@' + name;
+};
+
+if (hasSymbols() && !hasSymbol('observable')) {
+  Symbol.observable = Symbol('observable');
+}
+
+// === Abstract Operations ===
+
+function getMethod(obj, key) {
+  var value = obj[key];
+
+  if (value == null) return undefined;
+
+  if (typeof value !== 'function') throw new TypeError(value + ' is not a function');
+
+  return value;
+}
+
+function getSpecies(obj) {
+  var ctor = obj.constructor;
+  if (ctor !== undefined) {
+    ctor = ctor[getSymbol('species')];
+    if (ctor === null) {
+      ctor = undefined;
+    }
+  }
+  return ctor !== undefined ? ctor : Observable;
+}
+
+function isObservable(x) {
+  return x instanceof Observable; // SPEC: Brand check
+}
+
+function hostReportError(e) {
+  if (hostReportError.log) {
+    hostReportError.log(e);
+  } else {
+    setTimeout(function () {
+      throw e;
+    });
+  }
+}
+
+function enqueue(fn) {
+  Promise.resolve().then(function () {
+    try {
+      fn();
+    } catch (e) {
+      hostReportError(e);
+    }
+  });
+}
+
+function cleanupSubscription(subscription) {
+  var cleanup = subscription._cleanup;
+  if (cleanup === undefined) return;
+
+  subscription._cleanup = undefined;
+
+  if (!cleanup) {
+    return;
+  }
+
+  try {
+    if (typeof cleanup === 'function') {
+      cleanup();
+    } else {
+      var unsubscribe = getMethod(cleanup, 'unsubscribe');
+      if (unsubscribe) {
+        unsubscribe.call(cleanup);
+      }
+    }
+  } catch (e) {
+    hostReportError(e);
+  }
+}
+
+function closeSubscription(subscription) {
+  subscription._observer = undefined;
+  subscription._queue = undefined;
+  subscription._state = 'closed';
+}
+
+function flushSubscription(subscription) {
+  var queue = subscription._queue;
+  if (!queue) {
+    return;
+  }
+  subscription._queue = undefined;
+  subscription._state = 'ready';
+  for (var i = 0; i < queue.length; ++i) {
+    notifySubscription(subscription, queue[i].type, queue[i].value);
+    if (subscription._state === 'closed') break;
+  }
+}
+
+function notifySubscription(subscription, type, value) {
+  subscription._state = 'running';
+
+  var observer = subscription._observer;
+
+  try {
+    var m = getMethod(observer, type);
+    switch (type) {
+      case 'next':
+        if (m) m.call(observer, value);
+        break;
+      case 'error':
+        closeSubscription(subscription);
+        if (m) m.call(observer, value);else throw value;
+        break;
+      case 'complete':
+        closeSubscription(subscription);
+        if (m) m.call(observer);
+        break;
+    }
+  } catch (e) {
+    hostReportError(e);
+  }
+
+  if (subscription._state === 'closed') cleanupSubscription(subscription);else if (subscription._state === 'running') subscription._state = 'ready';
+}
+
+function onNotify(subscription, type, value) {
+  if (subscription._state === 'closed') return;
+
+  if (subscription._state === 'buffering') {
+    subscription._queue.push({ type: type, value: value });
+    return;
+  }
+
+  if (subscription._state !== 'ready') {
+    subscription._state = 'buffering';
+    subscription._queue = [{ type: type, value: value }];
+    enqueue(function () {
+      return flushSubscription(subscription);
+    });
+    return;
+  }
+
+  notifySubscription(subscription, type, value);
+}
+
+var Subscription = function () {
+  function Subscription(observer, subscriber) {
+    _classCallCheck(this, Subscription);
+
+    // ASSERT: observer is an object
+    // ASSERT: subscriber is callable
+
+    this._cleanup = undefined;
+    this._observer = observer;
+    this._queue = undefined;
+    this._state = 'initializing';
+
+    var subscriptionObserver = new SubscriptionObserver(this);
+
+    try {
+      this._cleanup = subscriber.call(undefined, subscriptionObserver);
+    } catch (e) {
+      subscriptionObserver.error(e);
+    }
+
+    if (this._state === 'initializing') this._state = 'ready';
+  }
+
+  _createClass(Subscription, [{
+    key: 'unsubscribe',
+    value: function unsubscribe() {
+      if (this._state !== 'closed') {
+        closeSubscription(this);
+        cleanupSubscription(this);
+      }
+    }
+  }, {
+    key: 'closed',
+    get: function () {
+      return this._state === 'closed';
+    }
+  }]);
+
+  return Subscription;
+}();
+
+var SubscriptionObserver = function () {
+  function SubscriptionObserver(subscription) {
+    _classCallCheck(this, SubscriptionObserver);
+
+    this._subscription = subscription;
+  }
+
+  _createClass(SubscriptionObserver, [{
+    key: 'next',
+    value: function next(value) {
+      onNotify(this._subscription, 'next', value);
+    }
+  }, {
+    key: 'error',
+    value: function error(value) {
+      onNotify(this._subscription, 'error', value);
+    }
+  }, {
+    key: 'complete',
+    value: function complete() {
+      onNotify(this._subscription, 'complete');
+    }
+  }, {
+    key: 'closed',
+    get: function () {
+      return this._subscription._state === 'closed';
+    }
+  }]);
+
+  return SubscriptionObserver;
+}();
+
+var Observable = exports.Observable = function () {
+  function Observable(subscriber) {
+    _classCallCheck(this, Observable);
+
+    if (!(this instanceof Observable)) throw new TypeError('Observable cannot be called as a function');
+
+    if (typeof subscriber !== 'function') throw new TypeError('Observable initializer must be a function');
+
+    this._subscriber = subscriber;
+  }
+
+  _createClass(Observable, [{
+    key: 'subscribe',
+    value: function subscribe(observer) {
+      if (typeof observer !== 'object' || observer === null) {
+        observer = {
+          next: observer,
+          error: arguments[1],
+          complete: arguments[2]
+        };
+      }
+      return new Subscription(observer, this._subscriber);
+    }
+  }, {
+    key: 'forEach',
+    value: function forEach(fn) {
+      var _this = this;
+
+      return new Promise(function (resolve, reject) {
+        if (typeof fn !== 'function') {
+          reject(new TypeError(fn + ' is not a function'));
+          return;
+        }
+
+        function done() {
+          subscription.unsubscribe();
+          resolve();
+        }
+
+        var subscription = _this.subscribe({
+          next: function (value) {
+            try {
+              fn(value, done);
+            } catch (e) {
+              reject(e);
+              subscription.unsubscribe();
+            }
+          },
+
+          error: reject,
+          complete: resolve
+        });
+      });
+    }
+  }, {
+    key: 'map',
+    value: function map(fn) {
+      var _this2 = this;
+
+      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
+
+      var C = getSpecies(this);
+
+      return new C(function (observer) {
+        return _this2.subscribe({
+          next: function (value) {
+            try {
+              value = fn(value);
+            } catch (e) {
+              return observer.error(e);
+            }
+            observer.next(value);
+          },
+          error: function (e) {
+            observer.error(e);
+          },
+          complete: function () {
+            observer.complete();
+          }
+        });
+      });
+    }
+  }, {
+    key: 'filter',
+    value: function filter(fn) {
+      var _this3 = this;
+
+      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
+
+      var C = getSpecies(this);
+
+      return new C(function (observer) {
+        return _this3.subscribe({
+          next: function (value) {
+            try {
+              if (!fn(value)) return;
+            } catch (e) {
+              return observer.error(e);
+            }
+            observer.next(value);
+          },
+          error: function (e) {
+            observer.error(e);
+          },
+          complete: function () {
+            observer.complete();
+          }
+        });
+      });
+    }
+  }, {
+    key: 'reduce',
+    value: function reduce(fn) {
+      var _this4 = this;
+
+      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
+
+      var C = getSpecies(this);
+      var hasSeed = arguments.length > 1;
+      var hasValue = false;
+      var seed = arguments[1];
+      var acc = seed;
+
+      return new C(function (observer) {
+        return _this4.subscribe({
+          next: function (value) {
+            var first = !hasValue;
+            hasValue = true;
+
+            if (!first || hasSeed) {
+              try {
+                acc = fn(acc, value);
+              } catch (e) {
+                return observer.error(e);
+              }
+            } else {
+              acc = value;
+            }
+          },
+          error: function (e) {
+            observer.error(e);
+          },
+          complete: function () {
+            if (!hasValue && !hasSeed) return observer.error(new TypeError('Cannot reduce an empty sequence'));
+
+            observer.next(acc);
+            observer.complete();
+          }
+        });
+      });
+    }
+  }, {
+    key: 'concat',
+    value: function concat() {
+      var _this5 = this;
+
+      for (var _len = arguments.length, sources = Array(_len), _key = 0; _key < _len; _key++) {
+        sources[_key] = arguments[_key];
+      }
+
+      var C = getSpecies(this);
+
+      return new C(function (observer) {
+        var subscription = void 0;
+
+        function startNext(next) {
+          subscription = next.subscribe({
+            next: function (v) {
+              observer.next(v);
+            },
+            error: function (e) {
+              observer.error(e);
+            },
+            complete: function () {
+              if (sources.length === 0) {
+                subscription = undefined;
+                observer.complete();
+              } else {
+                startNext(C.from(sources.shift()));
+              }
+            }
+          });
+        }
+
+        startNext(_this5);
+
+        return function () {
+          if (subscription) {
+            subscription = undefined;
+            subscription.unsubscribe();
+          }
+        };
+      });
+    }
+  }, {
+    key: 'flatMap',
+    value: function flatMap(fn) {
+      var _this6 = this;
+
+      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
+
+      var C = getSpecies(this);
+
+      return new C(function (observer) {
+        var subscriptions = [];
+
+        var outer = _this6.subscribe({
+          next: function (value) {
+            if (fn) {
+              try {
+                value = fn(value);
+              } catch (e) {
+                return observer.error(e);
+              }
+            }
+
+            var inner = C.from(value).subscribe({
+              next: function (value) {
+                observer.next(value);
+              },
+              error: function (e) {
+                observer.error(e);
+              },
+              complete: function () {
+                var i = subscriptions.indexOf(inner);
+                if (i >= 0) subscriptions.splice(i, 1);
+                completeIfDone();
+              }
+            });
+
+            subscriptions.push(inner);
+          },
+          error: function (e) {
+            observer.error(e);
+          },
+          complete: function () {
+            completeIfDone();
+          }
+        });
+
+        function completeIfDone() {
+          if (outer.closed && subscriptions.length === 0) observer.complete();
+        }
+
+        return function () {
+          subscriptions.forEach(function (s) {
+            return s.unsubscribe();
+          });
+          outer.unsubscribe();
+        };
+      });
+    }
+  }, {
+    key: getSymbol('observable'),
+    value: function () {
+      return this;
+    }
+  }], [{
+    key: 'from',
+    value: function from(x) {
+      var C = typeof this === 'function' ? this : Observable;
+
+      if (x == null) throw new TypeError(x + ' is not an object');
+
+      var method = getMethod(x, getSymbol('observable'));
+      if (method) {
+        var observable = method.call(x);
+
+        if (Object(observable) !== observable) throw new TypeError(observable + ' is not an object');
+
+        if (isObservable(observable) && observable.constructor === C) return observable;
+
+        return new C(function (observer) {
+          return observable.subscribe(observer);
+        });
+      }
+
+      if (hasSymbol('iterator')) {
+        method = getMethod(x, getSymbol('iterator'));
+        if (method) {
+          return new C(function (observer) {
+            enqueue(function () {
+              if (observer.closed) return;
+              var _iteratorNormalCompletion = true;
+              var _didIteratorError = false;
+              var _iteratorError = undefined;
+
+              try {
+                for (var _iterator = method.call(x)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                  var item = _step.value;
+
+                  observer.next(item);
+                  if (observer.closed) return;
+                }
+              } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+              } finally {
+                try {
+                  if (!_iteratorNormalCompletion && _iterator.return) {
+                    _iterator.return();
+                  }
+                } finally {
+                  if (_didIteratorError) {
+                    throw _iteratorError;
+                  }
+                }
+              }
+
+              observer.complete();
+            });
+          });
+        }
+      }
+
+      if (Array.isArray(x)) {
+        return new C(function (observer) {
+          enqueue(function () {
+            if (observer.closed) return;
+            for (var i = 0; i < x.length; ++i) {
+              observer.next(x[i]);
+              if (observer.closed) return;
+            }
+            observer.complete();
+          });
+        });
+      }
+
+      throw new TypeError(x + ' is not observable');
+    }
+  }, {
+    key: 'of',
+    value: function of() {
+      for (var _len2 = arguments.length, items = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        items[_key2] = arguments[_key2];
+      }
+
+      var C = typeof this === 'function' ? this : Observable;
+
+      return new C(function (observer) {
+        enqueue(function () {
+          if (observer.closed) return;
+          for (var i = 0; i < items.length; ++i) {
+            observer.next(items[i]);
+            if (observer.closed) return;
+          }
+          observer.complete();
+        });
+      });
+    }
+  }, {
+    key: getSymbol('species'),
+    get: function () {
+      return this;
+    }
+  }]);
+
+  return Observable;
+}();
+
+if (hasSymbols()) {
+  Object.defineProperty(Observable, Symbol('extensions'), {
+    value: {
+      symbol: getSymbol('observable'),
+      hostReportError: hostReportError
+    },
+    configurabe: true
+  });
+}
+},{}],193:[function(require,module,exports) {
+module.exports = require('./lib/Observable.js').Observable;
+
+},{"./lib/Observable.js":196}],178:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Observable = undefined;
+
+var _zenObservable = require('zen-observable');
+
+var _zenObservable2 = _interopRequireDefault(_zenObservable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Observable = exports.Observable = _zenObservable2.default;
+//# sourceMappingURL=zenObservable.js.map
+},{"zen-observable":193}],165:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _zenObservable = require('./zenObservable');
+
+Object.keys(_zenObservable).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _zenObservable[key];
+    }
+  });
+});
+exports.default = _zenObservable.Observable;
+//# sourceMappingURL=index.js.map
+},{"./zenObservable":178}],156:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.makePromise = exports.LinkError = undefined;
+exports.validateOperation = validateOperation;
+exports.isTerminating = isTerminating;
+exports.toPromise = toPromise;
+exports.fromPromise = fromPromise;
+exports.fromError = fromError;
+exports.transformOperation = transformOperation;
+exports.createOperation = createOperation;
+exports.getKey = getKey;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _zenObservableTs = require('zen-observable-ts');
+
+var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
+
+var _printer = require('graphql/language/printer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+function validateOperation(operation) {
+    var OPERATION_FIELDS = ['query', 'operationName', 'variables', 'extensions', 'context'];
+    for (var _i = 0, _a = Object.keys(operation); _i < _a.length; _i++) {
+        var key = _a[_i];
+        if (OPERATION_FIELDS.indexOf(key) < 0) {
+            throw new Error("illegal argument: " + key);
+        }
+    }
+    return operation;
+}
+var LinkError = /** @class */function (_super) {
+    __extends(LinkError, _super);
+    function LinkError(message, link) {
+        var _this = _super.call(this, message) || this;
+        _this.link = link;
+        return _this;
+    }
+    return LinkError;
+}(Error);
+exports.LinkError = LinkError;
+function isTerminating(link) {
+    return link.request.length <= 1;
+}
+function toPromise(observable) {
+    var completed = false;
+    return new Promise(function (resolve, reject) {
+        observable.subscribe({
+            next: function (data) {
+                if (completed) {
+                    console.warn("Promise Wrapper does not support multiple results from Observable");
+                } else {
+                    completed = true;
+                    resolve(data);
+                }
+            },
+            error: reject
+        });
+    });
+}
+// backwards compat
+var makePromise = exports.makePromise = toPromise;
+function fromPromise(promise) {
+    return new _zenObservableTs2.default(function (observer) {
+        promise.then(function (value) {
+            observer.next(value);
+            observer.complete();
+        }).catch(observer.error.bind(observer));
+    });
+}
+function fromError(errorValue) {
+    return new _zenObservableTs2.default(function (observer) {
+        observer.error(errorValue);
+    });
+}
+function transformOperation(operation) {
+    var transformedOperation = {
+        variables: operation.variables || {},
+        extensions: operation.extensions || {},
+        operationName: operation.operationName,
+        query: operation.query
+    };
+    // best guess at an operation name
+    if (!transformedOperation.operationName) {
+        transformedOperation.operationName = typeof transformedOperation.query !== 'string' ? (0, _apolloUtilities.getOperationName)(transformedOperation.query) : '';
+    }
+    return transformedOperation;
+}
+function createOperation(starting, operation) {
+    var context = __assign({}, starting);
+    var setContext = function (next) {
+        if (typeof next === 'function') {
+            context = __assign({}, context, next(context));
+        } else {
+            context = __assign({}, context, next);
+        }
+    };
+    var getContext = function () {
+        return __assign({}, context);
+    };
+    Object.defineProperty(operation, 'setContext', {
+        enumerable: false,
+        value: setContext
+    });
+    Object.defineProperty(operation, 'getContext', {
+        enumerable: false,
+        value: getContext
+    });
+    Object.defineProperty(operation, 'toKey', {
+        enumerable: false,
+        value: function () {
+            return getKey(operation);
+        }
+    });
+    return operation;
+}
+function getKey(operation) {
+    // XXX we're assuming here that variables will be serialized in the same order.
+    // that might not always be true
+    return (0, _printer.print)(operation.query) + "|" + JSON.stringify(operation.variables) + "|" + operation.operationName;
+}
+//# sourceMappingURL=linkUtils.js.map
+},{"apollo-utilities":167,"zen-observable-ts":165,"graphql/language/printer":153}],155:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ApolloLink = exports.concat = exports.split = exports.from = exports.empty = undefined;
+exports.execute = execute;
+
+var _zenObservableTs = require('zen-observable-ts');
+
+var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
+
+var _linkUtils = require('./linkUtils');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var passthrough = function (op, forward) {
+    return forward ? forward(op) : _zenObservableTs2.default.of();
+};
+var toLink = function (handler) {
+    return typeof handler === 'function' ? new ApolloLink(handler) : handler;
+};
+var empty = exports.empty = function () {
+    return new ApolloLink(function (op, forward) {
+        return _zenObservableTs2.default.of();
+    });
+};
+var from = exports.from = function (links) {
+    if (links.length === 0) return empty();
+    return links.map(toLink).reduce(function (x, y) {
+        return x.concat(y);
+    });
+};
+var split = exports.split = function (test, left, right) {
+    if (right === void 0) {
+        right = new ApolloLink(passthrough);
+    }
+    var leftLink = toLink(left);
+    var rightLink = toLink(right);
+    if ((0, _linkUtils.isTerminating)(leftLink) && (0, _linkUtils.isTerminating)(rightLink)) {
+        return new ApolloLink(function (operation) {
+            return test(operation) ? leftLink.request(operation) || _zenObservableTs2.default.of() : rightLink.request(operation) || _zenObservableTs2.default.of();
+        });
+    } else {
+        return new ApolloLink(function (operation, forward) {
+            return test(operation) ? leftLink.request(operation, forward) || _zenObservableTs2.default.of() : rightLink.request(operation, forward) || _zenObservableTs2.default.of();
+        });
+    }
+};
+// join two Links together
+var concat = exports.concat = function (first, second) {
+    var firstLink = toLink(first);
+    if ((0, _linkUtils.isTerminating)(firstLink)) {
+        console.warn(new _linkUtils.LinkError("You are calling concat on a terminating link, which will have no effect", firstLink));
+        return firstLink;
+    }
+    var nextLink = toLink(second);
+    if ((0, _linkUtils.isTerminating)(nextLink)) {
+        return new ApolloLink(function (operation) {
+            return firstLink.request(operation, function (op) {
+                return nextLink.request(op) || _zenObservableTs2.default.of();
+            }) || _zenObservableTs2.default.of();
+        });
+    } else {
+        return new ApolloLink(function (operation, forward) {
+            return firstLink.request(operation, function (op) {
+                return nextLink.request(op, forward) || _zenObservableTs2.default.of();
+            }) || _zenObservableTs2.default.of();
+        });
+    }
+};
+var ApolloLink = /** @class */function () {
+    function ApolloLink(request) {
+        if (request) this.request = request;
+    }
+    ApolloLink.prototype.split = function (test, left, right) {
+        if (right === void 0) {
+            right = new ApolloLink(passthrough);
+        }
+        return this.concat(split(test, left, right));
+    };
+    ApolloLink.prototype.concat = function (next) {
+        return concat(this, next);
+    };
+    ApolloLink.prototype.request = function (operation, forward) {
+        throw new Error('request is not implemented');
+    };
+    ApolloLink.empty = empty;
+    ApolloLink.from = from;
+    ApolloLink.split = split;
+    ApolloLink.execute = execute;
+    return ApolloLink;
+}();
+exports.ApolloLink = ApolloLink;
+function execute(link, operation) {
+    return link.request((0, _linkUtils.createOperation)(operation.context, (0, _linkUtils.transformOperation)((0, _linkUtils.validateOperation)(operation)))) || _zenObservableTs2.default.of();
+}
+//# sourceMappingURL=link.js.map
+},{"zen-observable-ts":165,"./linkUtils":156}],70:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Observable = exports.fromError = exports.fromPromise = exports.toPromise = exports.makePromise = exports.createOperation = undefined;
+
+var _link = require('./link');
+
+Object.keys(_link).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _link[key];
+    }
+  });
+});
+
+var _linkUtils = require('./linkUtils');
+
+Object.defineProperty(exports, 'createOperation', {
+  enumerable: true,
+  get: function () {
+    return _linkUtils.createOperation;
+  }
+});
+Object.defineProperty(exports, 'makePromise', {
+  enumerable: true,
+  get: function () {
+    return _linkUtils.makePromise;
+  }
+});
+Object.defineProperty(exports, 'toPromise', {
+  enumerable: true,
+  get: function () {
+    return _linkUtils.toPromise;
+  }
+});
+Object.defineProperty(exports, 'fromPromise', {
+  enumerable: true,
+  get: function () {
+    return _linkUtils.fromPromise;
+  }
+});
+Object.defineProperty(exports, 'fromError', {
+  enumerable: true,
+  get: function () {
+    return _linkUtils.fromError;
+  }
+});
+
+var _zenObservableTs = require('zen-observable-ts');
+
+var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Observable = _zenObservableTs2.default;
+//# sourceMappingURL=index.js.map
+},{"./link":155,"./linkUtils":156,"zen-observable-ts":165}],222:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = symbolObservablePonyfill;
+function symbolObservablePonyfill(root) {
+	var result;
+	var Symbol = root.Symbol;
+
+	if (typeof Symbol === 'function') {
+		if (Symbol.observable) {
+			result = Symbol.observable;
+		} else {
+			result = Symbol('observable');
+			Symbol.observable = result;
+		}
+	} else {
+		result = '@@observable';
+	}
+
+	return result;
+};
+},{}],217:[function(require,module,exports) {
+var global = arguments[3];
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ponyfill = require('./ponyfill.js');
+
+var _ponyfill2 = _interopRequireDefault(_ponyfill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var root; /* global window */
+
+
+if (typeof self !== 'undefined') {
+  root = self;
+} else if (typeof window !== 'undefined') {
+  root = window;
+} else if (typeof global !== 'undefined') {
+  root = global;
+} else if (typeof module !== 'undefined') {
+  root = module;
+} else {
+  root = Function('return this')();
+}
+
+var result = (0, _ponyfill2.default)(root);
+exports.default = result;
+},{"./ponyfill.js":222}],173:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Observable = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var _symbolObservable = require('symbol-observable');
+
+var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+// This simplified polyfill attempts to follow the ECMAScript Observable proposal.
+// See https://github.com/zenparsing/es-observable
+
+// rxjs interopt
+var Observable = /** @class */function (_super) {
+    __extends(Observable, _super);
+    function Observable() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Observable.prototype[_symbolObservable2.default] = function () {
+        return this;
+    };
+    Observable.prototype['@@observable'] = function () {
+        return this;
+    };
+    return Observable;
+}(_apolloLink.Observable);
+exports.Observable = Observable;
+//# sourceMappingURL=Observable.js.map
+},{"apollo-link":70,"symbol-observable":217}],144:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.isApolloError = isApolloError;
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+function isApolloError(err) {
+    return err.hasOwnProperty('graphQLErrors');
+}
+// Sets the error message on this error according to the
+// the GraphQL and network errors that are present.
+// If the error message has already been set through the
+// constructor or otherwise, this function is a nop.
+var generateErrorMessage = function (err) {
+    var message = '';
+    // If we have GraphQL errors present, add that to the error message.
+    if (Array.isArray(err.graphQLErrors) && err.graphQLErrors.length !== 0) {
+        err.graphQLErrors.forEach(function (graphQLError) {
+            var errorMessage = graphQLError ? graphQLError.message : 'Error message not found.';
+            message += "GraphQL error: " + errorMessage + "\n";
+        });
+    }
+    if (err.networkError) {
+        message += 'Network error: ' + err.networkError.message + '\n';
+    }
+    // strip newline from the end of the message
+    message = message.replace(/\n$/, '');
+    return message;
+};
+var ApolloError = /** @class */function (_super) {
+    __extends(ApolloError, _super);
+    // Constructs an instance of ApolloError given a GraphQLError
+    // or a network error. Note that one of these has to be a valid
+    // value or the constructed error will be meaningless.
+    function ApolloError(_a) {
+        var graphQLErrors = _a.graphQLErrors,
+            networkError = _a.networkError,
+            errorMessage = _a.errorMessage,
+            extraInfo = _a.extraInfo;
+        var _this = _super.call(this, errorMessage) || this;
+        _this.graphQLErrors = graphQLErrors || [];
+        _this.networkError = networkError || null;
+        if (!errorMessage) {
+            _this.message = generateErrorMessage(_this);
+        } else {
+            _this.message = errorMessage;
+        }
+        _this.extraInfo = extraInfo;
+        // We're not using `Object.setPrototypeOf` here as it isn't fully
+        // supported on Android (see issue #3236).
+        _this.__proto__ = ApolloError.prototype;
+        return _this;
+    }
+    return ApolloError;
+}(Error);
+exports.ApolloError = ApolloError;
+//# sourceMappingURL=ApolloError.js.map
+},{}],143:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var FetchType = exports.FetchType = undefined;
+(function (FetchType) {
+    FetchType[FetchType["normal"] = 1] = "normal";
+    FetchType[FetchType["refetch"] = 2] = "refetch";
+    FetchType[FetchType["poll"] = 3] = "poll";
+})(FetchType || (exports.FetchType = FetchType = {}));
+//# sourceMappingURL=types.js.map
+},{}],141:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ObservableQuery = exports.hasError = undefined;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _networkStatus = require('./networkStatus');
+
+var _Observable = require('../util/Observable');
+
+var _ApolloError = require('../errors/ApolloError');
+
+var _types = require('./types');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+var hasError = exports.hasError = function (storeValue, policy) {
+    if (policy === void 0) {
+        policy = 'none';
+    }
+    return storeValue && (storeValue.graphQLErrors && storeValue.graphQLErrors.length > 0 && policy === 'none' || storeValue.networkError);
+};
+var ObservableQuery = /** @class */function (_super) {
+    __extends(ObservableQuery, _super);
+    function ObservableQuery(_a) {
+        var scheduler = _a.scheduler,
+            options = _a.options,
+            _b = _a.shouldSubscribe,
+            shouldSubscribe = _b === void 0 ? true : _b;
+        var _this = _super.call(this, function (observer) {
+            return _this.onSubscribe(observer);
+        }) || this;
+        // active state
+        _this.isCurrentlyPolling = false;
+        _this.isTornDown = false;
+        // query information
+        _this.options = options;
+        _this.variables = options.variables || {};
+        _this.queryId = scheduler.queryManager.generateQueryId();
+        _this.shouldSubscribe = shouldSubscribe;
+        // related classes
+        _this.scheduler = scheduler;
+        _this.queryManager = scheduler.queryManager;
+        // interal data stores
+        _this.observers = [];
+        _this.subscriptionHandles = [];
+        return _this;
+    }
+    ObservableQuery.prototype.result = function () {
+        var that = this;
+        return new Promise(function (resolve, reject) {
+            var subscription;
+            var observer = {
+                next: function (result) {
+                    resolve(result);
+                    // Stop the query within the QueryManager if we can before
+                    // this function returns.
+                    //
+                    // We do this in order to prevent observers piling up within
+                    // the QueryManager. Notice that we only fully unsubscribe
+                    // from the subscription in a setTimeout(..., 0)  call. This call can
+                    // actually be handled by the browser at a much later time. If queries
+                    // are fired in the meantime, observers that should have been removed
+                    // from the QueryManager will continue to fire, causing an unnecessary
+                    // performance hit.
+                    if (!that.observers.some(function (obs) {
+                        return obs !== observer;
+                    })) {
+                        that.queryManager.removeQuery(that.queryId);
+                    }
+                    setTimeout(function () {
+                        subscription.unsubscribe();
+                    }, 0);
+                },
+                error: function (error) {
+                    reject(error);
+                }
+            };
+            subscription = that.subscribe(observer);
+        });
+    };
+    /**
+     * Return the result of the query from the local cache as well as some fetching status
+     * `loading` and `networkStatus` allow to know if a request is in flight
+     * `partial` lets you know if the result from the local cache is complete or partial
+     * @return {result: Object, loading: boolean, networkStatus: number, partial: boolean}
+     */
+    ObservableQuery.prototype.currentResult = function () {
+        if (this.isTornDown) {
+            return {
+                data: this.lastError ? {} : this.lastResult ? this.lastResult.data : {},
+                error: this.lastError,
+                loading: false,
+                networkStatus: _networkStatus.NetworkStatus.error
+            };
+        }
+        var queryStoreValue = this.queryManager.queryStore.get(this.queryId);
+        if (hasError(queryStoreValue, this.options.errorPolicy)) {
+            return {
+                data: {},
+                loading: false,
+                networkStatus: queryStoreValue.networkStatus,
+                error: new _ApolloError.ApolloError({
+                    graphQLErrors: queryStoreValue.graphQLErrors,
+                    networkError: queryStoreValue.networkError
+                })
+            };
+        }
+        var _a = this.queryManager.getCurrentQueryResult(this),
+            data = _a.data,
+            partial = _a.partial;
+        var queryLoading = !queryStoreValue || queryStoreValue.networkStatus === _networkStatus.NetworkStatus.loading;
+        // We need to be careful about the loading state we show to the user, to try
+        // and be vaguely in line with what the user would have seen from .subscribe()
+        // but to still provide useful information synchronously when the query
+        // will not end up hitting the server.
+        // See more: https://github.com/apollostack/apollo-client/issues/707
+        // Basically: is there a query in flight right now (modolo the next tick)?
+        var loading = this.options.fetchPolicy === 'network-only' && queryLoading || partial && this.options.fetchPolicy !== 'cache-only';
+        // if there is nothing in the query store, it means this query hasn't fired yet or it has been cleaned up. Therefore the
+        // network status is dependent on queryLoading.
+        var networkStatus;
+        if (queryStoreValue) {
+            networkStatus = queryStoreValue.networkStatus;
+        } else {
+            networkStatus = loading ? _networkStatus.NetworkStatus.loading : _networkStatus.NetworkStatus.ready;
+        }
+        var result = {
+            data: data,
+            loading: (0, _networkStatus.isNetworkRequestInFlight)(networkStatus),
+            networkStatus: networkStatus
+        };
+        if (queryStoreValue && queryStoreValue.graphQLErrors && this.options.errorPolicy === 'all') {
+            result.errors = queryStoreValue.graphQLErrors;
+        }
+        if (!partial) {
+            var stale = false;
+            this.lastResult = __assign({}, result, { stale: stale });
+        }
+        return __assign({}, result, { partial: partial });
+    };
+    // Returns the last result that observer.next was called with. This is not the same as
+    // currentResult! If you're not sure which you need, then you probably need currentResult.
+    ObservableQuery.prototype.getLastResult = function () {
+        return this.lastResult;
+    };
+    ObservableQuery.prototype.getLastError = function () {
+        return this.lastError;
+    };
+    ObservableQuery.prototype.resetLastResults = function () {
+        delete this.lastResult;
+        delete this.lastError;
+        this.isTornDown = false;
+    };
+    ObservableQuery.prototype.refetch = function (variables) {
+        var fetchPolicy = this.options.fetchPolicy;
+        // early return if trying to read from cache during refetch
+        if (fetchPolicy === 'cache-only') {
+            return Promise.reject(new Error('cache-only fetchPolicy option should not be used together with query refetch.'));
+        }
+        if (!(0, _apolloUtilities.isEqual)(this.variables, variables)) {
+            // update observable variables
+            this.variables = Object.assign({}, this.variables, variables);
+        }
+        if (!(0, _apolloUtilities.isEqual)(this.options.variables, this.variables)) {
+            // Update the existing options with new variables
+            this.options.variables = Object.assign({}, this.options.variables, this.variables);
+        }
+        // Override fetchPolicy for this call only
+        // only network-only and no-cache are safe to use
+        var isNetworkFetchPolicy = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
+        var combinedOptions = __assign({}, this.options, { fetchPolicy: isNetworkFetchPolicy ? fetchPolicy : 'network-only' });
+        return this.queryManager.fetchQuery(this.queryId, combinedOptions, _types.FetchType.refetch).then(function (result) {
+            return (0, _apolloUtilities.maybeDeepFreeze)(result);
+        });
+    };
+    ObservableQuery.prototype.fetchMore = function (fetchMoreOptions) {
+        var _this = this;
+        // early return if no update Query
+        if (!fetchMoreOptions.updateQuery) {
+            throw new Error('updateQuery option is required. This function defines how to update the query data with the new results.');
+        }
+        var combinedOptions;
+        return Promise.resolve().then(function () {
+            var qid = _this.queryManager.generateQueryId();
+            if (fetchMoreOptions.query) {
+                // fetch a new query
+                combinedOptions = fetchMoreOptions;
+            } else {
+                // fetch the same query with a possibly new variables
+                combinedOptions = __assign({}, _this.options, fetchMoreOptions, { variables: Object.assign({}, _this.variables, fetchMoreOptions.variables) });
+            }
+            combinedOptions.fetchPolicy = 'network-only';
+            return _this.queryManager.fetchQuery(qid, combinedOptions, _types.FetchType.normal, _this.queryId);
+        }).then(function (fetchMoreResult) {
+            _this.updateQuery(function (previousResult) {
+                return fetchMoreOptions.updateQuery(previousResult, {
+                    fetchMoreResult: fetchMoreResult.data,
+                    variables: combinedOptions.variables
+                });
+            });
+            return fetchMoreResult;
+        });
+    };
+    // XXX the subscription variables are separate from the query variables.
+    // if you want to update subscription variables, right now you have to do that separately,
+    // and you can only do it by stopping the subscription and then subscribing again with new variables.
+    ObservableQuery.prototype.subscribeToMore = function (options) {
+        var _this = this;
+        var subscription = this.queryManager.startGraphQLSubscription({
+            query: options.document,
+            variables: options.variables
+        }).subscribe({
+            next: function (data) {
+                if (options.updateQuery) {
+                    _this.updateQuery(function (previous, _a) {
+                        var variables = _a.variables;
+                        return options.updateQuery(previous, {
+                            subscriptionData: data,
+                            variables: variables
+                        });
+                    });
+                }
+            },
+            error: function (err) {
+                if (options.onError) {
+                    options.onError(err);
+                    return;
+                }
+                console.error('Unhandled GraphQL subscription error', err);
+            }
+        });
+        this.subscriptionHandles.push(subscription);
+        return function () {
+            var i = _this.subscriptionHandles.indexOf(subscription);
+            if (i >= 0) {
+                _this.subscriptionHandles.splice(i, 1);
+                subscription.unsubscribe();
+            }
+        };
+    };
+    // Note: if the query is not active (there are no subscribers), the promise
+    // will return null immediately.
+    ObservableQuery.prototype.setOptions = function (opts) {
+        var oldOptions = this.options;
+        this.options = Object.assign({}, this.options, opts);
+        if (opts.pollInterval) {
+            this.startPolling(opts.pollInterval);
+        } else if (opts.pollInterval === 0) {
+            this.stopPolling();
+        }
+        // If fetchPolicy went from cache-only to something else, or from something else to network-only
+        var tryFetch = oldOptions.fetchPolicy !== 'network-only' && opts.fetchPolicy === 'network-only' || oldOptions.fetchPolicy === 'cache-only' && opts.fetchPolicy !== 'cache-only' || oldOptions.fetchPolicy === 'standby' && opts.fetchPolicy !== 'standby' || false;
+        return this.setVariables(this.options.variables, tryFetch, opts.fetchResults);
+    };
+    /**
+     * Update the variables of this observable query, and fetch the new results
+     * if they've changed. If you want to force new results, use `refetch`.
+     *
+     * Note: if the variables have not changed, the promise will return the old
+     * results immediately, and the `next` callback will *not* fire.
+     *
+     * Note: if the query is not active (there are no subscribers), the promise
+     * will return null immediately.
+     *
+     * @param variables: The new set of variables. If there are missing variables,
+     * the previous values of those variables will be used.
+     *
+     * @param tryFetch: Try and fetch new results even if the variables haven't
+     * changed (we may still just hit the store, but if there's nothing in there
+     * this will refetch)
+     *
+     * @param fetchResults: Option to ignore fetching results when updating variables
+     *
+     */
+    ObservableQuery.prototype.setVariables = function (variables, tryFetch, fetchResults) {
+        if (tryFetch === void 0) {
+            tryFetch = false;
+        }
+        if (fetchResults === void 0) {
+            fetchResults = true;
+        }
+        // since setVariables restarts the subscription, we reset the tornDown status
+        this.isTornDown = false;
+        var newVariables = variables ? variables : this.variables;
+        if ((0, _apolloUtilities.isEqual)(newVariables, this.variables) && !tryFetch) {
+            // If we have no observers, then we don't actually want to make a network
+            // request. As soon as someone observes the query, the request will kick
+            // off. For now, we just store any changes. (See #1077)
+            if (this.observers.length === 0 || !fetchResults) {
+                return new Promise(function (resolve) {
+                    return resolve();
+                });
+            }
+            return this.result();
+        } else {
+            this.variables = newVariables;
+            this.options.variables = newVariables;
+            // See comment above
+            if (this.observers.length === 0) {
+                return new Promise(function (resolve) {
+                    return resolve();
+                });
+            }
+            // Use the same options as before, but with new variables
+            return this.queryManager.fetchQuery(this.queryId, __assign({}, this.options, { variables: this.variables })).then(function (result) {
+                return (0, _apolloUtilities.maybeDeepFreeze)(result);
+            });
+        }
+    };
+    ObservableQuery.prototype.updateQuery = function (mapFn) {
+        var _a = this.queryManager.getQueryWithPreviousResult(this.queryId),
+            previousResult = _a.previousResult,
+            variables = _a.variables,
+            document = _a.document;
+        var newResult = (0, _apolloUtilities.tryFunctionOrLogError)(function () {
+            return mapFn(previousResult, { variables: variables });
+        });
+        if (newResult) {
+            this.queryManager.dataStore.markUpdateQueryResult(document, variables, newResult);
+            this.queryManager.broadcastQueries();
+        }
+    };
+    ObservableQuery.prototype.stopPolling = function () {
+        if (this.isCurrentlyPolling) {
+            this.scheduler.stopPollingQuery(this.queryId);
+            this.options.pollInterval = undefined;
+            this.isCurrentlyPolling = false;
+        }
+    };
+    ObservableQuery.prototype.startPolling = function (pollInterval) {
+        if (this.options.fetchPolicy === 'cache-first' || this.options.fetchPolicy === 'cache-only') {
+            throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
+        }
+        if (this.isCurrentlyPolling) {
+            this.scheduler.stopPollingQuery(this.queryId);
+            this.isCurrentlyPolling = false;
+        }
+        this.options.pollInterval = pollInterval;
+        this.isCurrentlyPolling = true;
+        this.scheduler.startPollingQuery(this.options, this.queryId);
+    };
+    ObservableQuery.prototype.onSubscribe = function (observer) {
+        var _this = this;
+        // Zen Observable has its own error function, in order to log correctly
+        // we need to declare a custom error if nothing is passed
+        if (observer._subscription && observer._subscription._observer && !observer._subscription._observer.error) {
+            observer._subscription._observer.error = function (error) {
+                console.error('Unhandled error', error.message, error.stack);
+            };
+        }
+        this.observers.push(observer);
+        // Deliver initial result
+        if (observer.next && this.lastResult) observer.next(this.lastResult);
+        if (observer.error && this.lastError) observer.error(this.lastError);
+        // setup the query if it hasn't been done before
+        if (this.observers.length === 1) this.setUpQuery();
+        return function () {
+            _this.observers = _this.observers.filter(function (obs) {
+                return obs !== observer;
+            });
+            if (_this.observers.length === 0) {
+                _this.tearDownQuery();
+            }
+        };
+    };
+    ObservableQuery.prototype.setUpQuery = function () {
+        var _this = this;
+        if (this.shouldSubscribe) {
+            this.queryManager.addObservableQuery(this.queryId, this);
+        }
+        if (!!this.options.pollInterval) {
+            if (this.options.fetchPolicy === 'cache-first' || this.options.fetchPolicy === 'cache-only') {
+                throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
+            }
+            this.isCurrentlyPolling = true;
+            this.scheduler.startPollingQuery(this.options, this.queryId);
+        }
+        var observer = {
+            next: function (result) {
+                _this.lastResult = result;
+                _this.observers.forEach(function (obs) {
+                    return obs.next && obs.next(result);
+                });
+            },
+            error: function (error) {
+                _this.lastError = error;
+                _this.observers.forEach(function (obs) {
+                    return obs.error && obs.error(error);
+                });
+            }
+        };
+        this.queryManager.startQuery(this.queryId, this.options, this.queryManager.queryListenerForObserver(this.queryId, this.options, observer));
+    };
+    ObservableQuery.prototype.tearDownQuery = function () {
+        this.isTornDown = true;
+        if (this.isCurrentlyPolling) {
+            this.scheduler.stopPollingQuery(this.queryId);
+            this.isCurrentlyPolling = false;
+        }
+        // stop all active GraphQL subscriptions
+        this.subscriptionHandles.forEach(function (sub) {
+            return sub.unsubscribe();
+        });
+        this.subscriptionHandles = [];
+        this.queryManager.removeObservableQuery(this.queryId);
+        this.queryManager.stopQuery(this.queryId);
+        this.observers = [];
+    };
+    return ObservableQuery;
+}(_Observable.Observable);
+exports.ObservableQuery = ObservableQuery;
+//# sourceMappingURL=ObservableQuery.js.map
+},{"apollo-utilities":167,"./networkStatus":142,"../util/Observable":173,"../errors/ApolloError":144,"./types":143}],221:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.DedupLink = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+
+/*
+ * Expects context to contain the forceFetch field if no dedup
+ */
+var DedupLink = /** @class */function (_super) {
+    __extends(DedupLink, _super);
+    function DedupLink() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.inFlightRequestObservables = new Map();
+        _this.subscribers = new Map();
+        return _this;
+    }
+    DedupLink.prototype.request = function (operation, forward) {
+        var _this = this;
+        // sometimes we might not want to deduplicate a request, for example when we want to force fetch it.
+        if (operation.getContext().forceFetch) {
+            return forward(operation);
+        }
+        var key = operation.toKey();
+        var cleanup = function (key) {
+            _this.inFlightRequestObservables.delete(key);
+            var prev = _this.subscribers.get(key);
+            return prev;
+        };
+        if (!this.inFlightRequestObservables.get(key)) {
+            // this is a new request, i.e. we haven't deduplicated it yet
+            // call the next link
+            var singleObserver_1 = forward(operation);
+            var subscription_1;
+            var sharedObserver = new _apolloLink.Observable(function (observer) {
+                // this will still be called by each subscriber regardless of
+                // deduplication status
+                var prev = _this.subscribers.get(key);
+                if (!prev) prev = { next: [], error: [], complete: [] };
+                _this.subscribers.set(key, {
+                    next: prev.next.concat([observer.next.bind(observer)]),
+                    error: prev.error.concat([observer.error.bind(observer)]),
+                    complete: prev.complete.concat([observer.complete.bind(observer)])
+                });
+                if (!subscription_1) {
+                    subscription_1 = singleObserver_1.subscribe({
+                        next: function (result) {
+                            var prev = cleanup(key);
+                            _this.subscribers.delete(key);
+                            if (prev) {
+                                prev.next.forEach(function (next) {
+                                    return next(result);
+                                });
+                                prev.complete.forEach(function (complete) {
+                                    return complete();
+                                });
+                            }
+                        },
+                        error: function (error) {
+                            var prev = cleanup(key);
+                            _this.subscribers.delete(key);
+                            if (prev) prev.error.forEach(function (err) {
+                                return err(error);
+                            });
+                        }
+                    });
+                }
+                return function () {
+                    if (subscription_1) subscription_1.unsubscribe();
+                    _this.inFlightRequestObservables.delete(key);
+                };
+            });
+            this.inFlightRequestObservables.set(key, sharedObserver);
+        }
+        // return shared Observable
+        return this.inFlightRequestObservables.get(key);
+    };
+    return DedupLink;
+}(_apolloLink.ApolloLink);
+exports.DedupLink = DedupLink;
+//# sourceMappingURL=dedupLink.js.map
+},{"apollo-link":70}],216:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _dedupLink = require('./dedupLink');
+
+Object.keys(_dedupLink).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _dedupLink[key];
+    }
+  });
+});
+},{"./dedupLink":221}],213:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.QueryScheduler = undefined;
+
+var _types = require('../core/types');
+
+var _ObservableQuery = require('../core/ObservableQuery');
+
+var _networkStatus = require('../core/networkStatus');
+
+// The QueryScheduler is supposed to be a mechanism that schedules polling queries such that
+// they are clustered into the time slots of the QueryBatcher and are batched together. It
+// also makes sure that for a given polling query, if one instance of the query is inflight,
+// another instance will not be fired until the query returns or times out. We do this because
+// another query fires while one is already in flight, the data will stay in the "loading" state
+// even after the first query has returned.
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var QueryScheduler = /** @class */function () {
+    function QueryScheduler(_a) {
+        var queryManager = _a.queryManager,
+            ssrMode = _a.ssrMode;
+        // Map going from queryIds to query options that are in flight.
+        this.inFlightQueries = {};
+        // Map going from query ids to the query options associated with those queries. Contains all of
+        // the queries, both in flight and not in flight.
+        this.registeredQueries = {};
+        // Map going from polling interval with to the query ids that fire on that interval.
+        // These query ids are associated with a set of options in the this.registeredQueries.
+        this.intervalQueries = {};
+        // Map going from polling interval widths to polling timers.
+        this.pollingTimers = {};
+        this.ssrMode = false;
+        this.queryManager = queryManager;
+        this.ssrMode = ssrMode || false;
+    }
+    QueryScheduler.prototype.checkInFlight = function (queryId) {
+        var query = this.queryManager.queryStore.get(queryId);
+        return query && query.networkStatus !== _networkStatus.NetworkStatus.ready && query.networkStatus !== _networkStatus.NetworkStatus.error;
+    };
+    QueryScheduler.prototype.fetchQuery = function (queryId, options, fetchType) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            _this.queryManager.fetchQuery(queryId, options, fetchType).then(function (result) {
+                resolve(result);
+            }).catch(function (error) {
+                reject(error);
+            });
+        });
+    };
+    QueryScheduler.prototype.startPollingQuery = function (options, queryId, listener) {
+        if (!options.pollInterval) {
+            throw new Error('Attempted to start a polling query without a polling interval.');
+        }
+        // Do not poll in SSR mode
+        if (this.ssrMode) return queryId;
+        this.registeredQueries[queryId] = options;
+        if (listener) {
+            this.queryManager.addQueryListener(queryId, listener);
+        }
+        this.addQueryOnInterval(queryId, options);
+        return queryId;
+    };
+    QueryScheduler.prototype.stopPollingQuery = function (queryId) {
+        // Remove the query options from one of the registered queries.
+        // The polling function will then take care of not firing it anymore.
+        delete this.registeredQueries[queryId];
+    };
+    // Fires the all of the queries on a particular interval. Called on a setInterval.
+    QueryScheduler.prototype.fetchQueriesOnInterval = function (interval) {
+        var _this = this;
+        // XXX this "filter" here is nasty, because it does two things at the same time.
+        // 1. remove queries that have stopped polling
+        // 2. call fetchQueries for queries that are polling and not in flight.
+        // TODO: refactor this to make it cleaner
+        this.intervalQueries[interval] = this.intervalQueries[interval].filter(function (queryId) {
+            // If queryOptions can't be found from registeredQueries or if it has a
+            // different interval, it means that this queryId is no longer registered
+            // and should be removed from the list of queries firing on this interval.
+            //
+            // We don't remove queries from intervalQueries immediately in
+            // stopPollingQuery so that we can keep the timer consistent when queries
+            // are removed and replaced, and to avoid quadratic behavior when stopping
+            // many queries.
+            if (!(_this.registeredQueries.hasOwnProperty(queryId) && _this.registeredQueries[queryId].pollInterval === interval)) {
+                return false;
+            }
+            // Don't fire this instance of the polling query is one of the instances is already in
+            // flight.
+            if (_this.checkInFlight(queryId)) {
+                return true;
+            }
+            var queryOptions = _this.registeredQueries[queryId];
+            var pollingOptions = __assign({}, queryOptions);
+            pollingOptions.fetchPolicy = 'network-only';
+            // don't let unhandled rejections happen
+            _this.fetchQuery(queryId, pollingOptions, _types.FetchType.poll).catch(function () {});
+            return true;
+        });
+        if (this.intervalQueries[interval].length === 0) {
+            clearInterval(this.pollingTimers[interval]);
+            delete this.intervalQueries[interval];
+        }
+    };
+    // Adds a query on a particular interval to this.intervalQueries and then fires
+    // that query with all the other queries executing on that interval. Note that the query id
+    // and query options must have been added to this.registeredQueries before this function is called.
+    QueryScheduler.prototype.addQueryOnInterval = function (queryId, queryOptions) {
+        var _this = this;
+        var interval = queryOptions.pollInterval;
+        if (!interval) {
+            throw new Error("A poll interval is required to start polling query with id '" + queryId + "'.");
+        }
+        // If there are other queries on this interval, this query will just fire with those
+        // and we don't need to create a new timer.
+        if (this.intervalQueries.hasOwnProperty(interval.toString()) && this.intervalQueries[interval].length > 0) {
+            this.intervalQueries[interval].push(queryId);
+        } else {
+            this.intervalQueries[interval] = [queryId];
+            // set up the timer for the function that will handle this interval
+            this.pollingTimers[interval] = setInterval(function () {
+                _this.fetchQueriesOnInterval(interval);
+            }, interval);
+        }
+    };
+    // Used only for unit testing.
+    QueryScheduler.prototype.registerPollingQuery = function (queryOptions) {
+        if (!queryOptions.pollInterval) {
+            throw new Error('Attempted to register a non-polling query with the scheduler.');
+        }
+        return new _ObservableQuery.ObservableQuery({
+            scheduler: this,
+            options: queryOptions
+        });
+    };
+    return QueryScheduler;
+}();
+exports.QueryScheduler = QueryScheduler;
+//# sourceMappingURL=scheduler.js.map
+},{"../core/types":143,"../core/ObservableQuery":141,"../core/networkStatus":142}],214:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var MutationStore = /** @class */function () {
+    function MutationStore() {
+        this.store = {};
+    }
+    MutationStore.prototype.getStore = function () {
+        return this.store;
+    };
+    MutationStore.prototype.get = function (mutationId) {
+        return this.store[mutationId];
+    };
+    MutationStore.prototype.initMutation = function (mutationId, mutationString, variables) {
+        this.store[mutationId] = {
+            mutationString: mutationString,
+            variables: variables || {},
+            loading: true,
+            error: null
+        };
+    };
+    MutationStore.prototype.markMutationError = function (mutationId, error) {
+        var mutation = this.store[mutationId];
+        if (!mutation) {
+            return;
+        }
+        mutation.loading = false;
+        mutation.error = error;
+    };
+    MutationStore.prototype.markMutationResult = function (mutationId) {
+        var mutation = this.store[mutationId];
+        if (!mutation) {
+            return;
+        }
+        mutation.loading = false;
+        mutation.error = null;
+    };
+    MutationStore.prototype.reset = function () {
+        this.store = {};
+    };
+    return MutationStore;
+}();
+exports.MutationStore = MutationStore;
+//# sourceMappingURL=mutations.js.map
+},{}],215:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.QueryStore = undefined;
+
+var _printer = require('graphql/language/printer');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _networkStatus = require('../core/networkStatus');
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var QueryStore = /** @class */function () {
+    function QueryStore() {
+        this.store = {};
+    }
+    QueryStore.prototype.getStore = function () {
+        return this.store;
+    };
+    QueryStore.prototype.get = function (queryId) {
+        return this.store[queryId];
+    };
+    QueryStore.prototype.initQuery = function (query) {
+        var previousQuery = this.store[query.queryId];
+        if (previousQuery && previousQuery.document !== query.document && (0, _printer.print)(previousQuery.document) !== (0, _printer.print)(query.document)) {
+            // XXX we're throwing an error here to catch bugs where a query gets overwritten by a new one.
+            // we should implement a separate action for refetching so that QUERY_INIT may never overwrite
+            // an existing query (see also: https://github.com/apollostack/apollo-client/issues/732)
+            throw new Error('Internal Error: may not update existing query string in store');
+        }
+        var isSetVariables = false;
+        var previousVariables = null;
+        if (query.storePreviousVariables && previousQuery && previousQuery.networkStatus !== _networkStatus.NetworkStatus.loading
+        // if the previous query was still loading, we don't want to remember it at all.
+        ) {
+                if (!(0, _apolloUtilities.isEqual)(previousQuery.variables, query.variables)) {
+                    isSetVariables = true;
+                    previousVariables = previousQuery.variables;
+                }
+            }
+        // TODO break this out into a separate function
+        var networkStatus;
+        if (isSetVariables) {
+            networkStatus = _networkStatus.NetworkStatus.setVariables;
+        } else if (query.isPoll) {
+            networkStatus = _networkStatus.NetworkStatus.poll;
+        } else if (query.isRefetch) {
+            networkStatus = _networkStatus.NetworkStatus.refetch;
+            // TODO: can we determine setVariables here if it's a refetch and the variables have changed?
+        } else {
+            networkStatus = _networkStatus.NetworkStatus.loading;
+        }
+        var graphQLErrors = [];
+        if (previousQuery && previousQuery.graphQLErrors) {
+            graphQLErrors = previousQuery.graphQLErrors;
+        }
+        // XXX right now if QUERY_INIT is fired twice, like in a refetch situation, we just overwrite
+        // the store. We probably want a refetch action instead, because I suspect that if you refetch
+        // before the initial fetch is done, you'll get an error.
+        this.store[query.queryId] = {
+            document: query.document,
+            variables: query.variables,
+            previousVariables: previousVariables,
+            networkError: null,
+            graphQLErrors: graphQLErrors,
+            networkStatus: networkStatus,
+            metadata: query.metadata
+        };
+        // If the action had a `moreForQueryId` property then we need to set the
+        // network status on that query as well to `fetchMore`.
+        //
+        // We have a complement to this if statement in the query result and query
+        // error action branch, but importantly *not* in the client result branch.
+        // This is because the implementation of `fetchMore` *always* sets
+        // `fetchPolicy` to `network-only` so we would never have a client result.
+        if (typeof query.fetchMoreForQueryId === 'string' && this.store[query.fetchMoreForQueryId]) {
+            this.store[query.fetchMoreForQueryId].networkStatus = _networkStatus.NetworkStatus.fetchMore;
+        }
+    };
+    QueryStore.prototype.markQueryResult = function (queryId, result, fetchMoreForQueryId) {
+        if (!this.store[queryId]) return;
+        this.store[queryId].networkError = null;
+        this.store[queryId].graphQLErrors = result.errors && result.errors.length ? result.errors : [];
+        this.store[queryId].previousVariables = null;
+        this.store[queryId].networkStatus = _networkStatus.NetworkStatus.ready;
+        // If we have a `fetchMoreForQueryId` then we need to update the network
+        // status for that query. See the branch for query initialization for more
+        // explanation about this process.
+        if (typeof fetchMoreForQueryId === 'string' && this.store[fetchMoreForQueryId]) {
+            this.store[fetchMoreForQueryId].networkStatus = _networkStatus.NetworkStatus.ready;
+        }
+    };
+    QueryStore.prototype.markQueryError = function (queryId, error, fetchMoreForQueryId) {
+        if (!this.store[queryId]) return;
+        this.store[queryId].networkError = error;
+        this.store[queryId].networkStatus = _networkStatus.NetworkStatus.error;
+        // If we have a `fetchMoreForQueryId` then we need to update the network
+        // status for that query. See the branch for query initialization for more
+        // explanation about this process.
+        if (typeof fetchMoreForQueryId === 'string') {
+            this.markQueryResultClient(fetchMoreForQueryId, true);
+        }
+    };
+    QueryStore.prototype.markQueryResultClient = function (queryId, complete) {
+        if (!this.store[queryId]) return;
+        this.store[queryId].networkError = null;
+        this.store[queryId].previousVariables = null;
+        this.store[queryId].networkStatus = complete ? _networkStatus.NetworkStatus.ready : _networkStatus.NetworkStatus.loading;
+    };
+    QueryStore.prototype.stopQuery = function (queryId) {
+        delete this.store[queryId];
+    };
+    QueryStore.prototype.reset = function (observableQueryIds) {
+        var _this = this;
+        // keep only the queries with query ids that are associated with observables
+        this.store = Object.keys(this.store).filter(function (queryId) {
+            return observableQueryIds.indexOf(queryId) > -1;
+        }).reduce(function (res, key) {
+            // XXX set loading to true so listeners don't trigger unless they want results with partial data
+            res[key] = __assign({}, _this.store[key], { networkStatus: _networkStatus.NetworkStatus.loading });
+            return res;
+        }, {});
+    };
+    return QueryStore;
+}();
+exports.QueryStore = QueryStore;
+//# sourceMappingURL=queries.js.map
+},{"graphql/language/printer":153,"apollo-utilities":167,"../core/networkStatus":142}],170:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.QueryManager = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var _printer = require('graphql/language/printer');
+
+var _apolloLinkDedup = require('apollo-link-dedup');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _scheduler = require('../scheduler/scheduler');
+
+var _ApolloError = require('../errors/ApolloError');
+
+var _Observable = require('../util/Observable');
+
+var _mutations = require('../data/mutations');
+
+var _queries = require('../data/queries');
+
+var _ObservableQuery = require('./ObservableQuery');
+
+var _networkStatus = require('./networkStatus');
+
+var _types = require('./types');
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var defaultQueryInfo = {
+    listeners: [],
+    invalidated: false,
+    document: null,
+    newData: null,
+    lastRequestId: null,
+    observableQuery: null,
+    subscriptions: []
+};
+var QueryManager = /** @class */function () {
+    function QueryManager(_a) {
+        var link = _a.link,
+            _b = _a.queryDeduplication,
+            queryDeduplication = _b === void 0 ? false : _b,
+            store = _a.store,
+            _c = _a.onBroadcast,
+            onBroadcast = _c === void 0 ? function () {
+            return undefined;
+        } : _c,
+            _d = _a.ssrMode,
+            ssrMode = _d === void 0 ? false : _d;
+        this.mutationStore = new _mutations.MutationStore();
+        this.queryStore = new _queries.QueryStore();
+        // let's not start at zero to avoid pain with bad checks
+        this.idCounter = 1;
+        // XXX merge with ObservableQuery but that needs to be expanded to support mutations and
+        // subscriptions as well
+        this.queries = new Map();
+        // A map going from a requestId to a promise that has not yet been resolved. We use this to keep
+        // track of queries that are inflight and reject them in case some
+        // destabalizing action occurs (e.g. reset of the Apollo store).
+        this.fetchQueryPromises = new Map();
+        // A map going from the name of a query to an observer issued for it by watchQuery. This is
+        // generally used to refetches for refetchQueries and to update mutation results through
+        // updateQueries.
+        this.queryIdsByName = {};
+        this.link = link;
+        this.deduplicator = _apolloLink.ApolloLink.from([new _apolloLinkDedup.DedupLink(), link]);
+        this.queryDeduplication = queryDeduplication;
+        this.dataStore = store;
+        this.onBroadcast = onBroadcast;
+        this.scheduler = new _scheduler.QueryScheduler({ queryManager: this, ssrMode: ssrMode });
+    }
+    QueryManager.prototype.mutate = function (_a) {
+        var _this = this;
+        var mutation = _a.mutation,
+            variables = _a.variables,
+            optimisticResponse = _a.optimisticResponse,
+            updateQueriesByName = _a.updateQueries,
+            _b = _a.refetchQueries,
+            refetchQueries = _b === void 0 ? [] : _b,
+            updateWithProxyFn = _a.update,
+            _c = _a.errorPolicy,
+            errorPolicy = _c === void 0 ? 'none' : _c,
+            fetchPolicy = _a.fetchPolicy,
+            _d = _a.context,
+            context = _d === void 0 ? {} : _d;
+        if (!mutation) {
+            throw new Error('mutation option is required. You must specify your GraphQL document in the mutation option.');
+        }
+        if (fetchPolicy && fetchPolicy !== 'no-cache') {
+            throw new Error("fetchPolicy for mutations currently only supports the 'no-cache' policy");
+        }
+        var mutationId = this.generateQueryId();
+        var cache = this.dataStore.getCache();
+        mutation = cache.transformDocument(mutation), variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)((0, _apolloUtilities.getMutationDefinition)(mutation)), variables);
+        var mutationString = (0, _printer.print)(mutation);
+        this.setQuery(mutationId, function () {
+            return { document: mutation };
+        });
+        // Create a map of update queries by id to the query instead of by name.
+        var generateUpdateQueriesInfo = function () {
+            var ret = {};
+            if (updateQueriesByName) {
+                Object.keys(updateQueriesByName).forEach(function (queryName) {
+                    return (_this.queryIdsByName[queryName] || []).forEach(function (queryId) {
+                        ret[queryId] = {
+                            updater: updateQueriesByName[queryName],
+                            query: _this.queryStore.get(queryId)
+                        };
+                    });
+                });
+            }
+            return ret;
+        };
+        this.mutationStore.initMutation(mutationId, mutationString, variables);
+        this.dataStore.markMutationInit({
+            mutationId: mutationId,
+            document: mutation,
+            variables: variables || {},
+            updateQueries: generateUpdateQueriesInfo(),
+            update: updateWithProxyFn,
+            optimisticResponse: optimisticResponse
+        });
+        this.broadcastQueries();
+        return new Promise(function (resolve, reject) {
+            var storeResult;
+            var error;
+            var operation = _this.buildOperationForLink(mutation, variables, __assign({}, context, { optimisticResponse: optimisticResponse }));
+            (0, _apolloLink.execute)(_this.link, operation).subscribe({
+                next: function (result) {
+                    if ((0, _apolloUtilities.graphQLResultHasError)(result) && errorPolicy === 'none') {
+                        error = new _ApolloError.ApolloError({
+                            graphQLErrors: result.errors
+                        });
+                        return;
+                    }
+                    _this.mutationStore.markMutationResult(mutationId);
+                    if (fetchPolicy !== 'no-cache') {
+                        _this.dataStore.markMutationResult({
+                            mutationId: mutationId,
+                            result: result,
+                            document: mutation,
+                            variables: variables || {},
+                            updateQueries: generateUpdateQueriesInfo(),
+                            update: updateWithProxyFn
+                        });
+                    }
+                    storeResult = result;
+                },
+                error: function (err) {
+                    _this.mutationStore.markMutationError(mutationId, err);
+                    _this.dataStore.markMutationComplete({
+                        mutationId: mutationId,
+                        optimisticResponse: optimisticResponse
+                    });
+                    _this.broadcastQueries();
+                    _this.setQuery(mutationId, function () {
+                        return { document: undefined };
+                    });
+                    reject(new _ApolloError.ApolloError({
+                        networkError: err
+                    }));
+                },
+                complete: function () {
+                    if (error) {
+                        _this.mutationStore.markMutationError(mutationId, error);
+                    }
+                    _this.dataStore.markMutationComplete({
+                        mutationId: mutationId,
+                        optimisticResponse: optimisticResponse
+                    });
+                    _this.broadcastQueries();
+                    if (error) {
+                        reject(error);
+                        return;
+                    }
+                    // allow for conditional refetches
+                    // XXX do we want to make this the only API one day?
+                    if (typeof refetchQueries === 'function') {
+                        refetchQueries = refetchQueries(storeResult);
+                    }
+                    if (refetchQueries) {
+                        refetchQueries.forEach(function (refetchQuery) {
+                            if (typeof refetchQuery === 'string') {
+                                _this.refetchQueryByName(refetchQuery);
+                                return;
+                            }
+                            _this.query({
+                                query: refetchQuery.query,
+                                variables: refetchQuery.variables,
+                                fetchPolicy: 'network-only'
+                            });
+                        });
+                    }
+                    _this.setQuery(mutationId, function () {
+                        return { document: undefined };
+                    });
+                    if (errorPolicy === 'ignore' && storeResult && (0, _apolloUtilities.graphQLResultHasError)(storeResult)) {
+                        delete storeResult.errors;
+                    }
+                    resolve(storeResult);
+                }
+            });
+        });
+    };
+    QueryManager.prototype.fetchQuery = function (queryId, options, fetchType,
+    // This allows us to track if this is a query spawned by a `fetchMore`
+    // call for another query. We need this data to compute the `fetchMore`
+    // network status for the query this is fetching for.
+    fetchMoreForQueryId) {
+        var _this = this;
+        var _a = options.variables,
+            variables = _a === void 0 ? {} : _a,
+            _b = options.metadata,
+            metadata = _b === void 0 ? null : _b,
+            _c = options.fetchPolicy,
+            fetchPolicy = _c === void 0 ? 'cache-first' : _c;
+        var cache = this.dataStore.getCache();
+        var query = cache.transformDocument(options.query);
+        var storeResult;
+        var needToFetch = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
+        // If this is not a force fetch, we want to diff the query against the
+        // store before we fetch it from the network interface.
+        // TODO we hit the cache even if the policy is network-first. This could be unnecessary if the network is up.
+        if (fetchType !== _types.FetchType.refetch && fetchPolicy !== 'network-only' && fetchPolicy !== 'no-cache') {
+            var _d = this.dataStore.getCache().diff({
+                query: query,
+                variables: variables,
+                returnPartialData: true,
+                optimistic: false
+            }),
+                complete = _d.complete,
+                result = _d.result;
+            // If we're in here, only fetch if we have missing fields
+            needToFetch = !complete || fetchPolicy === 'cache-and-network';
+            storeResult = result;
+        }
+        var shouldFetch = needToFetch && fetchPolicy !== 'cache-only' && fetchPolicy !== 'standby';
+        // we need to check to see if this is an operation that uses the @live directive
+        if ((0, _apolloUtilities.hasDirectives)(['live'], query)) shouldFetch = true;
+        var requestId = this.generateRequestId();
+        // set up a watcher to listen to cache updates
+        var cancel = this.updateQueryWatch(queryId, query, options);
+        // Initialize query in store with unique requestId
+        this.setQuery(queryId, function () {
+            return {
+                document: query,
+                lastRequestId: requestId,
+                invalidated: true,
+                cancel: cancel
+            };
+        });
+        this.invalidate(true, fetchMoreForQueryId);
+        this.queryStore.initQuery({
+            queryId: queryId,
+            document: query,
+            storePreviousVariables: shouldFetch,
+            variables: variables,
+            isPoll: fetchType === _types.FetchType.poll,
+            isRefetch: fetchType === _types.FetchType.refetch,
+            metadata: metadata,
+            fetchMoreForQueryId: fetchMoreForQueryId
+        });
+        this.broadcastQueries();
+        // If there is no part of the query we need to fetch from the server (or,
+        // fetchPolicy is cache-only), we just write the store result as the final result.
+        var shouldDispatchClientResult = !shouldFetch || fetchPolicy === 'cache-and-network';
+        if (shouldDispatchClientResult) {
+            this.queryStore.markQueryResultClient(queryId, !shouldFetch);
+            this.invalidate(true, queryId, fetchMoreForQueryId);
+            this.broadcastQueries();
+        }
+        if (shouldFetch) {
+            var networkResult = this.fetchRequest({
+                requestId: requestId,
+                queryId: queryId,
+                document: query,
+                options: options,
+                fetchMoreForQueryId: fetchMoreForQueryId
+            }).catch(function (error) {
+                // This is for the benefit of `refetch` promises, which currently don't get their errors
+                // through the store like watchQuery observers do
+                if ((0, _ApolloError.isApolloError)(error)) {
+                    throw error;
+                } else {
+                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
+                    if (requestId >= (lastRequestId || 1)) {
+                        _this.queryStore.markQueryError(queryId, error, fetchMoreForQueryId);
+                        _this.invalidate(true, queryId, fetchMoreForQueryId);
+                        _this.broadcastQueries();
+                    }
+                    _this.removeFetchQueryPromise(requestId);
+                    throw new _ApolloError.ApolloError({ networkError: error });
+                }
+            });
+            // we don't return the promise for cache-and-network since it is already
+            // returned below from the cache
+            if (fetchPolicy !== 'cache-and-network') {
+                return networkResult;
+            } else {
+                // however we need to catch the error so it isn't unhandled in case of
+                // network error
+                networkResult.catch(function () {});
+            }
+        }
+        // If we have no query to send to the server, we should return the result
+        // found within the store.
+        return Promise.resolve({ data: storeResult });
+    };
+    // Returns a query listener that will update the given observer based on the
+    // results (or lack thereof) for a particular query.
+    QueryManager.prototype.queryListenerForObserver = function (queryId, options, observer) {
+        var _this = this;
+        var previouslyHadError = false;
+        return function (queryStoreValue, newData) {
+            // we're going to take a look at the data, so the query is no longer invalidated
+            _this.invalidate(false, queryId);
+            // The query store value can be undefined in the event of a store
+            // reset.
+            if (!queryStoreValue) return;
+            var observableQuery = _this.getQuery(queryId).observableQuery;
+            var fetchPolicy = observableQuery ? observableQuery.options.fetchPolicy : options.fetchPolicy;
+            // don't watch the store for queries on standby
+            if (fetchPolicy === 'standby') return;
+            var errorPolicy = observableQuery ? observableQuery.options.errorPolicy : options.errorPolicy;
+            var lastResult = observableQuery ? observableQuery.getLastResult() : null;
+            var lastError = observableQuery ? observableQuery.getLastError() : null;
+            var shouldNotifyIfLoading = !newData && queryStoreValue.previousVariables != null || fetchPolicy === 'cache-only' || fetchPolicy === 'cache-and-network';
+            // if this caused by a cache broadcast but the query is still in flight
+            // don't notify the observer
+            // if (
+            //   isCacheBroadcast &&
+            //   isNetworkRequestInFlight(queryStoreValue.networkStatus)
+            // ) {
+            //   shouldNotifyIfLoading = false;
+            // }
+            var networkStatusChanged = Boolean(lastResult && queryStoreValue.networkStatus !== lastResult.networkStatus);
+            var errorStatusChanged = errorPolicy && (lastError && lastError.graphQLErrors) !== queryStoreValue.graphQLErrors && errorPolicy !== 'none';
+            if (!(0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus) || networkStatusChanged && options.notifyOnNetworkStatusChange || shouldNotifyIfLoading) {
+                // If we have either a GraphQL error or a network error, we create
+                // an error and tell the observer about it.
+                if ((!errorPolicy || errorPolicy === 'none') && queryStoreValue.graphQLErrors && queryStoreValue.graphQLErrors.length > 0 || queryStoreValue.networkError) {
+                    var apolloError_1 = new _ApolloError.ApolloError({
+                        graphQLErrors: queryStoreValue.graphQLErrors,
+                        networkError: queryStoreValue.networkError
+                    });
+                    previouslyHadError = true;
+                    if (observer.error) {
+                        try {
+                            observer.error(apolloError_1);
+                        } catch (e) {
+                            // Throw error outside this control flow to avoid breaking Apollo's state
+                            setTimeout(function () {
+                                throw e;
+                            }, 0);
+                        }
+                    } else {
+                        // Throw error outside this control flow to avoid breaking Apollo's state
+                        setTimeout(function () {
+                            throw apolloError_1;
+                        }, 0);
+                        if (!(0, _apolloUtilities.isProduction)()) {
+                            /* tslint:disable-next-line */
+                            console.info('An unhandled error was thrown because no error handler is registered ' + 'for the query ' + (0, _printer.print)(queryStoreValue.document));
+                        }
+                    }
+                    return;
+                }
+                try {
+                    var data = void 0;
+                    var isMissing = void 0;
+                    if (newData) {
+                        // clear out the latest new data, since we're now using it
+                        _this.setQuery(queryId, function () {
+                            return { newData: null };
+                        });
+                        data = newData.result;
+                        isMissing = !newData.complete || false;
+                    } else {
+                        if (lastResult && lastResult.data && !errorStatusChanged) {
+                            data = lastResult.data;
+                            isMissing = false;
+                        } else {
+                            var document_1 = _this.getQuery(queryId).document;
+                            var readResult = _this.dataStore.getCache().diff({
+                                query: document_1,
+                                variables: queryStoreValue.previousVariables || queryStoreValue.variables,
+                                optimistic: true
+                            });
+                            data = readResult.result;
+                            isMissing = !readResult.complete;
+                        }
+                    }
+                    var resultFromStore = void 0;
+                    // If there is some data missing and the user has told us that they
+                    // do not tolerate partial data then we want to return the previous
+                    // result and mark it as stale.
+                    if (isMissing && fetchPolicy !== 'cache-only') {
+                        resultFromStore = {
+                            data: lastResult && lastResult.data,
+                            loading: (0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus),
+                            networkStatus: queryStoreValue.networkStatus,
+                            stale: true
+                        };
+                    } else {
+                        resultFromStore = {
+                            data: data,
+                            loading: (0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus),
+                            networkStatus: queryStoreValue.networkStatus,
+                            stale: false
+                        };
+                    }
+                    // if the query wants updates on errors we need to add it to the result
+                    if (errorPolicy === 'all' && queryStoreValue.graphQLErrors && queryStoreValue.graphQLErrors.length > 0) {
+                        resultFromStore.errors = queryStoreValue.graphQLErrors;
+                    }
+                    if (observer.next) {
+                        var isDifferentResult = !(lastResult && resultFromStore && lastResult.networkStatus === resultFromStore.networkStatus && lastResult.stale === resultFromStore.stale &&
+                        // We can do a strict equality check here because we include a `previousResult`
+                        // with `readQueryFromStore`. So if the results are the same they will be
+                        // referentially equal.
+                        lastResult.data === resultFromStore.data);
+                        if (isDifferentResult || previouslyHadError) {
+                            try {
+                                observer.next((0, _apolloUtilities.maybeDeepFreeze)(resultFromStore));
+                            } catch (e) {
+                                // Throw error outside this control flow to avoid breaking Apollo's state
+                                setTimeout(function () {
+                                    throw e;
+                                }, 0);
+                            }
+                        }
+                    }
+                    previouslyHadError = false;
+                } catch (error) {
+                    previouslyHadError = true;
+                    if (observer.error) observer.error(new _ApolloError.ApolloError({ networkError: error }));
+                    return;
+                }
+            }
+        };
+    };
+    // The shouldSubscribe option is a temporary fix that tells us whether watchQuery was called
+    // directly (i.e. through ApolloClient) or through the query method within QueryManager.
+    // Currently, the query method uses watchQuery in order to handle non-network errors correctly
+    // but we don't want to keep track observables issued for the query method since those aren't
+    // supposed to be refetched in the event of a store reset. Once we unify error handling for
+    // network errors and non-network errors, the shouldSubscribe option will go away.
+    QueryManager.prototype.watchQuery = function (options, shouldSubscribe) {
+        if (shouldSubscribe === void 0) {
+            shouldSubscribe = true;
+        }
+        if (options.fetchPolicy === 'standby') {
+            throw new Error('client.watchQuery cannot be called with fetchPolicy set to "standby"');
+        }
+        // get errors synchronously
+        var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(options.query);
+        // assign variable default values if supplied
+        if (queryDefinition.variableDefinitions && queryDefinition.variableDefinitions.length) {
+            var defaultValues = (0, _apolloUtilities.getDefaultValues)(queryDefinition);
+            options.variables = (0, _apolloUtilities.assign)({}, defaultValues, options.variables);
+        }
+        if (typeof options.notifyOnNetworkStatusChange === 'undefined') {
+            options.notifyOnNetworkStatusChange = false;
+        }
+        var transformedOptions = __assign({}, options);
+        return new _ObservableQuery.ObservableQuery({
+            scheduler: this.scheduler,
+            options: transformedOptions,
+            shouldSubscribe: shouldSubscribe
+        });
+    };
+    QueryManager.prototype.query = function (options) {
+        var _this = this;
+        if (!options.query) {
+            throw new Error('query option is required. You must specify your GraphQL document ' + 'in the query option.');
+        }
+        if (options.query.kind !== 'Document') {
+            throw new Error('You must wrap the query string in a "gql" tag.');
+        }
+        if (options.returnPartialData) {
+            throw new Error('returnPartialData option only supported on watchQuery.');
+        }
+        if (options.pollInterval) {
+            throw new Error('pollInterval option only supported on watchQuery.');
+        }
+        var requestId = this.idCounter;
+        return new Promise(function (resolve, reject) {
+            _this.addFetchQueryPromise(requestId, resolve, reject);
+            return _this.watchQuery(options, false).result().then(function (result) {
+                _this.removeFetchQueryPromise(requestId);
+                resolve(result);
+            }).catch(function (error) {
+                _this.removeFetchQueryPromise(requestId);
+                reject(error);
+            });
+        });
+    };
+    QueryManager.prototype.generateQueryId = function () {
+        var queryId = this.idCounter.toString();
+        this.idCounter++;
+        return queryId;
+    };
+    QueryManager.prototype.stopQueryInStore = function (queryId) {
+        this.queryStore.stopQuery(queryId);
+        this.invalidate(true, queryId);
+        this.broadcastQueries();
+    };
+    QueryManager.prototype.addQueryListener = function (queryId, listener) {
+        this.setQuery(queryId, function (_a) {
+            var _b = _a.listeners,
+                listeners = _b === void 0 ? [] : _b;
+            return {
+                listeners: listeners.concat([listener]),
+                invalidate: false
+            };
+        });
+    };
+    QueryManager.prototype.updateQueryWatch = function (queryId, document, options) {
+        var _this = this;
+        var cancel = this.getQuery(queryId).cancel;
+        if (cancel) cancel();
+        var previousResult = function () {
+            var previousResult = null;
+            var observableQuery = _this.getQuery(queryId).observableQuery;
+            if (observableQuery) {
+                var lastResult = observableQuery.getLastResult();
+                if (lastResult) {
+                    previousResult = lastResult.data;
+                }
+            }
+            return previousResult;
+        };
+        return this.dataStore.getCache().watch({
+            query: document,
+            variables: options.variables,
+            optimistic: true,
+            previousResult: previousResult,
+            callback: function (newData) {
+                _this.setQuery(queryId, function () {
+                    return { invalidated: true, newData: newData };
+                });
+            }
+        });
+    };
+    // Adds a promise to this.fetchQueryPromises for a given request ID.
+    QueryManager.prototype.addFetchQueryPromise = function (requestId, resolve, reject) {
+        this.fetchQueryPromises.set(requestId.toString(), {
+            resolve: resolve,
+            reject: reject
+        });
+    };
+    // Removes the promise in this.fetchQueryPromises for a particular request ID.
+    QueryManager.prototype.removeFetchQueryPromise = function (requestId) {
+        this.fetchQueryPromises.delete(requestId.toString());
+    };
+    // Adds an ObservableQuery to this.observableQueries and to this.observableQueriesByName.
+    QueryManager.prototype.addObservableQuery = function (queryId, observableQuery) {
+        this.setQuery(queryId, function () {
+            return { observableQuery: observableQuery };
+        });
+        // Insert the ObservableQuery into this.observableQueriesByName if the query has a name
+        var queryDef = (0, _apolloUtilities.getQueryDefinition)(observableQuery.options.query);
+        if (queryDef.name && queryDef.name.value) {
+            var queryName = queryDef.name.value;
+            // XXX we may we want to warn the user about query name conflicts in the future
+            this.queryIdsByName[queryName] = this.queryIdsByName[queryName] || [];
+            this.queryIdsByName[queryName].push(observableQuery.queryId);
+        }
+    };
+    QueryManager.prototype.removeObservableQuery = function (queryId) {
+        var _a = this.getQuery(queryId),
+            observableQuery = _a.observableQuery,
+            cancel = _a.cancel;
+        if (cancel) cancel();
+        if (!observableQuery) return;
+        var definition = (0, _apolloUtilities.getQueryDefinition)(observableQuery.options.query);
+        var queryName = definition.name ? definition.name.value : null;
+        this.setQuery(queryId, function () {
+            return { observableQuery: null };
+        });
+        if (queryName) {
+            this.queryIdsByName[queryName] = this.queryIdsByName[queryName].filter(function (val) {
+                return !(observableQuery.queryId === val);
+            });
+        }
+    };
+    QueryManager.prototype.clearStore = function () {
+        // Before we have sent the reset action to the store,
+        // we can no longer rely on the results returned by in-flight
+        // requests since these may depend on values that previously existed
+        // in the data portion of the store. So, we cancel the promises and observers
+        // that we have issued so far and not yet resolved (in the case of
+        // queries).
+        this.fetchQueryPromises.forEach(function (_a) {
+            var reject = _a.reject;
+            reject(new Error('Store reset while query was in flight(not completed in link chain)'));
+        });
+        var resetIds = [];
+        this.queries.forEach(function (_a, queryId) {
+            var observableQuery = _a.observableQuery;
+            if (observableQuery) resetIds.push(queryId);
+        });
+        this.queryStore.reset(resetIds);
+        this.mutationStore.reset();
+        // begin removing data from the store
+        var reset = this.dataStore.reset();
+        return reset;
+    };
+    QueryManager.prototype.resetStore = function () {
+        var _this = this;
+        // Similarly, we have to have to refetch each of the queries currently being
+        // observed. We refetch instead of error'ing on these since the assumption is that
+        // resetting the store doesn't eliminate the need for the queries currently being
+        // watched. If there is an existing query in flight when the store is reset,
+        // the promise for it will be rejected and its results will not be written to the
+        // store.
+        return this.clearStore().then(function () {
+            return _this.reFetchObservableQueries();
+        });
+    };
+    QueryManager.prototype.getObservableQueryPromises = function (includeStandby) {
+        var _this = this;
+        var observableQueryPromises = [];
+        this.queries.forEach(function (_a, queryId) {
+            var observableQuery = _a.observableQuery;
+            if (!observableQuery) return;
+            var fetchPolicy = observableQuery.options.fetchPolicy;
+            observableQuery.resetLastResults();
+            if (fetchPolicy !== 'cache-only' && (includeStandby || fetchPolicy !== 'standby')) {
+                observableQueryPromises.push(observableQuery.refetch());
+            }
+            _this.setQuery(queryId, function () {
+                return { newData: null };
+            });
+            _this.invalidate(true, queryId);
+        });
+        return observableQueryPromises;
+    };
+    QueryManager.prototype.reFetchObservableQueries = function (includeStandby) {
+        var observableQueryPromises = this.getObservableQueryPromises(includeStandby);
+        this.broadcastQueries();
+        return Promise.all(observableQueryPromises);
+    };
+    QueryManager.prototype.startQuery = function (queryId, options, listener) {
+        this.addQueryListener(queryId, listener);
+        this.fetchQuery(queryId, options)
+        // `fetchQuery` returns a Promise. In case of a failure it should be caucht or else the
+        // console will show an `Uncaught (in promise)` message. Ignore the error for now.
+        .catch(function () {
+            return undefined;
+        });
+        return queryId;
+    };
+    QueryManager.prototype.startGraphQLSubscription = function (options) {
+        var _this = this;
+        var query = options.query;
+        var cache = this.dataStore.getCache();
+        var transformedDoc = cache.transformDocument(query);
+        var variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)((0, _apolloUtilities.getOperationDefinition)(query)), options.variables);
+        var sub;
+        var observers = [];
+        return new _Observable.Observable(function (observer) {
+            observers.push(observer);
+            // If this is the first observer, actually initiate the network subscription
+            if (observers.length === 1) {
+                var handler = {
+                    next: function (result) {
+                        _this.dataStore.markSubscriptionResult(result, transformedDoc, variables);
+                        _this.broadcastQueries();
+                        // It's slightly awkward that the data for subscriptions doesn't come from the store.
+                        observers.forEach(function (obs) {
+                            // XXX I'd prefer a different way to handle errors for subscriptions
+                            if (obs.next) obs.next(result);
+                        });
+                    },
+                    error: function (error) {
+                        observers.forEach(function (obs) {
+                            if (obs.error) obs.error(error);
+                        });
+                    }
+                };
+                // TODO: Should subscriptions also accept a `context` option to pass
+                // through to links?
+                var operation = _this.buildOperationForLink(transformedDoc, variables);
+                sub = (0, _apolloLink.execute)(_this.link, operation).subscribe(handler);
+            }
+            return function () {
+                observers = observers.filter(function (obs) {
+                    return obs !== observer;
+                });
+                // If we removed the last observer, tear down the network subscription
+                if (observers.length === 0 && sub) {
+                    sub.unsubscribe();
+                }
+            };
+        });
+    };
+    QueryManager.prototype.stopQuery = function (queryId) {
+        this.stopQueryInStore(queryId);
+        this.removeQuery(queryId);
+    };
+    QueryManager.prototype.removeQuery = function (queryId) {
+        var subscriptions = this.getQuery(queryId).subscriptions;
+        // teardown all links
+        subscriptions.forEach(function (x) {
+            return x.unsubscribe();
+        });
+        this.queries.delete(queryId);
+    };
+    QueryManager.prototype.getCurrentQueryResult = function (observableQuery, optimistic) {
+        if (optimistic === void 0) {
+            optimistic = true;
+        }
+        var _a = observableQuery.options,
+            variables = _a.variables,
+            query = _a.query;
+        var lastResult = observableQuery.getLastResult();
+        var newData = this.getQuery(observableQuery.queryId).newData;
+        // XXX test this
+        if (newData) {
+            return (0, _apolloUtilities.maybeDeepFreeze)({ data: newData.result, partial: false });
+        } else {
+            try {
+                // the query is brand new, so we read from the store to see if anything is there
+                var data = this.dataStore.getCache().read({
+                    query: query,
+                    variables: variables,
+                    previousResult: lastResult ? lastResult.data : undefined,
+                    optimistic: optimistic
+                });
+                return (0, _apolloUtilities.maybeDeepFreeze)({ data: data, partial: false });
+            } catch (e) {
+                return (0, _apolloUtilities.maybeDeepFreeze)({ data: {}, partial: true });
+            }
+        }
+    };
+    QueryManager.prototype.getQueryWithPreviousResult = function (queryIdOrObservable) {
+        var observableQuery;
+        if (typeof queryIdOrObservable === 'string') {
+            var foundObserveableQuery = this.getQuery(queryIdOrObservable).observableQuery;
+            if (!foundObserveableQuery) {
+                throw new Error("ObservableQuery with this id doesn't exist: " + queryIdOrObservable);
+            }
+            observableQuery = foundObserveableQuery;
+        } else {
+            observableQuery = queryIdOrObservable;
+        }
+        var _a = observableQuery.options,
+            variables = _a.variables,
+            query = _a.query;
+        var data = this.getCurrentQueryResult(observableQuery, false).data;
+        return {
+            previousResult: data,
+            variables: variables,
+            document: query
+        };
+    };
+    QueryManager.prototype.broadcastQueries = function () {
+        var _this = this;
+        this.onBroadcast();
+        this.queries.forEach(function (info, id) {
+            if (!info.invalidated || !info.listeners) return;
+            info.listeners
+            // it's possible for the listener to be undefined if the query is being stopped
+            // See here for more detail: https://github.com/apollostack/apollo-client/issues/231
+            .filter(function (x) {
+                return !!x;
+            }).forEach(function (listener) {
+                listener(_this.queryStore.get(id), info.newData);
+            });
+        });
+    };
+    // Takes a request id, query id, a query document and information associated with the query
+    // and send it to the network interface. Returns
+    // a promise for the result associated with that request.
+    QueryManager.prototype.fetchRequest = function (_a) {
+        var _this = this;
+        var requestId = _a.requestId,
+            queryId = _a.queryId,
+            document = _a.document,
+            options = _a.options,
+            fetchMoreForQueryId = _a.fetchMoreForQueryId;
+        var variables = options.variables,
+            context = options.context,
+            _b = options.errorPolicy,
+            errorPolicy = _b === void 0 ? 'none' : _b,
+            fetchPolicy = options.fetchPolicy;
+        var operation = this.buildOperationForLink(document, variables, __assign({}, context, {
+            // TODO: Should this be included for all entry points via
+            // buildOperationForLink?
+            forceFetch: !this.queryDeduplication }));
+        var resultFromStore;
+        var errorsFromStore;
+        return new Promise(function (resolve, reject) {
+            _this.addFetchQueryPromise(requestId, resolve, reject);
+            var subscription = (0, _apolloLink.execute)(_this.deduplicator, operation).subscribe({
+                next: function (result) {
+                    // default the lastRequestId to 1
+                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
+                    if (requestId >= (lastRequestId || 1)) {
+                        if (fetchPolicy !== 'no-cache') {
+                            try {
+                                _this.dataStore.markQueryResult(result, document, variables, fetchMoreForQueryId, errorPolicy === 'ignore' || errorPolicy === 'all');
+                            } catch (e) {
+                                reject(e);
+                                return;
+                            }
+                        } else {
+                            _this.setQuery(queryId, function () {
+                                return {
+                                    newData: { result: result.data, complete: true }
+                                };
+                            });
+                        }
+                        _this.queryStore.markQueryResult(queryId, result, fetchMoreForQueryId);
+                        _this.invalidate(true, queryId, fetchMoreForQueryId);
+                        _this.broadcastQueries();
+                    }
+                    if (result.errors && errorPolicy === 'none') {
+                        reject(new _ApolloError.ApolloError({
+                            graphQLErrors: result.errors
+                        }));
+                        return;
+                    } else if (errorPolicy === 'all') {
+                        errorsFromStore = result.errors;
+                    }
+                    if (fetchMoreForQueryId || fetchPolicy === 'no-cache') {
+                        // We don't write fetchMore results to the store because this would overwrite
+                        // the original result in case an @connection directive is used.
+                        resultFromStore = result.data;
+                    } else {
+                        try {
+                            // ensure result is combined with data already in store
+                            resultFromStore = _this.dataStore.getCache().read({
+                                variables: variables,
+                                query: document,
+                                optimistic: false
+                            });
+                            // this will throw an error if there are missing fields in
+                            // the results which can happen with errors from the server.
+                            // tslint:disable-next-line
+                        } catch (e) {}
+                    }
+                },
+                error: function (error) {
+                    _this.removeFetchQueryPromise(requestId);
+                    _this.setQuery(queryId, function (_a) {
+                        var subscriptions = _a.subscriptions;
+                        return {
+                            subscriptions: subscriptions.filter(function (x) {
+                                return x !== subscription;
+                            })
+                        };
+                    });
+                    reject(error);
+                },
+                complete: function () {
+                    _this.removeFetchQueryPromise(requestId);
+                    _this.setQuery(queryId, function (_a) {
+                        var subscriptions = _a.subscriptions;
+                        return {
+                            subscriptions: subscriptions.filter(function (x) {
+                                return x !== subscription;
+                            })
+                        };
+                    });
+                    resolve({
+                        data: resultFromStore,
+                        errors: errorsFromStore,
+                        loading: false,
+                        networkStatus: _networkStatus.NetworkStatus.ready,
+                        stale: false
+                    });
+                }
+            });
+            _this.setQuery(queryId, function (_a) {
+                var subscriptions = _a.subscriptions;
+                return {
+                    subscriptions: subscriptions.concat([subscription])
+                };
+            });
+        });
+    };
+    // Refetches a query given that query's name. Refetches
+    // all ObservableQuery instances associated with the query name.
+    QueryManager.prototype.refetchQueryByName = function (queryName) {
+        var _this = this;
+        var refetchedQueries = this.queryIdsByName[queryName];
+        // early return if the query named does not exist (not yet fetched)
+        // this used to warn but it may be inteneded behavoir to try and refetch
+        // un called queries because they could be on different routes
+        if (refetchedQueries === undefined) return;
+        return Promise.all(refetchedQueries.map(function (id) {
+            return _this.getQuery(id).observableQuery;
+        }).filter(function (x) {
+            return !!x;
+        }).map(function (x) {
+            return x.refetch();
+        }));
+    };
+    QueryManager.prototype.generateRequestId = function () {
+        var requestId = this.idCounter;
+        this.idCounter++;
+        return requestId;
+    };
+    QueryManager.prototype.getQuery = function (queryId) {
+        return this.queries.get(queryId) || __assign({}, defaultQueryInfo);
+    };
+    QueryManager.prototype.setQuery = function (queryId, updater) {
+        var prev = this.getQuery(queryId);
+        var newInfo = __assign({}, prev, updater(prev));
+        this.queries.set(queryId, newInfo);
+    };
+    QueryManager.prototype.invalidate = function (invalidated, queryId, fetchMoreForQueryId) {
+        if (queryId) this.setQuery(queryId, function () {
+            return { invalidated: invalidated };
+        });
+        if (fetchMoreForQueryId) {
+            this.setQuery(fetchMoreForQueryId, function () {
+                return { invalidated: invalidated };
+            });
+        }
+    };
+    QueryManager.prototype.buildOperationForLink = function (document, variables, extraContext) {
+        var cache = this.dataStore.getCache();
+        return {
+            query: cache.transformForLink ? cache.transformForLink(document) : document,
+            variables: variables,
+            operationName: (0, _apolloUtilities.getOperationName)(document) || undefined,
+            context: __assign({}, extraContext, { cache: cache,
+                // getting an entry's cache key is useful for cacheResolvers & state-link
+                getCacheKey: function (obj) {
+                    if (cache.config) {
+                        // on the link, we just want the id string, not the full id value from toIdValue
+                        return cache.config.dataIdFromObject(obj);
+                    } else {
+                        throw new Error('To use context.getCacheKey, you need to use a cache that has a configurable dataIdFromObject, like apollo-cache-inmemory.');
+                    }
+                } })
+        };
+    };
+    return QueryManager;
+}();
+exports.QueryManager = QueryManager;
+//# sourceMappingURL=QueryManager.js.map
+},{"apollo-link":70,"graphql/language/printer":153,"apollo-link-dedup":216,"apollo-utilities":167,"../scheduler/scheduler":213,"../errors/ApolloError":144,"../util/Observable":173,"../data/mutations":214,"../data/queries":215,"./ObservableQuery":141,"./networkStatus":142,"./types":143}],171:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.DataStore = undefined;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var DataStore = /** @class */function () {
+    function DataStore(initialCache) {
+        this.cache = initialCache;
+    }
+    DataStore.prototype.getCache = function () {
+        return this.cache;
+    };
+    DataStore.prototype.markQueryResult = function (result, document, variables, fetchMoreForQueryId, ignoreErrors) {
+        if (ignoreErrors === void 0) {
+            ignoreErrors = false;
+        }
+        var writeWithErrors = !(0, _apolloUtilities.graphQLResultHasError)(result);
+        if (ignoreErrors && (0, _apolloUtilities.graphQLResultHasError)(result) && result.data) {
+            writeWithErrors = true;
+        }
+        if (!fetchMoreForQueryId && writeWithErrors) {
+            this.cache.write({
+                result: result.data,
+                dataId: 'ROOT_QUERY',
+                query: document,
+                variables: variables
+            });
+        }
+    };
+    DataStore.prototype.markSubscriptionResult = function (result, document, variables) {
+        // the subscription interface should handle not sending us results we no longer subscribe to.
+        // XXX I don't think we ever send in an object with errors, but we might in the future...
+        if (!(0, _apolloUtilities.graphQLResultHasError)(result)) {
+            this.cache.write({
+                result: result.data,
+                dataId: 'ROOT_SUBSCRIPTION',
+                query: document,
+                variables: variables
+            });
+        }
+    };
+    DataStore.prototype.markMutationInit = function (mutation) {
+        var _this = this;
+        if (mutation.optimisticResponse) {
+            var optimistic_1;
+            if (typeof mutation.optimisticResponse === 'function') {
+                optimistic_1 = mutation.optimisticResponse(mutation.variables);
+            } else {
+                optimistic_1 = mutation.optimisticResponse;
+            }
+            var changeFn_1 = function () {
+                _this.markMutationResult({
+                    mutationId: mutation.mutationId,
+                    result: { data: optimistic_1 },
+                    document: mutation.document,
+                    variables: mutation.variables,
+                    updateQueries: mutation.updateQueries,
+                    update: mutation.update
+                });
+            };
+            this.cache.recordOptimisticTransaction(function (c) {
+                var orig = _this.cache;
+                _this.cache = c;
+                try {
+                    changeFn_1();
+                } finally {
+                    _this.cache = orig;
+                }
+            }, mutation.mutationId);
+        }
+    };
+    DataStore.prototype.markMutationResult = function (mutation) {
+        var _this = this;
+        // Incorporate the result from this mutation into the store
+        if (!(0, _apolloUtilities.graphQLResultHasError)(mutation.result)) {
+            var cacheWrites_1 = [];
+            cacheWrites_1.push({
+                result: mutation.result.data,
+                dataId: 'ROOT_MUTATION',
+                query: mutation.document,
+                variables: mutation.variables
+            });
+            if (mutation.updateQueries) {
+                Object.keys(mutation.updateQueries).filter(function (id) {
+                    return mutation.updateQueries[id];
+                }).forEach(function (queryId) {
+                    var _a = mutation.updateQueries[queryId],
+                        query = _a.query,
+                        updater = _a.updater;
+                    // Read the current query result from the store.
+                    var _b = _this.cache.diff({
+                        query: query.document,
+                        variables: query.variables,
+                        returnPartialData: true,
+                        optimistic: false
+                    }),
+                        currentQueryResult = _b.result,
+                        complete = _b.complete;
+                    if (!complete) {
+                        return;
+                    }
+                    // Run our reducer using the current query result and the mutation result.
+                    var nextQueryResult = (0, _apolloUtilities.tryFunctionOrLogError)(function () {
+                        return updater(currentQueryResult, {
+                            mutationResult: mutation.result,
+                            queryName: (0, _apolloUtilities.getOperationName)(query.document) || undefined,
+                            queryVariables: query.variables
+                        });
+                    });
+                    // Write the modified result back into the store if we got a new result.
+                    if (nextQueryResult) {
+                        cacheWrites_1.push({
+                            result: nextQueryResult,
+                            dataId: 'ROOT_QUERY',
+                            query: query.document,
+                            variables: query.variables
+                        });
+                    }
+                });
+            }
+            this.cache.performTransaction(function (c) {
+                cacheWrites_1.forEach(function (write) {
+                    return c.write(write);
+                });
+            });
+            // If the mutation has some writes associated with it then we need to
+            // apply those writes to the store by running this reducer again with a
+            // write action.
+            var update_1 = mutation.update;
+            if (update_1) {
+                this.cache.performTransaction(function (c) {
+                    (0, _apolloUtilities.tryFunctionOrLogError)(function () {
+                        return update_1(c, mutation.result);
+                    });
+                });
+            }
+        }
+    };
+    DataStore.prototype.markMutationComplete = function (_a) {
+        var mutationId = _a.mutationId,
+            optimisticResponse = _a.optimisticResponse;
+        if (!optimisticResponse) return;
+        this.cache.removeOptimistic(mutationId);
+    };
+    DataStore.prototype.markUpdateQueryResult = function (document, variables, newResult) {
+        this.cache.write({
+            result: newResult,
+            dataId: 'ROOT_QUERY',
+            variables: variables,
+            query: document
+        });
+    };
+    DataStore.prototype.reset = function () {
+        return this.cache.reset();
+    };
+    return DataStore;
+}();
+exports.DataStore = DataStore;
+//# sourceMappingURL=store.js.map
+},{"apollo-utilities":167}],169:[function(require,module,exports) {
+exports.version = "2.3.5"
+},{}],140:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _apolloLink = require('apollo-link');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _QueryManager = require('./core/QueryManager');
+
+var _store = require('./data/store');
+
+var _version = require('./version');
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var hasSuggestedDevtools = false;
+var supportedDirectives = new _apolloLink.ApolloLink(function (operation, forward) {
+    operation.query = (0, _apolloUtilities.removeConnectionDirectiveFromDocument)(operation.query);
+    return forward(operation);
+});
+/**
+ * This is the primary Apollo Client class. It is used to send GraphQL documents (i.e. queries
+ * and mutations) to a GraphQL spec-compliant server over a {@link NetworkInterface} instance,
+ * receive results from the server and cache the results in a store. It also delivers updates
+ * to GraphQL queries through {@link Observable} instances.
+ */
+var ApolloClient = /** @class */function () {
+    /**
+     * Constructs an instance of {@link ApolloClient}.
+     *
+     * @param link The {@link ApolloLink} over which GraphQL documents will be resolved into a response.
+     *
+     * @param cache The initial cache to use in the data store.
+     *
+     * @param ssrMode Determines whether this is being run in Server Side Rendering (SSR) mode.
+     *
+     * @param ssrForceFetchDelay Determines the time interval before we force fetch queries for a
+     * server side render.
+     *
+     * @param queryDeduplication If set to false, a query will still be sent to the server even if a query
+     * with identical parameters (query, variables, operationName) is already in flight.
+     *
+     */
+    function ApolloClient(options) {
+        var _this = this;
+        this.defaultOptions = {};
+        this.resetStoreCallbacks = [];
+        var link = options.link,
+            cache = options.cache,
+            _a = options.ssrMode,
+            ssrMode = _a === void 0 ? false : _a,
+            _b = options.ssrForceFetchDelay,
+            ssrForceFetchDelay = _b === void 0 ? 0 : _b,
+            connectToDevTools = options.connectToDevTools,
+            _c = options.queryDeduplication,
+            queryDeduplication = _c === void 0 ? true : _c,
+            defaultOptions = options.defaultOptions;
+        if (!link || !cache) {
+            throw new Error("\n        In order to initialize Apollo Client, you must specify link & cache properties on the config object.\n        This is part of the required upgrade when migrating from Apollo Client 1.0 to Apollo Client 2.0.\n        For more information, please visit:\n          https://www.apollographql.com/docs/react/basics/setup.html\n        to help you get started.\n      ");
+        }
+        // remove apollo-client supported directives
+        this.link = supportedDirectives.concat(link);
+        this.cache = cache;
+        this.store = new _store.DataStore(cache);
+        this.disableNetworkFetches = ssrMode || ssrForceFetchDelay > 0;
+        this.queryDeduplication = queryDeduplication;
+        this.ssrMode = ssrMode;
+        this.defaultOptions = defaultOptions || {};
+        if (ssrForceFetchDelay) {
+            setTimeout(function () {
+                return _this.disableNetworkFetches = false;
+            }, ssrForceFetchDelay);
+        }
+        this.watchQuery = this.watchQuery.bind(this);
+        this.query = this.query.bind(this);
+        this.mutate = this.mutate.bind(this);
+        this.resetStore = this.resetStore.bind(this);
+        this.reFetchObservableQueries = this.reFetchObservableQueries.bind(this);
+        // Attach the client instance to window to let us be found by chrome devtools, but only in
+        // development mode
+        var defaultConnectToDevTools = !(0, _apolloUtilities.isProduction)() && typeof window !== 'undefined' && !window.__APOLLO_CLIENT__;
+        if (typeof connectToDevTools === 'undefined' ? defaultConnectToDevTools : connectToDevTools && typeof window !== 'undefined') {
+            window.__APOLLO_CLIENT__ = this;
+        }
+        /**
+         * Suggest installing the devtools for developers who don't have them
+         */
+        if (!hasSuggestedDevtools && !(0, _apolloUtilities.isProduction)()) {
+            hasSuggestedDevtools = true;
+            if (typeof window !== 'undefined' && window.document && window.top === window.self) {
+                // First check if devtools is not installed
+                if (typeof window.__APOLLO_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
+                    // Only for Chrome
+                    if (window.navigator && window.navigator.userAgent.indexOf('Chrome') > -1) {
+                        // tslint:disable-next-line
+                        console.debug('Download the Apollo DevTools ' + 'for a better development experience: ' + 'https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm');
+                    }
+                }
+            }
+        }
+        this.version = _version.version;
+    }
+    /**
+     * This watches the results of the query according to the options specified and
+     * returns an {@link ObservableQuery}. We can subscribe to this {@link ObservableQuery} and
+     * receive updated results through a GraphQL observer.
+     * <p /><p />
+     * Note that this method is not an implementation of GraphQL subscriptions. Rather,
+     * it uses Apollo's store in order to reactively deliver updates to your query results.
+     * <p /><p />
+     * For example, suppose you call watchQuery on a GraphQL query that fetches an person's
+     * first name and last name and this person has a particular object identifer, provided by
+     * dataIdFromObject. Later, a different query fetches that same person's
+     * first and last name and his/her first name has now changed. Then, any observers associated
+     * with the results of the first query will be updated with a new result object.
+     * <p /><p />
+     * See [here](https://medium.com/apollo-stack/the-concepts-of-graphql-bc68bd819be3#.3mb0cbcmc) for
+     * a description of store reactivity.
+     *
+     */
+    ApolloClient.prototype.watchQuery = function (options) {
+        this.initQueryManager();
+        if (this.defaultOptions.watchQuery) {
+            options = __assign({}, this.defaultOptions.watchQuery, options);
+        }
+        // XXX Overwriting options is probably not the best way to do this long term...
+        if (this.disableNetworkFetches && (options.fetchPolicy === 'network-only' || options.fetchPolicy === 'cache-and-network')) {
+            options = __assign({}, options, { fetchPolicy: 'cache-first' });
+        }
+        return this.queryManager.watchQuery(options);
+    };
+    /**
+     * This resolves a single query according to the options specified and
+     * returns a {@link Promise} which is either resolved with the resulting data
+     * or rejected with an error.
+     *
+     * @param options An object of type {@link QueryOptions} that allows us to
+     * describe how this query should be treated e.g. whether it should hit the
+     * server at all or just resolve from the cache, etc.
+     */
+    ApolloClient.prototype.query = function (options) {
+        this.initQueryManager();
+        if (this.defaultOptions.query) {
+            options = __assign({}, this.defaultOptions.query, options);
+        }
+        if (options.fetchPolicy === 'cache-and-network') {
+            throw new Error('cache-and-network fetchPolicy can only be used with watchQuery');
+        }
+        // XXX Overwriting options is probably not the best way to do this long
+        // term...
+        if (this.disableNetworkFetches && options.fetchPolicy === 'network-only') {
+            options = __assign({}, options, { fetchPolicy: 'cache-first' });
+        }
+        return this.queryManager.query(options);
+    };
+    /**
+     * This resolves a single mutation according to the options specified and returns a
+     * {@link Promise} which is either resolved with the resulting data or rejected with an
+     * error.
+     *
+     * It takes options as an object with the following keys and values:
+     */
+    ApolloClient.prototype.mutate = function (options) {
+        this.initQueryManager();
+        if (this.defaultOptions.mutate) {
+            options = __assign({}, this.defaultOptions.mutate, options);
+        }
+        return this.queryManager.mutate(options);
+    };
+    /**
+     * This subscribes to a graphql subscription according to the options specified and returns an
+     * {@link Observable} which either emits received data or an error.
+     */
+    ApolloClient.prototype.subscribe = function (options) {
+        this.initQueryManager();
+        return this.queryManager.startGraphQLSubscription(options);
+    };
+    /**
+     * Tries to read some data from the store in the shape of the provided
+     * GraphQL query without making a network request. This method will start at
+     * the root query. To start at a specific id returned by `dataIdFromObject`
+     * use `readFragment`.
+     */
+    ApolloClient.prototype.readQuery = function (options) {
+        return this.initProxy().readQuery(options);
+    };
+    /**
+     * Tries to read some data from the store in the shape of the provided
+     * GraphQL fragment without making a network request. This method will read a
+     * GraphQL fragment from any arbitrary id that is currently cached, unlike
+     * `readQuery` which will only read from the root query.
+     *
+     * You must pass in a GraphQL document with a single fragment or a document
+     * with multiple fragments that represent what you are reading. If you pass
+     * in a document with multiple fragments then you must also specify a
+     * `fragmentName`.
+     */
+    ApolloClient.prototype.readFragment = function (options) {
+        return this.initProxy().readFragment(options);
+    };
+    /**
+     * Writes some data in the shape of the provided GraphQL query directly to
+     * the store. This method will start at the root query. To start at a a
+     * specific id returned by `dataIdFromObject` then use `writeFragment`.
+     */
+    ApolloClient.prototype.writeQuery = function (options) {
+        var result = this.initProxy().writeQuery(options);
+        this.queryManager.broadcastQueries();
+        return result;
+    };
+    /**
+     * Writes some data in the shape of the provided GraphQL fragment directly to
+     * the store. This method will write to a GraphQL fragment from any arbitrary
+     * id that is currently cached, unlike `writeQuery` which will only write
+     * from the root query.
+     *
+     * You must pass in a GraphQL document with a single fragment or a document
+     * with multiple fragments that represent what you are writing. If you pass
+     * in a document with multiple fragments then you must also specify a
+     * `fragmentName`.
+     */
+    ApolloClient.prototype.writeFragment = function (options) {
+        var result = this.initProxy().writeFragment(options);
+        this.queryManager.broadcastQueries();
+        return result;
+    };
+    /**
+     * Sugar for writeQuery & writeFragment
+     * This method will construct a query from the data object passed in.
+     * If no id is supplied, writeData will write the data to the root.
+     * If an id is supplied, writeData will write a fragment to the object
+     * specified by the id in the store.
+     *
+     * Since you aren't passing in a query to check the shape of the data,
+     * you must pass in an object that conforms to the shape of valid GraphQL data.
+     */
+    ApolloClient.prototype.writeData = function (options) {
+        var result = this.initProxy().writeData(options);
+        this.queryManager.broadcastQueries();
+        return result;
+    };
+    ApolloClient.prototype.__actionHookForDevTools = function (cb) {
+        this.devToolsHookCb = cb;
+    };
+    ApolloClient.prototype.__requestRaw = function (payload) {
+        return (0, _apolloLink.execute)(this.link, payload);
+    };
+    /**
+     * This initializes the query manager that tracks queries and the cache
+     */
+    ApolloClient.prototype.initQueryManager = function () {
+        var _this = this;
+        if (this.queryManager) return;
+        this.queryManager = new _QueryManager.QueryManager({
+            link: this.link,
+            store: this.store,
+            queryDeduplication: this.queryDeduplication,
+            ssrMode: this.ssrMode,
+            onBroadcast: function () {
+                if (_this.devToolsHookCb) {
+                    _this.devToolsHookCb({
+                        action: {},
+                        state: {
+                            queries: _this.queryManager.queryStore.getStore(),
+                            mutations: _this.queryManager.mutationStore.getStore()
+                        },
+                        dataWithOptimisticResults: _this.cache.extract(true)
+                    });
+                }
+            }
+        });
+    };
+    /**
+     * Resets your entire store by clearing out your cache and then re-executing
+     * all of your active queries. This makes it so that you may guarantee that
+     * there is no data left in your store from a time before you called this
+     * method.
+     *
+     * `resetStore()` is useful when your user just logged out. You’ve removed the
+     * user session, and you now want to make sure that any references to data you
+     * might have fetched while the user session was active is gone.
+     *
+     * It is important to remember that `resetStore()` *will* refetch any active
+     * queries. This means that any components that might be mounted will execute
+     * their queries again using your network interface. If you do not want to
+     * re-execute any queries then you should make sure to stop watching any
+     * active queries.
+     */
+    ApolloClient.prototype.resetStore = function () {
+        var _this = this;
+        return Promise.resolve().then(function () {
+            return _this.queryManager ? _this.queryManager.clearStore() : Promise.resolve(null);
+        }).then(function () {
+            return Promise.all(_this.resetStoreCallbacks.map(function (fn) {
+                return fn();
+            }));
+        }).then(function () {
+            return _this.queryManager && _this.queryManager.reFetchObservableQueries ? _this.queryManager.reFetchObservableQueries() : Promise.resolve(null);
+        });
+    };
+    /**
+     * Allows callbacks to be registered that are executed with the store is reset.
+     * onResetStore returns an unsubscribe function for removing your registered callbacks.
+     */
+    ApolloClient.prototype.onResetStore = function (cb) {
+        var _this = this;
+        this.resetStoreCallbacks.push(cb);
+        return function () {
+            _this.resetStoreCallbacks = _this.resetStoreCallbacks.filter(function (c) {
+                return c !== cb;
+            });
+        };
+    };
+    /**
+     * Refetches all of your active queries.
+     *
+     * `reFetchObservableQueries()` is useful if you want to bring the client back to proper state in case of a network outage
+     *
+     * It is important to remember that `reFetchObservableQueries()` *will* refetch any active
+     * queries. This means that any components that might be mounted will execute
+     * their queries again using your network interface. If you do not want to
+     * re-execute any queries then you should make sure to stop watching any
+     * active queries.
+     * Takes optional parameter `includeStandby` which will include queries in standby-mode when refetching.
+     */
+    ApolloClient.prototype.reFetchObservableQueries = function (includeStandby) {
+        return this.queryManager ? this.queryManager.reFetchObservableQueries(includeStandby) : Promise.resolve(null);
+    };
+    /**
+     * Exposes the cache's complete state, in a serializable format for later restoration.
+     */
+    ApolloClient.prototype.extract = function (optimistic) {
+        return this.initProxy().extract(optimistic);
+    };
+    /**
+     * Replaces existing state in the cache (if any) with the values expressed by
+     * `serializedState`.
+     *
+     * Called when hydrating a cache (server side rendering, or offline storage),
+     * and also (potentially) during hot reloads.
+     */
+    ApolloClient.prototype.restore = function (serializedState) {
+        return this.initProxy().restore(serializedState);
+    };
+    /**
+     * Initializes a data proxy for this client instance if one does not already
+     * exist and returns either a previously initialized proxy instance or the
+     * newly initialized instance.
+     */
+    ApolloClient.prototype.initProxy = function () {
+        if (!this.proxy) {
+            this.initQueryManager();
+            this.proxy = this.cache;
+        }
+        return this.proxy;
+    };
+    return ApolloClient;
+}();
+exports.default = ApolloClient;
+//# sourceMappingURL=ApolloClient.js.map
+},{"apollo-link":70,"apollo-utilities":167,"./core/QueryManager":170,"./data/store":171,"./version":169}],69:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ApolloClient = exports.ApolloError = exports.NetworkStatus = exports.ObservableQuery = exports.printAST = undefined;
+
+var _printer = require('graphql/language/printer');
+
+Object.defineProperty(exports, 'printAST', {
+  enumerable: true,
+  get: function () {
+    return _printer.print;
+  }
+});
+
+var _ObservableQuery = require('./core/ObservableQuery');
+
+Object.defineProperty(exports, 'ObservableQuery', {
+  enumerable: true,
+  get: function () {
+    return _ObservableQuery.ObservableQuery;
+  }
+});
+
+var _networkStatus = require('./core/networkStatus');
+
+Object.defineProperty(exports, 'NetworkStatus', {
+  enumerable: true,
+  get: function () {
+    return _networkStatus.NetworkStatus;
+  }
+});
+
+var _types = require('./core/types');
+
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _types[key];
+    }
+  });
+});
+
+var _ApolloError = require('./errors/ApolloError');
+
+Object.defineProperty(exports, 'ApolloError', {
+  enumerable: true,
+  get: function () {
+    return _ApolloError.ApolloError;
+  }
+});
+
+var _ApolloClient = require('./ApolloClient');
+
+var _ApolloClient2 = _interopRequireDefault(_ApolloClient);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// export the client as both default and named
+exports.ApolloClient = _ApolloClient2.default;
+exports.default = _ApolloClient2.default;
+//# sourceMappingURL=index.js.map
+},{"graphql/language/printer":153,"./core/ObservableQuery":141,"./core/networkStatus":142,"./core/types":143,"./errors/ApolloError":144,"./ApolloClient":140}],210:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.queryFromPojo = queryFromPojo;
+exports.fragmentFromPojo = fragmentFromPojo;
+function queryFromPojo(obj) {
+    var op = {
+        kind: 'OperationDefinition',
+        operation: 'query',
+        name: {
+            kind: 'Name',
+            value: 'GeneratedClientQuery'
+        },
+        selectionSet: selectionSetFromObj(obj)
+    };
+    var out = {
+        kind: 'Document',
+        definitions: [op]
+    };
+    return out;
+}
+function fragmentFromPojo(obj, typename) {
+    var frag = {
+        kind: 'FragmentDefinition',
+        typeCondition: {
+            kind: 'NamedType',
+            name: {
+                kind: 'Name',
+                value: typename || '__FakeType'
+            }
+        },
+        name: {
+            kind: 'Name',
+            value: 'GeneratedClientQuery'
+        },
+        selectionSet: selectionSetFromObj(obj)
+    };
+    var out = {
+        kind: 'Document',
+        definitions: [frag]
+    };
+    return out;
+}
+function selectionSetFromObj(obj) {
+    if (typeof obj === 'number' || typeof obj === 'boolean' || typeof obj === 'string' || typeof obj === 'undefined' || obj === null) {
+        // No selection set here
+        return null;
+    }
+    if (Array.isArray(obj)) {
+        // GraphQL queries don't include arrays
+        return selectionSetFromObj(obj[0]);
+    }
+    // Now we know it's an object
+    var selections = [];
+    Object.keys(obj).forEach(function (key) {
+        var field = {
+            kind: 'Field',
+            name: {
+                kind: 'Name',
+                value: key
+            }
+        };
+        // Recurse
+        var nestedSelSet = selectionSetFromObj(obj[key]);
+        if (nestedSelSet) {
+            field.selectionSet = nestedSelSet;
+        }
+        selections.push(field);
+    });
+    var selectionSet = {
+        kind: 'SelectionSet',
+        selections: selections
+    };
+    return selectionSet;
+}
+var justTypenameQuery = exports.justTypenameQuery = {
+    kind: 'Document',
+    definitions: [{
+        kind: 'OperationDefinition',
+        operation: 'query',
+        name: null,
+        variableDefinitions: null,
+        directives: [],
+        selectionSet: {
+            kind: 'SelectionSet',
+            selections: [{
+                kind: 'Field',
+                alias: null,
+                name: {
+                    kind: 'Name',
+                    value: '__typename'
+                },
+                arguments: [],
+                directives: [],
+                selectionSet: null
+            }]
+        }
+    }]
+};
+//# sourceMappingURL=utils.js.map
+},{}],202:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ApolloCache = undefined;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _utils = require('./utils');
+
+var ApolloCache = /** @class */function () {
+    function ApolloCache() {}
+    // optional API
+    ApolloCache.prototype.transformDocument = function (document) {
+        return document;
+    };
+    // experimental
+    ApolloCache.prototype.transformForLink = function (document) {
+        return document;
+    };
+    // DataProxy API
+    /**
+     *
+     * @param options
+     * @param optimistic
+     */
+    ApolloCache.prototype.readQuery = function (options, optimistic) {
+        if (optimistic === void 0) {
+            optimistic = false;
+        }
+        return this.read({
+            query: options.query,
+            variables: options.variables,
+            optimistic: optimistic
+        });
+    };
+    ApolloCache.prototype.readFragment = function (options, optimistic) {
+        if (optimistic === void 0) {
+            optimistic = false;
+        }
+        return this.read({
+            query: (0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName),
+            variables: options.variables,
+            rootId: options.id,
+            optimistic: optimistic
+        });
+    };
+    ApolloCache.prototype.writeQuery = function (options) {
+        this.write({
+            dataId: 'ROOT_QUERY',
+            result: options.data,
+            query: options.query,
+            variables: options.variables
+        });
+    };
+    ApolloCache.prototype.writeFragment = function (options) {
+        this.write({
+            dataId: options.id,
+            result: options.data,
+            variables: options.variables,
+            query: (0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)
+        });
+    };
+    ApolloCache.prototype.writeData = function (_a) {
+        var id = _a.id,
+            data = _a.data;
+        if (typeof id !== 'undefined') {
+            var typenameResult = null;
+            // Since we can't use fragments without having a typename in the store,
+            // we need to make sure we have one.
+            // To avoid overwriting an existing typename, we need to read it out first
+            // and generate a fake one if none exists.
+            try {
+                typenameResult = this.read({
+                    rootId: id,
+                    optimistic: false,
+                    query: _utils.justTypenameQuery
+                });
+            } catch (e) {}
+            // Do nothing, since an error just means no typename exists
+
+            // tslint:disable-next-line
+            var __typename = typenameResult && typenameResult.__typename || '__ClientData';
+            // Add a type here to satisfy the inmemory cache
+            var dataToWrite = Object.assign({ __typename: __typename }, data);
+            this.writeFragment({
+                id: id,
+                fragment: (0, _utils.fragmentFromPojo)(dataToWrite, __typename),
+                data: dataToWrite
+            });
+        } else {
+            this.writeQuery({ query: (0, _utils.queryFromPojo)(data), data: data });
+        }
+    };
+    return ApolloCache;
+}();
+exports.ApolloCache = ApolloCache;
+//# sourceMappingURL=cache.js.map
+},{"apollo-utilities":167,"./utils":210}],211:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Cache = exports.Cache = undefined;
+(function (Cache) {})(Cache || (exports.Cache = Cache = {}));
+//# sourceMappingURL=Cache.js.map
+},{}],203:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Cache = require('./Cache');
+
+Object.keys(_Cache).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _Cache[key];
+    }
+  });
+});
+},{"./Cache":211}],195:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _cache = require('./cache');
+
+Object.keys(_cache).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _cache[key];
+    }
+  });
+});
+
+var _types = require('./types');
+
+Object.keys(_types).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _types[key];
+    }
+  });
+});
+},{"./cache":202,"./types":203}],160:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.IntrospectionFragmentMatcher = exports.HeuristicFragmentMatcher = undefined;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var haveWarned = false;
+/**
+ * This fragment matcher is very basic and unable to match union or interface type conditions
+ */
+var HeuristicFragmentMatcher = /** @class */function () {
+    function HeuristicFragmentMatcher() {
+        // do nothing
+    }
+    HeuristicFragmentMatcher.prototype.ensureReady = function () {
+        return Promise.resolve();
+    };
+    HeuristicFragmentMatcher.prototype.canBypassInit = function () {
+        return true; // we don't need to initialize this fragment matcher.
+    };
+    HeuristicFragmentMatcher.prototype.match = function (idValue, typeCondition, context) {
+        var obj = context.store.get(idValue.id);
+        if (!obj && idValue.id === 'ROOT_QUERY') {
+            return true;
+        }
+        if (!obj) {
+            return false;
+        }
+        if (!obj.__typename) {
+            if (!haveWarned) {
+                console.warn("You're using fragments in your queries, but either don't have the addTypename:\n  true option set in Apollo Client, or you are trying to write a fragment to the store without the __typename.\n   Please turn on the addTypename option and include __typename when writing fragments so that Apollo Client\n   can accurately match fragments.");
+                console.warn('Could not find __typename on Fragment ', typeCondition, obj);
+                console.warn("DEPRECATION WARNING: using fragments without __typename is unsupported behavior " + "and will be removed in future versions of Apollo client. You should fix this and set addTypename to true now.");
+                /* istanbul ignore if */
+                if (!(0, _apolloUtilities.isTest)()) {
+                    // When running tests, we want to print the warning every time
+                    haveWarned = true;
+                }
+            }
+            context.returnPartialData = true;
+            return true;
+        }
+        if (obj.__typename === typeCondition) {
+            return true;
+        }
+        // XXX here we reach an issue - we don't know if this fragment should match or not. It's either:
+        // 1. A fragment on a non-matching concrete type or interface or union
+        // 2. A fragment on a matching interface or union
+        // If it's 1, we don't want to return anything, if it's 2 we want to match. We can't tell the
+        // difference, so we warn the user, but still try to match it (backcompat).
+        (0, _apolloUtilities.warnOnceInDevelopment)("You are using the simple (heuristic) fragment matcher, but your queries contain union or interface types.\n     Apollo Client will not be able to able to accurately map fragments." + "To make this error go away, use the IntrospectionFragmentMatcher as described in the docs: " + "https://www.apollographql.com/docs/react/recipes/fragment-matching.html", 'error');
+        context.returnPartialData = true;
+        return true;
+    };
+    return HeuristicFragmentMatcher;
+}();
+exports.HeuristicFragmentMatcher = HeuristicFragmentMatcher;
+
+var IntrospectionFragmentMatcher = /** @class */function () {
+    function IntrospectionFragmentMatcher(options) {
+        if (options && options.introspectionQueryResultData) {
+            this.possibleTypesMap = this.parseIntrospectionResult(options.introspectionQueryResultData);
+            this.isReady = true;
+        } else {
+            this.isReady = false;
+        }
+        this.match = this.match.bind(this);
+    }
+    IntrospectionFragmentMatcher.prototype.match = function (idValue, typeCondition, context) {
+        if (!this.isReady) {
+            // this should basically never happen in proper use.
+            throw new Error('FragmentMatcher.match() was called before FragmentMatcher.init()');
+        }
+        var obj = context.store.get(idValue.id);
+        if (!obj) {
+            return false;
+        }
+        if (!obj.__typename) {
+            throw new Error("Cannot match fragment because __typename property is missing: " + JSON.stringify(obj));
+        }
+        if (obj.__typename === typeCondition) {
+            return true;
+        }
+        var implementingTypes = this.possibleTypesMap[typeCondition];
+        if (implementingTypes && implementingTypes.indexOf(obj.__typename) > -1) {
+            return true;
+        }
+        return false;
+    };
+    IntrospectionFragmentMatcher.prototype.parseIntrospectionResult = function (introspectionResultData) {
+        var typeMap = {};
+        introspectionResultData.__schema.types.forEach(function (type) {
+            if (type.kind === 'UNION' || type.kind === 'INTERFACE') {
+                typeMap[type.name] = type.possibleTypes.map(function (implementingType) {
+                    return implementingType.name;
+                });
+            }
+        });
+        return typeMap;
+    };
+    return IntrospectionFragmentMatcher;
+}();
+exports.IntrospectionFragmentMatcher = IntrospectionFragmentMatcher;
+//# sourceMappingURL=fragmentMatcher.js.map
+},{"apollo-utilities":167}],161:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.defaultNormalizedCacheFactory = defaultNormalizedCacheFactory;
+var ObjectCache = /** @class */function () {
+    function ObjectCache(data) {
+        if (data === void 0) {
+            data = Object.create(null);
+        }
+        this.data = data;
+    }
+    ObjectCache.prototype.toObject = function () {
+        return this.data;
+    };
+    ObjectCache.prototype.get = function (dataId) {
+        return this.data[dataId];
+    };
+    ObjectCache.prototype.set = function (dataId, value) {
+        this.data[dataId] = value;
+    };
+    ObjectCache.prototype.delete = function (dataId) {
+        this.data[dataId] = undefined;
+    };
+    ObjectCache.prototype.clear = function () {
+        this.data = Object.create(null);
+    };
+    ObjectCache.prototype.replace = function (newData) {
+        this.data = newData || Object.create(null);
+    };
+    return ObjectCache;
+}();
+exports.ObjectCache = ObjectCache;
+function defaultNormalizedCacheFactory(seed) {
+    return new ObjectCache(seed);
+}
+//# sourceMappingURL=objectCache.js.map
+},{}],159:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.WriteError = undefined;
+exports.enhanceErrorWithDocument = enhanceErrorWithDocument;
+exports.writeQueryToStore = writeQueryToStore;
+exports.writeResultToStore = writeResultToStore;
+exports.writeSelectionSetToStore = writeSelectionSetToStore;
+
+var _printer = require('graphql/language/printer');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _objectCache = require('./objectCache');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var WriteError = /** @class */function (_super) {
+    __extends(WriteError, _super);
+    function WriteError() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.type = 'WriteError';
+        return _this;
+    }
+    return WriteError;
+}(Error);
+exports.WriteError = WriteError;
+function enhanceErrorWithDocument(error, document) {
+    // XXX A bit hacky maybe ...
+    var enhancedError = new WriteError("Error writing result to store for query:\n " + (0, _printer.print)(document));
+    enhancedError.message += '\n' + error.message;
+    enhancedError.stack = error.stack;
+    return enhancedError;
+}
+/**
+ * Writes the result of a query to the store.
+ *
+ * @param result The result object returned for the query document.
+ *
+ * @param query The query document whose result we are writing to the store.
+ *
+ * @param store The {@link NormalizedCache} used by Apollo for the `data` portion of the store.
+ *
+ * @param variables A map from the name of a variable to its value. These variables can be
+ * referenced by the query document.
+ *
+ * @param dataIdFromObject A function that returns an object identifier given a particular result
+ * object. See the store documentation for details and an example of this function.
+ *
+ * @param fragmentMap A map from the name of a fragment to its fragment definition. These fragments
+ * can be referenced within the query document.
+ *
+ * @param fragmentMatcherFunction A function to use for matching fragment conditions in GraphQL documents
+ */
+function writeQueryToStore(_a) {
+    var result = _a.result,
+        query = _a.query,
+        _b = _a.storeFactory,
+        storeFactory = _b === void 0 ? _objectCache.defaultNormalizedCacheFactory : _b,
+        _c = _a.store,
+        store = _c === void 0 ? storeFactory() : _c,
+        variables = _a.variables,
+        dataIdFromObject = _a.dataIdFromObject,
+        _d = _a.fragmentMap,
+        fragmentMap = _d === void 0 ? {} : _d,
+        fragmentMatcherFunction = _a.fragmentMatcherFunction;
+    var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(query);
+    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(queryDefinition), variables);
+    try {
+        return writeSelectionSetToStore({
+            dataId: 'ROOT_QUERY',
+            result: result,
+            selectionSet: queryDefinition.selectionSet,
+            context: {
+                store: store,
+                storeFactory: storeFactory,
+                processedData: {},
+                variables: variables,
+                dataIdFromObject: dataIdFromObject,
+                fragmentMap: fragmentMap,
+                fragmentMatcherFunction: fragmentMatcherFunction
+            }
+        });
+    } catch (e) {
+        throw enhanceErrorWithDocument(e, query);
+    }
+}
+function writeResultToStore(_a) {
+    var dataId = _a.dataId,
+        result = _a.result,
+        document = _a.document,
+        _b = _a.storeFactory,
+        storeFactory = _b === void 0 ? _objectCache.defaultNormalizedCacheFactory : _b,
+        _c = _a.store,
+        store = _c === void 0 ? storeFactory() : _c,
+        variables = _a.variables,
+        dataIdFromObject = _a.dataIdFromObject,
+        fragmentMatcherFunction = _a.fragmentMatcherFunction;
+    // XXX TODO REFACTOR: this is a temporary workaround until query normalization is made to work with documents.
+    var operationDefinition = (0, _apolloUtilities.getOperationDefinition)(document);
+    var selectionSet = operationDefinition.selectionSet;
+    var fragmentMap = (0, _apolloUtilities.createFragmentMap)((0, _apolloUtilities.getFragmentDefinitions)(document));
+    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(operationDefinition), variables);
+    try {
+        return writeSelectionSetToStore({
+            result: result,
+            dataId: dataId,
+            selectionSet: selectionSet,
+            context: {
+                store: store,
+                storeFactory: storeFactory,
+                processedData: {},
+                variables: variables,
+                dataIdFromObject: dataIdFromObject,
+                fragmentMap: fragmentMap,
+                fragmentMatcherFunction: fragmentMatcherFunction
+            }
+        });
+    } catch (e) {
+        throw enhanceErrorWithDocument(e, document);
+    }
+}
+function writeSelectionSetToStore(_a) {
+    var result = _a.result,
+        dataId = _a.dataId,
+        selectionSet = _a.selectionSet,
+        context = _a.context;
+    var variables = context.variables,
+        store = context.store,
+        fragmentMap = context.fragmentMap;
+    selectionSet.selections.forEach(function (selection) {
+        var included = (0, _apolloUtilities.shouldInclude)(selection, variables);
+        if ((0, _apolloUtilities.isField)(selection)) {
+            var resultFieldKey = (0, _apolloUtilities.resultKeyNameFromField)(selection);
+            var value = result[resultFieldKey];
+            if (included) {
+                if (typeof value !== 'undefined') {
+                    writeFieldToStore({
+                        dataId: dataId,
+                        value: value,
+                        field: selection,
+                        context: context
+                    });
+                } else {
+                    // if this is a defered field we don't need to throw / warn
+                    var isDefered = selection.directives && selection.directives.length && selection.directives.some(function (directive) {
+                        return directive.name && directive.name.value === 'defer';
+                    });
+                    if (!isDefered && context.fragmentMatcherFunction) {
+                        // XXX We'd like to throw an error, but for backwards compatibility's sake
+                        // we just print a warning for the time being.
+                        //throw new WriteError(`Missing field ${resultFieldKey} in ${JSON.stringify(result, null, 2).substring(0, 100)}`);
+                        if (!(0, _apolloUtilities.isProduction)()) {
+                            console.warn("Missing field " + resultFieldKey + " in " + JSON.stringify(result, null, 2).substring(0, 100));
+                        }
+                    }
+                }
+            }
+        } else {
+            // This is not a field, so it must be a fragment, either inline or named
+            var fragment = void 0;
+            if ((0, _apolloUtilities.isInlineFragment)(selection)) {
+                fragment = selection;
+            } else {
+                // Named fragment
+                fragment = (fragmentMap || {})[selection.name.value];
+                if (!fragment) {
+                    throw new Error("No fragment named " + selection.name.value + ".");
+                }
+            }
+            var matches = true;
+            if (context.fragmentMatcherFunction && fragment.typeCondition) {
+                // TODO we need to rewrite the fragment matchers for this to work properly and efficiently
+                // Right now we have to pretend that we're passing in an idValue and that there's a store
+                // on the context.
+                var idValue = (0, _apolloUtilities.toIdValue)({ id: 'self', typename: undefined });
+                var fakeContext = {
+                    // NOTE: fakeContext always uses ObjectCache
+                    // since this is only to ensure the return value of 'matches'
+                    store: new _objectCache.ObjectCache({ self: result }),
+                    returnPartialData: false,
+                    hasMissingField: false,
+                    cacheRedirects: {}
+                };
+                matches = context.fragmentMatcherFunction(idValue, fragment.typeCondition.name.value, fakeContext);
+                if (!(0, _apolloUtilities.isProduction)() && fakeContext.returnPartialData) {
+                    console.error('WARNING: heuristic fragment matching going on!');
+                }
+            }
+            if (included && matches) {
+                writeSelectionSetToStore({
+                    result: result,
+                    selectionSet: fragment.selectionSet,
+                    dataId: dataId,
+                    context: context
+                });
+            }
+        }
+    });
+    return store;
+}
+// Checks if the id given is an id that was generated by Apollo
+// rather than by dataIdFromObject.
+function isGeneratedId(id) {
+    return id[0] === '$';
+}
+function mergeWithGenerated(generatedKey, realKey, cache) {
+    var generated = cache.get(generatedKey);
+    var real = cache.get(realKey);
+    Object.keys(generated).forEach(function (key) {
+        var value = generated[key];
+        var realValue = real[key];
+        if ((0, _apolloUtilities.isIdValue)(value) && isGeneratedId(value.id) && (0, _apolloUtilities.isIdValue)(realValue)) {
+            mergeWithGenerated(value.id, realValue.id, cache);
+        }
+        cache.delete(generatedKey);
+        cache.set(realKey, __assign({}, generated, real));
+    });
+}
+function isDataProcessed(dataId, field, processedData) {
+    if (!processedData) {
+        return false;
+    }
+    if (processedData[dataId]) {
+        if (processedData[dataId].indexOf(field) >= 0) {
+            return true;
+        } else {
+            processedData[dataId].push(field);
+        }
+    } else {
+        processedData[dataId] = [field];
+    }
+    return false;
+}
+function writeFieldToStore(_a) {
+    var field = _a.field,
+        value = _a.value,
+        dataId = _a.dataId,
+        context = _a.context;
+    var variables = context.variables,
+        dataIdFromObject = context.dataIdFromObject,
+        store = context.store;
+    var storeValue;
+    var storeObject;
+    var storeFieldName = (0, _apolloUtilities.storeKeyNameFromField)(field, variables);
+    // specifies if we need to merge existing keys in the store
+    var shouldMerge = false;
+    // If we merge, this will be the generatedKey
+    var generatedKey = '';
+    // If this is a scalar value...
+    if (!field.selectionSet || value === null) {
+        storeValue = value != null && typeof value === 'object' ? // If the scalar value is a JSON blob, we have to "escape" it so it can’t pretend to be
+        // an id.
+        { type: 'json', json: value } : // Otherwise, just store the scalar directly in the store.
+        value;
+    } else if (Array.isArray(value)) {
+        var generatedId = dataId + "." + storeFieldName;
+        storeValue = processArrayValue(value, generatedId, field.selectionSet, context);
+    } else {
+        // It's an object
+        var valueDataId = dataId + "." + storeFieldName;
+        var generated = true;
+        // We only prepend the '$' if the valueDataId isn't already a generated
+        // id.
+        if (!isGeneratedId(valueDataId)) {
+            valueDataId = '$' + valueDataId;
+        }
+        if (dataIdFromObject) {
+            var semanticId = dataIdFromObject(value);
+            // We throw an error if the first character of the id is '$. This is
+            // because we use that character to designate an Apollo-generated id
+            // and we use the distinction between user-desiginated and application-provided
+            // ids when managing overwrites.
+            if (semanticId && isGeneratedId(semanticId)) {
+                throw new Error('IDs returned by dataIdFromObject cannot begin with the "$" character.');
+            }
+            if (semanticId) {
+                valueDataId = semanticId;
+                generated = false;
+            }
+        }
+        if (!isDataProcessed(valueDataId, field, context.processedData)) {
+            writeSelectionSetToStore({
+                dataId: valueDataId,
+                result: value,
+                selectionSet: field.selectionSet,
+                context: context
+            });
+        }
+        // We take the id and escape it (i.e. wrap it with an enclosing object).
+        // This allows us to distinguish IDs from normal scalars.
+        var typename = value.__typename;
+        storeValue = (0, _apolloUtilities.toIdValue)({ id: valueDataId, typename: typename }, generated);
+        // check if there was a generated id at the location where we're
+        // about to place this new id. If there was, we have to merge the
+        // data from that id with the data we're about to write in the store.
+        storeObject = store.get(dataId);
+        var escapedId = storeObject && storeObject[storeFieldName];
+        if (escapedId !== storeValue && (0, _apolloUtilities.isIdValue)(escapedId)) {
+            var hadTypename = escapedId.typename !== undefined;
+            var hasTypename = typename !== undefined;
+            var typenameChanged = hadTypename && hasTypename && escapedId.typename !== typename;
+            // If there is already a real id in the store and the current id we
+            // are dealing with is generated, we throw an error.
+            // One exception we allow is when the typename has changed, which occurs
+            // when schema defines a union, both with and without an ID in the same place.
+            // checks if we "lost" the read id
+            if (generated && !escapedId.generated && !typenameChanged) {
+                throw new Error("Store error: the application attempted to write an object with no provided id" + (" but the store already contains an id of " + escapedId.id + " for this object. The selectionSet") + " that was trying to be written is:\n" + (0, _printer.print)(field));
+            }
+            // checks if we "lost" the typename
+            if (hadTypename && !hasTypename) {
+                throw new Error("Store error: the application attempted to write an object with no provided typename" + (" but the store already contains an object with typename of " + escapedId.typename + " for the object of id " + escapedId.id + ". The selectionSet") + " that was trying to be written is:\n" + (0, _printer.print)(field));
+            }
+            if (escapedId.generated) {
+                generatedKey = escapedId.id;
+                // We should only merge if it's an object of the same type,
+                // otherwise we should delete the generated object
+                if (typenameChanged) {
+                    // Only delete the generated object when the old object was
+                    // inlined, and the new object is not. This is indicated by
+                    // the old id being generated, and the new id being real.
+                    if (!generated) {
+                        store.delete(generatedKey);
+                    }
+                } else {
+                    shouldMerge = true;
+                }
+            }
+        }
+    }
+    var newStoreObj = __assign({}, store.get(dataId), (_b = {}, _b[storeFieldName] = storeValue, _b));
+    if (shouldMerge) {
+        mergeWithGenerated(generatedKey, storeValue.id, store);
+    }
+    storeObject = store.get(dataId);
+    if (!storeObject || storeValue !== storeObject[storeFieldName]) {
+        store.set(dataId, newStoreObj);
+    }
+    var _b;
+}
+function processArrayValue(value, generatedId, selectionSet, context) {
+    return value.map(function (item, index) {
+        if (item === null) {
+            return null;
+        }
+        var itemDataId = generatedId + "." + index;
+        if (Array.isArray(item)) {
+            return processArrayValue(item, itemDataId, selectionSet, context);
+        }
+        var generated = true;
+        if (context.dataIdFromObject) {
+            var semanticId = context.dataIdFromObject(item);
+            if (semanticId) {
+                itemDataId = semanticId;
+                generated = false;
+            }
+        }
+        if (!isDataProcessed(itemDataId, selectionSet, context.processedData)) {
+            writeSelectionSetToStore({
+                dataId: itemDataId,
+                result: item,
+                selectionSet: selectionSet,
+                context: context
+            });
+        }
+        return (0, _apolloUtilities.toIdValue)({ id: itemDataId, typename: item.__typename }, generated);
+    });
+}
+//# sourceMappingURL=writeToStore.js.map
+},{"graphql/language/printer":153,"apollo-utilities":167,"./objectCache":161}],224:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.graphql = graphql;
+exports.merge = merge;
+
+var _apolloUtilities = require('apollo-utilities');
+
+/* Based on graphql function from graphql-js:
+ *
+ * graphql(
+ *   schema: GraphQLSchema,
+ *   requestString: string,
+ *   rootValue?: ?any,
+ *   contextValue?: ?any,
+ *   variableValues?: ?{[key: string]: any},
+ *   operationName?: ?string
+ * ): Promise<GraphQLResult>
+ *
+ * The default export as of graphql-anywhere is sync as of 4.0,
+ * but below is an exported alternative that is async.
+ * In the 5.0 version, this will be the only export again
+ * and it will be async
+ *
+ */
+function graphql(resolver, document, rootValue, contextValue, variableValues, execOptions) {
+    if (execOptions === void 0) {
+        execOptions = {};
+    }
+    var mainDefinition = (0, _apolloUtilities.getMainDefinition)(document);
+    var fragments = (0, _apolloUtilities.getFragmentDefinitions)(document);
+    var fragmentMap = (0, _apolloUtilities.createFragmentMap)(fragments);
+    var resultMapper = execOptions.resultMapper;
+    // Default matcher always matches all fragments
+    var fragmentMatcher = execOptions.fragmentMatcher || function () {
+        return true;
+    };
+    var execContext = {
+        fragmentMap: fragmentMap,
+        contextValue: contextValue,
+        variableValues: variableValues,
+        resultMapper: resultMapper,
+        resolver: resolver,
+        fragmentMatcher: fragmentMatcher
+    };
+    return executeSelectionSet(mainDefinition.selectionSet, rootValue, execContext);
+}
+function executeSelectionSet(selectionSet, rootValue, execContext) {
+    var fragmentMap = execContext.fragmentMap,
+        contextValue = execContext.contextValue,
+        variables = execContext.variableValues;
+    var result = {};
+    selectionSet.selections.forEach(function (selection) {
+        if (!(0, _apolloUtilities.shouldInclude)(selection, variables)) {
+            // Skip this entirely
+            return;
+        }
+        if ((0, _apolloUtilities.isField)(selection)) {
+            var fieldResult = executeField(selection, rootValue, execContext);
+            var resultFieldKey = (0, _apolloUtilities.resultKeyNameFromField)(selection);
+            if (fieldResult !== undefined) {
+                if (result[resultFieldKey] === undefined) {
+                    result[resultFieldKey] = fieldResult;
+                } else {
+                    merge(result[resultFieldKey], fieldResult);
+                }
+            }
+        } else {
+            var fragment = void 0;
+            if ((0, _apolloUtilities.isInlineFragment)(selection)) {
+                fragment = selection;
+            } else {
+                // This is a named fragment
+                fragment = fragmentMap[selection.name.value];
+                if (!fragment) {
+                    throw new Error("No fragment named " + selection.name.value);
+                }
+            }
+            var typeCondition = fragment.typeCondition.name.value;
+            if (execContext.fragmentMatcher(rootValue, typeCondition, contextValue)) {
+                var fragmentResult = executeSelectionSet(fragment.selectionSet, rootValue, execContext);
+                merge(result, fragmentResult);
+            }
+        }
+    });
+    if (execContext.resultMapper) {
+        return execContext.resultMapper(result, rootValue);
+    }
+    return result;
+}
+function executeField(field, rootValue, execContext) {
+    var variables = execContext.variableValues,
+        contextValue = execContext.contextValue,
+        resolver = execContext.resolver;
+    var fieldName = field.name.value;
+    var args = (0, _apolloUtilities.argumentsObjectFromField)(field, variables);
+    var info = {
+        isLeaf: !field.selectionSet,
+        resultKey: (0, _apolloUtilities.resultKeyNameFromField)(field),
+        directives: (0, _apolloUtilities.getDirectiveInfoFromField)(field, variables)
+    };
+    var result = resolver(fieldName, rootValue, args, contextValue, info);
+    // Handle all scalar types here
+    if (!field.selectionSet) {
+        return result;
+    }
+    // From here down, the field has a selection set, which means it's trying to
+    // query a GraphQLObjectType
+    if (result == null) {
+        // Basically any field in a GraphQL response can be null, or missing
+        return result;
+    }
+    if (Array.isArray(result)) {
+        return executeSubSelectedArray(field, result, execContext);
+    }
+    // Returned value is an object, and the query has a sub-selection. Recurse.
+    return executeSelectionSet(field.selectionSet, result, execContext);
+}
+function executeSubSelectedArray(field, result, execContext) {
+    return result.map(function (item) {
+        // null value in array
+        if (item === null) {
+            return null;
+        }
+        // This is a nested array, recurse
+        if (Array.isArray(item)) {
+            return executeSubSelectedArray(field, item, execContext);
+        }
+        // This is an object, run the selection set on it
+        return executeSelectionSet(field.selectionSet, item, execContext);
+    });
+}
+var hasOwn = Object.prototype.hasOwnProperty;
+function merge(dest, src) {
+    if (src !== null && typeof src === 'object') {
+        Object.keys(src).forEach(function (key) {
+            var srcVal = src[key];
+            if (!hasOwn.call(dest, key)) {
+                dest[key] = srcVal;
+            } else {
+                merge(dest[key], srcVal);
+            }
+        });
+    }
+}
+//# sourceMappingURL=graphql.js.map
+},{"apollo-utilities":167}],223:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.filter = filter;
+exports.check = check;
+exports.propType = propType;
+
+var _graphql = require('./graphql');
+
+function filter(doc, data) {
+    var resolver = function (fieldName, root, args, context, info) {
+        return root[info.resultKey];
+    };
+    return (0, _graphql.graphql)(resolver, doc, data);
+}
+// TODO: we should probably make check call propType and then throw,
+// rather than the other way round, to avoid constructing stack traces
+// for things like oneOf uses in React. At this stage I doubt many people
+// are using this like that, but in the future, who knows?
+function check(doc, data) {
+    var resolver = function (fieldName, root, args, context, info) {
+        if (!{}.hasOwnProperty.call(root, info.resultKey)) {
+            throw new Error(info.resultKey + " missing on " + root);
+        }
+        return root[info.resultKey];
+    };
+    (0, _graphql.graphql)(resolver, doc, data, {}, {}, {
+        fragmentMatcher: function () {
+            return false;
+        }
+    });
+}
+// Lifted/adapted from
+//   https://github.com/facebook/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js
+var ANONYMOUS = '<<anonymous>>';
+function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+}
+// Make `instanceof Error` still work for returned errors.
+PropTypeError.prototype = Error.prototype;
+var reactPropTypeLocationNames = {
+    prop: 'prop',
+    context: 'context',
+    childContext: 'child context'
+};
+function createChainableTypeChecker(validate) {
+    function checkType(isRequired, props, propName, componentName, location, propFullName) {
+        componentName = componentName || ANONYMOUS;
+        propFullName = propFullName || propName;
+        if (props[propName] == null) {
+            var locationName = reactPropTypeLocationNames[location];
+            if (isRequired) {
+                if (props[propName] === null) {
+                    return new PropTypeError("The " + locationName + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
+                }
+                return new PropTypeError("The " + locationName + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
+            }
+            return null;
+        } else {
+            return validate(props, propName, componentName, location, propFullName);
+        }
+    }
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+    return chainedCheckType;
+}
+function propType(doc) {
+    return createChainableTypeChecker(function (props, propName) {
+        var prop = props[propName];
+        try {
+            if (!prop.loading) {
+                check(doc, prop);
+            }
+            return null;
+        } catch (e) {
+            // Need a much better error.
+            // Also we aren't checking for extra fields
+            return e;
+        }
+    });
+}
+//# sourceMappingURL=utilities.js.map
+},{"./graphql":224}],220:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.propType = exports.check = exports.filter = undefined;
+
+var _utilities = require('./utilities');
+
+Object.defineProperty(exports, 'filter', {
+  enumerable: true,
+  get: function () {
+    return _utilities.filter;
+  }
+});
+Object.defineProperty(exports, 'check', {
+  enumerable: true,
+  get: function () {
+    return _utilities.check;
+  }
+});
+Object.defineProperty(exports, 'propType', {
+  enumerable: true,
+  get: function () {
+    return _utilities.propType;
+  }
+});
+
+var _graphql = require('./graphql');
+
+exports.default = _graphql.graphql;
+//# sourceMappingURL=index.js.map
+},{"./utilities":223,"./graphql":224}],157:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ID_KEY = undefined;
+exports.readQueryFromStore = readQueryFromStore;
+exports.diffQueryAgainstStore = diffQueryAgainstStore;
+exports.assertIdValue = assertIdValue;
+
+var _graphqlAnywhere = require('graphql-anywhere');
+
+var _graphqlAnywhere2 = _interopRequireDefault(_graphqlAnywhere);
+
+var _apolloUtilities = require('apollo-utilities');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+/**
+ * The key which the cache id for a given value is stored in the result object. This key is private
+ * and should not be used by Apollo client users.
+ *
+ * Uses a symbol if available in the environment.
+ *
+ * @private
+ */
+var ID_KEY = exports.ID_KEY = typeof Symbol !== 'undefined' ? Symbol('id') : '@@id';
+/**
+ * Resolves the result of a query solely from the store (i.e. never hits the server).
+ *
+ * @param {Store} store The {@link NormalizedCache} used by Apollo for the `data` portion of the
+ * store.
+ *
+ * @param {DocumentNode} query The query document to resolve from the data available in the store.
+ *
+ * @param {Object} [variables] A map from the name of a variable to its value. These variables can
+ * be referenced by the query document.
+ *
+ * @param {any} previousResult The previous result returned by this function for the same query.
+ * If nothing in the store changed since that previous result then values from the previous result
+ * will be returned to preserve referential equality.
+ */
+function readQueryFromStore(options) {
+    var optsPatch = { returnPartialData: false };
+    return diffQueryAgainstStore(__assign({}, options, optsPatch)).result;
+}
+var readStoreResolver = function (fieldName, idValue, args, context, _a) {
+    var resultKey = _a.resultKey,
+        directives = _a.directives;
+    assertIdValue(idValue);
+    var objId = idValue.id;
+    var obj = context.store.get(objId);
+    var storeKeyName = fieldName;
+    if (args || directives) {
+        // We happen to know here that getStoreKeyName returns its first
+        // argument unmodified if there are no args or directives, so we can
+        // avoid calling the function at all in that case, as a small but
+        // important optimization to this frequently executed code.
+        storeKeyName = (0, _apolloUtilities.getStoreKeyName)(storeKeyName, args, directives);
+    }
+    var fieldValue = void 0;
+    if (obj) {
+        fieldValue = obj[storeKeyName];
+        if (typeof fieldValue === 'undefined' && context.cacheRedirects && (obj.__typename || objId === 'ROOT_QUERY')) {
+            var typename = obj.__typename || 'Query';
+            // Look for the type in the custom resolver map
+            var type = context.cacheRedirects[typename];
+            if (type) {
+                // Look for the field in the custom resolver map
+                var resolver = type[fieldName];
+                if (resolver) {
+                    fieldValue = resolver(obj, args, {
+                        getCacheKey: function (storeObj) {
+                            return (0, _apolloUtilities.toIdValue)({
+                                id: context.dataIdFromObject(storeObj),
+                                typename: storeObj.__typename
+                            });
+                        }
+                    });
+                }
+            }
+        }
+    }
+    if (typeof fieldValue === 'undefined') {
+        if (!context.returnPartialData) {
+            throw new Error("Can't find field " + storeKeyName + " on object (" + objId + ") " + JSON.stringify(obj, null, 2) + ".");
+        }
+        context.hasMissingField = true;
+        return fieldValue;
+    }
+    // if this is an object scalar, it must be a json blob and we have to unescape it
+    if ((0, _apolloUtilities.isJsonValue)(fieldValue)) {
+        // If the JSON blob is the same now as in the previous result, return the previous result to
+        // maintain referential equality.
+        //
+        // `isEqual` will first perform a referential equality check (with `===`) in case the JSON
+        // value has not changed in the store, and then a deep equality check if that fails in case a
+        // new JSON object was returned by the API but that object may still be the same.
+        if (idValue.previousResult && (0, _apolloUtilities.isEqual)(idValue.previousResult[resultKey], fieldValue.json)) {
+            return idValue.previousResult[resultKey];
+        }
+        return fieldValue.json;
+    }
+    // If we had a previous result, try adding that previous result value for this field to our field
+    // value. This will create a new value without mutating the old one.
+    if (idValue.previousResult) {
+        fieldValue = addPreviousResultToIdValues(fieldValue, idValue.previousResult[resultKey]);
+    }
+    return fieldValue;
+};
+/**
+ * Given a store and a query, return as much of the result as possible and
+ * identify if any data was missing from the store.
+ * @param  {DocumentNode} query A parsed GraphQL query document
+ * @param  {Store} store The Apollo Client store object
+ * @param  {any} previousResult The previous result returned by this function for the same query
+ * @return {result: Object, complete: [boolean]}
+ */
+function diffQueryAgainstStore(_a) {
+    var store = _a.store,
+        query = _a.query,
+        variables = _a.variables,
+        previousResult = _a.previousResult,
+        _b = _a.returnPartialData,
+        returnPartialData = _b === void 0 ? true : _b,
+        _c = _a.rootId,
+        rootId = _c === void 0 ? 'ROOT_QUERY' : _c,
+        fragmentMatcherFunction = _a.fragmentMatcherFunction,
+        config = _a.config;
+    // Throw the right validation error by trying to find a query in the document
+    var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(query);
+    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(queryDefinition), variables);
+    var context = {
+        // Global settings
+        store: store,
+        returnPartialData: returnPartialData,
+        dataIdFromObject: config && config.dataIdFromObject || null,
+        cacheRedirects: config && config.cacheRedirects || {},
+        // Flag set during execution
+        hasMissingField: false
+    };
+    var rootIdValue = {
+        type: 'id',
+        id: rootId,
+        previousResult: previousResult
+    };
+    var result = (0, _graphqlAnywhere2.default)(readStoreResolver, query, rootIdValue, context, variables, {
+        fragmentMatcher: fragmentMatcherFunction,
+        resultMapper: resultMapper
+    });
+    return {
+        result: result,
+        complete: !context.hasMissingField
+    };
+}
+function assertIdValue(idValue) {
+    if (!(0, _apolloUtilities.isIdValue)(idValue)) {
+        throw new Error("Encountered a sub-selection on the query, but the store doesn't have an object reference. This should never happen during normal use unless you have custom code that is directly manipulating the store; please file an issue.");
+    }
+}
+/**
+ * Adds a previous result value to id values in a nested array. For a single id value and a single
+ * previous result then the previous value is added directly.
+ *
+ * For arrays we put all of the ids from the previous result array in a map and add them to id
+ * values with the same id.
+ *
+ * This function does not mutate. Instead it returns new instances of modified values.
+ *
+ * @private
+ */
+function addPreviousResultToIdValues(value, previousResult) {
+    // If the value is an `IdValue`, add the previous result to it whether or not that
+    // `previousResult` is undefined.
+    //
+    // If the value is an array, recurse over each item trying to add the `previousResult` for that
+    // item.
+    if ((0, _apolloUtilities.isIdValue)(value)) {
+        return __assign({}, value, { previousResult: previousResult });
+    } else if (Array.isArray(value)) {
+        var idToPreviousResult_1 = new Map();
+        // If the previous result was an array, we want to build up our map of ids to previous results
+        // using the private `ID_KEY` property that is added in `resultMapper`.
+        if (Array.isArray(previousResult)) {
+            previousResult.forEach(function (item) {
+                // item can be null
+                if (item && item[ID_KEY]) {
+                    idToPreviousResult_1.set(item[ID_KEY], item);
+                    // idToPreviousResult[item[ID_KEY]] = item;
+                }
+            });
+        }
+        // For every value we want to add the previous result.
+        return value.map(function (item, i) {
+            // By default the previous result for this item will be in the same array position as this
+            // item.
+            var itemPreviousResult = previousResult && previousResult[i];
+            // If the item is an id value, we should check to see if there is a previous result for this
+            // specific id. If there is, that will be the value for `itemPreviousResult`.
+            if ((0, _apolloUtilities.isIdValue)(item)) {
+                itemPreviousResult = idToPreviousResult_1.get(item.id) || itemPreviousResult;
+            }
+            return addPreviousResultToIdValues(item, itemPreviousResult);
+        });
+    }
+    // Return the value, nothing changed.
+    return value;
+}
+/**
+ * Maps a result from `graphql-anywhere` to a final result value.
+ *
+ * If the result and the previous result from the `idValue` pass a shallow equality test, we just
+ * return the `previousResult` to maintain referential equality.
+ *
+ * We also add a private id property to the result that we can use later on.
+ *
+ * @private
+ */
+function resultMapper(resultFields, idValue) {
+    // If we had a previous result, we may be able to return that and preserve referential equality
+    if (idValue.previousResult) {
+        var currentResultKeys_1 = Object.keys(resultFields);
+        var sameAsPreviousResult =
+        // Confirm that we have the same keys in both the current result and the previous result.
+        Object.keys(idValue.previousResult).every(function (key) {
+            return currentResultKeys_1.indexOf(key) > -1;
+        }) &&
+        // Perform a shallow comparison of the result fields with the previous result. If all of
+        // the shallow fields are referentially equal to the fields of the previous result we can
+        // just return the previous result.
+        //
+        // While we do a shallow comparison of objects, but we do a deep comparison of arrays.
+        currentResultKeys_1.every(function (key) {
+            return areNestedArrayItemsStrictlyEqual(resultFields[key], idValue.previousResult[key]);
+        });
+        if (sameAsPreviousResult) {
+            return idValue.previousResult;
+        }
+    }
+    Object.defineProperty(resultFields, ID_KEY, {
+        enumerable: false,
+        configurable: true,
+        writable: false,
+        value: idValue.id
+    });
+    return resultFields;
+}
+/**
+ * Compare all the items to see if they are all referentially equal in two arrays no matter how
+ * deeply nested the arrays are.
+ *
+ * @private
+ */
+function areNestedArrayItemsStrictlyEqual(a, b) {
+    // If `a` and `b` are referentially equal, return true.
+    if (a === b) {
+        return true;
+    }
+    // If either `a` or `b` are not an array or not of the same length return false. `a` and `b` are
+    // known to not be equal here, we checked above.
+    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) {
+        return false;
+    }
+    // Otherwise let us compare all of the array items (which are potentially nested arrays!) to see
+    // if they are equal.
+    return a.every(function (item, i) {
+        return areNestedArrayItemsStrictlyEqual(item, b[i]);
+    });
+}
+//# sourceMappingURL=readFromStore.js.map
+},{"graphql-anywhere":220,"apollo-utilities":167}],162:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.record = record;
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+var RecordingCache = /** @class */function () {
+    function RecordingCache(data) {
+        if (data === void 0) {
+            data = {};
+        }
+        this.data = data;
+        this.recordedData = {};
+    }
+    RecordingCache.prototype.record = function (transaction) {
+        transaction(this);
+        var recordedData = this.recordedData;
+        this.recordedData = {};
+        return recordedData;
+    };
+    RecordingCache.prototype.toObject = function () {
+        return __assign({}, this.data, this.recordedData);
+    };
+    RecordingCache.prototype.get = function (dataId) {
+        if (this.recordedData.hasOwnProperty(dataId)) {
+            // recording always takes precedence:
+            return this.recordedData[dataId];
+        }
+        return this.data[dataId];
+    };
+    RecordingCache.prototype.set = function (dataId, value) {
+        if (this.get(dataId) !== value) {
+            this.recordedData[dataId] = value;
+        }
+    };
+    RecordingCache.prototype.delete = function (dataId) {
+        this.recordedData[dataId] = undefined;
+    };
+    RecordingCache.prototype.clear = function () {
+        var _this = this;
+        Object.keys(this.data).forEach(function (dataId) {
+            return _this.delete(dataId);
+        });
+        this.recordedData = {};
+    };
+    RecordingCache.prototype.replace = function (newData) {
+        this.clear();
+        this.recordedData = __assign({}, newData);
+    };
+    return RecordingCache;
+}();
+exports.RecordingCache = RecordingCache;
+function record(startingState, transaction) {
+    var recordingCache = new RecordingCache(startingState);
+    return recordingCache.record(transaction);
+}
+//# sourceMappingURL=recordingCache.js.map
+},{}],158:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.InMemoryCache = undefined;
+exports.defaultDataIdFromObject = defaultDataIdFromObject;
+
+var _apolloCache = require('apollo-cache');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _fragmentMatcher = require('./fragmentMatcher');
+
+var _writeToStore = require('./writeToStore');
+
+var _readFromStore = require('./readFromStore');
+
+var _objectCache = require('./objectCache');
+
+var _recordingCache = require('./recordingCache');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var defaultConfig = {
+    fragmentMatcher: new _fragmentMatcher.HeuristicFragmentMatcher(),
+    dataIdFromObject: defaultDataIdFromObject,
+    addTypename: true,
+    storeFactory: _objectCache.defaultNormalizedCacheFactory
+};
+function defaultDataIdFromObject(result) {
+    if (result.__typename) {
+        if (result.id !== undefined) {
+            return result.__typename + ":" + result.id;
+        }
+        if (result._id !== undefined) {
+            return result.__typename + ":" + result._id;
+        }
+    }
+    return null;
+}
+var InMemoryCache = /** @class */function (_super) {
+    __extends(InMemoryCache, _super);
+    function InMemoryCache(config) {
+        if (config === void 0) {
+            config = {};
+        }
+        var _this = _super.call(this) || this;
+        _this.optimistic = [];
+        _this.watches = [];
+        _this.typenameDocumentCache = new WeakMap();
+        // Set this while in a transaction to prevent broadcasts...
+        // don't forget to turn it back on!
+        _this.silenceBroadcast = false;
+        _this.config = __assign({}, defaultConfig, config);
+        // backwards compat
+        if (_this.config.customResolvers) {
+            console.warn('customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version.');
+            _this.config.cacheRedirects = _this.config.customResolvers;
+        }
+        if (_this.config.cacheResolvers) {
+            console.warn('cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version.');
+            _this.config.cacheRedirects = _this.config.cacheResolvers;
+        }
+        _this.addTypename = _this.config.addTypename;
+        _this.data = _this.config.storeFactory();
+        return _this;
+    }
+    InMemoryCache.prototype.restore = function (data) {
+        if (data) this.data.replace(data);
+        return this;
+    };
+    InMemoryCache.prototype.extract = function (optimistic) {
+        if (optimistic === void 0) {
+            optimistic = false;
+        }
+        if (optimistic && this.optimistic.length > 0) {
+            var patches = this.optimistic.map(function (opt) {
+                return opt.data;
+            });
+            return Object.assign.apply(Object, [{}, this.data.toObject()].concat(patches));
+        }
+        return this.data.toObject();
+    };
+    InMemoryCache.prototype.read = function (query) {
+        if (query.rootId && this.data.get(query.rootId) === undefined) {
+            return null;
+        }
+        return (0, _readFromStore.readQueryFromStore)({
+            store: this.config.storeFactory(this.extract(query.optimistic)),
+            query: this.transformDocument(query.query),
+            variables: query.variables,
+            rootId: query.rootId,
+            fragmentMatcherFunction: this.config.fragmentMatcher.match,
+            previousResult: query.previousResult,
+            config: this.config
+        });
+    };
+    InMemoryCache.prototype.write = function (write) {
+        (0, _writeToStore.writeResultToStore)({
+            dataId: write.dataId,
+            result: write.result,
+            variables: write.variables,
+            document: this.transformDocument(write.query),
+            store: this.data,
+            dataIdFromObject: this.config.dataIdFromObject,
+            fragmentMatcherFunction: this.config.fragmentMatcher.match
+        });
+        this.broadcastWatches();
+    };
+    InMemoryCache.prototype.diff = function (query) {
+        return (0, _readFromStore.diffQueryAgainstStore)({
+            store: this.config.storeFactory(this.extract(query.optimistic)),
+            query: this.transformDocument(query.query),
+            variables: query.variables,
+            returnPartialData: query.returnPartialData,
+            previousResult: query.previousResult,
+            fragmentMatcherFunction: this.config.fragmentMatcher.match,
+            config: this.config
+        });
+    };
+    InMemoryCache.prototype.watch = function (watch) {
+        var _this = this;
+        this.watches.push(watch);
+        return function () {
+            _this.watches = _this.watches.filter(function (c) {
+                return c !== watch;
+            });
+        };
+    };
+    InMemoryCache.prototype.evict = function (query) {
+        throw new Error("eviction is not implemented on InMemory Cache");
+    };
+    InMemoryCache.prototype.reset = function () {
+        this.data.clear();
+        this.broadcastWatches();
+        return Promise.resolve();
+    };
+    InMemoryCache.prototype.removeOptimistic = function (id) {
+        var _this = this;
+        // Throw away optimistic changes of that particular mutation
+        var toPerform = this.optimistic.filter(function (item) {
+            return item.id !== id;
+        });
+        this.optimistic = [];
+        // Re-run all of our optimistic data actions on top of one another.
+        toPerform.forEach(function (change) {
+            _this.recordOptimisticTransaction(change.transaction, change.id);
+        });
+        this.broadcastWatches();
+    };
+    InMemoryCache.prototype.performTransaction = function (transaction) {
+        // TODO: does this need to be different, or is this okay for an in-memory cache?
+        var alreadySilenced = this.silenceBroadcast;
+        this.silenceBroadcast = true;
+        transaction(this);
+        if (!alreadySilenced) {
+            // Don't un-silence since this is a nested transaction
+            // (for example, a transaction inside an optimistic record)
+            this.silenceBroadcast = false;
+        }
+        this.broadcastWatches();
+    };
+    InMemoryCache.prototype.recordOptimisticTransaction = function (transaction, id) {
+        var _this = this;
+        this.silenceBroadcast = true;
+        var patch = (0, _recordingCache.record)(this.extract(true), function (recordingCache) {
+            // swapping data instance on 'this' is currently necessary
+            // because of the current architecture
+            var dataCache = _this.data;
+            _this.data = recordingCache;
+            _this.performTransaction(transaction);
+            _this.data = dataCache;
+        });
+        this.optimistic.push({
+            id: id,
+            transaction: transaction,
+            data: patch
+        });
+        this.silenceBroadcast = false;
+        this.broadcastWatches();
+    };
+    InMemoryCache.prototype.transformDocument = function (document) {
+        if (this.addTypename) {
+            var result = this.typenameDocumentCache.get(document);
+            if (!result) {
+                this.typenameDocumentCache.set(document, result = (0, _apolloUtilities.addTypenameToDocument)(document));
+            }
+            return result;
+        }
+        return document;
+    };
+    InMemoryCache.prototype.readQuery = function (options, optimistic) {
+        if (optimistic === void 0) {
+            optimistic = false;
+        }
+        return this.read({
+            query: options.query,
+            variables: options.variables,
+            optimistic: optimistic
+        });
+    };
+    InMemoryCache.prototype.readFragment = function (options, optimistic) {
+        if (optimistic === void 0) {
+            optimistic = false;
+        }
+        return this.read({
+            query: this.transformDocument((0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)),
+            variables: options.variables,
+            rootId: options.id,
+            optimistic: optimistic
+        });
+    };
+    InMemoryCache.prototype.writeQuery = function (options) {
+        this.write({
+            dataId: 'ROOT_QUERY',
+            result: options.data,
+            query: this.transformDocument(options.query),
+            variables: options.variables
+        });
+    };
+    InMemoryCache.prototype.writeFragment = function (options) {
+        this.write({
+            dataId: options.id,
+            result: options.data,
+            query: this.transformDocument((0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)),
+            variables: options.variables
+        });
+    };
+    InMemoryCache.prototype.broadcastWatches = function () {
+        var _this = this;
+        // Skip this when silenced (like inside a transaction)
+        if (this.silenceBroadcast) return;
+        // right now, we invalidate all queries whenever anything changes
+        this.watches.forEach(function (c) {
+            var newData = _this.diff({
+                query: c.query,
+                variables: c.variables,
+                // TODO: previousResult isn't in the types - this will only work
+                // with ObservableQuery which is in a different package
+                previousResult: c.previousResult && c.previousResult(),
+                optimistic: c.optimistic
+            });
+            c.callback(newData);
+        });
+    };
+    return InMemoryCache;
+}(_apolloCache.ApolloCache);
+exports.InMemoryCache = InMemoryCache;
+//# sourceMappingURL=inMemoryCache.js.map
+},{"apollo-cache":195,"apollo-utilities":167,"./fragmentMatcher":160,"./writeToStore":159,"./readFromStore":157,"./objectCache":161,"./recordingCache":162}],71:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _inMemoryCache = require('./inMemoryCache');
+
+Object.defineProperty(exports, 'InMemoryCache', {
+  enumerable: true,
+  get: function () {
+    return _inMemoryCache.InMemoryCache;
+  }
+});
+Object.defineProperty(exports, 'defaultDataIdFromObject', {
+  enumerable: true,
+  get: function () {
+    return _inMemoryCache.defaultDataIdFromObject;
+  }
+});
+
+var _readFromStore = require('./readFromStore');
+
+Object.keys(_readFromStore).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _readFromStore[key];
+    }
+  });
+});
+
+var _writeToStore = require('./writeToStore');
+
+Object.keys(_writeToStore).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _writeToStore[key];
+    }
+  });
+});
+
+var _fragmentMatcher = require('./fragmentMatcher');
+
+Object.keys(_fragmentMatcher).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _fragmentMatcher[key];
+    }
+  });
+});
+
+var _objectCache = require('./objectCache');
+
+Object.keys(_objectCache).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _objectCache[key];
+    }
+  });
+});
+
+var _recordingCache = require('./recordingCache');
+
+Object.keys(_recordingCache).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _recordingCache[key];
+    }
+  });
+});
+},{"./inMemoryCache":158,"./readFromStore":157,"./writeToStore":159,"./fragmentMatcher":160,"./objectCache":161,"./recordingCache":162}],194:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.selectURI = exports.serializeFetchParameter = exports.selectHttpOptionsAndBody = exports.createSignalIfSupported = exports.checkFetcher = exports.parseAndCheckHttpResponse = exports.throwServerError = exports.fallbackHttpConfig = undefined;
+
+var _printer = require('graphql/language/printer');
+
+var __assign = undefined && undefined.__assign || Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+};
+
+var defaultHttpOptions = {
+    includeQuery: true,
+    includeExtensions: false
+};
+var defaultHeaders = {
+    // headers are case insensitive (https://stackoverflow.com/a/5259004)
+    accept: '*/*',
+    'content-type': 'application/json'
+};
+var defaultOptions = {
+    method: 'POST'
+};
+var fallbackHttpConfig = exports.fallbackHttpConfig = {
+    http: defaultHttpOptions,
+    headers: defaultHeaders,
+    options: defaultOptions
+};
+var throwServerError = exports.throwServerError = function (response, result, message) {
+    var error = new Error(message);
+    error.response = response;
+    error.statusCode = response.status;
+    error.result = result;
+    throw error;
+};
+//TODO: when conditional types come in ts 2.8, operations should be a generic type that extends Operation | Array<Operation>
+var parseAndCheckHttpResponse = exports.parseAndCheckHttpResponse = function (operations) {
+    return function (response) {
+        return response.text().then(function (bodyText) {
+            try {
+                return JSON.parse(bodyText);
+            } catch (err) {
+                var parseError = err;
+                parseError.response = response;
+                parseError.statusCode = response.status;
+                parseError.bodyText = bodyText;
+                return Promise.reject(parseError);
+            }
+        }).then(function (result) {
+            if (response.status >= 300) {
+                //Network error
+                throwServerError(response, result, "Response not successful: Received status code " + response.status);
+            }
+            //TODO should really error per response in a Batch based on properties
+            //    - could be done in a validation link
+            if (!Array.isArray(result) && !result.hasOwnProperty('data') && !result.hasOwnProperty('errors')) {
+                //Data error
+                throwServerError(response, result, "Server response was missing for query '" + (Array.isArray(operations) ? operations.map(function (op) {
+                    return op.operationName;
+                }) : operations.operationName) + "'.");
+            }
+            return result;
+        });
+    };
+};
+var checkFetcher = exports.checkFetcher = function (fetcher) {
+    if (!fetcher && typeof fetch === 'undefined') {
+        var library = 'unfetch';
+        if (typeof window === 'undefined') library = 'node-fetch';
+        throw new Error("\nfetch is not found globally and no fetcher passed, to fix pass a fetch for\nyour environment like https://www.npmjs.com/package/" + library + ".\n\nFor example:\nimport fetch from '" + library + "';\nimport { createHttpLink } from 'apollo-link-http';\n\nconst link = createHttpLink({ uri: '/graphql', fetch: fetch });");
+    }
+};
+var createSignalIfSupported = exports.createSignalIfSupported = function () {
+    if (typeof AbortController === 'undefined') return { controller: false, signal: false };
+    var controller = new AbortController();
+    var signal = controller.signal;
+    return { controller: controller, signal: signal };
+};
+var selectHttpOptionsAndBody = exports.selectHttpOptionsAndBody = function (operation, fallbackConfig) {
+    var configs = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        configs[_i - 2] = arguments[_i];
+    }
+    var options = __assign({}, fallbackConfig.options, { headers: fallbackConfig.headers, credentials: fallbackConfig.credentials });
+    var http = fallbackConfig.http;
+    /*
+     * use the rest of the configs to populate the options
+     * configs later in the list will overwrite earlier fields
+     */
+    configs.forEach(function (config) {
+        options = __assign({}, options, config.options, { headers: __assign({}, options.headers, config.headers) });
+        if (config.credentials) options.credentials = config.credentials;
+        http = __assign({}, http, config.http);
+    });
+    //The body depends on the http options
+    var operationName = operation.operationName,
+        extensions = operation.extensions,
+        variables = operation.variables,
+        query = operation.query;
+    var body = { operationName: operationName, variables: variables };
+    if (http.includeExtensions) body.extensions = extensions;
+    // not sending the query (i.e persisted queries)
+    if (http.includeQuery) body.query = (0, _printer.print)(query);
+    return {
+        options: options,
+        body: body
+    };
+};
+var serializeFetchParameter = exports.serializeFetchParameter = function (p, label) {
+    var serialized;
+    try {
+        serialized = JSON.stringify(p);
+    } catch (e) {
+        var parseError = new Error("Network request failed. " + label + " is not serializable: " + e.message);
+        parseError.parseError = e;
+        throw parseError;
+    }
+    return serialized;
+};
+//selects "/graphql" by default
+var selectURI = exports.selectURI = function (operation, fallbackURI) {
+    var context = operation.getContext();
+    var contextURI = context.uri;
+    if (contextURI) {
+        return contextURI;
+    } else if (typeof fallbackURI === 'function') {
+        return fallbackURI(operation);
+    } else {
+        return fallbackURI || '/graphql';
+    }
+};
+//# sourceMappingURL=index.js.map
+},{"graphql/language/printer":153}],163:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.HttpLink = exports.createHttpLink = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var _apolloLinkHttpCommon = require('apollo-link-http-common');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var __rest = undefined && undefined.__rest || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
+    return t;
+};
+var createHttpLink = exports.createHttpLink = function (linkOptions) {
+    if (linkOptions === void 0) {
+        linkOptions = {};
+    }
+    var _a = linkOptions.uri,
+        uri = _a === void 0 ? '/graphql' : _a,
+
+    // use default global fetch is nothing passed in
+    fetcher = linkOptions.fetch,
+        includeExtensions = linkOptions.includeExtensions,
+        useGETForQueries = linkOptions.useGETForQueries,
+        requestOptions = __rest(linkOptions, ["uri", "fetch", "includeExtensions", "useGETForQueries"]);
+    // dev warnings to ensure fetch is present
+    (0, _apolloLinkHttpCommon.checkFetcher)(fetcher);
+    //fetcher is set here rather than the destructuring to ensure fetch is
+    //declared before referencing it. Reference in the destructuring would cause
+    //a ReferenceError
+    if (!fetcher) {
+        fetcher = fetch;
+    }
+    var linkConfig = {
+        http: { includeExtensions: includeExtensions },
+        options: requestOptions.fetchOptions,
+        credentials: requestOptions.credentials,
+        headers: requestOptions.headers
+    };
+    return new _apolloLink.ApolloLink(function (operation) {
+        var chosenURI = (0, _apolloLinkHttpCommon.selectURI)(operation, uri);
+        var context = operation.getContext();
+        var contextConfig = {
+            http: context.http,
+            options: context.fetchOptions,
+            credentials: context.credentials,
+            headers: context.headers
+        };
+        //uses fallback, link, and then context to build options
+        var _a = (0, _apolloLinkHttpCommon.selectHttpOptionsAndBody)(operation, _apolloLinkHttpCommon.fallbackHttpConfig, linkConfig, contextConfig),
+            options = _a.options,
+            body = _a.body;
+        var controller;
+        if (!options.signal) {
+            var _b = (0, _apolloLinkHttpCommon.createSignalIfSupported)(),
+                _controller = _b.controller,
+                signal = _b.signal;
+            controller = _controller;
+            if (controller) options.signal = signal;
+        }
+        // If requested, set method to GET if there are no mutations.
+        var definitionIsMutation = function (d) {
+            return d.kind === 'OperationDefinition' && d.operation === 'mutation';
+        };
+        if (useGETForQueries && !operation.query.definitions.some(definitionIsMutation)) {
+            options.method = 'GET';
+        }
+        if (options.method === 'GET') {
+            var _c = rewriteURIForGET(chosenURI, body),
+                newURI = _c.newURI,
+                parseError = _c.parseError;
+            if (parseError) {
+                return (0, _apolloLink.fromError)(parseError);
+            }
+            chosenURI = newURI;
+        } else {
+            try {
+                options.body = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body, 'Payload');
+            } catch (parseError) {
+                return (0, _apolloLink.fromError)(parseError);
+            }
+        }
+        return new _apolloLink.Observable(function (observer) {
+            fetcher(chosenURI, options).then(function (response) {
+                operation.setContext({ response: response });
+                return response;
+            }).then((0, _apolloLinkHttpCommon.parseAndCheckHttpResponse)(operation)).then(function (result) {
+                // we have data and can send it to back up the link chain
+                observer.next(result);
+                observer.complete();
+                return result;
+            }).catch(function (err) {
+                // fetch was cancelled so its already been cleaned up in the unsubscribe
+                if (err.name === 'AbortError') return;
+                // if it is a network error, BUT there is graphql result info
+                // fire the next observer before calling error
+                // this gives apollo-client (and react-apollo) the `graphqlErrors` and `networErrors`
+                // to pass to UI
+                // this should only happen if we *also* have data as part of the response key per
+                // the spec
+                if (err.result && err.result.errors && err.result.data) {
+                    // if we dont' call next, the UI can only show networkError because AC didn't
+                    // get andy graphqlErrors
+                    // this is graphql execution result info (i.e errors and possibly data)
+                    // this is because there is no formal spec how errors should translate to
+                    // http status codes. So an auth error (401) could have both data
+                    // from a public field, errors from a private field, and a status of 401
+                    // {
+                    //  user { // this will have errors
+                    //    firstName
+                    //  }
+                    //  products { // this is public so will have data
+                    //    cost
+                    //  }
+                    // }
+                    //
+                    // the result of above *could* look like this:
+                    // {
+                    //   data: { products: [{ cost: "$10" }] },
+                    //   errors: [{
+                    //      message: 'your session has timed out',
+                    //      path: []
+                    //   }]
+                    // }
+                    // status code of above would be a 401
+                    // in the UI you want to show data where you can, errors as data where you can
+                    // and use correct http status codes
+                    observer.next(err.result);
+                }
+                observer.error(err);
+            });
+            return function () {
+                // XXX support canceling this request
+                // https://developers.google.com/web/updates/2017/09/abortable-fetch
+                if (controller) controller.abort();
+            };
+        });
+    });
+};
+// For GET operations, returns the given URI rewritten with parameters, or a
+// parse error.
+function rewriteURIForGET(chosenURI, body) {
+    // Implement the standard HTTP GET serialization, plus 'extensions'. Note
+    // the extra level of JSON serialization!
+    var queryParams = [];
+    var addQueryParam = function (key, value) {
+        queryParams.push(key + "=" + encodeURIComponent(value));
+    };
+    if ('query' in body) {
+        addQueryParam('query', body.query);
+    }
+    if (body.operationName) {
+        addQueryParam('operationName', body.operationName);
+    }
+    if (body.variables) {
+        var serializedVariables = void 0;
+        try {
+            serializedVariables = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body.variables, 'Variables map');
+        } catch (parseError) {
+            return { parseError: parseError };
+        }
+        addQueryParam('variables', serializedVariables);
+    }
+    if (body.extensions) {
+        var serializedExtensions = void 0;
+        try {
+            serializedExtensions = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body.extensions, 'Extensions map');
+        } catch (parseError) {
+            return { parseError: parseError };
+        }
+        addQueryParam('extensions', serializedExtensions);
+    }
+    // Reconstruct the URI with added query params.
+    // XXX This assumes that the URI is well-formed and that it doesn't
+    //     already contain any of these query params. We could instead use the
+    //     URL API and take a polyfill (whatwg-url@6) for older browsers that
+    //     don't support URLSearchParams. Note that some browsers (and
+    //     versions of whatwg-url) support URL but not URLSearchParams!
+    var fragment = '',
+        preFragment = chosenURI;
+    var fragmentStart = chosenURI.indexOf('#');
+    if (fragmentStart !== -1) {
+        fragment = chosenURI.substr(fragmentStart);
+        preFragment = chosenURI.substr(0, fragmentStart);
+    }
+    var queryParamsPrefix = preFragment.indexOf('?') === -1 ? '?' : '&';
+    var newURI = preFragment + queryParamsPrefix + queryParams.join('&') + fragment;
+    return { newURI: newURI };
+}
+var HttpLink = /** @class */function (_super) {
+    __extends(HttpLink, _super);
+    function HttpLink(opts) {
+        return _super.call(this, createHttpLink(opts).request) || this;
+    }
+    return HttpLink;
+}(_apolloLink.ApolloLink);
+exports.HttpLink = HttpLink;
+//# sourceMappingURL=httpLink.js.map
+},{"apollo-link":70,"apollo-link-http-common":194}],72:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _httpLink = require('./httpLink');
+
+Object.keys(_httpLink).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _httpLink[key];
+    }
+  });
+});
+},{"./httpLink":163}],168:[function(require,module,exports) {
+var define;
+var global = arguments[3];
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('apollo-utilities')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'apollo-utilities'], factory) :
+    (factory((global.graphqlAnywhereAsync = {}),global.apollo.utilities));
+}(this, (function (exports,apolloUtilities) { 'use strict';
+
+    var hasOwn = Object.prototype.hasOwnProperty;
+    function merge(dest, src) {
+        if (src !== null && typeof src === 'object') {
+            Object.keys(src).forEach(function (key) {
+                var srcVal = src[key];
+                if (!hasOwn.call(dest, key)) {
+                    dest[key] = srcVal;
+                }
+                else {
+                    merge(dest[key], srcVal);
+                }
+            });
+        }
+    }
+
+    var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    };
+    var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+        function verb(n) { return function (v) { return step([n, v]); }; }
+        function step(op) {
+            if (f) throw new TypeError("Generator is already executing.");
+            while (_) try {
+                if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+                if (y = 0, t) op = [0, t.value];
+                switch (op[0]) {
+                    case 0: case 1: t = op; break;
+                    case 4: _.label++; return { value: op[1], done: false };
+                    case 5: _.label++; y = op[1]; op = [0]; continue;
+                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                    default:
+                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                        if (t[2]) _.ops.pop();
+                        _.trys.pop(); continue;
+                }
+                op = body.call(thisArg, _);
+            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+        }
+    };
+    /* Based on graphql function from graphql-js:
+     *
+     * graphql(
+     *   schema: GraphQLSchema,
+     *   requestString: string,
+     *   rootValue?: ?any,
+     *   contextValue?: ?any,
+     *   variableValues?: ?{[key: string]: any},
+     *   operationName?: ?string
+     * ): Promise<GraphQLResult>
+     *
+     * The default export as of graphql-anywhere is sync as of 4.0,
+     * but below is an exported alternative that is async.
+     * In the 5.0 version, this will be the only export again
+     * and it will be async
+     *
+     */
+    function graphql$1(resolver, document, rootValue, contextValue, variableValues, execOptions) {
+        if (execOptions === void 0) { execOptions = {}; }
+        var mainDefinition = apolloUtilities.getMainDefinition(document);
+        var fragments = apolloUtilities.getFragmentDefinitions(document);
+        var fragmentMap = apolloUtilities.createFragmentMap(fragments);
+        var resultMapper = execOptions.resultMapper;
+        // Default matcher always matches all fragments
+        var fragmentMatcher = execOptions.fragmentMatcher || (function () { return true; });
+        var execContext = {
+            fragmentMap: fragmentMap,
+            contextValue: contextValue,
+            variableValues: variableValues,
+            resultMapper: resultMapper,
+            resolver: resolver,
+            fragmentMatcher: fragmentMatcher,
+        };
+        return executeSelectionSet$1(mainDefinition.selectionSet, rootValue, execContext);
+    }
+    function executeSelectionSet$1(selectionSet, rootValue, execContext) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var fragmentMap, contextValue, variables, result, execute;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        fragmentMap = execContext.fragmentMap, contextValue = execContext.contextValue, variables = execContext.variableValues;
+                        result = {};
+                        execute = function (selection) { return __awaiter(_this, void 0, void 0, function () {
+                            var fieldResult, resultFieldKey, fragment, typeCondition, fragmentResult;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        if (!apolloUtilities.shouldInclude(selection, variables)) {
+                                            // Skip this entirely
+                                            return [2 /*return*/];
+                                        }
+                                        if (!apolloUtilities.isField(selection)) return [3 /*break*/, 2];
+                                        return [4 /*yield*/, executeField$1(selection, rootValue, execContext)];
+                                    case 1:
+                                        fieldResult = _a.sent();
+                                        resultFieldKey = apolloUtilities.resultKeyNameFromField(selection);
+                                        if (fieldResult !== undefined) {
+                                            if (result[resultFieldKey] === undefined) {
+                                                result[resultFieldKey] = fieldResult;
+                                            }
+                                            else {
+                                                merge(result[resultFieldKey], fieldResult);
+                                            }
+                                        }
+                                        return [2 /*return*/];
+                                    case 2:
+                                        if (apolloUtilities.isInlineFragment(selection)) {
+                                            fragment = selection;
+                                        }
+                                        else {
+                                            // This is a named fragment
+                                            fragment = fragmentMap[selection.name.value];
+                                            if (!fragment) {
+                                                throw new Error("No fragment named " + selection.name.value);
+                                            }
+                                        }
+                                        typeCondition = fragment.typeCondition.name.value;
+                                        if (!execContext.fragmentMatcher(rootValue, typeCondition, contextValue)) return [3 /*break*/, 4];
+                                        return [4 /*yield*/, executeSelectionSet$1(fragment.selectionSet, rootValue, execContext)];
+                                    case 3:
+                                        fragmentResult = _a.sent();
+                                        merge(result, fragmentResult);
+                                        _a.label = 4;
+                                    case 4: return [2 /*return*/];
+                                }
+                            });
+                        }); };
+                        return [4 /*yield*/, Promise.all(selectionSet.selections.map(execute))];
+                    case 1:
+                        _a.sent();
+                        if (execContext.resultMapper) {
+                            return [2 /*return*/, execContext.resultMapper(result, rootValue)];
+                        }
+                        return [2 /*return*/, result];
+                }
+            });
+        });
+    }
+    function executeField$1(field, rootValue, execContext) {
+        return __awaiter(this, void 0, void 0, function () {
+            var variables, contextValue, resolver, fieldName, args, info, result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        variables = execContext.variableValues, contextValue = execContext.contextValue, resolver = execContext.resolver;
+                        fieldName = field.name.value;
+                        args = apolloUtilities.argumentsObjectFromField(field, variables);
+                        info = {
+                            isLeaf: !field.selectionSet,
+                            resultKey: apolloUtilities.resultKeyNameFromField(field),
+                            directives: apolloUtilities.getDirectiveInfoFromField(field, variables),
+                        };
+                        return [4 /*yield*/, resolver(fieldName, rootValue, args, contextValue, info)];
+                    case 1:
+                        result = _a.sent();
+                        // Handle all scalar types here
+                        if (!field.selectionSet) {
+                            return [2 /*return*/, result];
+                        }
+                        // From here down, the field has a selection set, which means it's trying to
+                        // query a GraphQLObjectType
+                        if (result == null) {
+                            // Basically any field in a GraphQL response can be null, or missing
+                            return [2 /*return*/, result];
+                        }
+                        if (Array.isArray(result)) {
+                            return [2 /*return*/, executeSubSelectedArray$1(field, result, execContext)];
+                        }
+                        // Returned value is an object, and the query has a sub-selection. Recurse.
+                        return [2 /*return*/, executeSelectionSet$1(field.selectionSet, result, execContext)];
+                }
+            });
+        });
+    }
+    function executeSubSelectedArray$1(field, result, execContext) {
+        return Promise.all(result.map(function (item) {
+            // null value in array
+            if (item === null) {
+                return null;
+            }
+            // This is a nested array, recurse
+            if (Array.isArray(item)) {
+                return executeSubSelectedArray$1(field, item, execContext);
+            }
+            // This is an object, run the selection set on it
+            return executeSelectionSet$1(field.selectionSet, item, execContext);
+        }));
+    }
+
+    exports.graphql = graphql$1;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
+//# sourceMappingURL=async.js.map
+
+},{"apollo-utilities":167}],166:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.removeClientSetsFromDocument = removeClientSetsFromDocument;
+
+var _apolloUtilities = require('apollo-utilities');
+
+var connectionRemoveConfig = {
+    test: function (directive) {
+        return directive.name.value === 'client';
+    },
+    remove: true
+};
+var removed = new Map();
+function removeClientSetsFromDocument(query) {
+    var cached = removed.get(query);
+    if (cached) return cached;
+    (0, _apolloUtilities.checkDocument)(query);
+    var docClone = (0, _apolloUtilities.removeDirectivesFromDocument)([connectionRemoveConfig], query);
+    removed.set(query, docClone);
+    return docClone;
+}
+//# sourceMappingURL=utils.js.map
+},{"apollo-utilities":167}],73:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.withClientState = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var _apolloUtilities = require('apollo-utilities');
+
+var _async = require('graphql-anywhere/lib/async');
+
+var _utils = require('./utils');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+
+var capitalizeFirstLetter = function (str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+};
+var withClientState = exports.withClientState = function (clientStateConfig) {
+    if (clientStateConfig === void 0) {
+        clientStateConfig = { resolvers: {}, defaults: {} };
+    }
+    var resolvers = clientStateConfig.resolvers,
+        defaults = clientStateConfig.defaults,
+        cache = clientStateConfig.cache,
+        typeDefs = clientStateConfig.typeDefs;
+    if (cache && defaults) {
+        cache.writeData({ data: defaults });
+    }
+    return new (function (_super) {
+        __extends(StateLink, _super);
+        function StateLink() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        StateLink.prototype.writeDefaults = function () {
+            if (cache && defaults) {
+                cache.writeData({ data: defaults });
+            }
+        };
+        StateLink.prototype.request = function (operation, forward) {
+            if (forward === void 0) {
+                forward = function () {
+                    return _apolloLink.Observable.of({ data: {} });
+                };
+            }
+            if (typeDefs) {
+                var directives_1 = 'directive @client on FIELD';
+                var definition_1 = typeof typeDefs === 'string' ? typeDefs : typeDefs.map(function (typeDef) {
+                    return typeDef.trim();
+                }).join('\n');
+                operation.setContext(function (_a) {
+                    var _b = _a.schemas,
+                        schemas = _b === void 0 ? [] : _b;
+                    return {
+                        schemas: schemas.concat([{ definition: definition_1, directives: directives_1 }])
+                    };
+                });
+            }
+            var isClient = (0, _apolloUtilities.hasDirectives)(['client'], operation.query);
+            if (!isClient) return forward(operation);
+            var server = (0, _utils.removeClientSetsFromDocument)(operation.query);
+            var query = operation.query;
+            var type = capitalizeFirstLetter(((0, _apolloUtilities.getMainDefinition)(query) || {}).operation) || 'Query';
+            var resolver = function (fieldName, rootValue, args, context, info) {
+                if (rootValue === void 0) {
+                    rootValue = {};
+                }
+                var fieldValue = rootValue[info.resultKey];
+                if (fieldValue !== undefined) return fieldValue;
+                var resolverMap = resolvers[rootValue.__typename || type];
+                if (resolverMap) {
+                    var resolve = resolverMap[fieldName];
+                    if (resolve) return resolve(rootValue, args, context, info);
+                }
+                return defaults[fieldName];
+            };
+            return new _apolloLink.Observable(function (observer) {
+                if (server) operation.query = server;
+                var obs = server && forward ? forward(operation) : _apolloLink.Observable.of({
+                    data: {}
+                });
+                var observerErrorHandler = observer.error.bind(observer);
+                var sub = obs.subscribe({
+                    next: function (_a) {
+                        var data = _a.data,
+                            errors = _a.errors;
+                        var context = operation.getContext();
+                        (0, _async.graphql)(resolver, query, data, context, operation.variables).then(function (nextData) {
+                            observer.next({
+                                data: nextData,
+                                errors: errors
+                            });
+                            observer.complete();
+                        }).catch(observerErrorHandler);
+                    },
+                    error: observerErrorHandler
+                });
+                return function () {
+                    if (sub) sub.unsubscribe();
+                };
+            });
+        };
+        return StateLink;
+    }(_apolloLink.ApolloLink))();
+};
+//# sourceMappingURL=index.js.map
+},{"apollo-link":70,"apollo-utilities":167,"graphql-anywhere/lib/async":168,"./utils":166}],74:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.ErrorLink = exports.onError = undefined;
+
+var _apolloLink = require('apollo-link');
+
+var __extends = undefined && undefined.__extends || function () {
+    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+        d.__proto__ = b;
+    } || function (d, b) {
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() {
+            this.constructor = d;
+        }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+}();
+var onError = exports.onError = function (errorHandler) {
+    return new _apolloLink.ApolloLink(function (operation, forward) {
+        return new _apolloLink.Observable(function (observer) {
+            var sub;
+            var retriedSub;
+            var retriedResult;
+            try {
+                sub = forward(operation).subscribe({
+                    next: function (result) {
+                        if (result.errors) {
+                            retriedResult = errorHandler({
+                                graphQLErrors: result.errors,
+                                response: result,
+                                operation: operation,
+                                forward: forward
+                            });
+                            if (retriedResult) {
+                                retriedSub = retriedResult.subscribe({
+                                    next: observer.next.bind(observer),
+                                    error: observer.error.bind(observer),
+                                    complete: observer.complete.bind(observer)
+                                });
+                                return;
+                            }
+                        }
+                        observer.next(result);
+                    },
+                    error: function (networkError) {
+                        retriedResult = errorHandler({
+                            operation: operation,
+                            networkError: networkError,
+                            //Network errors can return GraphQL errors on for example a 403
+                            graphQLErrors: networkError.result && networkError.result.errors,
+                            forward: forward
+                        });
+                        if (retriedResult) {
+                            retriedSub = retriedResult.subscribe({
+                                next: observer.next.bind(observer),
+                                error: observer.error.bind(observer),
+                                complete: observer.complete.bind(observer)
+                            });
+                            return;
+                        }
+                        observer.error(networkError);
+                    },
+                    complete: function () {
+                        // disable the previous sub from calling complete on observable
+                        // if retry is in flight.
+                        if (!retriedResult) {
+                            observer.complete.bind(observer)();
+                        }
+                    }
+                });
+            } catch (e) {
+                errorHandler({ networkError: e, operation: operation, forward: forward });
+                observer.error(e);
+            }
+            return function () {
+                if (sub) sub.unsubscribe();
+                if (retriedSub) sub.unsubscribe();
+            };
+        });
+    });
+};
+var ErrorLink = /** @class */function (_super) {
+    __extends(ErrorLink, _super);
+    function ErrorLink(errorHandler) {
+        var _this = _super.call(this) || this;
+        _this.link = onError(errorHandler);
+        return _this;
+    }
+    ErrorLink.prototype.request = function (operation, forward) {
+        return this.link.request(operation, forward);
+    };
+    return ErrorLink;
+}(_apolloLink.ApolloLink);
+exports.ErrorLink = ErrorLink;
+//# sourceMappingURL=index.js.map
+},{"apollo-link":70}],209:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = invariant;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function invariant(condition, message) {
+  /* istanbul ignore else */
+  if (!condition) {
+    throw new Error(message);
+  }
+}
+},{}],174:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Source = undefined;
+
+var _invariant = require('../jsutils/invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
+                                                                                                                                                           * Copyright (c) 2015-present, Facebook, Inc.
+                                                                                                                                                           *
+                                                                                                                                                           * This source code is licensed under the MIT license found in the
+                                                                                                                                                           * LICENSE file in the root directory of this source tree.
+                                                                                                                                                           *
+                                                                                                                                                           *  strict
+                                                                                                                                                           */
+
+/**
+ * A representation of source input to GraphQL.
+ * `name` and `locationOffset` are optional. They are useful for clients who
+ * store GraphQL documents in source files; for example, if the GraphQL input
+ * starts at line 40 in a file named Foo.graphql, it might be useful for name to
+ * be "Foo.graphql" and location to be `{ line: 40, column: 0 }`.
+ * line and column in locationOffset are 1-indexed
+ */
+var Source = exports.Source = function Source(body, name, locationOffset) {
+  _classCallCheck(this, Source);
+
+  this.body = body;
+  this.name = name || 'GraphQL request';
+  this.locationOffset = locationOffset || { line: 1, column: 1 };
+  !(this.locationOffset.line > 0) ? (0, _invariant2.default)(0, 'line in locationOffset is 1-indexed and must be positive') : void 0;
+  !(this.locationOffset.column > 0) ? (0, _invariant2.default)(0, 'column in locationOffset is 1-indexed and must be positive') : void 0;
+};
+},{"../jsutils/invariant":209}],208:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getLocation = getLocation;
+
+
+/**
+ * Takes a Source and a UTF-8 character offset, and returns the corresponding
+ * line and column as a SourceLocation.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function getLocation(source, position) {
+  var lineRegexp = /\r\n|[\n\r]/g;
+  var line = 1;
+  var column = position + 1;
+  var match = void 0;
+  while ((match = lineRegexp.exec(source.body)) && match.index < position) {
+    line += 1;
+    column = position + 1 - (match.index + match[0].length);
+  }
+  return { line: line, column: column };
+}
+
+/**
+ * Represents a location in a Source.
+ */
+},{}],200:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.printError = printError;
+
+var _location = require('../language/location');
+
+/**
+ * Prints a GraphQLError to a string, representing useful location information
+ * about the error's position in the source.
+ */
+function printError(error) {
+  var printedLocations = [];
+  if (error.nodes) {
+    error.nodes.forEach(function (node) {
+      if (node.loc) {
+        printedLocations.push(highlightSourceAtLocation(node.loc.source, (0, _location.getLocation)(node.loc.source, node.loc.start)));
+      }
+    });
+  } else if (error.source && error.locations) {
+    var source = error.source;
+    error.locations.forEach(function (location) {
+      printedLocations.push(highlightSourceAtLocation(source, location));
+    });
+  }
+  return printedLocations.length === 0 ? error.message : [error.message].concat(printedLocations).join('\n\n') + '\n';
+}
+
+/**
+ * Render a helpful description of the location of the error in the GraphQL
+ * Source document.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function highlightSourceAtLocation(source, location) {
+  var line = location.line;
+  var lineOffset = source.locationOffset.line - 1;
+  var columnOffset = getColumnOffset(source, location);
+  var contextLine = line + lineOffset;
+  var contextColumn = location.column + columnOffset;
+  var prevLineNum = (contextLine - 1).toString();
+  var lineNum = contextLine.toString();
+  var nextLineNum = (contextLine + 1).toString();
+  var padLen = nextLineNum.length;
+  var lines = source.body.split(/\r\n|[\n\r]/g);
+  lines[0] = whitespace(source.locationOffset.column - 1) + lines[0];
+  var outputLines = [source.name + ' (' + contextLine + ':' + contextColumn + ')', line >= 2 && lpad(padLen, prevLineNum) + ': ' + lines[line - 2], lpad(padLen, lineNum) + ': ' + lines[line - 1], whitespace(2 + padLen + contextColumn - 1) + '^', line < lines.length && lpad(padLen, nextLineNum) + ': ' + lines[line]];
+  return outputLines.filter(Boolean).join('\n');
+}
+
+function getColumnOffset(source, location) {
+  return location.line === 1 ? source.locationOffset.column - 1 : 0;
+}
+
+function whitespace(len) {
+  return Array(len + 1).join(' ');
+}
+
+function lpad(len, str) {
+  return whitespace(len - str.length) + str;
+}
+},{"../language/location":208}],197:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GraphQLError = GraphQLError;
+
+var _printError = require('./printError');
+
+var _location = require('../language/location');
+
+/**
+ * A GraphQLError describes an Error found during the parse, validate, or
+ * execute phases of performing a GraphQL operation. In addition to a message
+ * and stack trace, it also includes information about the locations in a
+ * GraphQL document and/or execution result that correspond to the Error.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function GraphQLError( // eslint-disable-line no-redeclare
+message, nodes, source, positions, path, originalError, extensions) {
+  // Compute list of blame nodes.
+  var _nodes = Array.isArray(nodes) ? nodes.length !== 0 ? nodes : undefined : nodes ? [nodes] : undefined;
+
+  // Compute locations in the source for the given nodes/positions.
+  var _source = source;
+  if (!_source && _nodes) {
+    var node = _nodes[0];
+    _source = node && node.loc && node.loc.source;
+  }
+
+  var _positions = positions;
+  if (!_positions && _nodes) {
+    _positions = _nodes.reduce(function (list, node) {
+      if (node.loc) {
+        list.push(node.loc.start);
+      }
+      return list;
+    }, []);
+  }
+  if (_positions && _positions.length === 0) {
+    _positions = undefined;
+  }
+
+  var _locations = void 0;
+  if (positions && source) {
+    _locations = positions.map(function (pos) {
+      return (0, _location.getLocation)(source, pos);
+    });
+  } else if (_nodes) {
+    _locations = _nodes.reduce(function (list, node) {
+      if (node.loc) {
+        list.push((0, _location.getLocation)(node.loc.source, node.loc.start));
+      }
+      return list;
+    }, []);
+  }
+
+  Object.defineProperties(this, {
+    message: {
+      value: message,
+      // By being enumerable, JSON.stringify will include `message` in the
+      // resulting output. This ensures that the simplest possible GraphQL
+      // service adheres to the spec.
+      enumerable: true,
+      writable: true
+    },
+    locations: {
+      // Coercing falsey values to undefined ensures they will not be included
+      // in JSON.stringify() when not provided.
+      value: _locations || undefined,
+      // By being enumerable, JSON.stringify will include `locations` in the
+      // resulting output. This ensures that the simplest possible GraphQL
+      // service adheres to the spec.
+      enumerable: true
+    },
+    path: {
+      // Coercing falsey values to undefined ensures they will not be included
+      // in JSON.stringify() when not provided.
+      value: path || undefined,
+      // By being enumerable, JSON.stringify will include `path` in the
+      // resulting output. This ensures that the simplest possible GraphQL
+      // service adheres to the spec.
+      enumerable: true
+    },
+    nodes: {
+      value: _nodes || undefined
+    },
+    source: {
+      value: _source || undefined
+    },
+    positions: {
+      value: _positions || undefined
+    },
+    originalError: {
+      value: originalError
+    },
+    extensions: {
+      value: extensions || originalError && originalError.extensions
+    }
+  });
+
+  // Include (non-enumerable) stack trace.
+  if (originalError && originalError.stack) {
+    Object.defineProperty(this, 'stack', {
+      value: originalError.stack,
+      writable: true,
+      configurable: true
+    });
+  } else if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, GraphQLError);
+  } else {
+    Object.defineProperty(this, 'stack', {
+      value: Error().stack,
+      writable: true,
+      configurable: true
+    });
+  }
+}
+
+GraphQLError.prototype = Object.create(Error.prototype, {
+  constructor: { value: GraphQLError },
+  name: { value: 'GraphQLError' },
+  toString: {
+    value: function toString() {
+      return (0, _printError.printError)(this);
+    }
+  }
+});
+},{"./printError":200,"../language/location":208}],198:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.syntaxError = syntaxError;
+
+var _GraphQLError = require('./GraphQLError');
+
+/**
+ * Produces a GraphQLError representing a syntax error, containing useful
+ * descriptive information about the syntax error's position in the source.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function syntaxError(source, position, description) {
+  return new _GraphQLError.GraphQLError('Syntax Error: ' + description, undefined, source, [position]);
+}
+},{"./GraphQLError":197}],199:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.locatedError = locatedError;
+
+var _GraphQLError = require('./GraphQLError');
+
+/**
+ * Given an arbitrary Error, presumably thrown while attempting to execute a
+ * GraphQL operation, produce a new GraphQLError aware of the location in the
+ * document responsible for the original Error.
+ */
+function locatedError(originalError, nodes, path) {
+  // Note: this uses a brand-check to support GraphQL errors originating from
+  // other contexts.
+  // $FlowFixMe(>=0.68.0)
+  if (originalError && Array.isArray(originalError.path)) {
+    return originalError;
+  }
+
+  return new _GraphQLError.GraphQLError(originalError && originalError.message, originalError && originalError.nodes || nodes, originalError && originalError.source, originalError && originalError.positions, path, originalError);
+} /**
+   * Copyright (c) 2015-present, Facebook, Inc.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   *
+   *  strict
+   */
+},{"./GraphQLError":197}],201:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+                                                                                                                                                                                                                                                                   * Copyright (c) 2015-present, Facebook, Inc.
+                                                                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                                                                   * This source code is licensed under the MIT license found in the
+                                                                                                                                                                                                                                                                   * LICENSE file in the root directory of this source tree.
+                                                                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                                                                   *  strict
+                                                                                                                                                                                                                                                                   */
+
+exports.formatError = formatError;
+
+var _invariant = require('../jsutils/invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Given a GraphQLError, format it according to the rules described by the
+ * Response Format, Errors section of the GraphQL Specification.
+ */
+function formatError(error) {
+  !error ? (0, _invariant2.default)(0, 'Received null or undefined error.') : void 0;
+  return _extends({}, error.extensions, {
+    message: error.message || 'An unknown error occurred.',
+    locations: error.locations,
+    path: error.path
+  });
+}
+},{"../jsutils/invariant":209}],192:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _GraphQLError = require('./GraphQLError');
+
+Object.defineProperty(exports, 'GraphQLError', {
+  enumerable: true,
+  get: function get() {
+    return _GraphQLError.GraphQLError;
+  }
+});
+
+var _syntaxError = require('./syntaxError');
+
+Object.defineProperty(exports, 'syntaxError', {
+  enumerable: true,
+  get: function get() {
+    return _syntaxError.syntaxError;
+  }
+});
+
+var _locatedError = require('./locatedError');
+
+Object.defineProperty(exports, 'locatedError', {
+  enumerable: true,
+  get: function get() {
+    return _locatedError.locatedError;
+  }
+});
+
+var _printError = require('./printError');
+
+Object.defineProperty(exports, 'printError', {
+  enumerable: true,
+  get: function get() {
+    return _printError.printError;
+  }
+});
+
+var _formatError = require('./formatError');
+
+Object.defineProperty(exports, 'formatError', {
+  enumerable: true,
+  get: function get() {
+    return _formatError.formatError;
+  }
+});
+},{"./GraphQLError":197,"./syntaxError":198,"./locatedError":199,"./printError":200,"./formatError":201}],218:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = blockStringValue;
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+/**
+ * Produces the value of a block string from its parsed raw value, similar to
+ * Coffeescript's block string, Python's docstring trim or Ruby's strip_heredoc.
+ *
+ * This implements the GraphQL spec's BlockStringValue() static algorithm.
+ */
+function blockStringValue(rawString) {
+  // Expand a block string's raw value into independent lines.
+  var lines = rawString.split(/\r\n|[\n\r]/g);
+
+  // Remove common indentation from all lines but first.
+  var commonIndent = null;
+  for (var i = 1; i < lines.length; i++) {
+    var line = lines[i];
+    var indent = leadingWhitespace(line);
+    if (indent < line.length && (commonIndent === null || indent < commonIndent)) {
+      commonIndent = indent;
+      if (commonIndent === 0) {
+        break;
+      }
+    }
+  }
+
+  if (commonIndent) {
+    for (var _i = 1; _i < lines.length; _i++) {
+      lines[_i] = lines[_i].slice(commonIndent);
+    }
+  }
+
+  // Remove leading and trailing blank lines.
+  while (lines.length > 0 && isBlank(lines[0])) {
+    lines.shift();
+  }
+  while (lines.length > 0 && isBlank(lines[lines.length - 1])) {
+    lines.pop();
+  }
+
+  // Return a string of the lines joined with U+000A.
+  return lines.join('\n');
+}
+
+function leadingWhitespace(str) {
+  var i = 0;
+  while (i < str.length && (str[i] === ' ' || str[i] === '\t')) {
+    i++;
+  }
+  return i;
+}
+
+function isBlank(str) {
+  return leadingWhitespace(str) === str.length;
+}
+},{}],175:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.TokenKind = undefined;
+exports.createLexer = createLexer;
+exports.getTokenDesc = getTokenDesc;
+
+var _error = require('../error');
+
+var _blockStringValue = require('./blockStringValue');
+
+var _blockStringValue2 = _interopRequireDefault(_blockStringValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Given a Source object, this returns a Lexer for that source.
+ * A Lexer is a stateful stream generator in that every time
+ * it is advanced, it returns the next token in the Source. Assuming the
+ * source lexes, the final Token emitted by the lexer will be of kind
+ * EOF, after which the lexer will repeatedly return the same EOF token
+ * whenever called.
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function createLexer(source, options) {
+  var startOfFileToken = new Tok(TokenKind.SOF, 0, 0, 0, 0, null);
+  var lexer = {
+    source: source,
+    options: options,
+    lastToken: startOfFileToken,
+    token: startOfFileToken,
+    line: 1,
+    lineStart: 0,
+    advance: advanceLexer,
+    lookahead: lookahead
+  };
+  return lexer;
+}
+
+function advanceLexer() {
+  this.lastToken = this.token;
+  var token = this.token = this.lookahead();
+  return token;
+}
+
+function lookahead() {
+  var token = this.token;
+  if (token.kind !== TokenKind.EOF) {
+    do {
+      // Note: next is only mutable during parsing, so we cast to allow this.
+      token = token.next || (token.next = readToken(this, token));
+    } while (token.kind === TokenKind.COMMENT);
+  }
+  return token;
+}
+
+/**
+ * The return type of createLexer.
+ */
+
+
+/**
+ * An exported enum describing the different kinds of tokens that the
+ * lexer emits.
+ */
+var TokenKind = exports.TokenKind = Object.freeze({
+  SOF: '<SOF>',
+  EOF: '<EOF>',
+  BANG: '!',
+  DOLLAR: '$',
+  AMP: '&',
+  PAREN_L: '(',
+  PAREN_R: ')',
+  SPREAD: '...',
+  COLON: ':',
+  EQUALS: '=',
+  AT: '@',
+  BRACKET_L: '[',
+  BRACKET_R: ']',
+  BRACE_L: '{',
+  PIPE: '|',
+  BRACE_R: '}',
+  NAME: 'Name',
+  INT: 'Int',
+  FLOAT: 'Float',
+  STRING: 'String',
+  BLOCK_STRING: 'BlockString',
+  COMMENT: 'Comment'
+});
+
+/**
+ * The enum type representing the token kinds values.
+ */
+
+
+/**
+ * A helper function to describe a token as a string for debugging
+ */
+function getTokenDesc(token) {
+  var value = token.value;
+  return value ? token.kind + ' "' + value + '"' : token.kind;
+}
+
+var charCodeAt = String.prototype.charCodeAt;
+var slice = String.prototype.slice;
+
+/**
+ * Helper function for constructing the Token object.
+ */
+function Tok(kind, start, end, line, column, prev, value) {
+  this.kind = kind;
+  this.start = start;
+  this.end = end;
+  this.line = line;
+  this.column = column;
+  this.value = value;
+  this.prev = prev;
+  this.next = null;
+}
+
+// Print a simplified form when appearing in JSON/util.inspect.
+Tok.prototype.toJSON = Tok.prototype.inspect = function toJSON() {
+  return {
+    kind: this.kind,
+    value: this.value,
+    line: this.line,
+    column: this.column
+  };
+};
+
+function printCharCode(code) {
+  return (
+    // NaN/undefined represents access beyond the end of the file.
+    isNaN(code) ? TokenKind.EOF : // Trust JSON for ASCII.
+    code < 0x007f ? JSON.stringify(String.fromCharCode(code)) : // Otherwise print the escaped form.
+    '"\\u' + ('00' + code.toString(16).toUpperCase()).slice(-4) + '"'
+  );
+}
+
+/**
+ * Gets the next token from the source starting at the given position.
+ *
+ * This skips over whitespace and comments until it finds the next lexable
+ * token, then lexes punctuators immediately or calls the appropriate helper
+ * function for more complicated tokens.
+ */
+function readToken(lexer, prev) {
+  var source = lexer.source;
+  var body = source.body;
+  var bodyLength = body.length;
+
+  var pos = positionAfterWhitespace(body, prev.end, lexer);
+  var line = lexer.line;
+  var col = 1 + pos - lexer.lineStart;
+
+  if (pos >= bodyLength) {
+    return new Tok(TokenKind.EOF, bodyLength, bodyLength, line, col, prev);
+  }
+
+  var code = charCodeAt.call(body, pos);
+
+  // SourceCharacter
+  if (code < 0x0020 && code !== 0x0009 && code !== 0x000a && code !== 0x000d) {
+    throw (0, _error.syntaxError)(source, pos, 'Cannot contain the invalid character ' + printCharCode(code) + '.');
+  }
+
+  switch (code) {
+    // !
+    case 33:
+      return new Tok(TokenKind.BANG, pos, pos + 1, line, col, prev);
+    // #
+    case 35:
+      return readComment(source, pos, line, col, prev);
+    // $
+    case 36:
+      return new Tok(TokenKind.DOLLAR, pos, pos + 1, line, col, prev);
+    // &
+    case 38:
+      return new Tok(TokenKind.AMP, pos, pos + 1, line, col, prev);
+    // (
+    case 40:
+      return new Tok(TokenKind.PAREN_L, pos, pos + 1, line, col, prev);
+    // )
+    case 41:
+      return new Tok(TokenKind.PAREN_R, pos, pos + 1, line, col, prev);
+    // .
+    case 46:
+      if (charCodeAt.call(body, pos + 1) === 46 && charCodeAt.call(body, pos + 2) === 46) {
+        return new Tok(TokenKind.SPREAD, pos, pos + 3, line, col, prev);
+      }
+      break;
+    // :
+    case 58:
+      return new Tok(TokenKind.COLON, pos, pos + 1, line, col, prev);
+    // =
+    case 61:
+      return new Tok(TokenKind.EQUALS, pos, pos + 1, line, col, prev);
+    // @
+    case 64:
+      return new Tok(TokenKind.AT, pos, pos + 1, line, col, prev);
+    // [
+    case 91:
+      return new Tok(TokenKind.BRACKET_L, pos, pos + 1, line, col, prev);
+    // ]
+    case 93:
+      return new Tok(TokenKind.BRACKET_R, pos, pos + 1, line, col, prev);
+    // {
+    case 123:
+      return new Tok(TokenKind.BRACE_L, pos, pos + 1, line, col, prev);
+    // |
+    case 124:
+      return new Tok(TokenKind.PIPE, pos, pos + 1, line, col, prev);
+    // }
+    case 125:
+      return new Tok(TokenKind.BRACE_R, pos, pos + 1, line, col, prev);
+    // A-Z _ a-z
+    case 65:
+    case 66:
+    case 67:
+    case 68:
+    case 69:
+    case 70:
+    case 71:
+    case 72:
+    case 73:
+    case 74:
+    case 75:
+    case 76:
+    case 77:
+    case 78:
+    case 79:
+    case 80:
+    case 81:
+    case 82:
+    case 83:
+    case 84:
+    case 85:
+    case 86:
+    case 87:
+    case 88:
+    case 89:
+    case 90:
+    case 95:
+    case 97:
+    case 98:
+    case 99:
+    case 100:
+    case 101:
+    case 102:
+    case 103:
+    case 104:
+    case 105:
+    case 106:
+    case 107:
+    case 108:
+    case 109:
+    case 110:
+    case 111:
+    case 112:
+    case 113:
+    case 114:
+    case 115:
+    case 116:
+    case 117:
+    case 118:
+    case 119:
+    case 120:
+    case 121:
+    case 122:
+      return readName(source, pos, line, col, prev);
+    // - 0-9
+    case 45:
+    case 48:
+    case 49:
+    case 50:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
+    case 55:
+    case 56:
+    case 57:
+      return readNumber(source, pos, code, line, col, prev);
+    // "
+    case 34:
+      if (charCodeAt.call(body, pos + 1) === 34 && charCodeAt.call(body, pos + 2) === 34) {
+        return readBlockString(source, pos, line, col, prev);
+      }
+      return readString(source, pos, line, col, prev);
+  }
+
+  throw (0, _error.syntaxError)(source, pos, unexpectedCharacterMessage(code));
+}
+
+/**
+ * Report a message that an unexpected character was encountered.
+ */
+function unexpectedCharacterMessage(code) {
+  if (code === 39) {
+    // '
+    return "Unexpected single quote character ('), did you mean to use " + 'a double quote (")?';
+  }
+
+  return 'Cannot parse the unexpected character ' + printCharCode(code) + '.';
+}
+
+/**
+ * Reads from body starting at startPosition until it finds a non-whitespace
+ * or commented character, then returns the position of that character for
+ * lexing.
+ */
+function positionAfterWhitespace(body, startPosition, lexer) {
+  var bodyLength = body.length;
+  var position = startPosition;
+  while (position < bodyLength) {
+    var code = charCodeAt.call(body, position);
+    // tab | space | comma | BOM
+    if (code === 9 || code === 32 || code === 44 || code === 0xfeff) {
+      ++position;
+    } else if (code === 10) {
+      // new line
+      ++position;
+      ++lexer.line;
+      lexer.lineStart = position;
+    } else if (code === 13) {
+      // carriage return
+      if (charCodeAt.call(body, position + 1) === 10) {
+        position += 2;
+      } else {
+        ++position;
+      }
+      ++lexer.line;
+      lexer.lineStart = position;
+    } else {
+      break;
+    }
+  }
+  return position;
+}
+
+/**
+ * Reads a comment token from the source file.
+ *
+ * #[\u0009\u0020-\uFFFF]*
+ */
+function readComment(source, start, line, col, prev) {
+  var body = source.body;
+  var code = void 0;
+  var position = start;
+
+  do {
+    code = charCodeAt.call(body, ++position);
+  } while (code !== null && (
+  // SourceCharacter but not LineTerminator
+  code > 0x001f || code === 0x0009));
+
+  return new Tok(TokenKind.COMMENT, start, position, line, col, prev, slice.call(body, start + 1, position));
+}
+
+/**
+ * Reads a number token from the source file, either a float
+ * or an int depending on whether a decimal point appears.
+ *
+ * Int:   -?(0|[1-9][0-9]*)
+ * Float: -?(0|[1-9][0-9]*)(\.[0-9]+)?((E|e)(+|-)?[0-9]+)?
+ */
+function readNumber(source, start, firstCode, line, col, prev) {
+  var body = source.body;
+  var code = firstCode;
+  var position = start;
+  var isFloat = false;
+
+  if (code === 45) {
+    // -
+    code = charCodeAt.call(body, ++position);
+  }
+
+  if (code === 48) {
+    // 0
+    code = charCodeAt.call(body, ++position);
+    if (code >= 48 && code <= 57) {
+      throw (0, _error.syntaxError)(source, position, 'Invalid number, unexpected digit after 0: ' + printCharCode(code) + '.');
+    }
+  } else {
+    position = readDigits(source, position, code);
+    code = charCodeAt.call(body, position);
+  }
+
+  if (code === 46) {
+    // .
+    isFloat = true;
+
+    code = charCodeAt.call(body, ++position);
+    position = readDigits(source, position, code);
+    code = charCodeAt.call(body, position);
+  }
+
+  if (code === 69 || code === 101) {
+    // E e
+    isFloat = true;
+
+    code = charCodeAt.call(body, ++position);
+    if (code === 43 || code === 45) {
+      // + -
+      code = charCodeAt.call(body, ++position);
+    }
+    position = readDigits(source, position, code);
+  }
+
+  return new Tok(isFloat ? TokenKind.FLOAT : TokenKind.INT, start, position, line, col, prev, slice.call(body, start, position));
+}
+
+/**
+ * Returns the new position in the source after reading digits.
+ */
+function readDigits(source, start, firstCode) {
+  var body = source.body;
+  var position = start;
+  var code = firstCode;
+  if (code >= 48 && code <= 57) {
+    // 0 - 9
+    do {
+      code = charCodeAt.call(body, ++position);
+    } while (code >= 48 && code <= 57); // 0 - 9
+    return position;
+  }
+  throw (0, _error.syntaxError)(source, position, 'Invalid number, expected digit but got: ' + printCharCode(code) + '.');
+}
+
+/**
+ * Reads a string token from the source file.
+ *
+ * "([^"\\\u000A\u000D]|(\\(u[0-9a-fA-F]{4}|["\\/bfnrt])))*"
+ */
+function readString(source, start, line, col, prev) {
+  var body = source.body;
+  var position = start + 1;
+  var chunkStart = position;
+  var code = 0;
+  var value = '';
+
+  while (position < body.length && (code = charCodeAt.call(body, position)) !== null &&
+  // not LineTerminator
+  code !== 0x000a && code !== 0x000d) {
+    // Closing Quote (")
+    if (code === 34) {
+      value += slice.call(body, chunkStart, position);
+      return new Tok(TokenKind.STRING, start, position + 1, line, col, prev, value);
+    }
+
+    // SourceCharacter
+    if (code < 0x0020 && code !== 0x0009) {
+      throw (0, _error.syntaxError)(source, position, 'Invalid character within String: ' + printCharCode(code) + '.');
+    }
+
+    ++position;
+    if (code === 92) {
+      // \
+      value += slice.call(body, chunkStart, position - 1);
+      code = charCodeAt.call(body, position);
+      switch (code) {
+        case 34:
+          value += '"';
+          break;
+        case 47:
+          value += '/';
+          break;
+        case 92:
+          value += '\\';
+          break;
+        case 98:
+          value += '\b';
+          break;
+        case 102:
+          value += '\f';
+          break;
+        case 110:
+          value += '\n';
+          break;
+        case 114:
+          value += '\r';
+          break;
+        case 116:
+          value += '\t';
+          break;
+        case 117:
+          // u
+          var charCode = uniCharCode(charCodeAt.call(body, position + 1), charCodeAt.call(body, position + 2), charCodeAt.call(body, position + 3), charCodeAt.call(body, position + 4));
+          if (charCode < 0) {
+            throw (0, _error.syntaxError)(source, position, 'Invalid character escape sequence: ' + ('\\u' + body.slice(position + 1, position + 5) + '.'));
+          }
+          value += String.fromCharCode(charCode);
+          position += 4;
+          break;
+        default:
+          throw (0, _error.syntaxError)(source, position, 'Invalid character escape sequence: \\' + String.fromCharCode(code) + '.');
+      }
+      ++position;
+      chunkStart = position;
+    }
+  }
+
+  throw (0, _error.syntaxError)(source, position, 'Unterminated string.');
+}
+
+/**
+ * Reads a block string token from the source file.
+ *
+ * """("?"?(\\"""|\\(?!=""")|[^"\\]))*"""
+ */
+function readBlockString(source, start, line, col, prev) {
+  var body = source.body;
+  var position = start + 3;
+  var chunkStart = position;
+  var code = 0;
+  var rawValue = '';
+
+  while (position < body.length && (code = charCodeAt.call(body, position)) !== null) {
+    // Closing Triple-Quote (""")
+    if (code === 34 && charCodeAt.call(body, position + 1) === 34 && charCodeAt.call(body, position + 2) === 34) {
+      rawValue += slice.call(body, chunkStart, position);
+      return new Tok(TokenKind.BLOCK_STRING, start, position + 3, line, col, prev, (0, _blockStringValue2.default)(rawValue));
+    }
+
+    // SourceCharacter
+    if (code < 0x0020 && code !== 0x0009 && code !== 0x000a && code !== 0x000d) {
+      throw (0, _error.syntaxError)(source, position, 'Invalid character within String: ' + printCharCode(code) + '.');
+    }
+
+    // Escape Triple-Quote (\""")
+    if (code === 92 && charCodeAt.call(body, position + 1) === 34 && charCodeAt.call(body, position + 2) === 34 && charCodeAt.call(body, position + 3) === 34) {
+      rawValue += slice.call(body, chunkStart, position) + '"""';
+      position += 4;
+      chunkStart = position;
+    } else {
+      ++position;
+    }
+  }
+
+  throw (0, _error.syntaxError)(source, position, 'Unterminated string.');
+}
+
+/**
+ * Converts four hexidecimal chars to the integer that the
+ * string represents. For example, uniCharCode('0','0','0','f')
+ * will return 15, and uniCharCode('0','0','f','f') returns 255.
+ *
+ * Returns a negative number on error, if a char was invalid.
+ *
+ * This is implemented by noting that char2hex() returns -1 on error,
+ * which means the result of ORing the char2hex() will also be negative.
+ */
+function uniCharCode(a, b, c, d) {
+  return char2hex(a) << 12 | char2hex(b) << 8 | char2hex(c) << 4 | char2hex(d);
+}
+
+/**
+ * Converts a hex character to its integer value.
+ * '0' becomes 0, '9' becomes 9
+ * 'A' becomes 10, 'F' becomes 15
+ * 'a' becomes 10, 'f' becomes 15
+ *
+ * Returns -1 on error.
+ */
+function char2hex(a) {
+  return a >= 48 && a <= 57 ? a - 48 // 0-9
+  : a >= 65 && a <= 70 ? a - 55 // A-F
+  : a >= 97 && a <= 102 ? a - 87 // a-f
+  : -1;
+}
+
+/**
+ * Reads an alphanumeric + underscore name from the source.
+ *
+ * [_A-Za-z][_0-9A-Za-z]*
+ */
+function readName(source, start, line, col, prev) {
+  var body = source.body;
+  var bodyLength = body.length;
+  var position = start + 1;
+  var code = 0;
+  while (position !== bodyLength && (code = charCodeAt.call(body, position)) !== null && (code === 95 || // _
+  code >= 48 && code <= 57 || // 0-9
+  code >= 65 && code <= 90 || // A-Z
+  code >= 97 && code <= 122) // a-z
+  ) {
+    ++position;
+  }
+  return new Tok(TokenKind.NAME, start, position, line, col, prev, slice.call(body, start, position));
+}
+},{"../error":192,"./blockStringValue":218}],176:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+/**
+ * The set of allowed kind values for AST nodes.
+ */
+var Kind = exports.Kind = Object.freeze({
+  // Name
+  NAME: 'Name',
+
+  // Document
+  DOCUMENT: 'Document',
+  OPERATION_DEFINITION: 'OperationDefinition',
+  VARIABLE_DEFINITION: 'VariableDefinition',
+  VARIABLE: 'Variable',
+  SELECTION_SET: 'SelectionSet',
+  FIELD: 'Field',
+  ARGUMENT: 'Argument',
+
+  // Fragments
+  FRAGMENT_SPREAD: 'FragmentSpread',
+  INLINE_FRAGMENT: 'InlineFragment',
+  FRAGMENT_DEFINITION: 'FragmentDefinition',
+
+  // Values
+  INT: 'IntValue',
+  FLOAT: 'FloatValue',
+  STRING: 'StringValue',
+  BOOLEAN: 'BooleanValue',
+  NULL: 'NullValue',
+  ENUM: 'EnumValue',
+  LIST: 'ListValue',
+  OBJECT: 'ObjectValue',
+  OBJECT_FIELD: 'ObjectField',
+
+  // Directives
+  DIRECTIVE: 'Directive',
+
+  // Types
+  NAMED_TYPE: 'NamedType',
+  LIST_TYPE: 'ListType',
+  NON_NULL_TYPE: 'NonNullType',
+
+  // Type System Definitions
+  SCHEMA_DEFINITION: 'SchemaDefinition',
+  OPERATION_TYPE_DEFINITION: 'OperationTypeDefinition',
+
+  // Type Definitions
+  SCALAR_TYPE_DEFINITION: 'ScalarTypeDefinition',
+  OBJECT_TYPE_DEFINITION: 'ObjectTypeDefinition',
+  FIELD_DEFINITION: 'FieldDefinition',
+  INPUT_VALUE_DEFINITION: 'InputValueDefinition',
+  INTERFACE_TYPE_DEFINITION: 'InterfaceTypeDefinition',
+  UNION_TYPE_DEFINITION: 'UnionTypeDefinition',
+  ENUM_TYPE_DEFINITION: 'EnumTypeDefinition',
+  ENUM_VALUE_DEFINITION: 'EnumValueDefinition',
+  INPUT_OBJECT_TYPE_DEFINITION: 'InputObjectTypeDefinition',
+
+  // Type Extensions
+  SCALAR_TYPE_EXTENSION: 'ScalarTypeExtension',
+  OBJECT_TYPE_EXTENSION: 'ObjectTypeExtension',
+  INTERFACE_TYPE_EXTENSION: 'InterfaceTypeExtension',
+  UNION_TYPE_EXTENSION: 'UnionTypeExtension',
+  ENUM_TYPE_EXTENSION: 'EnumTypeExtension',
+  INPUT_OBJECT_TYPE_EXTENSION: 'InputObjectTypeExtension',
+
+  // Directive Definitions
+  DIRECTIVE_DEFINITION: 'DirectiveDefinition'
+});
+
+/**
+ * The enum type representing the possible kind values of AST nodes.
+ */
+},{}],177:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+/**
+ * The set of allowed directive location values.
+ */
+var DirectiveLocation = exports.DirectiveLocation = Object.freeze({
+  // Request Definitions
+  QUERY: 'QUERY',
+  MUTATION: 'MUTATION',
+  SUBSCRIPTION: 'SUBSCRIPTION',
+  FIELD: 'FIELD',
+  FRAGMENT_DEFINITION: 'FRAGMENT_DEFINITION',
+  FRAGMENT_SPREAD: 'FRAGMENT_SPREAD',
+  INLINE_FRAGMENT: 'INLINE_FRAGMENT',
+  // Type System Definitions
+  SCHEMA: 'SCHEMA',
+  SCALAR: 'SCALAR',
+  OBJECT: 'OBJECT',
+  FIELD_DEFINITION: 'FIELD_DEFINITION',
+  ARGUMENT_DEFINITION: 'ARGUMENT_DEFINITION',
+  INTERFACE: 'INTERFACE',
+  UNION: 'UNION',
+  ENUM: 'ENUM',
+  ENUM_VALUE: 'ENUM_VALUE',
+  INPUT_OBJECT: 'INPUT_OBJECT',
+  INPUT_FIELD_DEFINITION: 'INPUT_FIELD_DEFINITION'
+});
+
+/**
+ * The enum type representing the directive location values.
+ */
+},{}],164:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.parse = parse;
+exports.parseValue = parseValue;
+exports.parseType = parseType;
+exports.parseConstValue = parseConstValue;
+exports.parseTypeReference = parseTypeReference;
+exports.parseNamedType = parseNamedType;
+
+var _source = require('./source');
+
+var _error = require('../error');
+
+var _lexer = require('./lexer');
+
+var _kinds = require('./kinds');
+
+var _directiveLocation = require('./directiveLocation');
+
+/**
+ * Given a GraphQL source, parses it into a Document.
+ * Throws GraphQLError if a syntax error is encountered.
+ */
+
+
+/**
+ * Configuration options to control parser behavior
+ */
+function parse(source, options) {
+  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
+  if (!(sourceObj instanceof _source.Source)) {
+    throw new TypeError('Must provide Source. Received: ' + String(sourceObj));
+  }
+  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
+  return parseDocument(lexer);
+}
+
+/**
+ * Given a string containing a GraphQL value (ex. `[42]`), parse the AST for
+ * that value.
+ * Throws GraphQLError if a syntax error is encountered.
+ *
+ * This is useful within tools that operate upon GraphQL Values directly and
+ * in isolation of complete GraphQL documents.
+ *
+ * Consider providing the results to the utility function: valueFromAST().
+ */
+/**
+ * Copyright (c) 2015-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ *  strict
+ */
+
+function parseValue(source, options) {
+  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
+  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
+  expect(lexer, _lexer.TokenKind.SOF);
+  var value = parseValueLiteral(lexer, false);
+  expect(lexer, _lexer.TokenKind.EOF);
+  return value;
+}
+
+/**
+ * Given a string containing a GraphQL Type (ex. `[Int!]`), parse the AST for
+ * that type.
+ * Throws GraphQLError if a syntax error is encountered.
+ *
+ * This is useful within tools that operate upon GraphQL Types directly and
+ * in isolation of complete GraphQL documents.
+ *
+ * Consider providing the results to the utility function: typeFromAST().
+ */
+function parseType(source, options) {
+  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
+  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
+  expect(lexer, _lexer.TokenKind.SOF);
+  var type = parseTypeReference(lexer);
+  expect(lexer, _lexer.TokenKind.EOF);
+  return type;
+}
+
+/**
+ * Converts a name lex token into a name parse node.
+ */
+function parseName(lexer) {
+  var token = expect(lexer, _lexer.TokenKind.NAME);
+  return {
+    kind: _kinds.Kind.NAME,
+    value: token.value,
+    loc: loc(lexer, token)
+  };
+}
+
+// Implements the parsing rules in the Document section.
+
+/**
+ * Document : Definition+
+ */
+function parseDocument(lexer) {
+  var start = lexer.token;
+  expect(lexer, _lexer.TokenKind.SOF);
+  var definitions = [];
+  do {
+    definitions.push(parseDefinition(lexer));
+  } while (!skip(lexer, _lexer.TokenKind.EOF));
+
+  return {
+    kind: _kinds.Kind.DOCUMENT,
+    definitions: definitions,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * Definition :
+ *   - ExecutableDefinition
+ *   - TypeSystemDefinition
+ */
+function parseDefinition(lexer) {
+  if (peek(lexer, _lexer.TokenKind.NAME)) {
+    switch (lexer.token.value) {
+      case 'query':
+      case 'mutation':
+      case 'subscription':
+      case 'fragment':
+        return parseExecutableDefinition(lexer);
+      case 'schema':
+      case 'scalar':
+      case 'type':
+      case 'interface':
+      case 'union':
+      case 'enum':
+      case 'input':
+      case 'extend':
+      case 'directive':
+        // Note: The schema definition language is an experimental addition.
+        return parseTypeSystemDefinition(lexer);
+    }
+  } else if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
+    return parseExecutableDefinition(lexer);
+  } else if (peekDescription(lexer)) {
+    // Note: The schema definition language is an experimental addition.
+    return parseTypeSystemDefinition(lexer);
+  }
+
+  throw unexpected(lexer);
+}
+
+/**
+ * ExecutableDefinition :
+ *   - OperationDefinition
+ *   - FragmentDefinition
+ */
+function parseExecutableDefinition(lexer) {
+  if (peek(lexer, _lexer.TokenKind.NAME)) {
+    switch (lexer.token.value) {
+      case 'query':
+      case 'mutation':
+      case 'subscription':
+        return parseOperationDefinition(lexer);
+
+      case 'fragment':
+        return parseFragmentDefinition(lexer);
+    }
+  } else if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
+    return parseOperationDefinition(lexer);
+  }
+
+  throw unexpected(lexer);
+}
+
+// Implements the parsing rules in the Operations section.
+
+/**
+ * OperationDefinition :
+ *  - SelectionSet
+ *  - OperationType Name? VariableDefinitions? Directives? SelectionSet
+ */
+function parseOperationDefinition(lexer) {
+  var start = lexer.token;
+  if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
+    return {
+      kind: _kinds.Kind.OPERATION_DEFINITION,
+      operation: 'query',
+      name: undefined,
+      variableDefinitions: [],
+      directives: [],
+      selectionSet: parseSelectionSet(lexer),
+      loc: loc(lexer, start)
+    };
+  }
+  var operation = parseOperationType(lexer);
+  var name = void 0;
+  if (peek(lexer, _lexer.TokenKind.NAME)) {
+    name = parseName(lexer);
+  }
+  return {
+    kind: _kinds.Kind.OPERATION_DEFINITION,
+    operation: operation,
+    name: name,
+    variableDefinitions: parseVariableDefinitions(lexer),
+    directives: parseDirectives(lexer, false),
+    selectionSet: parseSelectionSet(lexer),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * OperationType : one of query mutation subscription
+ */
+function parseOperationType(lexer) {
+  var operationToken = expect(lexer, _lexer.TokenKind.NAME);
+  switch (operationToken.value) {
+    case 'query':
+      return 'query';
+    case 'mutation':
+      return 'mutation';
+    case 'subscription':
+      return 'subscription';
+  }
+
+  throw unexpected(lexer, operationToken);
+}
+
+/**
+ * VariableDefinitions : ( VariableDefinition+ )
+ */
+function parseVariableDefinitions(lexer) {
+  return peek(lexer, _lexer.TokenKind.PAREN_L) ? many(lexer, _lexer.TokenKind.PAREN_L, parseVariableDefinition, _lexer.TokenKind.PAREN_R) : [];
+}
+
+/**
+ * VariableDefinition : Variable : Type DefaultValue?
+ */
+function parseVariableDefinition(lexer) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.VARIABLE_DEFINITION,
+    variable: parseVariable(lexer),
+    type: (expect(lexer, _lexer.TokenKind.COLON), parseTypeReference(lexer)),
+    defaultValue: skip(lexer, _lexer.TokenKind.EQUALS) ? parseValueLiteral(lexer, true) : undefined,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * Variable : $ Name
+ */
+function parseVariable(lexer) {
+  var start = lexer.token;
+  expect(lexer, _lexer.TokenKind.DOLLAR);
+  return {
+    kind: _kinds.Kind.VARIABLE,
+    name: parseName(lexer),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * SelectionSet : { Selection+ }
+ */
+function parseSelectionSet(lexer) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.SELECTION_SET,
+    selections: many(lexer, _lexer.TokenKind.BRACE_L, parseSelection, _lexer.TokenKind.BRACE_R),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * Selection :
+ *   - Field
+ *   - FragmentSpread
+ *   - InlineFragment
+ */
+function parseSelection(lexer) {
+  return peek(lexer, _lexer.TokenKind.SPREAD) ? parseFragment(lexer) : parseField(lexer);
+}
+
+/**
+ * Field : Alias? Name Arguments? Directives? SelectionSet?
+ *
+ * Alias : Name :
+ */
+function parseField(lexer) {
+  var start = lexer.token;
+
+  var nameOrAlias = parseName(lexer);
+  var alias = void 0;
+  var name = void 0;
+  if (skip(lexer, _lexer.TokenKind.COLON)) {
+    alias = nameOrAlias;
+    name = parseName(lexer);
+  } else {
+    name = nameOrAlias;
+  }
+
+  return {
+    kind: _kinds.Kind.FIELD,
+    alias: alias,
+    name: name,
+    arguments: parseArguments(lexer, false),
+    directives: parseDirectives(lexer, false),
+    selectionSet: peek(lexer, _lexer.TokenKind.BRACE_L) ? parseSelectionSet(lexer) : undefined,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * Arguments[Const] : ( Argument[?Const]+ )
+ */
+function parseArguments(lexer, isConst) {
+  var item = isConst ? parseConstArgument : parseArgument;
+  return peek(lexer, _lexer.TokenKind.PAREN_L) ? many(lexer, _lexer.TokenKind.PAREN_L, item, _lexer.TokenKind.PAREN_R) : [];
+}
+
+/**
+ * Argument[Const] : Name : Value[?Const]
+ */
+function parseArgument(lexer) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.ARGUMENT,
+    name: parseName(lexer),
+    value: (expect(lexer, _lexer.TokenKind.COLON), parseValueLiteral(lexer, false)),
+    loc: loc(lexer, start)
+  };
+}
+
+function parseConstArgument(lexer) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.ARGUMENT,
+    name: parseName(lexer),
+    value: (expect(lexer, _lexer.TokenKind.COLON), parseConstValue(lexer)),
+    loc: loc(lexer, start)
+  };
+}
+
+// Implements the parsing rules in the Fragments section.
+
+/**
+ * Corresponds to both FragmentSpread and InlineFragment in the spec.
+ *
+ * FragmentSpread : ... FragmentName Directives?
+ *
+ * InlineFragment : ... TypeCondition? Directives? SelectionSet
+ */
+function parseFragment(lexer) {
+  var start = lexer.token;
+  expect(lexer, _lexer.TokenKind.SPREAD);
+  if (peek(lexer, _lexer.TokenKind.NAME) && lexer.token.value !== 'on') {
+    return {
+      kind: _kinds.Kind.FRAGMENT_SPREAD,
+      name: parseFragmentName(lexer),
+      directives: parseDirectives(lexer, false),
+      loc: loc(lexer, start)
+    };
+  }
+  var typeCondition = void 0;
+  if (lexer.token.value === 'on') {
+    lexer.advance();
+    typeCondition = parseNamedType(lexer);
+  }
+  return {
+    kind: _kinds.Kind.INLINE_FRAGMENT,
+    typeCondition: typeCondition,
+    directives: parseDirectives(lexer, false),
+    selectionSet: parseSelectionSet(lexer),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * FragmentDefinition :
+ *   - fragment FragmentName on TypeCondition Directives? SelectionSet
+ *
+ * TypeCondition : NamedType
+ */
+function parseFragmentDefinition(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'fragment');
+  // Experimental support for defining variables within fragments changes
+  // the grammar of FragmentDefinition:
+  //   - fragment FragmentName VariableDefinitions? on TypeCondition Directives? SelectionSet
+  if (lexer.options.experimentalFragmentVariables) {
+    return {
+      kind: _kinds.Kind.FRAGMENT_DEFINITION,
+      name: parseFragmentName(lexer),
+      variableDefinitions: parseVariableDefinitions(lexer),
+      typeCondition: (expectKeyword(lexer, 'on'), parseNamedType(lexer)),
+      directives: parseDirectives(lexer, false),
+      selectionSet: parseSelectionSet(lexer),
+      loc: loc(lexer, start)
+    };
+  }
+  return {
+    kind: _kinds.Kind.FRAGMENT_DEFINITION,
+    name: parseFragmentName(lexer),
+    typeCondition: (expectKeyword(lexer, 'on'), parseNamedType(lexer)),
+    directives: parseDirectives(lexer, false),
+    selectionSet: parseSelectionSet(lexer),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * FragmentName : Name but not `on`
+ */
+function parseFragmentName(lexer) {
+  if (lexer.token.value === 'on') {
+    throw unexpected(lexer);
+  }
+  return parseName(lexer);
+}
+
+// Implements the parsing rules in the Values section.
+
+/**
+ * Value[Const] :
+ *   - [~Const] Variable
+ *   - IntValue
+ *   - FloatValue
+ *   - StringValue
+ *   - BooleanValue
+ *   - NullValue
+ *   - EnumValue
+ *   - ListValue[?Const]
+ *   - ObjectValue[?Const]
+ *
+ * BooleanValue : one of `true` `false`
+ *
+ * NullValue : `null`
+ *
+ * EnumValue : Name but not `true`, `false` or `null`
+ */
+function parseValueLiteral(lexer, isConst) {
+  var token = lexer.token;
+  switch (token.kind) {
+    case _lexer.TokenKind.BRACKET_L:
+      return parseList(lexer, isConst);
+    case _lexer.TokenKind.BRACE_L:
+      return parseObject(lexer, isConst);
+    case _lexer.TokenKind.INT:
+      lexer.advance();
+      return {
+        kind: _kinds.Kind.INT,
+        value: token.value,
+        loc: loc(lexer, token)
+      };
+    case _lexer.TokenKind.FLOAT:
+      lexer.advance();
+      return {
+        kind: _kinds.Kind.FLOAT,
+        value: token.value,
+        loc: loc(lexer, token)
+      };
+    case _lexer.TokenKind.STRING:
+    case _lexer.TokenKind.BLOCK_STRING:
+      return parseStringLiteral(lexer);
+    case _lexer.TokenKind.NAME:
+      if (token.value === 'true' || token.value === 'false') {
+        lexer.advance();
+        return {
+          kind: _kinds.Kind.BOOLEAN,
+          value: token.value === 'true',
+          loc: loc(lexer, token)
+        };
+      } else if (token.value === 'null') {
+        lexer.advance();
+        return {
+          kind: _kinds.Kind.NULL,
+          loc: loc(lexer, token)
+        };
+      }
+      lexer.advance();
+      return {
+        kind: _kinds.Kind.ENUM,
+        value: token.value,
+        loc: loc(lexer, token)
+      };
+    case _lexer.TokenKind.DOLLAR:
+      if (!isConst) {
+        return parseVariable(lexer);
+      }
+      break;
+  }
+  throw unexpected(lexer);
+}
+
+function parseStringLiteral(lexer) {
+  var token = lexer.token;
+  lexer.advance();
+  return {
+    kind: _kinds.Kind.STRING,
+    value: token.value,
+    block: token.kind === _lexer.TokenKind.BLOCK_STRING,
+    loc: loc(lexer, token)
+  };
+}
+
+function parseConstValue(lexer) {
+  return parseValueLiteral(lexer, true);
+}
+
+function parseValueValue(lexer) {
+  return parseValueLiteral(lexer, false);
+}
+
+/**
+ * ListValue[Const] :
+ *   - [ ]
+ *   - [ Value[?Const]+ ]
+ */
+function parseList(lexer, isConst) {
+  var start = lexer.token;
+  var item = isConst ? parseConstValue : parseValueValue;
+  return {
+    kind: _kinds.Kind.LIST,
+    values: any(lexer, _lexer.TokenKind.BRACKET_L, item, _lexer.TokenKind.BRACKET_R),
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ObjectValue[Const] :
+ *   - { }
+ *   - { ObjectField[?Const]+ }
+ */
+function parseObject(lexer, isConst) {
+  var start = lexer.token;
+  expect(lexer, _lexer.TokenKind.BRACE_L);
+  var fields = [];
+  while (!skip(lexer, _lexer.TokenKind.BRACE_R)) {
+    fields.push(parseObjectField(lexer, isConst));
+  }
+  return {
+    kind: _kinds.Kind.OBJECT,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ObjectField[Const] : Name : Value[?Const]
+ */
+function parseObjectField(lexer, isConst) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.OBJECT_FIELD,
+    name: parseName(lexer),
+    value: (expect(lexer, _lexer.TokenKind.COLON), parseValueLiteral(lexer, isConst)),
+    loc: loc(lexer, start)
+  };
+}
+
+// Implements the parsing rules in the Directives section.
+
+/**
+ * Directives[Const] : Directive[?Const]+
+ */
+function parseDirectives(lexer, isConst) {
+  var directives = [];
+  while (peek(lexer, _lexer.TokenKind.AT)) {
+    directives.push(parseDirective(lexer, isConst));
+  }
+  return directives;
+}
+
+/**
+ * Directive[Const] : @ Name Arguments[?Const]?
+ */
+function parseDirective(lexer, isConst) {
+  var start = lexer.token;
+  expect(lexer, _lexer.TokenKind.AT);
+  return {
+    kind: _kinds.Kind.DIRECTIVE,
+    name: parseName(lexer),
+    arguments: parseArguments(lexer, isConst),
+    loc: loc(lexer, start)
+  };
+}
+
+// Implements the parsing rules in the Types section.
+
+/**
+ * Type :
+ *   - NamedType
+ *   - ListType
+ *   - NonNullType
+ */
+function parseTypeReference(lexer) {
+  var start = lexer.token;
+  var type = void 0;
+  if (skip(lexer, _lexer.TokenKind.BRACKET_L)) {
+    type = parseTypeReference(lexer);
+    expect(lexer, _lexer.TokenKind.BRACKET_R);
+    type = {
+      kind: _kinds.Kind.LIST_TYPE,
+      type: type,
+      loc: loc(lexer, start)
+    };
+  } else {
+    type = parseNamedType(lexer);
+  }
+  if (skip(lexer, _lexer.TokenKind.BANG)) {
+    return {
+      kind: _kinds.Kind.NON_NULL_TYPE,
+      type: type,
+      loc: loc(lexer, start)
+    };
+  }
+  return type;
+}
+
+/**
+ * NamedType : Name
+ */
+function parseNamedType(lexer) {
+  var start = lexer.token;
+  return {
+    kind: _kinds.Kind.NAMED_TYPE,
+    name: parseName(lexer),
+    loc: loc(lexer, start)
+  };
+}
+
+// Implements the parsing rules in the Type Definition section.
+
+/**
+ * TypeSystemDefinition :
+ *   - SchemaDefinition
+ *   - TypeDefinition
+ *   - TypeExtension
+ *   - DirectiveDefinition
+ *
+ * TypeDefinition :
+ *   - ScalarTypeDefinition
+ *   - ObjectTypeDefinition
+ *   - InterfaceTypeDefinition
+ *   - UnionTypeDefinition
+ *   - EnumTypeDefinition
+ *   - InputObjectTypeDefinition
+ */
+function parseTypeSystemDefinition(lexer) {
+  // Many definitions begin with a description and require a lookahead.
+  var keywordToken = peekDescription(lexer) ? lexer.lookahead() : lexer.token;
+
+  if (keywordToken.kind === _lexer.TokenKind.NAME) {
+    switch (keywordToken.value) {
+      case 'schema':
+        return parseSchemaDefinition(lexer);
+      case 'scalar':
+        return parseScalarTypeDefinition(lexer);
+      case 'type':
+        return parseObjectTypeDefinition(lexer);
+      case 'interface':
+        return parseInterfaceTypeDefinition(lexer);
+      case 'union':
+        return parseUnionTypeDefinition(lexer);
+      case 'enum':
+        return parseEnumTypeDefinition(lexer);
+      case 'input':
+        return parseInputObjectTypeDefinition(lexer);
+      case 'extend':
+        return parseTypeExtension(lexer);
+      case 'directive':
+        return parseDirectiveDefinition(lexer);
+    }
+  }
+
+  throw unexpected(lexer, keywordToken);
+}
+
+function peekDescription(lexer) {
+  return peek(lexer, _lexer.TokenKind.STRING) || peek(lexer, _lexer.TokenKind.BLOCK_STRING);
+}
+
+/**
+ * Description : StringValue
+ */
+function parseDescription(lexer) {
+  if (peekDescription(lexer)) {
+    return parseStringLiteral(lexer);
+  }
+}
+
+/**
+ * SchemaDefinition : schema Directives[Const]? { OperationTypeDefinition+ }
+ */
+function parseSchemaDefinition(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'schema');
+  var directives = parseDirectives(lexer, true);
+  var operationTypes = many(lexer, _lexer.TokenKind.BRACE_L, parseOperationTypeDefinition, _lexer.TokenKind.BRACE_R);
+  return {
+    kind: _kinds.Kind.SCHEMA_DEFINITION,
+    directives: directives,
+    operationTypes: operationTypes,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * OperationTypeDefinition : OperationType : NamedType
+ */
+function parseOperationTypeDefinition(lexer) {
+  var start = lexer.token;
+  var operation = parseOperationType(lexer);
+  expect(lexer, _lexer.TokenKind.COLON);
+  var type = parseNamedType(lexer);
+  return {
+    kind: _kinds.Kind.OPERATION_TYPE_DEFINITION,
+    operation: operation,
+    type: type,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ScalarTypeDefinition : Description? scalar Name Directives[Const]?
+ */
+function parseScalarTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'scalar');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  return {
+    kind: _kinds.Kind.SCALAR_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ObjectTypeDefinition :
+ *   Description?
+ *   type Name ImplementsInterfaces? Directives[Const]? FieldsDefinition?
+ */
+function parseObjectTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'type');
+  var name = parseName(lexer);
+  var interfaces = parseImplementsInterfaces(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseFieldsDefinition(lexer);
+  return {
+    kind: _kinds.Kind.OBJECT_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    interfaces: interfaces,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ImplementsInterfaces :
+ *   - implements `&`? NamedType
+ *   - ImplementsInterfaces & NamedType
+ */
+function parseImplementsInterfaces(lexer) {
+  var types = [];
+  if (lexer.token.value === 'implements') {
+    lexer.advance();
+    // Optional leading ampersand
+    skip(lexer, _lexer.TokenKind.AMP);
+    do {
+      types.push(parseNamedType(lexer));
+    } while (skip(lexer, _lexer.TokenKind.AMP) ||
+    // Legacy support for the SDL?
+    lexer.options.allowLegacySDLImplementsInterfaces && peek(lexer, _lexer.TokenKind.NAME));
+  }
+  return types;
+}
+
+/**
+ * FieldsDefinition : { FieldDefinition+ }
+ */
+function parseFieldsDefinition(lexer) {
+  // Legacy support for the SDL?
+  if (lexer.options.allowLegacySDLEmptyFields && peek(lexer, _lexer.TokenKind.BRACE_L) && lexer.lookahead().kind === _lexer.TokenKind.BRACE_R) {
+    lexer.advance();
+    lexer.advance();
+    return [];
+  }
+  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseFieldDefinition, _lexer.TokenKind.BRACE_R) : [];
+}
+
+/**
+ * FieldDefinition :
+ *   - Description? Name ArgumentsDefinition? : Type Directives[Const]?
+ */
+function parseFieldDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  var name = parseName(lexer);
+  var args = parseArgumentDefs(lexer);
+  expect(lexer, _lexer.TokenKind.COLON);
+  var type = parseTypeReference(lexer);
+  var directives = parseDirectives(lexer, true);
+  return {
+    kind: _kinds.Kind.FIELD_DEFINITION,
+    description: description,
+    name: name,
+    arguments: args,
+    type: type,
+    directives: directives,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ArgumentsDefinition : ( InputValueDefinition+ )
+ */
+function parseArgumentDefs(lexer) {
+  if (!peek(lexer, _lexer.TokenKind.PAREN_L)) {
+    return [];
+  }
+  return many(lexer, _lexer.TokenKind.PAREN_L, parseInputValueDef, _lexer.TokenKind.PAREN_R);
+}
+
+/**
+ * InputValueDefinition :
+ *   - Description? Name : Type DefaultValue? Directives[Const]?
+ */
+function parseInputValueDef(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  var name = parseName(lexer);
+  expect(lexer, _lexer.TokenKind.COLON);
+  var type = parseTypeReference(lexer);
+  var defaultValue = void 0;
+  if (skip(lexer, _lexer.TokenKind.EQUALS)) {
+    defaultValue = parseConstValue(lexer);
+  }
+  var directives = parseDirectives(lexer, true);
+  return {
+    kind: _kinds.Kind.INPUT_VALUE_DEFINITION,
+    description: description,
+    name: name,
+    type: type,
+    defaultValue: defaultValue,
+    directives: directives,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * InterfaceTypeDefinition :
+ *   - Description? interface Name Directives[Const]? FieldsDefinition?
+ */
+function parseInterfaceTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'interface');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseFieldsDefinition(lexer);
+  return {
+    kind: _kinds.Kind.INTERFACE_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * UnionTypeDefinition :
+ *   - Description? union Name Directives[Const]? UnionMemberTypes?
+ */
+function parseUnionTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'union');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var types = parseUnionMemberTypes(lexer);
+  return {
+    kind: _kinds.Kind.UNION_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    types: types,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * UnionMemberTypes :
+ *   - = `|`? NamedType
+ *   - UnionMemberTypes | NamedType
+ */
+function parseUnionMemberTypes(lexer) {
+  var types = [];
+  if (skip(lexer, _lexer.TokenKind.EQUALS)) {
+    // Optional leading pipe
+    skip(lexer, _lexer.TokenKind.PIPE);
+    do {
+      types.push(parseNamedType(lexer));
+    } while (skip(lexer, _lexer.TokenKind.PIPE));
+  }
+  return types;
+}
+
+/**
+ * EnumTypeDefinition :
+ *   - Description? enum Name Directives[Const]? EnumValuesDefinition?
+ */
+function parseEnumTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'enum');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var values = parseEnumValuesDefinition(lexer);
+  return {
+    kind: _kinds.Kind.ENUM_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    values: values,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * EnumValuesDefinition : { EnumValueDefinition+ }
+ */
+function parseEnumValuesDefinition(lexer) {
+  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseEnumValueDefinition, _lexer.TokenKind.BRACE_R) : [];
+}
+
+/**
+ * EnumValueDefinition : Description? EnumValue Directives[Const]?
+ *
+ * EnumValue : Name
+ */
+function parseEnumValueDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  return {
+    kind: _kinds.Kind.ENUM_VALUE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * InputObjectTypeDefinition :
+ *   - Description? input Name Directives[Const]? InputFieldsDefinition?
+ */
+function parseInputObjectTypeDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'input');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseInputFieldsDefinition(lexer);
+  return {
+    kind: _kinds.Kind.INPUT_OBJECT_TYPE_DEFINITION,
+    description: description,
+    name: name,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * InputFieldsDefinition : { InputValueDefinition+ }
+ */
+function parseInputFieldsDefinition(lexer) {
+  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseInputValueDef, _lexer.TokenKind.BRACE_R) : [];
+}
+
+/**
+ * TypeExtension :
+ *   - ScalarTypeExtension
+ *   - ObjectTypeExtension
+ *   - InterfaceTypeExtension
+ *   - UnionTypeExtension
+ *   - EnumTypeExtension
+ *   - InputObjectTypeDefinition
+ */
+function parseTypeExtension(lexer) {
+  var keywordToken = lexer.lookahead();
+
+  if (keywordToken.kind === _lexer.TokenKind.NAME) {
+    switch (keywordToken.value) {
+      case 'scalar':
+        return parseScalarTypeExtension(lexer);
+      case 'type':
+        return parseObjectTypeExtension(lexer);
+      case 'interface':
+        return parseInterfaceTypeExtension(lexer);
+      case 'union':
+        return parseUnionTypeExtension(lexer);
+      case 'enum':
+        return parseEnumTypeExtension(lexer);
+      case 'input':
+        return parseInputObjectTypeExtension(lexer);
+    }
+  }
+
+  throw unexpected(lexer, keywordToken);
+}
+
+/**
+ * ScalarTypeExtension :
+ *   - extend scalar Name Directives[Const]
+ */
+function parseScalarTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'scalar');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  if (directives.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.SCALAR_TYPE_EXTENSION,
+    name: name,
+    directives: directives,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * ObjectTypeExtension :
+ *  - extend type Name ImplementsInterfaces? Directives[Const]? FieldsDefinition
+ *  - extend type Name ImplementsInterfaces? Directives[Const]
+ *  - extend type Name ImplementsInterfaces
+ */
+function parseObjectTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'type');
+  var name = parseName(lexer);
+  var interfaces = parseImplementsInterfaces(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseFieldsDefinition(lexer);
+  if (interfaces.length === 0 && directives.length === 0 && fields.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.OBJECT_TYPE_EXTENSION,
+    name: name,
+    interfaces: interfaces,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * InterfaceTypeExtension :
+ *   - extend interface Name Directives[Const]? FieldsDefinition
+ *   - extend interface Name Directives[Const]
+ */
+function parseInterfaceTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'interface');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseFieldsDefinition(lexer);
+  if (directives.length === 0 && fields.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.INTERFACE_TYPE_EXTENSION,
+    name: name,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * UnionTypeExtension :
+ *   - extend union Name Directives[Const]? UnionMemberTypes
+ *   - extend union Name Directives[Const]
+ */
+function parseUnionTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'union');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var types = parseUnionMemberTypes(lexer);
+  if (directives.length === 0 && types.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.UNION_TYPE_EXTENSION,
+    name: name,
+    directives: directives,
+    types: types,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * EnumTypeExtension :
+ *   - extend enum Name Directives[Const]? EnumValuesDefinition
+ *   - extend enum Name Directives[Const]
+ */
+function parseEnumTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'enum');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var values = parseEnumValuesDefinition(lexer);
+  if (directives.length === 0 && values.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.ENUM_TYPE_EXTENSION,
+    name: name,
+    directives: directives,
+    values: values,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * InputObjectTypeExtension :
+ *   - extend input Name Directives[Const]? InputFieldsDefinition
+ *   - extend input Name Directives[Const]
+ */
+function parseInputObjectTypeExtension(lexer) {
+  var start = lexer.token;
+  expectKeyword(lexer, 'extend');
+  expectKeyword(lexer, 'input');
+  var name = parseName(lexer);
+  var directives = parseDirectives(lexer, true);
+  var fields = parseInputFieldsDefinition(lexer);
+  if (directives.length === 0 && fields.length === 0) {
+    throw unexpected(lexer);
+  }
+  return {
+    kind: _kinds.Kind.INPUT_OBJECT_TYPE_EXTENSION,
+    name: name,
+    directives: directives,
+    fields: fields,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * DirectiveDefinition :
+ *   - Description? directive @ Name ArgumentsDefinition? on DirectiveLocations
+ */
+function parseDirectiveDefinition(lexer) {
+  var start = lexer.token;
+  var description = parseDescription(lexer);
+  expectKeyword(lexer, 'directive');
+  expect(lexer, _lexer.TokenKind.AT);
+  var name = parseName(lexer);
+  var args = parseArgumentDefs(lexer);
+  expectKeyword(lexer, 'on');
+  var locations = parseDirectiveLocations(lexer);
+  return {
+    kind: _kinds.Kind.DIRECTIVE_DEFINITION,
+    description: description,
+    name: name,
+    arguments: args,
+    locations: locations,
+    loc: loc(lexer, start)
+  };
+}
+
+/**
+ * DirectiveLocations :
+ *   - `|`? DirectiveLocation
+ *   - DirectiveLocations | DirectiveLocation
+ */
+function parseDirectiveLocations(lexer) {
+  // Optional leading pipe
+  skip(lexer, _lexer.TokenKind.PIPE);
+  var locations = [];
+  do {
+    locations.push(parseDirectiveLocation(lexer));
+  } while (skip(lexer, _lexer.TokenKind.PIPE));
+  return locations;
+}
+
+/*
+ * DirectiveLocation :
+ *   - ExecutableDirectiveLocation
+ *   - TypeSystemDirectiveLocation
+ *
+ * ExecutableDirectiveLocation : one of
+ *   `QUERY`
+ *   `MUTATION`
+ *   `SUBSCRIPTION`
+ *   `FIELD`
+ *   `FRAGMENT_DEFINITION`
+ *   `FRAGMENT_SPREAD`
+ *   `INLINE_FRAGMENT`
+ *
+ * TypeSystemDirectiveLocation : one of
+ *   `SCHEMA`
+ *   `SCALAR`
+ *   `OBJECT`
+ *   `FIELD_DEFINITION`
+ *   `ARGUMENT_DEFINITION`
+ *   `INTERFACE`
+ *   `UNION`
+ *   `ENUM`
+ *   `ENUM_VALUE`
+ *   `INPUT_OBJECT`
+ *   `INPUT_FIELD_DEFINITION`
+ */
+function parseDirectiveLocation(lexer) {
+  var start = lexer.token;
+  var name = parseName(lexer);
+  if (_directiveLocation.DirectiveLocation.hasOwnProperty(name.value)) {
+    return name;
+  }
+  throw unexpected(lexer, start);
+}
+
+// Core parsing utility functions
+
+/**
+ * Returns a location object, used to identify the place in
+ * the source that created a given parsed object.
+ */
+function loc(lexer, startToken) {
+  if (!lexer.options.noLocation) {
+    return new Loc(startToken, lexer.lastToken, lexer.source);
+  }
+}
+
+function Loc(startToken, endToken, source) {
+  this.start = startToken.start;
+  this.end = endToken.end;
+  this.startToken = startToken;
+  this.endToken = endToken;
+  this.source = source;
+}
+
+// Print a simplified form when appearing in JSON/util.inspect.
+Loc.prototype.toJSON = Loc.prototype.inspect = function toJSON() {
+  return { start: this.start, end: this.end };
+};
+
+/**
+ * Determines if the next token is of a given kind
+ */
+function peek(lexer, kind) {
+  return lexer.token.kind === kind;
+}
+
+/**
+ * If the next token is of the given kind, return true after advancing
+ * the lexer. Otherwise, do not change the parser state and return false.
+ */
+function skip(lexer, kind) {
+  var match = lexer.token.kind === kind;
+  if (match) {
+    lexer.advance();
+  }
+  return match;
+}
+
+/**
+ * If the next token is of the given kind, return that token after advancing
+ * the lexer. Otherwise, do not change the parser state and throw an error.
+ */
+function expect(lexer, kind) {
+  var token = lexer.token;
+  if (token.kind === kind) {
+    lexer.advance();
+    return token;
+  }
+  throw (0, _error.syntaxError)(lexer.source, token.start, 'Expected ' + kind + ', found ' + (0, _lexer.getTokenDesc)(token));
+}
+
+/**
+ * If the next token is a keyword with the given value, return that token after
+ * advancing the lexer. Otherwise, do not change the parser state and return
+ * false.
+ */
+function expectKeyword(lexer, value) {
+  var token = lexer.token;
+  if (token.kind === _lexer.TokenKind.NAME && token.value === value) {
+    lexer.advance();
+    return token;
+  }
+  throw (0, _error.syntaxError)(lexer.source, token.start, 'Expected "' + value + '", found ' + (0, _lexer.getTokenDesc)(token));
+}
+
+/**
+ * Helper function for creating an error when an unexpected lexed token
+ * is encountered.
+ */
+function unexpected(lexer, atToken) {
+  var token = atToken || lexer.token;
+  return (0, _error.syntaxError)(lexer.source, token.start, 'Unexpected ' + (0, _lexer.getTokenDesc)(token));
+}
+
+/**
+ * Returns a possibly empty list of parse nodes, determined by
+ * the parseFn. This list begins with a lex token of openKind
+ * and ends with a lex token of closeKind. Advances the parser
+ * to the next lex token after the closing token.
+ */
+function any(lexer, openKind, parseFn, closeKind) {
+  expect(lexer, openKind);
+  var nodes = [];
+  while (!skip(lexer, closeKind)) {
+    nodes.push(parseFn(lexer));
+  }
+  return nodes;
+}
+
+/**
+ * Returns a non-empty list of parse nodes, determined by
+ * the parseFn. This list begins with a lex token of openKind
+ * and ends with a lex token of closeKind. Advances the parser
+ * to the next lex token after the closing token.
+ */
+function many(lexer, openKind, parseFn, closeKind) {
+  expect(lexer, openKind);
+  var nodes = [parseFn(lexer)];
+  while (!skip(lexer, closeKind)) {
+    nodes.push(parseFn(lexer));
+  }
+  return nodes;
+}
+},{"./source":174,"../error":192,"./lexer":175,"./kinds":176,"./directiveLocation":177}],75:[function(require,module,exports) {
+var parser = require('graphql/language/parser');
+
+var parse = parser.parse;
+
+// Strip insignificant whitespace
+// Note that this could do a lot more, such as reorder fields etc.
+function normalize(string) {
+  return string.replace(/[\s,]+/g, ' ').trim();
+}
+
+// A map docString -> graphql document
+var docCache = {};
+
+// A map fragmentName -> [normalized source]
+var fragmentSourceMap = {};
+
+function cacheKeyFromLoc(loc) {
+  return normalize(loc.source.body.substring(loc.start, loc.end));
+}
+
+// For testing.
+function resetCaches() {
+  docCache = {};
+  fragmentSourceMap = {};
+}
+
+// Take a unstripped parsed document (query/mutation or even fragment), and
+// check all fragment definitions, checking for name->source uniqueness.
+// We also want to make sure only unique fragments exist in the document.
+var printFragmentWarnings = true;
+function processFragments(ast) {
+  var astFragmentMap = {};
+  var definitions = [];
+
+  for (var i = 0; i < ast.definitions.length; i++) {
+    var fragmentDefinition = ast.definitions[i];
+
+    if (fragmentDefinition.kind === 'FragmentDefinition') {
+      var fragmentName = fragmentDefinition.name.value;
+      var sourceKey = cacheKeyFromLoc(fragmentDefinition.loc);
+
+      // We know something about this fragment
+      if (fragmentSourceMap.hasOwnProperty(fragmentName) && !fragmentSourceMap[fragmentName][sourceKey]) {
+
+        // this is a problem because the app developer is trying to register another fragment with
+        // the same name as one previously registered. So, we tell them about it.
+        if (printFragmentWarnings) {
+          console.warn("Warning: fragment with name " + fragmentName + " already exists.\n"
+            + "graphql-tag enforces all fragment names across your application to be unique; read more about\n"
+            + "this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names");
+        }
+
+        fragmentSourceMap[fragmentName][sourceKey] = true;
+
+      } else if (!fragmentSourceMap.hasOwnProperty(fragmentName)) {
+        fragmentSourceMap[fragmentName] = {};
+        fragmentSourceMap[fragmentName][sourceKey] = true;
+      }
+
+      if (!astFragmentMap[sourceKey]) {
+        astFragmentMap[sourceKey] = true;
+        definitions.push(fragmentDefinition);
+      }
+    } else {
+      definitions.push(fragmentDefinition);
+    }
+  }
+
+  ast.definitions = definitions;
+  return ast;
+}
+
+function disableFragmentWarnings() {
+  printFragmentWarnings = false;
+}
+
+function stripLoc(doc, removeLocAtThisLevel) {
+  var docType = Object.prototype.toString.call(doc);
+
+  if (docType === '[object Array]') {
+    return doc.map(function (d) {
+      return stripLoc(d, removeLocAtThisLevel);
+    });
+  }
+
+  if (docType !== '[object Object]') {
+    throw new Error('Unexpected input.');
+  }
+
+  // We don't want to remove the root loc field so we can use it
+  // for fragment substitution (see below)
+  if (removeLocAtThisLevel && doc.loc) {
+    delete doc.loc;
+  }
+
+  // https://github.com/apollographql/graphql-tag/issues/40
+  if (doc.loc) {
+    delete doc.loc.startToken;
+    delete doc.loc.endToken;
+  }
+
+  var keys = Object.keys(doc);
+  var key;
+  var value;
+  var valueType;
+
+  for (key in keys) {
+    if (keys.hasOwnProperty(key)) {
+      value = doc[keys[key]];
+      valueType = Object.prototype.toString.call(value);
+
+      if (valueType === '[object Object]' || valueType === '[object Array]') {
+        doc[keys[key]] = stripLoc(value, true);
+      }
+    }
+  }
+
+  return doc;
+}
+
+var experimentalFragmentVariables = false;
+function parseDocument(doc) {
+  var cacheKey = normalize(doc);
+
+  if (docCache[cacheKey]) {
+    return docCache[cacheKey];
+  }
+
+  var parsed = parse(doc, { experimentalFragmentVariables: experimentalFragmentVariables });
+  if (!parsed || parsed.kind !== 'Document') {
+    throw new Error('Not a valid GraphQL document.');
+  }
+
+  // check that all "new" fragments inside the documents are consistent with
+  // existing fragments of the same name
+  parsed = processFragments(parsed);
+  parsed = stripLoc(parsed, false);
+  docCache[cacheKey] = parsed;
+
+  return parsed;
+}
+
+function enableExperimentalFragmentVariables() {
+  experimentalFragmentVariables = true;
+}
+
+function disableExperimentalFragmentVariables() {
+  experimentalFragmentVariables = false;
+}
+
+// XXX This should eventually disallow arbitrary string interpolation, like Relay does
+function gql(/* arguments */) {
+  var args = Array.prototype.slice.call(arguments);
+
+  var literals = args[0];
+
+  // We always get literals[0] and then matching post literals for each arg given
+  var result = (typeof(literals) === "string") ? literals : literals[0];
+
+  for (var i = 1; i < args.length; i++) {
+    if (args[i] && args[i].kind && args[i].kind === 'Document') {
+      result += args[i].loc.source.body;
+    } else {
+      result += args[i];
+    }
+
+    result += literals[i];
+  }
+
+  return parseDocument(result);
+}
+
+// Support typescript, which isn't as nice as Babel about default exports
+gql.default = gql;
+gql.resetCaches = resetCaches;
+gql.disableFragmentWarnings = disableFragmentWarnings;
+gql.enableExperimentalFragmentVariables = enableExperimentalFragmentVariables;
+gql.disableExperimentalFragmentVariables = disableExperimentalFragmentVariables;
+
+module.exports = gql;
+
+},{"graphql/language/parser":164}],42:[function(require,module,exports) {
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(require("apollo-client"));
+__export(require("apollo-link"));
+__export(require("apollo-cache-inmemory"));
+var apollo_link_1 = require("apollo-link");
+var apollo_link_http_1 = require("apollo-link-http");
+exports.HttpLink = apollo_link_http_1.HttpLink;
+var apollo_link_state_1 = require("apollo-link-state");
+var apollo_link_error_1 = require("apollo-link-error");
+var apollo_cache_inmemory_1 = require("apollo-cache-inmemory");
+exports.InMemoryCache = apollo_cache_inmemory_1.InMemoryCache;
+var graphql_tag_1 = require("graphql-tag");
+exports.gql = graphql_tag_1.default;
+var apollo_client_1 = require("apollo-client");
+var DefaultClient = (function (_super) {
+    __extends(DefaultClient, _super);
+    function DefaultClient(config) {
+        if (config === void 0) { config = {}; }
+        var _this = this;
+        var request = config.request, uri = config.uri, credentials = config.credentials, headers = config.headers, fetchOptions = config.fetchOptions, clientState = config.clientState, cacheRedirects = config.cacheRedirects, errorCallback = config.onError;
+        var cache = config.cache;
+        if (cache && cacheRedirects) {
+            throw new Error('Incompatible cache configuration. If providing `cache` then ' +
+                'configure the provided instance with `cacheRedirects` instead.');
+        }
+        if (!cache) {
+            cache = cacheRedirects
+                ? new apollo_cache_inmemory_1.InMemoryCache({ cacheRedirects: cacheRedirects })
+                : new apollo_cache_inmemory_1.InMemoryCache();
+        }
+        var stateLink = clientState
+            ? apollo_link_state_1.withClientState(__assign({}, clientState, { cache: cache }))
+            : false;
+        var errorLink = errorCallback
+            ? apollo_link_error_1.onError(errorCallback)
+            : apollo_link_error_1.onError(function (_a) {
+                var graphQLErrors = _a.graphQLErrors, networkError = _a.networkError;
+                if (graphQLErrors) {
+                    graphQLErrors.map(function (_a) {
+                        var message = _a.message, locations = _a.locations, path = _a.path;
+                        return console.log("[GraphQL error]: Message: " + message + ", Location: " +
+                            (locations + ", Path: " + path));
+                    });
+                }
+                if (networkError) {
+                    console.log("[Network error]: " + networkError);
+                }
+            });
+        var requestHandler = request
+            ? new apollo_link_1.ApolloLink(function (operation, forward) {
+                return new apollo_link_1.Observable(function (observer) {
+                    var handle;
+                    Promise.resolve(operation)
+                        .then(function (oper) { return request(oper); })
+                        .then(function () {
+                        handle = forward(operation).subscribe({
+                            next: observer.next.bind(observer),
+                            error: observer.error.bind(observer),
+                            complete: observer.complete.bind(observer),
+                        });
+                    })
+                        .catch(observer.error.bind(observer));
+                    return function () {
+                        if (handle) {
+                            handle.unsubscribe();
+                        }
+                    };
+                });
+            })
+            : false;
+        var httpLink = new apollo_link_http_1.HttpLink({
+            uri: uri || '/graphql',
+            fetchOptions: fetchOptions || {},
+            credentials: credentials || 'same-origin',
+            headers: headers || {},
+        });
+        var link = apollo_link_1.ApolloLink.from([
+            errorLink,
+            requestHandler,
+            stateLink,
+            httpLink,
+        ].filter(function (x) { return !!x; }));
+        _this = _super.call(this, { cache: cache, link: link }) || this;
+        return _this;
+    }
+    return DefaultClient;
+}(apollo_client_1.default));
+exports.default = DefaultClient;
+//# sourceMappingURL=index.js.map
+},{"apollo-client":69,"apollo-link":70,"apollo-cache-inmemory":71,"apollo-link-http":72,"apollo-link-state":73,"apollo-link-error":74,"graphql-tag":75}],12:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.client = undefined;
+
+var _apolloBoost = require('apollo-boost');
+
+var _apolloBoost2 = _interopRequireDefault(_apolloBoost);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var client = exports.client = new _apolloBoost2.default({
+    clientState: {
+        defaults: {
+            isConnected: true,
+            isLoaded: false
+        },
+        resolvers: {
+            Mutation: {
+                updateIsLoaded: function updateIsLoaded(_, _a, _b) {
+                    var isLoaded = _a.isLoaded;
+                    var cache = _b.cache;
+                    cache.writeData({ data: { isLoaded: isLoaded } });
+                    return null;
+                },
+                updateNetworkStatus: function updateNetworkStatus(_, _a, _b) {
+                    var isConnected = _a.isConnected;
+                    var cache = _b.cache;
+                    cache.writeData({ data: { isConnected: isConnected } });
+                    return null;
+                }
+            }
+        }
+    }
+});
+},{"apollo-boost":42}],6:[function(require,module,exports) {
+'use strict';
+
+require('aframe');
+
+var registerSelectable = function registerSelectable() {
+  AFRAME.registerComponent('selectable', {
+    /**
+     * Initial creation and setting of the mesh.
+     */
+    init: function init() {
+      var _this = this;
+
+      this.__selected = false;
+      // toggle internal state of selected
+      this.el.addEventListener('mousedown', function (e) {
+        _this.__selected = !_this.__selected;
+        console.log('mousedown');
+      });
+    }
+  });
+};
+
+module.exports = registerSelectable();
+},{"aframe":7}],51:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var registerCameraDirector = function registerCameraDirector() {
+    AFRAME.registerComponent('camera-director', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {}
+    });
+};
+exports.default = registerCameraDirector();
+},{"aframe":7}],16:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var Positions = exports.Positions = undefined;
+(function (Positions) {
+    Positions["default"] = "default";
+    Positions["stockroom"] = "stockroom";
+})(Positions || (exports.Positions = Positions = {}));
+var Cameras = exports.Cameras = undefined;
+(function (Cameras) {
+    Cameras["camera1"] = "camera1";
+})(Cameras || (exports.Cameras = Cameras = {}));
+var positions = exports.positions = [{
+    id: 'default',
+    position: '1 5 -4',
+    rotation: {
+        x: 0, y: -90, z: 0
+    }
+}, {
+    id: 'stockroom',
+    position: '-15.230 5.010 4.950',
+    rotation: {
+        x: 0, y: 90, z: 0
+    }
+}];
+},{}],110:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _variables = require("./variables");
+
+exports.default = function (position) {
+    return _variables.positions.find(function (i) {
+        return i.id === position;
+    });
+};
+},{"./variables":16}],52:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var _getCameraPosition = require('./getCameraPosition');
+
+var _getCameraPosition2 = _interopRequireDefault(_getCameraPosition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var registerComponent = function registerComponent() {
+    AFRAME.registerComponent('camera-cycle', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {
+            var scene = document.querySelector('a-scene');
+            var camera = document.querySelector('#camera1');
+            this.el.addEventListener('click', function () {
+                updateCameraPosition(camera, 'stockroom');
+            });
+        }
+    });
+};
+var updateCameraPosition = function updateCameraPosition(el, position) {
+    var p = (0, _getCameraPosition2.default)(position);
+    el.setAttribute('position', p.position);
+    el.setAttribute('rotation', p.rotation);
+};
+exports.default = registerComponent();
+},{"aframe":7,"./getCameraPosition":110}],26:[function(require,module,exports) {
+'use strict';
+
+require('./camera-director');
+
+require('./camera-cycle-component');
+},{"./camera-director":51,"./camera-cycle-component":52}],43:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _variables = require('./variables');
+
+var _getCameraPosition = require('./getCameraPosition');
+
+var _getCameraPosition2 = _interopRequireDefault(_getCameraPosition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (position) {
+    var camera = document.querySelector("#" + _variables.Cameras.camera1);
+    var p = (0, _getCameraPosition2.default)(position);
+    if (p) {
+        camera.setAttribute('position', p.position);
+        camera.setAttribute('rotation', p.rotation);
+    }
+};
+},{"./variables":16,"./getCameraPosition":110}],13:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var _switchCameraPosition = require('../camera/switchCameraPosition');
+
+var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
+
+var _variables = require('../camera/variables');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var register = function register() {
+    AFRAME.registerComponent('hud-button', {
+        /**
+         * Initial creation and setting of the mesh.
+         */
+        init: function init() {
+            // add event listener for scene changes
+            this.el.addEventListener('click', function (e) {
+                var id = e.target.id;
+                if (id) {
+                    if (id === 'hud-default-jump') {
+                        (0, _switchCameraPosition2.default)(_variables.Positions.default);
+                    }
+                    if (id === 'hud-stockroom-jump') {
+                        (0, _switchCameraPosition2.default)(_variables.Positions.stockroom);
+                        // AFRAME.scenes[0].emit('decreaseScore', {points: 1});
+                        // AFRAME.scenes[0].emit('removeInventoryItem', InventoryList.bottle1); 
+                    }
+                }
+            });
+        }
+    });
+};
+exports.default = register();
+},{"aframe":7,"../camera/switchCameraPosition":43,"../camera/variables":16}],44:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var InventoryList = exports.InventoryList = undefined;
+(function (InventoryList) {
+    InventoryList["bottle1"] = "bottle1";
+    InventoryList["bottle2"] = "bottle2";
+})(InventoryList || (exports.InventoryList = InventoryList = {}));
+},{}],14:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var _variables = require('./variables');
+
+var register = function register() {
+    AFRAME.registerComponent('inventory-item', {
+        schema: {
+            id: { type: 'string', default: '' }
+        },
+        init: function init() {
+            // check to make sure it's in the inventory list
+            var exists = Object.values(_variables.InventoryList).includes(this.data.id);
+        }
+    });
+};
+exports.default = register();
+},{"aframe":7,"./variables":44}],53:[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -128518,275 +139935,7 @@ function makeCallDirty(arr, fn) {
 /***/ })
 /******/ ]);
 });
-},{}],115:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var Positions = exports.Positions = undefined;
-(function (Positions) {
-    Positions["default"] = "default";
-    Positions["stockroom"] = "stockroom";
-})(Positions || (exports.Positions = Positions = {}));
-var Cameras = exports.Cameras = undefined;
-(function (Cameras) {
-    Cameras["camera1"] = "camera1";
-})(Cameras || (exports.Cameras = Cameras = {}));
-var positions = exports.positions = [{
-    id: 'default',
-    position: '1 5 -4',
-    rotation: {
-        x: 0, y: -90, z: 0
-    }
-}, {
-    id: 'stockroom',
-    position: '-15.230 5.010 4.950',
-    rotation: {
-        x: 0, y: 90, z: 0
-    }
-}];
-},{}],103:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _variables = require("./variables");
-
-exports.default = function (position) {
-    return _variables.positions.find(function (i) {
-        return i.id === position;
-    });
-};
-},{"./variables":115}],134:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _variables = require('./variables');
-
-var _getCameraPosition = require('./getCameraPosition');
-
-var _getCameraPosition2 = _interopRequireDefault(_getCameraPosition);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (position) {
-    var camera = document.querySelector("#" + _variables.Cameras.camera1);
-    var p = (0, _getCameraPosition2.default)(position);
-    if (p) {
-        camera.setAttribute('position', p.position);
-        camera.setAttribute('rotation', p.rotation);
-    }
-};
-},{"./variables":115,"./getCameraPosition":103}],144:[function(require,module,exports) {
-'use strict';
-
-require('aframe');
-
-require('aframe-state-component');
-
-var _variables = require('../camera/variables');
-
-var _switchCameraPosition = require('../camera/switchCameraPosition');
-
-var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-AFRAME.registerState({
-  initialState: {
-    inventory: [],
-    cameraPosition: _variables.Cameras.camera1
-  },
-
-  handlers: {
-    addInventoryItem: function addInventoryItem(state, action) {
-      var alreadyContains = state.inventory.find(function (i) {
-        return i === action;
-      });
-      if (!alreadyContains) {
-        state.inventory = [].concat(_toConsumableArray(state.inventory), [action]);
-      }
-    },
-
-    removeInventoryItem: function removeInventoryItem(state, action) {
-      state.inventory = state.inventory.filter(function (i) {
-        return i !== action;
-      });
-    },
-
-    changeCameraPosition: function changeCameraPosition(state, action) {
-      state.cameraPosition = action;
-      (0, _switchCameraPosition2.default)(action);
-    }
-  }
-});
-},{"aframe":7,"aframe-state-component":146,"../camera/variables":115,"../camera/switchCameraPosition":134}],6:[function(require,module,exports) {
-'use strict';
-
-require('aframe');
-
-var registerSelectable = function registerSelectable() {
-  AFRAME.registerComponent('selectable', {
-    /**
-     * Initial creation and setting of the mesh.
-     */
-    init: function init() {
-      var _this = this;
-
-      this.__selected = false;
-      // toggle internal state of selected
-      this.el.addEventListener('mousedown', function (e) {
-        _this.__selected = !_this.__selected;
-        console.log('mousedown');
-      });
-    }
-  });
-};
-
-module.exports = registerSelectable();
-},{"aframe":7}],37:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-require('aframe');
-
-var registerCameraDirector = function registerCameraDirector() {
-    AFRAME.registerComponent('camera-director', {
-        /**
-         * Initial creation and setting of the mesh.
-         */
-        init: function init() {}
-    });
-};
-exports.default = registerCameraDirector();
-},{"aframe":7}],38:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-require('aframe');
-
-var _getCameraPosition = require('./getCameraPosition');
-
-var _getCameraPosition2 = _interopRequireDefault(_getCameraPosition);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var registerComponent = function registerComponent() {
-    AFRAME.registerComponent('camera-cycle', {
-        /**
-         * Initial creation and setting of the mesh.
-         */
-        init: function init() {
-            var scene = document.querySelector('a-scene');
-            var camera = document.querySelector('#camera1');
-            this.el.addEventListener('click', function () {
-                updateCameraPosition(camera, 'stockroom');
-            });
-        }
-    });
-};
-var updateCameraPosition = function updateCameraPosition(el, position) {
-    var p = (0, _getCameraPosition2.default)(position);
-    el.setAttribute('position', p.position);
-    el.setAttribute('rotation', p.rotation);
-};
-exports.default = registerComponent();
-},{"aframe":7,"./getCameraPosition":103}],20:[function(require,module,exports) {
-'use strict';
-
-require('./camera-director');
-
-require('./camera-cycle-component');
-},{"./camera-director":37,"./camera-cycle-component":38}],130:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-require('aframe');
-
-var _switchCameraPosition = require('../camera/switchCameraPosition');
-
-var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
-
-var _variables = require('../camera/variables');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var register = function register() {
-    AFRAME.registerComponent('hud-button', {
-        /**
-         * Initial creation and setting of the mesh.
-         */
-        init: function init() {
-            // add event listener for scene changes
-            this.el.addEventListener('click', function (e) {
-                var id = e.target.id;
-                if (id) {
-                    if (id === 'hud-default-jump') {
-                        (0, _switchCameraPosition2.default)(_variables.Positions.default);
-                    }
-                    if (id === 'hud-stockroom-jump') {
-                        (0, _switchCameraPosition2.default)(_variables.Positions.stockroom);
-                        // AFRAME.scenes[0].emit('decreaseScore', {points: 1});
-                        // AFRAME.scenes[0].emit('removeInventoryItem', InventoryList.bottle1); 
-                    }
-                }
-            });
-        }
-    });
-};
-exports.default = register();
-},{"aframe":7,"../camera/switchCameraPosition":134,"../camera/variables":115}],160:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var InventoryList = exports.InventoryList = undefined;
-(function (InventoryList) {
-    InventoryList["bottle1"] = "bottle1";
-    InventoryList["bottle2"] = "bottle2";
-})(InventoryList || (exports.InventoryList = InventoryList = {}));
-},{}],163:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-require('aframe');
-
-var _variables = require('./variables');
-
-var register = function register() {
-    AFRAME.registerComponent('inventory-item', {
-        schema: {
-            id: { type: 'string', default: '' }
-        },
-        init: function init() {
-            // check to make sure it's in the inventory list
-            var exists = Object.values(_variables.InventoryList).includes(this.data.id);
-        }
-    });
-};
-exports.default = register();
-},{"aframe":7,"./variables":160}],12:[function(require,module,exports) {
+},{}],15:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -128808,8 +139957,10 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":7,"aframe-state-component":146}],4:[function(require,module,exports) {
+},{"aframe":7,"aframe-state-component":53}],4:[function(require,module,exports) {
 'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['\n        query isLoaded {\n          isLoaded\n        }\n      '], ['\n        query isLoaded {\n          isLoaded\n        }\n      ']);
 
 require('aframe');
 
@@ -128819,9 +139970,11 @@ require('aframe-extras');
 
 require('aframe-look-at-component');
 
-require('./state/state-component');
+var _graphql = require('./state/graphql');
 
 require('./selectable-component');
+
+var _apolloBoost = require('apollo-boost');
 
 require('./camera');
 
@@ -128833,15 +139986,27 @@ require('./lab-table/lab-table-component');
 
 var _variables = require('./camera/variables');
 
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 // import 'aframe-html-shader'
 // import 'aframe-animation-timeline-component'
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var scene = document.querySelector('a-scene');
   scene.addEventListener('loaded', function (e) {
     AFRAME.scenes[0].emit('changeCameraPosition', _variables.Positions.default);
+
+    // change the state to is loaded
+    _graphql.client.query({
+      query: (0, _apolloBoost.gql)(_templateObject)
+    }).then(function (data) {
+      return console.log(data);
+    }).catch(function (error) {
+      return console.error(error);
+    });
   });
 });
-},{"aframe":7,"three":10,"aframe-extras":8,"aframe-look-at-component":122,"./state/state-component":144,"./selectable-component":6,"./camera":20,"./hud/hud-button-component":130,"./inventory/inventory-item-component":163,"./lab-table/lab-table-component":12,"./camera/variables":115}],77:[function(require,module,exports) {
+},{"aframe":7,"three":8,"aframe-extras":9,"aframe-look-at-component":10,"./state/graphql":12,"./selectable-component":6,"apollo-boost":42,"./camera":26,"./hud/hud-button-component":13,"./inventory/inventory-item-component":14,"./lab-table/lab-table-component":15,"./camera/variables":16}],225:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -128870,7 +140035,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52651' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58907' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -129011,5 +140176,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[77,4], null)
+},{}]},{},[225,4], null)
 //# sourceMappingURL=/app.febdb068.map

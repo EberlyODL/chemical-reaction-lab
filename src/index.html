@@ -22,7 +22,8 @@
 
     <!-- Lighting -->
     <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="0 11 0" rotation="-90 0 0"></a-plane>
-    <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087" rotation="-90 0 0" material="" geometry=""></a-plane>
+    <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087"
+      rotation="-90 0 0" material="" geometry=""></a-plane>
 
     <!-- Bottles -->
     <a-entity id="shelve1" shelf position="-22.601 7.570 8">
@@ -52,18 +53,13 @@
     <a-plane id="lab-table" lab-table material="color:pink" rotation="-90 0 0" position="5.191 3.778 -3.6930882659306157" geometry="height:6.17;width:2.59">
     </a-plane>
 
-    <a-entity id="camera1" position="0 5 0" rotation="0 -90 0" >
+    <a-entity id="camera1" position="0 5 0" rotation="0 -90 0">
 
       <!-- Heads up display -->
       <a-entity hud="" position="-1 1.6 0" look-at="[camera]" rotation="0 0 -180">
         <!-- hud button -->
         <a-plane hud-button id="hud-stockroom-jump" material="color:black" width=".3" height=".2" geometry="">
           <a-text text="width:1;value:Stockroom;align:center"></a-text>
-          <a-entity bind-for="for: inventoryItem; in: inventory;">
-            <template>
-              <a-entity bind__text="value: inventory" text="value: 0; color: #111; width: 3; align: center" geometry="primitive: plane" material="color: ##CCC" position="0 1 -3"></a-entity>
-            </template>
-          </a-entity>
         </a-plane>
         <!-- hud button -->
         <a-plane hud-button id="hud-default-jump" material="color:black" width=".3" height=".2" geometry="" position="0.353 0 0">
@@ -71,12 +67,12 @@
         </a-plane>
       </a-entity>
 
+
       <!-- Camera -->
       <a-camera id="camera" look-controls="true" wasd-controls="enabled:false;">
         <a-cursor id="cursor" color="orange" fuse="true"></a-cursor>
       </a-camera>
 
-      <!-- <a-box material="color: red" camera-cycle position="0 1 -1" scale=".1 .1 .1"></a-box> -->
     </a-entity>
 
   </a-scene>

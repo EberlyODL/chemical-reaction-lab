@@ -9,4 +9,4 @@ services:
     ports:
       - ${PORT}:${PORT}
       - ${HMR_PORT}:${HMR_PORT}
-  command: ["parcel", "src/index.html", "-p", "${PORT}", "--hmr-port", "${HMR_PORT}"]
+    command: ["parcel", "src/index.html", "-p", "${PORT}", "--hmr-port", "${HMR_PORT}"]
