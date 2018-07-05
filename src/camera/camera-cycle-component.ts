@@ -1,4 +1,5 @@
 import 'aframe'
+declare const AFRAME:any
 import { Position, positions } from './variables'
 import getCameraPosition from './getCameraPosition'
 

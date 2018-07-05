@@ -1,6 +1,5 @@
 import 'aframe'
 import 'aframe-state-component'
-import { render, html } from "lit-html";
 declare const AFRAME:any
 
 const register = () => {

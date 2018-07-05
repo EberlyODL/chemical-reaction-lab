@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({143:[function(require,module,exports) {
+})({68:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -290,7 +290,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],159:[function(require,module,exports) {
+},{}],69:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -443,7 +443,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],160:[function(require,module,exports) {
+},{}],70:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -529,14 +529,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],158:[function(require,module,exports) {
+},{}],71:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],142:[function(require,module,exports) {
+},{}],67:[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -2329,7 +2329,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":159,"ieee754":160,"isarray":158,"buffer":142}],8:[function(require,module,exports) {
+},{"base64-js":69,"ieee754":70,"isarray":71,"buffer":67}],14:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 var process = require("process");
@@ -76201,7 +76201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}, { "./util.js": 181 }] }, {}, [148])(148);
 });
 //# sourceMappingURL=aframe-master.js.map
-},{"process":143,"buffer":142}],10:[function(require,module,exports) {
+},{"process":68,"buffer":67}],10:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -118531,7 +118531,7 @@ exports.Projector = Projector;
 exports.CanvasRenderer = CanvasRenderer;
 exports.SceneUtils = SceneUtils;
 exports.LensFlare = LensFlare;
-},{}],112:[function(require,module,exports) {
+},{}],77:[function(require,module,exports) {
 var EPS = 0.1;
 
 module.exports = AFRAME.registerComponent('checkpoint-controls', {
@@ -118622,7 +118622,7 @@ module.exports = AFRAME.registerComponent('checkpoint-controls', {
     offset.copy(targetPosition).sub(position);
   }
 });
-},{}],138:[function(require,module,exports) {
+},{}],101:[function(require,module,exports) {
 module.exports = Object.assign(function GamepadButton() {}, {
 	FACE_1: 0,
 	FACE_2: 1,
@@ -118644,7 +118644,7 @@ module.exports = Object.assign(function GamepadButton() {}, {
 
 	VENDOR: 16
 });
-},{}],139:[function(require,module,exports) {
+},{}],100:[function(require,module,exports) {
 function GamepadButtonEvent(type, index, details) {
   this.type = type;
   this.index = index;
@@ -118653,7 +118653,7 @@ function GamepadButtonEvent(type, index, details) {
 }
 
 module.exports = GamepadButtonEvent;
-},{}],113:[function(require,module,exports) {
+},{}],72:[function(require,module,exports) {
 /**
  * Gamepad controls for A-Frame.
  *
@@ -118937,7 +118937,7 @@ module.exports = AFRAME.registerComponent('gamepad-controls', {
     return this.getGamepad().id;
   }
 });
-},{"../../lib/GamepadButton":138,"../../lib/GamepadButtonEvent":139}],137:[function(require,module,exports) {
+},{"../../lib/GamepadButton":101,"../../lib/GamepadButtonEvent":100}],104:[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /**
@@ -119682,7 +119682,7 @@ var define;
     event.locale = '';
   };
 })(window);
-},{}],114:[function(require,module,exports) {
+},{}],82:[function(require,module,exports) {
 require('../../lib/keyboard.polyfill');
 
 var MAX_DELTA = 0.2,
@@ -119844,7 +119844,7 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
   }
 
 });
-},{"../../lib/keyboard.polyfill":137}],115:[function(require,module,exports) {
+},{"../../lib/keyboard.polyfill":104}],83:[function(require,module,exports) {
 /**
  * Touch-to-move-forward controls for mobile.
  */
@@ -119918,7 +119918,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
     e.preventDefault();
   }
 });
-},{}],116:[function(require,module,exports) {
+},{}],73:[function(require,module,exports) {
 /**
  * Movement Controls
  *
@@ -120128,7 +120128,7 @@ module.exports = AFRAME.registerComponent('movement-controls', {
     };
   }()
 });
-},{}],118:[function(require,module,exports) {
+},{}],74:[function(require,module,exports) {
 /**
  * 3dof (Gear VR, Daydream) controls for mobile.
  */
@@ -120210,14 +120210,14 @@ module.exports = AFRAME.registerComponent('trackpad-controls', {
   }
 
 });
-},{}],53:[function(require,module,exports) {
+},{}],60:[function(require,module,exports) {
 require('./checkpoint-controls');
 require('./gamepad-controls');
 require('./keyboard-controls');
 require('./touch-controls');
 require('./movement-controls');
 require('./trackpad-controls');
-},{"./checkpoint-controls":112,"./gamepad-controls":113,"./keyboard-controls":114,"./touch-controls":115,"./movement-controls":116,"./trackpad-controls":118}],103:[function(require,module,exports) {
+},{"./checkpoint-controls":77,"./gamepad-controls":72,"./keyboard-controls":82,"./touch-controls":83,"./movement-controls":73,"./trackpad-controls":74}],75:[function(require,module,exports) {
 var LoopMode = {
   once: THREE.LoopOnce,
   repeat: THREE.LoopRepeat,
@@ -120337,7 +120337,7 @@ function wildcardToRegExp(s) {
 function regExpEscape(s) {
   return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
 }
-},{}],144:[function(require,module,exports) {
+},{}],106:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
@@ -123485,7 +123485,7 @@ THREE.LoaderUtils = {
     return a;
   }
 })();
-},{}],104:[function(require,module,exports) {
+},{}],76:[function(require,module,exports) {
 THREE.FBXLoader = require('../../lib/FBXLoader');
 
 /**
@@ -123523,7 +123523,7 @@ module.exports = AFRAME.registerComponent('fbx-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/FBXLoader":144}],140:[function(require,module,exports) {
+},{"../../lib/FBXLoader":106}],102:[function(require,module,exports) {
 /**
  * Source: https://github.com/Adobe-Marketing-Cloud/fetch-script
  */
@@ -123601,7 +123601,7 @@ function fetchScript(settings) {
 }
 
 module.exports = fetchScript;
-},{}],105:[function(require,module,exports) {
+},{}],79:[function(require,module,exports) {
 var fetchScript = require('../../lib/fetch-script')();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
@@ -123662,7 +123662,7 @@ module.exports = AFRAME.registerComponent('gltf-model-legacy', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/fetch-script":140}],107:[function(require,module,exports) {
+},{"../../lib/fetch-script":102}],81:[function(require,module,exports) {
 /**
  * json-model
  *
@@ -123721,7 +123721,7 @@ module.exports = AFRAME.registerComponent('json-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],108:[function(require,module,exports) {
+},{}],78:[function(require,module,exports) {
 /**
  * object-model
  *
@@ -123777,7 +123777,7 @@ module.exports = AFRAME.registerComponent('object-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],136:[function(require,module,exports) {
+},{}],99:[function(require,module,exports) {
 /**
  * @author Wei Meng / http://about.me/menway
  *
@@ -124203,7 +124203,7 @@ THREE.PLYLoader.prototype = {
   }
 
 };
-},{}],106:[function(require,module,exports) {
+},{}],80:[function(require,module,exports) {
 /**
  * ply-model
  *
@@ -124284,14 +124284,14 @@ function createModel(geometry) {
     shininess: 0
   }));
 }
-},{"../../lib/PLYLoader":136}],49:[function(require,module,exports) {
+},{"../../lib/PLYLoader":99}],61:[function(require,module,exports) {
 require('./animation-mixer');
 require('./fbx-model');
 require('./gltf-model-legacy');
 require('./json-model');
 require('./object-model');
 require('./ply-model');
-},{"./animation-mixer":103,"./fbx-model":104,"./gltf-model-legacy":105,"./json-model":107,"./object-model":108,"./ply-model":106}],122:[function(require,module,exports) {
+},{"./animation-mixer":75,"./fbx-model":76,"./gltf-model-legacy":79,"./json-model":81,"./object-model":78,"./ply-model":80}],88:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('checkpoint', {
   schema: {
     offset: { default: { x: 0, y: 0, z: 0 }, type: 'vec3' }
@@ -124330,7 +124330,7 @@ module.exports = AFRAME.registerComponent('checkpoint', {
     return this.offset.copy(this.data.offset);
   }
 });
-},{}],123:[function(require,module,exports) {
+},{}],89:[function(require,module,exports) {
 /**
  * @param  {Array<THREE.Material>|THREE.Material} material
  * @return {Array<THREE.Material>}
@@ -124463,7 +124463,7 @@ module.exports = AFRAME.registerComponent('cube-env-map', {
     this.el.sceneEl.object3D.background = texture;
   }
 });
-},{}],124:[function(require,module,exports) {
+},{}],90:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124542,7 +124542,7 @@ module.exports = AFRAME.registerComponent('grab', {
     this.system.addConstraint(this.constraint);
   }
 });
-},{}],125:[function(require,module,exports) {
+},{}],91:[function(require,module,exports) {
 var ACCEL_G = -9.8,
     // m/s^2
 EASING = -15; // m/s^2
@@ -124606,7 +124606,7 @@ module.exports = AFRAME.registerComponent('jump-ability', {
     this.numJumps = 0;
   }
 });
-},{}],126:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124824,7 +124824,7 @@ module.exports = AFRAME.registerComponent('kinematic-body', {
     return Math.abs(hitNormal.y) > Math.abs(groundNormal.y) ? hitNormal : groundNormal;
   }
 });
-},{}],127:[function(require,module,exports) {
+},{}],93:[function(require,module,exports) {
 /**
  * Apply this component to models that looks "blocky", to have Three.js compute
  * vertex normals on the fly for a "smoother" look.
@@ -124838,7 +124838,7 @@ module.exports = AFRAME.registerComponent('mesh-smooth', {
     });
   }
 });
-},{}],128:[function(require,module,exports) {
+},{}],94:[function(require,module,exports) {
 /**
  * Recursively applies a MeshNormalMaterial to the entity, such that
  * face colors are determined by their orientation. Helpful for
@@ -124863,7 +124863,7 @@ module.exports = AFRAME.registerComponent('normal-material', {
     });
   }
 });
-},{}],129:[function(require,module,exports) {
+},{}],95:[function(require,module,exports) {
 /**
  * Based on aframe/examples/showcase/tracked-controls.
  *
@@ -125026,7 +125026,7 @@ module.exports = AFRAME.registerComponent('sphere-collider', {
     this.el.emit('hitend', { el: targetEl });
   }
 });
-},{}],52:[function(require,module,exports) {
+},{}],62:[function(require,module,exports) {
 require('./checkpoint');
 require('./cube-env-map');
 require('./grab');
@@ -125035,7 +125035,7 @@ require('./kinematic-body');
 require('./mesh-smooth');
 require('./normal-material');
 require('./sphere-collider');
-},{"./checkpoint":122,"./cube-env-map":123,"./grab":124,"./jump-ability":125,"./kinematic-body":126,"./mesh-smooth":127,"./normal-material":128,"./sphere-collider":129}],109:[function(require,module,exports) {
+},{"./checkpoint":88,"./cube-env-map":89,"./grab":90,"./jump-ability":91,"./kinematic-body":92,"./mesh-smooth":93,"./normal-material":94,"./sphere-collider":95}],96:[function(require,module,exports) {
 /**
  * nav-mesh
  *
@@ -125075,7 +125075,7 @@ module.exports = AFRAME.registerComponent('nav-mesh', {
     this.hasLoadedNavMesh = true;
   }
 });
-},{}],110:[function(require,module,exports) {
+},{}],97:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('nav-agent', {
   schema: {
     destination: { type: 'vec3' },
@@ -125178,7 +125178,7 @@ module.exports = AFRAME.registerComponent('nav-agent', {
     };
   }()
 });
-},{}],162:[function(require,module,exports) {
+},{}],108:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125509,7 +125509,7 @@ var Utils = function () {
 }();
 
 module.exports = Utils;
-},{}],177:[function(require,module,exports) {
+},{}],112:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125660,7 +125660,7 @@ var BinaryHeap = function () {
 }();
 
 module.exports = BinaryHeap;
-},{}],163:[function(require,module,exports) {
+},{}],110:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125802,7 +125802,7 @@ var AStar = function () {
 }();
 
 module.exports = AStar;
-},{"./BinaryHeap":177,"./utils.js":162}],164:[function(require,module,exports) {
+},{"./BinaryHeap":112,"./utils.js":108}],109:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126025,7 +126025,7 @@ var Builder = function () {
 }();
 
 module.exports = Builder;
-},{"./utils":162}],165:[function(require,module,exports) {
+},{"./utils":108}],111:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126133,7 +126133,7 @@ var Channel = function () {
 }();
 
 module.exports = Channel;
-},{"./utils":162}],149:[function(require,module,exports) {
+},{"./utils":108}],107:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126435,7 +126435,7 @@ var Group = {}; // jshint ignore:line
 var Node = {}; // jshint ignore:line
 
 module.exports = Path;
-},{"./utils":162,"./AStar":163,"./Builder":164,"./Channel":165}],111:[function(require,module,exports) {
+},{"./utils":108,"./AStar":110,"./Builder":109,"./Channel":111}],98:[function(require,module,exports) {
 var Path = require('three-pathfinding');
 
 var pathfinder = new Path();
@@ -126530,11 +126530,11 @@ module.exports = AFRAME.registerSystem('nav', {
     return pathfinder.clampStep(start, end, node, ZONE, groupID, endTarget);
   }
 });
-},{"three-pathfinding":149}],50:[function(require,module,exports) {
+},{"three-pathfinding":107}],58:[function(require,module,exports) {
 require('./nav-mesh');
 require('./nav-agent');
 require('./system');
-},{"./nav-mesh":109,"./nav-agent":110,"./system":111}],117:[function(require,module,exports) {
+},{"./nav-mesh":96,"./nav-agent":97,"./system":98}],84:[function(require,module,exports) {
 /**
  * Flat grid.
  *
@@ -126559,7 +126559,7 @@ module.exports = AFRAME.registerPrimitive('a-grid', {
     src: 'material.src'
   }
 });
-},{}],146:[function(require,module,exports) {
+},{}],103:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG_TO_RAD: .0174532925, RAD_TO_DEG: 57.2957795, SQRT3: Math.sqrt(3), TILE: "tile", ENT: "entity", STR: "structure", HEX: "hex", SQR: "square", ABS: "abstract" };vg.Board = function (e, t) {
@@ -127157,7 +127157,7 @@ var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG
     }, t.open("GET", s, !0), t.setRequestHeader("Accept", "application/json"), t.setRequestHeader("Content-Type", "application/json"), t.send("");
   } };
 //# sourceMappingURL=hex-grid.min.js.map
-},{}],147:[function(require,module,exports) {
+},{}],105:[function(require,module,exports) {
 module.exports = {
   "size": 5,
   "cellSize": 10,
@@ -127221,7 +127221,7 @@ module.exports = {
     "userData": {}
   }]
 };
-},{}],120:[function(require,module,exports) {
+},{}],85:[function(require,module,exports) {
 var vg = require('../../lib/hex-grid.min.js');
 var defaultHexGrid = require('../../lib/default-hex-grid');
 
@@ -127278,7 +127278,7 @@ module.exports.Component = AFRAME.registerComponent('hexgrid', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/hex-grid.min.js":146,"../../lib/default-hex-grid":147}],119:[function(require,module,exports) {
+},{"../../lib/hex-grid.min.js":103,"../../lib/default-hex-grid":105}],86:[function(require,module,exports) {
 /**
  * Flat-shaded ocean primitive.
  *
@@ -127377,7 +127377,7 @@ module.exports.Component = AFRAME.registerComponent('ocean', {
     this.mesh.geometry.verticesNeedUpdate = true;
   }
 });
-},{}],121:[function(require,module,exports) {
+},{}],87:[function(require,module,exports) {
 /**
  * Tube following a custom path.
  *
@@ -127438,18 +127438,18 @@ module.exports.Component = AFRAME.registerComponent('tube', {
     if (this.mesh) this.el.removeObject3D('mesh');
   }
 });
-},{}],51:[function(require,module,exports) {
+},{}],59:[function(require,module,exports) {
 require('./a-grid');
 require('./a-hexgrid');
 require('./a-ocean');
 require('./a-tube');
-},{"./a-grid":117,"./a-hexgrid":120,"./a-ocean":119,"./a-tube":121}],9:[function(require,module,exports) {
+},{"./a-grid":84,"./a-hexgrid":85,"./a-ocean":86,"./a-tube":87}],12:[function(require,module,exports) {
 require('./src/controls');
 require('./src/loaders');
 require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
-},{"./src/controls":53,"./src/loaders":49,"./src/misc":52,"./src/pathfinding":50,"./src/primitives":51}],11:[function(require,module,exports) {
+},{"./src/controls":60,"./src/loaders":61,"./src/misc":62,"./src/pathfinding":58,"./src/primitives":59}],13:[function(require,module,exports) {
 var debug = AFRAME.utils.debug;
 var coordinates = AFRAME.utils.coordinates;
 
@@ -127556,7 +127556,7 @@ AFRAME.registerComponent('look-at', {
   }
 });
 
-},{}],197:[function(require,module,exports) {
+},{}],45:[function(require,module,exports) {
 window.normalYPosition = 1.5;
 window.hiddenYPosition = 1000;
 
@@ -127651,7 +127651,7 @@ window.drawLabel = function(ctx, canvas, text, font, color, size) {
 
     },500); // callback when font is loaded needed
 }
-},{}],213:[function(require,module,exports) {
+},{}],41:[function(require,module,exports) {
 AFRAME.registerComponent('gui-item', {
     schema: {
         type: {type: 'string'},
@@ -127674,7 +127674,7 @@ AFRAME.registerComponent('gui-item', {
 });
 
 
-},{}],212:[function(require,module,exports) {
+},{}],42:[function(require,module,exports) {
 AFRAME.registerComponent('gui-interactable', {
     schema: {
         clickAction: {type: 'string'},
@@ -127711,7 +127711,7 @@ AFRAME.registerComponent('gui-interactable', {
     },
 });
 
-},{}],211:[function(require,module,exports) {
+},{}],43:[function(require,module,exports) {
 require('../scripts/vars.js')
 
 /*  //trying to figure out global styles that customize gui items
@@ -127933,7 +127933,7 @@ AFRAME.registerPrimitive( 'a-gui-flex-container', {
         'handle-color': 'gui-flex-container.styles.handleColor',
     }
 });
-},{"../scripts/vars.js":197}],198:[function(require,module,exports) {
+},{"../scripts/vars.js":45}],44:[function(require,module,exports) {
 AFRAME.registerComponent('gui-label', {
     schema: {
         text: {type: 'string', default: 'label text'},
@@ -128004,7 +128004,7 @@ AFRAME.registerPrimitive( 'a-gui-label', {
         'background-color': 'gui-label.backgroundColor'
     }
 });
-},{}],199:[function(require,module,exports) {
+},{}],46:[function(require,module,exports) {
 AFRAME.registerComponent('gui-button', {
     schema: {
         on: {default: 'click'},
@@ -128158,7 +128158,7 @@ AFRAME.registerPrimitive( 'a-gui-button', {
 });
 
 
-},{}],200:[function(require,module,exports) {
+},{}],47:[function(require,module,exports) {
 AFRAME.registerComponent('gui-icon-button', {
     schema: {
         on: {default: 'click'},
@@ -128301,7 +128301,7 @@ AFRAME.registerPrimitive( 'a-gui-icon-button', {
         'icon-active': 'gui-icon-button.iconActive',
     }
 });
-},{}],201:[function(require,module,exports) {
+},{}],48:[function(require,module,exports) {
 AFRAME.registerComponent('gui-icon-label-button', {
     schema: {
         on: {default: 'click'},
@@ -128481,7 +128481,7 @@ AFRAME.registerPrimitive( 'a-gui-icon-label-button', {
         'value': 'gui-icon-label-button.text'
     }
 });
-},{}],202:[function(require,module,exports) {
+},{}],49:[function(require,module,exports) {
 AFRAME.registerComponent('gui-toggle', {
     schema: {
         on: {default: 'click'},
@@ -128647,7 +128647,7 @@ AFRAME.registerPrimitive( 'a-gui-toggle', {
 });
 
 
-},{}],203:[function(require,module,exports) {
+},{}],50:[function(require,module,exports) {
 AFRAME.registerComponent('gui-radio', {
     schema: {
         on: {default: 'click'},
@@ -128836,7 +128836,7 @@ AFRAME.registerPrimitive( 'a-gui-radio', {
         'handle-color': 'gui-radio.handleColor'
     }
 });
-},{}],204:[function(require,module,exports) {
+},{}],51:[function(require,module,exports) {
 AFRAME.registerComponent('gui-circle-loader', {
     schema: {
         count: {type: 'number', default: '100'},
@@ -128924,7 +128924,7 @@ AFRAME.registerPrimitive( 'a-gui-circle-loader', {
         'active-color': 'gui-circle-loader.activeColor'
     }
 });
-},{}],205:[function(require,module,exports) {
+},{}],52:[function(require,module,exports) {
 AFRAME.registerComponent('gui-progressbar', {
     schema: {
         backgroundColor: {type: 'string', default: key_grey},
@@ -128980,7 +128980,7 @@ AFRAME.registerPrimitive( 'a-gui-progressbar', {
     }
 });
 
-},{}],206:[function(require,module,exports) {
+},{}],53:[function(require,module,exports) {
 AFRAME.registerComponent('gui-circle-timer', {
     schema: {
         countDown: {type: 'number', default: '10'},
@@ -129106,7 +129106,7 @@ AFRAME.registerPrimitive( 'a-gui-circle-timer', {
         'active-color': 'gui-circle-timer.activeColor'
     }
 });
-},{}],207:[function(require,module,exports) {
+},{}],54:[function(require,module,exports) {
 AFRAME.registerComponent('gui-slider', {
     schema: {
         percent: {type: 'number', default: '0.5'},
@@ -129244,7 +129244,7 @@ AFRAME.registerPrimitive( 'a-gui-slider', {
         'handle-color': 'gui-slider.handleColor'
     }
 });
-},{}],208:[function(require,module,exports) {
+},{}],55:[function(require,module,exports) {
 AFRAME.registerComponent('gui-input', {
     schema: {
         on: {default: 'click'},
@@ -129382,7 +129382,7 @@ AFRAME.registerPrimitive( 'a-gui-input', {
         'active-color': 'gui-input.activeColor',
     }
 });
-},{}],209:[function(require,module,exports) {
+},{}],56:[function(require,module,exports) {
 AFRAME.registerComponent('gui-cursor', {
     schema: {
         color: {type: 'string', default: key_white},
@@ -130183,7 +130183,7 @@ AFRAME.registerPrimitive( 'a-gui-cursor', {
         'design': 'gui-cursor.design'
     }
 });
-},{}],210:[function(require,module,exports) {
+},{}],57:[function(require,module,exports) {
 
 // Reset cursor
 var cursor = document.querySelector("#cursor");
@@ -130196,7 +130196,7 @@ if (cursor) {
         }
     });
 }
-},{}],196:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 if (typeof AFRAME === 'undefined') {
     throw new Error('Component attempted to register before AFRAME was available.');
 }
@@ -130220,7 +130220,31 @@ require('./components/input.js');
 require('./components/cursor.js');
 require('./scripts/reset-cursor.js');
 
-},{"./scripts/vars.js":197,"./components/item.js":213,"./components/interactable.js":212,"./components/flex-container.js":211,"./components/label.js":198,"./components/button.js":199,"./components/icon-button.js":200,"./components/icon-label-button.js":201,"./components/toggle.js":202,"./components/radio.js":203,"./components/circle-loader.js":204,"./components/progress-bar.js":205,"./components/circle-timer.js":206,"./components/slider.js":207,"./components/input.js":208,"./components/cursor.js":209,"./scripts/reset-cursor.js":210}],180:[function(require,module,exports) {
+},{"./scripts/vars.js":45,"./components/item.js":41,"./components/interactable.js":42,"./components/flex-container.js":43,"./components/label.js":44,"./components/button.js":46,"./components/icon-button.js":47,"./components/icon-label-button.js":48,"./components/toggle.js":49,"./components/radio.js":50,"./components/circle-loader.js":51,"./components/progress-bar.js":52,"./components/circle-timer.js":53,"./components/slider.js":54,"./components/input.js":55,"./components/cursor.js":56,"./scripts/reset-cursor.js":57}],115:[function(require,module,exports) {
+/**
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * Based on Nvidia Cg tutorial
+ */
+
+THREE.FresnelShader = {
+
+	uniforms: {
+
+		"mRefractionRatio": { value: 1.02 },
+		"mFresnelBias": { value: 0.1 },
+		"mFresnelPower": { value: 2.0 },
+		"mFresnelScale": { value: 1.0 },
+		"tCube": { value: null }
+
+	},
+
+	vertexShader: ["uniform float mRefractionRatio;", "uniform float mFresnelBias;", "uniform float mFresnelScale;", "uniform float mFresnelPower;", "varying vec3 vReflect;", "varying vec3 vRefract[3];", "varying float vReflectionFactor;", "void main() {", "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );", "vec4 worldPosition = modelMatrix * vec4( position, 1.0 );", "vec3 worldNormal = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );", "vec3 I = worldPosition.xyz - cameraPosition;", "vReflect = reflect( I, worldNormal );", "vRefract[0] = refract( normalize( I ), worldNormal, mRefractionRatio );", "vRefract[1] = refract( normalize( I ), worldNormal, mRefractionRatio * 0.99 );", "vRefract[2] = refract( normalize( I ), worldNormal, mRefractionRatio * 0.98 );", "vReflectionFactor = mFresnelBias + mFresnelScale * pow( 1.0 + dot( normalize( I ), worldNormal ), mFresnelPower );", "gl_Position = projectionMatrix * mvPosition;", "}"].join("\n"),
+
+	fragmentShader: ["uniform samplerCube tCube;", "varying vec3 vReflect;", "varying vec3 vRefract[3];", "varying float vReflectionFactor;", "void main() {", "vec4 reflectedColor = textureCube( tCube, vec3( -vReflect.x, vReflect.yz ) );", "vec4 refractedColor = vec4( 1.0 );", "refractedColor.r = textureCube( tCube, vec3( -vRefract[0].x, vRefract[0].yz ) ).r;", "refractedColor.g = textureCube( tCube, vec3( -vRefract[1].x, vRefract[1].yz ) ).g;", "refractedColor.b = textureCube( tCube, vec3( -vRefract[2].x, vRefract[2].yz ) ).b;", "gl_FragColor = mix( refractedColor, reflectedColor, clamp( vReflectionFactor, 0.0, 1.0 ) );", "}"].join("\n")
+
+};
+},{}],20:[function(require,module,exports) {
 "use strict";
 // document.addEventListener('DOMContentLoaded', function () {
 //   const scene:any = document.querySelector('a-scene')
@@ -130251,7 +130275,7 @@ var registerSelectable = function registerSelectable() {
 };
 
 module.exports = registerSelectable();
-},{"aframe":8}],58:[function(require,module,exports) {
+},{"aframe":14}],65:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130269,7 +130293,7 @@ var registerCameraDirector = function registerCameraDirector() {
     });
 };
 exports.default = registerCameraDirector();
-},{"aframe":8}],21:[function(require,module,exports) {
+},{"aframe":14}],22:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -130297,7 +130321,7 @@ var positions = exports.positions = [{
         x: 0, y: 90, z: 0
     }
 }];
-},{}],130:[function(require,module,exports) {
+},{}],63:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -130311,7 +130335,7 @@ exports.default = function (position) {
         return i.id === position;
     });
 };
-},{"./variables":21}],59:[function(require,module,exports) {
+},{"./variables":22}],66:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130346,13 +130370,13 @@ var updateCameraPosition = function updateCameraPosition(el, position) {
     el.setAttribute('rotation', p.rotation);
 };
 exports.default = registerComponent();
-},{"aframe":8,"./getCameraPosition":130}],28:[function(require,module,exports) {
+},{"aframe":14,"./getCameraPosition":63}],33:[function(require,module,exports) {
 'use strict';
 
 require('./camera-director');
 
 require('./camera-cycle-component');
-},{"./camera-director":58,"./camera-cycle-component":59}],54:[function(require,module,exports) {
+},{"./camera-director":65,"./camera-cycle-component":66}],25:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130375,7 +130399,7 @@ exports.default = function (position) {
         camera.setAttribute('rotation', p.rotation);
     }
 };
-},{"./variables":21,"./getCameraPosition":130}],19:[function(require,module,exports) {
+},{"./variables":22,"./getCameraPosition":63}],21:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130417,7 +130441,7 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":8,"../camera/switchCameraPosition":54,"../camera/variables":21}],20:[function(require,module,exports) {
+},{"aframe":14,"../camera/switchCameraPosition":25,"../camera/variables":22}],23:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130461,7 +130485,7 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":8}],57:[function(require,module,exports) {
+},{"aframe":14}],64:[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -131423,7 +131447,7 @@ function makeCallDirty(arr, fn) {
 /***/ })
 /******/ ]);
 });
-},{}],18:[function(require,module,exports) {
+},{}],24:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -131445,7 +131469,33 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":8,"aframe-state-component":57}],4:[function(require,module,exports) {
+},{"aframe":14,"aframe-state-component":64}],7:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var register = function register() {
+    AFRAME.registerComponent('bottle', {
+        init: function init() {
+            var geometry = new THREE.SphereBufferGeometry(100, 32, 16);
+            var shader = THREE.FresnelShader;
+            var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+            var material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: shader.vertexShader,
+                fragmentShader: shader.fragmentShader
+            });
+            var mesh = new THREE.Mesh(geometry, material);
+            this.el.setObject3D('mesh', mesh);
+        }
+    });
+};
+exports.default = register();
+},{"aframe":14}],4:[function(require,module,exports) {
 'use strict';
 
 require('aframe');
@@ -131458,6 +131508,8 @@ require('aframe-look-at-component');
 
 require('aframe-gui');
 
+require('./shaders/FresnelShader');
+
 require('./state/byhand');
 
 require('./selectable-component');
@@ -131469,6 +131521,8 @@ require('./hud/hud-button-component');
 require('./inventory/inventory-item-component');
 
 require('./lab-table/lab-table-component');
+
+require('./bottle/bottle-component.ts');
 
 var _variables = require('./camera/variables');
 
@@ -131487,7 +131541,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 // import { client } from './state/graphql'
-},{"aframe":8,"three":10,"aframe-extras":9,"aframe-look-at-component":11,"aframe-gui":196,"./state/byhand":180,"./selectable-component":6,"./camera":28,"./hud/hud-button-component":19,"./inventory/inventory-item-component":20,"./lab-table/lab-table-component":18,"./camera/variables":21,"./camera/switchCameraPosition":54}],223:[function(require,module,exports) {
+},{"aframe":14,"three":10,"aframe-extras":12,"aframe-look-at-component":13,"aframe-gui":11,"./shaders/FresnelShader":115,"./state/byhand":20,"./selectable-component":6,"./camera":33,"./hud/hud-button-component":21,"./inventory/inventory-item-component":23,"./lab-table/lab-table-component":24,"./bottle/bottle-component.ts":7,"./camera/variables":22,"./camera/switchCameraPosition":25}],113:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -131657,5 +131711,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[223,4], null)
+},{}]},{},[113,4], null)
 //# sourceMappingURL=/app.78938e1f.map
