@@ -1,5 +1,5 @@
 import 'aframe'
-import { increment, store } from '../store'
+import { addSelectedItem, store } from '../store'
 declare const AFRAME: any
 
 const register = () => {
@@ -8,6 +8,8 @@ const register = () => {
       const el = this.el
       // add the gui interactive
       el.setAttribute('gui-interactable', '')
+      el.setAttribute('geometry', 'primitive: cylinder; height: 0.72; radius: 0.199')
+      el.setAttribute('material', 'color:blue;')
 
       // Create the label
       const addButtonNode = this.makeButton()
@@ -32,19 +34,18 @@ const register = () => {
     },
 
     selectItem: function () {
-      store.dispatch(increment({ amount: 1 }))
+      store.dispatch(addSelectedItem(this.el.id))
     },
 
     makeButton: function (props: any) {
       const node = document.createElement('a-gui-button')
       node.setAttribute('width', '2')
-      node.setAttribute('rotation', '0 90 0')
       node.setAttribute('position', '0 .7 0')
       node.setAttribute('height', '0.75')
       node.setAttribute('value', 'Select Item')
       node.setAttribute('font-family', 'Helvetica')
       node.setAttribute('scale', '0 0 0')
-      node.setAttribute('look-at', '[camera]')
+      // node.setAttribute('look-at', '[camera]')
 
       node.addEventListener('click', e => {
         this.selectItem()

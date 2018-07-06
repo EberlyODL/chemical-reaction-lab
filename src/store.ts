@@ -19,18 +19,25 @@
 import { createStore } from 'redux'
 import { createAction, handleActions, combineActions } from 'redux-actions';
 
-const defaultState = { counter: 10 };
+const defaultState = { counter: 10, selectedItems: [] };
 
 export const increment = createAction('INCREMENT')
 export const decrement = createAction('DECREMENT')
+export const addSelectedItem = createAction('ADD_SELECTED_ITEM')
 
-const reducer = handleActions({
-    [combineActions(increment, decrement)]: (
-      state,
-      { payload: { amount } }
-    ) => {
-      return { ...state, counter: state.counter + amount };
-    }
+const reducer = handleActions(
+  {
+    INCREMENT: (state:any, action:any) => ({
+      counter: state.counter + action.payload
+    }),
+​
+    DECREMENT: (state:any, action:any) => ({
+      counter: state.counter - action.payload
+    }),
+
+    ADD_SELECTED_ITEM: (state:any, action:any) => ({
+      selectedItems: [...state.selectedItems, action.payload]
+    }),
   },
   defaultState
 );
