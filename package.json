@@ -12,6 +12,7 @@
     "aframe-gui": "^0.1.5",
     "aframe-html-shader": "^0.2.0",
     "aframe-look-at-component": "^0.6.0",
+    "aframe-mouse-cursor-component": "^0.5.2",
     "aframe-state-component": "^3.5.4",
     "animejs": "^2.2.0",
     "apollo-boost": "^0.1.10",

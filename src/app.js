@@ -2,6 +2,7 @@ import 'aframe'
 import 'three'
 import 'aframe-extras'
 import 'aframe-html-shader'
+import 'aframe-mouse-cursor-component'
 import 'tslib'
 // import 'aframe-html-shader'
 // import 'aframe-animation-timeline-component'
@@ -27,6 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // start in the stockroom
     switchCameraPosition(Positions.stockroom)
     // add items to the selected items
-    // store.dispatch(addSelectedItem('3MHCl'))
+    store.dispatch(addSelectedItem('3MHCl'))
   })
 })

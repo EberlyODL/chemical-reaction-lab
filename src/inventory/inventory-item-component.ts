@@ -43,17 +43,12 @@ const register = () => {
         menu.appendChild(animateNode)
       })
 
-      // this.subscribe = store.subscribe(() => {
-      //   const state = store.getState()
-      //   const selectedItems = state.selectedItems
-      //   selectedItems.forEach((id:string, index:number) => {
-      //     const node = document.createElement('a-entity')
-      //     // node.setAttribute('inventory-item', '')
-      //     node.setAttribute('id', id)
-      //     node.setAttribute('position', `-${index * .6} 0 0`);
-      //     el.appendChild(node)
-      //   })
-      // })
+      this.subscribe = store.subscribe(() => {
+        const state = store.getState()
+        const selectedItems = state.selectedItems
+        selectedItems.forEach((id:string, index:number) => {
+        })
+      })
     },
 
     selectItem: function () {
@@ -63,12 +58,11 @@ const register = () => {
     makeButton: function (props: any) {
       const node = document.createElement('a-gui-button')
       node.setAttribute('width', '2')
-      node.setAttribute('position', '0 .7 0')
+      node.setAttribute('position', '0 .8 1')
       node.setAttribute('height', '0.75')
       node.setAttribute('value', 'Select Item')
       node.setAttribute('font-family', 'Helvetica')
       node.setAttribute('scale', '0 0 0')
-      // node.setAttribute('look-at', '[camera]')
 
       node.addEventListener('click', e => {
         this.selectItem()
