@@ -22,6 +22,10 @@ const register = () => {
       }) 
     },
 
+    remove: function () {
+      this.selectedItemsUnsubscribe()
+    }
+
   })
 }
 

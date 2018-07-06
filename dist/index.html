@@ -13,39 +13,27 @@
     <a-assets>
       <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item>
       <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item>
+      <a-asset-item id="3MHCl-object" src="assets/3MHCl.gltf"></a-asset-item>
+      <a-asset-item id="chemlablayout.gltf" src="assets/chemlablayout.gltf"></a-asset-item>
     </a-assets>
 
-    <a-entity gltf-model="/assets/chemlablayout.gltf"></a-entity>
+    <a-entity gltf-model="#chemlablayout.gltf"></a-entity>
 
     <!-- Stockroom -->
     <!-- Stockroom Shelf -->
 
     <!-- Lighting -->
-    <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="0 11 0" rotation="-90 0 0"></a-plane>
-    <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087" rotation="-90 0 0" material="" geometry=""></a-plane>
+    <!-- <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="0 11 0" rotation="-90 0 0"></a-plane>
+    <a-plane id="light-stockroom" width="10" height="5" light="type:point" position="-15.14503496694853 11 5.222428264022087"
+      rotation="-90 0 0" material="" geometry=""></a-plane> -->
     <!-- Bottles -->
+
     <a-entity id="shelve1" position="-22.601 7.570 8" rotation="0 90 0">
-      <a-cylinder inventory-item="" id="inventory1" position="0 0 0">
-        <!-- Inventory Item Menu -->
-      </a-cylinder>
-      <a-cylinder inventory-item="" id="inventory2" position="1.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory3" position="3 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory4" position="4.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory5" position="6 0 0"></a-cylinder>
     </a-entity>
     <a-entity id="shelve2" position="-22.601 5.970 8" rotation="0 90 0">
-      <a-cylinder inventory-item="" id="inventory11" position="0 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory12" position="1.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory13" position="3 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory14" position="4.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory15" position="6 0 0"></a-cylinder>
     </a-entity>
     <a-entity id="shelve3" position="-22.601 4.570 8" rotation="0 90 0">
-      <a-cylinder inventory-item="" id="inventory21" position="0 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory22" position="1.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory23" position="3 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory24" position="4.5 0 0"></a-cylinder>
-      <a-cylinder inventory-item="" id="inventory25" position="6 0 0"></a-cylinder>
+      <a-entity inventory-item="" id="3MHCl" position="0 0 0"></a-entity>
     </a-entity>
 
 

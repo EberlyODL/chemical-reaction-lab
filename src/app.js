@@ -27,9 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // start in the stockroom
     switchCameraPosition(Positions.stockroom)
     // add items to the selected items
-    store.dispatch(addSelectedItem('inventory2'))
-    store.dispatch(addSelectedItem('inventory3'))
-    store.dispatch(addSelectedItem('inventory4'))
-    store.dispatch(addSelectedItem('inventory5'))
+    // store.dispatch(addSelectedItem('3MHCl'))
   })
 })
