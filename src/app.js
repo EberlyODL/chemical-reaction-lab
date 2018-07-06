@@ -19,6 +19,7 @@ import './hud/hud-selected-items'
 import './inventory/inventory-item-component'
 import './lab-table/lab-table-component'
 import './bottle/bottle-component.ts'
+import './follow/follow-component'
 import { Positions } from './camera/variables';
 import switchCameraPosition from './camera/switchCameraPosition';
 

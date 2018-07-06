@@ -1,4 +1,5 @@
 import 'aframe'
+import 'aframe-template-component'
 import { addSelectedItem, store } from '../store'
 declare const AFRAME: any
 
@@ -72,5 +73,4 @@ const register = () => {
     }
   })
 }
-
-export default register()
+register()

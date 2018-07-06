@@ -1,4 +1,5 @@
 import 'aframe'
+declare const AFRAME: any
 import { store } from '../store';
 
 const register = () => {

@@ -1,4 +1,5 @@
 import 'aframe'
+declare const AFRAME: any
 import switchCameraPosition from '../camera/switchCameraPosition';
 import { Positions } from '../camera/variables';
 
