@@ -6,7 +6,7 @@ const register = () => {
   AFRAME.registerComponent('follow', {
     schema: {
       target: { type: 'selector' },
-      speed: { type: 'number', default: 3 },
+      speed: { type: 'number', default: 4 },
     },
 
     init: function () {
