@@ -1,7 +1,6 @@
 import 'aframe'
-import anime from 'animejs'
-declare const AFRAME:any
-import { InventoryList } from './variables';
+import { increment, store } from '../store'
+declare const AFRAME: any
 
 const register = () => {
   AFRAME.registerComponent('inventory-item', {
@@ -11,25 +10,19 @@ const register = () => {
       el.setAttribute('gui-interactable', '')
 
       // Create the label
-      const menuNode = document.createElement('a-gui-button')
-      menuNode.setAttribute('width', '2')
-      menuNode.setAttribute('rotation', '0 90 0')
-      menuNode.setAttribute('position', '0 .7 0')
-      menuNode.setAttribute('height', '0.75')
-      menuNode.setAttribute('value', 'Select Item')
-      menuNode.setAttribute('font-family', 'Helvetica')
-      menuNode.setAttribute('scale', '0 0 0')
-      menuNode.setAttribute('look-at', '[camera]')
-      const menu = el.appendChild(menuNode)
+      const addButtonNode = this.makeButton()
+      const menu = el.appendChild(addButtonNode)
 
-      el.addEventListener('mouseenter', (e:any) => {
+      // Animate in the menu
+      el.addEventListener('mouseenter', (e: any) => {
         const animateNode = document.createElement('a-animation')
         animateNode.setAttribute('attribute', 'scale')
         animateNode.setAttribute('dur', '300')
         animateNode.setAttribute('to', '1 1 1')
         menu.appendChild(animateNode)
       })
-      el.addEventListener('mouseleave', (e:any) => {
+      // Animate out the menu
+      el.addEventListener('mouseleave', (e: any) => {
         const animateNode = document.createElement('a-animation')
         animateNode.setAttribute('attribute', 'scale')
         animateNode.setAttribute('dur', '300')
@@ -37,6 +30,28 @@ const register = () => {
         menu.appendChild(animateNode)
       })
     },
+
+    selectItem: function () {
+      store.dispatch(increment({ amount: 1 }))
+    },
+
+    makeButton: function (props: any) {
+      const node = document.createElement('a-gui-button')
+      node.setAttribute('width', '2')
+      node.setAttribute('rotation', '0 90 0')
+      node.setAttribute('position', '0 .7 0')
+      node.setAttribute('height', '0.75')
+      node.setAttribute('value', 'Select Item')
+      node.setAttribute('font-family', 'Helvetica')
+      node.setAttribute('scale', '0 0 0')
+      node.setAttribute('look-at', '[camera]')
+
+      node.addEventListener('click', e => {
+        this.selectItem()
+      })
+
+      return node
+    }
   })
 }
 

@@ -7,7 +7,8 @@ import 'aframe-look-at-component'
 // import { client } from './state/graphql'
 import 'aframe-gui'
 import './shaders/FresnelShader'
-import './state/byhand'
+// import './state/byhand'
+import { store } from './store'
 import './selectable-component'
 import './camera'
 import './hud/hud-button-component'
@@ -22,4 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
   scene.addEventListener('loaded', (e) => {
     switchCameraPosition(Positions.stockroom)
   })
+
+  console.log(store)
 })

@@ -103,7 +103,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({33:[function(require,module,exports) {
+})({44:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -290,7 +290,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],64:[function(require,module,exports) {
+},{}],76:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -443,7 +443,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],65:[function(require,module,exports) {
+},{}],77:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -529,14 +529,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],63:[function(require,module,exports) {
+},{}],75:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],34:[function(require,module,exports) {
+},{}],45:[function(require,module,exports) {
 
 var global = arguments[3];
 /*!
@@ -2329,7 +2329,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":64,"ieee754":65,"isarray":63,"buffer":34}],7:[function(require,module,exports) {
+},{"base64-js":76,"ieee754":77,"isarray":75,"buffer":45}],9:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 var process = require("process");
@@ -76201,7 +76201,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		}, { "./util.js": 181 }] }, {}, [148])(148);
 });
 //# sourceMappingURL=aframe-master.js.map
-},{"process":33,"buffer":34}],8:[function(require,module,exports) {
+},{"process":44,"buffer":45}],10:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -118531,7 +118531,7 @@ exports.Projector = Projector;
 exports.CanvasRenderer = CanvasRenderer;
 exports.SceneUtils = SceneUtils;
 exports.LensFlare = LensFlare;
-},{}],83:[function(require,module,exports) {
+},{}],78:[function(require,module,exports) {
 var EPS = 0.1;
 
 module.exports = AFRAME.registerComponent('checkpoint-controls', {
@@ -118622,7 +118622,7 @@ module.exports = AFRAME.registerComponent('checkpoint-controls', {
     offset.copy(targetPosition).sub(position);
   }
 });
-},{}],146:[function(require,module,exports) {
+},{}],91:[function(require,module,exports) {
 module.exports = Object.assign(function GamepadButton() {}, {
 	FACE_1: 0,
 	FACE_2: 1,
@@ -118644,7 +118644,7 @@ module.exports = Object.assign(function GamepadButton() {}, {
 
 	VENDOR: 16
 });
-},{}],147:[function(require,module,exports) {
+},{}],92:[function(require,module,exports) {
 function GamepadButtonEvent(type, index, details) {
   this.type = type;
   this.index = index;
@@ -118653,7 +118653,7 @@ function GamepadButtonEvent(type, index, details) {
 }
 
 module.exports = GamepadButtonEvent;
-},{}],84:[function(require,module,exports) {
+},{}],79:[function(require,module,exports) {
 /**
  * Gamepad controls for A-Frame.
  *
@@ -118937,7 +118937,7 @@ module.exports = AFRAME.registerComponent('gamepad-controls', {
     return this.getGamepad().id;
   }
 });
-},{"../../lib/GamepadButton":146,"../../lib/GamepadButtonEvent":147}],148:[function(require,module,exports) {
+},{"../../lib/GamepadButton":91,"../../lib/GamepadButtonEvent":92}],84:[function(require,module,exports) {
 var global = arguments[3];
 var define;
 /**
@@ -119682,7 +119682,7 @@ var define;
     event.locale = '';
   };
 })(window);
-},{}],85:[function(require,module,exports) {
+},{}],80:[function(require,module,exports) {
 require('../../lib/keyboard.polyfill');
 
 var MAX_DELTA = 0.2,
@@ -119844,7 +119844,7 @@ module.exports = AFRAME.registerComponent('keyboard-controls', {
   }
 
 });
-},{"../../lib/keyboard.polyfill":148}],86:[function(require,module,exports) {
+},{"../../lib/keyboard.polyfill":84}],81:[function(require,module,exports) {
 /**
  * Touch-to-move-forward controls for mobile.
  */
@@ -119918,7 +119918,7 @@ module.exports = AFRAME.registerComponent('touch-controls', {
     e.preventDefault();
   }
 });
-},{}],87:[function(require,module,exports) {
+},{}],82:[function(require,module,exports) {
 /**
  * Movement Controls
  *
@@ -120128,7 +120128,7 @@ module.exports = AFRAME.registerComponent('movement-controls', {
     };
   }()
 });
-},{}],88:[function(require,module,exports) {
+},{}],83:[function(require,module,exports) {
 /**
  * 3dof (Gear VR, Daydream) controls for mobile.
  */
@@ -120210,14 +120210,14 @@ module.exports = AFRAME.registerComponent('trackpad-controls', {
   }
 
 });
-},{}],37:[function(require,module,exports) {
+},{}],64:[function(require,module,exports) {
 require('./checkpoint-controls');
 require('./gamepad-controls');
 require('./keyboard-controls');
 require('./touch-controls');
 require('./movement-controls');
 require('./trackpad-controls');
-},{"./checkpoint-controls":83,"./gamepad-controls":84,"./keyboard-controls":85,"./touch-controls":86,"./movement-controls":87,"./trackpad-controls":88}],97:[function(require,module,exports) {
+},{"./checkpoint-controls":78,"./gamepad-controls":79,"./keyboard-controls":80,"./touch-controls":81,"./movement-controls":82,"./trackpad-controls":83}],100:[function(require,module,exports) {
 var LoopMode = {
   once: THREE.LoopOnce,
   repeat: THREE.LoopRepeat,
@@ -120337,7 +120337,7 @@ function wildcardToRegExp(s) {
 function regExpEscape(s) {
   return s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
 }
-},{}],149:[function(require,module,exports) {
+},{}],181:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /**
@@ -123485,7 +123485,7 @@ THREE.LoaderUtils = {
     return a;
   }
 })();
-},{}],98:[function(require,module,exports) {
+},{}],101:[function(require,module,exports) {
 THREE.FBXLoader = require('../../lib/FBXLoader');
 
 /**
@@ -123523,7 +123523,7 @@ module.exports = AFRAME.registerComponent('fbx-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/FBXLoader":149}],150:[function(require,module,exports) {
+},{"../../lib/FBXLoader":181}],180:[function(require,module,exports) {
 /**
  * Source: https://github.com/Adobe-Marketing-Cloud/fetch-script
  */
@@ -123601,7 +123601,7 @@ function fetchScript(settings) {
 }
 
 module.exports = fetchScript;
-},{}],99:[function(require,module,exports) {
+},{}],102:[function(require,module,exports) {
 var fetchScript = require('../../lib/fetch-script')();
 
 var LOADER_SRC = 'https://rawgit.com/mrdoob/three.js/r86/examples/js/loaders/GLTFLoader.js';
@@ -123662,7 +123662,7 @@ module.exports = AFRAME.registerComponent('gltf-model-legacy', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/fetch-script":150}],100:[function(require,module,exports) {
+},{"../../lib/fetch-script":180}],103:[function(require,module,exports) {
 /**
  * json-model
  *
@@ -123721,7 +123721,7 @@ module.exports = AFRAME.registerComponent('json-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],101:[function(require,module,exports) {
+},{}],104:[function(require,module,exports) {
 /**
  * object-model
  *
@@ -123777,7 +123777,7 @@ module.exports = AFRAME.registerComponent('object-model', {
     if (this.model) this.el.removeObject3D('mesh');
   }
 });
-},{}],151:[function(require,module,exports) {
+},{}],132:[function(require,module,exports) {
 /**
  * @author Wei Meng / http://about.me/menway
  *
@@ -124203,7 +124203,7 @@ THREE.PLYLoader.prototype = {
   }
 
 };
-},{}],102:[function(require,module,exports) {
+},{}],105:[function(require,module,exports) {
 /**
  * ply-model
  *
@@ -124284,14 +124284,14 @@ function createModel(geometry) {
     shininess: 0
   }));
 }
-},{"../../lib/PLYLoader":151}],39:[function(require,module,exports) {
+},{"../../lib/PLYLoader":132}],65:[function(require,module,exports) {
 require('./animation-mixer');
 require('./fbx-model');
 require('./gltf-model-legacy');
 require('./json-model');
 require('./object-model');
 require('./ply-model');
-},{"./animation-mixer":97,"./fbx-model":98,"./gltf-model-legacy":99,"./json-model":100,"./object-model":101,"./ply-model":102}],89:[function(require,module,exports) {
+},{"./animation-mixer":100,"./fbx-model":101,"./gltf-model-legacy":102,"./json-model":103,"./object-model":104,"./ply-model":105}],106:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('checkpoint', {
   schema: {
     offset: { default: { x: 0, y: 0, z: 0 }, type: 'vec3' }
@@ -124330,7 +124330,7 @@ module.exports = AFRAME.registerComponent('checkpoint', {
     return this.offset.copy(this.data.offset);
   }
 });
-},{}],90:[function(require,module,exports) {
+},{}],107:[function(require,module,exports) {
 /**
  * @param  {Array<THREE.Material>|THREE.Material} material
  * @return {Array<THREE.Material>}
@@ -124463,7 +124463,7 @@ module.exports = AFRAME.registerComponent('cube-env-map', {
     this.el.sceneEl.object3D.background = texture;
   }
 });
-},{}],91:[function(require,module,exports) {
+},{}],108:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124542,7 +124542,7 @@ module.exports = AFRAME.registerComponent('grab', {
     this.system.addConstraint(this.constraint);
   }
 });
-},{}],92:[function(require,module,exports) {
+},{}],109:[function(require,module,exports) {
 var ACCEL_G = -9.8,
     // m/s^2
 EASING = -15; // m/s^2
@@ -124606,7 +124606,7 @@ module.exports = AFRAME.registerComponent('jump-ability', {
     this.numJumps = 0;
   }
 });
-},{}],93:[function(require,module,exports) {
+},{}],110:[function(require,module,exports) {
 /* global CANNON */
 
 /**
@@ -124824,7 +124824,7 @@ module.exports = AFRAME.registerComponent('kinematic-body', {
     return Math.abs(hitNormal.y) > Math.abs(groundNormal.y) ? hitNormal : groundNormal;
   }
 });
-},{}],94:[function(require,module,exports) {
+},{}],111:[function(require,module,exports) {
 /**
  * Apply this component to models that looks "blocky", to have Three.js compute
  * vertex normals on the fly for a "smoother" look.
@@ -124838,7 +124838,7 @@ module.exports = AFRAME.registerComponent('mesh-smooth', {
     });
   }
 });
-},{}],95:[function(require,module,exports) {
+},{}],112:[function(require,module,exports) {
 /**
  * Recursively applies a MeshNormalMaterial to the entity, such that
  * face colors are determined by their orientation. Helpful for
@@ -124863,7 +124863,7 @@ module.exports = AFRAME.registerComponent('normal-material', {
     });
   }
 });
-},{}],96:[function(require,module,exports) {
+},{}],113:[function(require,module,exports) {
 /**
  * Based on aframe/examples/showcase/tracked-controls.
  *
@@ -125026,7 +125026,7 @@ module.exports = AFRAME.registerComponent('sphere-collider', {
     this.el.emit('hitend', { el: targetEl });
   }
 });
-},{}],38:[function(require,module,exports) {
+},{}],66:[function(require,module,exports) {
 require('./checkpoint');
 require('./cube-env-map');
 require('./grab');
@@ -125035,7 +125035,7 @@ require('./kinematic-body');
 require('./mesh-smooth');
 require('./normal-material');
 require('./sphere-collider');
-},{"./checkpoint":89,"./cube-env-map":90,"./grab":91,"./jump-ability":92,"./kinematic-body":93,"./mesh-smooth":94,"./normal-material":95,"./sphere-collider":96}],107:[function(require,module,exports) {
+},{"./checkpoint":106,"./cube-env-map":107,"./grab":108,"./jump-ability":109,"./kinematic-body":110,"./mesh-smooth":111,"./normal-material":112,"./sphere-collider":113}],93:[function(require,module,exports) {
 /**
  * nav-mesh
  *
@@ -125075,7 +125075,7 @@ module.exports = AFRAME.registerComponent('nav-mesh', {
     this.hasLoadedNavMesh = true;
   }
 });
-},{}],108:[function(require,module,exports) {
+},{}],94:[function(require,module,exports) {
 module.exports = AFRAME.registerComponent('nav-agent', {
   schema: {
     destination: { type: 'vec3' },
@@ -125178,7 +125178,7 @@ module.exports = AFRAME.registerComponent('nav-agent', {
     };
   }()
 });
-},{}],204:[function(require,module,exports) {
+},{}],251:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125509,7 +125509,7 @@ var Utils = function () {
 }();
 
 module.exports = Utils;
-},{}],219:[function(require,module,exports) {
+},{}],263:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125660,7 +125660,7 @@ var BinaryHeap = function () {
 }();
 
 module.exports = BinaryHeap;
-},{}],205:[function(require,module,exports) {
+},{}],252:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125802,7 +125802,7 @@ var AStar = function () {
 }();
 
 module.exports = AStar;
-},{"./BinaryHeap":219,"./utils.js":204}],206:[function(require,module,exports) {
+},{"./BinaryHeap":263,"./utils.js":251}],253:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126025,7 +126025,7 @@ var Builder = function () {
 }();
 
 module.exports = Builder;
-},{"./utils":204}],207:[function(require,module,exports) {
+},{"./utils":251}],254:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126133,7 +126133,7 @@ var Channel = function () {
 }();
 
 module.exports = Channel;
-},{"./utils":204}],154:[function(require,module,exports) {
+},{"./utils":251}],139:[function(require,module,exports) {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -126435,7 +126435,7 @@ var Group = {}; // jshint ignore:line
 var Node = {}; // jshint ignore:line
 
 module.exports = Path;
-},{"./utils":204,"./AStar":205,"./Builder":206,"./Channel":207}],109:[function(require,module,exports) {
+},{"./utils":251,"./AStar":252,"./Builder":253,"./Channel":254}],95:[function(require,module,exports) {
 var Path = require('three-pathfinding');
 
 var pathfinder = new Path();
@@ -126530,11 +126530,11 @@ module.exports = AFRAME.registerSystem('nav', {
     return pathfinder.clampStep(start, end, node, ZONE, groupID, endTarget);
   }
 });
-},{"three-pathfinding":154}],40:[function(require,module,exports) {
+},{"three-pathfinding":139}],68:[function(require,module,exports) {
 require('./nav-mesh');
 require('./nav-agent');
 require('./system');
-},{"./nav-mesh":107,"./nav-agent":108,"./system":109}],103:[function(require,module,exports) {
+},{"./nav-mesh":93,"./nav-agent":94,"./system":95}],96:[function(require,module,exports) {
 /**
  * Flat grid.
  *
@@ -126559,7 +126559,7 @@ module.exports = AFRAME.registerPrimitive('a-grid', {
     src: 'material.src'
   }
 });
-},{}],145:[function(require,module,exports) {
+},{}],176:[function(require,module,exports) {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG_TO_RAD: .0174532925, RAD_TO_DEG: 57.2957795, SQRT3: Math.sqrt(3), TILE: "tile", ENT: "entity", STR: "structure", HEX: "hex", SQR: "square", ABS: "abstract" };vg.Board = function (e, t) {
@@ -127157,7 +127157,7 @@ var vg = module.exports = { VERSION: "0.1.1", PI: Math.PI, TAU: 2 * Math.PI, DEG
     }, t.open("GET", s, !0), t.setRequestHeader("Accept", "application/json"), t.setRequestHeader("Content-Type", "application/json"), t.send("");
   } };
 //# sourceMappingURL=hex-grid.min.js.map
-},{}],152:[function(require,module,exports) {
+},{}],177:[function(require,module,exports) {
 module.exports = {
   "size": 5,
   "cellSize": 10,
@@ -127221,7 +127221,7 @@ module.exports = {
     "userData": {}
   }]
 };
-},{}],104:[function(require,module,exports) {
+},{}],97:[function(require,module,exports) {
 var vg = require('../../lib/hex-grid.min.js');
 var defaultHexGrid = require('../../lib/default-hex-grid');
 
@@ -127278,7 +127278,7 @@ module.exports.Component = AFRAME.registerComponent('hexgrid', {
     this.el.removeObject3D('mesh');
   }
 });
-},{"../../lib/hex-grid.min.js":145,"../../lib/default-hex-grid":152}],105:[function(require,module,exports) {
+},{"../../lib/hex-grid.min.js":176,"../../lib/default-hex-grid":177}],98:[function(require,module,exports) {
 /**
  * Flat-shaded ocean primitive.
  *
@@ -127377,7 +127377,7 @@ module.exports.Component = AFRAME.registerComponent('ocean', {
     this.mesh.geometry.verticesNeedUpdate = true;
   }
 });
-},{}],106:[function(require,module,exports) {
+},{}],99:[function(require,module,exports) {
 /**
  * Tube following a custom path.
  *
@@ -127438,18 +127438,18 @@ module.exports.Component = AFRAME.registerComponent('tube', {
     if (this.mesh) this.el.removeObject3D('mesh');
   }
 });
-},{}],41:[function(require,module,exports) {
+},{}],67:[function(require,module,exports) {
 require('./a-grid');
 require('./a-hexgrid');
 require('./a-ocean');
 require('./a-tube');
-},{"./a-grid":103,"./a-hexgrid":104,"./a-ocean":105,"./a-tube":106}],9:[function(require,module,exports) {
+},{"./a-grid":96,"./a-hexgrid":97,"./a-ocean":98,"./a-tube":99}],11:[function(require,module,exports) {
 require('./src/controls');
 require('./src/loaders');
 require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
-},{"./src/controls":37,"./src/loaders":39,"./src/misc":38,"./src/pathfinding":40,"./src/primitives":41}],10:[function(require,module,exports) {
+},{"./src/controls":64,"./src/loaders":65,"./src/misc":66,"./src/pathfinding":68,"./src/primitives":67}],12:[function(require,module,exports) {
 var debug = AFRAME.utils.debug;
 var coordinates = AFRAME.utils.coordinates;
 
@@ -127556,3025 +127556,3006 @@ AFRAME.registerComponent('look-at', {
   }
 });
 
-},{}],172:[function(require,module,exports) {
-'use strict';
+},{}],46:[function(require,module,exports) {
+window.normalYPosition = 1.5;
+window.hiddenYPosition = 1000;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.visit = visit;
-exports.visitInParallel = visitInParallel;
-exports.visitWithTypeInfo = visitWithTypeInfo;
-exports.getVisitFn = getVisitFn;
+//default colors
+window.key_orange       = '#ed5b21' // rgb(237, 91, 33) Light orange
+window.key_orange_light = '#ef8c60' // rgb (239, 140, 96) Extra Light Orange
+window.key_grey         = '#22252a' // rgb(34, 37, 42) Standard grey
+window.key_grey_dark    = '#2c3037' // rgb(44, 48, 55) Medium grey
+window.key_grey_light   = '#606876' // rgb(96, 104, 118) Light grey
+window.key_offwhite     = '#d3d3d4' // rgb(211, 211, 212) Extra Light grey
+window.key_white        = '#fff'
 
+//icon font variables
+window.icon_font = {"alert": "\uf101", "alert-circled": "\uf100", "android-add": "\uf2c7", "android-add-circle": "\uf359", "android-alarm-clock": "\uf35a", "android-alert": "\uf35b", "android-apps": "\uf35c", "android-archive": "\uf2c9", "android-arrow-back": "\uf2ca", "android-arrow-down": "\uf35d", "android-arrow-dropdown": "\uf35f", "android-arrow-dropdown-circle": "\uf35e", "android-arrow-dropleft": "\uf361", "android-arrow-dropleft-circle": "\uf360", "android-arrow-dropright": "\uf363", "android-arrow-dropright-circle": "\uf362", "android-arrow-dropup": "\uf365", "android-arrow-dropup-circle": "\uf364", "android-arrow-forward": "\uf30f", "android-arrow-up": "\uf366", "android-attach": "\uf367", "android-bar": "\uf368", "android-bicycle": "\uf369", "android-boat": "\uf36a", "android-bookmark": "\uf36b", "android-bulb": "\uf36c", "android-bus": "\uf36d", "android-calendar": "\uf2d1", "android-call": "\uf2d2", "android-camera": "\uf2d3", "android-cancel": "\uf36e", "android-car": "\uf36f", "android-cart": "\uf370", "android-chat": "\uf2d4", "android-checkbox": "\uf374", "android-checkbox-blank": "\uf371", "android-checkbox-outline": "\uf373", "android-checkbox-outline-blank": "\uf372", "android-checkmark-circle": "\uf375", "android-clipboard": "\uf376", "android-close": "\uf2d7", "android-cloud": "\uf37a", "android-cloud-circle": "\uf377", "android-cloud-done": "\uf378", "android-cloud-outline": "\uf379", "android-color-palette": "\uf37b", "android-compass": "\uf37c", "android-contact": "\uf2d8", "android-contacts": "\uf2d9", "android-contract": "\uf37d", "android-create": "\uf37e", "android-delete": "\uf37f", "android-desktop": "\uf380", "android-document": "\uf381", "android-done": "\uf383", "android-done-all": "\uf382", "android-download": "\uf2dd", "android-drafts": "\uf384", "android-exit": "\uf385", "android-expand": "\uf386", "android-favorite": "\uf388", "android-favorite-outline": "\uf387", "android-film": "\uf389", "android-folder": "\uf2e0", "android-folder-open": "\uf38a", "android-funnel": "\uf38b", "android-globe": "\uf38c", "android-hand": "\uf2e3", "android-hangout": "\uf38d", "android-happy": "\uf38e", "android-home": "\uf38f", "android-image": "\uf2e4", "android-laptop": "\uf390", "android-list": "\uf391", "android-locate": "\uf2e9", "android-lock": "\uf392", "android-mail": "\uf2eb", "android-map": "\uf393", "android-menu": "\uf394", "android-microphone": "\uf2ec", "android-microphone-off": "\uf395", "android-more-horizontal": "\uf396", "android-more-vertical": "\uf397", "android-navigate": "\uf398", "android-notifications": "\uf39b", "android-notifications-none": "\uf399", "android-notifications-off": "\uf39a", "android-open": "\uf39c", "android-options": "\uf39d", "android-people": "\uf39e", "android-person": "\uf3a0", "android-person-add": "\uf39f", "android-phone-landscape": "\uf3a1", "android-phone-portrait": "\uf3a2", "android-pin": "\uf3a3", "android-plane": "\uf3a4", "android-playstore": "\uf2f0", "android-print": "\uf3a5", "android-radio-button-off": "\uf3a6", "android-radio-button-on": "\uf3a7", "android-refresh": "\uf3a8", "android-remove": "\uf2f4", "android-remove-circle": "\uf3a9", "android-restaurant": "\uf3aa", "android-sad": "\uf3ab", "android-search": "\uf2f5", "android-send": "\uf2f6", "android-settings": "\uf2f7", "android-share": "\uf2f8", "android-share-alt": "\uf3ac", "android-star": "\uf2fc", "android-star-half": "\uf3ad", "android-star-outline": "\uf3ae", "android-stopwatch": "\uf2fd", "android-subway": "\uf3af", "android-sunny": "\uf3b0", "android-sync": "\uf3b1", "android-textsms": "\uf3b2", "android-time": "\uf3b3", "android-train": "\uf3b4", "android-unlock": "\uf3b5", "android-upload": "\uf3b6", "android-volume-down": "\uf3b7", "android-volume-mute": "\uf3b8", "android-volume-off": "\uf3b9", "android-volume-up": "\uf3ba", "android-walk": "\uf3bb", "android-warning": "\uf3bc", "android-watch": "\uf3bd", "android-wifi": "\uf305", "aperture": "\uf313", "archive": "\uf102", "arrow-down-a": "\uf103", "arrow-down-b": "\uf104", "arrow-down-c": "\uf105", "arrow-expand": "\uf25e", "arrow-graph-down-left": "\uf25f", "arrow-graph-down-right": "\uf260", "arrow-graph-up-left": "\uf261", "arrow-graph-up-right": "\uf262", "arrow-left-a": "\uf106", "arrow-left-b": "\uf107", "arrow-left-c": "\uf108", "arrow-move": "\uf263", "arrow-resize": "\uf264", "arrow-return-left": "\uf265", "arrow-return-right": "\uf266", "arrow-right-a": "\uf109", "arrow-right-b": "\uf10a", "arrow-right-c": "\uf10b", "arrow-shrink": "\uf267", "arrow-swap": "\uf268", "arrow-up-a": "\uf10c", "arrow-up-b": "\uf10d", "arrow-up-c": "\uf10e", "asterisk": "\uf314", "at": "\uf10f", "backspace": "\uf3bf", "backspace-outline": "\uf3be", "bag": "\uf110", "battery-charging": "\uf111", "battery-empty": "\uf112", "battery-full": "\uf113", "battery-half": "\uf114", "battery-low": "\uf115", "beaker": "\uf269", "beer": "\uf26a", "bluetooth": "\uf116", "bonfire": "\uf315", "bookmark": "\uf26b", "bowtie": "\uf3c0", "briefcase": "\uf26c", "bug": "\uf2be", "calculator": "\uf26d", "calendar": "\uf117", "camera": "\uf118", "card": "\uf119", "cash": "\uf316", "chatbox": "\uf11b", "chatbox-working": "\uf11a", "chatboxes": "\uf11c", "chatbubble": "\uf11e", "chatbubble-working": "\uf11d", "chatbubbles": "\uf11f", "checkmark": "\uf122", "checkmark-circled": "\uf120", "checkmark-round": "\uf121", "chevron-down": "\uf123", "chevron-left": "\uf124", "chevron-right": "\uf125", "chevron-up": "\uf126", "clipboard": "\uf127", "clock": "\uf26e", "close": "\uf12a", "close-circled": "\uf128", "close-round": "\uf129", "closed-captioning": "\uf317", "cloud": "\uf12b", "code": "\uf271", "code-download": "\uf26f", "code-working": "\uf270", "coffee": "\uf272", "compass": "\uf273", "compose": "\uf12c", "connection-bars": "\uf274", "contrast": "\uf275", "crop": "\uf3c1", "cube": "\uf318", "disc": "\uf12d", "document": "\uf12f", "document-text": "\uf12e", "drag": "\uf130", "earth": "\uf276", "easel": "\uf3c2", "edit": "\uf2bf", "egg": "\uf277", "eject": "\uf131", "email": "\uf132", "email-unread": "\uf3c3", "erlenmeyer-flask": "\uf3c5", "erlenmeyer-flask-bubbles": "\uf3c4", "eye": "\uf133", "eye-disabled": "\uf306", "female": "\uf278", "filing": "\uf134", "film-marker": "\uf135", "fireball": "\uf319", "flag": "\uf279", "flame": "\uf31a", "flash": "\uf137", "flash-off": "\uf136", "folder": "\uf139", "fork": "\uf27a", "fork-repo": "\uf2c0", "forward": "\uf13a", "funnel": "\uf31b", "gear-a": "\uf13d", "gear-b": "\uf13e", "grid": "\uf13f", "hammer": "\uf27b", "happy": "\uf31c", "happy-outline": "\uf3c6", "headphone": "\uf140", "heart": "\uf141", "heart-broken": "\uf31d", "help": "\uf143", "help-buoy": "\uf27c", "help-circled": "\uf142", "home": "\uf144", "icecream": "\uf27d", "image": "\uf147", "images": "\uf148", "information": "\uf14a", "information-circled": "\uf149", "ionic": "\uf14b", "ios-alarm": "\uf3c8", "ios-alarm-outline": "\uf3c7", "ios-albums": "\uf3ca", "ios-albums-outline": "\uf3c9", "ios-americanfootball": "\uf3cc", "ios-americanfootball-outline": "\uf3cb", "ios-analytics": "\uf3ce", "ios-analytics-outline": "\uf3cd", "ios-arrow-back": "\uf3cf", "ios-arrow-down": "\uf3d0", "ios-arrow-forward": "\uf3d1", "ios-arrow-left": "\uf3d2", "ios-arrow-right": "\uf3d3", "ios-arrow-thin-down": "\uf3d4", "ios-arrow-thin-left": "\uf3d5", "ios-arrow-thin-right": "\uf3d6", "ios-arrow-thin-up": "\uf3d7", "ios-arrow-up": "\uf3d8", "ios-at": "\uf3da", "ios-at-outline": "\uf3d9", "ios-barcode": "\uf3dc", "ios-barcode-outline": "\uf3db", "ios-baseball": "\uf3de", "ios-baseball-outline": "\uf3dd", "ios-basketball": "\uf3e0", "ios-basketball-outline": "\uf3df", "ios-bell": "\uf3e2", "ios-bell-outline": "\uf3e1", "ios-body": "\uf3e4", "ios-body-outline": "\uf3e3", "ios-bolt": "\uf3e6", "ios-bolt-outline": "\uf3e5", "ios-book": "\uf3e8", "ios-book-outline": "\uf3e7", "ios-bookmarks": "\uf3ea", "ios-bookmarks-outline": "\uf3e9", "ios-box": "\uf3ec", "ios-box-outline": "\uf3eb", "ios-briefcase": "\uf3ee", "ios-briefcase-outline": "\uf3ed", "ios-browsers": "\uf3f0", "ios-browsers-outline": "\uf3ef", "ios-calculator": "\uf3f2", "ios-calculator-outline": "\uf3f1", "ios-calendar": "\uf3f4", "ios-calendar-outline": "\uf3f3", "ios-camera": "\uf3f6", "ios-camera-outline": "\uf3f5", "ios-cart": "\uf3f8", "ios-cart-outline": "\uf3f7", "ios-chatboxes": "\uf3fa", "ios-chatboxes-outline": "\uf3f9", "ios-chatbubble": "\uf3fc", "ios-chatbubble-outline": "\uf3fb", "ios-checkmark": "\uf3ff", "ios-checkmark-empty": "\uf3fd", "ios-checkmark-outline": "\uf3fe", "ios-circle-filled": "\uf400", "ios-circle-outline": "\uf401", "ios-clock": "\uf403", "ios-clock-outline": "\uf402", "ios-close": "\uf406", "ios-close-empty": "\uf404", "ios-close-outline": "\uf405", "ios-cloud": "\uf40c", "ios-cloud-download": "\uf408", "ios-cloud-download-outline": "\uf407", "ios-cloud-outline": "\uf409", "ios-cloud-upload": "\uf40b", "ios-cloud-upload-outline": "\uf40a", "ios-cloudy": "\uf410", "ios-cloudy-night": "\uf40e", "ios-cloudy-night-outline": "\uf40d", "ios-cloudy-outline": "\uf40f", "ios-cog": "\uf412", "ios-cog-outline": "\uf411", "ios-color-filter": "\uf414", "ios-color-filter-outline": "\uf413", "ios-color-wand": "\uf416", "ios-color-wand-outline": "\uf415", "ios-compose": "\uf418", "ios-compose-outline": "\uf417", "ios-contact": "\uf41a", "ios-contact-outline": "\uf419", "ios-copy": "\uf41c", "ios-copy-outline": "\uf41b", "ios-crop": "\uf41e", "ios-crop-strong": "\uf41d", "ios-download": "\uf420", "ios-download-outline": "\uf41f", "ios-drag": "\uf421", "ios-email": "\uf423", "ios-email-outline": "\uf422", "ios-eye": "\uf425", "ios-eye-outline": "\uf424", "ios-fastforward": "\uf427", "ios-fastforward-outline": "\uf426", "ios-filing": "\uf429", "ios-filing-outline": "\uf428", "ios-film": "\uf42b", "ios-film-outline": "\uf42a", "ios-flag": "\uf42d", "ios-flag-outline": "\uf42c", "ios-flame": "\uf42f", "ios-flame-outline": "\uf42e", "ios-flask": "\uf431", "ios-flask-outline": "\uf430", "ios-flower": "\uf433", "ios-flower-outline": "\uf432", "ios-folder": "\uf435", "ios-folder-outline": "\uf434", "ios-football": "\uf437", "ios-football-outline": "\uf436", "ios-game-controller-a": "\uf439", "ios-game-controller-a-outline": "\uf438", "ios-game-controller-b": "\uf43b", "ios-game-controller-b-outline": "\uf43a", "ios-gear": "\uf43d", "ios-gear-outline": "\uf43c", "ios-glasses": "\uf43f", "ios-glasses-outline": "\uf43e", "ios-grid-view": "\uf441", "ios-grid-view-outline": "\uf440", "ios-heart": "\uf443", "ios-heart-outline": "\uf442", "ios-help": "\uf446", "ios-help-empty": "\uf444", "ios-help-outline": "\uf445", "ios-home": "\uf448", "ios-home-outline": "\uf447", "ios-infinite": "\uf44a", "ios-infinite-outline": "\uf449", "ios-information": "\uf44d", "ios-information-empty": "\uf44b", "ios-information-outline": "\uf44c", "ios-ionic-outline": "\uf44e", "ios-keypad": "\uf450", "ios-keypad-outline": "\uf44f", "ios-lightbulb": "\uf452", "ios-lightbulb-outline": "\uf451", "ios-list": "\uf454", "ios-list-outline": "\uf453", "ios-location": "\uf456", "ios-location-outline": "\uf455", "ios-locked": "\uf458", "ios-locked-outline": "\uf457", "ios-loop": "\uf45a", "ios-loop-strong": "\uf459", "ios-medical": "\uf45c", "ios-medical-outline": "\uf45b", "ios-medkit": "\uf45e", "ios-medkit-outline": "\uf45d", "ios-mic": "\uf461", "ios-mic-off": "\uf45f", "ios-mic-outline": "\uf460", "ios-minus": "\uf464", "ios-minus-empty": "\uf462", "ios-minus-outline": "\uf463", "ios-monitor": "\uf466", "ios-monitor-outline": "\uf465", "ios-moon": "\uf468", "ios-moon-outline": "\uf467", "ios-more": "\uf46a", "ios-more-outline": "\uf469", "ios-musical-note": "\uf46b", "ios-musical-notes": "\uf46c", "ios-navigate": "\uf46e", "ios-navigate-outline": "\uf46d", "ios-nutrition": "\uf470", "ios-nutrition-outline": "\uf46f", "ios-paper": "\uf472", "ios-paper-outline": "\uf471", "ios-paperplane": "\uf474", "ios-paperplane-outline": "\uf473", "ios-partlysunny": "\uf476", "ios-partlysunny-outline": "\uf475", "ios-pause": "\uf478", "ios-pause-outline": "\uf477", "ios-paw": "\uf47a", "ios-paw-outline": "\uf479", "ios-people": "\uf47c", "ios-people-outline": "\uf47b", "ios-person": "\uf47e", "ios-person-outline": "\uf47d", "ios-personadd": "\uf480", "ios-personadd-outline": "\uf47f", "ios-photos": "\uf482", "ios-photos-outline": "\uf481", "ios-pie": "\uf484", "ios-pie-outline": "\uf483", "ios-pint": "\uf486", "ios-pint-outline": "\uf485", "ios-play": "\uf488", "ios-play-outline": "\uf487", "ios-plus": "\uf48b", "ios-plus-empty": "\uf489", "ios-plus-outline": "\uf48a", "ios-pricetag": "\uf48d", "ios-pricetag-outline": "\uf48c", "ios-pricetags": "\uf48f", "ios-pricetags-outline": "\uf48e", "ios-printer": "\uf491", "ios-printer-outline": "\uf490", "ios-pulse": "\uf493", "ios-pulse-strong": "\uf492", "ios-rainy": "\uf495", "ios-rainy-outline": "\uf494", "ios-recording": "\uf497", "ios-recording-outline": "\uf496", "ios-redo": "\uf499", "ios-redo-outline": "\uf498", "ios-refresh": "\uf49c", "ios-refresh-empty": "\uf49a", "ios-refresh-outline": "\uf49b", "ios-reload": "\uf49d", "ios-reverse-camera": "\uf49f", "ios-reverse-camera-outline": "\uf49e", "ios-rewind": "\uf4a1", "ios-rewind-outline": "\uf4a0", "ios-rose": "\uf4a3", "ios-rose-outline": "\uf4a2", "ios-search": "\uf4a5", "ios-search-strong": "\uf4a4", "ios-settings": "\uf4a7", "ios-settings-strong": "\uf4a6", "ios-shuffle": "\uf4a9", "ios-shuffle-strong": "\uf4a8", "ios-skipbackward": "\uf4ab", "ios-skipbackward-outline": "\uf4aa", "ios-skipforward": "\uf4ad", "ios-skipforward-outline": "\uf4ac", "ios-snowy": "\uf4ae", "ios-speedometer": "\uf4b0", "ios-speedometer-outline": "\uf4af", "ios-star": "\uf4b3", "ios-star-half": "\uf4b1", "ios-star-outline": "\uf4b2", "ios-stopwatch": "\uf4b5", "ios-stopwatch-outline": "\uf4b4", "ios-sunny": "\uf4b7", "ios-sunny-outline": "\uf4b6", "ios-telephone": "\uf4b9", "ios-telephone-outline": "\uf4b8", "ios-tennisball": "\uf4bb", "ios-tennisball-outline": "\uf4ba", "ios-thunderstorm": "\uf4bd", "ios-thunderstorm-outline": "\uf4bc", "ios-time": "\uf4bf", "ios-time-outline": "\uf4be", "ios-timer": "\uf4c1", "ios-timer-outline": "\uf4c0", "ios-toggle": "\uf4c3", "ios-toggle-outline": "\uf4c2", "ios-trash": "\uf4c5", "ios-trash-outline": "\uf4c4", "ios-undo": "\uf4c7", "ios-undo-outline": "\uf4c6", "ios-unlocked": "\uf4c9", "ios-unlocked-outline": "\uf4c8", "ios-upload": "\uf4cb", "ios-upload-outline": "\uf4ca", "ios-videocam": "\uf4cd", "ios-videocam-outline": "\uf4cc", "ios-volume-high": "\uf4ce", "ios-volume-low": "\uf4cf", "ios-wineglass": "\uf4d1", "ios-wineglass-outline": "\uf4d0", "ios-world": "\uf4d3", "ios-world-outline": "\uf4d2", "ipad": "\uf1f9", "iphone": "\uf1fa", "ipod": "\uf1fb", "jet": "\uf295", "key": "\uf296", "knife": "\uf297", "laptop": "\uf1fc", "leaf": "\uf1fd", "levels": "\uf298", "lightbulb": "\uf299", "link": "\uf1fe", "load-a": "\uf29a", "load-b": "\uf29b", "load-c": "\uf29c", "load-d": "\uf29d", "location": "\uf1ff", "lock-combination": "\uf4d4", "locked": "\uf200", "log-in": "\uf29e", "log-out": "\uf29f", "loop": "\uf201", "magnet": "\uf2a0", "male": "\uf2a1", "man": "\uf202", "map": "\uf203", "medkit": "\uf2a2", "merge": "\uf33f", "mic-a": "\uf204", "mic-b": "\uf205", "mic-c": "\uf206", "minus": "\uf209", "minus-circled": "\uf207", "minus-round": "\uf208", "model-s": "\uf2c1", "monitor": "\uf20a", "more": "\uf20b", "mouse": "\uf340", "music-note": "\uf20c", "navicon": "\uf20e", "navicon-round": "\uf20d", "navigate": "\uf2a3", "network": "\uf341", "no-smoking": "\uf2c2", "nuclear": "\uf2a4", "outlet": "\uf342", "paintbrush": "\uf4d5", "paintbucket": "\uf4d6", "paper-airplane": "\uf2c3", "paperclip": "\uf20f", "pause": "\uf210", "person": "\uf213", "person-add": "\uf211", "person-stalker": "\uf212", "pie-graph": "\uf2a5", "pin": "\uf2a6", "pinpoint": "\uf2a7", "pizza": "\uf2a8", "plane": "\uf214", "planet": "\uf343", "play": "\uf215", "playstation": "\uf30a", "plus": "\uf218", "plus-circled": "\uf216", "plus-round": "\uf217", "podium": "\uf344", "pound": "\uf219", "power": "\uf2a9", "pricetag": "\uf2aa", "pricetags": "\uf2ab", "printer": "\uf21a", "pull-request": "\uf345", "qr-scanner": "\uf346", "quote": "\uf347", "radio-waves": "\uf2ac", "record": "\uf21b", "refresh": "\uf21c", "reply": "\uf21e", "reply-all": "\uf21d", "ribbon-a": "\uf348", "ribbon-b": "\uf349", "sad": "\uf34a", "sad-outline": "\uf4d7", "scissors": "\uf34b", "search": "\uf21f", "settings": "\uf2ad", "share": "\uf220", "shuffle": "\uf221", "skip-backward": "\uf222", "skip-forward": "\uf223", "social-android": "\uf225", "social-android-outline": "\uf224", "social-angular": "\uf4d9", "social-angular-outline": "\uf4d8", "social-apple": "\uf227", "social-apple-outline": "\uf226", "social-bitcoin": "\uf2af", "social-bitcoin-outline": "\uf2ae", "social-buffer": "\uf229", "social-buffer-outline": "\uf228", "social-chrome": "\uf4db", "social-chrome-outline": "\uf4da", "social-codepen": "\uf4dd", "social-codepen-outline": "\uf4dc", "social-css3": "\uf4df", "social-css3-outline": "\uf4de", "social-designernews": "\uf22b", "social-designernews-outline": "\uf22a", "social-dribbble": "\uf22d", "social-dribbble-outline": "\uf22c", "social-dropbox": "\uf22f", "social-dropbox-outline": "\uf22e", "social-euro": "\uf4e1", "social-euro-outline": "\uf4e0", "social-facebook": "\uf231", "social-facebook-outline": "\uf230", "social-foursquare": "\uf34d", "social-foursquare-outline": "\uf34c", "social-freebsd-devil": "\uf2c4", "social-github": "\uf233", "social-github-outline": "\uf232", "social-google": "\uf34f", "social-google-outline": "\uf34e", "social-googleplus": "\uf235", "social-googleplus-outline": "\uf234", "social-hackernews": "\uf237", "social-hackernews-outline": "\uf236", "social-html5": "\uf4e3", "social-html5-outline": "\uf4e2", "social-instagram": "\uf351", "social-instagram-outline": "\uf350", "social-javascript": "\uf4e5", "social-javascript-outline": "\uf4e4", "social-linkedin": "\uf239", "social-linkedin-outline": "\uf238", "social-markdown": "\uf4e6", "social-nodejs": "\uf4e7", "social-octocat": "\uf4e8", "social-pinterest": "\uf2b1", "social-pinterest-outline": "\uf2b0", "social-python": "\uf4e9", "social-reddit": "\uf23b", "social-reddit-outline": "\uf23a", "social-rss": "\uf23d", "social-rss-outline": "\uf23c", "social-sass": "\uf4ea", "social-skype": "\uf23f", "social-skype-outline": "\uf23e", "social-snapchat": "\uf4ec", "social-snapchat-outline": "\uf4eb", "social-tumblr": "\uf241", "social-tumblr-outline": "\uf240", "social-tux": "\uf2c5", "social-twitch": "\uf4ee", "social-twitch-outline": "\uf4ed", "social-twitter": "\uf243", "social-twitter-outline": "\uf242", "social-usd": "\uf353", "social-usd-outline": "\uf352", "social-vimeo": "\uf245", "social-vimeo-outline": "\uf244", "social-whatsapp": "\uf4f0", "social-whatsapp-outline": "\uf4ef", "social-windows": "\uf247", "social-windows-outline": "\uf246", "social-wordpress": "\uf249", "social-wordpress-outline": "\uf248", "social-yahoo": "\uf24b", "social-yahoo-outline": "\uf24a", "social-yen": "\uf4f2", "social-yen-outline": "\uf4f1", "social-youtube": "\uf24d", "social-youtube-outline": "\uf24c", "soup-can": "\uf4f4", "soup-can-outline": "\uf4f3", "speakerphone": "\uf2b2", "speedometer": "\uf2b3", "spoon": "\uf2b4", "star": "\uf24e", "stats-bars": "\uf2b5", "steam": "\uf30b", "stop": "\uf24f", "thermometer": "\uf2b6", "thumbsdown": "\uf250", "thumbsup": "\uf251", "toggle": "\uf355", "toggle-filled": "\uf354", "transgender": "\uf4f5", "trash-a": "\uf252", "trash-b": "\uf253", "trophy": "\uf356", "tshirt": "\uf4f7", "tshirt-outline": "\uf4f6", "umbrella": "\uf2b7", "university": "\uf357", "unlocked": "\uf254", "upload": "\uf255", "usb": "\uf2b8", "videocamera": "\uf256", "volume-high": "\uf257", "volume-low": "\uf258", "volume-medium": "\uf259", "volume-mute": "\uf25a", "wand": "\uf358", "waterdrop": "\uf25b", "wifi": "\uf25c", "wineglass": "\uf2b9", "woman": "\uf25d", "wrench": "\uf2ba", "xbox": "\uf30c"};
 
-/**
- * A visitor is comprised of visit functions, which are called on each node
- * during the visitor's traversal.
- */
-
-
-/**
- * A visitor is provided to visit, it contains the collection of
- * relevant functions to be called during the visitor's traversal.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-var QueryDocumentKeys = exports.QueryDocumentKeys = {
-  Name: [],
-
-  Document: ['definitions'],
-  OperationDefinition: ['name', 'variableDefinitions', 'directives', 'selectionSet'],
-  VariableDefinition: ['variable', 'type', 'defaultValue'],
-  Variable: ['name'],
-  SelectionSet: ['selections'],
-  Field: ['alias', 'name', 'arguments', 'directives', 'selectionSet'],
-  Argument: ['name', 'value'],
-
-  FragmentSpread: ['name', 'directives'],
-  InlineFragment: ['typeCondition', 'directives', 'selectionSet'],
-  FragmentDefinition: ['name',
-  // Note: fragment variable definitions are experimental and may be changed
-  // or removed in the future.
-  'variableDefinitions', 'typeCondition', 'directives', 'selectionSet'],
-
-  IntValue: [],
-  FloatValue: [],
-  StringValue: [],
-  BooleanValue: [],
-  NullValue: [],
-  EnumValue: [],
-  ListValue: ['values'],
-  ObjectValue: ['fields'],
-  ObjectField: ['name', 'value'],
-
-  Directive: ['name', 'arguments'],
-
-  NamedType: ['name'],
-  ListType: ['type'],
-  NonNullType: ['type'],
-
-  SchemaDefinition: ['directives', 'operationTypes'],
-  OperationTypeDefinition: ['type'],
-
-  ScalarTypeDefinition: ['description', 'name', 'directives'],
-  ObjectTypeDefinition: ['description', 'name', 'interfaces', 'directives', 'fields'],
-  FieldDefinition: ['description', 'name', 'arguments', 'type', 'directives'],
-  InputValueDefinition: ['description', 'name', 'type', 'defaultValue', 'directives'],
-  InterfaceTypeDefinition: ['description', 'name', 'directives', 'fields'],
-  UnionTypeDefinition: ['description', 'name', 'directives', 'types'],
-  EnumTypeDefinition: ['description', 'name', 'directives', 'values'],
-  EnumValueDefinition: ['description', 'name', 'directives'],
-  InputObjectTypeDefinition: ['description', 'name', 'directives', 'fields'],
-
-  ScalarTypeExtension: ['name', 'directives'],
-  ObjectTypeExtension: ['name', 'interfaces', 'directives', 'fields'],
-  InterfaceTypeExtension: ['name', 'directives', 'fields'],
-  UnionTypeExtension: ['name', 'directives', 'types'],
-  EnumTypeExtension: ['name', 'directives', 'values'],
-  InputObjectTypeExtension: ['name', 'directives', 'fields'],
-
-  DirectiveDefinition: ['description', 'name', 'arguments', 'locations']
-};
-
-/**
- * A KeyMap describes each the traversable properties of each kind of node.
- */
-var BREAK = exports.BREAK = {};
-
-/**
- * visit() will walk through an AST using a depth first traversal, calling
- * the visitor's enter function at each node in the traversal, and calling the
- * leave function after visiting that node and all of its child nodes.
- *
- * By returning different values from the enter and leave functions, the
- * behavior of the visitor can be altered, including skipping over a sub-tree of
- * the AST (by returning false), editing the AST by returning a value or null
- * to remove the value, or to stop the whole traversal by returning BREAK.
- *
- * When using visit() to edit an AST, the original AST will not be modified, and
- * a new version of the AST with the changes applied will be returned from the
- * visit function.
- *
- *     const editedAST = visit(ast, {
- *       enter(node, key, parent, path, ancestors) {
- *         // @return
- *         //   undefined: no action
- *         //   false: skip visiting this node
- *         //   visitor.BREAK: stop visiting altogether
- *         //   null: delete this node
- *         //   any value: replace this node with the returned value
- *       },
- *       leave(node, key, parent, path, ancestors) {
- *         // @return
- *         //   undefined: no action
- *         //   false: no action
- *         //   visitor.BREAK: stop visiting altogether
- *         //   null: delete this node
- *         //   any value: replace this node with the returned value
- *       }
- *     });
- *
- * Alternatively to providing enter() and leave() functions, a visitor can
- * instead provide functions named the same as the kinds of AST nodes, or
- * enter/leave visitors at a named key, leading to four permutations of
- * visitor API:
- *
- * 1) Named visitors triggered when entering a node a specific kind.
- *
- *     visit(ast, {
- *       Kind(node) {
- *         // enter the "Kind" node
- *       }
- *     })
- *
- * 2) Named visitors that trigger upon entering and leaving a node of
- *    a specific kind.
- *
- *     visit(ast, {
- *       Kind: {
- *         enter(node) {
- *           // enter the "Kind" node
- *         }
- *         leave(node) {
- *           // leave the "Kind" node
- *         }
- *       }
- *     })
- *
- * 3) Generic visitors that trigger upon entering and leaving any node.
- *
- *     visit(ast, {
- *       enter(node) {
- *         // enter any node
- *       },
- *       leave(node) {
- *         // leave any node
- *       }
- *     })
- *
- * 4) Parallel visitors for entering and leaving nodes of a specific kind.
- *
- *     visit(ast, {
- *       enter: {
- *         Kind(node) {
- *           // enter the "Kind" node
- *         }
- *       },
- *       leave: {
- *         Kind(node) {
- *           // leave the "Kind" node
- *         }
- *       }
- *     })
- */
-function visit(root, visitor) {
-  var visitorKeys = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : QueryDocumentKeys;
-
-  /* eslint-disable no-undef-init */
-  var stack = undefined;
-  var inArray = Array.isArray(root);
-  var keys = [root];
-  var index = -1;
-  var edits = [];
-  var node = undefined;
-  var key = undefined;
-  var parent = undefined;
-  var path = [];
-  var ancestors = [];
-  var newRoot = root;
-  /* eslint-enable no-undef-init */
-
-  do {
-    index++;
-    var isLeaving = index === keys.length;
-    var isEdited = isLeaving && edits.length !== 0;
-    if (isLeaving) {
-      key = ancestors.length === 0 ? undefined : path[path.length - 1];
-      node = parent;
-      parent = ancestors.pop();
-      if (isEdited) {
-        if (inArray) {
-          node = node.slice();
-        } else {
-          var clone = {};
-          for (var k in node) {
-            if (node.hasOwnProperty(k)) {
-              clone[k] = node[k];
-            }
-          }
-          node = clone;
-        }
-        var editOffset = 0;
-        for (var ii = 0; ii < edits.length; ii++) {
-          var editKey = edits[ii][0];
-          var editValue = edits[ii][1];
-          if (inArray) {
-            editKey -= editOffset;
-          }
-          if (inArray && editValue === null) {
-            node.splice(editKey, 1);
-            editOffset++;
-          } else {
-            node[editKey] = editValue;
-          }
-        }
-      }
-      index = stack.index;
-      keys = stack.keys;
-      edits = stack.edits;
-      inArray = stack.inArray;
-      stack = stack.prev;
-    } else {
-      key = parent ? inArray ? index : keys[index] : undefined;
-      node = parent ? parent[key] : newRoot;
-      if (node === null || node === undefined) {
-        continue;
-      }
-      if (parent) {
-        path.push(key);
-      }
-    }
-
-    var result = void 0;
-    if (!Array.isArray(node)) {
-      if (!isNode(node)) {
-        throw new Error('Invalid AST Node: ' + JSON.stringify(node));
-      }
-      var visitFn = getVisitFn(visitor, node.kind, isLeaving);
-      if (visitFn) {
-        result = visitFn.call(visitor, node, key, parent, path, ancestors);
-
-        if (result === BREAK) {
-          break;
-        }
-
-        if (result === false) {
-          if (!isLeaving) {
-            path.pop();
-            continue;
-          }
-        } else if (result !== undefined) {
-          edits.push([key, result]);
-          if (!isLeaving) {
-            if (isNode(result)) {
-              node = result;
-            } else {
-              path.pop();
-              continue;
-            }
-          }
-        }
-      }
-    }
-
-    if (result === undefined && isEdited) {
-      edits.push([key, node]);
-    }
-
-    if (isLeaving) {
-      path.pop();
-    } else {
-      stack = { inArray: inArray, index: index, keys: keys, edits: edits, prev: stack };
-      inArray = Array.isArray(node);
-      keys = inArray ? node : visitorKeys[node.kind] || [];
-      index = -1;
-      edits = [];
-      if (parent) {
-        ancestors.push(parent);
-      }
-      parent = node;
-    }
-  } while (stack !== undefined);
-
-  if (edits.length !== 0) {
-    newRoot = edits[edits.length - 1][1];
-  }
-
-  return newRoot;
+window.getUniqueId = function (stringPrefix) {
+    var datestr = new Date().getTime().toString();
+    var randomstr = Math.random().toString().replace('.', '');
+    return stringPrefix + '_' + datestr + randomstr;
 }
 
-function isNode(maybeNode) {
-  return Boolean(maybeNode && typeof maybeNode.kind === 'string');
+window.getTextWidth = function(text, font) {
+    // re-use canvas object for better performance
+    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+    var context = canvas.getContext("2d");
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
 }
 
-/**
- * Creates a new visitor instance which delegates to many visitors to run in
- * parallel. Each visitor will be visited for each node before moving on.
- *
- * If a prior visitor edits a node, no following visitors will see that node.
- */
-function visitInParallel(visitors) {
-  var skipping = new Array(visitors.length);
+window.drawText = function(ctx, canvas, text, font, color, size) {
+    setTimeout(function(){
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.scale(1, 1);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var textString = text + ''
+		if (textString.match("char#")) {
+			var char = textString.substring(textString.indexOf('#')+1);
+	       	ctx.fillText(String.fromCharCode(char), canvas.width/2, canvas.height/2); // position x, y
+        }else{
+ 	       	ctx.fillText(textString, canvas.width/2, canvas.height/2); // position x, y
+ 	    }
 
-  return {
-    enter: function enter(node) {
-      for (var i = 0; i < visitors.length; i++) {
-        if (!skipping[i]) {
-          var fn = getVisitFn(visitors[i], node.kind, /* isLeaving */false);
-          if (fn) {
-            var result = fn.apply(visitors[i], arguments);
-            if (result === false) {
-              skipping[i] = node;
-            } else if (result === BREAK) {
-              skipping[i] = BREAK;
-            } else if (result !== undefined) {
-              return result;
-            }
-          }
+    },500); // callback when font is loaded needed
+}
+
+window.drawIcon = function(ctx, canvas, icon, color, size = 1) {
+    setTimeout(function(){
+        ctx.font = '240px Ionicons';
+        ctx.fillStyle = color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.scale(size, size);
+
+        console.log("icon" + icon);
+        if(icon_font[icon]){
+            ctx.fillText(icon_font[icon], canvas.width/2, canvas.height/2);
+        }else{
+            ctx.fillText('?', canvas.width/2, canvas.height/2);
         }
-      }
+
+    },500); // callback when font is loaded needed
+}
+
+window.drawLabel = function(ctx, canvas, text, font, color, size) {
+    setTimeout(function(){
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.textAlign = "left";
+        ctx.textBaseline = 'middle';
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetY = 0;
+        ctx.shadowOffsetX = 0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.scale(1, 1);
+        ctx.fillText(text, canvas.height/8, canvas.height/2); // position x, y
+
+    },500); // callback when font is loaded needed
+}
+},{}],47:[function(require,module,exports) {
+AFRAME.registerComponent('gui-item', {
+    schema: {
+        type: {type: 'string'},
+        width: {type: 'number', default: 1},
+        height: {type: 'number', default: 1},
+        margin: { type: 'vec4', default: '0 0 0 0'}
     },
-    leave: function leave(node) {
-      for (var i = 0; i < visitors.length; i++) {
-        if (!skipping[i]) {
-          var fn = getVisitFn(visitors[i], node.kind, /* isLeaving */true);
-          if (fn) {
-            var result = fn.apply(visitors[i], arguments);
-            if (result === BREAK) {
-              skipping[i] = BREAK;
-            } else if (result !== undefined && result !== false) {
-              return result;
-            }
-          }
-        } else if (skipping[i] === node) {
-          skipping[i] = null;
-        }
-      }
-    }
-  };
-}
-
-/**
- * Creates a new visitor instance which maintains a provided TypeInfo instance
- * along with visiting visitor.
- */
-function visitWithTypeInfo(typeInfo, visitor) {
-  return {
-    enter: function enter(node) {
-      typeInfo.enter(node);
-      var fn = getVisitFn(visitor, node.kind, /* isLeaving */false);
-      if (fn) {
-        var result = fn.apply(visitor, arguments);
-        if (result !== undefined) {
-          typeInfo.leave(node);
-          if (isNode(result)) {
-            typeInfo.enter(result);
-          }
-        }
-        return result;
-      }
+    init: function () {
     },
-    leave: function leave(node) {
-      var fn = getVisitFn(visitor, node.kind, /* isLeaving */true);
-      var result = void 0;
-      if (fn) {
-        result = fn.apply(visitor, arguments);
-      }
-      typeInfo.leave(node);
-      return result;
-    }
-  };
-}
-
-/**
- * Given a visitor instance, if it is leaving or not, and a node kind, return
- * the function the visitor runtime should call.
- */
-function getVisitFn(visitor, kind, isLeaving) {
-  var kindVisitor = visitor[kind];
-  if (kindVisitor) {
-    if (!isLeaving && typeof kindVisitor === 'function') {
-      // { Kind() {} }
-      return kindVisitor;
-    }
-    var kindSpecificVisitor = isLeaving ? kindVisitor.leave : kindVisitor.enter;
-    if (typeof kindSpecificVisitor === 'function') {
-      // { Kind: { enter() {}, leave() {} } }
-      return kindSpecificVisitor;
-    }
-  } else {
-    var specificVisitor = isLeaving ? visitor.leave : visitor.enter;
-    if (specificVisitor) {
-      if (typeof specificVisitor === 'function') {
-        // { enter() {}, leave() {} }
-        return specificVisitor;
-      }
-      var specificKindVisitor = specificVisitor[kind];
-      if (typeof specificKindVisitor === 'function') {
-        // { enter: { Kind() {} }, leave: { Kind() {} } }
-        return specificKindVisitor;
-      }
-    }
-  }
-}
-},{}],153:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
 });
-exports.print = print;
-
-var _visitor = require('./visitor');
-
-/**
- * Converts an AST into a string, using one set of reasonable
- * formatting rules.
- */
-function print(ast) {
-  return (0, _visitor.visit)(ast, { leave: printDocASTReducer });
-} /**
-   * Copyright (c) 2015-present, Facebook, Inc.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE file in the root directory of this source tree.
-   */
-
-var printDocASTReducer = {
-  Name: function Name(node) {
-    return node.value;
-  },
-  Variable: function Variable(node) {
-    return '$' + node.name;
-  },
-
-  // Document
-
-  Document: function Document(node) {
-    return join(node.definitions, '\n\n') + '\n';
-  },
-
-  OperationDefinition: function OperationDefinition(node) {
-    var op = node.operation;
-    var name = node.name;
-    var varDefs = wrap('(', join(node.variableDefinitions, ', '), ')');
-    var directives = join(node.directives, ' ');
-    var selectionSet = node.selectionSet;
-    // Anonymous queries with no directives or variable definitions can use
-    // the query short form.
-    return !name && !directives && !varDefs && op === 'query' ? selectionSet : join([op, join([name, varDefs]), directives, selectionSet], ' ');
-  },
 
 
-  VariableDefinition: function VariableDefinition(_ref) {
-    var variable = _ref.variable,
-        type = _ref.type,
-        defaultValue = _ref.defaultValue;
-    return variable + ': ' + type + wrap(' = ', defaultValue);
-  },
+},{}],48:[function(require,module,exports) {
+AFRAME.registerComponent('gui-interactable', {
+    schema: {
+        clickAction: {type: 'string'},
+        hoverAction: {type: 'string'},
+        keyCode: {type: 'number', default: null},
+    },
+    init: function () {
+        var _this = this;
+        var data = this.data;
+        var el = this.el;
 
-  SelectionSet: function SelectionSet(_ref2) {
-    var selections = _ref2.selections;
-    return block(selections);
-  },
-
-  Field: function Field(_ref3) {
-    var alias = _ref3.alias,
-        name = _ref3.name,
-        args = _ref3.arguments,
-        directives = _ref3.directives,
-        selectionSet = _ref3.selectionSet;
-    return join([wrap('', alias, ': ') + name + wrap('(', join(args, ', '), ')'), join(directives, ' '), selectionSet], ' ');
-  },
-
-  Argument: function Argument(_ref4) {
-    var name = _ref4.name,
-        value = _ref4.value;
-    return name + ': ' + value;
-  },
-
-  // Fragments
-
-  FragmentSpread: function FragmentSpread(_ref5) {
-    var name = _ref5.name,
-        directives = _ref5.directives;
-    return '...' + name + wrap(' ', join(directives, ' '));
-  },
-
-  InlineFragment: function InlineFragment(_ref6) {
-    var typeCondition = _ref6.typeCondition,
-        directives = _ref6.directives,
-        selectionSet = _ref6.selectionSet;
-    return join(['...', wrap('on ', typeCondition), join(directives, ' '), selectionSet], ' ');
-  },
-
-  FragmentDefinition: function FragmentDefinition(_ref7) {
-    var name = _ref7.name,
-        typeCondition = _ref7.typeCondition,
-        variableDefinitions = _ref7.variableDefinitions,
-        directives = _ref7.directives,
-        selectionSet = _ref7.selectionSet;
-    return (
-      // Note: fragment variable definitions are experimental and may be changed
-      // or removed in the future.
-      'fragment ' + name + wrap('(', join(variableDefinitions, ', '), ')') + ' ' + ('on ' + typeCondition + ' ' + wrap('', join(directives, ' '), ' ')) + selectionSet
-    );
-  },
-
-  // Value
-
-  IntValue: function IntValue(_ref8) {
-    var value = _ref8.value;
-    return value;
-  },
-  FloatValue: function FloatValue(_ref9) {
-    var value = _ref9.value;
-    return value;
-  },
-  StringValue: function StringValue(_ref10, key) {
-    var value = _ref10.value,
-        isBlockString = _ref10.block;
-    return isBlockString ? printBlockString(value, key === 'description') : JSON.stringify(value);
-  },
-  BooleanValue: function BooleanValue(_ref11) {
-    var value = _ref11.value;
-    return value ? 'true' : 'false';
-  },
-  NullValue: function NullValue() {
-    return 'null';
-  },
-  EnumValue: function EnumValue(_ref12) {
-    var value = _ref12.value;
-    return value;
-  },
-  ListValue: function ListValue(_ref13) {
-    var values = _ref13.values;
-    return '[' + join(values, ', ') + ']';
-  },
-  ObjectValue: function ObjectValue(_ref14) {
-    var fields = _ref14.fields;
-    return '{' + join(fields, ', ') + '}';
-  },
-  ObjectField: function ObjectField(_ref15) {
-    var name = _ref15.name,
-        value = _ref15.value;
-    return name + ': ' + value;
-  },
-
-  // Directive
-
-  Directive: function Directive(_ref16) {
-    var name = _ref16.name,
-        args = _ref16.arguments;
-    return '@' + name + wrap('(', join(args, ', '), ')');
-  },
-
-  // Type
-
-  NamedType: function NamedType(_ref17) {
-    var name = _ref17.name;
-    return name;
-  },
-  ListType: function ListType(_ref18) {
-    var type = _ref18.type;
-    return '[' + type + ']';
-  },
-  NonNullType: function NonNullType(_ref19) {
-    var type = _ref19.type;
-    return type + '!';
-  },
-
-  // Type System Definitions
-
-  SchemaDefinition: function SchemaDefinition(_ref20) {
-    var directives = _ref20.directives,
-        operationTypes = _ref20.operationTypes;
-    return join(['schema', join(directives, ' '), block(operationTypes)], ' ');
-  },
-
-  OperationTypeDefinition: function OperationTypeDefinition(_ref21) {
-    var operation = _ref21.operation,
-        type = _ref21.type;
-    return operation + ': ' + type;
-  },
-
-  ScalarTypeDefinition: addDescription(function (_ref22) {
-    var name = _ref22.name,
-        directives = _ref22.directives;
-    return join(['scalar', name, join(directives, ' ')], ' ');
-  }),
-
-  ObjectTypeDefinition: addDescription(function (_ref23) {
-    var name = _ref23.name,
-        interfaces = _ref23.interfaces,
-        directives = _ref23.directives,
-        fields = _ref23.fields;
-    return join(['type', name, wrap('implements ', join(interfaces, ' & ')), join(directives, ' '), block(fields)], ' ');
-  }),
-
-  FieldDefinition: addDescription(function (_ref24) {
-    var name = _ref24.name,
-        args = _ref24.arguments,
-        type = _ref24.type,
-        directives = _ref24.directives;
-    return name + wrap('(', join(args, ', '), ')') + ': ' + type + wrap(' ', join(directives, ' '));
-  }),
-
-  InputValueDefinition: addDescription(function (_ref25) {
-    var name = _ref25.name,
-        type = _ref25.type,
-        defaultValue = _ref25.defaultValue,
-        directives = _ref25.directives;
-    return join([name + ': ' + type, wrap('= ', defaultValue), join(directives, ' ')], ' ');
-  }),
-
-  InterfaceTypeDefinition: addDescription(function (_ref26) {
-    var name = _ref26.name,
-        directives = _ref26.directives,
-        fields = _ref26.fields;
-    return join(['interface', name, join(directives, ' '), block(fields)], ' ');
-  }),
-
-  UnionTypeDefinition: addDescription(function (_ref27) {
-    var name = _ref27.name,
-        directives = _ref27.directives,
-        types = _ref27.types;
-    return join(['union', name, join(directives, ' '), types && types.length !== 0 ? '= ' + join(types, ' | ') : ''], ' ');
-  }),
-
-  EnumTypeDefinition: addDescription(function (_ref28) {
-    var name = _ref28.name,
-        directives = _ref28.directives,
-        values = _ref28.values;
-    return join(['enum', name, join(directives, ' '), block(values)], ' ');
-  }),
-
-  EnumValueDefinition: addDescription(function (_ref29) {
-    var name = _ref29.name,
-        directives = _ref29.directives;
-    return join([name, join(directives, ' ')], ' ');
-  }),
-
-  InputObjectTypeDefinition: addDescription(function (_ref30) {
-    var name = _ref30.name,
-        directives = _ref30.directives,
-        fields = _ref30.fields;
-    return join(['input', name, join(directives, ' '), block(fields)], ' ');
-  }),
-
-  ScalarTypeExtension: function ScalarTypeExtension(_ref31) {
-    var name = _ref31.name,
-        directives = _ref31.directives;
-    return join(['extend scalar', name, join(directives, ' ')], ' ');
-  },
-
-  ObjectTypeExtension: function ObjectTypeExtension(_ref32) {
-    var name = _ref32.name,
-        interfaces = _ref32.interfaces,
-        directives = _ref32.directives,
-        fields = _ref32.fields;
-    return join(['extend type', name, wrap('implements ', join(interfaces, ' & ')), join(directives, ' '), block(fields)], ' ');
-  },
-
-  InterfaceTypeExtension: function InterfaceTypeExtension(_ref33) {
-    var name = _ref33.name,
-        directives = _ref33.directives,
-        fields = _ref33.fields;
-    return join(['extend interface', name, join(directives, ' '), block(fields)], ' ');
-  },
-
-  UnionTypeExtension: function UnionTypeExtension(_ref34) {
-    var name = _ref34.name,
-        directives = _ref34.directives,
-        types = _ref34.types;
-    return join(['extend union', name, join(directives, ' '), types && types.length !== 0 ? '= ' + join(types, ' | ') : ''], ' ');
-  },
-
-  EnumTypeExtension: function EnumTypeExtension(_ref35) {
-    var name = _ref35.name,
-        directives = _ref35.directives,
-        values = _ref35.values;
-    return join(['extend enum', name, join(directives, ' '), block(values)], ' ');
-  },
-
-  InputObjectTypeExtension: function InputObjectTypeExtension(_ref36) {
-    var name = _ref36.name,
-        directives = _ref36.directives,
-        fields = _ref36.fields;
-    return join(['extend input', name, join(directives, ' '), block(fields)], ' ');
-  },
-
-  DirectiveDefinition: addDescription(function (_ref37) {
-    var name = _ref37.name,
-        args = _ref37.arguments,
-        locations = _ref37.locations;
-    return 'directive @' + name + wrap('(', join(args, ', '), ')') + ' on ' + join(locations, ' | ');
-  })
-};
-
-function addDescription(cb) {
-  return function (node) {
-    return join([node.description, cb(node)], '\n');
-  };
-}
-
-/**
- * Given maybeArray, print an empty string if it is null or empty, otherwise
- * print all items together separated by separator if provided
- */
-function join(maybeArray, separator) {
-  return maybeArray ? maybeArray.filter(function (x) {
-    return x;
-  }).join(separator || '') : '';
-}
-
-/**
- * Given array, print each item on its own line, wrapped in an
- * indented "{ }" block.
- */
-function block(array) {
-  return array && array.length !== 0 ? '{\n' + indent(join(array, '\n')) + '\n}' : '';
-}
-
-/**
- * If maybeString is not null or empty, then wrap with start and end, otherwise
- * print an empty string.
- */
-function wrap(start, maybeString, end) {
-  return maybeString ? start + maybeString + (end || '') : '';
-}
-
-function indent(maybeString) {
-  return maybeString && '  ' + maybeString.replace(/\n/g, '\n  ');
-}
-
-/**
- * Print a block string in the indented block form by adding a leading and
- * trailing blank line. However, if a block string starts with whitespace and is
- * a single-line, adding a leading blank line would strip that whitespace.
- */
-function printBlockString(value, isDescription) {
-  var escaped = value.replace(/"""/g, '\\"""');
-  return (value[0] === ' ' || value[0] === '\t') && value.indexOf('\n') === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
-}
-},{"./visitor":172}],212:[function(require,module,exports) {
-'use strict';
-
-module.exports = function (data, opts) {
-    if (!opts) opts = {};
-    if (typeof opts === 'function') opts = { cmp: opts };
-    var cycles = (typeof opts.cycles === 'boolean') ? opts.cycles : false;
-
-    var cmp = opts.cmp && (function (f) {
-        return function (node) {
-            return function (a, b) {
-                var aobj = { key: a, value: node[a] };
-                var bobj = { key: b, value: node[b] };
-                return f(aobj, bobj);
-            };
-        };
-    })(opts.cmp);
-
-    var seen = [];
-    return (function stringify (node) {
-        if (node && node.toJSON && typeof node.toJSON === 'function') {
-            node = node.toJSON();
-        }
-
-        if (node === undefined) return;
-        if (typeof node == 'number') return isFinite(node) ? '' + node : 'null';
-        if (typeof node !== 'object') return JSON.stringify(node);
-
-        var i, out;
-        if (Array.isArray(node)) {
-            out = '[';
-            for (i = 0; i < node.length; i++) {
-                if (i) out += ',';
-                out += stringify(node[i]) || 'null';
-            }
-            return out + ']';
-        }
-
-        if (node === null) return 'null';
-
-        if (seen.indexOf(node) !== -1) {
-            if (cycles) return JSON.stringify('__cycle__');
-            throw new TypeError('Converting circular structure to JSON');
-        }
-
-        var seenIndex = seen.push(node) - 1;
-        var keys = Object.keys(node).sort(cmp && cmp(node));
-        out = '';
-        for (i = 0; i < keys.length; i++) {
-            var key = keys[i];
-            var value = stringify(node[key]);
-
-            if (!value) continue;
-            if (out) out += ',';
-            out += JSON.stringify(key) + ':' + value;
-        }
-        seen.splice(seenIndex, 1);
-        return '{' + out + '}';
-    })(data);
-};
-
-},{}],183:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.isScalarValue = isScalarValue;
-exports.isNumberValue = isNumberValue;
-exports.valueToObjectRepresentation = valueToObjectRepresentation;
-exports.storeKeyNameFromField = storeKeyNameFromField;
-exports.getStoreKeyName = getStoreKeyName;
-exports.argumentsObjectFromField = argumentsObjectFromField;
-exports.resultKeyNameFromField = resultKeyNameFromField;
-exports.isField = isField;
-exports.isInlineFragment = isInlineFragment;
-exports.isIdValue = isIdValue;
-exports.toIdValue = toIdValue;
-exports.isJsonValue = isJsonValue;
-exports.valueFromNode = valueFromNode;
-
-var _fastJsonStableStringify = require('fast-json-stable-stringify');
-
-var _fastJsonStableStringify2 = _interopRequireDefault(_fastJsonStableStringify);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-function isScalarValue(value) {
-    return ['StringValue', 'BooleanValue', 'EnumValue'].indexOf(value.kind) > -1;
-}
-function isNumberValue(value) {
-    return ['IntValue', 'FloatValue'].indexOf(value.kind) > -1;
-}
-function isStringValue(value) {
-    return value.kind === 'StringValue';
-}
-function isBooleanValue(value) {
-    return value.kind === 'BooleanValue';
-}
-function isIntValue(value) {
-    return value.kind === 'IntValue';
-}
-function isFloatValue(value) {
-    return value.kind === 'FloatValue';
-}
-function isVariable(value) {
-    return value.kind === 'Variable';
-}
-function isObjectValue(value) {
-    return value.kind === 'ObjectValue';
-}
-function isListValue(value) {
-    return value.kind === 'ListValue';
-}
-function isEnumValue(value) {
-    return value.kind === 'EnumValue';
-}
-function isNullValue(value) {
-    return value.kind === 'NullValue';
-}
-function valueToObjectRepresentation(argObj, name, value, variables) {
-    if (isIntValue(value) || isFloatValue(value)) {
-        argObj[name.value] = Number(value.value);
-    } else if (isBooleanValue(value) || isStringValue(value)) {
-        argObj[name.value] = value.value;
-    } else if (isObjectValue(value)) {
-        var nestedArgObj_1 = {};
-        value.fields.map(function (obj) {
-            return valueToObjectRepresentation(nestedArgObj_1, obj.name, obj.value, variables);
-        });
-        argObj[name.value] = nestedArgObj_1;
-    } else if (isVariable(value)) {
-        var variableValue = (variables || {})[value.name.value];
-        argObj[name.value] = variableValue;
-    } else if (isListValue(value)) {
-        argObj[name.value] = value.values.map(function (listValue) {
-            var nestedArgArrayObj = {};
-            valueToObjectRepresentation(nestedArgArrayObj, name, listValue, variables);
-            return nestedArgArrayObj[name.value];
-        });
-    } else if (isEnumValue(value)) {
-        argObj[name.value] = value.value;
-    } else if (isNullValue(value)) {
-        argObj[name.value] = null;
-    } else {
-        throw new Error("The inline argument \"" + name.value + "\" of kind \"" + value.kind + "\"" + 'is not supported. Use variables instead of inline arguments to ' + 'overcome this limitation.');
-    }
-}
-function storeKeyNameFromField(field, variables) {
-    var directivesObj = null;
-    if (field.directives) {
-        directivesObj = {};
-        field.directives.forEach(function (directive) {
-            directivesObj[directive.name.value] = {};
-            if (directive.arguments) {
-                directive.arguments.forEach(function (_a) {
-                    var name = _a.name,
-                        value = _a.value;
-                    return valueToObjectRepresentation(directivesObj[directive.name.value], name, value, variables);
-                });
-            }
-        });
-    }
-    var argObj = null;
-    if (field.arguments && field.arguments.length) {
-        argObj = {};
-        field.arguments.forEach(function (_a) {
-            var name = _a.name,
-                value = _a.value;
-            return valueToObjectRepresentation(argObj, name, value, variables);
-        });
-    }
-    return getStoreKeyName(field.name.value, argObj, directivesObj);
-}
-var KNOWN_DIRECTIVES = ['connection', 'include', 'skip', 'client', 'rest', 'export'];
-function getStoreKeyName(fieldName, args, directives) {
-    if (directives && directives['connection'] && directives['connection']['key']) {
-        if (directives['connection']['filter'] && directives['connection']['filter'].length > 0) {
-            var filterKeys = directives['connection']['filter'] ? directives['connection']['filter'] : [];
-            filterKeys.sort();
-            var queryArgs_1 = args;
-            var filteredArgs_1 = {};
-            filterKeys.forEach(function (key) {
-                filteredArgs_1[key] = queryArgs_1[key];
-            });
-            return directives['connection']['key'] + "(" + JSON.stringify(filteredArgs_1) + ")";
-        } else {
-            return directives['connection']['key'];
-        }
-    }
-    var completeFieldName = fieldName;
-    if (args) {
-        // We can't use `JSON.stringify` here since it's non-deterministic,
-        // and can lead to different store key names being created even though
-        // the `args` object used during creation has the same properties/values.
-        var stringifiedArgs = (0, _fastJsonStableStringify2.default)(args);
-        completeFieldName += "(" + stringifiedArgs + ")";
-    }
-    if (directives) {
-        Object.keys(directives).forEach(function (key) {
-            if (KNOWN_DIRECTIVES.indexOf(key) !== -1) return;
-            if (directives[key] && Object.keys(directives[key]).length) {
-                completeFieldName += "@" + key + "(" + JSON.stringify(directives[key]) + ")";
-            } else {
-                completeFieldName += "@" + key;
-            }
-        });
-    }
-    return completeFieldName;
-}
-function argumentsObjectFromField(field, variables) {
-    if (field.arguments && field.arguments.length) {
-        var argObj_1 = {};
-        field.arguments.forEach(function (_a) {
-            var name = _a.name,
-                value = _a.value;
-            return valueToObjectRepresentation(argObj_1, name, value, variables);
-        });
-        return argObj_1;
-    }
-    return null;
-}
-function resultKeyNameFromField(field) {
-    return field.alias ? field.alias.value : field.name.value;
-}
-function isField(selection) {
-    return selection.kind === 'Field';
-}
-function isInlineFragment(selection) {
-    return selection.kind === 'InlineFragment';
-}
-function isIdValue(idObject) {
-    return idObject && idObject.type === 'id';
-}
-function toIdValue(idConfig, generated) {
-    if (generated === void 0) {
-        generated = false;
-    }
-    return __assign({ type: 'id', generated: generated }, typeof idConfig === 'string' ? { id: idConfig, typename: undefined } : idConfig);
-}
-function isJsonValue(jsonObject) {
-    return jsonObject != null && typeof jsonObject === 'object' && jsonObject.type === 'json';
-}
-function defaultValueFromVariable(node) {
-    throw new Error("Variable nodes are not supported by valueFromNode");
-}
-/**
- * Evaluate a ValueNode and yield its value in its natural JS form.
- */
-function valueFromNode(node, onVariable) {
-    if (onVariable === void 0) {
-        onVariable = defaultValueFromVariable;
-    }
-    switch (node.kind) {
-        case 'Variable':
-            return onVariable(node);
-        case 'NullValue':
-            return null;
-        case 'IntValue':
-            return parseInt(node.value, 10);
-        case 'FloatValue':
-            return parseFloat(node.value);
-        case 'ListValue':
-            return node.values.map(function (v) {
-                return valueFromNode(v, onVariable);
-            });
-        case 'ObjectValue':
-            {
-                var value = {};
-                for (var _i = 0, _a = node.fields; _i < _a.length; _i++) {
-                    var field = _a[_i];
-                    value[field.name.value] = valueFromNode(field.value, onVariable);
+        if(data.keyCode){
+            window.addEventListener("keydown", function (event) {
+                if(event.keyCode == data.keyCode){                  
+                    console.log("key press by gui-interactable : " + data.keyCode);
+                    el.emit('click');
                 }
-                return value;
-            }
-        default:
-            return node.value;
-    }
-}
-//# sourceMappingURL=storeUtils.js.map
-},{"fast-json-stable-stringify":212}],180:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
+                event.preventDefault();
+            }, true);
+        }
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+    setClickAction: function (action) {
+        this.data.clickAction = action; //change function dynamically
+    },
 });
-exports.getDirectiveInfoFromField = getDirectiveInfoFromField;
-exports.shouldInclude = shouldInclude;
-exports.flattenSelections = flattenSelections;
-exports.getDirectiveNames = getDirectiveNames;
-exports.hasDirectives = hasDirectives;
 
-var _storeUtils = require('./storeUtils');
+},{}],49:[function(require,module,exports) {
+require('../scripts/vars.js')
 
-function getDirectiveInfoFromField(field, variables) {
-    if (field.directives && field.directives.length) {
-        var directiveObj_1 = {};
-        field.directives.forEach(function (directive) {
-            directiveObj_1[directive.name.value] = (0, _storeUtils.argumentsObjectFromField)(directive, variables);
-        });
-        return directiveObj_1;
-    }
-    return null;
-}
-function shouldInclude(selection, variables) {
-    if (variables === void 0) {
-        variables = {};
-    }
-    if (!selection.directives) {
-        return true;
-    }
-    var res = true;
-    selection.directives.forEach(function (directive) {
-        // TODO should move this validation to GraphQL validation once that's implemented.
-        if (directive.name.value !== 'skip' && directive.name.value !== 'include') {
-            // Just don't worry about directives we don't understand
-            return;
+/*  //trying to figure out global styles that customize gui items
+var styles = StyleSheet.create({
+    fontFamily: {
+        type: 'string', 
+        default: 'Helvetica'
+    },
+    fontColor: {
+        type: 'string', 
+        default: key_offwhite
+    },
+    borderColor: {
+        type: 'string', 
+        default: key_offwhite
+    },
+    backgroundColor: {
+        type: 'string', 
+        default: key_grey
+    },
+    hoverColor: {
+        type: 'string', 
+        default: key_grey_dark
+    },
+    activeColor: {
+        type: 'string', 
+        default: key_orange
+    },
+    handleColor: {
+        type: 'string', 
+        default: key_offwhite
+    },            
+});
+*/
+
+AFRAME.registerComponent('gui-flex-container', {
+    schema: {
+        flexDirection: { type: 'string', default: 'row' },
+        justifyContent: { type: 'string', default: 'flexStart' },
+        alignItems: { type: 'string', default: 'flexStart' },
+        itemPadding: { type: 'number', default: 0.0 },
+        opacity: { type: 'number', default: 0.0 },
+        isTopContainer: {type: 'boolean', default: false},
+        panelColor: {type: 'string', default: key_grey},
+
+//global settings for GUI items
+        styles: {
+            fontFamily: {type: 'string', default: 'Helvetica'},
+            fontColor: {type: 'string', default: key_offwhite},
+            borderColor: {type: 'string', default: key_offwhite},
+            backgroundColor: {type: 'string', default: key_grey},
+            hoverColor: {type: 'string', default: key_grey_dark},
+            activeColor: {type: 'string', default: key_orange},
+            handleColor: {type: 'string', default: key_offwhite},            
         }
-        //evaluate the "if" argument and skip (i.e. return undefined) if it evaluates to true.
-        var directiveArguments = directive.arguments || [];
-        var directiveName = directive.name.value;
-        if (directiveArguments.length !== 1) {
-            throw new Error("Incorrect number of arguments for the @" + directiveName + " directive.");
+
+    },
+    init: function () {
+        console.log("in aframe-gui-component init for: "+this.el.getAttribute("id"));
+        var containerGuiItem = this.el.getAttribute("gui-item");
+
+        if (this.data.isTopContainer) {
+            this.setBackground();
         }
-        var ifArgument = directiveArguments[0];
-        if (!ifArgument.name || ifArgument.name.value !== 'if') {
-            throw new Error("Invalid argument for the @" + directiveName + " directive.");
-        }
-        var ifValue = directiveArguments[0].value;
-        var evaledValue = false;
-        if (!ifValue || ifValue.kind !== 'BooleanValue') {
-            // means it has to be a variable value if this is a valid @skip or @include directive
-            if (ifValue.kind !== 'Variable') {
-                throw new Error("Argument for the @" + directiveName + " directive must be a variable or a boolean value.");
-            } else {
-                evaledValue = variables[ifValue.name.value];
-                if (evaledValue === undefined) {
-                    throw new Error("Invalid variable referenced in @" + directiveName + " directive.");
+
+        this.el.setAttribute('geometry', `primitive: plane; height: ${containerGuiItem.height}; width: ${containerGuiItem.width};`);
+        this.el.setAttribute('material', `shader: flat; transparent: true; opacity: ${this.data.opacity}; color: ${this.data.panelColor}; side:front;`);
+
+        this.children = this.el.getChildEntities();
+        console.log("childElements: "+this.children);
+        console.log("num child Elements: "+this.children.length);
+
+        // coordinate system is 0, 0 in the top left
+        var cursorX = 0;
+        var cursorY = 0;
+        if (this.data.flexDirection == 'row') {
+            // first figure out cursor position on main X axis
+            if (this.data.justifyContent == 'flexStart') {
+                cursorX = 0;
+            } else if (this.data.justifyContent == 'center' || this.data.justifyContent == 'flexEnd') {
+                var rowWidth = 0;
+                for (var i = 0; i < this.children.length; i++) {
+                    var childElement = this.children[i];
+                    var childGuiItem = childElement.getAttribute("gui-item");
+                    rowWidth = rowWidth + childGuiItem.margin.w + childGuiItem.width + childGuiItem.margin.y;
+                }
+                if (this.data.justifyContent == 'center') {
+                    cursorX = (containerGuiItem.width - rowWidth)*0.5;
+                } else if (this.data.justifyContent == 'flexEnd') {
+                    cursorX = containerGuiItem.width - rowWidth;
                 }
             }
-        } else {
-            evaledValue = ifValue.value;
+            // then figure out baseline / cursor position on cross Y axis
+            if (this.data.alignItems == 'center') {
+                cursorY = containerGuiItem.height; // baseline is center
+            } else if (this.data.alignItems == 'flexStart') {
+                cursorY = 0; // baseline is top of container
+            } else if (this.data.alignItems == 'flexEnd') {
+                cursorY = containerGuiItem.height; // baseline is bottom of container
+            }
+        } else if (this.data.flexDirection == 'column') {
+            // first figure out cursor position on main Y axis
+            if (this.data.justifyContent == 'flexStart') {
+                cursorY = 0;
+            } else if (this.data.justifyContent == 'center' || this.data.justifyContent == 'flexEnd') {
+                var columnHeight = 0;
+                for (var i = 0; i < this.children.length; i++) {
+                    var childElement = this.children[i];
+                    var childGuiItem = childElement.getAttribute("gui-item");
+                    columnHeight = columnHeight + childGuiItem.margin.x + childGuiItem.height + childGuiItem.margin.z;
+                }
+                if (this.data.justifyContent == 'center') {
+                    cursorY = (containerGuiItem.height - columnHeight)*0.5;
+                } else if (this.data.justifyContent == 'flexEnd') {
+                    cursorY = containerGuiItem.height - columnHeight;
+                }
+            }
+            // then figure out baseline / cursor position on cross X axis
+            if (this.data.alignItems == 'flexStart') {
+                cursorX = 0; // baseline is left
+            } else if (this.data.alignItems == 'center') {
+                cursorX = containerGuiItem.width*0.5; // baseline is center
+            } else if (this.data.alignItems == 'flexEnd') {
+                cursorX = 0; // baseline is right
+            }
         }
-        if (directiveName === 'skip') {
-            evaledValue = !evaledValue;
-        }
-        if (!evaledValue) {
-            res = false;
-        }
-    });
-    return res;
-}
-function flattenSelections(selection) {
-    if (!selection.selectionSet || !(selection.selectionSet.selections.length > 0)) return [selection];
-    return [selection].concat(selection.selectionSet.selections.map(function (selectionNode) {
-        return [selectionNode].concat(flattenSelections(selectionNode));
-    }).reduce(function (selections, selected) {
-        return selections.concat(selected);
-    }, []));
-}
-function getDirectiveNames(doc) {
-    // operation => [names of directives];
-    var directiveNames = doc.definitions.filter(function (definition) {
-        return definition.selectionSet && definition.selectionSet.selections;
-    })
-    // operation => [[Selection]]
-    .map(function (x) {
-        return flattenSelections(x);
-    })
-    // [[Selection]] => [Selection]
-    .reduce(function (selections, selected) {
-        return selections.concat(selected);
-    }, [])
-    // [Selection] => [Selection with Directives]
-    .filter(function (selection) {
-        return selection.directives && selection.directives.length > 0;
-    })
-    // [Selection with Directives] => [[Directives]]
-    .map(function (selection) {
-        return selection.directives;
-    })
-    // [[Directives]] => [Directives]
-    .reduce(function (directives, directive) {
-        return directives.concat(directive);
-    }, [])
-    // [Directives] => [Name]
-    .map(function (directive) {
-        return directive.name.value;
-    });
-    return directiveNames;
-}
-function hasDirectives(names, doc) {
-    return getDirectiveNames(doc).some(function (name) {
-        return names.indexOf(name) > -1;
-    });
-}
-//# sourceMappingURL=directives.js.map
-},{"./storeUtils":183}],179:[function(require,module,exports) {
-"use strict";
+        console.log(`initial cursor position for ${this.el.getAttribute("id")}: ${cursorX} ${cursorY} 0.01`)
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getFragmentQueryDocument = getFragmentQueryDocument;
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-/**
- * Returns a query document which adds a single query operation that only
- * spreads the target fragment inside of it.
- *
- * So for example a document of:
- *
- * ```graphql
- * fragment foo on Foo { a b c }
- * ```
- *
- * Turns into:
- *
- * ```graphql
- * { ...foo }
- *
- * fragment foo on Foo { a b c }
- * ```
- *
- * The target fragment will either be the only fragment in the document, or a
- * fragment specified by the provided `fragmentName`. If there is more then one
- * fragment, but a `fragmentName` was not defined then an error will be thrown.
- */
-function getFragmentQueryDocument(document, fragmentName) {
-    var actualFragmentName = fragmentName;
-    // Build an array of all our fragment definitions that will be used for
-    // validations. We also do some validations on the other definitions in the
-    // document while building this list.
-    var fragments = [];
-    document.definitions.forEach(function (definition) {
-        // Throw an error if we encounter an operation definition because we will
-        // define our own operation definition later on.
-        if (definition.kind === 'OperationDefinition') {
-            throw new Error("Found a " + definition.operation + " operation" + (definition.name ? " named '" + definition.name.value + "'" : '') + ". " + 'No operations are allowed when using a fragment as a query. Only fragments are allowed.');
-        }
-        // Add our definition to the fragments array if it is a fragment
-        // definition.
-        if (definition.kind === 'FragmentDefinition') {
-            fragments.push(definition);
-        }
-    });
-    // If the user did not give us a fragment name then let us try to get a
-    // name from a single fragment in the definition.
-    if (typeof actualFragmentName === 'undefined') {
-        if (fragments.length !== 1) {
-            throw new Error("Found " + fragments.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
-        }
-        actualFragmentName = fragments[0].name.value;
-    }
-    // Generate a query document with an operation that simply spreads the
-    // fragment inside of it.
-    var query = __assign({}, document, { definitions: [{
-            kind: 'OperationDefinition',
-            operation: 'query',
-            selectionSet: {
-                kind: 'SelectionSet',
-                selections: [{
-                    kind: 'FragmentSpread',
-                    name: {
-                        kind: 'Name',
-                        value: actualFragmentName
+        // not that cursor positions are determined, loop through and lay out items
+        var wrapOffsetX = 0; // not used yet since wrapping isn't supported
+        var wrapOffsetY = 0; // not used yet since wrapping isn't supported
+        for (var i = 0; i < this.children.length; i++) {
+            var childElement = this.children[i];
+            // TODO: change this to call gedWidth() and setWidth() of component
+            var childPositionX = 0;
+            var childPositionY = 0;
+            var childPositionZ = 0.01;
+            var childGuiItem = childElement.getAttribute("gui-item");
+
+            // now get object position in aframe container cordinates (0, 0 is center)
+            if (childGuiItem) {
+                if (this.data.flexDirection == 'row') {
+                    if (this.data.alignItems == 'center') {
+                        childPositionY = 0; // child position is always 0 for center vertical alignment
+                    } else if (this.data.alignItems == 'flexStart') {
+                        childPositionY = containerGuiItem.height * 0.5 - childGuiItem.margin.x - childGuiItem.height;
+                    } else if (this.data.alignItems == 'flexEnd') {
+                        childPositionY = -containerGuiItem.height * 0.5 + childGuiItem.margin.z + childGuiItem.height;
                     }
-                }]
-            }
-        }].concat(document.definitions) });
-    return query;
-}
-//# sourceMappingURL=fragments.js.map
-},{}],184:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.assign = assign;
-function assign(target) {
-    var sources = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        sources[_i - 1] = arguments[_i];
-    }
-    sources.forEach(function (source) {
-        if (typeof source === 'undefined' || source === null) {
-            return;
-        }
-        Object.keys(source).forEach(function (key) {
-            target[key] = source[key];
-        });
-    });
-    return target;
-}
-//# sourceMappingURL=assign.js.map
-},{}],181:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getMutationDefinition = getMutationDefinition;
-exports.checkDocument = checkDocument;
-exports.getOperationDefinition = getOperationDefinition;
-exports.getOperationDefinitionOrDie = getOperationDefinitionOrDie;
-exports.getOperationName = getOperationName;
-exports.getFragmentDefinitions = getFragmentDefinitions;
-exports.getQueryDefinition = getQueryDefinition;
-exports.getFragmentDefinition = getFragmentDefinition;
-exports.getMainDefinition = getMainDefinition;
-exports.createFragmentMap = createFragmentMap;
-exports.getDefaultValues = getDefaultValues;
-exports.variablesInOperation = variablesInOperation;
-
-var _assign = require('./util/assign');
-
-var _storeUtils = require('./storeUtils');
-
-function getMutationDefinition(doc) {
-    checkDocument(doc);
-    var mutationDef = doc.definitions.filter(function (definition) {
-        return definition.kind === 'OperationDefinition' && definition.operation === 'mutation';
-    })[0];
-    if (!mutationDef) {
-        throw new Error('Must contain a mutation definition.');
-    }
-    return mutationDef;
-}
-// Checks the document for errors and throws an exception if there is an error.
-function checkDocument(doc) {
-    if (doc.kind !== 'Document') {
-        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
-    }
-    var operations = doc.definitions.filter(function (d) {
-        return d.kind !== 'FragmentDefinition';
-    }).map(function (definition) {
-        if (definition.kind !== 'OperationDefinition') {
-            throw new Error("Schema type definitions not allowed in queries. Found: \"" + definition.kind + "\"");
-        }
-        return definition;
-    });
-    if (operations.length > 1) {
-        throw new Error("Ambiguous GraphQL document: contains " + operations.length + " operations");
-    }
-}
-function getOperationDefinition(doc) {
-    checkDocument(doc);
-    return doc.definitions.filter(function (definition) {
-        return definition.kind === 'OperationDefinition';
-    })[0];
-}
-function getOperationDefinitionOrDie(document) {
-    var def = getOperationDefinition(document);
-    if (!def) {
-        throw new Error("GraphQL document is missing an operation");
-    }
-    return def;
-}
-function getOperationName(doc) {
-    return doc.definitions.filter(function (definition) {
-        return definition.kind === 'OperationDefinition' && definition.name;
-    }).map(function (x) {
-        return x.name.value;
-    })[0] || null;
-}
-// Returns the FragmentDefinitions from a particular document as an array
-function getFragmentDefinitions(doc) {
-    return doc.definitions.filter(function (definition) {
-        return definition.kind === 'FragmentDefinition';
-    });
-}
-function getQueryDefinition(doc) {
-    var queryDef = getOperationDefinition(doc);
-    if (!queryDef || queryDef.operation !== 'query') {
-        throw new Error('Must contain a query definition.');
-    }
-    return queryDef;
-}
-function getFragmentDefinition(doc) {
-    if (doc.kind !== 'Document') {
-        throw new Error("Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a \"gql\" tag? http://docs.apollostack.com/apollo-client/core.html#gql");
-    }
-    if (doc.definitions.length > 1) {
-        throw new Error('Fragment must have exactly one definition.');
-    }
-    var fragmentDef = doc.definitions[0];
-    if (fragmentDef.kind !== 'FragmentDefinition') {
-        throw new Error('Must be a fragment definition.');
-    }
-    return fragmentDef;
-}
-/**
- * Returns the first operation definition found in this document.
- * If no operation definition is found, the first fragment definition will be returned.
- * If no definitions are found, an error will be thrown.
- */
-function getMainDefinition(queryDoc) {
-    checkDocument(queryDoc);
-    var fragmentDefinition;
-    for (var _i = 0, _a = queryDoc.definitions; _i < _a.length; _i++) {
-        var definition = _a[_i];
-        if (definition.kind === 'OperationDefinition') {
-            var operation = definition.operation;
-            if (operation === 'query' || operation === 'mutation' || operation === 'subscription') {
-                return definition;
-            }
-        }
-        if (definition.kind === 'FragmentDefinition' && !fragmentDefinition) {
-            // we do this because we want to allow multiple fragment definitions
-            // to precede an operation definition.
-            fragmentDefinition = definition;
-        }
-    }
-    if (fragmentDefinition) {
-        return fragmentDefinition;
-    }
-    throw new Error('Expected a parsed GraphQL query with a query, mutation, subscription, or a fragment.');
-}
-// Utility function that takes a list of fragment definitions and makes a hash out of them
-// that maps the name of the fragment to the fragment definition.
-function createFragmentMap(fragments) {
-    if (fragments === void 0) {
-        fragments = [];
-    }
-    var symTable = {};
-    fragments.forEach(function (fragment) {
-        symTable[fragment.name.value] = fragment;
-    });
-    return symTable;
-}
-function getDefaultValues(definition) {
-    if (definition && definition.variableDefinitions && definition.variableDefinitions.length) {
-        var defaultValues = definition.variableDefinitions.filter(function (_a) {
-            var defaultValue = _a.defaultValue;
-            return defaultValue;
-        }).map(function (_a) {
-            var variable = _a.variable,
-                defaultValue = _a.defaultValue;
-            var defaultValueObj = {};
-            (0, _storeUtils.valueToObjectRepresentation)(defaultValueObj, variable.name, defaultValue);
-            return defaultValueObj;
-        });
-        return _assign.assign.apply(void 0, [{}].concat(defaultValues));
-    }
-    return {};
-}
-/**
- * Returns the names of all variables declared by the operation.
- */
-function variablesInOperation(operation) {
-    var names = new Set();
-    if (operation.variableDefinitions) {
-        for (var _i = 0, _a = operation.variableDefinitions; _i < _a.length; _i++) {
-            var definition = _a[_i];
-            names.add(definition.variable.name.value);
-        }
-    }
-    return names;
-}
-//# sourceMappingURL=getFromAST.js.map
-},{"./util/assign":184,"./storeUtils":183}],185:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.cloneDeep = cloneDeep;
-/**
- * Deeply clones a value to create a new instance.
- */
-function cloneDeep(value) {
-    // If the value is an array, create a new array where every item has been cloned.
-    if (Array.isArray(value)) {
-        return value.map(function (item) {
-            return cloneDeep(item);
-        });
-    }
-    // If the value is an object, go through all of the object’s properties and add them to a new
-    // object.
-    if (value !== null && typeof value === 'object') {
-        var nextValue = {};
-        for (var key in value) {
-            if (value.hasOwnProperty(key)) {
-                nextValue[key] = cloneDeep(value[key]);
-            }
-        }
-        return nextValue;
-    }
-    // Otherwise this is some primitive value and it is therefore immutable so we can just return it
-    // directly.
-    return value;
-}
-//# sourceMappingURL=cloneDeep.js.map
-},{}],182:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removeDirectivesFromDocument = removeDirectivesFromDocument;
-exports.addTypenameToDocument = addTypenameToDocument;
-exports.removeConnectionDirectiveFromDocument = removeConnectionDirectiveFromDocument;
-exports.getDirectivesFromDocument = getDirectivesFromDocument;
-
-var _cloneDeep = require('./util/cloneDeep');
-
-var _getFromAST = require('./getFromAST');
-
-var TYPENAME_FIELD = {
-    kind: 'Field',
-    name: {
-        kind: 'Name',
-        value: '__typename'
-    }
-};
-function isNotEmpty(op, fragments) {
-    // keep selections that are still valid
-    return op.selectionSet.selections.filter(function (selectionSet) {
-        // anything that doesn't match the compound filter is okay
-        return !(selectionSet &&
-        // look into fragments to verify they should stay
-        selectionSet.kind === 'FragmentSpread' &&
-        // see if the fragment in the map is valid (recursively)
-        !isNotEmpty(fragments[selectionSet.name.value], fragments));
-    }).length > 0;
-}
-function getDirectiveMatcher(directives) {
-    return function directiveMatcher(directive) {
-        return directives.some(function (dir) {
-            if (dir.name && dir.name === directive.name.value) return true;
-            if (dir.test && dir.test(directive)) return true;
-            return false;
-        });
-    };
-}
-function addTypenameToSelectionSet(selectionSet, isRoot) {
-    if (isRoot === void 0) {
-        isRoot = false;
-    }
-    if (selectionSet.selections) {
-        if (!isRoot) {
-            var alreadyHasThisField = selectionSet.selections.some(function (selection) {
-                return selection.kind === 'Field' && selection.name.value === '__typename';
-            });
-            if (!alreadyHasThisField) {
-                selectionSet.selections.push(TYPENAME_FIELD);
-            }
-        }
-        selectionSet.selections.forEach(function (selection) {
-            // Must not add __typename if we're inside an introspection query
-            if (selection.kind === 'Field') {
-                if (selection.name.value.lastIndexOf('__', 0) !== 0 && selection.selectionSet) {
-                    addTypenameToSelectionSet(selection.selectionSet);
+                    childPositionX = -containerGuiItem.width*0.5 + cursorX + childGuiItem.margin.w + childGuiItem.width * 0.5
+                    cursorX = cursorX + childGuiItem.margin.w + childGuiItem.width + childGuiItem.margin.y;
+                } else if (this.data.flexDirection == 'column') {
+                    if (this.data.alignItems == 'center') {
+                        childPositionX = 0; // child position is always 0 to center
+                    } else if (this.data.alignItems == 'flexStart') {
+                        childPositionX = -containerGuiItem.width*0.5 + childGuiItem.margin.w + childGuiItem.width * 0.5;
+                    } else if (this.data.alignItems == 'flexEnd') {
+                        childPositionX = containerGuiItem.width*0.5 - childGuiItem.margin.y - childGuiItem.width * 0.5;
+                    }
+                    childPositionY = containerGuiItem.height*0.5 - cursorY -  - childGuiItem.margin.x - childGuiItem.height * 0.5
+                    cursorY = cursorY + childGuiItem.margin.x + childGuiItem.height + childGuiItem.margin.z;
                 }
-            } else if (selection.kind === 'InlineFragment') {
-                if (selection.selectionSet) {
-                    addTypenameToSelectionSet(selection.selectionSet);
-                }
-            }
-        });
-    }
-}
-function removeDirectivesFromSelectionSet(directives, selectionSet) {
-    if (!selectionSet.selections) return selectionSet;
-    // if any of the directives are set to remove this selectionSet, remove it
-    var agressiveRemove = directives.some(function (dir) {
-        return dir.remove;
-    });
-    selectionSet.selections = selectionSet.selections.map(function (selection) {
-        if (selection.kind !== 'Field' || !selection || !selection.directives) return selection;
-        var directiveMatcher = getDirectiveMatcher(directives);
-        var remove;
-        selection.directives = selection.directives.filter(function (directive) {
-            var shouldKeep = !directiveMatcher(directive);
-            if (!remove && !shouldKeep && agressiveRemove) remove = true;
-            return shouldKeep;
-        });
-        return remove ? null : selection;
-    }).filter(function (x) {
-        return !!x;
-    });
-    selectionSet.selections.forEach(function (selection) {
-        if ((selection.kind === 'Field' || selection.kind === 'InlineFragment') && selection.selectionSet) {
-            removeDirectivesFromSelectionSet(directives, selection.selectionSet);
-        }
-    });
-    return selectionSet;
-}
-function removeDirectivesFromDocument(directives, doc) {
-    var docClone = (0, _cloneDeep.cloneDeep)(doc);
-    docClone.definitions.forEach(function (definition) {
-        removeDirectivesFromSelectionSet(directives, definition.selectionSet);
-    });
-    var operation = (0, _getFromAST.getOperationDefinitionOrDie)(docClone);
-    var fragments = (0, _getFromAST.createFragmentMap)((0, _getFromAST.getFragmentDefinitions)(docClone));
-    return isNotEmpty(operation, fragments) ? docClone : null;
-}
-function addTypenameToDocument(doc) {
-    (0, _getFromAST.checkDocument)(doc);
-    var docClone = (0, _cloneDeep.cloneDeep)(doc);
-    docClone.definitions.forEach(function (definition) {
-        var isRoot = definition.kind === 'OperationDefinition';
-        addTypenameToSelectionSet(definition.selectionSet, isRoot);
-    });
-    return docClone;
-}
-var connectionRemoveConfig = {
-    test: function (directive) {
-        var willRemove = directive.name.value === 'connection';
-        if (willRemove) {
-            if (!directive.arguments || !directive.arguments.some(function (arg) {
-                return arg.name.value === 'key';
-            })) {
-                console.warn('Removing an @connection directive even though it does not have a key. ' + 'You may want to use the key parameter to specify a store key.');
-            }
-        }
-        return willRemove;
-    }
-};
-function removeConnectionDirectiveFromDocument(doc) {
-    (0, _getFromAST.checkDocument)(doc);
-    return removeDirectivesFromDocument([connectionRemoveConfig], doc);
-}
-function hasDirectivesInSelectionSet(directives, selectionSet, nestedCheck) {
-    if (nestedCheck === void 0) {
-        nestedCheck = true;
-    }
-    if (!(selectionSet && selectionSet.selections)) {
-        return false;
-    }
-    var matchedSelections = selectionSet.selections.filter(function (selection) {
-        return hasDirectivesInSelection(directives, selection, nestedCheck);
-    });
-    return matchedSelections.length > 0;
-}
-function hasDirectivesInSelection(directives, selection, nestedCheck) {
-    if (nestedCheck === void 0) {
-        nestedCheck = true;
-    }
-    if (selection.kind !== 'Field' || !selection) {
-        return true;
-    }
-    if (!selection.directives) {
-        return false;
-    }
-    var directiveMatcher = getDirectiveMatcher(directives);
-    var matchedDirectives = selection.directives.filter(directiveMatcher);
-    return matchedDirectives.length > 0 || nestedCheck && hasDirectivesInSelectionSet(directives, selection.selectionSet, nestedCheck);
-}
-function getDirectivesFromSelectionSet(directives, selectionSet) {
-    selectionSet.selections = selectionSet.selections.filter(function (selection) {
-        return hasDirectivesInSelection(directives, selection, true);
-    }).map(function (selection) {
-        if (hasDirectivesInSelection(directives, selection, false)) {
-            return selection;
-        }
-        if ((selection.kind === 'Field' || selection.kind === 'InlineFragment') && selection.selectionSet) {
-            selection.selectionSet = getDirectivesFromSelectionSet(directives, selection.selectionSet);
-        }
-        return selection;
-    });
-    return selectionSet;
-}
-function getDirectivesFromDocument(directives, doc, includeAllFragments) {
-    if (includeAllFragments === void 0) {
-        includeAllFragments = false;
-    }
-    (0, _getFromAST.checkDocument)(doc);
-    var docClone = (0, _cloneDeep.cloneDeep)(doc);
-    docClone.definitions = docClone.definitions.map(function (definition) {
-        if ((definition.kind === 'OperationDefinition' || definition.kind === 'FragmentDefinition' && !includeAllFragments) && definition.selectionSet) {
-            definition.selectionSet = getDirectivesFromSelectionSet(directives, definition.selectionSet);
-        }
-        return definition;
-    });
-    var operation = (0, _getFromAST.getOperationDefinitionOrDie)(docClone);
-    var fragments = (0, _getFromAST.createFragmentMap)((0, _getFromAST.getFragmentDefinitions)(docClone));
-    return isNotEmpty(operation, fragments) ? docClone : null;
-}
-//# sourceMappingURL=transform.js.map
-},{"./util/cloneDeep":185,"./getFromAST":181}],186:[function(require,module,exports) {
-var process = require("process");
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.getEnv = getEnv;
-exports.isEnv = isEnv;
-exports.isProduction = isProduction;
-exports.isDevelopment = isDevelopment;
-exports.isTest = isTest;
-function getEnv() {
-    if (typeof process !== 'undefined' && 'development') {
-        return 'development';
-    }
-    // default environment
-    return 'development';
-}
-function isEnv(env) {
-    return getEnv() === env;
-}
-function isProduction() {
-    return isEnv('production') === true;
-}
-function isDevelopment() {
-    return isEnv('development') === true;
-}
-function isTest() {
-    return isEnv('test') === true;
-}
-//# sourceMappingURL=environment.js.map
-},{"process":33}],187:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.tryFunctionOrLogError = tryFunctionOrLogError;
-exports.graphQLResultHasError = graphQLResultHasError;
-function tryFunctionOrLogError(f) {
-    try {
-        return f();
-    } catch (e) {
-        if (console.error) {
-            console.error(e);
-        }
-    }
-}
-function graphQLResultHasError(result) {
-    return result.errors && result.errors.length;
-}
-//# sourceMappingURL=errorHandling.js.map
-},{}],188:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.isEqual = isEqual;
-/**
- * Performs a deep equality check on two JavaScript values.
- */
-function isEqual(a, b) {
-    // If the two values are strictly equal, we are good.
-    if (a === b) {
-        return true;
-    }
-    // Dates are equivalent if their time values are equal.
-    if (a instanceof Date && b instanceof Date) {
-        return a.getTime() === b.getTime();
-    }
-    // If a and b are both objects, we will compare their properties. This will compare arrays as
-    // well.
-    if (a != null && typeof a === 'object' && b != null && typeof b === 'object') {
-        // Compare all of the keys in `a`. If one of the keys has a different value, or that key does
-        // not exist in `b` return false immediately.
-        for (var key in a) {
-            if (Object.prototype.hasOwnProperty.call(a, key)) {
-                if (!Object.prototype.hasOwnProperty.call(b, key)) {
-                    return false;
-                }
-                if (!isEqual(a[key], b[key])) {
-                    return false;
+                console.log(`child element position for ${childElement.id}: ${childPositionX} ${childPositionY} ${childPositionZ}`)
+                childElement.setAttribute('position', `${childPositionX} ${childPositionY} ${childPositionZ}`)
+                childElement.setAttribute('geometry', `primitive: plane; height: ${childGuiItem.height}; width: ${childGuiItem.width};`)
+                var childFlexContainer = childElement.components['gui-flex-container']
+                if (childFlexContainer) {
+                    childFlexContainer.setBackground();
                 }
             }
         }
-        // Look through all the keys in `b`. If `b` has a key that `a` does not, return false.
-        for (var key in b) {
-            if (!Object.prototype.hasOwnProperty.call(a, key)) {
-                return false;
-            }
-        }
-        // If we made it this far the objects are equal!
-        return true;
-    }
-    // Otherwise the values are not equal.
-    return false;
-}
-//# sourceMappingURL=isEqual.js.map
-},{}],189:[function(require,module,exports) {
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.maybeDeepFreeze = maybeDeepFreeze;
-
-var _environment = require('./environment');
-
-// Taken (mostly) from https://github.com/substack/deep-freeze to avoid
-// import hassles with rollup.
-function deepFreeze(o) {
-    Object.freeze(o);
-    Object.getOwnPropertyNames(o).forEach(function (prop) {
-        if (o[prop] !== null && (typeof o[prop] === 'object' || typeof o[prop] === 'function') && !Object.isFrozen(o[prop])) {
-            deepFreeze(o[prop]);
-        }
-    });
-    return o;
-}
-function maybeDeepFreeze(obj) {
-    if ((0, _environment.isDevelopment)() || (0, _environment.isTest)()) {
-        // Polyfilled Symbols potentially cause infinite / very deep recursion while deep freezing
-        // which is known to crash IE11 (https://github.com/apollographql/apollo-client/issues/3043).
-        var symbolIsPolyfilled = typeof Symbol === 'function' && typeof Symbol('') === 'string';
-        if (!symbolIsPolyfilled) {
-            return deepFreeze(obj);
-        }
-    }
-    return obj;
-}
-//# sourceMappingURL=maybeDeepFreeze.js.map
-},{"./environment":186}],190:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.warnOnceInDevelopment = warnOnceInDevelopment;
-
-var _environment = require('./environment');
-
-var haveWarned = Object.create({});
-/**
- * Print a warning only once in development.
- * In production no warnings are printed.
- * In test all warnings are printed.
- *
- * @param msg The warning message
- * @param type warn or error (will call console.warn or console.error)
- */
-function warnOnceInDevelopment(msg, type) {
-    if (type === void 0) {
-        type = 'warn';
-    }
-    if ((0, _environment.isProduction)()) {
-        return;
-    }
-    if (!haveWarned[msg]) {
-        if (!(0, _environment.isTest)()) {
-            haveWarned[msg] = true;
-        }
-        switch (type) {
-            case 'error':
-                console.error(msg);
-                break;
-            default:
-                console.warn(msg);
-        }
-    }
-}
-//# sourceMappingURL=warnOnce.js.map
-},{"./environment":186}],191:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.stripSymbols = stripSymbols;
-/**
- * In order to make assertions easier, this function strips `symbol`'s from
- * the incoming data.
- *
- * This can be handy when running tests against `apollo-client` for example,
- * since it adds `symbol`'s to the data in the store. Jest's `toEqual`
- * function now covers `symbol`'s (https://github.com/facebook/jest/pull/3437),
- * which means all test data used in a `toEqual` comparison would also have to
- * include `symbol`'s, to pass. By stripping `symbol`'s from the cache data
- * we can compare against more simplified test data.
- */
-function stripSymbols(data) {
-  return JSON.parse(JSON.stringify(data));
-}
-//# sourceMappingURL=stripSymbols.js.map
-},{}],167:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _directives = require('./directives');
-
-Object.keys(_directives).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _directives[key];
-    }
-  });
-});
-
-var _fragments = require('./fragments');
-
-Object.keys(_fragments).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _fragments[key];
-    }
-  });
-});
-
-var _getFromAST = require('./getFromAST');
-
-Object.keys(_getFromAST).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getFromAST[key];
-    }
-  });
-});
-
-var _transform = require('./transform');
-
-Object.keys(_transform).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _transform[key];
-    }
-  });
-});
-
-var _storeUtils = require('./storeUtils');
-
-Object.keys(_storeUtils).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _storeUtils[key];
-    }
-  });
-});
-
-var _assign = require('./util/assign');
-
-Object.keys(_assign).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _assign[key];
-    }
-  });
-});
-
-var _cloneDeep = require('./util/cloneDeep');
-
-Object.keys(_cloneDeep).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _cloneDeep[key];
-    }
-  });
-});
-
-var _environment = require('./util/environment');
-
-Object.keys(_environment).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _environment[key];
-    }
-  });
-});
-
-var _errorHandling = require('./util/errorHandling');
-
-Object.keys(_errorHandling).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _errorHandling[key];
-    }
-  });
-});
-
-var _isEqual = require('./util/isEqual');
-
-Object.keys(_isEqual).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _isEqual[key];
-    }
-  });
-});
-
-var _maybeDeepFreeze = require('./util/maybeDeepFreeze');
-
-Object.keys(_maybeDeepFreeze).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _maybeDeepFreeze[key];
-    }
-  });
-});
-
-var _warnOnce = require('./util/warnOnce');
-
-Object.keys(_warnOnce).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _warnOnce[key];
-    }
-  });
-});
-
-var _stripSymbols = require('./util/stripSymbols');
-
-Object.keys(_stripSymbols).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _stripSymbols[key];
-    }
-  });
-});
-},{"./directives":180,"./fragments":179,"./getFromAST":181,"./transform":182,"./storeUtils":183,"./util/assign":184,"./util/cloneDeep":185,"./util/environment":186,"./util/errorHandling":187,"./util/isEqual":188,"./util/maybeDeepFreeze":189,"./util/warnOnce":190,"./util/stripSymbols":191}],142:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.isNetworkRequestInFlight = isNetworkRequestInFlight;
-/**
- * The current status of a query’s execution in our system.
- */
-var NetworkStatus = exports.NetworkStatus = undefined;
-(function (NetworkStatus) {
-  /**
-   * The query has never been run before and the query is now currently running. A query will still
-   * have this network status even if a partial data result was returned from the cache, but a
-   * query was dispatched anyway.
-   */
-  NetworkStatus[NetworkStatus["loading"] = 1] = "loading";
-  /**
-   * If `setVariables` was called and a query was fired because of that then the network status
-   * will be `setVariables` until the result of that query comes back.
-   */
-  NetworkStatus[NetworkStatus["setVariables"] = 2] = "setVariables";
-  /**
-   * Indicates that `fetchMore` was called on this query and that the query created is currently in
-   * flight.
-   */
-  NetworkStatus[NetworkStatus["fetchMore"] = 3] = "fetchMore";
-  /**
-   * Similar to the `setVariables` network status. It means that `refetch` was called on a query
-   * and the refetch request is currently in flight.
-   */
-  NetworkStatus[NetworkStatus["refetch"] = 4] = "refetch";
-  /**
-   * Indicates that a polling query is currently in flight. So for example if you are polling a
-   * query every 10 seconds then the network status will switch to `poll` every 10 seconds whenever
-   * a poll request has been sent but not resolved.
-   */
-  NetworkStatus[NetworkStatus["poll"] = 6] = "poll";
-  /**
-   * No request is in flight for this query, and no errors happened. Everything is OK.
-   */
-  NetworkStatus[NetworkStatus["ready"] = 7] = "ready";
-  /**
-   * No request is in flight for this query, but one or more errors were detected.
-   */
-  NetworkStatus[NetworkStatus["error"] = 8] = "error";
-})(NetworkStatus || (exports.NetworkStatus = NetworkStatus = {}));
-/**
- * Returns true if there is currently a network request in flight according to a given network
- * status.
- */
-function isNetworkRequestInFlight(networkStatus) {
-  return networkStatus < 7;
-}
-//# sourceMappingURL=networkStatus.js.map
-},{}],196:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// === Symbol Support ===
-
-var hasSymbols = function () {
-  return typeof Symbol === 'function';
-};
-var hasSymbol = function (name) {
-  return hasSymbols() && Boolean(Symbol[name]);
-};
-var getSymbol = function (name) {
-  return hasSymbol(name) ? Symbol[name] : '@@' + name;
-};
-
-if (hasSymbols() && !hasSymbol('observable')) {
-  Symbol.observable = Symbol('observable');
-}
-
-// === Abstract Operations ===
-
-function getMethod(obj, key) {
-  var value = obj[key];
-
-  if (value == null) return undefined;
-
-  if (typeof value !== 'function') throw new TypeError(value + ' is not a function');
-
-  return value;
-}
-
-function getSpecies(obj) {
-  var ctor = obj.constructor;
-  if (ctor !== undefined) {
-    ctor = ctor[getSymbol('species')];
-    if (ctor === null) {
-      ctor = undefined;
-    }
-  }
-  return ctor !== undefined ? ctor : Observable;
-}
-
-function isObservable(x) {
-  return x instanceof Observable; // SPEC: Brand check
-}
-
-function hostReportError(e) {
-  if (hostReportError.log) {
-    hostReportError.log(e);
-  } else {
-    setTimeout(function () {
-      throw e;
-    });
-  }
-}
-
-function enqueue(fn) {
-  Promise.resolve().then(function () {
-    try {
-      fn();
-    } catch (e) {
-      hostReportError(e);
-    }
-  });
-}
-
-function cleanupSubscription(subscription) {
-  var cleanup = subscription._cleanup;
-  if (cleanup === undefined) return;
-
-  subscription._cleanup = undefined;
-
-  if (!cleanup) {
-    return;
-  }
-
-  try {
-    if (typeof cleanup === 'function') {
-      cleanup();
-    } else {
-      var unsubscribe = getMethod(cleanup, 'unsubscribe');
-      if (unsubscribe) {
-        unsubscribe.call(cleanup);
-      }
-    }
-  } catch (e) {
-    hostReportError(e);
-  }
-}
-
-function closeSubscription(subscription) {
-  subscription._observer = undefined;
-  subscription._queue = undefined;
-  subscription._state = 'closed';
-}
-
-function flushSubscription(subscription) {
-  var queue = subscription._queue;
-  if (!queue) {
-    return;
-  }
-  subscription._queue = undefined;
-  subscription._state = 'ready';
-  for (var i = 0; i < queue.length; ++i) {
-    notifySubscription(subscription, queue[i].type, queue[i].value);
-    if (subscription._state === 'closed') break;
-  }
-}
-
-function notifySubscription(subscription, type, value) {
-  subscription._state = 'running';
-
-  var observer = subscription._observer;
-
-  try {
-    var m = getMethod(observer, type);
-    switch (type) {
-      case 'next':
-        if (m) m.call(observer, value);
-        break;
-      case 'error':
-        closeSubscription(subscription);
-        if (m) m.call(observer, value);else throw value;
-        break;
-      case 'complete':
-        closeSubscription(subscription);
-        if (m) m.call(observer);
-        break;
-    }
-  } catch (e) {
-    hostReportError(e);
-  }
-
-  if (subscription._state === 'closed') cleanupSubscription(subscription);else if (subscription._state === 'running') subscription._state = 'ready';
-}
-
-function onNotify(subscription, type, value) {
-  if (subscription._state === 'closed') return;
-
-  if (subscription._state === 'buffering') {
-    subscription._queue.push({ type: type, value: value });
-    return;
-  }
-
-  if (subscription._state !== 'ready') {
-    subscription._state = 'buffering';
-    subscription._queue = [{ type: type, value: value }];
-    enqueue(function () {
-      return flushSubscription(subscription);
-    });
-    return;
-  }
-
-  notifySubscription(subscription, type, value);
-}
-
-var Subscription = function () {
-  function Subscription(observer, subscriber) {
-    _classCallCheck(this, Subscription);
-
-    // ASSERT: observer is an object
-    // ASSERT: subscriber is callable
-
-    this._cleanup = undefined;
-    this._observer = observer;
-    this._queue = undefined;
-    this._state = 'initializing';
-
-    var subscriptionObserver = new SubscriptionObserver(this);
-
-    try {
-      this._cleanup = subscriber.call(undefined, subscriptionObserver);
-    } catch (e) {
-      subscriptionObserver.error(e);
-    }
-
-    if (this._state === 'initializing') this._state = 'ready';
-  }
-
-  _createClass(Subscription, [{
-    key: 'unsubscribe',
-    value: function unsubscribe() {
-      if (this._state !== 'closed') {
-        closeSubscription(this);
-        cleanupSubscription(this);
-      }
-    }
-  }, {
-    key: 'closed',
-    get: function () {
-      return this._state === 'closed';
-    }
-  }]);
-
-  return Subscription;
-}();
-
-var SubscriptionObserver = function () {
-  function SubscriptionObserver(subscription) {
-    _classCallCheck(this, SubscriptionObserver);
-
-    this._subscription = subscription;
-  }
-
-  _createClass(SubscriptionObserver, [{
-    key: 'next',
-    value: function next(value) {
-      onNotify(this._subscription, 'next', value);
-    }
-  }, {
-    key: 'error',
-    value: function error(value) {
-      onNotify(this._subscription, 'error', value);
-    }
-  }, {
-    key: 'complete',
-    value: function complete() {
-      onNotify(this._subscription, 'complete');
-    }
-  }, {
-    key: 'closed',
-    get: function () {
-      return this._subscription._state === 'closed';
-    }
-  }]);
-
-  return SubscriptionObserver;
-}();
-
-var Observable = exports.Observable = function () {
-  function Observable(subscriber) {
-    _classCallCheck(this, Observable);
-
-    if (!(this instanceof Observable)) throw new TypeError('Observable cannot be called as a function');
-
-    if (typeof subscriber !== 'function') throw new TypeError('Observable initializer must be a function');
-
-    this._subscriber = subscriber;
-  }
-
-  _createClass(Observable, [{
-    key: 'subscribe',
-    value: function subscribe(observer) {
-      if (typeof observer !== 'object' || observer === null) {
-        observer = {
-          next: observer,
-          error: arguments[1],
-          complete: arguments[2]
-        };
-      }
-      return new Subscription(observer, this._subscriber);
-    }
-  }, {
-    key: 'forEach',
-    value: function forEach(fn) {
-      var _this = this;
-
-      return new Promise(function (resolve, reject) {
-        if (typeof fn !== 'function') {
-          reject(new TypeError(fn + ' is not a function'));
-          return;
-        }
-
-        function done() {
-          subscription.unsubscribe();
-          resolve();
-        }
-
-        var subscription = _this.subscribe({
-          next: function (value) {
-            try {
-              fn(value, done);
-            } catch (e) {
-              reject(e);
-              subscription.unsubscribe();
-            }
-          },
-
-          error: reject,
-          complete: resolve
-        });
-      });
-    }
-  }, {
-    key: 'map',
-    value: function map(fn) {
-      var _this2 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-
-      var C = getSpecies(this);
-
-      return new C(function (observer) {
-        return _this2.subscribe({
-          next: function (value) {
-            try {
-              value = fn(value);
-            } catch (e) {
-              return observer.error(e);
-            }
-            observer.next(value);
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: 'filter',
-    value: function filter(fn) {
-      var _this3 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-
-      var C = getSpecies(this);
-
-      return new C(function (observer) {
-        return _this3.subscribe({
-          next: function (value) {
-            try {
-              if (!fn(value)) return;
-            } catch (e) {
-              return observer.error(e);
-            }
-            observer.next(value);
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: 'reduce',
-    value: function reduce(fn) {
-      var _this4 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-
-      var C = getSpecies(this);
-      var hasSeed = arguments.length > 1;
-      var hasValue = false;
-      var seed = arguments[1];
-      var acc = seed;
-
-      return new C(function (observer) {
-        return _this4.subscribe({
-          next: function (value) {
-            var first = !hasValue;
-            hasValue = true;
-
-            if (!first || hasSeed) {
-              try {
-                acc = fn(acc, value);
-              } catch (e) {
-                return observer.error(e);
-              }
-            } else {
-              acc = value;
-            }
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            if (!hasValue && !hasSeed) return observer.error(new TypeError('Cannot reduce an empty sequence'));
-
-            observer.next(acc);
-            observer.complete();
-          }
-        });
-      });
-    }
-  }, {
-    key: 'concat',
-    value: function concat() {
-      var _this5 = this;
-
-      for (var _len = arguments.length, sources = Array(_len), _key = 0; _key < _len; _key++) {
-        sources[_key] = arguments[_key];
-      }
-
-      var C = getSpecies(this);
-
-      return new C(function (observer) {
-        var subscription = void 0;
-
-        function startNext(next) {
-          subscription = next.subscribe({
-            next: function (v) {
-              observer.next(v);
-            },
-            error: function (e) {
-              observer.error(e);
-            },
-            complete: function () {
-              if (sources.length === 0) {
-                subscription = undefined;
-                observer.complete();
-              } else {
-                startNext(C.from(sources.shift()));
-              }
-            }
-          });
-        }
-
-        startNext(_this5);
-
-        return function () {
-          if (subscription) {
-            subscription = undefined;
-            subscription.unsubscribe();
-          }
-        };
-      });
-    }
-  }, {
-    key: 'flatMap',
-    value: function flatMap(fn) {
-      var _this6 = this;
-
-      if (typeof fn !== 'function') throw new TypeError(fn + ' is not a function');
-
-      var C = getSpecies(this);
-
-      return new C(function (observer) {
-        var subscriptions = [];
-
-        var outer = _this6.subscribe({
-          next: function (value) {
-            if (fn) {
-              try {
-                value = fn(value);
-              } catch (e) {
-                return observer.error(e);
-              }
-            }
-
-            var inner = C.from(value).subscribe({
-              next: function (value) {
-                observer.next(value);
-              },
-              error: function (e) {
-                observer.error(e);
-              },
-              complete: function () {
-                var i = subscriptions.indexOf(inner);
-                if (i >= 0) subscriptions.splice(i, 1);
-                completeIfDone();
-              }
-            });
-
-            subscriptions.push(inner);
-          },
-          error: function (e) {
-            observer.error(e);
-          },
-          complete: function () {
-            completeIfDone();
-          }
-        });
-
-        function completeIfDone() {
-          if (outer.closed && subscriptions.length === 0) observer.complete();
-        }
-
-        return function () {
-          subscriptions.forEach(function (s) {
-            return s.unsubscribe();
-          });
-          outer.unsubscribe();
-        };
-      });
-    }
-  }, {
-    key: getSymbol('observable'),
-    value: function () {
-      return this;
-    }
-  }], [{
-    key: 'from',
-    value: function from(x) {
-      var C = typeof this === 'function' ? this : Observable;
-
-      if (x == null) throw new TypeError(x + ' is not an object');
-
-      var method = getMethod(x, getSymbol('observable'));
-      if (method) {
-        var observable = method.call(x);
-
-        if (Object(observable) !== observable) throw new TypeError(observable + ' is not an object');
-
-        if (isObservable(observable) && observable.constructor === C) return observable;
-
-        return new C(function (observer) {
-          return observable.subscribe(observer);
-        });
-      }
-
-      if (hasSymbol('iterator')) {
-        method = getMethod(x, getSymbol('iterator'));
-        if (method) {
-          return new C(function (observer) {
-            enqueue(function () {
-              if (observer.closed) return;
-              var _iteratorNormalCompletion = true;
-              var _didIteratorError = false;
-              var _iteratorError = undefined;
-
-              try {
-                for (var _iterator = method.call(x)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                  var item = _step.value;
-
-                  observer.next(item);
-                  if (observer.closed) return;
-                }
-              } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
-              } finally {
-                try {
-                  if (!_iteratorNormalCompletion && _iterator.return) {
-                    _iterator.return();
-                  }
-                } finally {
-                  if (_didIteratorError) {
-                    throw _iteratorError;
-                  }
-                }
-              }
-
-              observer.complete();
-            });
-          });
-        }
-      }
-
-      if (Array.isArray(x)) {
-        return new C(function (observer) {
-          enqueue(function () {
-            if (observer.closed) return;
-            for (var i = 0; i < x.length; ++i) {
-              observer.next(x[i]);
-              if (observer.closed) return;
-            }
-            observer.complete();
-          });
-        });
-      }
-
-      throw new TypeError(x + ' is not observable');
-    }
-  }, {
-    key: 'of',
-    value: function of() {
-      for (var _len2 = arguments.length, items = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        items[_key2] = arguments[_key2];
-      }
-
-      var C = typeof this === 'function' ? this : Observable;
-
-      return new C(function (observer) {
-        enqueue(function () {
-          if (observer.closed) return;
-          for (var i = 0; i < items.length; ++i) {
-            observer.next(items[i]);
-            if (observer.closed) return;
-          }
-          observer.complete();
-        });
-      });
-    }
-  }, {
-    key: getSymbol('species'),
-    get: function () {
-      return this;
-    }
-  }]);
-
-  return Observable;
-}();
-
-if (hasSymbols()) {
-  Object.defineProperty(Observable, Symbol('extensions'), {
-    value: {
-      symbol: getSymbol('observable'),
-      hostReportError: hostReportError
     },
-    configurabe: true
-  });
-}
-},{}],193:[function(require,module,exports) {
-module.exports = require('./lib/Observable.js').Observable;
+    update: function () {},
+    tick: function () {},
+    remove: function () {},
+    pause: function () {},
+    play: function () {},
+    getElementSize: function () {},
+    setBackground: function () {
+        if (this.data.opacity > 0) {
+            console.log("panel position: " + JSON.stringify(this.el.getAttribute("position")));
+            var guiItem = this.el.getAttribute("gui-item");
+            var panelBackground = document.createElement("a-entity");
 
-},{"./lib/Observable.js":196}],178:[function(require,module,exports) {
-'use strict';
+            panelBackground.setAttribute('geometry', `primitive: box; height: ${guiItem.height}; width: ${guiItem.width}; depth:0.025;`);
+            console.log("about to set panel background color to: : " + this.data.panelColor);
+            panelBackground.setAttribute('material', `shader: standard; depthTest: true; opacity: ${this.data.opacity}; color: ${this.data.panelColor};`);
+            panelBackground.setAttribute('position', this.el.getAttribute("position").x + ' ' + this.el.getAttribute("position").y + ' ' + (this.el.getAttribute("position").z - 0.0125));
+            panelBackground.setAttribute('rotation', this.el.getAttribute("rotation").x + ' ' + this.el.getAttribute("rotation").y + ' ' + this.el.getAttribute("rotation").z);
+            this.el.parentNode.insertBefore(panelBackground, this.el);
+        }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Observable = undefined;
-
-var _zenObservable = require('zen-observable');
-
-var _zenObservable2 = _interopRequireDefault(_zenObservable);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Observable = exports.Observable = _zenObservable2.default;
-//# sourceMappingURL=zenObservable.js.map
-},{"zen-observable":193}],165:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+    },
 });
 
-var _zenObservable = require('./zenObservable');
-
-Object.keys(_zenObservable).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _zenObservable[key];
+AFRAME.registerPrimitive( 'a-gui-flex-container', {
+    defaultComponents: {
+        'gui-item': { type: 'flex-container' },
+        'gui-flex-container': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'flex-direction': 'gui-flex-container.flexDirection',
+        'justify-content': 'gui-flex-container.justifyContent',
+        'align-items': 'gui-flex-container.alignItems',
+        'item-padding': 'gui-flex-container.itemPadding',
+        'opacity': 'gui-flex-container.opacity',
+        'is-top-container': 'gui-flex-container.isTopContainer',
+        'panel-color': 'gui-flex-container.panelColor',
+        'font-family': 'gui-flex-container.styles.fontFamily',
+        'font-color': 'gui-flex-container.styles.fontColor',
+        'border-color': 'gui-flex-container.styles.borderColor',
+        'background-color': 'gui-flex-container.styles.backgroundColor',
+        'hover-color': 'gui-flex-container.styles.hoverColor',
+        'active-color': 'gui-flex-container.styles.activeColor',
+        'handle-color': 'gui-flex-container.styles.handleColor',
     }
-  });
 });
-exports.default = _zenObservable.Observable;
-//# sourceMappingURL=index.js.map
-},{"./zenObservable":178}],156:[function(require,module,exports) {
-'use strict';
+},{"../scripts/vars.js":46}],50:[function(require,module,exports) {
+AFRAME.registerComponent('gui-label', {
+    schema: {
+        text: {type: 'string', default: 'label text'},
+        labelFor: {type: 'selector', default: null},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        backgroundColor: {type: 'string', default: key_offwhite},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; side:front; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.text, '100px ' + data.fontFamily, data.fontColor, 1);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.001');
+        el.appendChild(textEntity);
+
+        ////WAI ARIA Support
+
+        if(data.labelFor){
+            // el.setAttribute('role', 'button');
+        }
+
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-label', {
+    defaultComponents: {
+        'gui-item': { type: 'label' },
+        'gui-label': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-button.on',
+        'value': 'gui-label.text',
+        'label-for': 'gui-label.labelFor',
+        'font-color': 'gui-label.fontColor',
+        'font-family': 'gui-label.fontFamily',
+        'background-color': 'gui-label.backgroundColor'
+    }
+});
+},{}],51:[function(require,module,exports) {
+AFRAME.registerComponent('gui-button', {
+    schema: {
+        on: {default: 'click'},
+        toggle: {type: 'boolean', default: false},
+        text: {type: 'string', default: 'text'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        console.log("in button, guiItem: "+JSON.stringify(guiItem));
+        var guiInteractable = el.getAttribute("gui-interactable");
+        console.log("in button, guiInteractable: "+JSON.stringify(guiInteractable));
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+        var toggleState = this.toggleState = data.toggle;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+        console.log("in gui-button init, data: "+JSON.stringify(data));
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 0.5; side:double; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.text, '100px ' + data.fontFamily, data.fontColor, 1);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: box; width: ${guiItem.width}; height: ${guiItem.height}; depth: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '0 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width-0.025)}; height: ${(guiItem.height-0.025)}; depth: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '0 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.041');
+        el.appendChild(textEntity);
+
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+//            this.toggleState = !(this.toggleState);
+
+//            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("in button, clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+    setActiveState: function (activeState) {
+        console.log("in setActiveState function");
+        this.data.toggle = this.toggleState = activeState;
+        if (!activeState) {
+            this.buttonEntity.setAttribute('material', 'color', this.data.backgroundColor);
+        } else {
+
+        }
+    },
+    setText: function (newText) {
+        drawText(this.ctx, this.canvas, newText, '100px ' + this.data.fontFamily, this.data.fontColor, 1);
+    },
+});
+
+
+AFRAME.registerPrimitive( 'a-gui-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'button' },
+        'gui-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-intexractable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-button.on',
+        'value': 'gui-button.text',
+        'font-color': 'gui-button.fontColor',
+        'font-family': 'gui-button.fontFamily',
+        'border-color': 'gui-button.borderColor',
+        'background-color': 'gui-button.backgroundColor',
+        'hover-color': 'gui-button.hoverColor',
+        'active-color': 'gui-button.activeColor',
+        'toggle': 'gui-button.toggle'
+    }
+});
+
+
+},{}],52:[function(require,module,exports) {
+AFRAME.registerComponent('gui-icon-button', {
+    schema: {
+        on: {default: 'click'},
+        icon: {type: 'string', default: ''},
+        iconActive: {type: 'string', default: ''},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+        var toggleState = this.toggleState = data.toggle;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvasIcon');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 0.5; side:back; color:${data.backgroundColor};`);
+
+        drawIcon(ctx, canvas, data.icon, data.fontColor, 1);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '90 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: cylinder; radius: ${(guiItem.height/2.05)}; height: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '90 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var textEntity = document.createElement("a-entity");
+        textEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/2}; height: ${guiItem.height/2};`);
+        textEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        textEntity.setAttribute('position', '0 0 0.041');
+        el.appendChild(textEntity);
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+            this.toggleState = !(this.toggleState);
+
+            //console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            //console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            //console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-icon-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'icon-button' },
+        'gui-icon-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-icon-button.on',
+        'font-color': 'gui-icon-button.fontColor',
+        'font-family': 'gui-icon-button.fontFamily',
+        'border-color': 'gui-icon-button.borderColor',
+        'background-color': 'gui-icon-button.backgroundColor',
+        'hover-color': 'gui-icon-button.hoverColor',
+        'active-color': 'gui-icon-button.activeColor',
+        'toggle': 'gui-icon-button.toggle',
+        'icon': 'gui-icon-button.icon',
+        'icon-active': 'gui-icon-button.iconActive',
+    }
+});
+},{}],53:[function(require,module,exports) {
+AFRAME.registerComponent('gui-icon-label-button', {
+    schema: {
+        on: {default: 'click'},
+        icon: {type: 'string', default: ''},
+        iconActive: {type: 'string', default: ''},
+        text: {type: 'string', default: ''},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_offwhite},
+        borderColor: {type: 'string', default: key_offwhite},
+        backgroundColor: {type: 'string', default: key_grey},
+        hoverColor: {type: 'string', default: key_grey_dark},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var toggleState = this.toggleState = data.toggle;
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; side:front; color:${data.backgroundColor};`);
+
+        var buttonContainer = document.createElement("a-entity");
+        buttonContainer.setAttribute('geometry', `primitive: box; width: ${guiItem.width}; height: ${guiItem.height}; depth: 0.02;`);
+        buttonContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        buttonContainer.setAttribute('rotation', '0 0 0');
+        buttonContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(buttonContainer);
+
+        var buttonEntity = document.createElement("a-entity");
+        buttonEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width-0.025)}; height: ${(guiItem.height-0.025)}; depth: 0.04;`);
+        buttonEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        buttonEntity.setAttribute('rotation', '0 0 0');
+        buttonEntity.setAttribute('position', '0 0 0.02');
+        el.appendChild(buttonEntity);
+        this.buttonEntity = buttonEntity;
+
+        var buttonAnimation = document.createElement("a-animation");
+        buttonAnimation.setAttribute('attribute', 'material.color');
+        buttonAnimation.setAttribute('begin', 'fadeOut');
+        buttonAnimation.setAttribute('from', data.activeColor);
+        buttonAnimation.setAttribute('to', data.backgroundColor);
+        buttonAnimation.setAttribute('dur', '400');
+        buttonEntity.appendChild(buttonAnimation);
+
+        var multiplier = 550;
+        if(data.text != ''){
+            multiplier = 350;
+        }
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var iconCanvasWidth = guiItem.height*multiplier; //square
+        var iconCanvasHeight = guiItem.height*multiplier;
+        var iconCanvas = document.createElement("canvas");
+        this.iconCanvas = iconCanvas;
+        iconCanvas.className = "visuallyhidden";
+        iconCanvas.setAttribute('width', iconCanvasWidth);
+        iconCanvas.setAttribute('height', iconCanvasHeight);
+        iconCanvas.id = getUniqueId('canvasIcon');
+        canvasContainer.appendChild(iconCanvas);
+
+        var ctxIcon = this.ctxIcon = iconCanvas.getContext('2d');
+        drawIcon(ctxIcon, iconCanvas, data.icon, data.fontColor, 1);
+
+        var iconEntityX = 0;
+        if(data.text != ''){
+            iconEntityX = -guiItem.width*0.5 + guiItem.height*0.5;
+        }
+
+        var iconEntity = document.createElement("a-entity");
+
+        if(data.text != ''){
+            iconEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/2}; height: ${guiItem.height/2};`);
+        }else{
+            iconEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/2}; height: ${guiItem.height/2};`);
+        }
+        iconEntity.setAttribute('material', `shader: flat; src: #${iconCanvas.id}; transparent: true; opacity: 1; side:front;`);
+        iconEntity.setAttribute('position', `${iconEntityX} 0 0.041`);
+        el.appendChild(iconEntity);
+
+        if(data.text != ''){
+
+            var labelWidth = guiItem.width - guiItem.height;
+            var canvasWidth = labelWidth*multiplier;
+            var canvasHeight = guiItem.height*multiplier;
+            var labelCanvas = document.createElement("canvas");
+            this.labelCanvas = labelCanvas;
+            labelCanvas.setAttribute('width', canvasWidth);
+            labelCanvas.setAttribute('height', canvasHeight);
+            labelCanvas.id = getUniqueId('canvasLabel');
+            canvasContainer.appendChild(labelCanvas);
+
+            var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+            drawLabel(this.ctxLabel, this.labelCanvas, data.text, '100px '+ data.fontFamily, data.fontColor);
+
+            var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+            var labelEntity = document.createElement("a-entity");
+            labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+            labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1; side:front;`);
+            labelEntity.setAttribute('position', `${labelEntityX} 0 0.041`);
+            el.appendChild(labelEntity);
+
+        }
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'button');
+
+        el.addEventListener('mouseenter', function () {
+            buttonEntity.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            if (!(data.toggle)) {
+                buttonEntity.setAttribute('material', 'color', data.backgroundColor);
+            }
+        });
+
+        el.addEventListener(data.on, function (evt) {            
+            if (!(data.toggle)) { // if not toggling flashing active state
+                buttonEntity.emit('fadeOut');
+            }else{
+                buttonEntity.setAttribute('material', 'color', data.activeColor);
+            }
+            this.toggleState = !(this.toggleState);
+
+//            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+//            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+//            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+        console.log("In button update, toggle: "+this.toggleState);
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-icon-label-button', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'icon-label-button' },
+        'gui-icon-label-button': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-icon-label-button.on',
+        'font-color': 'gui-icon-label-button.fontColor',
+        'font-family': 'gui-icon-label-button.fontFamily',
+        'border-color': 'gui-icon-label-button.borderColor',
+        'background-color': 'gui-icon-label-button.backgroundColor',
+        'hover-color': 'gui-icon-label-button.hoverColor',
+        'active-color': 'gui-icon-label-button.activeColor',
+        'toggle': 'gui-icon-label-button.toggle',
+        'icon': 'gui-icon-label-button.icon',
+        'icon-active': 'gui-icon-label-button.iconActive',
+        'value': 'gui-icon-label-button.text'
+    }
+});
+},{}],54:[function(require,module,exports) {
+AFRAME.registerComponent('gui-toggle', {
+    schema: {
+        on: {default: 'click'},
+        text: {type: 'string', default: 'text'},
+        active: {type: 'boolean', default: true},
+        checked: {type: 'boolean', default: false},
+        borderWidth: {type: 'number', default: 1},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_offwhite},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('material', `shader: flat; depthTest:true;transparent: false; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+
+        var toggleBoxWidth = guiItem.height/1.75;
+        var toggleBoxX = -guiItem.width*0.5 + guiItem.height/2;
+        var toggleBox = document.createElement("a-box");
+        toggleBox.setAttribute('width', `${toggleBoxWidth}`);
+        toggleBox.setAttribute('height', '0.35');
+        toggleBox.setAttribute('depth', '0.01');
+        toggleBox.setAttribute('material', `color:${data.borderColor}; shader: flat;`);
+        toggleBox.setAttribute('position', `${toggleBoxX} 0 0`);
+        el.appendChild(toggleBox);
+
+        var toggleColorAnimation = document.createElement("a-animation");
+        toggleColorAnimation.setAttribute('begin', 'toggleAnimation');
+        toggleColorAnimation.setAttribute('direction', 'alternate');
+        toggleColorAnimation.setAttribute('attribute', 'material.color');
+        toggleColorAnimation.setAttribute('from', `${data.borderColor}`);
+        toggleColorAnimation.setAttribute('to', `${data.activeColor}`);
+        toggleColorAnimation.setAttribute('dur', '500');
+        toggleColorAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        toggleBox.appendChild(toggleColorAnimation);
+
+        var toggleHandleWidth = guiItem.height/6;
+        var toggleHandleXStart = -toggleBoxWidth*0.5 + toggleHandleWidth*0.5 + 0.05;
+        var toggleHandleXEnd = toggleHandleXStart + toggleBoxWidth - toggleHandleWidth - 0.1;
+        var toggleHandle = document.createElement("a-box");
+        toggleHandle.setAttribute('width', `${toggleHandleWidth}`);
+        toggleHandle.setAttribute('height', '0.3');
+        toggleHandle.setAttribute('depth', '0.02');
+        toggleHandle.setAttribute('material', `color:${data.handleColor}`);
+        toggleHandle.setAttribute('position', `${toggleHandleXStart} 0 0.02`);
+        toggleBox.appendChild(toggleHandle);
+
+        var toggleHandleAnimation = document.createElement("a-animation");
+        toggleHandleAnimation.setAttribute('begin', 'toggleAnimation');
+        toggleHandleAnimation.setAttribute('direction', 'alternate');
+        toggleHandleAnimation.setAttribute('attribute', 'position');
+        toggleHandleAnimation.setAttribute('from', `${toggleHandleXStart} 0 0.02`);
+        toggleHandleAnimation.setAttribute('to', `${toggleHandleXEnd} 0 0.02`);
+        toggleHandleAnimation.setAttribute('dur', '500');
+        toggleHandleAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        toggleHandle.appendChild(toggleHandleAnimation);
+
+        var labelWidth = guiItem.width - guiItem.height;
+        var multiplier = 350;
+        var canvasWidth = labelWidth*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+        
+        var labelCanvas = document.createElement("canvas");
+        this.labelCanvas = labelCanvas;
+        labelCanvas.className = "visuallyhidden";
+        labelCanvas.setAttribute('width', canvasWidth);
+        labelCanvas.setAttribute('height', canvasHeight);
+        labelCanvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(labelCanvas);
+
+        var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+        drawLabel(this.ctxLabel, this.labelCanvas, this.data.text, '100px '+ data.fontFamily, this.data.fontColor);
+
+        var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+        var labelEntity = document.createElement("a-entity");
+        labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+        labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        labelEntity.setAttribute('position', `${labelEntityX} 0 0.02`);
+        el.appendChild(labelEntity);
+
+        this.updateToggle(data.active);
+
+        el.addEventListener('mouseenter', function () {
+            toggleHandle.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            toggleHandle.setAttribute('material', 'color', data.handleColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            data.checked = !data.checked;
+            toggleColorAnimation.emit('toggleAnimation');
+            toggleHandleAnimation.emit('toggleAnimation');
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+    },
+    update: function(){
+        var data = this.data;
+        this.updateToggle(data.active)
+    },
+
+
+    updateToggle: function(active){
+
+        if(active){
+
+        }else{
+        }
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-toggle', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'toggle' },
+        'gui-toggle': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-toggle.on',
+        'active': 'gui-toggle.active',
+        'checked': 'gui-toggle.checked',
+        'value': 'gui-toggle.text',
+        'font-color': 'gui-toggle.fontColor',
+        'font-family': 'gui-toggle.fontFamily',
+        'border-width': 'gui-toggle.borderWidth',
+        'border-color': 'gui-toggle.borderColor',
+        'background-color': 'gui-toggle.backgroundColor',
+        'hover-color': 'gui-toggle.hoverColor',
+        'active-color': 'gui-toggle.activeColor',
+        'handle-color': 'gui-toggle.handleColor'
+    }
+});
+
+
+},{}],55:[function(require,module,exports) {
+AFRAME.registerComponent('gui-radio', {
+    schema: {
+        on: {default: 'click'},
+        text: {type: 'string', default: 'text'},
+        active: {type: 'boolean', default: true},
+        checked: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_white},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_grey},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('material', `shader: flat; depthTest:true;transparent: false; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+
+        var radioBoxWidth = 0.50
+        var radioBoxX = -guiItem.width*0.5 + guiItem.height*0.5;
+        var radioBox = document.createElement("a-cylinder");
+        radioBox.setAttribute('radius', '0.17');
+        radioBox.setAttribute('height', '0.01');
+        radioBox.setAttribute('rotation', '90 0 0');
+        radioBox.setAttribute('material', `color:${data.handleColor}; shader: flat;`);
+        radioBox.setAttribute('position', `${radioBoxX} 0 0`);
+        el.appendChild(radioBox);
+
+        var radioborder = document.createElement("a-torus");
+        radioborder.setAttribute('radius', '0.16');
+        radioborder.setAttribute('radius-tubular', '0.01');
+        radioborder.setAttribute('rotation', '90 0 0');
+        radioborder.setAttribute('material', `color:${data.borderColor}; shader: flat;`);
+        radioBox.appendChild(radioborder);
+
+        var radioCenter = document.createElement("a-cylinder");
+        radioCenter.setAttribute('radius', '0.15');
+        radioCenter.setAttribute('height', '0.02');
+        radioCenter.setAttribute('rotation', '0 0 0');
+        radioCenter.setAttribute('material', `color:${data.handleColor}; shader: flat;`);
+        radioBox.appendChild(radioCenter);
+
+        var radioColorAnimation = document.createElement("a-animation");
+        radioColorAnimation.setAttribute('begin', 'radioAnimation');
+        radioColorAnimation.setAttribute('direction', 'alternate');
+        radioColorAnimation.setAttribute('attribute', 'material.color');
+        radioColorAnimation.setAttribute('from', `${data.handleColor}`);
+        radioColorAnimation.setAttribute('to', `${data.activeColor}`);
+        radioColorAnimation.setAttribute('dur', '500');
+        radioColorAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioColorAnimation);
+
+        var radioRotationAnimation = document.createElement("a-animation");
+        radioRotationAnimation.setAttribute('begin', 'radioAnimation');
+        radioRotationAnimation.setAttribute('direction', 'alternate');
+        radioRotationAnimation.setAttribute('attribute', 'rotation');
+        radioRotationAnimation.setAttribute('from', '0 0 0');
+        radioRotationAnimation.setAttribute('to', '-180 0 0');
+        radioRotationAnimation.setAttribute('dur', '500');
+        radioRotationAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioRotationAnimation);
+
+        var radioShiftOutAnimation = document.createElement("a-animation");
+        radioShiftOutAnimation.setAttribute('begin', 'radioAnimation');
+        radioShiftOutAnimation.setAttribute('direction', 'normal');
+        radioShiftOutAnimation.setAttribute('attribute', 'position');
+        radioShiftOutAnimation.setAttribute('from', '0 0 0');
+        radioShiftOutAnimation.setAttribute('to', '0 0.3 0 ');
+        radioShiftOutAnimation.setAttribute('dur', '300');
+        radioShiftOutAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioShiftOutAnimation);
+
+        var radioShiftInAnimation = document.createElement("a-animation");
+        radioShiftInAnimation.setAttribute('begin', 'radioAnimation');
+        radioShiftInAnimation.setAttribute('direction', 'normal');
+        radioShiftInAnimation.setAttribute('attribute', 'position');
+        radioShiftInAnimation.setAttribute('from', '0 0.3 0');
+        radioShiftInAnimation.setAttribute('to', '0 0 0 ');
+        radioShiftInAnimation.setAttribute('delay', '300');
+        radioShiftInAnimation.setAttribute('dur', '200');
+        radioShiftInAnimation.setAttribute('easing', 'ease-in-out-cubic');
+        radioCenter.appendChild(radioShiftInAnimation);
+
+//        var labelWidth = guiItem.width - radioBoxWidth;
+        var labelWidth = guiItem.width - guiItem.height;
+        var multiplier = 350;
+        var canvasWidth = labelWidth*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var labelCanvas = document.createElement("canvas");
+        this.labelCanvas = labelCanvas;
+        labelCanvas.className = "visuallyhidden";
+        labelCanvas.setAttribute('width', canvasWidth);
+        labelCanvas.setAttribute('height', canvasHeight);
+        labelCanvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(labelCanvas);
+
+        var ctxLabel = this.ctxLabel = labelCanvas.getContext('2d');
+        drawLabel(this.ctxLabel, this.labelCanvas, this.data.text, '100px '+ data.fontFamily, this.data.fontColor);
+
+        var labelEntityX = guiItem.height*0.5 - guiItem.width*0.05;
+        var labelEntity = document.createElement("a-entity");
+        labelEntity.setAttribute('geometry', `primitive: plane; width: ${labelWidth}; height: ${guiItem.height/1.05};`);
+        labelEntity.setAttribute('material', `shader: flat; src: #${labelCanvas.id}; transparent: true; opacity: 1;  color: ${this.data.backgroundColor}; side:front;`);
+        labelEntity.setAttribute('position', `${labelEntityX} 0 0.02`);
+        el.appendChild(labelEntity);
+
+
+        this.updateToggle(data.active);
+
+        el.addEventListener('mouseenter', function () {
+            radioborder.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            radioborder.setAttribute('material', 'color', data.borderColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            data.checked = !data.checked;
+            radioColorAnimation.emit('radioAnimation');
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+    },
+    update: function(){
+        var data = this.data;
+        this.updateToggle(data.active)
+    },
+
+
+    updateToggle: function(active){
+
+        if(active){
+
+        }else{
+        }
+
+    },
+
+
+});
+
+AFRAME.registerPrimitive( 'a-gui-radio', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'radio' },
+        'gui-radio': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-radio.on',
+        'value': 'gui-radio.text',
+        'active': 'gui-radio.active',
+        'checked': 'gui-radio.checked',
+        'font-color': 'gui-radio.fontColor',
+        'font-family': 'gui-radio.fontFamily',
+        'border-color': 'gui-radio.borderColor',
+        'background-color': 'gui-radio.backgroundColor',
+        'hover-color': 'gui-radio.hoverColor',
+        'active-color': 'gui-radio.activeColor',
+        'handle-color': 'gui-radio.handleColor'
+    }
+});
+},{}],56:[function(require,module,exports) {
+AFRAME.registerComponent('gui-circle-loader', {
+    schema: {
+        count: {type: 'number', default: '100'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.className = 'visuallyhidden';
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 1; side:back; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.count+'%', '110px ' + data.fontFamily, data.fontColor, 1);
+
+        var loaderContainer = document.createElement("a-entity");
+        loaderContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        loaderContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        loaderContainer.setAttribute('rotation', '90 0 0');
+        loaderContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(loaderContainer);
+
+        var loaderRing = document.createElement("a-ring");
+        loaderRing.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor}`);
+        loaderRing.setAttribute('radius-inner', `${guiItem.height/3}`);
+        loaderRing.setAttribute('radius-outer', `${guiItem.height/2}`);
+        loaderRing.setAttribute('theta-start', '90');
+        loaderRing.setAttribute('theta-length', '10'); // this has to count 0 to 360 when loading
+        loaderRing.setAttribute('rotation', '0 0 0');
+        loaderRing.setAttribute('position', '0 0 0.04');
+        loaderRing.id = "loader_ring";
+        el.appendChild(loaderRing);
+
+        var countLoaded = document.createElement("a-entity");
+        countLoaded.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/1.75}; height: ${guiItem.height/1.75};`);
+        countLoaded.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        countLoaded.setAttribute('position', '0 0 0.022');
+        countLoaded.id = "loader_ring_count";
+        el.appendChild(countLoaded);
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-circle-loader', {
+    defaultComponents: {
+        'gui-item': { type: 'circle-loader' },
+        'gui-circle-loader': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'count': 'gui-circle-loader.count',
+        'font-family': 'gui-circle-loader.fontFamily',
+        'font-color': 'gui-circle-loader.fontColor',
+        'background-color': 'gui-circle-loader.backgroundColor',
+        'active-color': 'gui-circle-loader.activeColor'
+    }
+});
+},{}],57:[function(require,module,exports) {
+AFRAME.registerComponent('gui-progressbar', {
+    schema: {
+        backgroundColor: {type: 'string', default: key_grey},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function () {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; opacity: 1;  color: ${data.backgroundColor}; side:front;`);
+
+
+        var progressMeter = document.createElement("a-entity");
+        progressMeter.setAttribute('geometry', `primitive: box; width: 0.04; height: ${guiItem.height}; depth: 0.02;`);
+        progressMeter.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor}`);
+        progressMeter.setAttribute('position', -guiItem.width/2 +' 0 0.01');
+        progressMeter.id = "progress_meter";
+        el.appendChild(progressMeter);
+
+        // <a-entity id="progress_meter"
+        //           geometry="primitive: box; width: 0.04; height: 0.3; depth: 0.004;"
+        //           material="shader: flat; opacity: 1; color: blue;"
+        //             position="-1.23  0 0.0">
+        // </a-entity>
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-progressbar', {
+    defaultComponents: {
+        'gui-item': { type: 'progressbar' },
+        'gui-progressbar': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'background-color': 'gui-progressbar.backgroundColor',
+        'active-color': 'gui-progressbar.activeColor'
+    }
+});
+
+},{}],58:[function(require,module,exports) {
+AFRAME.registerComponent('gui-circle-timer', {
+    schema: {
+        countDown: {type: 'number', default: '10'},
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey},
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.height*multiplier; //square
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.className = 'visuallyhidden';
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; transparent: true; opacity: 1; side:back; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.countDown, '200px ' + data.fontFamily, data.fontColor, 1);
+
+        var timerContainer = document.createElement("a-entity");
+        timerContainer.setAttribute('geometry', `primitive: cylinder; radius: ${guiItem.height/2}; height: 0.02;`);
+        timerContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.backgroundColor}`);
+        timerContainer.setAttribute('rotation', '90 0 0');
+        timerContainer.setAttribute('position', '0 0 0.01');
+        el.appendChild(timerContainer);
+
+        var timerIndicator1 = document.createElement("a-ring");
+        timerIndicator1.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator1.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator1.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator1.setAttribute('theta-start', '-1');
+        timerIndicator1.setAttribute('theta-length', '3');
+        timerIndicator1.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator1);
+        var timerIndicator2 = document.createElement("a-ring");
+        timerIndicator2.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator2.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator2.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator2.setAttribute('theta-start', '89');
+        timerIndicator2.setAttribute('theta-length', '3');
+        timerIndicator2.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator2);
+        var timerIndicator3 = document.createElement("a-ring");
+        timerIndicator3.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator3.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator3.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator3.setAttribute('theta-start', '179');
+        timerIndicator3.setAttribute('theta-length', '3');
+        timerIndicator3.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator3);
+        var timerIndicator4 = document.createElement("a-ring");
+        timerIndicator4.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        timerIndicator4.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerIndicator4.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerIndicator4.setAttribute('theta-start', '269');
+        timerIndicator4.setAttribute('theta-length', '3');
+        timerIndicator4.setAttribute('position', '0 0 0.04');
+        el.appendChild(timerIndicator4);
+
+
+
+
+        var timerRing = document.createElement("a-ring");
+        timerRing.setAttribute('material', `shader: flat; opacity: 0.75; side:double; color: ${data.activeColor}`);
+        timerRing.setAttribute('radius-inner', `${guiItem.height/3}`);
+        timerRing.setAttribute('radius-outer', `${guiItem.height/2}`);
+        timerRing.setAttribute('theta-start', '0');
+        timerRing.setAttribute('theta-length', '10'); // this has to increase 0 to 360 when running the countdown
+        timerRing.setAttribute('rotation', '0 0 0');
+        timerRing.setAttribute('position', '0 0 0.03');
+        timerRing.id = "loader_ring";
+        el.appendChild(timerRing);
+
+        var countDownLabel = document.createElement("a-entity");
+        countDownLabel.setAttribute('geometry', `primitive: plane; width: ${guiItem.height/1.75}; height: ${guiItem.height/1.75};`);
+        countDownLabel.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        countDownLabel.setAttribute('position', '0 0 0.022');
+        countDownLabel.id = "loader_ring_count";
+        el.appendChild(countDownLabel);
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-circle-timer', {
+    defaultComponents: {
+        'gui-item': { type: 'circle-timer' },
+        'gui-circle-timer': { }
+    },
+    mappings: {
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'count-down': 'gui-circle-timer.countDown',
+        'font-family': 'gui-circle-timer.fontFamily',
+        'font-color': 'gui-circle-timer.fontColor',
+        'border-color': 'gui-circle-timer.borderColor',
+        'background-color': 'gui-circle-timer.backgroundColor',
+        'active-color': 'gui-circle-timer.activeColor'
+    }
+});
+},{}],59:[function(require,module,exports) {
+AFRAME.registerComponent('gui-slider', {
+    schema: {
+        percent: {type: 'number', default: '0.5'},
+        handleOuterRadius: {type: 'number', default: '0.17'},
+        handleInnerRadius: {type: 'number', default: '0.13'},
+        handleOuterDepth: {type: 'number', default: '0.04'},
+        handleInnerDepth: {type: 'number', default: '0.02'},
+        sliderBarHeight: {type: 'number', default: '0.05'},
+        sliderBarDepth: {type: 'number', default: '0.03'},
+        leftRightPadding: {type: 'number', default: '0.25'},
+        topBottomPadding: {type: 'number', default: '0.125'},
+
+        borderColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_grey_light},        
+        activeColor: {type: 'string', default: key_orange},
+        handleColor: {type: 'string', default: key_white},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var sliderWidth = guiItem.width - data.leftRightPadding*2.0
+        var sliderHeight = guiItem.height - data.topBottomPadding*2.0
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.height};`);
+        el.setAttribute('material', `shader: flat; opacity: 1;  color: ${data.backgroundColor}; side:front;`);
+
+        var sliderActiveBar = document.createElement("a-entity");
+        sliderActiveBar.setAttribute('geometry', `primitive: box; width: ${data.percent*sliderWidth}; height: ${data.sliderBarHeight}; depth: ${data.sliderBarDepth};`);
+        sliderActiveBar.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.activeColor};`);
+        sliderActiveBar.setAttribute('position', `${data.percent - sliderWidth*0.5} 0 ${data.sliderBarDepth - 0.01}`);
+        el.appendChild(sliderActiveBar);
+
+        var sliderBar = document.createElement("a-entity");
+        sliderBar.setAttribute('geometry', `primitive: box; width: ${sliderWidth - data.percent * sliderWidth}; height: ${data.sliderBarHeight}; depth: ${data.sliderBarDepth};`);
+        sliderBar.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor};`);
+        sliderBar.setAttribute('position', `${data.percent * sliderWidth * 0.5} 0 ${data.sliderBarDepth - 0.01}`);
+        el.appendChild(sliderBar);
+
+        var handleContainer = document.createElement("a-entity");
+        handleContainer.setAttribute('geometry', `primitive: cylinder; radius: ${data.handleOuterRadius}; height: ${data.handleOuterDepth};`);
+        handleContainer.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor};`);
+        handleContainer.setAttribute('rotation', '90 0 0');
+        handleContainer.setAttribute('position', `${data.percent*sliderWidth - sliderWidth*0.5} 0 ${data.handleOuterDepth - 0.01}`);
+        el.appendChild(handleContainer);
+
+        var handle = document.createElement("a-entity");
+        handle.setAttribute('geometry', `primitive: cylinder; radius: ${data.handleInnerRadius}; height: ${data.handleInnerDepth};`);
+        handle.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.handleColor};`);
+        handle.setAttribute('position', `0 ${data.handleInnerDepth} 0`);
+        handleContainer.appendChild(handle);
+
+
+
+        el.addEventListener('mouseenter', function () {
+            handle.setAttribute('material', 'color', data.hoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            handle.setAttribute('material', 'color', data.handleColor);
+        });
+
+        el.addEventListener('click', function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var localCoordinates = el.object3D.worldToLocal(evt.detail.intersection.point);
+            console.log('local coordinates: ', localCoordinates);
+            console.log('current percent: '+data.percent);
+            var sliderBarWidth = 2; // total width of slider bar
+            if (localCoordinates.x <= (-sliderBarWidth / 2)) {
+                data.percent = 0;
+            } else if (localCoordinates.x >= (sliderBarWidth / 2)) {
+                data.percent = 1.0;
+            } else {
+                data.percent = (localCoordinates.x + (sliderBarWidth /2)) / sliderBarWidth;
+            }
+            console.log("handle container: "+handleContainer);
+            sliderActiveBar.setAttribute('geometry', `primitive: box; width: ${data.percent*2}; height: 0.05; depth: 0.03;`);
+            sliderActiveBar.setAttribute('position', `${data.percent-1} 0 0.02`);
+            sliderBar.setAttribute('geometry', `primitive: box; width: ${2-data.percent*2}; height: 0.05; depth: 0.03;`);
+            sliderBar.setAttribute('position', `${data.percent*1} 0 0.02`);
+            handleContainer.setAttribute('position', `${data.percent*2-1} 0 0.03`);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-slider', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'slider' },
+        'gui-slider': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'percent': 'gui-slider.percent',
+        'handle-outer-radius': 'gui-slider.handleOuterRadius',
+        'handle-inner-radius': 'gui-slider.handleInnerRadius',
+        'handle-outer-depth': 'gui-slider.handleOuterDepth',
+        'handle-inner-depth': 'gui-slider.handleInnerDepth',
+        'slider-bar-height': 'gui-slider.sliderBarHeight',
+        'slider-bar-depth': 'gui-slider.sliderBarDepth',
+        'left-right-padding': 'gui-slider.leftRightPadding',
+        'top-bottom-padding': 'gui-slider.topBottomPadding',
+        'border-color': 'gui-slider.borderColor',
+        'background-color': 'gui-slider.backgroundColor',
+        'hover-color': 'gui-slider.hoverColor',
+        'active-color': 'gui-slider.activeColor',
+        'handle-color': 'gui-slider.handleColor'
+    }
+});
+},{}],60:[function(require,module,exports) {
+AFRAME.registerComponent('gui-input', {
+    schema: {
+        on: {default: 'click'},
+        inputText: {type: 'string', default: 'Placeholder'},
+        toggle: {type: 'boolean', default: false},
+
+        fontFamily: {type: 'string', default: 'Helvetica'},
+        fontColor: {type: 'string', default: key_grey_dark},
+        borderColor: {type: 'string', default: key_grey_dark},
+        borderHoverColor: {type: 'string', default: key_grey},
+        backgroundColor: {type: 'string', default: key_offwhite},
+        hoverColor: {type: 'string', default: key_white},
+        activeColor: {type: 'string', default: key_orange},
+    },
+    init: function() {
+
+        var data = this.data;
+        var el = this.el;
+        var guiItem = el.getAttribute("gui-item");
+        var multiplier = 350;
+        var canvasWidth = guiItem.width*multiplier;
+        var canvasHeight = guiItem.height*multiplier;
+
+        var canvasContainer = document.createElement('div');
+        canvasContainer.setAttribute('class', 'visuallyhidden');
+        document.body.appendChild(canvasContainer);
+
+        var canvas = document.createElement("canvas");
+        this.canvas = canvas;
+        canvas.className = "visuallyhidden";
+        canvas.setAttribute('width', canvasWidth);
+        canvas.setAttribute('height', canvasHeight);
+        canvas.id = getUniqueId('canvas');
+        canvasContainer.appendChild(canvas);
+
+        var ctx = this.ctx = canvas.getContext('2d');
+
+        el.setAttribute('geometry', `primitive: plane; height: ${guiItem.height}; width: ${guiItem.width};`);
+        el.setAttribute('material', `shader: flat; transparent: false; side:front; color:${data.backgroundColor};`);
+
+        drawText(ctx, canvas, data.inputText, '100px ' + data.fontFamily, data.fontColor, 1);
+
+
+        var inputEntity = document.createElement("a-entity");
+        inputEntity.setAttribute('geometry', `primitive: plane; width: ${guiItem.width/1.05}; height: ${guiItem.height/1.05};`);
+        inputEntity.setAttribute('material', `shader: flat; src: #${canvas.id}; transparent: true; opacity: 1; side:front;`);
+        inputEntity.setAttribute('position', '0 0 0.01');
+        el.appendChild(inputEntity);
+
+        var borderTopEntity = document.createElement("a-entity");
+        borderTopEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width)}; height: 0.05; depth: 0.02;`);
+        borderTopEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderTopEntity.setAttribute('position', `0 -${(guiItem.height/2)-0.025} 0.01`);
+        el.appendChild(borderTopEntity);
+        var borderBottomEntity = document.createElement("a-entity");
+        borderBottomEntity.setAttribute('geometry', `primitive: box; width: ${(guiItem.width)}; height: 0.05; depth: 0.02;`);
+        borderBottomEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderBottomEntity.setAttribute('position', `0 ${(guiItem.height/2)-0.025} 0.01`);
+        el.appendChild(borderBottomEntity);
+        var borderLeftEntity = document.createElement("a-entity");
+        borderLeftEntity.setAttribute('geometry', `primitive: box; width: 0.05; height: ${(guiItem.height)}; depth: 0.02;`);
+        borderLeftEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderLeftEntity.setAttribute('position', `-${(guiItem.width/2)-0.025} 0 0.01`);
+        el.appendChild(borderLeftEntity);
+        var borderRightEntity = document.createElement("a-entity");
+        borderRightEntity.setAttribute('geometry', `primitive: box; width: 0.05; height: ${(guiItem.height)}; depth: 0.02;`);
+        borderRightEntity.setAttribute('material', `shader: flat; opacity: 1; side:double; color: ${data.borderColor}`);
+        borderRightEntity.setAttribute('position', `${(guiItem.width/2)-0.025} 0 0.01`);
+        el.appendChild(borderRightEntity);
+
+        ////WAI ARIA Support
+        el.setAttribute('role', 'input');
+
+        el.addEventListener('mouseenter', function () {
+            el.setAttribute('material', 'color', data.hoverColor);
+            borderTopEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderBottomEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderLeftEntity.setAttribute('material', 'color', data.borderHoverColor);
+            borderRightEntity.setAttribute('material', 'color', data.borderHoverColor);
+        });
+
+        el.addEventListener('mouseleave', function () {
+            el.setAttribute('material', 'color', data.backgroundColor);
+            borderTopEntity.setAttribute('material', 'color', data.borderColor);
+            borderBottomEntity.setAttribute('material', 'color', data.borderColor);
+            borderLeftEntity.setAttribute('material', 'color', data.borderColor);
+            borderRightEntity.setAttribute('material', 'color', data.borderColor);
+        });
+
+        el.addEventListener(data.on, function (evt) {
+            console.log('I was clicked at: ', evt.detail.intersection.point);
+            var guiInteractable = el.getAttribute("gui-interactable");
+            console.log("guiInteractable: "+guiInteractable);
+            var clickActionFunctionName = guiInteractable.clickAction;
+            console.log("clickActionFunctionName: "+clickActionFunctionName);
+            // find object
+            var clickActionFunction = window[clickActionFunctionName];
+            //console.log("clickActionFunction: "+clickActionFunction);
+            // is object a function?
+            if (typeof clickActionFunction === "function") clickActionFunction();
+        });
+
+
+    },
+    play: function () {
+
+    },
+    update: function (oldData) {
+
+    },
+});
+
+AFRAME.registerPrimitive( 'a-gui-input', {
+    defaultComponents: {
+        'gui-interactable': { },
+        'gui-item': { type: 'input' },
+        'gui-input': { }
+    },
+    mappings: {
+        'onclick': 'gui-interactable.clickAction',
+        'onhover': 'gui-interactable.hoverAction',
+        'key-code': 'gui-interactable.keyCode',
+        'width': 'gui-item.width',
+        'height': 'gui-item.height',
+        'margin': 'gui-item.margin',
+        'on': 'gui-input.on',
+        'value': 'gui-input.inputText',
+        'toggle': 'gui-input.toggle',
+        'font-color': 'gui-input.fontColor',
+        'font-family': 'gui-input.fontFamily',
+        'border-color': 'gui-input.borderColor',
+        'border-hover-color': 'gui-input.borderHoverColor',
+        'background-color': 'gui-input.backgroundColor',
+        'hover-color': 'gui-input.hoverColor',
+        'active-color': 'gui-input.activeColor',
+    }
+});
+},{}],61:[function(require,module,exports) {
+AFRAME.registerComponent('gui-cursor', {
+    schema: {
+        color: {type: 'string', default: key_white},
+        hoverColor: {type: 'string', default: key_white},
+        activeColor: {type: 'string', default: key_orange},
+        distance: {type: 'number', default: -1},
+        design: {type: 'string', default: 'dot'},
+    },
+    init: function () {
+        var cursor = this.cursor = this.el.getAttribute('cursor');
+        var fuse = this.fuse = cursor.fuse; // true if cursor fuse is enabled.
+        var fuseTimeout = cursor.fuseTimeout; // animation lenght should be based on this value
+
+        var el = this.el;
+        var data = this.data;
+        var defaultHoverAnimationDuration = 200;
+        var fuseAnimationDuration = fuseTimeout - defaultHoverAnimationDuration;
+
+        console.log("fuse: "+fuse+", fuseTimeout: "+fuseTimeout);
+
+        if(data.design == 'dot'){    
+
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.025');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.000001');
+            hoverAniInner.setAttribute('to', '0.0225');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var hoverAniOuter = document.createElement("a-animation");
+            hoverAniOuter.setAttribute('begin', 'hovergui');
+            hoverAniOuter.setAttribute('easing', 'linear');
+            hoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            hoverAniOuter.setAttribute('fill', 'forwards');
+            hoverAniOuter.setAttribute('from', '0.025');
+            hoverAniOuter.setAttribute('to', '0.0275');
+            hoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOuter);
+
+            var hoverAniColor = document.createElement("a-animation");
+            hoverAniColor.setAttribute('begin', 'hovergui');
+            hoverAniColor.setAttribute('easing', 'linear');
+            hoverAniColor.setAttribute('attribute', 'material.color');
+            hoverAniColor.setAttribute('fill', 'forwards');
+            hoverAniColor.setAttribute('from', `${data.color}`);
+            hoverAniColor.setAttribute('to',  `${data.hoverColor}`);
+            hoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniColor);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.0225');
+            leaveAniInner.setAttribute('to', '0.000001');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var leaveAniOuter = document.createElement("a-animation");
+            leaveAniOuter.setAttribute('begin', 'leavegui');
+            leaveAniOuter.setAttribute('easing', 'linear');
+            leaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            leaveAniOuter.setAttribute('fill', 'forwards');
+            leaveAniOuter.setAttribute('from', '0.0275');
+            leaveAniOuter.setAttribute('to', '0.025');
+            leaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOuter);
+
+            var leaveAniColor = document.createElement("a-animation");
+            leaveAniColor.setAttribute('begin', 'leavegui');
+            leaveAniColor.setAttribute('easing', 'linear');
+            leaveAniColor.setAttribute('attribute', 'material.color');
+            leaveAniColor.setAttribute('fill', 'forwards');
+            leaveAniColor.setAttribute('from', `${data.hoverColor}`);
+            leaveAniColor.setAttribute('to', `${data.color}`);
+            leaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniColor);
+
+            var clickAnimation = document.createElement("a-animation");
+            clickAnimation.setAttribute('begin', 'click');
+            clickAnimation.setAttribute('easing', 'ease-in');
+            clickAnimation.setAttribute('attribute', 'scale');
+            clickAnimation.setAttribute('fill', 'forwards');
+            clickAnimation.setAttribute('from', '1 1 1');
+            clickAnimation.setAttribute('to', '1.25 1.25 1.25');
+            clickAnimation.setAttribute('dur', '200');
+            el.appendChild(clickAnimation);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0275; radiusOuter:0.03; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var shadowHoverAniInner = document.createElement("a-animation");
+            shadowHoverAniInner.setAttribute('begin', 'hovergui');
+            shadowHoverAniInner.setAttribute('easing', 'linear');
+            shadowHoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowHoverAniInner.setAttribute('fill', 'forwards');
+            shadowHoverAniInner.setAttribute('from', '0.0275');
+            shadowHoverAniInner.setAttribute('to', '0.03');
+            shadowHoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniInner);
+
+            var shadowHoverAniOuter = document.createElement("a-animation");
+            shadowHoverAniOuter.setAttribute('begin', 'hovergui');
+            shadowHoverAniOuter.setAttribute('easing', 'linear');
+            shadowHoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowHoverAniOuter.setAttribute('fill', 'forwards');
+            shadowHoverAniOuter.setAttribute('from', '0.03');
+            shadowHoverAniOuter.setAttribute('to', '0.0325');
+            shadowHoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniOuter);
+
+            var shadowLeaveAniInner = document.createElement("a-animation");
+            shadowLeaveAniInner.setAttribute('begin', 'leavegui');
+            shadowLeaveAniInner.setAttribute('easing', 'linear');
+            shadowLeaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowLeaveAniInner.setAttribute('fill', 'forwards');
+            shadowLeaveAniInner.setAttribute('from', '0.03');
+            shadowLeaveAniInner.setAttribute('to', '0.0275');
+            shadowLeaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniInner);
+
+            var shadowLeaveAniOuter = document.createElement("a-animation");
+            shadowLeaveAniOuter.setAttribute('begin', 'leavegui');
+            shadowLeaveAniOuter.setAttribute('easing', 'linear');
+            shadowLeaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowLeaveAniOuter.setAttribute('fill', 'forwards');
+            shadowLeaveAniOuter.setAttribute('from', '0.0325');
+            shadowLeaveAniOuter.setAttribute('to', '0.03');
+            shadowLeaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniOuter);
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.03; radiusOuter:0.0375; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end dot design
+
+        }else if(data.design == 'ring'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.0225; radiusOuter:0.0275');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.0225');
+            hoverAniInner.setAttribute('to', '0.025');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var hoverAniOuter = document.createElement("a-animation");
+            hoverAniOuter.setAttribute('begin', 'hovergui');
+            hoverAniOuter.setAttribute('easing', 'linear');
+            hoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            hoverAniOuter.setAttribute('fill', 'forwards');
+            hoverAniOuter.setAttribute('from', '0.025');
+            hoverAniOuter.setAttribute('to', '0.0325');
+            hoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOuter);
+
+            var hoverAniColor = document.createElement("a-animation");
+            hoverAniColor.setAttribute('begin', 'hovergui');
+            hoverAniColor.setAttribute('easing', 'linear');
+            hoverAniColor.setAttribute('attribute', 'material.color');
+            hoverAniColor.setAttribute('fill', 'forwards');
+            hoverAniColor.setAttribute('from', `${data.color}`);
+            hoverAniColor.setAttribute('to',  `${data.hoverColor}`);
+            hoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniColor);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.025');
+            leaveAniInner.setAttribute('to', '0.0225');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var leaveAniOuter = document.createElement("a-animation");
+            leaveAniOuter.setAttribute('begin', 'leavegui');
+            leaveAniOuter.setAttribute('easing', 'linear');
+            leaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            leaveAniOuter.setAttribute('fill', 'forwards');
+            leaveAniOuter.setAttribute('from', '0.0325');
+            leaveAniOuter.setAttribute('to', '0.0275');
+            leaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOuter);
+
+            var leaveAniColor = document.createElement("a-animation");
+            leaveAniColor.setAttribute('begin', 'leavegui');
+            leaveAniColor.setAttribute('easing', 'linear');
+            leaveAniColor.setAttribute('attribute', 'material.color');
+            leaveAniColor.setAttribute('fill', 'forwards');
+            leaveAniColor.setAttribute('from', `${data.hoverColor}`);
+            leaveAniColor.setAttribute('to', `${data.color}`);
+            leaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniColor);
+
+            var clickAnimation = document.createElement("a-animation");
+            clickAnimation.setAttribute('begin', 'click');
+            clickAnimation.setAttribute('easing', 'ease-in');
+            clickAnimation.setAttribute('attribute', 'scale');
+            clickAnimation.setAttribute('fill', 'forwards');
+            clickAnimation.setAttribute('from', '1 1 1');
+            clickAnimation.setAttribute('to', '1.25 1.25 1.25');
+            clickAnimation.setAttribute('dur', '200');
+            el.appendChild(clickAnimation);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.03; radiusOuter:0.0325; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var shadowHoverAniInner = document.createElement("a-animation");
+            shadowHoverAniInner.setAttribute('begin', 'hovergui');
+            shadowHoverAniInner.setAttribute('easing', 'linear');
+            shadowHoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowHoverAniInner.setAttribute('fill', 'forwards');
+            shadowHoverAniInner.setAttribute('from', '0.03');
+            shadowHoverAniInner.setAttribute('to', '0.0325');
+            shadowHoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniInner);
+
+            var shadowHoverAniOuter = document.createElement("a-animation");
+            shadowHoverAniOuter.setAttribute('begin', 'hovergui');
+            shadowHoverAniOuter.setAttribute('easing', 'linear');
+            shadowHoverAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowHoverAniOuter.setAttribute('fill', 'forwards');
+            shadowHoverAniOuter.setAttribute('from', '0.0325');
+            shadowHoverAniOuter.setAttribute('to', '0.0375');
+            shadowHoverAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowHoverAniOuter);
+
+            var shadowLeaveAniInner = document.createElement("a-animation");
+            shadowLeaveAniInner.setAttribute('begin', 'leavegui');
+            shadowLeaveAniInner.setAttribute('easing', 'linear');
+            shadowLeaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            shadowLeaveAniInner.setAttribute('fill', 'forwards');
+            shadowLeaveAniInner.setAttribute('from', '0.0325');
+            shadowLeaveAniInner.setAttribute('to', '0.03');
+            shadowLeaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniInner);
+
+            var shadowLeaveAniOuter = document.createElement("a-animation");
+            shadowLeaveAniOuter.setAttribute('begin', 'leavegui');
+            shadowLeaveAniOuter.setAttribute('easing', 'linear');
+            shadowLeaveAniOuter.setAttribute('attribute', 'geometry.radiusOuter');
+            shadowLeaveAniOuter.setAttribute('fill', 'forwards');
+            shadowLeaveAniOuter.setAttribute('from', '0.0375');
+            shadowLeaveAniOuter.setAttribute('to', '0.0325');
+            shadowLeaveAniOuter.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(shadowLeaveAniOuter);
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.035; radiusOuter:0.0425; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end ring design
+
+        }else if(data.design == 'reticle'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.0125; thetaLength:180;');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniOpacity = document.createElement("a-animation");
+            hoverAniOpacity.setAttribute('begin', 'hovergui');
+            hoverAniOpacity.setAttribute('easing', 'linear');
+            hoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            hoverAniOpacity.setAttribute('fill', 'forwards');
+            hoverAniOpacity.setAttribute('from', '1');
+            hoverAniOpacity.setAttribute('to', '0');
+            hoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniOpacity);
+
+            var leaveAniOpacity = document.createElement("a-animation");
+            leaveAniOpacity.setAttribute('begin', 'leavegui');
+            leaveAniOpacity.setAttribute('easing', 'linear');
+            leaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            leaveAniOpacity.setAttribute('fill', 'forwards');
+            leaveAniOpacity.setAttribute('from', '0');
+            leaveAniOpacity.setAttribute('to', '1');
+            leaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniOpacity);
+
+
+            var cursorCenter = document.createElement("a-entity");
+            cursorCenter.setAttribute('geometry', 'primitive: ring; radiusInner:0.000001; radiusOuter:0.0125; thetaLength:180; thetaStart:180;');
+            cursorCenter.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorCenter.setAttribute('position', '0 0 0');
+            el.appendChild(cursorCenter);
+            this.cursorCenter = cursorCenter;
+
+            var centerHoverAniOpacity = document.createElement("a-animation");
+            centerHoverAniOpacity.setAttribute('begin', 'hovergui');
+            centerHoverAniOpacity.setAttribute('easing', 'linear');
+            centerHoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            centerHoverAniOpacity.setAttribute('fill', 'forwards');
+            centerHoverAniOpacity.setAttribute('from', '0.25');
+            centerHoverAniOpacity.setAttribute('to', '0');
+            centerHoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorCenter.appendChild(centerHoverAniOpacity);
+
+            var centerLeaveAniOpacity = document.createElement("a-animation");
+            centerLeaveAniOpacity.setAttribute('begin', 'leavegui');
+            centerLeaveAniOpacity.setAttribute('easing', 'linear');
+            centerLeaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            centerLeaveAniOpacity.setAttribute('fill', 'forwards');
+            centerLeaveAniOpacity.setAttribute('from', '0');
+            centerLeaveAniOpacity.setAttribute('to', '0.25');
+            centerLeaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorCenter.appendChild(centerLeaveAniOpacity);
+
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0125; radiusOuter:0.0145');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var cursorHoverAniColor = document.createElement("a-animation");
+            cursorHoverAniColor.setAttribute('begin', 'hovergui');
+            cursorHoverAniColor.setAttribute('easing', 'linear');
+            cursorHoverAniColor.setAttribute('attribute', 'material.color');
+            cursorHoverAniColor.setAttribute('fill', 'forwards');
+            cursorHoverAniColor.setAttribute('from', '#000000');
+            cursorHoverAniColor.setAttribute('to', `${data.color}`);
+            cursorHoverAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorHoverAniColor);
+
+            var cursorHoverAniOpacity = document.createElement("a-animation");
+            cursorHoverAniOpacity.setAttribute('begin', 'hovergui');
+            cursorHoverAniOpacity.setAttribute('easing', 'linear');
+            cursorHoverAniOpacity.setAttribute('attribute', 'material.opacity');
+            cursorHoverAniOpacity.setAttribute('fill', 'forwards');
+            cursorHoverAniOpacity.setAttribute('from', '0.25');
+            cursorHoverAniOpacity.setAttribute('to', '1');
+            cursorHoverAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorHoverAniOpacity);
+
+            var cursorLeaveAniColor = document.createElement("a-animation");
+            cursorLeaveAniColor.setAttribute('begin', 'leavegui');
+            cursorLeaveAniColor.setAttribute('easing', 'linear');
+            cursorLeaveAniColor.setAttribute('attribute', 'material.color');
+            cursorLeaveAniColor.setAttribute('fill', 'forwards');
+            cursorLeaveAniColor.setAttribute('from', `${data.color}`);
+            cursorLeaveAniColor.setAttribute('to', '#000000');
+            cursorLeaveAniColor.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorLeaveAniColor);
+
+            var cursorLeaveAniOpacity = document.createElement("a-animation");
+            cursorLeaveAniOpacity.setAttribute('begin', 'leavegui');
+            cursorLeaveAniOpacity.setAttribute('easing', 'linear');
+            cursorLeaveAniOpacity.setAttribute('attribute', 'material.opacity');
+            cursorLeaveAniOpacity.setAttribute('fill', 'forwards');
+            cursorLeaveAniOpacity.setAttribute('from', '1');
+            cursorLeaveAniOpacity.setAttribute('to', '0.25');
+            cursorLeaveAniOpacity.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorShadow.appendChild(cursorLeaveAniOpacity);
+
+
+            var cursorShadowTL = document.createElement("a-entity");
+            cursorShadowTL.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowTL.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowTL.setAttribute('position', '-0.0325 0.0325 0');
+            el.appendChild(cursorShadowTL);
+            this.cursorShadowTL = cursorShadowTL;
+            var cursorShadowBL = document.createElement("a-entity");
+            cursorShadowBL.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowBL.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowBL.setAttribute('position', '-0.0325 -0.0325 0');
+            el.appendChild(cursorShadowBL);
+            this.cursorShadowBL = cursorShadowBL;
+            var cursorShadowTR = document.createElement("a-entity");
+            cursorShadowTR.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowTR.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowTR.setAttribute('position', '0.0325 0.0325 0');
+            el.appendChild(cursorShadowTR);
+            this.cursorShadowTR = cursorShadowTR;
+            var cursorShadowBR = document.createElement("a-entity");
+            cursorShadowBR.setAttribute('geometry', 'primitive: plane; width:0.005; height:0.005;');
+            cursorShadowBR.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadowBR.setAttribute('position', '0.0325 -0.0325 0');
+            el.appendChild(cursorShadowBR);
+            this.cursorShadowBR = cursorShadowBR;
+
+
+            var cursorBoundTL = document.createElement("a-entity");
+            cursorBoundTL.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundTL.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTL.setAttribute('position', '-0.03 0.0375 0');
+            el.appendChild(cursorBoundTL);
+            this.cursorBoundTL = cursorBoundTL;
+            var cursorBoundTL2 = document.createElement("a-entity");
+            cursorBoundTL2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundTL2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTL2.setAttribute('position', '-0.0375 0.03 0');
+            el.appendChild(cursorBoundTL2);
+            this.cursorBoundTL2 = cursorBoundTL2;
+
+            var cursorBoundTR = document.createElement("a-entity");
+            cursorBoundTR.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundTR.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTR.setAttribute('position', '0.03 0.0375 0');
+            el.appendChild(cursorBoundTR);
+            this.cursorBoundTR = cursorBoundTR;
+            var cursorBoundTR2 = document.createElement("a-entity");
+            cursorBoundTR2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundTR2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundTR2.setAttribute('position', '0.0375 0.03 0');
+            el.appendChild(cursorBoundTR2);
+            this.cursorBoundTR2 = cursorBoundTR2;
+
+            var cursorBoundBL = document.createElement("a-entity");
+            cursorBoundBL.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundBL.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBL.setAttribute('position', '-0.03 -0.0375 0');
+            el.appendChild(cursorBoundBL);
+            this.cursorBoundBL = cursorBoundBL;
+            var cursorBoundBL2 = document.createElement("a-entity");
+            cursorBoundBL2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundBL2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBL2.setAttribute('position', '-0.0375 -0.03 0');
+            el.appendChild(cursorBoundBL2);
+            this.cursorBoundBL2 = cursorBoundBL2;
+
+            var cursorBoundBR = document.createElement("a-entity");
+            cursorBoundBR.setAttribute('geometry', 'primitive: plane; width:0.015; height:0.0035;');
+            cursorBoundBR.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBR.setAttribute('position', '0.03 -0.0375 0');
+            el.appendChild(cursorBoundBR);
+            this.cursorBoundBR = cursorBoundBR;
+            var cursorBoundBR2 = document.createElement("a-entity");
+            cursorBoundBR2.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.015;');
+            cursorBoundBR2.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorBoundBR2.setAttribute('position', '0.0375 -0.03 0');
+            el.appendChild(cursorBoundBR2);
+            this.cursorBoundBR2 = cursorBoundBR2;
+
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: plane; width:0.000001; height:0.01;');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', '0 -0.05 0');
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.width');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '0.075');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end reticle design
+
+        }else if(data.design == 'cross'){    
+            el.setAttribute('geometry', 'primitive: ring; radiusInner:0.035; radiusOuter:0.0375');
+            el.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            el.setAttribute('position', `0 0 ${data.distance}`);
+
+            var hoverAniInner = document.createElement("a-animation");
+            hoverAniInner.setAttribute('begin', 'hovergui');
+            hoverAniInner.setAttribute('easing', 'linear');
+            hoverAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            hoverAniInner.setAttribute('fill', 'forwards');
+            hoverAniInner.setAttribute('from', '0.035');
+            hoverAniInner.setAttribute('to', '0.0315');
+            hoverAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(hoverAniInner);
+
+            var leaveAniInner = document.createElement("a-animation");
+            leaveAniInner.setAttribute('begin', 'leavegui');
+            leaveAniInner.setAttribute('easing', 'linear');
+            leaveAniInner.setAttribute('attribute', 'geometry.radiusInner');
+            leaveAniInner.setAttribute('fill', 'forwards');
+            leaveAniInner.setAttribute('from', '0.0315');
+            leaveAniInner.setAttribute('to', '0.035');
+            leaveAniInner.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            el.appendChild(leaveAniInner);
+
+            var cursorShadow = document.createElement("a-entity");
+            cursorShadow.setAttribute('geometry', 'primitive: ring; radiusInner:0.0375; radiusOuter:0.04; thetaLength:360');
+            cursorShadow.setAttribute('material', 'color: #000000; shader: flat; opacity:0.25;');
+            cursorShadow.setAttribute('position', '0 0 0');
+            el.appendChild(cursorShadow);
+            this.cursorShadow = cursorShadow;
+
+            var cursorVerticalTop = document.createElement("a-entity");
+            cursorVerticalTop.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.01875');
+            cursorVerticalTop.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorVerticalTop.setAttribute('position', '0 0.028125 0');
+            el.appendChild(cursorVerticalTop);
+            this.cursorVerticalTop = cursorVerticalTop;
+
+            var hoverAniInner1 = document.createElement("a-animation");
+            hoverAniInner1.setAttribute('begin', 'hovergui');
+            hoverAniInner1.setAttribute('easing', 'linear');
+            hoverAniInner1.setAttribute('attribute', 'geometry.width');
+            hoverAniInner1.setAttribute('fill', 'forwards');
+            hoverAniInner1.setAttribute('from', '0.0035');
+            hoverAniInner1.setAttribute('to', '0.007');
+            hoverAniInner1.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalTop.appendChild(hoverAniInner1);
+
+            var leaveAniInner1 = document.createElement("a-animation");
+            leaveAniInner1.setAttribute('begin', 'leavegui');
+            leaveAniInner1.setAttribute('easing', 'linear');
+            leaveAniInner1.setAttribute('attribute', 'geometry.width');
+            leaveAniInner1.setAttribute('fill', 'forwards');
+            leaveAniInner1.setAttribute('from', '0.007');
+            leaveAniInner1.setAttribute('to', '0.0035');
+            leaveAniInner1.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalTop.appendChild(leaveAniInner1);
+
+
+            var cursorVerticalBottom = document.createElement("a-entity");
+            cursorVerticalBottom.setAttribute('geometry', 'primitive: plane; width:0.0035; height:0.01875');
+            cursorVerticalBottom.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorVerticalBottom.setAttribute('position', '0 -0.028125 0');
+            el.appendChild(cursorVerticalBottom);
+            this.cursorVerticalBottom = cursorVerticalBottom;
+
+            var hoverAniInner2 = document.createElement("a-animation");
+            hoverAniInner2.setAttribute('begin', 'hovergui');
+            hoverAniInner2.setAttribute('easing', 'linear');
+            hoverAniInner2.setAttribute('attribute', 'geometry.width');
+            hoverAniInner2.setAttribute('fill', 'forwards');
+            hoverAniInner2.setAttribute('from', '0.0035');
+            hoverAniInner2.setAttribute('to', '0.007');
+            hoverAniInner2.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalBottom.appendChild(hoverAniInner2);
+
+            var leaveAniInner2 = document.createElement("a-animation");
+            leaveAniInner2.setAttribute('begin', 'leavegui');
+            leaveAniInner2.setAttribute('easing', 'linear');
+            leaveAniInner2.setAttribute('attribute', 'geometry.width');
+            leaveAniInner2.setAttribute('fill', 'forwards');
+            leaveAniInner2.setAttribute('from', '0.007');
+            leaveAniInner2.setAttribute('to', '0.0035');
+            leaveAniInner2.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorVerticalBottom.appendChild(leaveAniInner2);
+
+
+            var cursorHorizontalLeft = document.createElement("a-entity");
+            cursorHorizontalLeft.setAttribute('geometry', 'primitive: plane; width:0.01875; height:0.0035');
+            cursorHorizontalLeft.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorHorizontalLeft.setAttribute('position', '-0.028125 0 0');
+            el.appendChild(cursorHorizontalLeft);
+            this.cursorHorizontalLeft = cursorHorizontalLeft;
+
+            var hoverAniInner3 = document.createElement("a-animation");
+            hoverAniInner3.setAttribute('begin', 'hovergui');
+            hoverAniInner3.setAttribute('easing', 'linear');
+            hoverAniInner3.setAttribute('attribute', 'geometry.height');
+            hoverAniInner3.setAttribute('fill', 'forwards');
+            hoverAniInner3.setAttribute('from', '0.0035');
+            hoverAniInner3.setAttribute('to', '0.007');
+            hoverAniInner3.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalLeft.appendChild(hoverAniInner3);
+
+            var leaveAniInner3 = document.createElement("a-animation");
+            leaveAniInner3.setAttribute('begin', 'leavegui');
+            leaveAniInner3.setAttribute('easing', 'linear');
+            leaveAniInner3.setAttribute('attribute', 'geometry.height');
+            leaveAniInner3.setAttribute('fill', 'forwards');
+            leaveAniInner3.setAttribute('from', '0.007');
+            leaveAniInner3.setAttribute('to', '0.0035');
+            leaveAniInner3.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalLeft.appendChild(leaveAniInner3);
+
+
+            var cursorHorizontalRight = document.createElement("a-entity");
+            cursorHorizontalRight.setAttribute('geometry', 'primitive: plane; width:0.01875; height:0.0035');
+            cursorHorizontalRight.setAttribute('material', `color: ${data.color}; shader: flat; opacity:1;`);
+            cursorHorizontalRight.setAttribute('position', '0.028125 0 0');
+            el.appendChild(cursorHorizontalRight);
+            this.cursorHorizontalRight = cursorHorizontalRight;
+
+            var hoverAniInner4 = document.createElement("a-animation");
+            hoverAniInner4.setAttribute('begin', 'hovergui');
+            hoverAniInner4.setAttribute('easing', 'linear');
+            hoverAniInner4.setAttribute('attribute', 'geometry.height');
+            hoverAniInner4.setAttribute('fill', 'forwards');
+            hoverAniInner4.setAttribute('from', '0.0035');
+            hoverAniInner4.setAttribute('to', '0.007');
+            hoverAniInner4.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalRight.appendChild(hoverAniInner4);
+
+            var leaveAniInner4 = document.createElement("a-animation");
+            leaveAniInner4.setAttribute('begin', 'leavegui');
+            leaveAniInner4.setAttribute('easing', 'linear');
+            leaveAniInner4.setAttribute('attribute', 'geometry.height');
+            leaveAniInner4.setAttribute('fill', 'forwards');
+            leaveAniInner4.setAttribute('from', '0.007');
+            leaveAniInner4.setAttribute('to', '0.0035');
+            leaveAniInner4.setAttribute('dur', `${defaultHoverAnimationDuration}`);
+            cursorHorizontalRight.appendChild(leaveAniInner4);
+
+
+            if(fuse){
+                var fuseLoader = document.createElement("a-entity");
+                fuseLoader.setAttribute('geometry', 'primitive: ring; radiusInner:0.0415; radiusOuter:0.0485; thetaLength:0');
+                fuseLoader.setAttribute('material', `color: ${data.activeColor}; shader: flat; opacity:1;`);
+                fuseLoader.setAttribute('position', `0 0 0`);
+                el.appendChild(fuseLoader);
+                this.fuseLoader = fuseLoader;
+
+                var fuseLoaderFillAni = document.createElement("a-animation");
+                fuseLoaderFillAni.setAttribute('begin', 'start-fusing');
+                fuseLoaderFillAni.setAttribute('easing', 'linear');
+                fuseLoaderFillAni.setAttribute('attribute', 'geometry.thetaLength');
+                fuseLoaderFillAni.setAttribute('fill', 'forwards');
+                fuseLoaderFillAni.setAttribute('from', '0');
+                fuseLoaderFillAni.setAttribute('to', '360');
+                fuseLoaderFillAni.setAttribute('delay', `${defaultHoverAnimationDuration}`);
+                fuseLoaderFillAni.setAttribute('dur', `${fuseAnimationDuration}`);
+                fuseLoader.appendChild(fuseLoaderFillAni);
+            }
+
+
+            //end cross design
+        
+        }
+
+        el.addEventListener('mouseenter', function () {
+            console.log("in gui-cursor mousenter, el: "+el);
+            el.emit('hovergui');
+            if (data.design == 'dot' || data.design == 'ring') {
+                cursorShadow.emit('hovergui');
+            }else if (data.design == 'cross') {
+                cursorShadow.emit('hovergui');
+                cursorVerticalTop.emit('hovergui');
+                cursorVerticalBottom.emit('hovergui');
+                cursorHorizontalLeft.emit('hovergui');
+                cursorHorizontalRight.emit('hovergui');
+            }else if (data.design == 'reticle') {
+                centerHoverAniOpacity.emit('hovergui');
+                cursorHoverAniColor.emit('hovergui');
+                cursorHoverAniOpacity.emit('hovergui');
+            }
+
+        });
+
+        el.addEventListener('mouseleave', function () {
+            console.log("in gui-cursor mouseleave, el: "+el);
+            el.emit('leavegui');
+            if (data.design == 'dot' || data.design == 'ring') {
+                cursorShadow.emit('leavegui');
+            }else if (data.design == 'cross') {
+                cursorVerticalTop.emit('leavegui');
+                cursorVerticalBottom.emit('leavegui');
+                cursorHorizontalLeft.emit('leavegui');
+                cursorHorizontalRight.emit('leavegui');
+            }else if (data.design == 'reticle') {
+                centerHoverAniOpacity.emit('leavegui');
+                cursorHoverAniColor.emit('leavegui');
+                cursorHoverAniOpacity.emit('leavegui');
+            }
+
+            if(fuse){
+                fuseLoaderFillAni.stop();
+            }
+
+            el.setAttribute('scale', '1 1 1');
+        });
+
+        if(fuse){
+            el.addEventListener('fusing', function () {
+                fuseLoader.emit('start-fusing');
+            });
+        }
+
+        el.addEventListener("stateremoved", function (evt) {
+            console.log("evt.detail.state " +evt.detail.state)
+            if (evt.detail.state === 'cursor-fusing') {
+                if(data.design == 'dot' || data.design == 'ring' || data.design == 'cross' ){  
+                    if(fuse){
+                        fuseLoaderFillAni.stop();
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'reticle'){
+                    if(fuse){
+                        fuseLoaderFillAni.stop();
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.width', '0.000001');
+                    }                    
+                }
+            }else if(evt.detail.state === 'cursor-hovering') {
+                if(data.design == 'dot' || data.design == 'ring' ){  
+                    AFRAME.utils.entity.setComponentProperty(this, 'scale', '1 1 1');
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'cross' ){  
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.thetaLength', '0');
+                    }
+                }else if(data.design == 'reticle' ){  
+                    if(fuse){
+                        AFRAME.utils.entity.setComponentProperty(fuseLoader, 'geometry.width', '0.000001');
+                    }
+                }
+            }
+        });
+
+
+    },
+    update: function () {
+    },
+    tick: function () {
+    },
+    remove: function () {
+    },
+    pause: function () {
+    },
+    play: function () {
+    },
+    resetcursor: function(){
+        // if (evt.detail.state === 'cursor-fusing') {
+        //     AFRAME.utils.entity.setComponentProperty(this, "geometry.thetaLength", 360);
+        //     AFRAME.utils.entity.setComponentProperty(this, "material.color", "#ffffff");
+        //     AFRAME.utils.entity.setComponentProperty(this, "scale", "1 1 1");
+        // }
+    }
+});
+
+AFRAME.registerPrimitive( 'a-gui-cursor', {
+    defaultComponents: {
+        'cursor': {},
+        'gui-cursor': { }
+    },
+    mappings: {
+        'fuse': 'cursor.fuse',
+        'fuse-timeout': 'cursor.fuseTimeout',
+        'color': 'gui-cursor.color',
+        'hover-color': 'gui-cursor.hoverColor',
+        'active-color': 'gui-cursor.activeColor',
+        'distance': 'gui-cursor.distance',
+        'design': 'gui-cursor.design'
+    }
+});
+},{}],62:[function(require,module,exports) {
+
+// Reset cursor
+var cursor = document.querySelector("#cursor");
+if (cursor) {
+    cursor.addEventListener("stateremoved", function (evt) {
+        if (evt.detail.state === 'cursor-fusing') {
+            AFRAME.utils.entity.setComponentProperty(this, "geometry.thetaLength", 360);
+            AFRAME.utils.entity.setComponentProperty(this, "material.color", key_white);
+            AFRAME.utils.entity.setComponentProperty(this, "scale", "1 1 1");
+        }
+    });
+}
+},{}],13:[function(require,module,exports) {
+if (typeof AFRAME === 'undefined') {
+    throw new Error('Component attempted to register before AFRAME was available.');
+}
+
+// Components
+require('./scripts/vars.js');
+require('./components/item.js');
+require('./components/interactable.js');
+require('./components/flex-container.js');
+require('./components/label.js');
+require('./components/button.js');
+require('./components/icon-button.js');
+require('./components/icon-label-button.js');
+require('./components/toggle.js');
+require('./components/radio.js');
+require('./components/circle-loader.js');
+require('./components/progress-bar.js');
+require('./components/circle-timer.js');
+require('./components/slider.js');
+require('./components/input.js');
+require('./components/cursor.js');
+require('./scripts/reset-cursor.js');
+
+},{"./scripts/vars.js":46,"./components/item.js":47,"./components/interactable.js":48,"./components/flex-container.js":49,"./components/label.js":50,"./components/button.js":51,"./components/icon-button.js":52,"./components/icon-label-button.js":53,"./components/toggle.js":54,"./components/radio.js":55,"./components/circle-loader.js":56,"./components/progress-bar.js":57,"./components/circle-timer.js":58,"./components/slider.js":59,"./components/input.js":60,"./components/cursor.js":61,"./scripts/reset-cursor.js":62}],8:[function(require,module,exports) {
+/**
+ * @author alteredq / http://alteredqualia.com/
+ *
+ * Based on Nvidia Cg tutorial
+ */
+
+THREE.FresnelShader = {
+
+	uniforms: {
+
+		"mRefractionRatio": { value: 1.02 },
+		"mFresnelBias": { value: 0.1 },
+		"mFresnelPower": { value: 2.0 },
+		"mFresnelScale": { value: 1.0 },
+		"tCube": { value: null }
+
+	},
+
+	vertexShader: ["uniform float mRefractionRatio;", "uniform float mFresnelBias;", "uniform float mFresnelScale;", "uniform float mFresnelPower;", "varying vec3 vReflect;", "varying vec3 vRefract[3];", "varying float vReflectionFactor;", "void main() {", "vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );", "vec4 worldPosition = modelMatrix * vec4( position, 1.0 );", "vec3 worldNormal = normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );", "vec3 I = worldPosition.xyz - cameraPosition;", "vReflect = reflect( I, worldNormal );", "vRefract[0] = refract( normalize( I ), worldNormal, mRefractionRatio );", "vRefract[1] = refract( normalize( I ), worldNormal, mRefractionRatio * 0.99 );", "vRefract[2] = refract( normalize( I ), worldNormal, mRefractionRatio * 0.98 );", "vReflectionFactor = mFresnelBias + mFresnelScale * pow( 1.0 + dot( normalize( I ), worldNormal ), mFresnelPower );", "gl_Position = projectionMatrix * mvPosition;", "}"].join("\n"),
+
+	fragmentShader: ["uniform samplerCube tCube;", "varying vec3 vReflect;", "varying vec3 vRefract[3];", "varying float vReflectionFactor;", "void main() {", "vec4 reflectedColor = textureCube( tCube, vec3( -vReflect.x, vReflect.yz ) );", "vec4 refractedColor = vec4( 1.0 );", "refractedColor.r = textureCube( tCube, vec3( -vRefract[0].x, vRefract[0].yz ) ).r;", "refractedColor.g = textureCube( tCube, vec3( -vRefract[1].x, vRefract[1].yz ) ).g;", "refractedColor.b = textureCube( tCube, vec3( -vRefract[2].x, vRefract[2].yz ) ).b;", "gl_FragColor = mix( refractedColor, reflectedColor, clamp( vReflectionFactor, 0.0, 1.0 ) );", "}"].join("\n")
+
+};
+},{}],70:[function(require,module,exports) {
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.makePromise = exports.LinkError = undefined;
-exports.validateOperation = validateOperation;
-exports.isTerminating = isTerminating;
-exports.toPromise = toPromise;
-exports.fromPromise = fromPromise;
-exports.fromError = fromError;
-exports.transformOperation = transformOperation;
-exports.createOperation = createOperation;
-exports.getKey = getKey;
+exports.__extends = __extends;
+exports.__rest = __rest;
+exports.__decorate = __decorate;
+exports.__param = __param;
+exports.__metadata = __metadata;
+exports.__awaiter = __awaiter;
+exports.__generator = __generator;
+exports.__exportStar = __exportStar;
+exports.__values = __values;
+exports.__read = __read;
+exports.__spread = __spread;
+exports.__await = __await;
+exports.__asyncGenerator = __asyncGenerator;
+exports.__asyncDelegator = __asyncDelegator;
+exports.__asyncValues = __asyncValues;
+exports.__makeTemplateObject = __makeTemplateObject;
+exports.__importStar = __importStar;
+exports.__importDefault = __importDefault;
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
 
-var _apolloUtilities = require('apollo-utilities');
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
 
-var _zenObservableTs = require('zen-observable-ts');
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
 
-var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
-
-var _printer = require('graphql/language/printer');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
+var extendStatics = function (d, b) {
+    extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
         d.__proto__ = b;
     } || function (d, b) {
         for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() {
+        this.constructor = d;
     }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = exports.__assign = function () {
+    exports.__assign = __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
     return t;
-};
-function validateOperation(operation) {
-    var OPERATION_FIELDS = ['query', 'operationName', 'variables', 'extensions', 'context'];
-    for (var _i = 0, _a = Object.keys(operation); _i < _a.length; _i++) {
-        var key = _a[_i];
-        if (OPERATION_FIELDS.indexOf(key) < 0) {
-            throw new Error("illegal argument: " + key);
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) {
+        decorator(target, key, paramIndex);
+    };
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : new P(function (resolve) {
+                resolve(result.value);
+            }).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function () {
+            if (t[0] & 1) throw t[1];return t[1];
+        }, trys: [], ops: [] },
+        f,
+        y,
+        t,
+        g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
+        return this;
+    }), g;
+    function verb(n) {
+        return function (v) {
+            return step([n, v]);
+        };
+    }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0:case 1:
+                    t = op;break;
+                case 4:
+                    _.label++;return { value: op[1], done: false };
+                case 5:
+                    _.label++;y = op[1];op = [0];continue;
+                case 7:
+                    op = _.ops.pop();_.trys.pop();continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                        _ = 0;continue;
+                    }
+                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                        _.label = op[1];break;
+                    }
+                    if (op[0] === 6 && _.label < t[1]) {
+                        _.label = t[1];t = op;break;
+                    }
+                    if (t && _.label < t[2]) {
+                        _.label = t[2];_.ops.push(op);break;
+                    }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop();continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) {
+            op = [6, e];y = 0;
+        } finally {
+            f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator],
+        i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o),
+        r,
+        ar = [],
+        e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    } catch (error) {
+        e = { error: error };
+    } finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally {
+            if (e) throw e.error;
         }
     }
-    return operation;
+    return ar;
 }
-var LinkError = /** @class */function (_super) {
-    __extends(LinkError, _super);
-    function LinkError(message, link) {
-        var _this = _super.call(this, message) || this;
-        _this.link = link;
-        return _this;
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []),
+        i,
+        q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+    }, i;
+    function verb(n) {
+        if (g[n]) i[n] = function (v) {
+            return new Promise(function (a, b) {
+                q.push([n, v, a, b]) > 1 || resume(n, v);
+            });
+        };
     }
-    return LinkError;
-}(Error);
-exports.LinkError = LinkError;
-function isTerminating(link) {
-    return link.request.length <= 1;
-}
-function toPromise(observable) {
-    var completed = false;
-    return new Promise(function (resolve, reject) {
-        observable.subscribe({
-            next: function (data) {
-                if (completed) {
-                    console.warn("Promise Wrapper does not support multiple results from Observable");
-                } else {
-                    completed = true;
-                    resolve(data);
-                }
-            },
-            error: reject
-        });
-    });
-}
-// backwards compat
-var makePromise = exports.makePromise = toPromise;
-function fromPromise(promise) {
-    return new _zenObservableTs2.default(function (observer) {
-        promise.then(function (value) {
-            observer.next(value);
-            observer.complete();
-        }).catch(observer.error.bind(observer));
-    });
-}
-function fromError(errorValue) {
-    return new _zenObservableTs2.default(function (observer) {
-        observer.error(errorValue);
-    });
-}
-function transformOperation(operation) {
-    var transformedOperation = {
-        variables: operation.variables || {},
-        extensions: operation.extensions || {},
-        operationName: operation.operationName,
-        query: operation.query
-    };
-    // best guess at an operation name
-    if (!transformedOperation.operationName) {
-        transformedOperation.operationName = typeof transformedOperation.query !== 'string' ? (0, _apolloUtilities.getOperationName)(transformedOperation.query) : '';
-    }
-    return transformedOperation;
-}
-function createOperation(starting, operation) {
-    var context = __assign({}, starting);
-    var setContext = function (next) {
-        if (typeof next === 'function') {
-            context = __assign({}, context, next(context));
-        } else {
-            context = __assign({}, context, next);
+    function resume(n, v) {
+        try {
+            step(g[n](v));
+        } catch (e) {
+            settle(q[0][3], e);
         }
-    };
-    var getContext = function () {
-        return __assign({}, context);
-    };
-    Object.defineProperty(operation, 'setContext', {
-        enumerable: false,
-        value: setContext
-    });
-    Object.defineProperty(operation, 'getContext', {
-        enumerable: false,
-        value: getContext
-    });
-    Object.defineProperty(operation, 'toKey', {
-        enumerable: false,
-        value: function () {
-            return getKey(operation);
-        }
-    });
-    return operation;
-}
-function getKey(operation) {
-    // XXX we're assuming here that variables will be serialized in the same order.
-    // that might not always be true
-    return (0, _printer.print)(operation.query) + "|" + JSON.stringify(operation.variables) + "|" + operation.operationName;
-}
-//# sourceMappingURL=linkUtils.js.map
-},{"apollo-utilities":167,"zen-observable-ts":165,"graphql/language/printer":153}],155:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ApolloLink = exports.concat = exports.split = exports.from = exports.empty = undefined;
-exports.execute = execute;
-
-var _zenObservableTs = require('zen-observable-ts');
-
-var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
-
-var _linkUtils = require('./linkUtils');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var passthrough = function (op, forward) {
-    return forward ? forward(op) : _zenObservableTs2.default.of();
-};
-var toLink = function (handler) {
-    return typeof handler === 'function' ? new ApolloLink(handler) : handler;
-};
-var empty = exports.empty = function () {
-    return new ApolloLink(function (op, forward) {
-        return _zenObservableTs2.default.of();
-    });
-};
-var from = exports.from = function (links) {
-    if (links.length === 0) return empty();
-    return links.map(toLink).reduce(function (x, y) {
-        return x.concat(y);
-    });
-};
-var split = exports.split = function (test, left, right) {
-    if (right === void 0) {
-        right = new ApolloLink(passthrough);
     }
-    var leftLink = toLink(left);
-    var rightLink = toLink(right);
-    if ((0, _linkUtils.isTerminating)(leftLink) && (0, _linkUtils.isTerminating)(rightLink)) {
-        return new ApolloLink(function (operation) {
-            return test(operation) ? leftLink.request(operation) || _zenObservableTs2.default.of() : rightLink.request(operation) || _zenObservableTs2.default.of();
-        });
+    function step(r) {
+        r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+    }
+    function fulfill(value) {
+        resume("next", value);
+    }
+    function reject(value) {
+        resume("throw", value);
+    }
+    function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+    }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) {
+        throw e;
+    }), verb("return"), i[Symbol.iterator] = function () {
+        return this;
+    }, i;
+    function verb(n, f) {
+        i[n] = o[n] ? function (v) {
+            return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v;
+        } : f;
+    }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator],
+        i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
+        return this;
+    }, i);
+    function verb(n) {
+        i[n] = o[n] && function (v) {
+            return new Promise(function (resolve, reject) {
+                v = o[n](v), settle(resolve, reject, v.done, v.value);
+            });
+        };
+    }
+    function settle(resolve, reject, d, v) {
+        Promise.resolve(v).then(function (v) {
+            resolve({ value: v, done: d });
+        }, reject);
+    }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) {
+        Object.defineProperty(cooked, "raw", { value: raw });
     } else {
-        return new ApolloLink(function (operation, forward) {
-            return test(operation) ? leftLink.request(operation, forward) || _zenObservableTs2.default.of() : rightLink.request(operation, forward) || _zenObservableTs2.default.of();
-        });
+        cooked.raw = raw;
     }
+    return cooked;
 };
-// join two Links together
-var concat = exports.concat = function (first, second) {
-    var firstLink = toLink(first);
-    if ((0, _linkUtils.isTerminating)(firstLink)) {
-        console.warn(new _linkUtils.LinkError("You are calling concat on a terminating link, which will have no effect", firstLink));
-        return firstLink;
-    }
-    var nextLink = toLink(second);
-    if ((0, _linkUtils.isTerminating)(nextLink)) {
-        return new ApolloLink(function (operation) {
-            return firstLink.request(operation, function (op) {
-                return nextLink.request(op) || _zenObservableTs2.default.of();
-            }) || _zenObservableTs2.default.of();
-        });
-    } else {
-        return new ApolloLink(function (operation, forward) {
-            return firstLink.request(operation, function (op) {
-                return nextLink.request(op, forward) || _zenObservableTs2.default.of();
-            }) || _zenObservableTs2.default.of();
-        });
-    }
-};
-var ApolloLink = /** @class */function () {
-    function ApolloLink(request) {
-        if (request) this.request = request;
-    }
-    ApolloLink.prototype.split = function (test, left, right) {
-        if (right === void 0) {
-            right = new ApolloLink(passthrough);
-        }
-        return this.concat(split(test, left, right));
-    };
-    ApolloLink.prototype.concat = function (next) {
-        return concat(this, next);
-    };
-    ApolloLink.prototype.request = function (operation, forward) {
-        throw new Error('request is not implemented');
-    };
-    ApolloLink.empty = empty;
-    ApolloLink.from = from;
-    ApolloLink.split = split;
-    ApolloLink.execute = execute;
-    return ApolloLink;
-}();
-exports.ApolloLink = ApolloLink;
-function execute(link, operation) {
-    return link.request((0, _linkUtils.createOperation)(operation.context, (0, _linkUtils.transformOperation)((0, _linkUtils.validateOperation)(operation)))) || _zenObservableTs2.default.of();
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
 }
-//# sourceMappingURL=link.js.map
-},{"zen-observable-ts":165,"./linkUtils":156}],70:[function(require,module,exports) {
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Observable = exports.fromError = exports.fromPromise = exports.toPromise = exports.makePromise = exports.createOperation = undefined;
-
-var _link = require('./link');
-
-Object.keys(_link).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _link[key];
-    }
-  });
-});
-
-var _linkUtils = require('./linkUtils');
-
-Object.defineProperty(exports, 'createOperation', {
-  enumerable: true,
-  get: function () {
-    return _linkUtils.createOperation;
-  }
-});
-Object.defineProperty(exports, 'makePromise', {
-  enumerable: true,
-  get: function () {
-    return _linkUtils.makePromise;
-  }
-});
-Object.defineProperty(exports, 'toPromise', {
-  enumerable: true,
-  get: function () {
-    return _linkUtils.toPromise;
-  }
-});
-Object.defineProperty(exports, 'fromPromise', {
-  enumerable: true,
-  get: function () {
-    return _linkUtils.fromPromise;
-  }
-});
-Object.defineProperty(exports, 'fromError', {
-  enumerable: true,
-  get: function () {
-    return _linkUtils.fromError;
-  }
-});
-
-var _zenObservableTs = require('zen-observable-ts');
-
-var _zenObservableTs2 = _interopRequireDefault(_zenObservableTs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Observable = _zenObservableTs2.default;
-//# sourceMappingURL=index.js.map
-},{"./link":155,"./linkUtils":156,"zen-observable-ts":165}],222:[function(require,module,exports) {
+function __importDefault(mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+}
+},{}],243:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -130598,7 +130579,7 @@ function symbolObservablePonyfill(root) {
 
 	return result;
 };
-},{}],217:[function(require,module,exports) {
+},{}],230:[function(require,module,exports) {
 var global = arguments[3];
 'use strict';
 
@@ -130629,15 +130610,13 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2.default)(root);
 exports.default = result;
-},{"./ponyfill.js":222}],173:[function(require,module,exports) {
+},{"./ponyfill.js":243}],196:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.Observable = undefined;
-
-var _apolloLink = require('apollo-link');
+exports.__DO_NOT_USE__ActionTypes = exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
 var _symbolObservable = require('symbol-observable');
 
@@ -130645,2782 +130624,3157 @@ var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-// This simplified polyfill attempts to follow the ECMAScript Observable proposal.
-// See https://github.com/zenparsing/es-observable
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var ActionTypes = {
+  INIT: '@@redux/INIT' + Math.random().toString(36).substring(7).split('').join('.'),
+  REPLACE: '@@redux/REPLACE' + Math.random().toString(36).substring(7).split('').join('.')
+};
 
-// rxjs interopt
-var Observable = /** @class */function (_super) {
-    __extends(Observable, _super);
-    function Observable() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
     }
-    Observable.prototype[_symbolObservable2.default] = function () {
-        return this;
-    };
-    Observable.prototype['@@observable'] = function () {
-        return this;
-    };
-    return Observable;
-}(_apolloLink.Observable);
-exports.Observable = Observable;
-//# sourceMappingURL=Observable.js.map
-},{"apollo-link":70,"symbol-observable":217}],144:[function(require,module,exports) {
-'use strict';
+  }
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.isApolloError = isApolloError;
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-function isApolloError(err) {
-    return err.hasOwnProperty('graphQLErrors');
+  return target;
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if ((typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) !== 'object' || obj === null) return false;
+
+  var proto = obj;
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
 }
-// Sets the error message on this error according to the
-// the GraphQL and network errors that are present.
-// If the error message has already been set through the
-// constructor or otherwise, this function is a nop.
-var generateErrorMessage = function (err) {
-    var message = '';
-    // If we have GraphQL errors present, add that to the error message.
-    if (Array.isArray(err.graphQLErrors) && err.graphQLErrors.length !== 0) {
-        err.graphQLErrors.forEach(function (graphQLError) {
-            var errorMessage = graphQLError ? graphQLError.message : 'Error message not found.';
-            message += "GraphQL error: " + errorMessage + "\n";
-        });
+
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
     }
-    if (err.networkError) {
-        message += 'Network error: ' + err.networkError.message + '\n';
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
     }
-    // strip newline from the end of the message
-    message = message.replace(/\n$/, '');
-    return message;
-};
-var ApolloError = /** @class */function (_super) {
-    __extends(ApolloError, _super);
-    // Constructs an instance of ApolloError given a GraphQLError
-    // or a network error. Note that one of these has to be a valid
-    // value or the constructed error will be meaningless.
-    function ApolloError(_a) {
-        var graphQLErrors = _a.graphQLErrors,
-            networkError = _a.networkError,
-            errorMessage = _a.errorMessage,
-            extraInfo = _a.extraInfo;
-        var _this = _super.call(this, errorMessage) || this;
-        _this.graphQLErrors = graphQLErrors || [];
-        _this.networkError = networkError || null;
-        if (!errorMessage) {
-            _this.message = generateErrorMessage(_this);
-        } else {
-            _this.message = errorMessage;
-        }
-        _this.extraInfo = extraInfo;
-        // We're not using `Object.setPrototypeOf` here as it isn't fully
-        // supported on Android (see issue #3236).
-        _this.__proto__ = ApolloError.prototype;
-        return _this;
+  }
+
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+  function getState() {
+    if (isDispatching) {
+      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
     }
-    return ApolloError;
-}(Error);
-exports.ApolloError = ApolloError;
-//# sourceMappingURL=ApolloError.js.map
-},{}],143:[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var FetchType = exports.FetchType = undefined;
-(function (FetchType) {
-    FetchType[FetchType["normal"] = 1] = "normal";
-    FetchType[FetchType["refetch"] = 2] = "refetch";
-    FetchType[FetchType["poll"] = 3] = "poll";
-})(FetchType || (exports.FetchType = FetchType = {}));
-//# sourceMappingURL=types.js.map
-},{}],141:[function(require,module,exports) {
-'use strict';
+    return currentState;
+  }
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ObservableQuery = exports.hasError = undefined;
-
-var _apolloUtilities = require('apollo-utilities');
-
-var _networkStatus = require('./networkStatus');
-
-var _Observable = require('../util/Observable');
-
-var _ApolloError = require('../errors/ApolloError');
-
-var _types = require('./types');
-
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected the listener to be a function.');
     }
-    return t;
-};
-var hasError = exports.hasError = function (storeValue, policy) {
-    if (policy === void 0) {
-        policy = 'none';
+
+    if (isDispatching) {
+      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');
     }
-    return storeValue && (storeValue.graphQLErrors && storeValue.graphQLErrors.length > 0 && policy === 'none' || storeValue.networkError);
-};
-var ObservableQuery = /** @class */function (_super) {
-    __extends(ObservableQuery, _super);
-    function ObservableQuery(_a) {
-        var scheduler = _a.scheduler,
-            options = _a.options,
-            _b = _a.shouldSubscribe,
-            shouldSubscribe = _b === void 0 ? true : _b;
-        var _this = _super.call(this, function (observer) {
-            return _this.onSubscribe(observer);
-        }) || this;
-        // active state
-        _this.isCurrentlyPolling = false;
-        _this.isTornDown = false;
-        // query information
-        _this.options = options;
-        _this.variables = options.variables || {};
-        _this.queryId = scheduler.queryManager.generateQueryId();
-        _this.shouldSubscribe = shouldSubscribe;
-        // related classes
-        _this.scheduler = scheduler;
-        _this.queryManager = scheduler.queryManager;
-        // interal data stores
-        _this.observers = [];
-        _this.subscriptionHandles = [];
-        return _this;
+
+    var isSubscribed = true;
+
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');
+      }
+
+      isSubscribed = false;
+
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+    };
+  }
+
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
     }
-    ObservableQuery.prototype.result = function () {
-        var that = this;
-        return new Promise(function (resolve, reject) {
-            var subscription;
-            var observer = {
-                next: function (result) {
-                    resolve(result);
-                    // Stop the query within the QueryManager if we can before
-                    // this function returns.
-                    //
-                    // We do this in order to prevent observers piling up within
-                    // the QueryManager. Notice that we only fully unsubscribe
-                    // from the subscription in a setTimeout(..., 0)  call. This call can
-                    // actually be handled by the browser at a much later time. If queries
-                    // are fired in the meantime, observers that should have been removed
-                    // from the QueryManager will continue to fire, causing an unnecessary
-                    // performance hit.
-                    if (!that.observers.some(function (obs) {
-                        return obs !== observer;
-                    })) {
-                        that.queryManager.removeQuery(that.queryId);
-                    }
-                    setTimeout(function () {
-                        subscription.unsubscribe();
-                    }, 0);
-                },
-                error: function (error) {
-                    reject(error);
-                }
-            };
-            subscription = that.subscribe(observer);
-        });
-    };
-    /**
-     * Return the result of the query from the local cache as well as some fetching status
-     * `loading` and `networkStatus` allow to know if a request is in flight
-     * `partial` lets you know if the result from the local cache is complete or partial
-     * @return {result: Object, loading: boolean, networkStatus: number, partial: boolean}
-     */
-    ObservableQuery.prototype.currentResult = function () {
-        if (this.isTornDown) {
-            return {
-                data: this.lastError ? {} : this.lastResult ? this.lastResult.data : {},
-                error: this.lastError,
-                loading: false,
-                networkStatus: _networkStatus.NetworkStatus.error
-            };
-        }
-        var queryStoreValue = this.queryManager.queryStore.get(this.queryId);
-        if (hasError(queryStoreValue, this.options.errorPolicy)) {
-            return {
-                data: {},
-                loading: false,
-                networkStatus: queryStoreValue.networkStatus,
-                error: new _ApolloError.ApolloError({
-                    graphQLErrors: queryStoreValue.graphQLErrors,
-                    networkError: queryStoreValue.networkError
-                })
-            };
-        }
-        var _a = this.queryManager.getCurrentQueryResult(this),
-            data = _a.data,
-            partial = _a.partial;
-        var queryLoading = !queryStoreValue || queryStoreValue.networkStatus === _networkStatus.NetworkStatus.loading;
-        // We need to be careful about the loading state we show to the user, to try
-        // and be vaguely in line with what the user would have seen from .subscribe()
-        // but to still provide useful information synchronously when the query
-        // will not end up hitting the server.
-        // See more: https://github.com/apollostack/apollo-client/issues/707
-        // Basically: is there a query in flight right now (modolo the next tick)?
-        var loading = this.options.fetchPolicy === 'network-only' && queryLoading || partial && this.options.fetchPolicy !== 'cache-only';
-        // if there is nothing in the query store, it means this query hasn't fired yet or it has been cleaned up. Therefore the
-        // network status is dependent on queryLoading.
-        var networkStatus;
-        if (queryStoreValue) {
-            networkStatus = queryStoreValue.networkStatus;
-        } else {
-            networkStatus = loading ? _networkStatus.NetworkStatus.loading : _networkStatus.NetworkStatus.ready;
-        }
-        var result = {
-            data: data,
-            loading: (0, _networkStatus.isNetworkRequestInFlight)(networkStatus),
-            networkStatus: networkStatus
-        };
-        if (queryStoreValue && queryStoreValue.graphQLErrors && this.options.errorPolicy === 'all') {
-            result.errors = queryStoreValue.graphQLErrors;
-        }
-        if (!partial) {
-            var stale = false;
-            this.lastResult = __assign({}, result, { stale: stale });
-        }
-        return __assign({}, result, { partial: partial });
-    };
-    // Returns the last result that observer.next was called with. This is not the same as
-    // currentResult! If you're not sure which you need, then you probably need currentResult.
-    ObservableQuery.prototype.getLastResult = function () {
-        return this.lastResult;
-    };
-    ObservableQuery.prototype.getLastError = function () {
-        return this.lastError;
-    };
-    ObservableQuery.prototype.resetLastResults = function () {
-        delete this.lastResult;
-        delete this.lastError;
-        this.isTornDown = false;
-    };
-    ObservableQuery.prototype.refetch = function (variables) {
-        var fetchPolicy = this.options.fetchPolicy;
-        // early return if trying to read from cache during refetch
-        if (fetchPolicy === 'cache-only') {
-            return Promise.reject(new Error('cache-only fetchPolicy option should not be used together with query refetch.'));
-        }
-        if (!(0, _apolloUtilities.isEqual)(this.variables, variables)) {
-            // update observable variables
-            this.variables = Object.assign({}, this.variables, variables);
-        }
-        if (!(0, _apolloUtilities.isEqual)(this.options.variables, this.variables)) {
-            // Update the existing options with new variables
-            this.options.variables = Object.assign({}, this.options.variables, this.variables);
-        }
-        // Override fetchPolicy for this call only
-        // only network-only and no-cache are safe to use
-        var isNetworkFetchPolicy = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
-        var combinedOptions = __assign({}, this.options, { fetchPolicy: isNetworkFetchPolicy ? fetchPolicy : 'network-only' });
-        return this.queryManager.fetchQuery(this.queryId, combinedOptions, _types.FetchType.refetch).then(function (result) {
-            return (0, _apolloUtilities.maybeDeepFreeze)(result);
-        });
-    };
-    ObservableQuery.prototype.fetchMore = function (fetchMoreOptions) {
-        var _this = this;
-        // early return if no update Query
-        if (!fetchMoreOptions.updateQuery) {
-            throw new Error('updateQuery option is required. This function defines how to update the query data with the new results.');
-        }
-        var combinedOptions;
-        return Promise.resolve().then(function () {
-            var qid = _this.queryManager.generateQueryId();
-            if (fetchMoreOptions.query) {
-                // fetch a new query
-                combinedOptions = fetchMoreOptions;
-            } else {
-                // fetch the same query with a possibly new variables
-                combinedOptions = __assign({}, _this.options, fetchMoreOptions, { variables: Object.assign({}, _this.variables, fetchMoreOptions.variables) });
-            }
-            combinedOptions.fetchPolicy = 'network-only';
-            return _this.queryManager.fetchQuery(qid, combinedOptions, _types.FetchType.normal, _this.queryId);
-        }).then(function (fetchMoreResult) {
-            _this.updateQuery(function (previousResult) {
-                return fetchMoreOptions.updateQuery(previousResult, {
-                    fetchMoreResult: fetchMoreResult.data,
-                    variables: combinedOptions.variables
-                });
-            });
-            return fetchMoreResult;
-        });
-    };
-    // XXX the subscription variables are separate from the query variables.
-    // if you want to update subscription variables, right now you have to do that separately,
-    // and you can only do it by stopping the subscription and then subscribing again with new variables.
-    ObservableQuery.prototype.subscribeToMore = function (options) {
-        var _this = this;
-        var subscription = this.queryManager.startGraphQLSubscription({
-            query: options.document,
-            variables: options.variables
-        }).subscribe({
-            next: function (data) {
-                if (options.updateQuery) {
-                    _this.updateQuery(function (previous, _a) {
-                        var variables = _a.variables;
-                        return options.updateQuery(previous, {
-                            subscriptionData: data,
-                            variables: variables
-                        });
-                    });
-                }
-            },
-            error: function (err) {
-                if (options.onError) {
-                    options.onError(err);
-                    return;
-                }
-                console.error('Unhandled GraphQL subscription error', err);
-            }
-        });
-        this.subscriptionHandles.push(subscription);
-        return function () {
-            var i = _this.subscriptionHandles.indexOf(subscription);
-            if (i >= 0) {
-                _this.subscriptionHandles.splice(i, 1);
-                subscription.unsubscribe();
-            }
-        };
-    };
-    // Note: if the query is not active (there are no subscribers), the promise
-    // will return null immediately.
-    ObservableQuery.prototype.setOptions = function (opts) {
-        var oldOptions = this.options;
-        this.options = Object.assign({}, this.options, opts);
-        if (opts.pollInterval) {
-            this.startPolling(opts.pollInterval);
-        } else if (opts.pollInterval === 0) {
-            this.stopPolling();
-        }
-        // If fetchPolicy went from cache-only to something else, or from something else to network-only
-        var tryFetch = oldOptions.fetchPolicy !== 'network-only' && opts.fetchPolicy === 'network-only' || oldOptions.fetchPolicy === 'cache-only' && opts.fetchPolicy !== 'cache-only' || oldOptions.fetchPolicy === 'standby' && opts.fetchPolicy !== 'standby' || false;
-        return this.setVariables(this.options.variables, tryFetch, opts.fetchResults);
-    };
-    /**
-     * Update the variables of this observable query, and fetch the new results
-     * if they've changed. If you want to force new results, use `refetch`.
-     *
-     * Note: if the variables have not changed, the promise will return the old
-     * results immediately, and the `next` callback will *not* fire.
-     *
-     * Note: if the query is not active (there are no subscribers), the promise
-     * will return null immediately.
-     *
-     * @param variables: The new set of variables. If there are missing variables,
-     * the previous values of those variables will be used.
-     *
-     * @param tryFetch: Try and fetch new results even if the variables haven't
-     * changed (we may still just hit the store, but if there's nothing in there
-     * this will refetch)
-     *
-     * @param fetchResults: Option to ignore fetching results when updating variables
-     *
-     */
-    ObservableQuery.prototype.setVariables = function (variables, tryFetch, fetchResults) {
-        if (tryFetch === void 0) {
-            tryFetch = false;
-        }
-        if (fetchResults === void 0) {
-            fetchResults = true;
-        }
-        // since setVariables restarts the subscription, we reset the tornDown status
-        this.isTornDown = false;
-        var newVariables = variables ? variables : this.variables;
-        if ((0, _apolloUtilities.isEqual)(newVariables, this.variables) && !tryFetch) {
-            // If we have no observers, then we don't actually want to make a network
-            // request. As soon as someone observes the query, the request will kick
-            // off. For now, we just store any changes. (See #1077)
-            if (this.observers.length === 0 || !fetchResults) {
-                return new Promise(function (resolve) {
-                    return resolve();
-                });
-            }
-            return this.result();
-        } else {
-            this.variables = newVariables;
-            this.options.variables = newVariables;
-            // See comment above
-            if (this.observers.length === 0) {
-                return new Promise(function (resolve) {
-                    return resolve();
-                });
-            }
-            // Use the same options as before, but with new variables
-            return this.queryManager.fetchQuery(this.queryId, __assign({}, this.options, { variables: this.variables })).then(function (result) {
-                return (0, _apolloUtilities.maybeDeepFreeze)(result);
-            });
-        }
-    };
-    ObservableQuery.prototype.updateQuery = function (mapFn) {
-        var _a = this.queryManager.getQueryWithPreviousResult(this.queryId),
-            previousResult = _a.previousResult,
-            variables = _a.variables,
-            document = _a.document;
-        var newResult = (0, _apolloUtilities.tryFunctionOrLogError)(function () {
-            return mapFn(previousResult, { variables: variables });
-        });
-        if (newResult) {
-            this.queryManager.dataStore.markUpdateQueryResult(document, variables, newResult);
-            this.queryManager.broadcastQueries();
-        }
-    };
-    ObservableQuery.prototype.stopPolling = function () {
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.options.pollInterval = undefined;
-            this.isCurrentlyPolling = false;
-        }
-    };
-    ObservableQuery.prototype.startPolling = function (pollInterval) {
-        if (this.options.fetchPolicy === 'cache-first' || this.options.fetchPolicy === 'cache-only') {
-            throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
-        }
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.isCurrentlyPolling = false;
-        }
-        this.options.pollInterval = pollInterval;
-        this.isCurrentlyPolling = true;
-        this.scheduler.startPollingQuery(this.options, this.queryId);
-    };
-    ObservableQuery.prototype.onSubscribe = function (observer) {
-        var _this = this;
-        // Zen Observable has its own error function, in order to log correctly
-        // we need to declare a custom error if nothing is passed
-        if (observer._subscription && observer._subscription._observer && !observer._subscription._observer.error) {
-            observer._subscription._observer.error = function (error) {
-                console.error('Unhandled error', error.message, error.stack);
-            };
-        }
-        this.observers.push(observer);
-        // Deliver initial result
-        if (observer.next && this.lastResult) observer.next(this.lastResult);
-        if (observer.error && this.lastError) observer.error(this.lastError);
-        // setup the query if it hasn't been done before
-        if (this.observers.length === 1) this.setUpQuery();
-        return function () {
-            _this.observers = _this.observers.filter(function (obs) {
-                return obs !== observer;
-            });
-            if (_this.observers.length === 0) {
-                _this.tearDownQuery();
-            }
-        };
-    };
-    ObservableQuery.prototype.setUpQuery = function () {
-        var _this = this;
-        if (this.shouldSubscribe) {
-            this.queryManager.addObservableQuery(this.queryId, this);
-        }
-        if (!!this.options.pollInterval) {
-            if (this.options.fetchPolicy === 'cache-first' || this.options.fetchPolicy === 'cache-only') {
-                throw new Error('Queries that specify the cache-first and cache-only fetchPolicies cannot also be polling queries.');
-            }
-            this.isCurrentlyPolling = true;
-            this.scheduler.startPollingQuery(this.options, this.queryId);
-        }
-        var observer = {
-            next: function (result) {
-                _this.lastResult = result;
-                _this.observers.forEach(function (obs) {
-                    return obs.next && obs.next(result);
-                });
-            },
-            error: function (error) {
-                _this.lastError = error;
-                _this.observers.forEach(function (obs) {
-                    return obs.error && obs.error(error);
-                });
-            }
-        };
-        this.queryManager.startQuery(this.queryId, this.options, this.queryManager.queryListenerForObserver(this.queryId, this.options, observer));
-    };
-    ObservableQuery.prototype.tearDownQuery = function () {
-        this.isTornDown = true;
-        if (this.isCurrentlyPolling) {
-            this.scheduler.stopPollingQuery(this.queryId);
-            this.isCurrentlyPolling = false;
-        }
-        // stop all active GraphQL subscriptions
-        this.subscriptionHandles.forEach(function (sub) {
-            return sub.unsubscribe();
-        });
-        this.subscriptionHandles = [];
-        this.queryManager.removeObservableQuery(this.queryId);
-        this.queryManager.stopQuery(this.queryId);
-        this.observers = [];
-    };
-    return ObservableQuery;
-}(_Observable.Observable);
-exports.ObservableQuery = ObservableQuery;
-//# sourceMappingURL=ObservableQuery.js.map
-},{"apollo-utilities":167,"./networkStatus":142,"../util/Observable":173,"../errors/ApolloError":144,"./types":143}],221:[function(require,module,exports) {
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.DedupLink = undefined;
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
 
-var _apolloLink = require('apollo-link');
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
 
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer;
+    dispatch({ type: ActionTypes.REPLACE });
+  }
+
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if ((typeof observer === 'undefined' ? 'undefined' : _typeof(observer)) !== 'object' || observer === null) {
+          throw new TypeError('Expected the observer to be an object.');
         }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return { unsubscribe: unsubscribe };
+      }
+    }, _ref[_symbolObservable2.default] = function () {
+      return this;
+    }, _ref;
+  }
+
+  // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+  dispatch({ type: ActionTypes.INIT });
+
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[_symbolObservable2.default] = observable, _ref2;
+}
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+  } catch (e) {} // eslint-disable-line no-empty
+}
+
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionDescription = actionType && 'action "' + String(actionType) + '"' || 'an action';
+
+  return 'Given ' + actionDescription + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state. ' + 'If you want this reducer to hold no value, you can return null instead of undefined.';
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return 'Unexpected ' + (unexpectedKeys.length > 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, { type: ActionTypes.INIT });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined. If you don\'t want to set a value for this reducer, ' + 'you can use null instead of undefined.');
+    }
+
+    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+    if (typeof reducer(undefined, { type: type }) === 'undefined') {
+      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined, but can be null.');
+    }
+  });
+}
+
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if ('development' !== 'production') {
+      if (typeof reducers[key] === 'undefined') {
+        warning('No reducer provided for key "' + key + '"');
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+  var finalReducerKeys = Object.keys(finalReducers);
+
+  var unexpectedKeyCache = void 0;
+  if ('development' !== 'production') {
+    unexpectedKeyCache = {};
+  }
+
+  var shapeAssertionError = void 0;
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var action = arguments[1];
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if ('development' !== 'production') {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+      if (warningMessage) {
+        warning(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
+        throw new Error(errorMessage);
+      }
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+    return hasChanged ? nextState : state;
+  };
+}
+
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
+  };
+}
+
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass a single function as the first argument,
+ * and get a function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if ((typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) !== 'object' || actionCreators === null) {
+    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
+  }
+
+  var keys = Object.keys(actionCreators);
+  var boundActionCreators = {};
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var actionCreator = actionCreators[key];
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+  return boundActionCreators;
+}
+
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+
+function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
     };
-}();
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
+}
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      var store = createStore.apply(undefined, args);
+      var _dispatch = function dispatch() {
+        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(undefined, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = compose.apply(undefined, chain)(store.dispatch);
+
+      return _extends({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
 
 /*
- * Expects context to contain the forceFetch field if no dedup
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
  */
-var DedupLink = /** @class */function (_super) {
-    __extends(DedupLink, _super);
-    function DedupLink() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.inFlightRequestObservables = new Map();
-        _this.subscribers = new Map();
-        return _this;
-    }
-    DedupLink.prototype.request = function (operation, forward) {
-        var _this = this;
-        // sometimes we might not want to deduplicate a request, for example when we want to force fetch it.
-        if (operation.getContext().forceFetch) {
-            return forward(operation);
-        }
-        var key = operation.toKey();
-        var cleanup = function (key) {
-            _this.inFlightRequestObservables.delete(key);
-            var prev = _this.subscribers.get(key);
-            return prev;
-        };
-        if (!this.inFlightRequestObservables.get(key)) {
-            // this is a new request, i.e. we haven't deduplicated it yet
-            // call the next link
-            var singleObserver_1 = forward(operation);
-            var subscription_1;
-            var sharedObserver = new _apolloLink.Observable(function (observer) {
-                // this will still be called by each subscriber regardless of
-                // deduplication status
-                var prev = _this.subscribers.get(key);
-                if (!prev) prev = { next: [], error: [], complete: [] };
-                _this.subscribers.set(key, {
-                    next: prev.next.concat([observer.next.bind(observer)]),
-                    error: prev.error.concat([observer.error.bind(observer)]),
-                    complete: prev.complete.concat([observer.complete.bind(observer)])
-                });
-                if (!subscription_1) {
-                    subscription_1 = singleObserver_1.subscribe({
-                        next: function (result) {
-                            var prev = cleanup(key);
-                            _this.subscribers.delete(key);
-                            if (prev) {
-                                prev.next.forEach(function (next) {
-                                    return next(result);
-                                });
-                                prev.complete.forEach(function (complete) {
-                                    return complete();
-                                });
-                            }
-                        },
-                        error: function (error) {
-                            var prev = cleanup(key);
-                            _this.subscribers.delete(key);
-                            if (prev) prev.error.forEach(function (err) {
-                                return err(error);
-                            });
-                        }
-                    });
-                }
-                return function () {
-                    if (subscription_1) subscription_1.unsubscribe();
-                    _this.inFlightRequestObservables.delete(key);
-                };
-            });
-            this.inFlightRequestObservables.set(key, sharedObserver);
-        }
-        // return shared Observable
-        return this.inFlightRequestObservables.get(key);
-    };
-    return DedupLink;
-}(_apolloLink.ApolloLink);
-exports.DedupLink = DedupLink;
-//# sourceMappingURL=dedupLink.js.map
-},{"apollo-link":70}],216:[function(require,module,exports) {
+function isCrushed() {}
+
+if ('development' !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  warning("You are currently using minified code outside of NODE_ENV === 'production'. " + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+}
+
+exports.createStore = createStore;
+exports.combineReducers = combineReducers;
+exports.bindActionCreators = bindActionCreators;
+exports.applyMiddleware = applyMiddleware;
+exports.compose = compose;
+exports.__DO_NOT_USE__ActionTypes = ActionTypes;
+},{"symbol-observable":230}],195:[function(require,module,exports) {
+var global = arguments[3];
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+exports.default = freeGlobal;
+},{}],174:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dedupLink = require('./dedupLink');
+var _freeGlobal = require('./_freeGlobal.js');
 
-Object.keys(_dedupLink).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _dedupLink[key];
-    }
-  });
-});
-},{"./dedupLink":221}],213:[function(require,module,exports) {
+var _freeGlobal2 = _interopRequireDefault(_freeGlobal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal2.default || freeSelf || Function('return this')();
+
+exports.default = root;
+},{"./_freeGlobal.js":195}],168:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.QueryScheduler = undefined;
 
-var _types = require('../core/types');
+var _root = require('./_root.js');
 
-var _ObservableQuery = require('../core/ObservableQuery');
+var _root2 = _interopRequireDefault(_root);
 
-var _networkStatus = require('../core/networkStatus');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// The QueryScheduler is supposed to be a mechanism that schedules polling queries such that
-// they are clustered into the time slots of the QueryBatcher and are batched together. It
-// also makes sure that for a given polling query, if one instance of the query is inflight,
-// another instance will not be fired until the query returns or times out. We do this because
-// another query fires while one is already in flight, the data will stay in the "loading" state
-// even after the first query has returned.
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+/** Built-in value references. */
+var Symbol = _root2.default.Symbol;
+
+exports.default = Symbol;
+},{"./_root.js":174}],169:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Symbol = require('./_Symbol.js');
+
+var _Symbol2 = _interopRequireDefault(_Symbol);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Built-in value references. */
+var symToStringTag = _Symbol2.default ? _Symbol2.default.toStringTag : undefined;
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
     }
-    return t;
-};
+  }
+  return result;
+}
 
-var QueryScheduler = /** @class */function () {
-    function QueryScheduler(_a) {
-        var queryManager = _a.queryManager,
-            ssrMode = _a.ssrMode;
-        // Map going from queryIds to query options that are in flight.
-        this.inFlightQueries = {};
-        // Map going from query ids to the query options associated with those queries. Contains all of
-        // the queries, both in flight and not in flight.
-        this.registeredQueries = {};
-        // Map going from polling interval with to the query ids that fire on that interval.
-        // These query ids are associated with a set of options in the this.registeredQueries.
-        this.intervalQueries = {};
-        // Map going from polling interval widths to polling timers.
-        this.pollingTimers = {};
-        this.ssrMode = false;
-        this.queryManager = queryManager;
-        this.ssrMode = ssrMode || false;
-    }
-    QueryScheduler.prototype.checkInFlight = function (queryId) {
-        var query = this.queryManager.queryStore.get(queryId);
-        return query && query.networkStatus !== _networkStatus.NetworkStatus.ready && query.networkStatus !== _networkStatus.NetworkStatus.error;
-    };
-    QueryScheduler.prototype.fetchQuery = function (queryId, options, fetchType) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.queryManager.fetchQuery(queryId, options, fetchType).then(function (result) {
-                resolve(result);
-            }).catch(function (error) {
-                reject(error);
-            });
-        });
-    };
-    QueryScheduler.prototype.startPollingQuery = function (options, queryId, listener) {
-        if (!options.pollInterval) {
-            throw new Error('Attempted to start a polling query without a polling interval.');
-        }
-        // Do not poll in SSR mode
-        if (this.ssrMode) return queryId;
-        this.registeredQueries[queryId] = options;
-        if (listener) {
-            this.queryManager.addQueryListener(queryId, listener);
-        }
-        this.addQueryOnInterval(queryId, options);
-        return queryId;
-    };
-    QueryScheduler.prototype.stopPollingQuery = function (queryId) {
-        // Remove the query options from one of the registered queries.
-        // The polling function will then take care of not firing it anymore.
-        delete this.registeredQueries[queryId];
-    };
-    // Fires the all of the queries on a particular interval. Called on a setInterval.
-    QueryScheduler.prototype.fetchQueriesOnInterval = function (interval) {
-        var _this = this;
-        // XXX this "filter" here is nasty, because it does two things at the same time.
-        // 1. remove queries that have stopped polling
-        // 2. call fetchQueries for queries that are polling and not in flight.
-        // TODO: refactor this to make it cleaner
-        this.intervalQueries[interval] = this.intervalQueries[interval].filter(function (queryId) {
-            // If queryOptions can't be found from registeredQueries or if it has a
-            // different interval, it means that this queryId is no longer registered
-            // and should be removed from the list of queries firing on this interval.
-            //
-            // We don't remove queries from intervalQueries immediately in
-            // stopPollingQuery so that we can keep the timer consistent when queries
-            // are removed and replaced, and to avoid quadratic behavior when stopping
-            // many queries.
-            if (!(_this.registeredQueries.hasOwnProperty(queryId) && _this.registeredQueries[queryId].pollInterval === interval)) {
-                return false;
-            }
-            // Don't fire this instance of the polling query is one of the instances is already in
-            // flight.
-            if (_this.checkInFlight(queryId)) {
-                return true;
-            }
-            var queryOptions = _this.registeredQueries[queryId];
-            var pollingOptions = __assign({}, queryOptions);
-            pollingOptions.fetchPolicy = 'network-only';
-            // don't let unhandled rejections happen
-            _this.fetchQuery(queryId, pollingOptions, _types.FetchType.poll).catch(function () {});
-            return true;
-        });
-        if (this.intervalQueries[interval].length === 0) {
-            clearInterval(this.pollingTimers[interval]);
-            delete this.intervalQueries[interval];
-        }
-    };
-    // Adds a query on a particular interval to this.intervalQueries and then fires
-    // that query with all the other queries executing on that interval. Note that the query id
-    // and query options must have been added to this.registeredQueries before this function is called.
-    QueryScheduler.prototype.addQueryOnInterval = function (queryId, queryOptions) {
-        var _this = this;
-        var interval = queryOptions.pollInterval;
-        if (!interval) {
-            throw new Error("A poll interval is required to start polling query with id '" + queryId + "'.");
-        }
-        // If there are other queries on this interval, this query will just fire with those
-        // and we don't need to create a new timer.
-        if (this.intervalQueries.hasOwnProperty(interval.toString()) && this.intervalQueries[interval].length > 0) {
-            this.intervalQueries[interval].push(queryId);
-        } else {
-            this.intervalQueries[interval] = [queryId];
-            // set up the timer for the function that will handle this interval
-            this.pollingTimers[interval] = setInterval(function () {
-                _this.fetchQueriesOnInterval(interval);
-            }, interval);
-        }
-    };
-    // Used only for unit testing.
-    QueryScheduler.prototype.registerPollingQuery = function (queryOptions) {
-        if (!queryOptions.pollInterval) {
-            throw new Error('Attempted to register a non-polling query with the scheduler.');
-        }
-        return new _ObservableQuery.ObservableQuery({
-            scheduler: this,
-            options: queryOptions
-        });
-    };
-    return QueryScheduler;
-}();
-exports.QueryScheduler = QueryScheduler;
-//# sourceMappingURL=scheduler.js.map
-},{"../core/types":143,"../core/ObservableQuery":141,"../core/networkStatus":142}],214:[function(require,module,exports) {
+exports.default = getRawTag;
+},{"./_Symbol.js":168}],170:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-var MutationStore = /** @class */function () {
-    function MutationStore() {
-        this.store = {};
-    }
-    MutationStore.prototype.getStore = function () {
-        return this.store;
-    };
-    MutationStore.prototype.get = function (mutationId) {
-        return this.store[mutationId];
-    };
-    MutationStore.prototype.initMutation = function (mutationId, mutationString, variables) {
-        this.store[mutationId] = {
-            mutationString: mutationString,
-            variables: variables || {},
-            loading: true,
-            error: null
-        };
-    };
-    MutationStore.prototype.markMutationError = function (mutationId, error) {
-        var mutation = this.store[mutationId];
-        if (!mutation) {
-            return;
-        }
-        mutation.loading = false;
-        mutation.error = error;
-    };
-    MutationStore.prototype.markMutationResult = function (mutationId) {
-        var mutation = this.store[mutationId];
-        if (!mutation) {
-            return;
-        }
-        mutation.loading = false;
-        mutation.error = null;
-    };
-    MutationStore.prototype.reset = function () {
-        this.store = {};
-    };
-    return MutationStore;
-}();
-exports.MutationStore = MutationStore;
-//# sourceMappingURL=mutations.js.map
-},{}],215:[function(require,module,exports) {
-'use strict';
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.QueryStore = undefined;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
 
-var _printer = require('graphql/language/printer');
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
 
-var _apolloUtilities = require('apollo-utilities');
-
-var _networkStatus = require('../core/networkStatus');
-
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var QueryStore = /** @class */function () {
-    function QueryStore() {
-        this.store = {};
-    }
-    QueryStore.prototype.getStore = function () {
-        return this.store;
-    };
-    QueryStore.prototype.get = function (queryId) {
-        return this.store[queryId];
-    };
-    QueryStore.prototype.initQuery = function (query) {
-        var previousQuery = this.store[query.queryId];
-        if (previousQuery && previousQuery.document !== query.document && (0, _printer.print)(previousQuery.document) !== (0, _printer.print)(query.document)) {
-            // XXX we're throwing an error here to catch bugs where a query gets overwritten by a new one.
-            // we should implement a separate action for refetching so that QUERY_INIT may never overwrite
-            // an existing query (see also: https://github.com/apollostack/apollo-client/issues/732)
-            throw new Error('Internal Error: may not update existing query string in store');
-        }
-        var isSetVariables = false;
-        var previousVariables = null;
-        if (query.storePreviousVariables && previousQuery && previousQuery.networkStatus !== _networkStatus.NetworkStatus.loading
-        // if the previous query was still loading, we don't want to remember it at all.
-        ) {
-                if (!(0, _apolloUtilities.isEqual)(previousQuery.variables, query.variables)) {
-                    isSetVariables = true;
-                    previousVariables = previousQuery.variables;
-                }
-            }
-        // TODO break this out into a separate function
-        var networkStatus;
-        if (isSetVariables) {
-            networkStatus = _networkStatus.NetworkStatus.setVariables;
-        } else if (query.isPoll) {
-            networkStatus = _networkStatus.NetworkStatus.poll;
-        } else if (query.isRefetch) {
-            networkStatus = _networkStatus.NetworkStatus.refetch;
-            // TODO: can we determine setVariables here if it's a refetch and the variables have changed?
-        } else {
-            networkStatus = _networkStatus.NetworkStatus.loading;
-        }
-        var graphQLErrors = [];
-        if (previousQuery && previousQuery.graphQLErrors) {
-            graphQLErrors = previousQuery.graphQLErrors;
-        }
-        // XXX right now if QUERY_INIT is fired twice, like in a refetch situation, we just overwrite
-        // the store. We probably want a refetch action instead, because I suspect that if you refetch
-        // before the initial fetch is done, you'll get an error.
-        this.store[query.queryId] = {
-            document: query.document,
-            variables: query.variables,
-            previousVariables: previousVariables,
-            networkError: null,
-            graphQLErrors: graphQLErrors,
-            networkStatus: networkStatus,
-            metadata: query.metadata
-        };
-        // If the action had a `moreForQueryId` property then we need to set the
-        // network status on that query as well to `fetchMore`.
-        //
-        // We have a complement to this if statement in the query result and query
-        // error action branch, but importantly *not* in the client result branch.
-        // This is because the implementation of `fetchMore` *always* sets
-        // `fetchPolicy` to `network-only` so we would never have a client result.
-        if (typeof query.fetchMoreForQueryId === 'string' && this.store[query.fetchMoreForQueryId]) {
-            this.store[query.fetchMoreForQueryId].networkStatus = _networkStatus.NetworkStatus.fetchMore;
-        }
-    };
-    QueryStore.prototype.markQueryResult = function (queryId, result, fetchMoreForQueryId) {
-        if (!this.store[queryId]) return;
-        this.store[queryId].networkError = null;
-        this.store[queryId].graphQLErrors = result.errors && result.errors.length ? result.errors : [];
-        this.store[queryId].previousVariables = null;
-        this.store[queryId].networkStatus = _networkStatus.NetworkStatus.ready;
-        // If we have a `fetchMoreForQueryId` then we need to update the network
-        // status for that query. See the branch for query initialization for more
-        // explanation about this process.
-        if (typeof fetchMoreForQueryId === 'string' && this.store[fetchMoreForQueryId]) {
-            this.store[fetchMoreForQueryId].networkStatus = _networkStatus.NetworkStatus.ready;
-        }
-    };
-    QueryStore.prototype.markQueryError = function (queryId, error, fetchMoreForQueryId) {
-        if (!this.store[queryId]) return;
-        this.store[queryId].networkError = error;
-        this.store[queryId].networkStatus = _networkStatus.NetworkStatus.error;
-        // If we have a `fetchMoreForQueryId` then we need to update the network
-        // status for that query. See the branch for query initialization for more
-        // explanation about this process.
-        if (typeof fetchMoreForQueryId === 'string') {
-            this.markQueryResultClient(fetchMoreForQueryId, true);
-        }
-    };
-    QueryStore.prototype.markQueryResultClient = function (queryId, complete) {
-        if (!this.store[queryId]) return;
-        this.store[queryId].networkError = null;
-        this.store[queryId].previousVariables = null;
-        this.store[queryId].networkStatus = complete ? _networkStatus.NetworkStatus.ready : _networkStatus.NetworkStatus.loading;
-    };
-    QueryStore.prototype.stopQuery = function (queryId) {
-        delete this.store[queryId];
-    };
-    QueryStore.prototype.reset = function (observableQueryIds) {
-        var _this = this;
-        // keep only the queries with query ids that are associated with observables
-        this.store = Object.keys(this.store).filter(function (queryId) {
-            return observableQueryIds.indexOf(queryId) > -1;
-        }).reduce(function (res, key) {
-            // XXX set loading to true so listeners don't trigger unless they want results with partial data
-            res[key] = __assign({}, _this.store[key], { networkStatus: _networkStatus.NetworkStatus.loading });
-            return res;
-        }, {});
-    };
-    return QueryStore;
-}();
-exports.QueryStore = QueryStore;
-//# sourceMappingURL=queries.js.map
-},{"graphql/language/printer":153,"apollo-utilities":167,"../core/networkStatus":142}],170:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.QueryManager = undefined;
-
-var _apolloLink = require('apollo-link');
-
-var _printer = require('graphql/language/printer');
-
-var _apolloLinkDedup = require('apollo-link-dedup');
-
-var _apolloUtilities = require('apollo-utilities');
-
-var _scheduler = require('../scheduler/scheduler');
-
-var _ApolloError = require('../errors/ApolloError');
-
-var _Observable = require('../util/Observable');
-
-var _mutations = require('../data/mutations');
-
-var _queries = require('../data/queries');
-
-var _ObservableQuery = require('./ObservableQuery');
-
-var _networkStatus = require('./networkStatus');
-
-var _types = require('./types');
-
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var defaultQueryInfo = {
-    listeners: [],
-    invalidated: false,
-    document: null,
-    newData: null,
-    lastRequestId: null,
-    observableQuery: null,
-    subscriptions: []
-};
-var QueryManager = /** @class */function () {
-    function QueryManager(_a) {
-        var link = _a.link,
-            _b = _a.queryDeduplication,
-            queryDeduplication = _b === void 0 ? false : _b,
-            store = _a.store,
-            _c = _a.onBroadcast,
-            onBroadcast = _c === void 0 ? function () {
-            return undefined;
-        } : _c,
-            _d = _a.ssrMode,
-            ssrMode = _d === void 0 ? false : _d;
-        this.mutationStore = new _mutations.MutationStore();
-        this.queryStore = new _queries.QueryStore();
-        // let's not start at zero to avoid pain with bad checks
-        this.idCounter = 1;
-        // XXX merge with ObservableQuery but that needs to be expanded to support mutations and
-        // subscriptions as well
-        this.queries = new Map();
-        // A map going from a requestId to a promise that has not yet been resolved. We use this to keep
-        // track of queries that are inflight and reject them in case some
-        // destabalizing action occurs (e.g. reset of the Apollo store).
-        this.fetchQueryPromises = new Map();
-        // A map going from the name of a query to an observer issued for it by watchQuery. This is
-        // generally used to refetches for refetchQueries and to update mutation results through
-        // updateQueries.
-        this.queryIdsByName = {};
-        this.link = link;
-        this.deduplicator = _apolloLink.ApolloLink.from([new _apolloLinkDedup.DedupLink(), link]);
-        this.queryDeduplication = queryDeduplication;
-        this.dataStore = store;
-        this.onBroadcast = onBroadcast;
-        this.scheduler = new _scheduler.QueryScheduler({ queryManager: this, ssrMode: ssrMode });
-    }
-    QueryManager.prototype.mutate = function (_a) {
-        var _this = this;
-        var mutation = _a.mutation,
-            variables = _a.variables,
-            optimisticResponse = _a.optimisticResponse,
-            updateQueriesByName = _a.updateQueries,
-            _b = _a.refetchQueries,
-            refetchQueries = _b === void 0 ? [] : _b,
-            updateWithProxyFn = _a.update,
-            _c = _a.errorPolicy,
-            errorPolicy = _c === void 0 ? 'none' : _c,
-            fetchPolicy = _a.fetchPolicy,
-            _d = _a.context,
-            context = _d === void 0 ? {} : _d;
-        if (!mutation) {
-            throw new Error('mutation option is required. You must specify your GraphQL document in the mutation option.');
-        }
-        if (fetchPolicy && fetchPolicy !== 'no-cache') {
-            throw new Error("fetchPolicy for mutations currently only supports the 'no-cache' policy");
-        }
-        var mutationId = this.generateQueryId();
-        var cache = this.dataStore.getCache();
-        mutation = cache.transformDocument(mutation), variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)((0, _apolloUtilities.getMutationDefinition)(mutation)), variables);
-        var mutationString = (0, _printer.print)(mutation);
-        this.setQuery(mutationId, function () {
-            return { document: mutation };
-        });
-        // Create a map of update queries by id to the query instead of by name.
-        var generateUpdateQueriesInfo = function () {
-            var ret = {};
-            if (updateQueriesByName) {
-                Object.keys(updateQueriesByName).forEach(function (queryName) {
-                    return (_this.queryIdsByName[queryName] || []).forEach(function (queryId) {
-                        ret[queryId] = {
-                            updater: updateQueriesByName[queryName],
-                            query: _this.queryStore.get(queryId)
-                        };
-                    });
-                });
-            }
-            return ret;
-        };
-        this.mutationStore.initMutation(mutationId, mutationString, variables);
-        this.dataStore.markMutationInit({
-            mutationId: mutationId,
-            document: mutation,
-            variables: variables || {},
-            updateQueries: generateUpdateQueriesInfo(),
-            update: updateWithProxyFn,
-            optimisticResponse: optimisticResponse
-        });
-        this.broadcastQueries();
-        return new Promise(function (resolve, reject) {
-            var storeResult;
-            var error;
-            var operation = _this.buildOperationForLink(mutation, variables, __assign({}, context, { optimisticResponse: optimisticResponse }));
-            (0, _apolloLink.execute)(_this.link, operation).subscribe({
-                next: function (result) {
-                    if ((0, _apolloUtilities.graphQLResultHasError)(result) && errorPolicy === 'none') {
-                        error = new _ApolloError.ApolloError({
-                            graphQLErrors: result.errors
-                        });
-                        return;
-                    }
-                    _this.mutationStore.markMutationResult(mutationId);
-                    if (fetchPolicy !== 'no-cache') {
-                        _this.dataStore.markMutationResult({
-                            mutationId: mutationId,
-                            result: result,
-                            document: mutation,
-                            variables: variables || {},
-                            updateQueries: generateUpdateQueriesInfo(),
-                            update: updateWithProxyFn
-                        });
-                    }
-                    storeResult = result;
-                },
-                error: function (err) {
-                    _this.mutationStore.markMutationError(mutationId, err);
-                    _this.dataStore.markMutationComplete({
-                        mutationId: mutationId,
-                        optimisticResponse: optimisticResponse
-                    });
-                    _this.broadcastQueries();
-                    _this.setQuery(mutationId, function () {
-                        return { document: undefined };
-                    });
-                    reject(new _ApolloError.ApolloError({
-                        networkError: err
-                    }));
-                },
-                complete: function () {
-                    if (error) {
-                        _this.mutationStore.markMutationError(mutationId, error);
-                    }
-                    _this.dataStore.markMutationComplete({
-                        mutationId: mutationId,
-                        optimisticResponse: optimisticResponse
-                    });
-                    _this.broadcastQueries();
-                    if (error) {
-                        reject(error);
-                        return;
-                    }
-                    // allow for conditional refetches
-                    // XXX do we want to make this the only API one day?
-                    if (typeof refetchQueries === 'function') {
-                        refetchQueries = refetchQueries(storeResult);
-                    }
-                    if (refetchQueries) {
-                        refetchQueries.forEach(function (refetchQuery) {
-                            if (typeof refetchQuery === 'string') {
-                                _this.refetchQueryByName(refetchQuery);
-                                return;
-                            }
-                            _this.query({
-                                query: refetchQuery.query,
-                                variables: refetchQuery.variables,
-                                fetchPolicy: 'network-only'
-                            });
-                        });
-                    }
-                    _this.setQuery(mutationId, function () {
-                        return { document: undefined };
-                    });
-                    if (errorPolicy === 'ignore' && storeResult && (0, _apolloUtilities.graphQLResultHasError)(storeResult)) {
-                        delete storeResult.errors;
-                    }
-                    resolve(storeResult);
-                }
-            });
-        });
-    };
-    QueryManager.prototype.fetchQuery = function (queryId, options, fetchType,
-    // This allows us to track if this is a query spawned by a `fetchMore`
-    // call for another query. We need this data to compute the `fetchMore`
-    // network status for the query this is fetching for.
-    fetchMoreForQueryId) {
-        var _this = this;
-        var _a = options.variables,
-            variables = _a === void 0 ? {} : _a,
-            _b = options.metadata,
-            metadata = _b === void 0 ? null : _b,
-            _c = options.fetchPolicy,
-            fetchPolicy = _c === void 0 ? 'cache-first' : _c;
-        var cache = this.dataStore.getCache();
-        var query = cache.transformDocument(options.query);
-        var storeResult;
-        var needToFetch = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
-        // If this is not a force fetch, we want to diff the query against the
-        // store before we fetch it from the network interface.
-        // TODO we hit the cache even if the policy is network-first. This could be unnecessary if the network is up.
-        if (fetchType !== _types.FetchType.refetch && fetchPolicy !== 'network-only' && fetchPolicy !== 'no-cache') {
-            var _d = this.dataStore.getCache().diff({
-                query: query,
-                variables: variables,
-                returnPartialData: true,
-                optimistic: false
-            }),
-                complete = _d.complete,
-                result = _d.result;
-            // If we're in here, only fetch if we have missing fields
-            needToFetch = !complete || fetchPolicy === 'cache-and-network';
-            storeResult = result;
-        }
-        var shouldFetch = needToFetch && fetchPolicy !== 'cache-only' && fetchPolicy !== 'standby';
-        // we need to check to see if this is an operation that uses the @live directive
-        if ((0, _apolloUtilities.hasDirectives)(['live'], query)) shouldFetch = true;
-        var requestId = this.generateRequestId();
-        // set up a watcher to listen to cache updates
-        var cancel = this.updateQueryWatch(queryId, query, options);
-        // Initialize query in store with unique requestId
-        this.setQuery(queryId, function () {
-            return {
-                document: query,
-                lastRequestId: requestId,
-                invalidated: true,
-                cancel: cancel
-            };
-        });
-        this.invalidate(true, fetchMoreForQueryId);
-        this.queryStore.initQuery({
-            queryId: queryId,
-            document: query,
-            storePreviousVariables: shouldFetch,
-            variables: variables,
-            isPoll: fetchType === _types.FetchType.poll,
-            isRefetch: fetchType === _types.FetchType.refetch,
-            metadata: metadata,
-            fetchMoreForQueryId: fetchMoreForQueryId
-        });
-        this.broadcastQueries();
-        // If there is no part of the query we need to fetch from the server (or,
-        // fetchPolicy is cache-only), we just write the store result as the final result.
-        var shouldDispatchClientResult = !shouldFetch || fetchPolicy === 'cache-and-network';
-        if (shouldDispatchClientResult) {
-            this.queryStore.markQueryResultClient(queryId, !shouldFetch);
-            this.invalidate(true, queryId, fetchMoreForQueryId);
-            this.broadcastQueries();
-        }
-        if (shouldFetch) {
-            var networkResult = this.fetchRequest({
-                requestId: requestId,
-                queryId: queryId,
-                document: query,
-                options: options,
-                fetchMoreForQueryId: fetchMoreForQueryId
-            }).catch(function (error) {
-                // This is for the benefit of `refetch` promises, which currently don't get their errors
-                // through the store like watchQuery observers do
-                if ((0, _ApolloError.isApolloError)(error)) {
-                    throw error;
-                } else {
-                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
-                    if (requestId >= (lastRequestId || 1)) {
-                        _this.queryStore.markQueryError(queryId, error, fetchMoreForQueryId);
-                        _this.invalidate(true, queryId, fetchMoreForQueryId);
-                        _this.broadcastQueries();
-                    }
-                    _this.removeFetchQueryPromise(requestId);
-                    throw new _ApolloError.ApolloError({ networkError: error });
-                }
-            });
-            // we don't return the promise for cache-and-network since it is already
-            // returned below from the cache
-            if (fetchPolicy !== 'cache-and-network') {
-                return networkResult;
-            } else {
-                // however we need to catch the error so it isn't unhandled in case of
-                // network error
-                networkResult.catch(function () {});
-            }
-        }
-        // If we have no query to send to the server, we should return the result
-        // found within the store.
-        return Promise.resolve({ data: storeResult });
-    };
-    // Returns a query listener that will update the given observer based on the
-    // results (or lack thereof) for a particular query.
-    QueryManager.prototype.queryListenerForObserver = function (queryId, options, observer) {
-        var _this = this;
-        var previouslyHadError = false;
-        return function (queryStoreValue, newData) {
-            // we're going to take a look at the data, so the query is no longer invalidated
-            _this.invalidate(false, queryId);
-            // The query store value can be undefined in the event of a store
-            // reset.
-            if (!queryStoreValue) return;
-            var observableQuery = _this.getQuery(queryId).observableQuery;
-            var fetchPolicy = observableQuery ? observableQuery.options.fetchPolicy : options.fetchPolicy;
-            // don't watch the store for queries on standby
-            if (fetchPolicy === 'standby') return;
-            var errorPolicy = observableQuery ? observableQuery.options.errorPolicy : options.errorPolicy;
-            var lastResult = observableQuery ? observableQuery.getLastResult() : null;
-            var lastError = observableQuery ? observableQuery.getLastError() : null;
-            var shouldNotifyIfLoading = !newData && queryStoreValue.previousVariables != null || fetchPolicy === 'cache-only' || fetchPolicy === 'cache-and-network';
-            // if this caused by a cache broadcast but the query is still in flight
-            // don't notify the observer
-            // if (
-            //   isCacheBroadcast &&
-            //   isNetworkRequestInFlight(queryStoreValue.networkStatus)
-            // ) {
-            //   shouldNotifyIfLoading = false;
-            // }
-            var networkStatusChanged = Boolean(lastResult && queryStoreValue.networkStatus !== lastResult.networkStatus);
-            var errorStatusChanged = errorPolicy && (lastError && lastError.graphQLErrors) !== queryStoreValue.graphQLErrors && errorPolicy !== 'none';
-            if (!(0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus) || networkStatusChanged && options.notifyOnNetworkStatusChange || shouldNotifyIfLoading) {
-                // If we have either a GraphQL error or a network error, we create
-                // an error and tell the observer about it.
-                if ((!errorPolicy || errorPolicy === 'none') && queryStoreValue.graphQLErrors && queryStoreValue.graphQLErrors.length > 0 || queryStoreValue.networkError) {
-                    var apolloError_1 = new _ApolloError.ApolloError({
-                        graphQLErrors: queryStoreValue.graphQLErrors,
-                        networkError: queryStoreValue.networkError
-                    });
-                    previouslyHadError = true;
-                    if (observer.error) {
-                        try {
-                            observer.error(apolloError_1);
-                        } catch (e) {
-                            // Throw error outside this control flow to avoid breaking Apollo's state
-                            setTimeout(function () {
-                                throw e;
-                            }, 0);
-                        }
-                    } else {
-                        // Throw error outside this control flow to avoid breaking Apollo's state
-                        setTimeout(function () {
-                            throw apolloError_1;
-                        }, 0);
-                        if (!(0, _apolloUtilities.isProduction)()) {
-                            /* tslint:disable-next-line */
-                            console.info('An unhandled error was thrown because no error handler is registered ' + 'for the query ' + (0, _printer.print)(queryStoreValue.document));
-                        }
-                    }
-                    return;
-                }
-                try {
-                    var data = void 0;
-                    var isMissing = void 0;
-                    if (newData) {
-                        // clear out the latest new data, since we're now using it
-                        _this.setQuery(queryId, function () {
-                            return { newData: null };
-                        });
-                        data = newData.result;
-                        isMissing = !newData.complete || false;
-                    } else {
-                        if (lastResult && lastResult.data && !errorStatusChanged) {
-                            data = lastResult.data;
-                            isMissing = false;
-                        } else {
-                            var document_1 = _this.getQuery(queryId).document;
-                            var readResult = _this.dataStore.getCache().diff({
-                                query: document_1,
-                                variables: queryStoreValue.previousVariables || queryStoreValue.variables,
-                                optimistic: true
-                            });
-                            data = readResult.result;
-                            isMissing = !readResult.complete;
-                        }
-                    }
-                    var resultFromStore = void 0;
-                    // If there is some data missing and the user has told us that they
-                    // do not tolerate partial data then we want to return the previous
-                    // result and mark it as stale.
-                    if (isMissing && fetchPolicy !== 'cache-only') {
-                        resultFromStore = {
-                            data: lastResult && lastResult.data,
-                            loading: (0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus),
-                            networkStatus: queryStoreValue.networkStatus,
-                            stale: true
-                        };
-                    } else {
-                        resultFromStore = {
-                            data: data,
-                            loading: (0, _networkStatus.isNetworkRequestInFlight)(queryStoreValue.networkStatus),
-                            networkStatus: queryStoreValue.networkStatus,
-                            stale: false
-                        };
-                    }
-                    // if the query wants updates on errors we need to add it to the result
-                    if (errorPolicy === 'all' && queryStoreValue.graphQLErrors && queryStoreValue.graphQLErrors.length > 0) {
-                        resultFromStore.errors = queryStoreValue.graphQLErrors;
-                    }
-                    if (observer.next) {
-                        var isDifferentResult = !(lastResult && resultFromStore && lastResult.networkStatus === resultFromStore.networkStatus && lastResult.stale === resultFromStore.stale &&
-                        // We can do a strict equality check here because we include a `previousResult`
-                        // with `readQueryFromStore`. So if the results are the same they will be
-                        // referentially equal.
-                        lastResult.data === resultFromStore.data);
-                        if (isDifferentResult || previouslyHadError) {
-                            try {
-                                observer.next((0, _apolloUtilities.maybeDeepFreeze)(resultFromStore));
-                            } catch (e) {
-                                // Throw error outside this control flow to avoid breaking Apollo's state
-                                setTimeout(function () {
-                                    throw e;
-                                }, 0);
-                            }
-                        }
-                    }
-                    previouslyHadError = false;
-                } catch (error) {
-                    previouslyHadError = true;
-                    if (observer.error) observer.error(new _ApolloError.ApolloError({ networkError: error }));
-                    return;
-                }
-            }
-        };
-    };
-    // The shouldSubscribe option is a temporary fix that tells us whether watchQuery was called
-    // directly (i.e. through ApolloClient) or through the query method within QueryManager.
-    // Currently, the query method uses watchQuery in order to handle non-network errors correctly
-    // but we don't want to keep track observables issued for the query method since those aren't
-    // supposed to be refetched in the event of a store reset. Once we unify error handling for
-    // network errors and non-network errors, the shouldSubscribe option will go away.
-    QueryManager.prototype.watchQuery = function (options, shouldSubscribe) {
-        if (shouldSubscribe === void 0) {
-            shouldSubscribe = true;
-        }
-        if (options.fetchPolicy === 'standby') {
-            throw new Error('client.watchQuery cannot be called with fetchPolicy set to "standby"');
-        }
-        // get errors synchronously
-        var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(options.query);
-        // assign variable default values if supplied
-        if (queryDefinition.variableDefinitions && queryDefinition.variableDefinitions.length) {
-            var defaultValues = (0, _apolloUtilities.getDefaultValues)(queryDefinition);
-            options.variables = (0, _apolloUtilities.assign)({}, defaultValues, options.variables);
-        }
-        if (typeof options.notifyOnNetworkStatusChange === 'undefined') {
-            options.notifyOnNetworkStatusChange = false;
-        }
-        var transformedOptions = __assign({}, options);
-        return new _ObservableQuery.ObservableQuery({
-            scheduler: this.scheduler,
-            options: transformedOptions,
-            shouldSubscribe: shouldSubscribe
-        });
-    };
-    QueryManager.prototype.query = function (options) {
-        var _this = this;
-        if (!options.query) {
-            throw new Error('query option is required. You must specify your GraphQL document ' + 'in the query option.');
-        }
-        if (options.query.kind !== 'Document') {
-            throw new Error('You must wrap the query string in a "gql" tag.');
-        }
-        if (options.returnPartialData) {
-            throw new Error('returnPartialData option only supported on watchQuery.');
-        }
-        if (options.pollInterval) {
-            throw new Error('pollInterval option only supported on watchQuery.');
-        }
-        var requestId = this.idCounter;
-        return new Promise(function (resolve, reject) {
-            _this.addFetchQueryPromise(requestId, resolve, reject);
-            return _this.watchQuery(options, false).result().then(function (result) {
-                _this.removeFetchQueryPromise(requestId);
-                resolve(result);
-            }).catch(function (error) {
-                _this.removeFetchQueryPromise(requestId);
-                reject(error);
-            });
-        });
-    };
-    QueryManager.prototype.generateQueryId = function () {
-        var queryId = this.idCounter.toString();
-        this.idCounter++;
-        return queryId;
-    };
-    QueryManager.prototype.stopQueryInStore = function (queryId) {
-        this.queryStore.stopQuery(queryId);
-        this.invalidate(true, queryId);
-        this.broadcastQueries();
-    };
-    QueryManager.prototype.addQueryListener = function (queryId, listener) {
-        this.setQuery(queryId, function (_a) {
-            var _b = _a.listeners,
-                listeners = _b === void 0 ? [] : _b;
-            return {
-                listeners: listeners.concat([listener]),
-                invalidate: false
-            };
-        });
-    };
-    QueryManager.prototype.updateQueryWatch = function (queryId, document, options) {
-        var _this = this;
-        var cancel = this.getQuery(queryId).cancel;
-        if (cancel) cancel();
-        var previousResult = function () {
-            var previousResult = null;
-            var observableQuery = _this.getQuery(queryId).observableQuery;
-            if (observableQuery) {
-                var lastResult = observableQuery.getLastResult();
-                if (lastResult) {
-                    previousResult = lastResult.data;
-                }
-            }
-            return previousResult;
-        };
-        return this.dataStore.getCache().watch({
-            query: document,
-            variables: options.variables,
-            optimistic: true,
-            previousResult: previousResult,
-            callback: function (newData) {
-                _this.setQuery(queryId, function () {
-                    return { invalidated: true, newData: newData };
-                });
-            }
-        });
-    };
-    // Adds a promise to this.fetchQueryPromises for a given request ID.
-    QueryManager.prototype.addFetchQueryPromise = function (requestId, resolve, reject) {
-        this.fetchQueryPromises.set(requestId.toString(), {
-            resolve: resolve,
-            reject: reject
-        });
-    };
-    // Removes the promise in this.fetchQueryPromises for a particular request ID.
-    QueryManager.prototype.removeFetchQueryPromise = function (requestId) {
-        this.fetchQueryPromises.delete(requestId.toString());
-    };
-    // Adds an ObservableQuery to this.observableQueries and to this.observableQueriesByName.
-    QueryManager.prototype.addObservableQuery = function (queryId, observableQuery) {
-        this.setQuery(queryId, function () {
-            return { observableQuery: observableQuery };
-        });
-        // Insert the ObservableQuery into this.observableQueriesByName if the query has a name
-        var queryDef = (0, _apolloUtilities.getQueryDefinition)(observableQuery.options.query);
-        if (queryDef.name && queryDef.name.value) {
-            var queryName = queryDef.name.value;
-            // XXX we may we want to warn the user about query name conflicts in the future
-            this.queryIdsByName[queryName] = this.queryIdsByName[queryName] || [];
-            this.queryIdsByName[queryName].push(observableQuery.queryId);
-        }
-    };
-    QueryManager.prototype.removeObservableQuery = function (queryId) {
-        var _a = this.getQuery(queryId),
-            observableQuery = _a.observableQuery,
-            cancel = _a.cancel;
-        if (cancel) cancel();
-        if (!observableQuery) return;
-        var definition = (0, _apolloUtilities.getQueryDefinition)(observableQuery.options.query);
-        var queryName = definition.name ? definition.name.value : null;
-        this.setQuery(queryId, function () {
-            return { observableQuery: null };
-        });
-        if (queryName) {
-            this.queryIdsByName[queryName] = this.queryIdsByName[queryName].filter(function (val) {
-                return !(observableQuery.queryId === val);
-            });
-        }
-    };
-    QueryManager.prototype.clearStore = function () {
-        // Before we have sent the reset action to the store,
-        // we can no longer rely on the results returned by in-flight
-        // requests since these may depend on values that previously existed
-        // in the data portion of the store. So, we cancel the promises and observers
-        // that we have issued so far and not yet resolved (in the case of
-        // queries).
-        this.fetchQueryPromises.forEach(function (_a) {
-            var reject = _a.reject;
-            reject(new Error('Store reset while query was in flight(not completed in link chain)'));
-        });
-        var resetIds = [];
-        this.queries.forEach(function (_a, queryId) {
-            var observableQuery = _a.observableQuery;
-            if (observableQuery) resetIds.push(queryId);
-        });
-        this.queryStore.reset(resetIds);
-        this.mutationStore.reset();
-        // begin removing data from the store
-        var reset = this.dataStore.reset();
-        return reset;
-    };
-    QueryManager.prototype.resetStore = function () {
-        var _this = this;
-        // Similarly, we have to have to refetch each of the queries currently being
-        // observed. We refetch instead of error'ing on these since the assumption is that
-        // resetting the store doesn't eliminate the need for the queries currently being
-        // watched. If there is an existing query in flight when the store is reset,
-        // the promise for it will be rejected and its results will not be written to the
-        // store.
-        return this.clearStore().then(function () {
-            return _this.reFetchObservableQueries();
-        });
-    };
-    QueryManager.prototype.getObservableQueryPromises = function (includeStandby) {
-        var _this = this;
-        var observableQueryPromises = [];
-        this.queries.forEach(function (_a, queryId) {
-            var observableQuery = _a.observableQuery;
-            if (!observableQuery) return;
-            var fetchPolicy = observableQuery.options.fetchPolicy;
-            observableQuery.resetLastResults();
-            if (fetchPolicy !== 'cache-only' && (includeStandby || fetchPolicy !== 'standby')) {
-                observableQueryPromises.push(observableQuery.refetch());
-            }
-            _this.setQuery(queryId, function () {
-                return { newData: null };
-            });
-            _this.invalidate(true, queryId);
-        });
-        return observableQueryPromises;
-    };
-    QueryManager.prototype.reFetchObservableQueries = function (includeStandby) {
-        var observableQueryPromises = this.getObservableQueryPromises(includeStandby);
-        this.broadcastQueries();
-        return Promise.all(observableQueryPromises);
-    };
-    QueryManager.prototype.startQuery = function (queryId, options, listener) {
-        this.addQueryListener(queryId, listener);
-        this.fetchQuery(queryId, options)
-        // `fetchQuery` returns a Promise. In case of a failure it should be caucht or else the
-        // console will show an `Uncaught (in promise)` message. Ignore the error for now.
-        .catch(function () {
-            return undefined;
-        });
-        return queryId;
-    };
-    QueryManager.prototype.startGraphQLSubscription = function (options) {
-        var _this = this;
-        var query = options.query;
-        var cache = this.dataStore.getCache();
-        var transformedDoc = cache.transformDocument(query);
-        var variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)((0, _apolloUtilities.getOperationDefinition)(query)), options.variables);
-        var sub;
-        var observers = [];
-        return new _Observable.Observable(function (observer) {
-            observers.push(observer);
-            // If this is the first observer, actually initiate the network subscription
-            if (observers.length === 1) {
-                var handler = {
-                    next: function (result) {
-                        _this.dataStore.markSubscriptionResult(result, transformedDoc, variables);
-                        _this.broadcastQueries();
-                        // It's slightly awkward that the data for subscriptions doesn't come from the store.
-                        observers.forEach(function (obs) {
-                            // XXX I'd prefer a different way to handle errors for subscriptions
-                            if (obs.next) obs.next(result);
-                        });
-                    },
-                    error: function (error) {
-                        observers.forEach(function (obs) {
-                            if (obs.error) obs.error(error);
-                        });
-                    }
-                };
-                // TODO: Should subscriptions also accept a `context` option to pass
-                // through to links?
-                var operation = _this.buildOperationForLink(transformedDoc, variables);
-                sub = (0, _apolloLink.execute)(_this.link, operation).subscribe(handler);
-            }
-            return function () {
-                observers = observers.filter(function (obs) {
-                    return obs !== observer;
-                });
-                // If we removed the last observer, tear down the network subscription
-                if (observers.length === 0 && sub) {
-                    sub.unsubscribe();
-                }
-            };
-        });
-    };
-    QueryManager.prototype.stopQuery = function (queryId) {
-        this.stopQueryInStore(queryId);
-        this.removeQuery(queryId);
-    };
-    QueryManager.prototype.removeQuery = function (queryId) {
-        var subscriptions = this.getQuery(queryId).subscriptions;
-        // teardown all links
-        subscriptions.forEach(function (x) {
-            return x.unsubscribe();
-        });
-        this.queries.delete(queryId);
-    };
-    QueryManager.prototype.getCurrentQueryResult = function (observableQuery, optimistic) {
-        if (optimistic === void 0) {
-            optimistic = true;
-        }
-        var _a = observableQuery.options,
-            variables = _a.variables,
-            query = _a.query;
-        var lastResult = observableQuery.getLastResult();
-        var newData = this.getQuery(observableQuery.queryId).newData;
-        // XXX test this
-        if (newData) {
-            return (0, _apolloUtilities.maybeDeepFreeze)({ data: newData.result, partial: false });
-        } else {
-            try {
-                // the query is brand new, so we read from the store to see if anything is there
-                var data = this.dataStore.getCache().read({
-                    query: query,
-                    variables: variables,
-                    previousResult: lastResult ? lastResult.data : undefined,
-                    optimistic: optimistic
-                });
-                return (0, _apolloUtilities.maybeDeepFreeze)({ data: data, partial: false });
-            } catch (e) {
-                return (0, _apolloUtilities.maybeDeepFreeze)({ data: {}, partial: true });
-            }
-        }
-    };
-    QueryManager.prototype.getQueryWithPreviousResult = function (queryIdOrObservable) {
-        var observableQuery;
-        if (typeof queryIdOrObservable === 'string') {
-            var foundObserveableQuery = this.getQuery(queryIdOrObservable).observableQuery;
-            if (!foundObserveableQuery) {
-                throw new Error("ObservableQuery with this id doesn't exist: " + queryIdOrObservable);
-            }
-            observableQuery = foundObserveableQuery;
-        } else {
-            observableQuery = queryIdOrObservable;
-        }
-        var _a = observableQuery.options,
-            variables = _a.variables,
-            query = _a.query;
-        var data = this.getCurrentQueryResult(observableQuery, false).data;
-        return {
-            previousResult: data,
-            variables: variables,
-            document: query
-        };
-    };
-    QueryManager.prototype.broadcastQueries = function () {
-        var _this = this;
-        this.onBroadcast();
-        this.queries.forEach(function (info, id) {
-            if (!info.invalidated || !info.listeners) return;
-            info.listeners
-            // it's possible for the listener to be undefined if the query is being stopped
-            // See here for more detail: https://github.com/apollostack/apollo-client/issues/231
-            .filter(function (x) {
-                return !!x;
-            }).forEach(function (listener) {
-                listener(_this.queryStore.get(id), info.newData);
-            });
-        });
-    };
-    // Takes a request id, query id, a query document and information associated with the query
-    // and send it to the network interface. Returns
-    // a promise for the result associated with that request.
-    QueryManager.prototype.fetchRequest = function (_a) {
-        var _this = this;
-        var requestId = _a.requestId,
-            queryId = _a.queryId,
-            document = _a.document,
-            options = _a.options,
-            fetchMoreForQueryId = _a.fetchMoreForQueryId;
-        var variables = options.variables,
-            context = options.context,
-            _b = options.errorPolicy,
-            errorPolicy = _b === void 0 ? 'none' : _b,
-            fetchPolicy = options.fetchPolicy;
-        var operation = this.buildOperationForLink(document, variables, __assign({}, context, {
-            // TODO: Should this be included for all entry points via
-            // buildOperationForLink?
-            forceFetch: !this.queryDeduplication }));
-        var resultFromStore;
-        var errorsFromStore;
-        return new Promise(function (resolve, reject) {
-            _this.addFetchQueryPromise(requestId, resolve, reject);
-            var subscription = (0, _apolloLink.execute)(_this.deduplicator, operation).subscribe({
-                next: function (result) {
-                    // default the lastRequestId to 1
-                    var lastRequestId = _this.getQuery(queryId).lastRequestId;
-                    if (requestId >= (lastRequestId || 1)) {
-                        if (fetchPolicy !== 'no-cache') {
-                            try {
-                                _this.dataStore.markQueryResult(result, document, variables, fetchMoreForQueryId, errorPolicy === 'ignore' || errorPolicy === 'all');
-                            } catch (e) {
-                                reject(e);
-                                return;
-                            }
-                        } else {
-                            _this.setQuery(queryId, function () {
-                                return {
-                                    newData: { result: result.data, complete: true }
-                                };
-                            });
-                        }
-                        _this.queryStore.markQueryResult(queryId, result, fetchMoreForQueryId);
-                        _this.invalidate(true, queryId, fetchMoreForQueryId);
-                        _this.broadcastQueries();
-                    }
-                    if (result.errors && errorPolicy === 'none') {
-                        reject(new _ApolloError.ApolloError({
-                            graphQLErrors: result.errors
-                        }));
-                        return;
-                    } else if (errorPolicy === 'all') {
-                        errorsFromStore = result.errors;
-                    }
-                    if (fetchMoreForQueryId || fetchPolicy === 'no-cache') {
-                        // We don't write fetchMore results to the store because this would overwrite
-                        // the original result in case an @connection directive is used.
-                        resultFromStore = result.data;
-                    } else {
-                        try {
-                            // ensure result is combined with data already in store
-                            resultFromStore = _this.dataStore.getCache().read({
-                                variables: variables,
-                                query: document,
-                                optimistic: false
-                            });
-                            // this will throw an error if there are missing fields in
-                            // the results which can happen with errors from the server.
-                            // tslint:disable-next-line
-                        } catch (e) {}
-                    }
-                },
-                error: function (error) {
-                    _this.removeFetchQueryPromise(requestId);
-                    _this.setQuery(queryId, function (_a) {
-                        var subscriptions = _a.subscriptions;
-                        return {
-                            subscriptions: subscriptions.filter(function (x) {
-                                return x !== subscription;
-                            })
-                        };
-                    });
-                    reject(error);
-                },
-                complete: function () {
-                    _this.removeFetchQueryPromise(requestId);
-                    _this.setQuery(queryId, function (_a) {
-                        var subscriptions = _a.subscriptions;
-                        return {
-                            subscriptions: subscriptions.filter(function (x) {
-                                return x !== subscription;
-                            })
-                        };
-                    });
-                    resolve({
-                        data: resultFromStore,
-                        errors: errorsFromStore,
-                        loading: false,
-                        networkStatus: _networkStatus.NetworkStatus.ready,
-                        stale: false
-                    });
-                }
-            });
-            _this.setQuery(queryId, function (_a) {
-                var subscriptions = _a.subscriptions;
-                return {
-                    subscriptions: subscriptions.concat([subscription])
-                };
-            });
-        });
-    };
-    // Refetches a query given that query's name. Refetches
-    // all ObservableQuery instances associated with the query name.
-    QueryManager.prototype.refetchQueryByName = function (queryName) {
-        var _this = this;
-        var refetchedQueries = this.queryIdsByName[queryName];
-        // early return if the query named does not exist (not yet fetched)
-        // this used to warn but it may be inteneded behavoir to try and refetch
-        // un called queries because they could be on different routes
-        if (refetchedQueries === undefined) return;
-        return Promise.all(refetchedQueries.map(function (id) {
-            return _this.getQuery(id).observableQuery;
-        }).filter(function (x) {
-            return !!x;
-        }).map(function (x) {
-            return x.refetch();
-        }));
-    };
-    QueryManager.prototype.generateRequestId = function () {
-        var requestId = this.idCounter;
-        this.idCounter++;
-        return requestId;
-    };
-    QueryManager.prototype.getQuery = function (queryId) {
-        return this.queries.get(queryId) || __assign({}, defaultQueryInfo);
-    };
-    QueryManager.prototype.setQuery = function (queryId, updater) {
-        var prev = this.getQuery(queryId);
-        var newInfo = __assign({}, prev, updater(prev));
-        this.queries.set(queryId, newInfo);
-    };
-    QueryManager.prototype.invalidate = function (invalidated, queryId, fetchMoreForQueryId) {
-        if (queryId) this.setQuery(queryId, function () {
-            return { invalidated: invalidated };
-        });
-        if (fetchMoreForQueryId) {
-            this.setQuery(fetchMoreForQueryId, function () {
-                return { invalidated: invalidated };
-            });
-        }
-    };
-    QueryManager.prototype.buildOperationForLink = function (document, variables, extraContext) {
-        var cache = this.dataStore.getCache();
-        return {
-            query: cache.transformForLink ? cache.transformForLink(document) : document,
-            variables: variables,
-            operationName: (0, _apolloUtilities.getOperationName)(document) || undefined,
-            context: __assign({}, extraContext, { cache: cache,
-                // getting an entry's cache key is useful for cacheResolvers & state-link
-                getCacheKey: function (obj) {
-                    if (cache.config) {
-                        // on the link, we just want the id string, not the full id value from toIdValue
-                        return cache.config.dataIdFromObject(obj);
-                    } else {
-                        throw new Error('To use context.getCacheKey, you need to use a cache that has a configurable dataIdFromObject, like apollo-cache-inmemory.');
-                    }
-                } })
-        };
-    };
-    return QueryManager;
-}();
-exports.QueryManager = QueryManager;
-//# sourceMappingURL=QueryManager.js.map
-},{"apollo-link":70,"graphql/language/printer":153,"apollo-link-dedup":216,"apollo-utilities":167,"../scheduler/scheduler":213,"../errors/ApolloError":144,"../util/Observable":173,"../data/mutations":214,"../data/queries":215,"./ObservableQuery":141,"./networkStatus":142,"./types":143}],171:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.DataStore = undefined;
-
-var _apolloUtilities = require('apollo-utilities');
-
-var DataStore = /** @class */function () {
-    function DataStore(initialCache) {
-        this.cache = initialCache;
-    }
-    DataStore.prototype.getCache = function () {
-        return this.cache;
-    };
-    DataStore.prototype.markQueryResult = function (result, document, variables, fetchMoreForQueryId, ignoreErrors) {
-        if (ignoreErrors === void 0) {
-            ignoreErrors = false;
-        }
-        var writeWithErrors = !(0, _apolloUtilities.graphQLResultHasError)(result);
-        if (ignoreErrors && (0, _apolloUtilities.graphQLResultHasError)(result) && result.data) {
-            writeWithErrors = true;
-        }
-        if (!fetchMoreForQueryId && writeWithErrors) {
-            this.cache.write({
-                result: result.data,
-                dataId: 'ROOT_QUERY',
-                query: document,
-                variables: variables
-            });
-        }
-    };
-    DataStore.prototype.markSubscriptionResult = function (result, document, variables) {
-        // the subscription interface should handle not sending us results we no longer subscribe to.
-        // XXX I don't think we ever send in an object with errors, but we might in the future...
-        if (!(0, _apolloUtilities.graphQLResultHasError)(result)) {
-            this.cache.write({
-                result: result.data,
-                dataId: 'ROOT_SUBSCRIPTION',
-                query: document,
-                variables: variables
-            });
-        }
-    };
-    DataStore.prototype.markMutationInit = function (mutation) {
-        var _this = this;
-        if (mutation.optimisticResponse) {
-            var optimistic_1;
-            if (typeof mutation.optimisticResponse === 'function') {
-                optimistic_1 = mutation.optimisticResponse(mutation.variables);
-            } else {
-                optimistic_1 = mutation.optimisticResponse;
-            }
-            var changeFn_1 = function () {
-                _this.markMutationResult({
-                    mutationId: mutation.mutationId,
-                    result: { data: optimistic_1 },
-                    document: mutation.document,
-                    variables: mutation.variables,
-                    updateQueries: mutation.updateQueries,
-                    update: mutation.update
-                });
-            };
-            this.cache.recordOptimisticTransaction(function (c) {
-                var orig = _this.cache;
-                _this.cache = c;
-                try {
-                    changeFn_1();
-                } finally {
-                    _this.cache = orig;
-                }
-            }, mutation.mutationId);
-        }
-    };
-    DataStore.prototype.markMutationResult = function (mutation) {
-        var _this = this;
-        // Incorporate the result from this mutation into the store
-        if (!(0, _apolloUtilities.graphQLResultHasError)(mutation.result)) {
-            var cacheWrites_1 = [];
-            cacheWrites_1.push({
-                result: mutation.result.data,
-                dataId: 'ROOT_MUTATION',
-                query: mutation.document,
-                variables: mutation.variables
-            });
-            if (mutation.updateQueries) {
-                Object.keys(mutation.updateQueries).filter(function (id) {
-                    return mutation.updateQueries[id];
-                }).forEach(function (queryId) {
-                    var _a = mutation.updateQueries[queryId],
-                        query = _a.query,
-                        updater = _a.updater;
-                    // Read the current query result from the store.
-                    var _b = _this.cache.diff({
-                        query: query.document,
-                        variables: query.variables,
-                        returnPartialData: true,
-                        optimistic: false
-                    }),
-                        currentQueryResult = _b.result,
-                        complete = _b.complete;
-                    if (!complete) {
-                        return;
-                    }
-                    // Run our reducer using the current query result and the mutation result.
-                    var nextQueryResult = (0, _apolloUtilities.tryFunctionOrLogError)(function () {
-                        return updater(currentQueryResult, {
-                            mutationResult: mutation.result,
-                            queryName: (0, _apolloUtilities.getOperationName)(query.document) || undefined,
-                            queryVariables: query.variables
-                        });
-                    });
-                    // Write the modified result back into the store if we got a new result.
-                    if (nextQueryResult) {
-                        cacheWrites_1.push({
-                            result: nextQueryResult,
-                            dataId: 'ROOT_QUERY',
-                            query: query.document,
-                            variables: query.variables
-                        });
-                    }
-                });
-            }
-            this.cache.performTransaction(function (c) {
-                cacheWrites_1.forEach(function (write) {
-                    return c.write(write);
-                });
-            });
-            // If the mutation has some writes associated with it then we need to
-            // apply those writes to the store by running this reducer again with a
-            // write action.
-            var update_1 = mutation.update;
-            if (update_1) {
-                this.cache.performTransaction(function (c) {
-                    (0, _apolloUtilities.tryFunctionOrLogError)(function () {
-                        return update_1(c, mutation.result);
-                    });
-                });
-            }
-        }
-    };
-    DataStore.prototype.markMutationComplete = function (_a) {
-        var mutationId = _a.mutationId,
-            optimisticResponse = _a.optimisticResponse;
-        if (!optimisticResponse) return;
-        this.cache.removeOptimistic(mutationId);
-    };
-    DataStore.prototype.markUpdateQueryResult = function (document, variables, newResult) {
-        this.cache.write({
-            result: newResult,
-            dataId: 'ROOT_QUERY',
-            variables: variables,
-            query: document
-        });
-    };
-    DataStore.prototype.reset = function () {
-        return this.cache.reset();
-    };
-    return DataStore;
-}();
-exports.DataStore = DataStore;
-//# sourceMappingURL=store.js.map
-},{"apollo-utilities":167}],169:[function(require,module,exports) {
-exports.version = "2.3.5"
+exports.default = objectToString;
 },{}],140:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _apolloLink = require('apollo-link');
-
-var _apolloUtilities = require('apollo-utilities');
-
-var _QueryManager = require('./core/QueryManager');
-
-var _store = require('./data/store');
-
-var _version = require('./version');
-
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var hasSuggestedDevtools = false;
-var supportedDirectives = new _apolloLink.ApolloLink(function (operation, forward) {
-    operation.query = (0, _apolloUtilities.removeConnectionDirectiveFromDocument)(operation.query);
-    return forward(operation);
-});
-/**
- * This is the primary Apollo Client class. It is used to send GraphQL documents (i.e. queries
- * and mutations) to a GraphQL spec-compliant server over a {@link NetworkInterface} instance,
- * receive results from the server and cache the results in a store. It also delivers updates
- * to GraphQL queries through {@link Observable} instances.
- */
-var ApolloClient = /** @class */function () {
-    /**
-     * Constructs an instance of {@link ApolloClient}.
-     *
-     * @param link The {@link ApolloLink} over which GraphQL documents will be resolved into a response.
-     *
-     * @param cache The initial cache to use in the data store.
-     *
-     * @param ssrMode Determines whether this is being run in Server Side Rendering (SSR) mode.
-     *
-     * @param ssrForceFetchDelay Determines the time interval before we force fetch queries for a
-     * server side render.
-     *
-     * @param queryDeduplication If set to false, a query will still be sent to the server even if a query
-     * with identical parameters (query, variables, operationName) is already in flight.
-     *
-     */
-    function ApolloClient(options) {
-        var _this = this;
-        this.defaultOptions = {};
-        this.resetStoreCallbacks = [];
-        var link = options.link,
-            cache = options.cache,
-            _a = options.ssrMode,
-            ssrMode = _a === void 0 ? false : _a,
-            _b = options.ssrForceFetchDelay,
-            ssrForceFetchDelay = _b === void 0 ? 0 : _b,
-            connectToDevTools = options.connectToDevTools,
-            _c = options.queryDeduplication,
-            queryDeduplication = _c === void 0 ? true : _c,
-            defaultOptions = options.defaultOptions;
-        if (!link || !cache) {
-            throw new Error("\n        In order to initialize Apollo Client, you must specify link & cache properties on the config object.\n        This is part of the required upgrade when migrating from Apollo Client 1.0 to Apollo Client 2.0.\n        For more information, please visit:\n          https://www.apollographql.com/docs/react/basics/setup.html\n        to help you get started.\n      ");
-        }
-        // remove apollo-client supported directives
-        this.link = supportedDirectives.concat(link);
-        this.cache = cache;
-        this.store = new _store.DataStore(cache);
-        this.disableNetworkFetches = ssrMode || ssrForceFetchDelay > 0;
-        this.queryDeduplication = queryDeduplication;
-        this.ssrMode = ssrMode;
-        this.defaultOptions = defaultOptions || {};
-        if (ssrForceFetchDelay) {
-            setTimeout(function () {
-                return _this.disableNetworkFetches = false;
-            }, ssrForceFetchDelay);
-        }
-        this.watchQuery = this.watchQuery.bind(this);
-        this.query = this.query.bind(this);
-        this.mutate = this.mutate.bind(this);
-        this.resetStore = this.resetStore.bind(this);
-        this.reFetchObservableQueries = this.reFetchObservableQueries.bind(this);
-        // Attach the client instance to window to let us be found by chrome devtools, but only in
-        // development mode
-        var defaultConnectToDevTools = !(0, _apolloUtilities.isProduction)() && typeof window !== 'undefined' && !window.__APOLLO_CLIENT__;
-        if (typeof connectToDevTools === 'undefined' ? defaultConnectToDevTools : connectToDevTools && typeof window !== 'undefined') {
-            window.__APOLLO_CLIENT__ = this;
-        }
-        /**
-         * Suggest installing the devtools for developers who don't have them
-         */
-        if (!hasSuggestedDevtools && !(0, _apolloUtilities.isProduction)()) {
-            hasSuggestedDevtools = true;
-            if (typeof window !== 'undefined' && window.document && window.top === window.self) {
-                // First check if devtools is not installed
-                if (typeof window.__APOLLO_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
-                    // Only for Chrome
-                    if (window.navigator && window.navigator.userAgent.indexOf('Chrome') > -1) {
-                        // tslint:disable-next-line
-                        console.debug('Download the Apollo DevTools ' + 'for a better development experience: ' + 'https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm');
-                    }
-                }
-            }
-        }
-        this.version = _version.version;
-    }
-    /**
-     * This watches the results of the query according to the options specified and
-     * returns an {@link ObservableQuery}. We can subscribe to this {@link ObservableQuery} and
-     * receive updated results through a GraphQL observer.
-     * <p /><p />
-     * Note that this method is not an implementation of GraphQL subscriptions. Rather,
-     * it uses Apollo's store in order to reactively deliver updates to your query results.
-     * <p /><p />
-     * For example, suppose you call watchQuery on a GraphQL query that fetches an person's
-     * first name and last name and this person has a particular object identifer, provided by
-     * dataIdFromObject. Later, a different query fetches that same person's
-     * first and last name and his/her first name has now changed. Then, any observers associated
-     * with the results of the first query will be updated with a new result object.
-     * <p /><p />
-     * See [here](https://medium.com/apollo-stack/the-concepts-of-graphql-bc68bd819be3#.3mb0cbcmc) for
-     * a description of store reactivity.
-     *
-     */
-    ApolloClient.prototype.watchQuery = function (options) {
-        this.initQueryManager();
-        if (this.defaultOptions.watchQuery) {
-            options = __assign({}, this.defaultOptions.watchQuery, options);
-        }
-        // XXX Overwriting options is probably not the best way to do this long term...
-        if (this.disableNetworkFetches && (options.fetchPolicy === 'network-only' || options.fetchPolicy === 'cache-and-network')) {
-            options = __assign({}, options, { fetchPolicy: 'cache-first' });
-        }
-        return this.queryManager.watchQuery(options);
-    };
-    /**
-     * This resolves a single query according to the options specified and
-     * returns a {@link Promise} which is either resolved with the resulting data
-     * or rejected with an error.
-     *
-     * @param options An object of type {@link QueryOptions} that allows us to
-     * describe how this query should be treated e.g. whether it should hit the
-     * server at all or just resolve from the cache, etc.
-     */
-    ApolloClient.prototype.query = function (options) {
-        this.initQueryManager();
-        if (this.defaultOptions.query) {
-            options = __assign({}, this.defaultOptions.query, options);
-        }
-        if (options.fetchPolicy === 'cache-and-network') {
-            throw new Error('cache-and-network fetchPolicy can only be used with watchQuery');
-        }
-        // XXX Overwriting options is probably not the best way to do this long
-        // term...
-        if (this.disableNetworkFetches && options.fetchPolicy === 'network-only') {
-            options = __assign({}, options, { fetchPolicy: 'cache-first' });
-        }
-        return this.queryManager.query(options);
-    };
-    /**
-     * This resolves a single mutation according to the options specified and returns a
-     * {@link Promise} which is either resolved with the resulting data or rejected with an
-     * error.
-     *
-     * It takes options as an object with the following keys and values:
-     */
-    ApolloClient.prototype.mutate = function (options) {
-        this.initQueryManager();
-        if (this.defaultOptions.mutate) {
-            options = __assign({}, this.defaultOptions.mutate, options);
-        }
-        return this.queryManager.mutate(options);
-    };
-    /**
-     * This subscribes to a graphql subscription according to the options specified and returns an
-     * {@link Observable} which either emits received data or an error.
-     */
-    ApolloClient.prototype.subscribe = function (options) {
-        this.initQueryManager();
-        return this.queryManager.startGraphQLSubscription(options);
-    };
-    /**
-     * Tries to read some data from the store in the shape of the provided
-     * GraphQL query without making a network request. This method will start at
-     * the root query. To start at a specific id returned by `dataIdFromObject`
-     * use `readFragment`.
-     */
-    ApolloClient.prototype.readQuery = function (options) {
-        return this.initProxy().readQuery(options);
-    };
-    /**
-     * Tries to read some data from the store in the shape of the provided
-     * GraphQL fragment without making a network request. This method will read a
-     * GraphQL fragment from any arbitrary id that is currently cached, unlike
-     * `readQuery` which will only read from the root query.
-     *
-     * You must pass in a GraphQL document with a single fragment or a document
-     * with multiple fragments that represent what you are reading. If you pass
-     * in a document with multiple fragments then you must also specify a
-     * `fragmentName`.
-     */
-    ApolloClient.prototype.readFragment = function (options) {
-        return this.initProxy().readFragment(options);
-    };
-    /**
-     * Writes some data in the shape of the provided GraphQL query directly to
-     * the store. This method will start at the root query. To start at a a
-     * specific id returned by `dataIdFromObject` then use `writeFragment`.
-     */
-    ApolloClient.prototype.writeQuery = function (options) {
-        var result = this.initProxy().writeQuery(options);
-        this.queryManager.broadcastQueries();
-        return result;
-    };
-    /**
-     * Writes some data in the shape of the provided GraphQL fragment directly to
-     * the store. This method will write to a GraphQL fragment from any arbitrary
-     * id that is currently cached, unlike `writeQuery` which will only write
-     * from the root query.
-     *
-     * You must pass in a GraphQL document with a single fragment or a document
-     * with multiple fragments that represent what you are writing. If you pass
-     * in a document with multiple fragments then you must also specify a
-     * `fragmentName`.
-     */
-    ApolloClient.prototype.writeFragment = function (options) {
-        var result = this.initProxy().writeFragment(options);
-        this.queryManager.broadcastQueries();
-        return result;
-    };
-    /**
-     * Sugar for writeQuery & writeFragment
-     * This method will construct a query from the data object passed in.
-     * If no id is supplied, writeData will write the data to the root.
-     * If an id is supplied, writeData will write a fragment to the object
-     * specified by the id in the store.
-     *
-     * Since you aren't passing in a query to check the shape of the data,
-     * you must pass in an object that conforms to the shape of valid GraphQL data.
-     */
-    ApolloClient.prototype.writeData = function (options) {
-        var result = this.initProxy().writeData(options);
-        this.queryManager.broadcastQueries();
-        return result;
-    };
-    ApolloClient.prototype.__actionHookForDevTools = function (cb) {
-        this.devToolsHookCb = cb;
-    };
-    ApolloClient.prototype.__requestRaw = function (payload) {
-        return (0, _apolloLink.execute)(this.link, payload);
-    };
-    /**
-     * This initializes the query manager that tracks queries and the cache
-     */
-    ApolloClient.prototype.initQueryManager = function () {
-        var _this = this;
-        if (this.queryManager) return;
-        this.queryManager = new _QueryManager.QueryManager({
-            link: this.link,
-            store: this.store,
-            queryDeduplication: this.queryDeduplication,
-            ssrMode: this.ssrMode,
-            onBroadcast: function () {
-                if (_this.devToolsHookCb) {
-                    _this.devToolsHookCb({
-                        action: {},
-                        state: {
-                            queries: _this.queryManager.queryStore.getStore(),
-                            mutations: _this.queryManager.mutationStore.getStore()
-                        },
-                        dataWithOptimisticResults: _this.cache.extract(true)
-                    });
-                }
-            }
-        });
-    };
-    /**
-     * Resets your entire store by clearing out your cache and then re-executing
-     * all of your active queries. This makes it so that you may guarantee that
-     * there is no data left in your store from a time before you called this
-     * method.
-     *
-     * `resetStore()` is useful when your user just logged out. You’ve removed the
-     * user session, and you now want to make sure that any references to data you
-     * might have fetched while the user session was active is gone.
-     *
-     * It is important to remember that `resetStore()` *will* refetch any active
-     * queries. This means that any components that might be mounted will execute
-     * their queries again using your network interface. If you do not want to
-     * re-execute any queries then you should make sure to stop watching any
-     * active queries.
-     */
-    ApolloClient.prototype.resetStore = function () {
-        var _this = this;
-        return Promise.resolve().then(function () {
-            return _this.queryManager ? _this.queryManager.clearStore() : Promise.resolve(null);
-        }).then(function () {
-            return Promise.all(_this.resetStoreCallbacks.map(function (fn) {
-                return fn();
-            }));
-        }).then(function () {
-            return _this.queryManager && _this.queryManager.reFetchObservableQueries ? _this.queryManager.reFetchObservableQueries() : Promise.resolve(null);
-        });
-    };
-    /**
-     * Allows callbacks to be registered that are executed with the store is reset.
-     * onResetStore returns an unsubscribe function for removing your registered callbacks.
-     */
-    ApolloClient.prototype.onResetStore = function (cb) {
-        var _this = this;
-        this.resetStoreCallbacks.push(cb);
-        return function () {
-            _this.resetStoreCallbacks = _this.resetStoreCallbacks.filter(function (c) {
-                return c !== cb;
-            });
-        };
-    };
-    /**
-     * Refetches all of your active queries.
-     *
-     * `reFetchObservableQueries()` is useful if you want to bring the client back to proper state in case of a network outage
-     *
-     * It is important to remember that `reFetchObservableQueries()` *will* refetch any active
-     * queries. This means that any components that might be mounted will execute
-     * their queries again using your network interface. If you do not want to
-     * re-execute any queries then you should make sure to stop watching any
-     * active queries.
-     * Takes optional parameter `includeStandby` which will include queries in standby-mode when refetching.
-     */
-    ApolloClient.prototype.reFetchObservableQueries = function (includeStandby) {
-        return this.queryManager ? this.queryManager.reFetchObservableQueries(includeStandby) : Promise.resolve(null);
-    };
-    /**
-     * Exposes the cache's complete state, in a serializable format for later restoration.
-     */
-    ApolloClient.prototype.extract = function (optimistic) {
-        return this.initProxy().extract(optimistic);
-    };
-    /**
-     * Replaces existing state in the cache (if any) with the values expressed by
-     * `serializedState`.
-     *
-     * Called when hydrating a cache (server side rendering, or offline storage),
-     * and also (potentially) during hot reloads.
-     */
-    ApolloClient.prototype.restore = function (serializedState) {
-        return this.initProxy().restore(serializedState);
-    };
-    /**
-     * Initializes a data proxy for this client instance if one does not already
-     * exist and returns either a previously initialized proxy instance or the
-     * newly initialized instance.
-     */
-    ApolloClient.prototype.initProxy = function () {
-        if (!this.proxy) {
-            this.initQueryManager();
-            this.proxy = this.cache;
-        }
-        return this.proxy;
-    };
-    return ApolloClient;
-}();
-exports.default = ApolloClient;
-//# sourceMappingURL=ApolloClient.js.map
-},{"apollo-link":70,"apollo-utilities":167,"./core/QueryManager":170,"./data/store":171,"./version":169}],69:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ApolloClient = exports.ApolloError = exports.NetworkStatus = exports.ObservableQuery = exports.printAST = undefined;
 
-var _printer = require('graphql/language/printer');
+var _Symbol = require('./_Symbol.js');
 
-Object.defineProperty(exports, 'printAST', {
-  enumerable: true,
-  get: function () {
-    return _printer.print;
-  }
-});
+var _Symbol2 = _interopRequireDefault(_Symbol);
 
-var _ObservableQuery = require('./core/ObservableQuery');
+var _getRawTag = require('./_getRawTag.js');
 
-Object.defineProperty(exports, 'ObservableQuery', {
-  enumerable: true,
-  get: function () {
-    return _ObservableQuery.ObservableQuery;
-  }
-});
+var _getRawTag2 = _interopRequireDefault(_getRawTag);
 
-var _networkStatus = require('./core/networkStatus');
+var _objectToString = require('./_objectToString.js');
 
-Object.defineProperty(exports, 'NetworkStatus', {
-  enumerable: true,
-  get: function () {
-    return _networkStatus.NetworkStatus;
-  }
-});
-
-var _types = require('./core/types');
-
-Object.keys(_types).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _types[key];
-    }
-  });
-});
-
-var _ApolloError = require('./errors/ApolloError');
-
-Object.defineProperty(exports, 'ApolloError', {
-  enumerable: true,
-  get: function () {
-    return _ApolloError.ApolloError;
-  }
-});
-
-var _ApolloClient = require('./ApolloClient');
-
-var _ApolloClient2 = _interopRequireDefault(_ApolloClient);
+var _objectToString2 = _interopRequireDefault(_objectToString);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// export the client as both default and named
-exports.ApolloClient = _ApolloClient2.default;
-exports.default = _ApolloClient2.default;
-//# sourceMappingURL=index.js.map
-},{"graphql/language/printer":153,"./core/ObservableQuery":141,"./core/networkStatus":142,"./core/types":143,"./errors/ApolloError":144,"./ApolloClient":140}],210:[function(require,module,exports) {
-'use strict';
+/** `Object#toString` result references. */
+var nullTag = '[object Null]',
+    undefinedTag = '[object Undefined]';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.queryFromPojo = queryFromPojo;
-exports.fragmentFromPojo = fragmentFromPojo;
-function queryFromPojo(obj) {
-    var op = {
-        kind: 'OperationDefinition',
-        operation: 'query',
-        name: {
-            kind: 'Name',
-            value: 'GeneratedClientQuery'
-        },
-        selectionSet: selectionSetFromObj(obj)
-    };
-    var out = {
-        kind: 'Document',
-        definitions: [op]
-    };
-    return out;
+/** Built-in value references. */
+var symToStringTag = _Symbol2.default ? _Symbol2.default.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return symToStringTag && symToStringTag in Object(value) ? (0, _getRawTag2.default)(value) : (0, _objectToString2.default)(value);
 }
-function fragmentFromPojo(obj, typename) {
-    var frag = {
-        kind: 'FragmentDefinition',
-        typeCondition: {
-            kind: 'NamedType',
-            name: {
-                kind: 'Name',
-                value: typename || '__FakeType'
-            }
-        },
-        name: {
-            kind: 'Name',
-            value: 'GeneratedClientQuery'
-        },
-        selectionSet: selectionSetFromObj(obj)
-    };
-    var out = {
-        kind: 'Document',
-        definitions: [frag]
-    };
-    return out;
-}
-function selectionSetFromObj(obj) {
-    if (typeof obj === 'number' || typeof obj === 'boolean' || typeof obj === 'string' || typeof obj === 'undefined' || obj === null) {
-        // No selection set here
-        return null;
-    }
-    if (Array.isArray(obj)) {
-        // GraphQL queries don't include arrays
-        return selectionSetFromObj(obj[0]);
-    }
-    // Now we know it's an object
-    var selections = [];
-    Object.keys(obj).forEach(function (key) {
-        var field = {
-            kind: 'Field',
-            name: {
-                kind: 'Name',
-                value: key
-            }
-        };
-        // Recurse
-        var nestedSelSet = selectionSetFromObj(obj[key]);
-        if (nestedSelSet) {
-            field.selectionSet = nestedSelSet;
-        }
-        selections.push(field);
-    });
-    var selectionSet = {
-        kind: 'SelectionSet',
-        selections: selections
-    };
-    return selectionSet;
-}
-var justTypenameQuery = exports.justTypenameQuery = {
-    kind: 'Document',
-    definitions: [{
-        kind: 'OperationDefinition',
-        operation: 'query',
-        name: null,
-        variableDefinitions: null,
-        directives: [],
-        selectionSet: {
-            kind: 'SelectionSet',
-            selections: [{
-                kind: 'Field',
-                alias: null,
-                name: {
-                    kind: 'Name',
-                    value: '__typename'
-                },
-                arguments: [],
-                directives: [],
-                selectionSet: null
-            }]
-        }
-    }]
-};
-//# sourceMappingURL=utils.js.map
-},{}],202:[function(require,module,exports) {
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ApolloCache = undefined;
-
-var _apolloUtilities = require('apollo-utilities');
-
-var _utils = require('./utils');
-
-var ApolloCache = /** @class */function () {
-    function ApolloCache() {}
-    // optional API
-    ApolloCache.prototype.transformDocument = function (document) {
-        return document;
-    };
-    // experimental
-    ApolloCache.prototype.transformForLink = function (document) {
-        return document;
-    };
-    // DataProxy API
-    /**
-     *
-     * @param options
-     * @param optimistic
-     */
-    ApolloCache.prototype.readQuery = function (options, optimistic) {
-        if (optimistic === void 0) {
-            optimistic = false;
-        }
-        return this.read({
-            query: options.query,
-            variables: options.variables,
-            optimistic: optimistic
-        });
-    };
-    ApolloCache.prototype.readFragment = function (options, optimistic) {
-        if (optimistic === void 0) {
-            optimistic = false;
-        }
-        return this.read({
-            query: (0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName),
-            variables: options.variables,
-            rootId: options.id,
-            optimistic: optimistic
-        });
-    };
-    ApolloCache.prototype.writeQuery = function (options) {
-        this.write({
-            dataId: 'ROOT_QUERY',
-            result: options.data,
-            query: options.query,
-            variables: options.variables
-        });
-    };
-    ApolloCache.prototype.writeFragment = function (options) {
-        this.write({
-            dataId: options.id,
-            result: options.data,
-            variables: options.variables,
-            query: (0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)
-        });
-    };
-    ApolloCache.prototype.writeData = function (_a) {
-        var id = _a.id,
-            data = _a.data;
-        if (typeof id !== 'undefined') {
-            var typenameResult = null;
-            // Since we can't use fragments without having a typename in the store,
-            // we need to make sure we have one.
-            // To avoid overwriting an existing typename, we need to read it out first
-            // and generate a fake one if none exists.
-            try {
-                typenameResult = this.read({
-                    rootId: id,
-                    optimistic: false,
-                    query: _utils.justTypenameQuery
-                });
-            } catch (e) {}
-            // Do nothing, since an error just means no typename exists
-
-            // tslint:disable-next-line
-            var __typename = typenameResult && typenameResult.__typename || '__ClientData';
-            // Add a type here to satisfy the inmemory cache
-            var dataToWrite = Object.assign({ __typename: __typename }, data);
-            this.writeFragment({
-                id: id,
-                fragment: (0, _utils.fragmentFromPojo)(dataToWrite, __typename),
-                data: dataToWrite
-            });
-        } else {
-            this.writeQuery({ query: (0, _utils.queryFromPojo)(data), data: data });
-        }
-    };
-    return ApolloCache;
-}();
-exports.ApolloCache = ApolloCache;
-//# sourceMappingURL=cache.js.map
-},{"apollo-utilities":167,"./utils":210}],211:[function(require,module,exports) {
+exports.default = baseGetTag;
+},{"./_Symbol.js":168,"./_getRawTag.js":169,"./_objectToString.js":170}],137:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var Cache = exports.Cache = undefined;
-(function (Cache) {})(Cache || (exports.Cache = Cache = {}));
-//# sourceMappingURL=Cache.js.map
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+exports.default = isArray;
+},{}],141:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+exports.default = isObjectLike;
+},{}],116:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _isArray = require('./isArray.js');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var stringTag = '[object String]';
+
+/**
+ * Checks if `value` is classified as a `String` primitive or object.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a string, else `false`.
+ * @example
+ *
+ * _.isString('abc');
+ * // => true
+ *
+ * _.isString(1);
+ * // => false
+ */
+function isString(value) {
+  return typeof value == 'string' || !(0, _isArray2.default)(value) && (0, _isObjectLike2.default)(value) && (0, _baseGetTag2.default)(value) == stringTag;
+}
+
+exports.default = isString;
+},{"./_baseGetTag.js":140,"./isArray.js":137,"./isObjectLike.js":141}],142:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+exports.default = isObject;
+},{}],117:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _isObject = require('./isObject.js');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var asyncTag = '[object AsyncFunction]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    proxyTag = '[object Proxy]';
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!(0, _isObject2.default)(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = (0, _baseGetTag2.default)(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+exports.default = isFunction;
+},{"./_baseGetTag.js":140,"./isObject.js":142}],148:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = typeof Ctor == 'function' && Ctor.prototype || objectProto;
+
+  return value === proto;
+}
+
+exports.default = isPrototype;
+},{}],191:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function (arg) {
+    return func(transform(arg));
+  };
+}
+
+exports.default = overArg;
+},{}],161:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _overArg = require('./_overArg.js');
+
+var _overArg2 = _interopRequireDefault(_overArg);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = (0, _overArg2.default)(Object.keys, Object);
+
+exports.default = nativeKeys;
+},{"./_overArg.js":191}],143:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isPrototype = require('./_isPrototype.js');
+
+var _isPrototype2 = _interopRequireDefault(_isPrototype);
+
+var _nativeKeys = require('./_nativeKeys.js');
+
+var _nativeKeys2 = _interopRequireDefault(_nativeKeys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!(0, _isPrototype2.default)(object)) {
+    return (0, _nativeKeys2.default)(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+exports.default = baseKeys;
+},{"./_isPrototype.js":148,"./_nativeKeys.js":161}],242:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = _root2.default['__core-js_shared__'];
+
+exports.default = coreJsData;
+},{"./_root.js":174}],231:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _coreJsData = require('./_coreJsData.js');
+
+var _coreJsData2 = _interopRequireDefault(_coreJsData);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = function () {
+  var uid = /[^.]+$/.exec(_coreJsData2.default && _coreJsData2.default.keys && _coreJsData2.default.keys.IE_PROTO || '');
+  return uid ? 'Symbol(src)_1.' + uid : '';
+}();
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && maskSrcKey in func;
+}
+
+exports.default = isMasked;
+},{"./_coreJsData.js":242}],167:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used for built-in method references. */
+var funcProto = Function.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return func + '';
+    } catch (e) {}
+  }
+  return '';
+}
+
+exports.default = toSource;
+},{}],198:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isFunction = require('./isFunction.js');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isMasked = require('./_isMasked.js');
+
+var _isMasked2 = _interopRequireDefault(_isMasked);
+
+var _isObject = require('./isObject.js');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+var _toSource = require('./_toSource.js');
+
+var _toSource2 = _interopRequireDefault(_toSource);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!(0, _isObject2.default)(value) || (0, _isMasked2.default)(value)) {
+    return false;
+  }
+  var pattern = (0, _isFunction2.default)(value) ? reIsNative : reIsHostCtor;
+  return pattern.test((0, _toSource2.default)(value));
+}
+
+exports.default = baseIsNative;
+},{"./isFunction.js":117,"./_isMasked.js":231,"./isObject.js":142,"./_toSource.js":167}],199:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+exports.default = getValue;
+},{}],192:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseIsNative = require('./_baseIsNative.js');
+
+var _baseIsNative2 = _interopRequireDefault(_baseIsNative);
+
+var _getValue = require('./_getValue.js');
+
+var _getValue2 = _interopRequireDefault(_getValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = (0, _getValue2.default)(object, key);
+  return (0, _baseIsNative2.default)(value) ? value : undefined;
+}
+
+exports.default = getNative;
+},{"./_baseIsNative.js":198,"./_getValue.js":199}],162:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references that are verified to be native. */
+var DataView = (0, _getNative2.default)(_root2.default, 'DataView');
+
+exports.default = DataView;
+},{"./_getNative.js":192,"./_root.js":174}],163:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references that are verified to be native. */
+var Map = (0, _getNative2.default)(_root2.default, 'Map');
+
+exports.default = Map;
+},{"./_getNative.js":192,"./_root.js":174}],164:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references that are verified to be native. */
+var Promise = (0, _getNative2.default)(_root2.default, 'Promise');
+
+exports.default = Promise;
+},{"./_getNative.js":192,"./_root.js":174}],165:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references that are verified to be native. */
+var Set = (0, _getNative2.default)(_root2.default, 'Set');
+
+exports.default = Set;
+},{"./_getNative.js":192,"./_root.js":174}],166:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references that are verified to be native. */
+var WeakMap = (0, _getNative2.default)(_root2.default, 'WeakMap');
+
+exports.default = WeakMap;
+},{"./_getNative.js":192,"./_root.js":174}],144:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _DataView = require('./_DataView.js');
+
+var _DataView2 = _interopRequireDefault(_DataView);
+
+var _Map = require('./_Map.js');
+
+var _Map2 = _interopRequireDefault(_Map);
+
+var _Promise = require('./_Promise.js');
+
+var _Promise2 = _interopRequireDefault(_Promise);
+
+var _Set = require('./_Set.js');
+
+var _Set2 = _interopRequireDefault(_Set);
+
+var _WeakMap = require('./_WeakMap.js');
+
+var _WeakMap2 = _interopRequireDefault(_WeakMap);
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _toSource = require('./_toSource.js');
+
+var _toSource2 = _interopRequireDefault(_toSource);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    setTag = '[object Set]',
+    weakMapTag = '[object WeakMap]';
+
+var dataViewTag = '[object DataView]';
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = (0, _toSource2.default)(_DataView2.default),
+    mapCtorString = (0, _toSource2.default)(_Map2.default),
+    promiseCtorString = (0, _toSource2.default)(_Promise2.default),
+    setCtorString = (0, _toSource2.default)(_Set2.default),
+    weakMapCtorString = (0, _toSource2.default)(_WeakMap2.default);
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = _baseGetTag2.default;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if (_DataView2.default && getTag(new _DataView2.default(new ArrayBuffer(1))) != dataViewTag || _Map2.default && getTag(new _Map2.default()) != mapTag || _Promise2.default && getTag(_Promise2.default.resolve()) != promiseTag || _Set2.default && getTag(new _Set2.default()) != setTag || _WeakMap2.default && getTag(new _WeakMap2.default()) != weakMapTag) {
+    getTag = function (value) {
+        var result = (0, _baseGetTag2.default)(value),
+            Ctor = result == objectTag ? value.constructor : undefined,
+            ctorString = Ctor ? (0, _toSource2.default)(Ctor) : '';
+
+        if (ctorString) {
+            switch (ctorString) {
+                case dataViewCtorString:
+                    return dataViewTag;
+                case mapCtorString:
+                    return mapTag;
+                case promiseCtorString:
+                    return promiseTag;
+                case setCtorString:
+                    return setTag;
+                case weakMapCtorString:
+                    return weakMapTag;
+            }
+        }
+        return result;
+    };
+}
+
+exports.default = getTag;
+},{"./_DataView.js":162,"./_Map.js":163,"./_Promise.js":164,"./_Set.js":165,"./_WeakMap.js":166,"./_baseGetTag.js":140,"./_toSource.js":167}],171:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]';
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return (0, _isObjectLike2.default)(value) && (0, _baseGetTag2.default)(value) == argsTag;
+}
+
+exports.default = baseIsArguments;
+},{"./_baseGetTag.js":140,"./isObjectLike.js":141}],145:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseIsArguments = require('./_baseIsArguments.js');
+
+var _baseIsArguments2 = _interopRequireDefault(_baseIsArguments);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = (0, _baseIsArguments2.default)(function () {
+  return arguments;
+}()) ? _baseIsArguments2.default : function (value) {
+  return (0, _isObjectLike2.default)(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+};
+
+exports.default = isArguments;
+},{"./_baseIsArguments.js":171,"./isObjectLike.js":141}],172:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+exports.default = isLength;
+},{}],146:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isFunction = require('./isFunction.js');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isLength = require('./isLength.js');
+
+var _isLength2 = _interopRequireDefault(_isLength);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && (0, _isLength2.default)(value.length) && !(0, _isFunction2.default)(value);
+}
+
+exports.default = isArrayLike;
+},{"./isFunction.js":117,"./isLength.js":172}],175:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+exports.default = stubFalse;
+},{}],147:[function(require,module,exports) {
+
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+var _stubFalse = require('./stubFalse.js');
+
+var _stubFalse2 = _interopRequireDefault(_stubFalse);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Built-in value references. */
+var Buffer = moduleExports ? _root2.default.Buffer : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || _stubFalse2.default;
+
+exports.default = isBuffer;
+},{"./_root.js":174,"./stubFalse.js":175}],178:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _isLength = require('./isLength.js');
+
+var _isLength2 = _interopRequireDefault(_isLength);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+    return (0, _isObjectLike2.default)(value) && (0, _isLength2.default)(value.length) && !!typedArrayTags[(0, _baseGetTag2.default)(value)];
+}
+
+exports.default = baseIsTypedArray;
+},{"./_baseGetTag.js":140,"./isLength.js":172,"./isObjectLike.js":141}],152:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function (value) {
+    return func(value);
+  };
+}
+
+exports.default = baseUnary;
+},{}],153:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _freeGlobal = require('./_freeGlobal.js');
+
+var _freeGlobal2 = _interopRequireDefault(_freeGlobal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && _freeGlobal2.default.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = function () {
+  try {
+    // Use `util.types` for Node.js 10+.
+    var types = freeModule && freeModule.require && freeModule.require('util').types;
+
+    if (types) {
+      return types;
+    }
+
+    // Legacy `process.binding('util')` for Node.js < 10.
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}();
+
+exports.default = nodeUtil;
+},{"./_freeGlobal.js":195}],149:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseIsTypedArray = require('./_baseIsTypedArray.js');
+
+var _baseIsTypedArray2 = _interopRequireDefault(_baseIsTypedArray);
+
+var _baseUnary = require('./_baseUnary.js');
+
+var _baseUnary2 = _interopRequireDefault(_baseUnary);
+
+var _nodeUtil = require('./_nodeUtil.js');
+
+var _nodeUtil2 = _interopRequireDefault(_nodeUtil);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Node.js helper references. */
+var nodeIsTypedArray = _nodeUtil2.default && _nodeUtil2.default.isTypedArray;
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? (0, _baseUnary2.default)(nodeIsTypedArray) : _baseIsTypedArray2.default;
+
+exports.default = isTypedArray;
+},{"./_baseIsTypedArray.js":178,"./_baseUnary.js":152,"./_nodeUtil.js":153}],118:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseKeys = require('./_baseKeys.js');
+
+var _baseKeys2 = _interopRequireDefault(_baseKeys);
+
+var _getTag = require('./_getTag.js');
+
+var _getTag2 = _interopRequireDefault(_getTag);
+
+var _isArguments = require('./isArguments.js');
+
+var _isArguments2 = _interopRequireDefault(_isArguments);
+
+var _isArray = require('./isArray.js');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isArrayLike = require('./isArrayLike.js');
+
+var _isArrayLike2 = _interopRequireDefault(_isArrayLike);
+
+var _isBuffer = require('./isBuffer.js');
+
+var _isBuffer2 = _interopRequireDefault(_isBuffer);
+
+var _isPrototype = require('./_isPrototype.js');
+
+var _isPrototype2 = _interopRequireDefault(_isPrototype);
+
+var _isTypedArray = require('./isTypedArray.js');
+
+var _isTypedArray2 = _interopRequireDefault(_isTypedArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]',
+    setTag = '[object Set]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Checks if `value` is an empty object, collection, map, or set.
+ *
+ * Objects are considered empty if they have no own enumerable string keyed
+ * properties.
+ *
+ * Array-like values such as `arguments` objects, arrays, buffers, strings, or
+ * jQuery-like collections are considered empty if they have a `length` of `0`.
+ * Similarly, maps and sets are considered empty if they have a `size` of `0`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is empty, else `false`.
+ * @example
+ *
+ * _.isEmpty(null);
+ * // => true
+ *
+ * _.isEmpty(true);
+ * // => true
+ *
+ * _.isEmpty(1);
+ * // => true
+ *
+ * _.isEmpty([1, 2, 3]);
+ * // => false
+ *
+ * _.isEmpty({ 'a': 1 });
+ * // => false
+ */
+function isEmpty(value) {
+  if (value == null) {
+    return true;
+  }
+  if ((0, _isArrayLike2.default)(value) && ((0, _isArray2.default)(value) || typeof value == 'string' || typeof value.splice == 'function' || (0, _isBuffer2.default)(value) || (0, _isTypedArray2.default)(value) || (0, _isArguments2.default)(value))) {
+    return !value.length;
+  }
+  var tag = (0, _getTag2.default)(value);
+  if (tag == mapTag || tag == setTag) {
+    return !value.size;
+  }
+  if ((0, _isPrototype2.default)(value)) {
+    return !(0, _baseKeys2.default)(value).length;
+  }
+  for (var key in value) {
+    if (hasOwnProperty.call(value, key)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+exports.default = isEmpty;
+},{"./_baseKeys.js":143,"./_getTag.js":144,"./isArguments.js":145,"./isArray.js":137,"./isArrayLike.js":146,"./isBuffer.js":147,"./_isPrototype.js":148,"./isTypedArray.js":149}],179:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+exports.default = arrayMap;
+},{}],120:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' || (0, _isObjectLike2.default)(value) && (0, _baseGetTag2.default)(value) == symbolTag;
+}
+
+exports.default = isSymbol;
+},{"./_baseGetTag.js":140,"./isObjectLike.js":141}],150:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Symbol = require('./_Symbol.js');
+
+var _Symbol2 = _interopRequireDefault(_Symbol);
+
+var _arrayMap = require('./_arrayMap.js');
+
+var _arrayMap2 = _interopRequireDefault(_arrayMap);
+
+var _isArray = require('./isArray.js');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isSymbol = require('./isSymbol.js');
+
+var _isSymbol2 = _interopRequireDefault(_isSymbol);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0;
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = _Symbol2.default ? _Symbol2.default.prototype : undefined,
+    symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if ((0, _isArray2.default)(value)) {
+    // Recursively convert values (susceptible to call stack limits).
+    return (0, _arrayMap2.default)(value, baseToString) + '';
+  }
+  if ((0, _isSymbol2.default)(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = value + '';
+  return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+
+exports.default = baseToString;
+},{"./_Symbol.js":168,"./_arrayMap.js":179,"./isArray.js":137,"./isSymbol.js":120}],119:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseToString = require('./_baseToString.js');
+
+var _baseToString2 = _interopRequireDefault(_baseToString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : (0, _baseToString2.default)(value);
+}
+
+exports.default = toString;
+},{"./_baseToString.js":150}],115:[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+'use strict';
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function (condition, format, a, b, c, d, e, f) {
+  if ('development' !== 'production') {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+},{}],114:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var DEFAULT_NAMESPACE = exports.DEFAULT_NAMESPACE = '/';
+var ACTION_TYPE_DELIMITER = exports.ACTION_TYPE_DELIMITER = '||';
+},{}],85:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = combineActions;
+
+var _isString = require('lodash-es/isString');
+
+var _isString2 = _interopRequireDefault(_isString);
+
+var _isFunction = require('lodash-es/isFunction');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isEmpty = require('lodash-es/isEmpty');
+
+var _isEmpty2 = _interopRequireDefault(_isEmpty);
+
+var _toString = require('lodash-es/toString');
+
+var _toString2 = _interopRequireDefault(_toString);
+
+var _isSymbol = require('lodash-es/isSymbol');
+
+var _isSymbol2 = _interopRequireDefault(_isSymbol);
+
+var _invariant = require('invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _constants = require('./constants');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function isValidActionType(type) {
+  return (0, _isString2.default)(type) || (0, _isFunction2.default)(type) || (0, _isSymbol2.default)(type);
+}
+
+function isValidActionTypes(types) {
+  if ((0, _isEmpty2.default)(types)) {
+    return false;
+  }
+  return types.every(isValidActionType);
+}
+
+function combineActions() {
+  for (var _len = arguments.length, actionsTypes = Array(_len), _key = 0; _key < _len; _key++) {
+    actionsTypes[_key] = arguments[_key];
+  }
+
+  (0, _invariant2.default)(isValidActionTypes(actionsTypes), 'Expected action types to be strings, symbols, or action creators');
+  var combinedActionType = actionsTypes.map(_toString2.default).join(_constants.ACTION_TYPE_DELIMITER);
+  return { toString: function toString() {
+      return combinedActionType;
+    } };
+}
+},{"lodash-es/isString":116,"lodash-es/isFunction":117,"lodash-es/isEmpty":118,"lodash-es/toString":119,"lodash-es/isSymbol":120,"invariant":115,"./constants":114}],127:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+exports.default = identity;
+},{}],131:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Checks if `value` is `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `null`, else `false`.
+ * @example
+ *
+ * _.isNull(null);
+ * // => true
+ *
+ * _.isNull(void 0);
+ * // => false
+ */
+function isNull(value) {
+  return value === null;
+}
+
+exports.default = isNull;
+},{}],86:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createAction;
+
+var _identity = require('lodash-es/identity');
+
+var _identity2 = _interopRequireDefault(_identity);
+
+var _isFunction = require('lodash-es/isFunction');
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isNull = require('lodash-es/isNull');
+
+var _isNull2 = _interopRequireDefault(_isNull);
+
+var _invariant = require('invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function createAction(type) {
+  var payloadCreator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _identity2.default;
+  var metaCreator = arguments[2];
+
+  (0, _invariant2.default)((0, _isFunction2.default)(payloadCreator) || (0, _isNull2.default)(payloadCreator), 'Expected payloadCreator to be a function, undefined or null');
+
+  var finalPayloadCreator = (0, _isNull2.default)(payloadCreator) || payloadCreator === _identity2.default ? _identity2.default : function (head) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    return head instanceof Error ? head : payloadCreator.apply(undefined, [head].concat(args));
+  };
+
+  var hasMeta = (0, _isFunction2.default)(metaCreator);
+  var typeString = type.toString();
+
+  var actionCreator = function actionCreator() {
+    var payload = finalPayloadCreator.apply(undefined, arguments);
+    var action = { type: type };
+
+    if (payload instanceof Error) {
+      action.error = true;
+    }
+
+    if (payload !== undefined) {
+      action.payload = payload;
+    }
+
+    if (hasMeta) {
+      action.meta = metaCreator.apply(undefined, arguments);
+    }
+
+    return action;
+  };
+
+  actionCreator.toString = function () {
+    return typeString;
+  };
+
+  return actionCreator;
+}
+},{"lodash-es/identity":127,"lodash-es/isFunction":117,"lodash-es/isNull":131,"invariant":115}],156:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _overArg = require('./_overArg.js');
+
+var _overArg2 = _interopRequireDefault(_overArg);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Built-in value references. */
+var getPrototype = (0, _overArg2.default)(Object.getPrototypeOf, Object);
+
+exports.default = getPrototype;
+},{"./_overArg.js":191}],123:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseGetTag = require('./_baseGetTag.js');
+
+var _baseGetTag2 = _interopRequireDefault(_baseGetTag);
+
+var _getPrototype = require('./_getPrototype.js');
+
+var _getPrototype2 = _interopRequireDefault(_getPrototype);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var objectTag = '[object Object]';
+
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to infer the `Object` constructor. */
+var objectCtorString = funcToString.call(Object);
+
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+function isPlainObject(value) {
+  if (!(0, _isObjectLike2.default)(value) || (0, _baseGetTag2.default)(value) != objectTag) {
+    return false;
+  }
+  var proto = (0, _getPrototype2.default)(value);
+  if (proto === null) {
+    return true;
+  }
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+
+exports.default = isPlainObject;
+},{"./_baseGetTag.js":140,"./_getPrototype.js":156,"./isObjectLike.js":141}],138:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Gets the last element of `array`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to query.
+ * @returns {*} Returns the last element of `array`.
+ * @example
+ *
+ * _.last([1, 2, 3]);
+ * // => 3
+ */
+function last(array) {
+  var length = array == null ? 0 : array.length;
+  return length ? array[length - 1] : undefined;
+}
+
+exports.default = last;
+},{}],128:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Checks if `value` is `null` or `undefined`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
+ * @example
+ *
+ * _.isNil(null);
+ * // => true
+ *
+ * _.isNil(void 0);
+ * // => true
+ *
+ * _.isNil(NaN);
+ * // => false
+ */
+function isNil(value) {
+  return value == null;
+}
+
+exports.default = isNil;
+},{}],250:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */
+function baseSlice(array, start, end) {
+  var index = -1,
+      length = array.length;
+
+  if (start < 0) {
+    start = -start > length ? 0 : length + start;
+  }
+  end = end > length ? length : end;
+  if (end < 0) {
+    end += length;
+  }
+  length = start > end ? 0 : end - start >>> 0;
+  start >>>= 0;
+
+  var result = Array(length);
+  while (++index < length) {
+    result[index] = array[index + start];
+  }
+  return result;
+}
+
+exports.default = baseSlice;
+},{}],239:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseSlice = require('./_baseSlice.js');
+
+var _baseSlice2 = _interopRequireDefault(_baseSlice);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Casts `array` to a slice if it's needed.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {number} start The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the cast slice.
+ */
+function castSlice(array, start, end) {
+  var length = array.length;
+  end = end === undefined ? length : end;
+  return !start && end >= length ? array : (0, _baseSlice2.default)(array, start, end);
+}
+
+exports.default = castSlice;
+},{"./_baseSlice.js":250}],240:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff',
+    rsComboMarksRange = '\\u0300-\\u036f',
+    reComboHalfMarksRange = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange = '\\u20d0-\\u20ff',
+    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange,
+    rsVarRange = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsZWJ = '\\u200d';
+
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
+var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange + rsComboRange + rsVarRange + ']');
+
+/**
+ * Checks if `string` contains Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+ */
+function hasUnicode(string) {
+  return reHasUnicode.test(string);
+}
+
+exports.default = hasUnicode;
+},{}],244:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+exports.default = asciiToArray;
+},{}],245:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff',
+    rsComboMarksRange = '\\u0300-\\u036f',
+    reComboHalfMarksRange = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange = '\\u20d0-\\u20ff',
+    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange,
+    rsVarRange = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsAstral = '[' + rsAstralRange + ']',
+    rsCombo = '[' + rsComboRange + ']',
+    rsFitz = '\\ud83c[\\udffb-\\udfff]',
+    rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')',
+    rsNonAstral = '[^' + rsAstralRange + ']',
+    rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}',
+    rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]',
+    rsZWJ = '\\u200d';
+
+/** Used to compose unicode regexes. */
+var reOptMod = rsModifier + '?',
+    rsOptVar = '[' + rsVarRange + ']?',
+    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',
+    rsSeq = rsOptVar + reOptMod + rsOptJoin,
+    rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
+
+/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
+var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+
+/**
+ * Converts a Unicode `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function unicodeToArray(string) {
+    return string.match(reUnicode) || [];
+}
+
+exports.default = unicodeToArray;
+},{}],241:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _asciiToArray = require('./_asciiToArray.js');
+
+var _asciiToArray2 = _interopRequireDefault(_asciiToArray);
+
+var _hasUnicode = require('./_hasUnicode.js');
+
+var _hasUnicode2 = _interopRequireDefault(_hasUnicode);
+
+var _unicodeToArray = require('./_unicodeToArray.js');
+
+var _unicodeToArray2 = _interopRequireDefault(_unicodeToArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function stringToArray(string) {
+  return (0, _hasUnicode2.default)(string) ? (0, _unicodeToArray2.default)(string) : (0, _asciiToArray2.default)(string);
+}
+
+exports.default = stringToArray;
+},{"./_asciiToArray.js":244,"./_hasUnicode.js":240,"./_unicodeToArray.js":245}],232:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _castSlice = require('./_castSlice.js');
+
+var _castSlice2 = _interopRequireDefault(_castSlice);
+
+var _hasUnicode = require('./_hasUnicode.js');
+
+var _hasUnicode2 = _interopRequireDefault(_hasUnicode);
+
+var _stringToArray = require('./_stringToArray.js');
+
+var _stringToArray2 = _interopRequireDefault(_stringToArray);
+
+var _toString = require('./toString.js');
+
+var _toString2 = _interopRequireDefault(_toString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creates a function like `_.lowerFirst`.
+ *
+ * @private
+ * @param {string} methodName The name of the `String` case method to use.
+ * @returns {Function} Returns the new case function.
+ */
+function createCaseFirst(methodName) {
+  return function (string) {
+    string = (0, _toString2.default)(string);
+
+    var strSymbols = (0, _hasUnicode2.default)(string) ? (0, _stringToArray2.default)(string) : undefined;
+
+    var chr = strSymbols ? strSymbols[0] : string.charAt(0);
+
+    var trailing = strSymbols ? (0, _castSlice2.default)(strSymbols, 1).join('') : string.slice(1);
+
+    return chr[methodName]() + trailing;
+  };
+}
+
+exports.default = createCaseFirst;
+},{"./_castSlice.js":239,"./_hasUnicode.js":240,"./_stringToArray.js":241,"./toString.js":119}],200:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createCaseFirst = require('./_createCaseFirst.js');
+
+var _createCaseFirst2 = _interopRequireDefault(_createCaseFirst);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Converts the first character of `string` to upper case.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.upperFirst('fred');
+ * // => 'Fred'
+ *
+ * _.upperFirst('FRED');
+ * // => 'FRED'
+ */
+var upperFirst = (0, _createCaseFirst2.default)('toUpperCase');
+
+exports.default = upperFirst;
+},{"./_createCaseFirst.js":232}],193:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _toString = require('./toString.js');
+
+var _toString2 = _interopRequireDefault(_toString);
+
+var _upperFirst = require('./upperFirst.js');
+
+var _upperFirst2 = _interopRequireDefault(_upperFirst);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Converts the first character of `string` to upper case and the remaining
+ * to lower case.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to capitalize.
+ * @returns {string} Returns the capitalized string.
+ * @example
+ *
+ * _.capitalize('FRED');
+ * // => 'Fred'
+ */
+function capitalize(string) {
+  return (0, _upperFirst2.default)((0, _toString2.default)(string).toLowerCase());
+}
+
+exports.default = capitalize;
+},{"./toString.js":119,"./upperFirst.js":200}],201:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * A specialized version of `_.reduce` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {*} [accumulator] The initial value.
+ * @param {boolean} [initAccum] Specify using the first element of `array` as
+ *  the initial value.
+ * @returns {*} Returns the accumulated value.
+ */
+function arrayReduce(array, iteratee, accumulator, initAccum) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  if (initAccum && length) {
+    accumulator = array[++index];
+  }
+  while (++index < length) {
+    accumulator = iteratee(accumulator, array[index], index, array);
+  }
+  return accumulator;
+}
+
+exports.default = arrayReduce;
+},{}],238:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.propertyOf` without support for deep paths.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Function} Returns the new accessor function.
+ */
+function basePropertyOf(object) {
+  return function (key) {
+    return object == null ? undefined : object[key];
+  };
+}
+
+exports.default = basePropertyOf;
+},{}],222:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _basePropertyOf = require('./_basePropertyOf.js');
+
+var _basePropertyOf2 = _interopRequireDefault(_basePropertyOf);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to map Latin Unicode letters to basic Latin letters. */
+var deburredLetters = {
+  // Latin-1 Supplement block.
+  '\xc0': 'A', '\xc1': 'A', '\xc2': 'A', '\xc3': 'A', '\xc4': 'A', '\xc5': 'A',
+  '\xe0': 'a', '\xe1': 'a', '\xe2': 'a', '\xe3': 'a', '\xe4': 'a', '\xe5': 'a',
+  '\xc7': 'C', '\xe7': 'c',
+  '\xd0': 'D', '\xf0': 'd',
+  '\xc8': 'E', '\xc9': 'E', '\xca': 'E', '\xcb': 'E',
+  '\xe8': 'e', '\xe9': 'e', '\xea': 'e', '\xeb': 'e',
+  '\xcc': 'I', '\xcd': 'I', '\xce': 'I', '\xcf': 'I',
+  '\xec': 'i', '\xed': 'i', '\xee': 'i', '\xef': 'i',
+  '\xd1': 'N', '\xf1': 'n',
+  '\xd2': 'O', '\xd3': 'O', '\xd4': 'O', '\xd5': 'O', '\xd6': 'O', '\xd8': 'O',
+  '\xf2': 'o', '\xf3': 'o', '\xf4': 'o', '\xf5': 'o', '\xf6': 'o', '\xf8': 'o',
+  '\xd9': 'U', '\xda': 'U', '\xdb': 'U', '\xdc': 'U',
+  '\xf9': 'u', '\xfa': 'u', '\xfb': 'u', '\xfc': 'u',
+  '\xdd': 'Y', '\xfd': 'y', '\xff': 'y',
+  '\xc6': 'Ae', '\xe6': 'ae',
+  '\xde': 'Th', '\xfe': 'th',
+  '\xdf': 'ss',
+  // Latin Extended-A block.
+  '\u0100': 'A', '\u0102': 'A', '\u0104': 'A',
+  '\u0101': 'a', '\u0103': 'a', '\u0105': 'a',
+  '\u0106': 'C', '\u0108': 'C', '\u010a': 'C', '\u010c': 'C',
+  '\u0107': 'c', '\u0109': 'c', '\u010b': 'c', '\u010d': 'c',
+  '\u010e': 'D', '\u0110': 'D', '\u010f': 'd', '\u0111': 'd',
+  '\u0112': 'E', '\u0114': 'E', '\u0116': 'E', '\u0118': 'E', '\u011a': 'E',
+  '\u0113': 'e', '\u0115': 'e', '\u0117': 'e', '\u0119': 'e', '\u011b': 'e',
+  '\u011c': 'G', '\u011e': 'G', '\u0120': 'G', '\u0122': 'G',
+  '\u011d': 'g', '\u011f': 'g', '\u0121': 'g', '\u0123': 'g',
+  '\u0124': 'H', '\u0126': 'H', '\u0125': 'h', '\u0127': 'h',
+  '\u0128': 'I', '\u012a': 'I', '\u012c': 'I', '\u012e': 'I', '\u0130': 'I',
+  '\u0129': 'i', '\u012b': 'i', '\u012d': 'i', '\u012f': 'i', '\u0131': 'i',
+  '\u0134': 'J', '\u0135': 'j',
+  '\u0136': 'K', '\u0137': 'k', '\u0138': 'k',
+  '\u0139': 'L', '\u013b': 'L', '\u013d': 'L', '\u013f': 'L', '\u0141': 'L',
+  '\u013a': 'l', '\u013c': 'l', '\u013e': 'l', '\u0140': 'l', '\u0142': 'l',
+  '\u0143': 'N', '\u0145': 'N', '\u0147': 'N', '\u014a': 'N',
+  '\u0144': 'n', '\u0146': 'n', '\u0148': 'n', '\u014b': 'n',
+  '\u014c': 'O', '\u014e': 'O', '\u0150': 'O',
+  '\u014d': 'o', '\u014f': 'o', '\u0151': 'o',
+  '\u0154': 'R', '\u0156': 'R', '\u0158': 'R',
+  '\u0155': 'r', '\u0157': 'r', '\u0159': 'r',
+  '\u015a': 'S', '\u015c': 'S', '\u015e': 'S', '\u0160': 'S',
+  '\u015b': 's', '\u015d': 's', '\u015f': 's', '\u0161': 's',
+  '\u0162': 'T', '\u0164': 'T', '\u0166': 'T',
+  '\u0163': 't', '\u0165': 't', '\u0167': 't',
+  '\u0168': 'U', '\u016a': 'U', '\u016c': 'U', '\u016e': 'U', '\u0170': 'U', '\u0172': 'U',
+  '\u0169': 'u', '\u016b': 'u', '\u016d': 'u', '\u016f': 'u', '\u0171': 'u', '\u0173': 'u',
+  '\u0174': 'W', '\u0175': 'w',
+  '\u0176': 'Y', '\u0177': 'y', '\u0178': 'Y',
+  '\u0179': 'Z', '\u017b': 'Z', '\u017d': 'Z',
+  '\u017a': 'z', '\u017c': 'z', '\u017e': 'z',
+  '\u0132': 'IJ', '\u0133': 'ij',
+  '\u0152': 'Oe', '\u0153': 'oe',
+  '\u0149': "'n", '\u017f': 's'
+};
+
+/**
+ * Used by `_.deburr` to convert Latin-1 Supplement and Latin Extended-A
+ * letters to basic Latin letters.
+ *
+ * @private
+ * @param {string} letter The matched letter to deburr.
+ * @returns {string} Returns the deburred letter.
+ */
+var deburrLetter = (0, _basePropertyOf2.default)(deburredLetters);
+
+exports.default = deburrLetter;
+},{"./_basePropertyOf.js":238}],202:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _deburrLetter = require('./_deburrLetter.js');
+
+var _deburrLetter2 = _interopRequireDefault(_deburrLetter);
+
+var _toString = require('./toString.js');
+
+var _toString2 = _interopRequireDefault(_toString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to match Latin Unicode letters (excluding mathematical operators). */
+var reLatin = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g;
+
+/** Used to compose unicode character classes. */
+var rsComboMarksRange = '\\u0300-\\u036f',
+    reComboHalfMarksRange = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange = '\\u20d0-\\u20ff',
+    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange;
+
+/** Used to compose unicode capture groups. */
+var rsCombo = '[' + rsComboRange + ']';
+
+/**
+ * Used to match [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks) and
+ * [combining diacritical marks for symbols](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks_for_Symbols).
+ */
+var reComboMark = RegExp(rsCombo, 'g');
+
+/**
+ * Deburrs `string` by converting
+ * [Latin-1 Supplement](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)
+ * and [Latin Extended-A](https://en.wikipedia.org/wiki/Latin_Extended-A)
+ * letters to basic Latin letters and removing
+ * [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to deburr.
+ * @returns {string} Returns the deburred string.
+ * @example
+ *
+ * _.deburr('déjà vu');
+ * // => 'deja vu'
+ */
+function deburr(string) {
+  string = (0, _toString2.default)(string);
+  return string && string.replace(reLatin, _deburrLetter2.default).replace(reComboMark, '');
+}
+
+exports.default = deburr;
+},{"./_deburrLetter.js":222,"./toString.js":119}],219:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to match words composed of alphanumeric characters. */
+var reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
+
+/**
+ * Splits an ASCII `string` into an array of its words.
+ *
+ * @private
+ * @param {string} The string to inspect.
+ * @returns {Array} Returns the words of `string`.
+ */
+function asciiWords(string) {
+  return string.match(reAsciiWord) || [];
+}
+
+exports.default = asciiWords;
+},{}],220:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to detect strings that need a more robust regexp to match words. */
+var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+
+/**
+ * Checks if `string` contains a word composed of Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a word is found, else `false`.
+ */
+function hasUnicodeWord(string) {
+  return reHasUnicodeWord.test(string);
+}
+
+exports.default = hasUnicodeWord;
+},{}],221:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff',
+    rsComboMarksRange = '\\u0300-\\u036f',
+    reComboHalfMarksRange = '\\ufe20-\\ufe2f',
+    rsComboSymbolsRange = '\\u20d0-\\u20ff',
+    rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange,
+    rsDingbatRange = '\\u2700-\\u27bf',
+    rsLowerRange = 'a-z\\xdf-\\xf6\\xf8-\\xff',
+    rsMathOpRange = '\\xac\\xb1\\xd7\\xf7',
+    rsNonCharRange = '\\x00-\\x2f\\x3a-\\x40\\x5b-\\x60\\x7b-\\xbf',
+    rsPunctuationRange = '\\u2000-\\u206f',
+    rsSpaceRange = ' \\t\\x0b\\f\\xa0\\ufeff\\n\\r\\u2028\\u2029\\u1680\\u180e\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u202f\\u205f\\u3000',
+    rsUpperRange = 'A-Z\\xc0-\\xd6\\xd8-\\xde',
+    rsVarRange = '\\ufe0e\\ufe0f',
+    rsBreakRange = rsMathOpRange + rsNonCharRange + rsPunctuationRange + rsSpaceRange;
+
+/** Used to compose unicode capture groups. */
+var rsApos = "['\u2019]",
+    rsBreak = '[' + rsBreakRange + ']',
+    rsCombo = '[' + rsComboRange + ']',
+    rsDigits = '\\d+',
+    rsDingbat = '[' + rsDingbatRange + ']',
+    rsLower = '[' + rsLowerRange + ']',
+    rsMisc = '[^' + rsAstralRange + rsBreakRange + rsDigits + rsDingbatRange + rsLowerRange + rsUpperRange + ']',
+    rsFitz = '\\ud83c[\\udffb-\\udfff]',
+    rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')',
+    rsNonAstral = '[^' + rsAstralRange + ']',
+    rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}',
+    rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]',
+    rsUpper = '[' + rsUpperRange + ']',
+    rsZWJ = '\\u200d';
+
+/** Used to compose unicode regexes. */
+var rsMiscLower = '(?:' + rsLower + '|' + rsMisc + ')',
+    rsMiscUpper = '(?:' + rsUpper + '|' + rsMisc + ')',
+    rsOptContrLower = '(?:' + rsApos + '(?:d|ll|m|re|s|t|ve))?',
+    rsOptContrUpper = '(?:' + rsApos + '(?:D|LL|M|RE|S|T|VE))?',
+    reOptMod = rsModifier + '?',
+    rsOptVar = '[' + rsVarRange + ']?',
+    rsOptJoin = '(?:' + rsZWJ + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*',
+    rsOrdLower = '\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])',
+    rsOrdUpper = '\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])',
+    rsSeq = rsOptVar + reOptMod + rsOptJoin,
+    rsEmoji = '(?:' + [rsDingbat, rsRegional, rsSurrPair].join('|') + ')' + rsSeq;
+
+/** Used to match complex or compound words. */
+var reUnicodeWord = RegExp([rsUpper + '?' + rsLower + '+' + rsOptContrLower + '(?=' + [rsBreak, rsUpper, '$'].join('|') + ')', rsMiscUpper + '+' + rsOptContrUpper + '(?=' + [rsBreak, rsUpper + rsMiscLower, '$'].join('|') + ')', rsUpper + '?' + rsMiscLower + '+' + rsOptContrLower, rsUpper + '+' + rsOptContrUpper, rsOrdUpper, rsOrdLower, rsDigits, rsEmoji].join('|'), 'g');
+
+/**
+ * Splits a Unicode `string` into an array of its words.
+ *
+ * @private
+ * @param {string} The string to inspect.
+ * @returns {Array} Returns the words of `string`.
+ */
+function unicodeWords(string) {
+    return string.match(reUnicodeWord) || [];
+}
+
+exports.default = unicodeWords;
 },{}],203:[function(require,module,exports) {
 'use strict';
 
@@ -133428,5329 +133782,3536 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Cache = require('./Cache');
+var _asciiWords = require('./_asciiWords.js');
 
-Object.keys(_Cache).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _Cache[key];
-    }
-  });
-});
-},{"./Cache":211}],195:[function(require,module,exports) {
-'use strict';
+var _asciiWords2 = _interopRequireDefault(_asciiWords);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var _hasUnicodeWord = require('./_hasUnicodeWord.js');
 
-var _cache = require('./cache');
+var _hasUnicodeWord2 = _interopRequireDefault(_hasUnicodeWord);
 
-Object.keys(_cache).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _cache[key];
-    }
-  });
-});
+var _toString = require('./toString.js');
 
-var _types = require('./types');
+var _toString2 = _interopRequireDefault(_toString);
 
-Object.keys(_types).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _types[key];
-    }
-  });
-});
-},{"./cache":202,"./types":203}],160:[function(require,module,exports) {
-'use strict';
+var _unicodeWords = require('./_unicodeWords.js');
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.IntrospectionFragmentMatcher = exports.HeuristicFragmentMatcher = undefined;
-
-var _apolloUtilities = require('apollo-utilities');
-
-var haveWarned = false;
-/**
- * This fragment matcher is very basic and unable to match union or interface type conditions
- */
-var HeuristicFragmentMatcher = /** @class */function () {
-    function HeuristicFragmentMatcher() {
-        // do nothing
-    }
-    HeuristicFragmentMatcher.prototype.ensureReady = function () {
-        return Promise.resolve();
-    };
-    HeuristicFragmentMatcher.prototype.canBypassInit = function () {
-        return true; // we don't need to initialize this fragment matcher.
-    };
-    HeuristicFragmentMatcher.prototype.match = function (idValue, typeCondition, context) {
-        var obj = context.store.get(idValue.id);
-        if (!obj && idValue.id === 'ROOT_QUERY') {
-            return true;
-        }
-        if (!obj) {
-            return false;
-        }
-        if (!obj.__typename) {
-            if (!haveWarned) {
-                console.warn("You're using fragments in your queries, but either don't have the addTypename:\n  true option set in Apollo Client, or you are trying to write a fragment to the store without the __typename.\n   Please turn on the addTypename option and include __typename when writing fragments so that Apollo Client\n   can accurately match fragments.");
-                console.warn('Could not find __typename on Fragment ', typeCondition, obj);
-                console.warn("DEPRECATION WARNING: using fragments without __typename is unsupported behavior " + "and will be removed in future versions of Apollo client. You should fix this and set addTypename to true now.");
-                /* istanbul ignore if */
-                if (!(0, _apolloUtilities.isTest)()) {
-                    // When running tests, we want to print the warning every time
-                    haveWarned = true;
-                }
-            }
-            context.returnPartialData = true;
-            return true;
-        }
-        if (obj.__typename === typeCondition) {
-            return true;
-        }
-        // XXX here we reach an issue - we don't know if this fragment should match or not. It's either:
-        // 1. A fragment on a non-matching concrete type or interface or union
-        // 2. A fragment on a matching interface or union
-        // If it's 1, we don't want to return anything, if it's 2 we want to match. We can't tell the
-        // difference, so we warn the user, but still try to match it (backcompat).
-        (0, _apolloUtilities.warnOnceInDevelopment)("You are using the simple (heuristic) fragment matcher, but your queries contain union or interface types.\n     Apollo Client will not be able to able to accurately map fragments." + "To make this error go away, use the IntrospectionFragmentMatcher as described in the docs: " + "https://www.apollographql.com/docs/react/recipes/fragment-matching.html", 'error');
-        context.returnPartialData = true;
-        return true;
-    };
-    return HeuristicFragmentMatcher;
-}();
-exports.HeuristicFragmentMatcher = HeuristicFragmentMatcher;
-
-var IntrospectionFragmentMatcher = /** @class */function () {
-    function IntrospectionFragmentMatcher(options) {
-        if (options && options.introspectionQueryResultData) {
-            this.possibleTypesMap = this.parseIntrospectionResult(options.introspectionQueryResultData);
-            this.isReady = true;
-        } else {
-            this.isReady = false;
-        }
-        this.match = this.match.bind(this);
-    }
-    IntrospectionFragmentMatcher.prototype.match = function (idValue, typeCondition, context) {
-        if (!this.isReady) {
-            // this should basically never happen in proper use.
-            throw new Error('FragmentMatcher.match() was called before FragmentMatcher.init()');
-        }
-        var obj = context.store.get(idValue.id);
-        if (!obj) {
-            return false;
-        }
-        if (!obj.__typename) {
-            throw new Error("Cannot match fragment because __typename property is missing: " + JSON.stringify(obj));
-        }
-        if (obj.__typename === typeCondition) {
-            return true;
-        }
-        var implementingTypes = this.possibleTypesMap[typeCondition];
-        if (implementingTypes && implementingTypes.indexOf(obj.__typename) > -1) {
-            return true;
-        }
-        return false;
-    };
-    IntrospectionFragmentMatcher.prototype.parseIntrospectionResult = function (introspectionResultData) {
-        var typeMap = {};
-        introspectionResultData.__schema.types.forEach(function (type) {
-            if (type.kind === 'UNION' || type.kind === 'INTERFACE') {
-                typeMap[type.name] = type.possibleTypes.map(function (implementingType) {
-                    return implementingType.name;
-                });
-            }
-        });
-        return typeMap;
-    };
-    return IntrospectionFragmentMatcher;
-}();
-exports.IntrospectionFragmentMatcher = IntrospectionFragmentMatcher;
-//# sourceMappingURL=fragmentMatcher.js.map
-},{"apollo-utilities":167}],161:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.defaultNormalizedCacheFactory = defaultNormalizedCacheFactory;
-var ObjectCache = /** @class */function () {
-    function ObjectCache(data) {
-        if (data === void 0) {
-            data = Object.create(null);
-        }
-        this.data = data;
-    }
-    ObjectCache.prototype.toObject = function () {
-        return this.data;
-    };
-    ObjectCache.prototype.get = function (dataId) {
-        return this.data[dataId];
-    };
-    ObjectCache.prototype.set = function (dataId, value) {
-        this.data[dataId] = value;
-    };
-    ObjectCache.prototype.delete = function (dataId) {
-        this.data[dataId] = undefined;
-    };
-    ObjectCache.prototype.clear = function () {
-        this.data = Object.create(null);
-    };
-    ObjectCache.prototype.replace = function (newData) {
-        this.data = newData || Object.create(null);
-    };
-    return ObjectCache;
-}();
-exports.ObjectCache = ObjectCache;
-function defaultNormalizedCacheFactory(seed) {
-    return new ObjectCache(seed);
-}
-//# sourceMappingURL=objectCache.js.map
-},{}],159:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.WriteError = undefined;
-exports.enhanceErrorWithDocument = enhanceErrorWithDocument;
-exports.writeQueryToStore = writeQueryToStore;
-exports.writeResultToStore = writeResultToStore;
-exports.writeSelectionSetToStore = writeSelectionSetToStore;
-
-var _printer = require('graphql/language/printer');
-
-var _apolloUtilities = require('apollo-utilities');
-
-var _objectCache = require('./objectCache');
-
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var WriteError = /** @class */function (_super) {
-    __extends(WriteError, _super);
-    function WriteError() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.type = 'WriteError';
-        return _this;
-    }
-    return WriteError;
-}(Error);
-exports.WriteError = WriteError;
-function enhanceErrorWithDocument(error, document) {
-    // XXX A bit hacky maybe ...
-    var enhancedError = new WriteError("Error writing result to store for query:\n " + (0, _printer.print)(document));
-    enhancedError.message += '\n' + error.message;
-    enhancedError.stack = error.stack;
-    return enhancedError;
-}
-/**
- * Writes the result of a query to the store.
- *
- * @param result The result object returned for the query document.
- *
- * @param query The query document whose result we are writing to the store.
- *
- * @param store The {@link NormalizedCache} used by Apollo for the `data` portion of the store.
- *
- * @param variables A map from the name of a variable to its value. These variables can be
- * referenced by the query document.
- *
- * @param dataIdFromObject A function that returns an object identifier given a particular result
- * object. See the store documentation for details and an example of this function.
- *
- * @param fragmentMap A map from the name of a fragment to its fragment definition. These fragments
- * can be referenced within the query document.
- *
- * @param fragmentMatcherFunction A function to use for matching fragment conditions in GraphQL documents
- */
-function writeQueryToStore(_a) {
-    var result = _a.result,
-        query = _a.query,
-        _b = _a.storeFactory,
-        storeFactory = _b === void 0 ? _objectCache.defaultNormalizedCacheFactory : _b,
-        _c = _a.store,
-        store = _c === void 0 ? storeFactory() : _c,
-        variables = _a.variables,
-        dataIdFromObject = _a.dataIdFromObject,
-        _d = _a.fragmentMap,
-        fragmentMap = _d === void 0 ? {} : _d,
-        fragmentMatcherFunction = _a.fragmentMatcherFunction;
-    var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(query);
-    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(queryDefinition), variables);
-    try {
-        return writeSelectionSetToStore({
-            dataId: 'ROOT_QUERY',
-            result: result,
-            selectionSet: queryDefinition.selectionSet,
-            context: {
-                store: store,
-                storeFactory: storeFactory,
-                processedData: {},
-                variables: variables,
-                dataIdFromObject: dataIdFromObject,
-                fragmentMap: fragmentMap,
-                fragmentMatcherFunction: fragmentMatcherFunction
-            }
-        });
-    } catch (e) {
-        throw enhanceErrorWithDocument(e, query);
-    }
-}
-function writeResultToStore(_a) {
-    var dataId = _a.dataId,
-        result = _a.result,
-        document = _a.document,
-        _b = _a.storeFactory,
-        storeFactory = _b === void 0 ? _objectCache.defaultNormalizedCacheFactory : _b,
-        _c = _a.store,
-        store = _c === void 0 ? storeFactory() : _c,
-        variables = _a.variables,
-        dataIdFromObject = _a.dataIdFromObject,
-        fragmentMatcherFunction = _a.fragmentMatcherFunction;
-    // XXX TODO REFACTOR: this is a temporary workaround until query normalization is made to work with documents.
-    var operationDefinition = (0, _apolloUtilities.getOperationDefinition)(document);
-    var selectionSet = operationDefinition.selectionSet;
-    var fragmentMap = (0, _apolloUtilities.createFragmentMap)((0, _apolloUtilities.getFragmentDefinitions)(document));
-    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(operationDefinition), variables);
-    try {
-        return writeSelectionSetToStore({
-            result: result,
-            dataId: dataId,
-            selectionSet: selectionSet,
-            context: {
-                store: store,
-                storeFactory: storeFactory,
-                processedData: {},
-                variables: variables,
-                dataIdFromObject: dataIdFromObject,
-                fragmentMap: fragmentMap,
-                fragmentMatcherFunction: fragmentMatcherFunction
-            }
-        });
-    } catch (e) {
-        throw enhanceErrorWithDocument(e, document);
-    }
-}
-function writeSelectionSetToStore(_a) {
-    var result = _a.result,
-        dataId = _a.dataId,
-        selectionSet = _a.selectionSet,
-        context = _a.context;
-    var variables = context.variables,
-        store = context.store,
-        fragmentMap = context.fragmentMap;
-    selectionSet.selections.forEach(function (selection) {
-        var included = (0, _apolloUtilities.shouldInclude)(selection, variables);
-        if ((0, _apolloUtilities.isField)(selection)) {
-            var resultFieldKey = (0, _apolloUtilities.resultKeyNameFromField)(selection);
-            var value = result[resultFieldKey];
-            if (included) {
-                if (typeof value !== 'undefined') {
-                    writeFieldToStore({
-                        dataId: dataId,
-                        value: value,
-                        field: selection,
-                        context: context
-                    });
-                } else {
-                    // if this is a defered field we don't need to throw / warn
-                    var isDefered = selection.directives && selection.directives.length && selection.directives.some(function (directive) {
-                        return directive.name && directive.name.value === 'defer';
-                    });
-                    if (!isDefered && context.fragmentMatcherFunction) {
-                        // XXX We'd like to throw an error, but for backwards compatibility's sake
-                        // we just print a warning for the time being.
-                        //throw new WriteError(`Missing field ${resultFieldKey} in ${JSON.stringify(result, null, 2).substring(0, 100)}`);
-                        if (!(0, _apolloUtilities.isProduction)()) {
-                            console.warn("Missing field " + resultFieldKey + " in " + JSON.stringify(result, null, 2).substring(0, 100));
-                        }
-                    }
-                }
-            }
-        } else {
-            // This is not a field, so it must be a fragment, either inline or named
-            var fragment = void 0;
-            if ((0, _apolloUtilities.isInlineFragment)(selection)) {
-                fragment = selection;
-            } else {
-                // Named fragment
-                fragment = (fragmentMap || {})[selection.name.value];
-                if (!fragment) {
-                    throw new Error("No fragment named " + selection.name.value + ".");
-                }
-            }
-            var matches = true;
-            if (context.fragmentMatcherFunction && fragment.typeCondition) {
-                // TODO we need to rewrite the fragment matchers for this to work properly and efficiently
-                // Right now we have to pretend that we're passing in an idValue and that there's a store
-                // on the context.
-                var idValue = (0, _apolloUtilities.toIdValue)({ id: 'self', typename: undefined });
-                var fakeContext = {
-                    // NOTE: fakeContext always uses ObjectCache
-                    // since this is only to ensure the return value of 'matches'
-                    store: new _objectCache.ObjectCache({ self: result }),
-                    returnPartialData: false,
-                    hasMissingField: false,
-                    cacheRedirects: {}
-                };
-                matches = context.fragmentMatcherFunction(idValue, fragment.typeCondition.name.value, fakeContext);
-                if (!(0, _apolloUtilities.isProduction)() && fakeContext.returnPartialData) {
-                    console.error('WARNING: heuristic fragment matching going on!');
-                }
-            }
-            if (included && matches) {
-                writeSelectionSetToStore({
-                    result: result,
-                    selectionSet: fragment.selectionSet,
-                    dataId: dataId,
-                    context: context
-                });
-            }
-        }
-    });
-    return store;
-}
-// Checks if the id given is an id that was generated by Apollo
-// rather than by dataIdFromObject.
-function isGeneratedId(id) {
-    return id[0] === '$';
-}
-function mergeWithGenerated(generatedKey, realKey, cache) {
-    var generated = cache.get(generatedKey);
-    var real = cache.get(realKey);
-    Object.keys(generated).forEach(function (key) {
-        var value = generated[key];
-        var realValue = real[key];
-        if ((0, _apolloUtilities.isIdValue)(value) && isGeneratedId(value.id) && (0, _apolloUtilities.isIdValue)(realValue)) {
-            mergeWithGenerated(value.id, realValue.id, cache);
-        }
-        cache.delete(generatedKey);
-        cache.set(realKey, __assign({}, generated, real));
-    });
-}
-function isDataProcessed(dataId, field, processedData) {
-    if (!processedData) {
-        return false;
-    }
-    if (processedData[dataId]) {
-        if (processedData[dataId].indexOf(field) >= 0) {
-            return true;
-        } else {
-            processedData[dataId].push(field);
-        }
-    } else {
-        processedData[dataId] = [field];
-    }
-    return false;
-}
-function writeFieldToStore(_a) {
-    var field = _a.field,
-        value = _a.value,
-        dataId = _a.dataId,
-        context = _a.context;
-    var variables = context.variables,
-        dataIdFromObject = context.dataIdFromObject,
-        store = context.store;
-    var storeValue;
-    var storeObject;
-    var storeFieldName = (0, _apolloUtilities.storeKeyNameFromField)(field, variables);
-    // specifies if we need to merge existing keys in the store
-    var shouldMerge = false;
-    // If we merge, this will be the generatedKey
-    var generatedKey = '';
-    // If this is a scalar value...
-    if (!field.selectionSet || value === null) {
-        storeValue = value != null && typeof value === 'object' ? // If the scalar value is a JSON blob, we have to "escape" it so it can’t pretend to be
-        // an id.
-        { type: 'json', json: value } : // Otherwise, just store the scalar directly in the store.
-        value;
-    } else if (Array.isArray(value)) {
-        var generatedId = dataId + "." + storeFieldName;
-        storeValue = processArrayValue(value, generatedId, field.selectionSet, context);
-    } else {
-        // It's an object
-        var valueDataId = dataId + "." + storeFieldName;
-        var generated = true;
-        // We only prepend the '$' if the valueDataId isn't already a generated
-        // id.
-        if (!isGeneratedId(valueDataId)) {
-            valueDataId = '$' + valueDataId;
-        }
-        if (dataIdFromObject) {
-            var semanticId = dataIdFromObject(value);
-            // We throw an error if the first character of the id is '$. This is
-            // because we use that character to designate an Apollo-generated id
-            // and we use the distinction between user-desiginated and application-provided
-            // ids when managing overwrites.
-            if (semanticId && isGeneratedId(semanticId)) {
-                throw new Error('IDs returned by dataIdFromObject cannot begin with the "$" character.');
-            }
-            if (semanticId) {
-                valueDataId = semanticId;
-                generated = false;
-            }
-        }
-        if (!isDataProcessed(valueDataId, field, context.processedData)) {
-            writeSelectionSetToStore({
-                dataId: valueDataId,
-                result: value,
-                selectionSet: field.selectionSet,
-                context: context
-            });
-        }
-        // We take the id and escape it (i.e. wrap it with an enclosing object).
-        // This allows us to distinguish IDs from normal scalars.
-        var typename = value.__typename;
-        storeValue = (0, _apolloUtilities.toIdValue)({ id: valueDataId, typename: typename }, generated);
-        // check if there was a generated id at the location where we're
-        // about to place this new id. If there was, we have to merge the
-        // data from that id with the data we're about to write in the store.
-        storeObject = store.get(dataId);
-        var escapedId = storeObject && storeObject[storeFieldName];
-        if (escapedId !== storeValue && (0, _apolloUtilities.isIdValue)(escapedId)) {
-            var hadTypename = escapedId.typename !== undefined;
-            var hasTypename = typename !== undefined;
-            var typenameChanged = hadTypename && hasTypename && escapedId.typename !== typename;
-            // If there is already a real id in the store and the current id we
-            // are dealing with is generated, we throw an error.
-            // One exception we allow is when the typename has changed, which occurs
-            // when schema defines a union, both with and without an ID in the same place.
-            // checks if we "lost" the read id
-            if (generated && !escapedId.generated && !typenameChanged) {
-                throw new Error("Store error: the application attempted to write an object with no provided id" + (" but the store already contains an id of " + escapedId.id + " for this object. The selectionSet") + " that was trying to be written is:\n" + (0, _printer.print)(field));
-            }
-            // checks if we "lost" the typename
-            if (hadTypename && !hasTypename) {
-                throw new Error("Store error: the application attempted to write an object with no provided typename" + (" but the store already contains an object with typename of " + escapedId.typename + " for the object of id " + escapedId.id + ". The selectionSet") + " that was trying to be written is:\n" + (0, _printer.print)(field));
-            }
-            if (escapedId.generated) {
-                generatedKey = escapedId.id;
-                // We should only merge if it's an object of the same type,
-                // otherwise we should delete the generated object
-                if (typenameChanged) {
-                    // Only delete the generated object when the old object was
-                    // inlined, and the new object is not. This is indicated by
-                    // the old id being generated, and the new id being real.
-                    if (!generated) {
-                        store.delete(generatedKey);
-                    }
-                } else {
-                    shouldMerge = true;
-                }
-            }
-        }
-    }
-    var newStoreObj = __assign({}, store.get(dataId), (_b = {}, _b[storeFieldName] = storeValue, _b));
-    if (shouldMerge) {
-        mergeWithGenerated(generatedKey, storeValue.id, store);
-    }
-    storeObject = store.get(dataId);
-    if (!storeObject || storeValue !== storeObject[storeFieldName]) {
-        store.set(dataId, newStoreObj);
-    }
-    var _b;
-}
-function processArrayValue(value, generatedId, selectionSet, context) {
-    return value.map(function (item, index) {
-        if (item === null) {
-            return null;
-        }
-        var itemDataId = generatedId + "." + index;
-        if (Array.isArray(item)) {
-            return processArrayValue(item, itemDataId, selectionSet, context);
-        }
-        var generated = true;
-        if (context.dataIdFromObject) {
-            var semanticId = context.dataIdFromObject(item);
-            if (semanticId) {
-                itemDataId = semanticId;
-                generated = false;
-            }
-        }
-        if (!isDataProcessed(itemDataId, selectionSet, context.processedData)) {
-            writeSelectionSetToStore({
-                dataId: itemDataId,
-                result: item,
-                selectionSet: selectionSet,
-                context: context
-            });
-        }
-        return (0, _apolloUtilities.toIdValue)({ id: itemDataId, typename: item.__typename }, generated);
-    });
-}
-//# sourceMappingURL=writeToStore.js.map
-},{"graphql/language/printer":153,"apollo-utilities":167,"./objectCache":161}],224:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.graphql = graphql;
-exports.merge = merge;
-
-var _apolloUtilities = require('apollo-utilities');
-
-/* Based on graphql function from graphql-js:
- *
- * graphql(
- *   schema: GraphQLSchema,
- *   requestString: string,
- *   rootValue?: ?any,
- *   contextValue?: ?any,
- *   variableValues?: ?{[key: string]: any},
- *   operationName?: ?string
- * ): Promise<GraphQLResult>
- *
- * The default export as of graphql-anywhere is sync as of 4.0,
- * but below is an exported alternative that is async.
- * In the 5.0 version, this will be the only export again
- * and it will be async
- *
- */
-function graphql(resolver, document, rootValue, contextValue, variableValues, execOptions) {
-    if (execOptions === void 0) {
-        execOptions = {};
-    }
-    var mainDefinition = (0, _apolloUtilities.getMainDefinition)(document);
-    var fragments = (0, _apolloUtilities.getFragmentDefinitions)(document);
-    var fragmentMap = (0, _apolloUtilities.createFragmentMap)(fragments);
-    var resultMapper = execOptions.resultMapper;
-    // Default matcher always matches all fragments
-    var fragmentMatcher = execOptions.fragmentMatcher || function () {
-        return true;
-    };
-    var execContext = {
-        fragmentMap: fragmentMap,
-        contextValue: contextValue,
-        variableValues: variableValues,
-        resultMapper: resultMapper,
-        resolver: resolver,
-        fragmentMatcher: fragmentMatcher
-    };
-    return executeSelectionSet(mainDefinition.selectionSet, rootValue, execContext);
-}
-function executeSelectionSet(selectionSet, rootValue, execContext) {
-    var fragmentMap = execContext.fragmentMap,
-        contextValue = execContext.contextValue,
-        variables = execContext.variableValues;
-    var result = {};
-    selectionSet.selections.forEach(function (selection) {
-        if (!(0, _apolloUtilities.shouldInclude)(selection, variables)) {
-            // Skip this entirely
-            return;
-        }
-        if ((0, _apolloUtilities.isField)(selection)) {
-            var fieldResult = executeField(selection, rootValue, execContext);
-            var resultFieldKey = (0, _apolloUtilities.resultKeyNameFromField)(selection);
-            if (fieldResult !== undefined) {
-                if (result[resultFieldKey] === undefined) {
-                    result[resultFieldKey] = fieldResult;
-                } else {
-                    merge(result[resultFieldKey], fieldResult);
-                }
-            }
-        } else {
-            var fragment = void 0;
-            if ((0, _apolloUtilities.isInlineFragment)(selection)) {
-                fragment = selection;
-            } else {
-                // This is a named fragment
-                fragment = fragmentMap[selection.name.value];
-                if (!fragment) {
-                    throw new Error("No fragment named " + selection.name.value);
-                }
-            }
-            var typeCondition = fragment.typeCondition.name.value;
-            if (execContext.fragmentMatcher(rootValue, typeCondition, contextValue)) {
-                var fragmentResult = executeSelectionSet(fragment.selectionSet, rootValue, execContext);
-                merge(result, fragmentResult);
-            }
-        }
-    });
-    if (execContext.resultMapper) {
-        return execContext.resultMapper(result, rootValue);
-    }
-    return result;
-}
-function executeField(field, rootValue, execContext) {
-    var variables = execContext.variableValues,
-        contextValue = execContext.contextValue,
-        resolver = execContext.resolver;
-    var fieldName = field.name.value;
-    var args = (0, _apolloUtilities.argumentsObjectFromField)(field, variables);
-    var info = {
-        isLeaf: !field.selectionSet,
-        resultKey: (0, _apolloUtilities.resultKeyNameFromField)(field),
-        directives: (0, _apolloUtilities.getDirectiveInfoFromField)(field, variables)
-    };
-    var result = resolver(fieldName, rootValue, args, contextValue, info);
-    // Handle all scalar types here
-    if (!field.selectionSet) {
-        return result;
-    }
-    // From here down, the field has a selection set, which means it's trying to
-    // query a GraphQLObjectType
-    if (result == null) {
-        // Basically any field in a GraphQL response can be null, or missing
-        return result;
-    }
-    if (Array.isArray(result)) {
-        return executeSubSelectedArray(field, result, execContext);
-    }
-    // Returned value is an object, and the query has a sub-selection. Recurse.
-    return executeSelectionSet(field.selectionSet, result, execContext);
-}
-function executeSubSelectedArray(field, result, execContext) {
-    return result.map(function (item) {
-        // null value in array
-        if (item === null) {
-            return null;
-        }
-        // This is a nested array, recurse
-        if (Array.isArray(item)) {
-            return executeSubSelectedArray(field, item, execContext);
-        }
-        // This is an object, run the selection set on it
-        return executeSelectionSet(field.selectionSet, item, execContext);
-    });
-}
-var hasOwn = Object.prototype.hasOwnProperty;
-function merge(dest, src) {
-    if (src !== null && typeof src === 'object') {
-        Object.keys(src).forEach(function (key) {
-            var srcVal = src[key];
-            if (!hasOwn.call(dest, key)) {
-                dest[key] = srcVal;
-            } else {
-                merge(dest[key], srcVal);
-            }
-        });
-    }
-}
-//# sourceMappingURL=graphql.js.map
-},{"apollo-utilities":167}],223:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.filter = filter;
-exports.check = check;
-exports.propType = propType;
-
-var _graphql = require('./graphql');
-
-function filter(doc, data) {
-    var resolver = function (fieldName, root, args, context, info) {
-        return root[info.resultKey];
-    };
-    return (0, _graphql.graphql)(resolver, doc, data);
-}
-// TODO: we should probably make check call propType and then throw,
-// rather than the other way round, to avoid constructing stack traces
-// for things like oneOf uses in React. At this stage I doubt many people
-// are using this like that, but in the future, who knows?
-function check(doc, data) {
-    var resolver = function (fieldName, root, args, context, info) {
-        if (!{}.hasOwnProperty.call(root, info.resultKey)) {
-            throw new Error(info.resultKey + " missing on " + root);
-        }
-        return root[info.resultKey];
-    };
-    (0, _graphql.graphql)(resolver, doc, data, {}, {}, {
-        fragmentMatcher: function () {
-            return false;
-        }
-    });
-}
-// Lifted/adapted from
-//   https://github.com/facebook/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js
-var ANONYMOUS = '<<anonymous>>';
-function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-}
-// Make `instanceof Error` still work for returned errors.
-PropTypeError.prototype = Error.prototype;
-var reactPropTypeLocationNames = {
-    prop: 'prop',
-    context: 'context',
-    childContext: 'child context'
-};
-function createChainableTypeChecker(validate) {
-    function checkType(isRequired, props, propName, componentName, location, propFullName) {
-        componentName = componentName || ANONYMOUS;
-        propFullName = propFullName || propName;
-        if (props[propName] == null) {
-            var locationName = reactPropTypeLocationNames[location];
-            if (isRequired) {
-                if (props[propName] === null) {
-                    return new PropTypeError("The " + locationName + " `" + propFullName + "` is marked as required " + ("in `" + componentName + "`, but its value is `null`."));
-                }
-                return new PropTypeError("The " + locationName + " `" + propFullName + "` is marked as required in " + ("`" + componentName + "`, but its value is `undefined`."));
-            }
-            return null;
-        } else {
-            return validate(props, propName, componentName, location, propFullName);
-        }
-    }
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-    return chainedCheckType;
-}
-function propType(doc) {
-    return createChainableTypeChecker(function (props, propName) {
-        var prop = props[propName];
-        try {
-            if (!prop.loading) {
-                check(doc, prop);
-            }
-            return null;
-        } catch (e) {
-            // Need a much better error.
-            // Also we aren't checking for extra fields
-            return e;
-        }
-    });
-}
-//# sourceMappingURL=utilities.js.map
-},{"./graphql":224}],220:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.propType = exports.check = exports.filter = undefined;
-
-var _utilities = require('./utilities');
-
-Object.defineProperty(exports, 'filter', {
-  enumerable: true,
-  get: function () {
-    return _utilities.filter;
-  }
-});
-Object.defineProperty(exports, 'check', {
-  enumerable: true,
-  get: function () {
-    return _utilities.check;
-  }
-});
-Object.defineProperty(exports, 'propType', {
-  enumerable: true,
-  get: function () {
-    return _utilities.propType;
-  }
-});
-
-var _graphql = require('./graphql');
-
-exports.default = _graphql.graphql;
-//# sourceMappingURL=index.js.map
-},{"./utilities":223,"./graphql":224}],157:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.ID_KEY = undefined;
-exports.readQueryFromStore = readQueryFromStore;
-exports.diffQueryAgainstStore = diffQueryAgainstStore;
-exports.assertIdValue = assertIdValue;
-
-var _graphqlAnywhere = require('graphql-anywhere');
-
-var _graphqlAnywhere2 = _interopRequireDefault(_graphqlAnywhere);
-
-var _apolloUtilities = require('apollo-utilities');
+var _unicodeWords2 = _interopRequireDefault(_unicodeWords);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
+/**
+ * Splits `string` into an array of its words.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to inspect.
+ * @param {RegExp|string} [pattern] The pattern to match words.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+ * @returns {Array} Returns the words of `string`.
+ * @example
+ *
+ * _.words('fred, barney, & pebbles');
+ * // => ['fred', 'barney', 'pebbles']
+ *
+ * _.words('fred, barney, & pebbles', /[^, ]+/g);
+ * // => ['fred', 'barney', '&', 'pebbles']
+ */
+function words(string, pattern, guard) {
+  string = (0, _toString2.default)(string);
+  pattern = guard ? undefined : pattern;
+
+  if (pattern === undefined) {
+    return (0, _hasUnicodeWord2.default)(string) ? (0, _unicodeWords2.default)(string) : (0, _asciiWords2.default)(string);
+  }
+  return string.match(pattern) || [];
+}
+
+exports.default = words;
+},{"./_asciiWords.js":219,"./_hasUnicodeWord.js":220,"./toString.js":119,"./_unicodeWords.js":221}],194:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _arrayReduce = require('./_arrayReduce.js');
+
+var _arrayReduce2 = _interopRequireDefault(_arrayReduce);
+
+var _deburr = require('./deburr.js');
+
+var _deburr2 = _interopRequireDefault(_deburr);
+
+var _words = require('./words.js');
+
+var _words2 = _interopRequireDefault(_words);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose unicode capture groups. */
+var rsApos = "['\u2019]";
+
+/** Used to match apostrophes. */
+var reApos = RegExp(rsApos, 'g');
 
 /**
- * The key which the cache id for a given value is stored in the result object. This key is private
- * and should not be used by Apollo client users.
- *
- * Uses a symbol if available in the environment.
+ * Creates a function like `_.camelCase`.
  *
  * @private
+ * @param {Function} callback The function to combine each word.
+ * @returns {Function} Returns the new compounder function.
  */
-var ID_KEY = exports.ID_KEY = typeof Symbol !== 'undefined' ? Symbol('id') : '@@id';
-/**
- * Resolves the result of a query solely from the store (i.e. never hits the server).
- *
- * @param {Store} store The {@link NormalizedCache} used by Apollo for the `data` portion of the
- * store.
- *
- * @param {DocumentNode} query The query document to resolve from the data available in the store.
- *
- * @param {Object} [variables] A map from the name of a variable to its value. These variables can
- * be referenced by the query document.
- *
- * @param {any} previousResult The previous result returned by this function for the same query.
- * If nothing in the store changed since that previous result then values from the previous result
- * will be returned to preserve referential equality.
- */
-function readQueryFromStore(options) {
-    var optsPatch = { returnPartialData: false };
-    return diffQueryAgainstStore(__assign({}, options, optsPatch)).result;
+function createCompounder(callback) {
+  return function (string) {
+    return (0, _arrayReduce2.default)((0, _words2.default)((0, _deburr2.default)(string).replace(reApos, '')), callback, '');
+  };
 }
-var readStoreResolver = function (fieldName, idValue, args, context, _a) {
-    var resultKey = _a.resultKey,
-        directives = _a.directives;
-    assertIdValue(idValue);
-    var objId = idValue.id;
-    var obj = context.store.get(objId);
-    var storeKeyName = fieldName;
-    if (args || directives) {
-        // We happen to know here that getStoreKeyName returns its first
-        // argument unmodified if there are no args or directives, so we can
-        // avoid calling the function at all in that case, as a small but
-        // important optimization to this frequently executed code.
-        storeKeyName = (0, _apolloUtilities.getStoreKeyName)(storeKeyName, args, directives);
-    }
-    var fieldValue = void 0;
-    if (obj) {
-        fieldValue = obj[storeKeyName];
-        if (typeof fieldValue === 'undefined' && context.cacheRedirects && (obj.__typename || objId === 'ROOT_QUERY')) {
-            var typename = obj.__typename || 'Query';
-            // Look for the type in the custom resolver map
-            var type = context.cacheRedirects[typename];
-            if (type) {
-                // Look for the field in the custom resolver map
-                var resolver = type[fieldName];
-                if (resolver) {
-                    fieldValue = resolver(obj, args, {
-                        getCacheKey: function (storeObj) {
-                            return (0, _apolloUtilities.toIdValue)({
-                                id: context.dataIdFromObject(storeObj),
-                                typename: storeObj.__typename
-                            });
-                        }
-                    });
-                }
-            }
-        }
-    }
-    if (typeof fieldValue === 'undefined') {
-        if (!context.returnPartialData) {
-            throw new Error("Can't find field " + storeKeyName + " on object (" + objId + ") " + JSON.stringify(obj, null, 2) + ".");
-        }
-        context.hasMissingField = true;
-        return fieldValue;
-    }
-    // if this is an object scalar, it must be a json blob and we have to unescape it
-    if ((0, _apolloUtilities.isJsonValue)(fieldValue)) {
-        // If the JSON blob is the same now as in the previous result, return the previous result to
-        // maintain referential equality.
-        //
-        // `isEqual` will first perform a referential equality check (with `===`) in case the JSON
-        // value has not changed in the store, and then a deep equality check if that fails in case a
-        // new JSON object was returned by the API but that object may still be the same.
-        if (idValue.previousResult && (0, _apolloUtilities.isEqual)(idValue.previousResult[resultKey], fieldValue.json)) {
-            return idValue.previousResult[resultKey];
-        }
-        return fieldValue.json;
-    }
-    // If we had a previous result, try adding that previous result value for this field to our field
-    // value. This will create a new value without mutating the old one.
-    if (idValue.previousResult) {
-        fieldValue = addPreviousResultToIdValues(fieldValue, idValue.previousResult[resultKey]);
-    }
-    return fieldValue;
+
+exports.default = createCompounder;
+},{"./_arrayReduce.js":201,"./deburr.js":202,"./words.js":203}],173:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _capitalize = require('./capitalize.js');
+
+var _capitalize2 = _interopRequireDefault(_capitalize);
+
+var _createCompounder = require('./_createCompounder.js');
+
+var _createCompounder2 = _interopRequireDefault(_createCompounder);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the camel cased string.
+ * @example
+ *
+ * _.camelCase('Foo Bar');
+ * // => 'fooBar'
+ *
+ * _.camelCase('--foo-bar--');
+ * // => 'fooBar'
+ *
+ * _.camelCase('__FOO_BAR__');
+ * // => 'fooBar'
+ */
+var camelCase = (0, _createCompounder2.default)(function (result, word, index) {
+  word = word.toLowerCase();
+  return result + (index ? (0, _capitalize2.default)(word) : word);
+});
+
+exports.default = camelCase;
+},{"./capitalize.js":193,"./_createCompounder.js":194}],133:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _camelCase = require('lodash-es/camelCase');
+
+var _camelCase2 = _interopRequireDefault(_camelCase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var namespacer = '/';
+
+exports.default = function (type) {
+  return type.indexOf(namespacer) === -1 ? (0, _camelCase2.default)(type) : type.split(namespacer).map(_camelCase2.default).join(namespacer);
 };
-/**
- * Given a store and a query, return as much of the result as possible and
- * identify if any data was missing from the store.
- * @param  {DocumentNode} query A parsed GraphQL query document
- * @param  {Store} store The Apollo Client store object
- * @param  {any} previousResult The previous result returned by this function for the same query
- * @return {result: Object, complete: [boolean]}
- */
-function diffQueryAgainstStore(_a) {
-    var store = _a.store,
-        query = _a.query,
-        variables = _a.variables,
-        previousResult = _a.previousResult,
-        _b = _a.returnPartialData,
-        returnPartialData = _b === void 0 ? true : _b,
-        _c = _a.rootId,
-        rootId = _c === void 0 ? 'ROOT_QUERY' : _c,
-        fragmentMatcherFunction = _a.fragmentMatcherFunction,
-        config = _a.config;
-    // Throw the right validation error by trying to find a query in the document
-    var queryDefinition = (0, _apolloUtilities.getQueryDefinition)(query);
-    variables = (0, _apolloUtilities.assign)({}, (0, _apolloUtilities.getDefaultValues)(queryDefinition), variables);
-    var context = {
-        // Global settings
-        store: store,
-        returnPartialData: returnPartialData,
-        dataIdFromObject: config && config.dataIdFromObject || null,
-        cacheRedirects: config && config.cacheRedirects || {},
-        // Flag set during execution
-        hasMissingField: false
-    };
-    var rootIdValue = {
-        type: 'id',
-        id: rootId,
-        previousResult: previousResult
-    };
-    var result = (0, _graphqlAnywhere2.default)(readStoreResolver, query, rootIdValue, context, variables, {
-        fragmentMatcher: fragmentMatcherFunction,
-        resultMapper: resultMapper
-    });
-    return {
-        result: result,
-        complete: !context.hasMissingField
-    };
-}
-function assertIdValue(idValue) {
-    if (!(0, _apolloUtilities.isIdValue)(idValue)) {
-        throw new Error("Encountered a sub-selection on the query, but the store doesn't have an object reference. This should never happen during normal use unless you have custom code that is directly manipulating the store; please file an issue.");
-    }
-}
-/**
- * Adds a previous result value to id values in a nested array. For a single id value and a single
- * previous result then the previous value is added directly.
- *
- * For arrays we put all of the ids from the previous result array in a map and add them to id
- * values with the same id.
- *
- * This function does not mutate. Instead it returns new instances of modified values.
- *
- * @private
- */
-function addPreviousResultToIdValues(value, previousResult) {
-    // If the value is an `IdValue`, add the previous result to it whether or not that
-    // `previousResult` is undefined.
-    //
-    // If the value is an array, recurse over each item trying to add the `previousResult` for that
-    // item.
-    if ((0, _apolloUtilities.isIdValue)(value)) {
-        return __assign({}, value, { previousResult: previousResult });
-    } else if (Array.isArray(value)) {
-        var idToPreviousResult_1 = new Map();
-        // If the previous result was an array, we want to build up our map of ids to previous results
-        // using the private `ID_KEY` property that is added in `resultMapper`.
-        if (Array.isArray(previousResult)) {
-            previousResult.forEach(function (item) {
-                // item can be null
-                if (item && item[ID_KEY]) {
-                    idToPreviousResult_1.set(item[ID_KEY], item);
-                    // idToPreviousResult[item[ID_KEY]] = item;
-                }
-            });
-        }
-        // For every value we want to add the previous result.
-        return value.map(function (item, i) {
-            // By default the previous result for this item will be in the same array position as this
-            // item.
-            var itemPreviousResult = previousResult && previousResult[i];
-            // If the item is an id value, we should check to see if there is a previous result for this
-            // specific id. If there is, that will be the value for `itemPreviousResult`.
-            if ((0, _apolloUtilities.isIdValue)(item)) {
-                itemPreviousResult = idToPreviousResult_1.get(item.id) || itemPreviousResult;
-            }
-            return addPreviousResultToIdValues(item, itemPreviousResult);
-        });
-    }
-    // Return the value, nothing changed.
-    return value;
-}
-/**
- * Maps a result from `graphql-anywhere` to a final result value.
- *
- * If the result and the previous result from the `idValue` pass a shallow equality test, we just
- * return the `previousResult` to maintain referential equality.
- *
- * We also add a private id property to the result that we can use later on.
- *
- * @private
- */
-function resultMapper(resultFields, idValue) {
-    // If we had a previous result, we may be able to return that and preserve referential equality
-    if (idValue.previousResult) {
-        var currentResultKeys_1 = Object.keys(resultFields);
-        var sameAsPreviousResult =
-        // Confirm that we have the same keys in both the current result and the previous result.
-        Object.keys(idValue.previousResult).every(function (key) {
-            return currentResultKeys_1.indexOf(key) > -1;
-        }) &&
-        // Perform a shallow comparison of the result fields with the previous result. If all of
-        // the shallow fields are referentially equal to the fields of the previous result we can
-        // just return the previous result.
-        //
-        // While we do a shallow comparison of objects, but we do a deep comparison of arrays.
-        currentResultKeys_1.every(function (key) {
-            return areNestedArrayItemsStrictlyEqual(resultFields[key], idValue.previousResult[key]);
-        });
-        if (sameAsPreviousResult) {
-            return idValue.previousResult;
-        }
-    }
-    Object.defineProperty(resultFields, ID_KEY, {
-        enumerable: false,
-        configurable: true,
-        writable: false,
-        value: idValue.id
-    });
-    return resultFields;
-}
-/**
- * Compare all the items to see if they are all referentially equal in two arrays no matter how
- * deeply nested the arrays are.
- *
- * @private
- */
-function areNestedArrayItemsStrictlyEqual(a, b) {
-    // If `a` and `b` are referentially equal, return true.
-    if (a === b) {
-        return true;
-    }
-    // If either `a` or `b` are not an array or not of the same length return false. `a` and `b` are
-    // known to not be equal here, we checked above.
-    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) {
-        return false;
-    }
-    // Otherwise let us compare all of the array items (which are potentially nested arrays!) to see
-    // if they are equal.
-    return a.every(function (item, i) {
-        return areNestedArrayItemsStrictlyEqual(item, b[i]);
-    });
-}
-//# sourceMappingURL=readFromStore.js.map
-},{"graphql-anywhere":220,"apollo-utilities":167}],162:[function(require,module,exports) {
+},{"lodash-es/camelCase":173}],134:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.record = record;
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
+
+exports.default = function (array, callback) {
+  return array.reduce(function (partialObject, element) {
+    return callback(partialObject, element);
+  }, {});
 };
-var RecordingCache = /** @class */function () {
-    function RecordingCache(data) {
-        if (data === void 0) {
-            data = {};
-        }
-        this.data = data;
-        this.recordedData = {};
-    }
-    RecordingCache.prototype.record = function (transaction) {
-        transaction(this);
-        var recordedData = this.recordedData;
-        this.recordedData = {};
-        return recordedData;
-    };
-    RecordingCache.prototype.toObject = function () {
-        return __assign({}, this.data, this.recordedData);
-    };
-    RecordingCache.prototype.get = function (dataId) {
-        if (this.recordedData.hasOwnProperty(dataId)) {
-            // recording always takes precedence:
-            return this.recordedData[dataId];
-        }
-        return this.data[dataId];
-    };
-    RecordingCache.prototype.set = function (dataId, value) {
-        if (this.get(dataId) !== value) {
-            this.recordedData[dataId] = value;
-        }
-    };
-    RecordingCache.prototype.delete = function (dataId) {
-        this.recordedData[dataId] = undefined;
-    };
-    RecordingCache.prototype.clear = function () {
-        var _this = this;
-        Object.keys(this.data).forEach(function (dataId) {
-            return _this.delete(dataId);
-        });
-        this.recordedData = {};
-    };
-    RecordingCache.prototype.replace = function (newData) {
-        this.clear();
-        this.recordedData = __assign({}, newData);
-    };
-    return RecordingCache;
-}();
-exports.RecordingCache = RecordingCache;
-function record(startingState, transaction) {
-    var recordingCache = new RecordingCache(startingState);
-    return recordingCache.record(transaction);
+},{}],151:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getTag = require('./_getTag.js');
+
+var _getTag2 = _interopRequireDefault(_getTag);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** `Object#toString` result references. */
+var mapTag = '[object Map]';
+
+/**
+ * The base implementation of `_.isMap` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ */
+function baseIsMap(value) {
+  return (0, _isObjectLike2.default)(value) && (0, _getTag2.default)(value) == mapTag;
 }
-//# sourceMappingURL=recordingCache.js.map
+
+exports.default = baseIsMap;
+},{"./_getTag.js":144,"./isObjectLike.js":141}],124:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseIsMap = require('./_baseIsMap.js');
+
+var _baseIsMap2 = _interopRequireDefault(_baseIsMap);
+
+var _baseUnary = require('./_baseUnary.js');
+
+var _baseUnary2 = _interopRequireDefault(_baseUnary);
+
+var _nodeUtil = require('./_nodeUtil.js');
+
+var _nodeUtil2 = _interopRequireDefault(_nodeUtil);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Node.js helper references. */
+var nodeIsMap = _nodeUtil2.default && _nodeUtil2.default.isMap;
+
+/**
+ * Checks if `value` is classified as a `Map` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ * @example
+ *
+ * _.isMap(new Map);
+ * // => true
+ *
+ * _.isMap(new WeakMap);
+ * // => false
+ */
+var isMap = nodeIsMap ? (0, _baseUnary2.default)(nodeIsMap) : _baseIsMap2.default;
+
+exports.default = isMap;
+},{"./_baseIsMap.js":151,"./_baseUnary.js":152,"./_nodeUtil.js":153}],121:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ownKeys;
+
+var _isMap = require('lodash-es/isMap');
+
+var _isMap2 = _interopRequireDefault(_isMap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ownKeys(object) {
+  if ((0, _isMap2.default)(object)) {
+    return Array.from(object.keys());
+  }
+
+  if (typeof Reflect !== 'undefined' && typeof Reflect.ownKeys === 'function') {
+    return Reflect.ownKeys(object);
+  }
+
+  var keys = Object.getOwnPropertyNames(object);
+
+  if (typeof Object.getOwnPropertySymbols === 'function') {
+    keys = keys.concat(Object.getOwnPropertySymbols(object));
+  }
+
+  return keys;
+}
+},{"lodash-es/isMap":124}],155:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isMap = require('lodash-es/isMap');
+
+var _isMap2 = _interopRequireDefault(_isMap);
+
+var _constants = require('../constants');
+
+var _ownKeys = require('./ownKeys');
+
+var _ownKeys2 = _interopRequireDefault(_ownKeys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }return arr2;
+  } else {
+    return Array.from(arr);
+  }
+}
+
+function get(key, x) {
+  return (0, _isMap2.default)(x) ? x.get(key) : x[key];
+}
+
+exports.default = function (predicate) {
+  return function flatten(map) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        _ref$namespace = _ref.namespace,
+        namespace = _ref$namespace === undefined ? _constants.DEFAULT_NAMESPACE : _ref$namespace,
+        prefix = _ref.prefix;
+
+    var partialFlatMap = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var partialFlatActionType = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+
+    function connectNamespace(type) {
+      var _ref2;
+
+      if (!partialFlatActionType) return type;
+      var types = type.toString().split(_constants.ACTION_TYPE_DELIMITER);
+      var partials = partialFlatActionType.split(_constants.ACTION_TYPE_DELIMITER);
+      return (_ref2 = []).concat.apply(_ref2, _toConsumableArray(partials.map(function (p) {
+        return types.map(function (t) {
+          return '' + p + namespace + t;
+        });
+      }))).join(_constants.ACTION_TYPE_DELIMITER);
+    }
+
+    function connectPrefix(type) {
+      if (partialFlatActionType || !prefix) {
+        return type;
+      }
+
+      return '' + prefix + namespace + type;
+    }
+
+    (0, _ownKeys2.default)(map).forEach(function (type) {
+      var nextNamespace = connectPrefix(connectNamespace(type));
+      var mapValue = get(type, map);
+
+      if (predicate(mapValue)) {
+        flatten(mapValue, { namespace: namespace, prefix: prefix }, partialFlatMap, nextNamespace);
+      } else {
+        partialFlatMap[nextNamespace] = mapValue;
+      }
+    });
+
+    return partialFlatMap;
+  };
+};
+},{"lodash-es/isMap":124,"../constants":114,"./ownKeys":121}],135:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isPlainObject = require('lodash-es/isPlainObject');
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _flattenWhenNode = require('./flattenWhenNode');
+
+var _flattenWhenNode2 = _interopRequireDefault(_flattenWhenNode);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _flattenWhenNode2.default)(_isPlainObject2.default);
+},{"lodash-es/isPlainObject":123,"./flattenWhenNode":155}],136:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = unflattenActionCreators;
+
+var _isEmpty = require('lodash-es/isEmpty');
+
+var _isEmpty2 = _interopRequireDefault(_isEmpty);
+
+var _constants = require('../constants');
+
+var _camelCase = require('./camelCase');
+
+var _camelCase2 = _interopRequireDefault(_camelCase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function unflattenActionCreators(flatActionCreators) {
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$namespace = _ref.namespace,
+      namespace = _ref$namespace === undefined ? _constants.DEFAULT_NAMESPACE : _ref$namespace,
+      prefix = _ref.prefix;
+
+  function unflatten(flatActionType) {
+    var partialNestedActionCreators = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var partialFlatActionTypePath = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+    var nextNamespace = (0, _camelCase2.default)(partialFlatActionTypePath.shift());
+    if ((0, _isEmpty2.default)(partialFlatActionTypePath)) {
+      partialNestedActionCreators[nextNamespace] = flatActionCreators[flatActionType];
+    } else {
+      if (!partialNestedActionCreators[nextNamespace]) {
+        partialNestedActionCreators[nextNamespace] = {};
+      }
+      unflatten(flatActionType, partialNestedActionCreators[nextNamespace], partialFlatActionTypePath);
+    }
+  }
+
+  var nestedActionCreators = {};
+  Object.getOwnPropertyNames(flatActionCreators).forEach(function (type) {
+    var unprefixedType = prefix ? type.replace('' + prefix + namespace, '') : type;
+    return unflatten(type, nestedActionCreators, unprefixedType.split(namespace));
+  });
+
+  return nestedActionCreators;
+}
+},{"lodash-es/isEmpty":118,"../constants":114,"./camelCase":133}],87:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createActions;
+
+var _identity = require("lodash-es/identity");
+
+var _identity2 = _interopRequireDefault(_identity);
+
+var _isPlainObject = require("lodash-es/isPlainObject");
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _isArray = require("lodash-es/isArray");
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _last = require("lodash-es/last");
+
+var _last2 = _interopRequireDefault(_last);
+
+var _isString = require("lodash-es/isString");
+
+var _isString2 = _interopRequireDefault(_isString);
+
+var _isFunction = require("lodash-es/isFunction");
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isNil = require("lodash-es/isNil");
+
+var _isNil2 = _interopRequireDefault(_isNil);
+
+var _invariant = require("invariant");
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _camelCase = require("./utils/camelCase");
+
+var _camelCase2 = _interopRequireDefault(_camelCase);
+
+var _arrayToObject = require("./utils/arrayToObject");
+
+var _arrayToObject2 = _interopRequireDefault(_arrayToObject);
+
+var _flattenActionMap = require("./utils/flattenActionMap");
+
+var _flattenActionMap2 = _interopRequireDefault(_flattenActionMap);
+
+var _unflattenActionCreators = require("./utils/unflattenActionCreators");
+
+var _unflattenActionCreators2 = _interopRequireDefault(_unflattenActionCreators);
+
+var _createAction = require("./createAction");
+
+var _createAction2 = _interopRequireDefault(_createAction);
+
+var _constants = require("./constants");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _slicedToArray = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];var _n = true;var _d = false;var _e = undefined;try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;_e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }return _arr;
+  }return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
+  } else {
+    obj[key] = value;
+  }return obj;
+}
+
+function _toConsumableArray(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }return arr2;
+  } else {
+    return Array.from(arr);
+  }
+}
+
+function createActions(actionMap) {
+  for (var _len = arguments.length, identityActions = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    identityActions[_key - 1] = arguments[_key];
+  }
+
+  var options = (0, _isPlainObject2.default)((0, _last2.default)(identityActions)) ? identityActions.pop() : {};
+  (0, _invariant2.default)(identityActions.every(_isString2.default) && ((0, _isString2.default)(actionMap) || (0, _isPlainObject2.default)(actionMap)), 'Expected optional object followed by string action types');
+  if ((0, _isString2.default)(actionMap)) {
+    return actionCreatorsFromIdentityActions([actionMap].concat(identityActions), options);
+  }
+  return _extends({}, actionCreatorsFromActionMap(actionMap, options), actionCreatorsFromIdentityActions(identityActions, options));
+}
+
+function actionCreatorsFromActionMap(actionMap, options) {
+  var flatActionMap = (0, _flattenActionMap2.default)(actionMap, options);
+  var flatActionCreators = actionMapToActionCreators(flatActionMap);
+  return (0, _unflattenActionCreators2.default)(flatActionCreators, options);
+}
+
+function actionMapToActionCreators(actionMap) {
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      prefix = _ref.prefix,
+      _ref$namespace = _ref.namespace,
+      namespace = _ref$namespace === undefined ? _constants.DEFAULT_NAMESPACE : _ref$namespace;
+
+  function isValidActionMapValue(actionMapValue) {
+    if ((0, _isFunction2.default)(actionMapValue) || (0, _isNil2.default)(actionMapValue)) {
+      return true;
+    }
+
+    if ((0, _isArray2.default)(actionMapValue)) {
+      var _actionMapValue = _slicedToArray(actionMapValue, 2),
+          _actionMapValue$ = _actionMapValue[0],
+          payload = _actionMapValue$ === undefined ? _identity2.default : _actionMapValue$,
+          meta = _actionMapValue[1];
+
+      return (0, _isFunction2.default)(payload) && (0, _isFunction2.default)(meta);
+    }
+
+    return false;
+  }
+
+  return (0, _arrayToObject2.default)(Object.keys(actionMap), function (partialActionCreators, type) {
+    var actionMapValue = actionMap[type];
+    (0, _invariant2.default)(isValidActionMapValue(actionMapValue), 'Expected function, undefined, null, or array with payload and meta ' + ('functions for ' + type));
+    var prefixedType = prefix ? '' + prefix + namespace + type : type;
+    var actionCreator = (0, _isArray2.default)(actionMapValue) ? _createAction2.default.apply(undefined, [prefixedType].concat(_toConsumableArray(actionMapValue))) : (0, _createAction2.default)(prefixedType, actionMapValue);
+    return _extends({}, partialActionCreators, _defineProperty({}, type, actionCreator));
+  });
+}
+
+function actionCreatorsFromIdentityActions(identityActions, options) {
+  var actionMap = (0, _arrayToObject2.default)(identityActions, function (partialActionMap, type) {
+    return _extends({}, partialActionMap, _defineProperty({}, type, _identity2.default));
+  });
+  var actionCreators = actionMapToActionCreators(actionMap, options);
+  return (0, _arrayToObject2.default)(Object.keys(actionCreators), function (partialActionCreators, type) {
+    return _extends({}, partialActionCreators, _defineProperty({}, (0, _camelCase2.default)(type), actionCreators[type]));
+  });
+}
+},{"lodash-es/identity":127,"lodash-es/isPlainObject":123,"lodash-es/isArray":137,"lodash-es/last":138,"lodash-es/isString":116,"lodash-es/isFunction":117,"lodash-es/isNil":128,"invariant":115,"./utils/camelCase":133,"./utils/arrayToObject":134,"./utils/flattenActionMap":135,"./utils/unflattenActionCreators":136,"./createAction":86,"./constants":114}],217:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _WeakMap = require('./_WeakMap.js');
+
+var _WeakMap2 = _interopRequireDefault(_WeakMap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to store function metadata. */
+var metaMap = _WeakMap2.default && new _WeakMap2.default();
+
+exports.default = metaMap;
+},{"./_WeakMap.js":166}],182:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _identity = require('./identity.js');
+
+var _identity2 = _interopRequireDefault(_identity);
+
+var _metaMap = require('./_metaMap.js');
+
+var _metaMap2 = _interopRequireDefault(_metaMap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * The base implementation of `setData` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */
+var baseSetData = !_metaMap2.default ? _identity2.default : function (func, data) {
+  _metaMap2.default.set(func, data);
+  return func;
+};
+
+exports.default = baseSetData;
+},{"./identity.js":127,"./_metaMap.js":217}],227:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isObject = require('./isObject.js');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Built-in value references. */
+var objectCreate = Object.create;
+
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */
+var baseCreate = function () {
+  function object() {}
+  return function (proto) {
+    if (!(0, _isObject2.default)(proto)) {
+      return {};
+    }
+    if (objectCreate) {
+      return objectCreate(proto);
+    }
+    object.prototype = proto;
+    var result = new object();
+    object.prototype = undefined;
+    return result;
+  };
+}();
+
+exports.default = baseCreate;
+},{"./isObject.js":142}],205:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseCreate = require('./_baseCreate.js');
+
+var _baseCreate2 = _interopRequireDefault(_baseCreate);
+
+var _isObject = require('./isObject.js');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creates a function that produces an instance of `Ctor` regardless of
+ * whether it was invoked as part of a `new` expression or by `call` or `apply`.
+ *
+ * @private
+ * @param {Function} Ctor The constructor to wrap.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createCtor(Ctor) {
+  return function () {
+    // Use a `switch` statement to work with class constructors. See
+    // http://ecma-international.org/ecma-262/7.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
+    // for more details.
+    var args = arguments;
+    switch (args.length) {
+      case 0:
+        return new Ctor();
+      case 1:
+        return new Ctor(args[0]);
+      case 2:
+        return new Ctor(args[0], args[1]);
+      case 3:
+        return new Ctor(args[0], args[1], args[2]);
+      case 4:
+        return new Ctor(args[0], args[1], args[2], args[3]);
+      case 5:
+        return new Ctor(args[0], args[1], args[2], args[3], args[4]);
+      case 6:
+        return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
+      case 7:
+        return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+    }
+    var thisBinding = (0, _baseCreate2.default)(Ctor.prototype),
+        result = Ctor.apply(thisBinding, args);
+
+    // Mimic the constructor's `return` behavior.
+    // See https://es5.github.io/#x13.2.2 for more details.
+    return (0, _isObject2.default)(result) ? result : thisBinding;
+  };
+}
+
+exports.default = createCtor;
+},{"./_baseCreate.js":227,"./isObject.js":142}],183:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createCtor = require('./_createCtor.js');
+
+var _createCtor2 = _interopRequireDefault(_createCtor);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1;
+
+/**
+ * Creates a function that wraps `func` to invoke it with the optional `this`
+ * binding of `thisArg`.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createBind(func, bitmask, thisArg) {
+  var isBind = bitmask & WRAP_BIND_FLAG,
+      Ctor = (0, _createCtor2.default)(func);
+
+  function wrapper() {
+    var fn = this && this !== _root2.default && this instanceof wrapper ? Ctor : func;
+    return fn.apply(isBind ? thisArg : this, arguments);
+  }
+  return wrapper;
+}
+
+exports.default = createBind;
+},{"./_createCtor.js":205,"./_root.js":174}],204:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
+ *
+ * @private
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
+ */
+function apply(func, thisArg, args) {
+  switch (args.length) {
+    case 0:
+      return func.call(thisArg);
+    case 1:
+      return func.call(thisArg, args[0]);
+    case 2:
+      return func.call(thisArg, args[0], args[1]);
+    case 3:
+      return func.call(thisArg, args[0], args[1], args[2]);
+  }
+  return func.apply(thisArg, args);
+}
+
+exports.default = apply;
+},{}],209:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates an array that is the composition of partially applied arguments,
+ * placeholders, and provided arguments into a single array of arguments.
+ *
+ * @private
+ * @param {Array} args The provided arguments.
+ * @param {Array} partials The arguments to prepend to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @params {boolean} [isCurried] Specify composing for a curried function.
+ * @returns {Array} Returns the new array of composed arguments.
+ */
+function composeArgs(args, partials, holders, isCurried) {
+  var argsIndex = -1,
+      argsLength = args.length,
+      holdersLength = holders.length,
+      leftIndex = -1,
+      leftLength = partials.length,
+      rangeLength = nativeMax(argsLength - holdersLength, 0),
+      result = Array(leftLength + rangeLength),
+      isUncurried = !isCurried;
+
+  while (++leftIndex < leftLength) {
+    result[leftIndex] = partials[leftIndex];
+  }
+  while (++argsIndex < holdersLength) {
+    if (isUncurried || argsIndex < argsLength) {
+      result[holders[argsIndex]] = args[argsIndex];
+    }
+  }
+  while (rangeLength--) {
+    result[leftIndex++] = args[argsIndex++];
+  }
+  return result;
+}
+
+exports.default = composeArgs;
+},{}],210:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * This function is like `composeArgs` except that the arguments composition
+ * is tailored for `_.partialRight`.
+ *
+ * @private
+ * @param {Array} args The provided arguments.
+ * @param {Array} partials The arguments to append to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @params {boolean} [isCurried] Specify composing for a curried function.
+ * @returns {Array} Returns the new array of composed arguments.
+ */
+function composeArgsRight(args, partials, holders, isCurried) {
+  var argsIndex = -1,
+      argsLength = args.length,
+      holdersIndex = -1,
+      holdersLength = holders.length,
+      rightIndex = -1,
+      rightLength = partials.length,
+      rangeLength = nativeMax(argsLength - holdersLength, 0),
+      result = Array(rangeLength + rightLength),
+      isUncurried = !isCurried;
+
+  while (++argsIndex < rangeLength) {
+    result[argsIndex] = args[argsIndex];
+  }
+  var offset = argsIndex;
+  while (++rightIndex < rightLength) {
+    result[offset + rightIndex] = partials[rightIndex];
+  }
+  while (++holdersIndex < holdersLength) {
+    if (isUncurried || argsIndex < argsLength) {
+      result[offset + holders[holdersIndex]] = args[argsIndex++];
+    }
+  }
+  return result;
+}
+
+exports.default = composeArgsRight;
+},{}],211:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Gets the number of `placeholder` occurrences in `array`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} placeholder The placeholder to search for.
+ * @returns {number} Returns the placeholder count.
+ */
+function countHolders(array, placeholder) {
+  var length = array.length,
+      result = 0;
+
+  while (length--) {
+    if (array[length] === placeholder) {
+      ++result;
+    }
+  }
+  return result;
+}
+
+exports.default = countHolders;
+},{}],247:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The function whose prototype chain sequence wrappers inherit from.
+ *
+ * @private
+ */
+function baseLodash() {
+  // No operation performed.
+}
+
+exports.default = baseLodash;
+},{}],235:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseCreate = require('./_baseCreate.js');
+
+var _baseCreate2 = _interopRequireDefault(_baseCreate);
+
+var _baseLodash = require('./_baseLodash.js');
+
+var _baseLodash2 = _interopRequireDefault(_baseLodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used as references for the maximum length and index of an array. */
+var MAX_ARRAY_LENGTH = 4294967295;
+
+/**
+ * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
+ *
+ * @private
+ * @constructor
+ * @param {*} value The value to wrap.
+ */
+function LazyWrapper(value) {
+  this.__wrapped__ = value;
+  this.__actions__ = [];
+  this.__dir__ = 1;
+  this.__filtered__ = false;
+  this.__iteratees__ = [];
+  this.__takeCount__ = MAX_ARRAY_LENGTH;
+  this.__views__ = [];
+}
+
+// Ensure `LazyWrapper` is an instance of `baseLodash`.
+LazyWrapper.prototype = (0, _baseCreate2.default)(_baseLodash2.default.prototype);
+LazyWrapper.prototype.constructor = LazyWrapper;
+
+exports.default = LazyWrapper;
+},{"./_baseCreate.js":227,"./_baseLodash.js":247}],218:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * This method returns `undefined`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.3.0
+ * @category Util
+ * @example
+ *
+ * _.times(2, _.noop);
+ * // => [undefined, undefined]
+ */
+function noop() {
+  // No operation performed.
+}
+
+exports.default = noop;
+},{}],187:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _metaMap = require('./_metaMap.js');
+
+var _metaMap2 = _interopRequireDefault(_metaMap);
+
+var _noop = require('./noop.js');
+
+var _noop2 = _interopRequireDefault(_noop);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Gets metadata for `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {*} Returns the metadata for `func`.
+ */
+var getData = !_metaMap2.default ? _noop2.default : function (func) {
+  return _metaMap2.default.get(func);
+};
+
+exports.default = getData;
+},{"./_metaMap.js":217,"./noop.js":218}],246:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to lookup unminified function names. */
+var realNames = {};
+
+exports.default = realNames;
+},{}],236:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _realNames = require('./_realNames.js');
+
+var _realNames2 = _interopRequireDefault(_realNames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Gets the name of `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {string} Returns the function name.
+ */
+function getFuncName(func) {
+  var result = func.name + '',
+      array = _realNames2.default[result],
+      length = hasOwnProperty.call(_realNames2.default, result) ? array.length : 0;
+
+  while (length--) {
+    var data = array[length],
+        otherFunc = data.func;
+    if (otherFunc == null || otherFunc == func) {
+      return data.name;
+    }
+  }
+  return result;
+}
+
+exports.default = getFuncName;
+},{"./_realNames.js":246}],248:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseCreate = require('./_baseCreate.js');
+
+var _baseCreate2 = _interopRequireDefault(_baseCreate);
+
+var _baseLodash = require('./_baseLodash.js');
+
+var _baseLodash2 = _interopRequireDefault(_baseLodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * The base constructor for creating `lodash` wrapper objects.
+ *
+ * @private
+ * @param {*} value The value to wrap.
+ * @param {boolean} [chainAll] Enable explicit method chain sequences.
+ */
+function LodashWrapper(value, chainAll) {
+  this.__wrapped__ = value;
+  this.__actions__ = [];
+  this.__chain__ = !!chainAll;
+  this.__index__ = 0;
+  this.__values__ = undefined;
+}
+
+LodashWrapper.prototype = (0, _baseCreate2.default)(_baseLodash2.default.prototype);
+LodashWrapper.prototype.constructor = LodashWrapper;
+
+exports.default = LodashWrapper;
+},{"./_baseCreate.js":227,"./_baseLodash.js":247}],223:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */
+function copyArray(source, array) {
+  var index = -1,
+      length = source.length;
+
+  array || (array = Array(length));
+  while (++index < length) {
+    array[index] = source[index];
+  }
+  return array;
+}
+
+exports.default = copyArray;
+},{}],249:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _LazyWrapper = require('./_LazyWrapper.js');
+
+var _LazyWrapper2 = _interopRequireDefault(_LazyWrapper);
+
+var _LodashWrapper = require('./_LodashWrapper.js');
+
+var _LodashWrapper2 = _interopRequireDefault(_LodashWrapper);
+
+var _copyArray = require('./_copyArray.js');
+
+var _copyArray2 = _interopRequireDefault(_copyArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creates a clone of `wrapper`.
+ *
+ * @private
+ * @param {Object} wrapper The wrapper to clone.
+ * @returns {Object} Returns the cloned wrapper.
+ */
+function wrapperClone(wrapper) {
+  if (wrapper instanceof _LazyWrapper2.default) {
+    return wrapper.clone();
+  }
+  var result = new _LodashWrapper2.default(wrapper.__wrapped__, wrapper.__chain__);
+  result.__actions__ = (0, _copyArray2.default)(wrapper.__actions__);
+  result.__index__ = wrapper.__index__;
+  result.__values__ = wrapper.__values__;
+  return result;
+}
+
+exports.default = wrapperClone;
+},{"./_LazyWrapper.js":235,"./_LodashWrapper.js":248,"./_copyArray.js":223}],237:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _LazyWrapper = require('./_LazyWrapper.js');
+
+var _LazyWrapper2 = _interopRequireDefault(_LazyWrapper);
+
+var _LodashWrapper = require('./_LodashWrapper.js');
+
+var _LodashWrapper2 = _interopRequireDefault(_LodashWrapper);
+
+var _baseLodash = require('./_baseLodash.js');
+
+var _baseLodash2 = _interopRequireDefault(_baseLodash);
+
+var _isArray = require('./isArray.js');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isObjectLike = require('./isObjectLike.js');
+
+var _isObjectLike2 = _interopRequireDefault(_isObjectLike);
+
+var _wrapperClone = require('./_wrapperClone.js');
+
+var _wrapperClone2 = _interopRequireDefault(_wrapperClone);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Creates a `lodash` object which wraps `value` to enable implicit method
+ * chain sequences. Methods that operate on and return arrays, collections,
+ * and functions can be chained together. Methods that retrieve a single value
+ * or may return a primitive value will automatically end the chain sequence
+ * and return the unwrapped value. Otherwise, the value must be unwrapped
+ * with `_#value`.
+ *
+ * Explicit chain sequences, which must be unwrapped with `_#value`, may be
+ * enabled using `_.chain`.
+ *
+ * The execution of chained methods is lazy, that is, it's deferred until
+ * `_#value` is implicitly or explicitly called.
+ *
+ * Lazy evaluation allows several methods to support shortcut fusion.
+ * Shortcut fusion is an optimization to merge iteratee calls; this avoids
+ * the creation of intermediate arrays and can greatly reduce the number of
+ * iteratee executions. Sections of a chain sequence qualify for shortcut
+ * fusion if the section is applied to an array and iteratees accept only
+ * one argument. The heuristic for whether a section qualifies for shortcut
+ * fusion is subject to change.
+ *
+ * Chaining is supported in custom builds as long as the `_#value` method is
+ * directly or indirectly included in the build.
+ *
+ * In addition to lodash methods, wrappers have `Array` and `String` methods.
+ *
+ * The wrapper `Array` methods are:
+ * `concat`, `join`, `pop`, `push`, `shift`, `sort`, `splice`, and `unshift`
+ *
+ * The wrapper `String` methods are:
+ * `replace` and `split`
+ *
+ * The wrapper methods that support shortcut fusion are:
+ * `at`, `compact`, `drop`, `dropRight`, `dropWhile`, `filter`, `find`,
+ * `findLast`, `head`, `initial`, `last`, `map`, `reject`, `reverse`, `slice`,
+ * `tail`, `take`, `takeRight`, `takeRightWhile`, `takeWhile`, and `toArray`
+ *
+ * The chainable wrapper methods are:
+ * `after`, `ary`, `assign`, `assignIn`, `assignInWith`, `assignWith`, `at`,
+ * `before`, `bind`, `bindAll`, `bindKey`, `castArray`, `chain`, `chunk`,
+ * `commit`, `compact`, `concat`, `conforms`, `constant`, `countBy`, `create`,
+ * `curry`, `debounce`, `defaults`, `defaultsDeep`, `defer`, `delay`,
+ * `difference`, `differenceBy`, `differenceWith`, `drop`, `dropRight`,
+ * `dropRightWhile`, `dropWhile`, `extend`, `extendWith`, `fill`, `filter`,
+ * `flatMap`, `flatMapDeep`, `flatMapDepth`, `flatten`, `flattenDeep`,
+ * `flattenDepth`, `flip`, `flow`, `flowRight`, `fromPairs`, `functions`,
+ * `functionsIn`, `groupBy`, `initial`, `intersection`, `intersectionBy`,
+ * `intersectionWith`, `invert`, `invertBy`, `invokeMap`, `iteratee`, `keyBy`,
+ * `keys`, `keysIn`, `map`, `mapKeys`, `mapValues`, `matches`, `matchesProperty`,
+ * `memoize`, `merge`, `mergeWith`, `method`, `methodOf`, `mixin`, `negate`,
+ * `nthArg`, `omit`, `omitBy`, `once`, `orderBy`, `over`, `overArgs`,
+ * `overEvery`, `overSome`, `partial`, `partialRight`, `partition`, `pick`,
+ * `pickBy`, `plant`, `property`, `propertyOf`, `pull`, `pullAll`, `pullAllBy`,
+ * `pullAllWith`, `pullAt`, `push`, `range`, `rangeRight`, `rearg`, `reject`,
+ * `remove`, `rest`, `reverse`, `sampleSize`, `set`, `setWith`, `shuffle`,
+ * `slice`, `sort`, `sortBy`, `splice`, `spread`, `tail`, `take`, `takeRight`,
+ * `takeRightWhile`, `takeWhile`, `tap`, `throttle`, `thru`, `toArray`,
+ * `toPairs`, `toPairsIn`, `toPath`, `toPlainObject`, `transform`, `unary`,
+ * `union`, `unionBy`, `unionWith`, `uniq`, `uniqBy`, `uniqWith`, `unset`,
+ * `unshift`, `unzip`, `unzipWith`, `update`, `updateWith`, `values`,
+ * `valuesIn`, `without`, `wrap`, `xor`, `xorBy`, `xorWith`, `zip`,
+ * `zipObject`, `zipObjectDeep`, and `zipWith`
+ *
+ * The wrapper methods that are **not** chainable by default are:
+ * `add`, `attempt`, `camelCase`, `capitalize`, `ceil`, `clamp`, `clone`,
+ * `cloneDeep`, `cloneDeepWith`, `cloneWith`, `conformsTo`, `deburr`,
+ * `defaultTo`, `divide`, `each`, `eachRight`, `endsWith`, `eq`, `escape`,
+ * `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`, `findLast`,
+ * `findLastIndex`, `findLastKey`, `first`, `floor`, `forEach`, `forEachRight`,
+ * `forIn`, `forInRight`, `forOwn`, `forOwnRight`, `get`, `gt`, `gte`, `has`,
+ * `hasIn`, `head`, `identity`, `includes`, `indexOf`, `inRange`, `invoke`,
+ * `isArguments`, `isArray`, `isArrayBuffer`, `isArrayLike`, `isArrayLikeObject`,
+ * `isBoolean`, `isBuffer`, `isDate`, `isElement`, `isEmpty`, `isEqual`,
+ * `isEqualWith`, `isError`, `isFinite`, `isFunction`, `isInteger`, `isLength`,
+ * `isMap`, `isMatch`, `isMatchWith`, `isNaN`, `isNative`, `isNil`, `isNull`,
+ * `isNumber`, `isObject`, `isObjectLike`, `isPlainObject`, `isRegExp`,
+ * `isSafeInteger`, `isSet`, `isString`, `isUndefined`, `isTypedArray`,
+ * `isWeakMap`, `isWeakSet`, `join`, `kebabCase`, `last`, `lastIndexOf`,
+ * `lowerCase`, `lowerFirst`, `lt`, `lte`, `max`, `maxBy`, `mean`, `meanBy`,
+ * `min`, `minBy`, `multiply`, `noConflict`, `noop`, `now`, `nth`, `pad`,
+ * `padEnd`, `padStart`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,
+ * `repeat`, `result`, `round`, `runInContext`, `sample`, `shift`, `size`,
+ * `snakeCase`, `some`, `sortedIndex`, `sortedIndexBy`, `sortedLastIndex`,
+ * `sortedLastIndexBy`, `startCase`, `startsWith`, `stubArray`, `stubFalse`,
+ * `stubObject`, `stubString`, `stubTrue`, `subtract`, `sum`, `sumBy`,
+ * `template`, `times`, `toFinite`, `toInteger`, `toJSON`, `toLength`,
+ * `toLower`, `toNumber`, `toSafeInteger`, `toString`, `toUpper`, `trim`,
+ * `trimEnd`, `trimStart`, `truncate`, `unescape`, `uniqueId`, `upperCase`,
+ * `upperFirst`, `value`, and `words`
+ *
+ * @name _
+ * @constructor
+ * @category Seq
+ * @param {*} value The value to wrap in a `lodash` instance.
+ * @returns {Object} Returns the new `lodash` wrapper instance.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * var wrapped = _([1, 2, 3]);
+ *
+ * // Returns an unwrapped value.
+ * wrapped.reduce(_.add);
+ * // => 6
+ *
+ * // Returns a wrapped value.
+ * var squares = wrapped.map(square);
+ *
+ * _.isArray(squares);
+ * // => false
+ *
+ * _.isArray(squares.value());
+ * // => true
+ */
+function lodash(value) {
+  if ((0, _isObjectLike2.default)(value) && !(0, _isArray2.default)(value) && !(value instanceof _LazyWrapper2.default)) {
+    if (value instanceof _LodashWrapper2.default) {
+      return value;
+    }
+    if (hasOwnProperty.call(value, '__wrapped__')) {
+      return (0, _wrapperClone2.default)(value);
+    }
+  }
+  return new _LodashWrapper2.default(value);
+}
+
+// Ensure wrappers are instances of `baseLodash`.
+lodash.prototype = _baseLodash2.default.prototype;
+lodash.prototype.constructor = lodash;
+
+exports.default = lodash;
+},{"./_LazyWrapper.js":235,"./_LodashWrapper.js":248,"./_baseLodash.js":247,"./isArray.js":137,"./isObjectLike.js":141,"./_wrapperClone.js":249}],226:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _LazyWrapper = require('./_LazyWrapper.js');
+
+var _LazyWrapper2 = _interopRequireDefault(_LazyWrapper);
+
+var _getData = require('./_getData.js');
+
+var _getData2 = _interopRequireDefault(_getData);
+
+var _getFuncName = require('./_getFuncName.js');
+
+var _getFuncName2 = _interopRequireDefault(_getFuncName);
+
+var _wrapperLodash = require('./wrapperLodash.js');
+
+var _wrapperLodash2 = _interopRequireDefault(_wrapperLodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Checks if `func` has a lazy counterpart.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` has a lazy counterpart,
+ *  else `false`.
+ */
+function isLaziable(func) {
+  var funcName = (0, _getFuncName2.default)(func),
+      other = _wrapperLodash2.default[funcName];
+
+  if (typeof other != 'function' || !(funcName in _LazyWrapper2.default.prototype)) {
+    return false;
+  }
+  if (func === other) {
+    return true;
+  }
+  var data = (0, _getData2.default)(other);
+  return !!data && func === data[0];
+}
+
+exports.default = isLaziable;
+},{"./_LazyWrapper.js":235,"./_getData.js":187,"./_getFuncName.js":236,"./wrapperLodash.js":237}],197:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to detect hot functions by number of calls within a span of milliseconds. */
+var HOT_COUNT = 800,
+    HOT_SPAN = 16;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeNow = Date.now;
+
+/**
+ * Creates a function that'll short out and invoke `identity` instead
+ * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+ * milliseconds.
+ *
+ * @private
+ * @param {Function} func The function to restrict.
+ * @returns {Function} Returns the new shortable function.
+ */
+function shortOut(func) {
+  var count = 0,
+      lastCalled = 0;
+
+  return function () {
+    var stamp = nativeNow(),
+        remaining = HOT_SPAN - (stamp - lastCalled);
+
+    lastCalled = stamp;
+    if (remaining > 0) {
+      if (++count >= HOT_COUNT) {
+        return arguments[0];
+      }
+    } else {
+      count = 0;
+    }
+    return func.apply(undefined, arguments);
+  };
+}
+
+exports.default = shortOut;
+},{}],189:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseSetData = require('./_baseSetData.js');
+
+var _baseSetData2 = _interopRequireDefault(_baseSetData);
+
+var _shortOut = require('./_shortOut.js');
+
+var _shortOut2 = _interopRequireDefault(_shortOut);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Sets metadata for `func`.
+ *
+ * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
+ * period of time, it will trip its breaker and transition to an identity
+ * function to avoid garbage collection pauses in V8. See
+ * [V8 issue 2070](https://bugs.chromium.org/p/v8/issues/detail?id=2070)
+ * for more details.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */
+var setData = (0, _shortOut2.default)(_baseSetData2.default);
+
+exports.default = setData;
+},{"./_baseSetData.js":182,"./_shortOut.js":197}],213:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to match wrap detail comments. */
+var reWrapDetails = /\{\n\/\* \[wrapped with (.+)\] \*/,
+    reSplitDetails = /,? & /;
+
+/**
+ * Extracts wrapper details from the `source` body comment.
+ *
+ * @private
+ * @param {string} source The source to inspect.
+ * @returns {Array} Returns the wrapper details.
+ */
+function getWrapDetails(source) {
+  var match = source.match(reWrapDetails);
+  return match ? match[1].split(reSplitDetails) : [];
+}
+
+exports.default = getWrapDetails;
+},{}],214:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/** Used to match wrap detail comments. */
+var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/;
+
+/**
+ * Inserts wrapper `details` in a comment at the top of the `source` body.
+ *
+ * @private
+ * @param {string} source The source to modify.
+ * @returns {Array} details The details to insert.
+ * @returns {string} Returns the modified source.
+ */
+function insertWrapDetails(source, details) {
+  var length = details.length;
+  if (!length) {
+    return source;
+  }
+  var lastIndex = length - 1;
+  details[lastIndex] = (length > 1 ? '& ' : '') + details[lastIndex];
+  details = details.join(length > 2 ? ', ' : ' ');
+  return source.replace(reWrapComment, '{\n/* [wrapped with ' + details + '] */\n');
+}
+
+exports.default = insertWrapDetails;
+},{}],233:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Creates a function that returns `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {*} value The value to return from the new function.
+ * @returns {Function} Returns the new constant function.
+ * @example
+ *
+ * var objects = _.times(2, _.constant({ 'a': 1 }));
+ *
+ * console.log(objects);
+ * // => [{ 'a': 1 }, { 'a': 1 }]
+ *
+ * console.log(objects[0] === objects[1]);
+ * // => true
+ */
+function constant(value) {
+  return function () {
+    return value;
+  };
+}
+
+exports.default = constant;
+},{}],234:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getNative = require('./_getNative.js');
+
+var _getNative2 = _interopRequireDefault(_getNative);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defineProperty = function () {
+  try {
+    var func = (0, _getNative2.default)(Object, 'defineProperty');
+    func({}, '', {});
+    return func;
+  } catch (e) {}
+}();
+
+exports.default = defineProperty;
+},{"./_getNative.js":192}],225:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _constant = require('./constant.js');
+
+var _constant2 = _interopRequireDefault(_constant);
+
+var _defineProperty = require('./_defineProperty.js');
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+var _identity = require('./identity.js');
+
+var _identity2 = _interopRequireDefault(_identity);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * The base implementation of `setToString` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */
+var baseSetToString = !_defineProperty2.default ? _identity2.default : function (func, string) {
+  return (0, _defineProperty2.default)(func, 'toString', {
+    'configurable': true,
+    'enumerable': false,
+    'value': (0, _constant2.default)(string),
+    'writable': true
+  });
+};
+
+exports.default = baseSetToString;
+},{"./constant.js":233,"./_defineProperty.js":234,"./identity.js":127}],215:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseSetToString = require('./_baseSetToString.js');
+
+var _baseSetToString2 = _interopRequireDefault(_baseSetToString);
+
+var _shortOut = require('./_shortOut.js');
+
+var _shortOut2 = _interopRequireDefault(_shortOut);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Sets the `toString` method of `func` to return `string`.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */
+var setToString = (0, _shortOut2.default)(_baseSetToString2.default);
+
+exports.default = setToString;
+},{"./_baseSetToString.js":225,"./_shortOut.js":197}],228:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */
+function arrayEach(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (iteratee(array[index], index, array) === false) {
+      break;
+    }
+  }
+  return array;
+}
+
+exports.default = arrayEach;
+},{}],255:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.findIndex` and `_.findLastIndex` without
+ * support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {Function} predicate The function invoked per iteration.
+ * @param {number} fromIndex The index to search from.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function baseFindIndex(array, predicate, fromIndex, fromRight) {
+  var length = array.length,
+      index = fromIndex + (fromRight ? 1 : -1);
+
+  while (fromRight ? index-- : ++index < length) {
+    if (predicate(array[index], index, array)) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+exports.default = baseFindIndex;
+},{}],256:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.isNaN` without support for number objects.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+ */
+function baseIsNaN(value) {
+  return value !== value;
+}
+
+exports.default = baseIsNaN;
+},{}],257:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * A specialized version of `_.indexOf` which performs strict equality
+ * comparisons of values, i.e. `===`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function strictIndexOf(array, value, fromIndex) {
+  var index = fromIndex - 1,
+      length = array.length;
+
+  while (++index < length) {
+    if (array[index] === value) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+exports.default = strictIndexOf;
 },{}],158:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.InMemoryCache = undefined;
-exports.defaultDataIdFromObject = defaultDataIdFromObject;
 
-var _apolloCache = require('apollo-cache');
+var _baseFindIndex = require('./_baseFindIndex.js');
 
-var _apolloUtilities = require('apollo-utilities');
+var _baseFindIndex2 = _interopRequireDefault(_baseFindIndex);
 
-var _fragmentMatcher = require('./fragmentMatcher');
+var _baseIsNaN = require('./_baseIsNaN.js');
 
-var _writeToStore = require('./writeToStore');
+var _baseIsNaN2 = _interopRequireDefault(_baseIsNaN);
 
-var _readFromStore = require('./readFromStore');
+var _strictIndexOf = require('./_strictIndexOf.js');
 
-var _objectCache = require('./objectCache');
+var _strictIndexOf2 = _interopRequireDefault(_strictIndexOf);
 
-var _recordingCache = require('./recordingCache');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var defaultConfig = {
-    fragmentMatcher: new _fragmentMatcher.HeuristicFragmentMatcher(),
-    dataIdFromObject: defaultDataIdFromObject,
-    addTypename: true,
-    storeFactory: _objectCache.defaultNormalizedCacheFactory
-};
-function defaultDataIdFromObject(result) {
-    if (result.__typename) {
-        if (result.id !== undefined) {
-            return result.__typename + ":" + result.id;
-        }
-        if (result._id !== undefined) {
-            return result.__typename + ":" + result._id;
-        }
-    }
-    return null;
+/**
+ * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function baseIndexOf(array, value, fromIndex) {
+  return value === value ? (0, _strictIndexOf2.default)(array, value, fromIndex) : (0, _baseFindIndex2.default)(array, _baseIsNaN2.default, fromIndex);
 }
-var InMemoryCache = /** @class */function (_super) {
-    __extends(InMemoryCache, _super);
-    function InMemoryCache(config) {
-        if (config === void 0) {
-            config = {};
-        }
-        var _this = _super.call(this) || this;
-        _this.optimistic = [];
-        _this.watches = [];
-        _this.typenameDocumentCache = new WeakMap();
-        // Set this while in a transaction to prevent broadcasts...
-        // don't forget to turn it back on!
-        _this.silenceBroadcast = false;
-        _this.config = __assign({}, defaultConfig, config);
-        // backwards compat
-        if (_this.config.customResolvers) {
-            console.warn('customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version.');
-            _this.config.cacheRedirects = _this.config.customResolvers;
-        }
-        if (_this.config.cacheResolvers) {
-            console.warn('cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version.');
-            _this.config.cacheRedirects = _this.config.cacheResolvers;
-        }
-        _this.addTypename = _this.config.addTypename;
-        _this.data = _this.config.storeFactory();
-        return _this;
-    }
-    InMemoryCache.prototype.restore = function (data) {
-        if (data) this.data.replace(data);
-        return this;
-    };
-    InMemoryCache.prototype.extract = function (optimistic) {
-        if (optimistic === void 0) {
-            optimistic = false;
-        }
-        if (optimistic && this.optimistic.length > 0) {
-            var patches = this.optimistic.map(function (opt) {
-                return opt.data;
-            });
-            return Object.assign.apply(Object, [{}, this.data.toObject()].concat(patches));
-        }
-        return this.data.toObject();
-    };
-    InMemoryCache.prototype.read = function (query) {
-        if (query.rootId && this.data.get(query.rootId) === undefined) {
-            return null;
-        }
-        return (0, _readFromStore.readQueryFromStore)({
-            store: this.config.storeFactory(this.extract(query.optimistic)),
-            query: this.transformDocument(query.query),
-            variables: query.variables,
-            rootId: query.rootId,
-            fragmentMatcherFunction: this.config.fragmentMatcher.match,
-            previousResult: query.previousResult,
-            config: this.config
-        });
-    };
-    InMemoryCache.prototype.write = function (write) {
-        (0, _writeToStore.writeResultToStore)({
-            dataId: write.dataId,
-            result: write.result,
-            variables: write.variables,
-            document: this.transformDocument(write.query),
-            store: this.data,
-            dataIdFromObject: this.config.dataIdFromObject,
-            fragmentMatcherFunction: this.config.fragmentMatcher.match
-        });
-        this.broadcastWatches();
-    };
-    InMemoryCache.prototype.diff = function (query) {
-        return (0, _readFromStore.diffQueryAgainstStore)({
-            store: this.config.storeFactory(this.extract(query.optimistic)),
-            query: this.transformDocument(query.query),
-            variables: query.variables,
-            returnPartialData: query.returnPartialData,
-            previousResult: query.previousResult,
-            fragmentMatcherFunction: this.config.fragmentMatcher.match,
-            config: this.config
-        });
-    };
-    InMemoryCache.prototype.watch = function (watch) {
-        var _this = this;
-        this.watches.push(watch);
-        return function () {
-            _this.watches = _this.watches.filter(function (c) {
-                return c !== watch;
-            });
-        };
-    };
-    InMemoryCache.prototype.evict = function (query) {
-        throw new Error("eviction is not implemented on InMemory Cache");
-    };
-    InMemoryCache.prototype.reset = function () {
-        this.data.clear();
-        this.broadcastWatches();
-        return Promise.resolve();
-    };
-    InMemoryCache.prototype.removeOptimistic = function (id) {
-        var _this = this;
-        // Throw away optimistic changes of that particular mutation
-        var toPerform = this.optimistic.filter(function (item) {
-            return item.id !== id;
-        });
-        this.optimistic = [];
-        // Re-run all of our optimistic data actions on top of one another.
-        toPerform.forEach(function (change) {
-            _this.recordOptimisticTransaction(change.transaction, change.id);
-        });
-        this.broadcastWatches();
-    };
-    InMemoryCache.prototype.performTransaction = function (transaction) {
-        // TODO: does this need to be different, or is this okay for an in-memory cache?
-        var alreadySilenced = this.silenceBroadcast;
-        this.silenceBroadcast = true;
-        transaction(this);
-        if (!alreadySilenced) {
-            // Don't un-silence since this is a nested transaction
-            // (for example, a transaction inside an optimistic record)
-            this.silenceBroadcast = false;
-        }
-        this.broadcastWatches();
-    };
-    InMemoryCache.prototype.recordOptimisticTransaction = function (transaction, id) {
-        var _this = this;
-        this.silenceBroadcast = true;
-        var patch = (0, _recordingCache.record)(this.extract(true), function (recordingCache) {
-            // swapping data instance on 'this' is currently necessary
-            // because of the current architecture
-            var dataCache = _this.data;
-            _this.data = recordingCache;
-            _this.performTransaction(transaction);
-            _this.data = dataCache;
-        });
-        this.optimistic.push({
-            id: id,
-            transaction: transaction,
-            data: patch
-        });
-        this.silenceBroadcast = false;
-        this.broadcastWatches();
-    };
-    InMemoryCache.prototype.transformDocument = function (document) {
-        if (this.addTypename) {
-            var result = this.typenameDocumentCache.get(document);
-            if (!result) {
-                this.typenameDocumentCache.set(document, result = (0, _apolloUtilities.addTypenameToDocument)(document));
-            }
-            return result;
-        }
-        return document;
-    };
-    InMemoryCache.prototype.readQuery = function (options, optimistic) {
-        if (optimistic === void 0) {
-            optimistic = false;
-        }
-        return this.read({
-            query: options.query,
-            variables: options.variables,
-            optimistic: optimistic
-        });
-    };
-    InMemoryCache.prototype.readFragment = function (options, optimistic) {
-        if (optimistic === void 0) {
-            optimistic = false;
-        }
-        return this.read({
-            query: this.transformDocument((0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)),
-            variables: options.variables,
-            rootId: options.id,
-            optimistic: optimistic
-        });
-    };
-    InMemoryCache.prototype.writeQuery = function (options) {
-        this.write({
-            dataId: 'ROOT_QUERY',
-            result: options.data,
-            query: this.transformDocument(options.query),
-            variables: options.variables
-        });
-    };
-    InMemoryCache.prototype.writeFragment = function (options) {
-        this.write({
-            dataId: options.id,
-            result: options.data,
-            query: this.transformDocument((0, _apolloUtilities.getFragmentQueryDocument)(options.fragment, options.fragmentName)),
-            variables: options.variables
-        });
-    };
-    InMemoryCache.prototype.broadcastWatches = function () {
-        var _this = this;
-        // Skip this when silenced (like inside a transaction)
-        if (this.silenceBroadcast) return;
-        // right now, we invalidate all queries whenever anything changes
-        this.watches.forEach(function (c) {
-            var newData = _this.diff({
-                query: c.query,
-                variables: c.variables,
-                // TODO: previousResult isn't in the types - this will only work
-                // with ObservableQuery which is in a different package
-                previousResult: c.previousResult && c.previousResult(),
-                optimistic: c.optimistic
-            });
-            c.callback(newData);
-        });
-    };
-    return InMemoryCache;
-}(_apolloCache.ApolloCache);
-exports.InMemoryCache = InMemoryCache;
-//# sourceMappingURL=inMemoryCache.js.map
-},{"apollo-cache":195,"apollo-utilities":167,"./fragmentMatcher":160,"./writeToStore":159,"./readFromStore":157,"./objectCache":161,"./recordingCache":162}],71:[function(require,module,exports) {
+
+exports.default = baseIndexOf;
+},{"./_baseFindIndex.js":255,"./_baseIsNaN.js":256,"./_strictIndexOf.js":257}],229:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _inMemoryCache = require('./inMemoryCache');
+var _baseIndexOf = require('./_baseIndexOf.js');
 
-Object.defineProperty(exports, 'InMemoryCache', {
-  enumerable: true,
-  get: function () {
-    return _inMemoryCache.InMemoryCache;
-  }
-});
-Object.defineProperty(exports, 'defaultDataIdFromObject', {
-  enumerable: true,
-  get: function () {
-    return _inMemoryCache.defaultDataIdFromObject;
-  }
-});
+var _baseIndexOf2 = _interopRequireDefault(_baseIndexOf);
 
-var _readFromStore = require('./readFromStore');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Object.keys(_readFromStore).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _readFromStore[key];
-    }
-  });
-});
-
-var _writeToStore = require('./writeToStore');
-
-Object.keys(_writeToStore).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _writeToStore[key];
-    }
-  });
-});
-
-var _fragmentMatcher = require('./fragmentMatcher');
-
-Object.keys(_fragmentMatcher).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _fragmentMatcher[key];
-    }
-  });
-});
-
-var _objectCache = require('./objectCache');
-
-Object.keys(_objectCache).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _objectCache[key];
-    }
-  });
-});
-
-var _recordingCache = require('./recordingCache');
-
-Object.keys(_recordingCache).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _recordingCache[key];
-    }
-  });
-});
-},{"./inMemoryCache":158,"./readFromStore":157,"./writeToStore":159,"./fragmentMatcher":160,"./objectCache":161,"./recordingCache":162}],194:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.selectURI = exports.serializeFetchParameter = exports.selectHttpOptionsAndBody = exports.createSignalIfSupported = exports.checkFetcher = exports.parseAndCheckHttpResponse = exports.throwServerError = exports.fallbackHttpConfig = undefined;
-
-var _printer = require('graphql/language/printer');
-
-var __assign = undefined && undefined.__assign || Object.assign || function (t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-    return t;
-};
-
-var defaultHttpOptions = {
-    includeQuery: true,
-    includeExtensions: false
-};
-var defaultHeaders = {
-    // headers are case insensitive (https://stackoverflow.com/a/5259004)
-    accept: '*/*',
-    'content-type': 'application/json'
-};
-var defaultOptions = {
-    method: 'POST'
-};
-var fallbackHttpConfig = exports.fallbackHttpConfig = {
-    http: defaultHttpOptions,
-    headers: defaultHeaders,
-    options: defaultOptions
-};
-var throwServerError = exports.throwServerError = function (response, result, message) {
-    var error = new Error(message);
-    error.response = response;
-    error.statusCode = response.status;
-    error.result = result;
-    throw error;
-};
-//TODO: when conditional types come in ts 2.8, operations should be a generic type that extends Operation | Array<Operation>
-var parseAndCheckHttpResponse = exports.parseAndCheckHttpResponse = function (operations) {
-    return function (response) {
-        return response.text().then(function (bodyText) {
-            try {
-                return JSON.parse(bodyText);
-            } catch (err) {
-                var parseError = err;
-                parseError.response = response;
-                parseError.statusCode = response.status;
-                parseError.bodyText = bodyText;
-                return Promise.reject(parseError);
-            }
-        }).then(function (result) {
-            if (response.status >= 300) {
-                //Network error
-                throwServerError(response, result, "Response not successful: Received status code " + response.status);
-            }
-            //TODO should really error per response in a Batch based on properties
-            //    - could be done in a validation link
-            if (!Array.isArray(result) && !result.hasOwnProperty('data') && !result.hasOwnProperty('errors')) {
-                //Data error
-                throwServerError(response, result, "Server response was missing for query '" + (Array.isArray(operations) ? operations.map(function (op) {
-                    return op.operationName;
-                }) : operations.operationName) + "'.");
-            }
-            return result;
-        });
-    };
-};
-var checkFetcher = exports.checkFetcher = function (fetcher) {
-    if (!fetcher && typeof fetch === 'undefined') {
-        var library = 'unfetch';
-        if (typeof window === 'undefined') library = 'node-fetch';
-        throw new Error("\nfetch is not found globally and no fetcher passed, to fix pass a fetch for\nyour environment like https://www.npmjs.com/package/" + library + ".\n\nFor example:\nimport fetch from '" + library + "';\nimport { createHttpLink } from 'apollo-link-http';\n\nconst link = createHttpLink({ uri: '/graphql', fetch: fetch });");
-    }
-};
-var createSignalIfSupported = exports.createSignalIfSupported = function () {
-    if (typeof AbortController === 'undefined') return { controller: false, signal: false };
-    var controller = new AbortController();
-    var signal = controller.signal;
-    return { controller: controller, signal: signal };
-};
-var selectHttpOptionsAndBody = exports.selectHttpOptionsAndBody = function (operation, fallbackConfig) {
-    var configs = [];
-    for (var _i = 2; _i < arguments.length; _i++) {
-        configs[_i - 2] = arguments[_i];
-    }
-    var options = __assign({}, fallbackConfig.options, { headers: fallbackConfig.headers, credentials: fallbackConfig.credentials });
-    var http = fallbackConfig.http;
-    /*
-     * use the rest of the configs to populate the options
-     * configs later in the list will overwrite earlier fields
-     */
-    configs.forEach(function (config) {
-        options = __assign({}, options, config.options, { headers: __assign({}, options.headers, config.headers) });
-        if (config.credentials) options.credentials = config.credentials;
-        http = __assign({}, http, config.http);
-    });
-    //The body depends on the http options
-    var operationName = operation.operationName,
-        extensions = operation.extensions,
-        variables = operation.variables,
-        query = operation.query;
-    var body = { operationName: operationName, variables: variables };
-    if (http.includeExtensions) body.extensions = extensions;
-    // not sending the query (i.e persisted queries)
-    if (http.includeQuery) body.query = (0, _printer.print)(query);
-    return {
-        options: options,
-        body: body
-    };
-};
-var serializeFetchParameter = exports.serializeFetchParameter = function (p, label) {
-    var serialized;
-    try {
-        serialized = JSON.stringify(p);
-    } catch (e) {
-        var parseError = new Error("Network request failed. " + label + " is not serializable: " + e.message);
-        parseError.parseError = e;
-        throw parseError;
-    }
-    return serialized;
-};
-//selects "/graphql" by default
-var selectURI = exports.selectURI = function (operation, fallbackURI) {
-    var context = operation.getContext();
-    var contextURI = context.uri;
-    if (contextURI) {
-        return contextURI;
-    } else if (typeof fallbackURI === 'function') {
-        return fallbackURI(operation);
-    } else {
-        return fallbackURI || '/graphql';
-    }
-};
-//# sourceMappingURL=index.js.map
-},{"graphql/language/printer":153}],163:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.HttpLink = exports.createHttpLink = undefined;
-
-var _apolloLink = require('apollo-link');
-
-var _apolloLinkHttpCommon = require('apollo-link-http-common');
-
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var __rest = undefined && undefined.__rest || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-    return t;
-};
-var createHttpLink = exports.createHttpLink = function (linkOptions) {
-    if (linkOptions === void 0) {
-        linkOptions = {};
-    }
-    var _a = linkOptions.uri,
-        uri = _a === void 0 ? '/graphql' : _a,
-
-    // use default global fetch is nothing passed in
-    fetcher = linkOptions.fetch,
-        includeExtensions = linkOptions.includeExtensions,
-        useGETForQueries = linkOptions.useGETForQueries,
-        requestOptions = __rest(linkOptions, ["uri", "fetch", "includeExtensions", "useGETForQueries"]);
-    // dev warnings to ensure fetch is present
-    (0, _apolloLinkHttpCommon.checkFetcher)(fetcher);
-    //fetcher is set here rather than the destructuring to ensure fetch is
-    //declared before referencing it. Reference in the destructuring would cause
-    //a ReferenceError
-    if (!fetcher) {
-        fetcher = fetch;
-    }
-    var linkConfig = {
-        http: { includeExtensions: includeExtensions },
-        options: requestOptions.fetchOptions,
-        credentials: requestOptions.credentials,
-        headers: requestOptions.headers
-    };
-    return new _apolloLink.ApolloLink(function (operation) {
-        var chosenURI = (0, _apolloLinkHttpCommon.selectURI)(operation, uri);
-        var context = operation.getContext();
-        var contextConfig = {
-            http: context.http,
-            options: context.fetchOptions,
-            credentials: context.credentials,
-            headers: context.headers
-        };
-        //uses fallback, link, and then context to build options
-        var _a = (0, _apolloLinkHttpCommon.selectHttpOptionsAndBody)(operation, _apolloLinkHttpCommon.fallbackHttpConfig, linkConfig, contextConfig),
-            options = _a.options,
-            body = _a.body;
-        var controller;
-        if (!options.signal) {
-            var _b = (0, _apolloLinkHttpCommon.createSignalIfSupported)(),
-                _controller = _b.controller,
-                signal = _b.signal;
-            controller = _controller;
-            if (controller) options.signal = signal;
-        }
-        // If requested, set method to GET if there are no mutations.
-        var definitionIsMutation = function (d) {
-            return d.kind === 'OperationDefinition' && d.operation === 'mutation';
-        };
-        if (useGETForQueries && !operation.query.definitions.some(definitionIsMutation)) {
-            options.method = 'GET';
-        }
-        if (options.method === 'GET') {
-            var _c = rewriteURIForGET(chosenURI, body),
-                newURI = _c.newURI,
-                parseError = _c.parseError;
-            if (parseError) {
-                return (0, _apolloLink.fromError)(parseError);
-            }
-            chosenURI = newURI;
-        } else {
-            try {
-                options.body = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body, 'Payload');
-            } catch (parseError) {
-                return (0, _apolloLink.fromError)(parseError);
-            }
-        }
-        return new _apolloLink.Observable(function (observer) {
-            fetcher(chosenURI, options).then(function (response) {
-                operation.setContext({ response: response });
-                return response;
-            }).then((0, _apolloLinkHttpCommon.parseAndCheckHttpResponse)(operation)).then(function (result) {
-                // we have data and can send it to back up the link chain
-                observer.next(result);
-                observer.complete();
-                return result;
-            }).catch(function (err) {
-                // fetch was cancelled so its already been cleaned up in the unsubscribe
-                if (err.name === 'AbortError') return;
-                // if it is a network error, BUT there is graphql result info
-                // fire the next observer before calling error
-                // this gives apollo-client (and react-apollo) the `graphqlErrors` and `networErrors`
-                // to pass to UI
-                // this should only happen if we *also* have data as part of the response key per
-                // the spec
-                if (err.result && err.result.errors && err.result.data) {
-                    // if we dont' call next, the UI can only show networkError because AC didn't
-                    // get andy graphqlErrors
-                    // this is graphql execution result info (i.e errors and possibly data)
-                    // this is because there is no formal spec how errors should translate to
-                    // http status codes. So an auth error (401) could have both data
-                    // from a public field, errors from a private field, and a status of 401
-                    // {
-                    //  user { // this will have errors
-                    //    firstName
-                    //  }
-                    //  products { // this is public so will have data
-                    //    cost
-                    //  }
-                    // }
-                    //
-                    // the result of above *could* look like this:
-                    // {
-                    //   data: { products: [{ cost: "$10" }] },
-                    //   errors: [{
-                    //      message: 'your session has timed out',
-                    //      path: []
-                    //   }]
-                    // }
-                    // status code of above would be a 401
-                    // in the UI you want to show data where you can, errors as data where you can
-                    // and use correct http status codes
-                    observer.next(err.result);
-                }
-                observer.error(err);
-            });
-            return function () {
-                // XXX support canceling this request
-                // https://developers.google.com/web/updates/2017/09/abortable-fetch
-                if (controller) controller.abort();
-            };
-        });
-    });
-};
-// For GET operations, returns the given URI rewritten with parameters, or a
-// parse error.
-function rewriteURIForGET(chosenURI, body) {
-    // Implement the standard HTTP GET serialization, plus 'extensions'. Note
-    // the extra level of JSON serialization!
-    var queryParams = [];
-    var addQueryParam = function (key, value) {
-        queryParams.push(key + "=" + encodeURIComponent(value));
-    };
-    if ('query' in body) {
-        addQueryParam('query', body.query);
-    }
-    if (body.operationName) {
-        addQueryParam('operationName', body.operationName);
-    }
-    if (body.variables) {
-        var serializedVariables = void 0;
-        try {
-            serializedVariables = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body.variables, 'Variables map');
-        } catch (parseError) {
-            return { parseError: parseError };
-        }
-        addQueryParam('variables', serializedVariables);
-    }
-    if (body.extensions) {
-        var serializedExtensions = void 0;
-        try {
-            serializedExtensions = (0, _apolloLinkHttpCommon.serializeFetchParameter)(body.extensions, 'Extensions map');
-        } catch (parseError) {
-            return { parseError: parseError };
-        }
-        addQueryParam('extensions', serializedExtensions);
-    }
-    // Reconstruct the URI with added query params.
-    // XXX This assumes that the URI is well-formed and that it doesn't
-    //     already contain any of these query params. We could instead use the
-    //     URL API and take a polyfill (whatwg-url@6) for older browsers that
-    //     don't support URLSearchParams. Note that some browsers (and
-    //     versions of whatwg-url) support URL but not URLSearchParams!
-    var fragment = '',
-        preFragment = chosenURI;
-    var fragmentStart = chosenURI.indexOf('#');
-    if (fragmentStart !== -1) {
-        fragment = chosenURI.substr(fragmentStart);
-        preFragment = chosenURI.substr(0, fragmentStart);
-    }
-    var queryParamsPrefix = preFragment.indexOf('?') === -1 ? '?' : '&';
-    var newURI = preFragment + queryParamsPrefix + queryParams.join('&') + fragment;
-    return { newURI: newURI };
+/**
+ * A specialized version of `_.includes` for arrays without support for
+ * specifying an index to search from.
+ *
+ * @private
+ * @param {Array} [array] The array to inspect.
+ * @param {*} target The value to search for.
+ * @returns {boolean} Returns `true` if `target` is found, else `false`.
+ */
+function arrayIncludes(array, value) {
+  var length = array == null ? 0 : array.length;
+  return !!length && (0, _baseIndexOf2.default)(array, value, 0) > -1;
 }
-var HttpLink = /** @class */function (_super) {
-    __extends(HttpLink, _super);
-    function HttpLink(opts) {
-        return _super.call(this, createHttpLink(opts).request) || this;
-    }
-    return HttpLink;
-}(_apolloLink.ApolloLink);
-exports.HttpLink = HttpLink;
-//# sourceMappingURL=httpLink.js.map
-},{"apollo-link":70,"apollo-link-http-common":194}],72:[function(require,module,exports) {
+
+exports.default = arrayIncludes;
+},{"./_baseIndexOf.js":158}],216:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _httpLink = require('./httpLink');
+var _arrayEach = require('./_arrayEach.js');
 
-Object.keys(_httpLink).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _httpLink[key];
+var _arrayEach2 = _interopRequireDefault(_arrayEach);
+
+var _arrayIncludes = require('./_arrayIncludes.js');
+
+var _arrayIncludes2 = _interopRequireDefault(_arrayIncludes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_CURRY_RIGHT_FLAG = 16,
+    WRAP_PARTIAL_FLAG = 32,
+    WRAP_PARTIAL_RIGHT_FLAG = 64,
+    WRAP_ARY_FLAG = 128,
+    WRAP_REARG_FLAG = 256,
+    WRAP_FLIP_FLAG = 512;
+
+/** Used to associate wrap methods with their bit flags. */
+var wrapFlags = [['ary', WRAP_ARY_FLAG], ['bind', WRAP_BIND_FLAG], ['bindKey', WRAP_BIND_KEY_FLAG], ['curry', WRAP_CURRY_FLAG], ['curryRight', WRAP_CURRY_RIGHT_FLAG], ['flip', WRAP_FLIP_FLAG], ['partial', WRAP_PARTIAL_FLAG], ['partialRight', WRAP_PARTIAL_RIGHT_FLAG], ['rearg', WRAP_REARG_FLAG]];
+
+/**
+ * Updates wrapper `details` based on `bitmask` flags.
+ *
+ * @private
+ * @returns {Array} details The details to modify.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @returns {Array} Returns `details`.
+ */
+function updateWrapDetails(details, bitmask) {
+  (0, _arrayEach2.default)(wrapFlags, function (pair) {
+    var value = '_.' + pair[0];
+    if (bitmask & pair[1] && !(0, _arrayIncludes2.default)(details, value)) {
+      details.push(value);
     }
   });
-});
-},{"./httpLink":163}],168:[function(require,module,exports) {
-var define;
-var global = arguments[3];
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('apollo-utilities')) :
-    typeof define === 'function' && define.amd ? define(['exports', 'apollo-utilities'], factory) :
-    (factory((global.graphqlAnywhereAsync = {}),global.apollo.utilities));
-}(this, (function (exports,apolloUtilities) { 'use strict';
-
-    var hasOwn = Object.prototype.hasOwnProperty;
-    function merge(dest, src) {
-        if (src !== null && typeof src === 'object') {
-            Object.keys(src).forEach(function (key) {
-                var srcVal = src[key];
-                if (!hasOwn.call(dest, key)) {
-                    dest[key] = srcVal;
-                }
-                else {
-                    merge(dest[key], srcVal);
-                }
-            });
-        }
-    }
-
-    var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-        return new (P || (P = Promise))(function (resolve, reject) {
-            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-            function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-            step((generator = generator.apply(thisArg, _arguments || [])).next());
-        });
-    };
-    var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
-        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-        function verb(n) { return function (v) { return step([n, v]); }; }
-        function step(op) {
-            if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
-                if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-                if (y = 0, t) op = [0, t.value];
-                switch (op[0]) {
-                    case 0: case 1: t = op; break;
-                    case 4: _.label++; return { value: op[1], done: false };
-                    case 5: _.label++; y = op[1]; op = [0]; continue;
-                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                    default:
-                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                        if (t[2]) _.ops.pop();
-                        _.trys.pop(); continue;
-                }
-                op = body.call(thisArg, _);
-            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-        }
-    };
-    /* Based on graphql function from graphql-js:
-     *
-     * graphql(
-     *   schema: GraphQLSchema,
-     *   requestString: string,
-     *   rootValue?: ?any,
-     *   contextValue?: ?any,
-     *   variableValues?: ?{[key: string]: any},
-     *   operationName?: ?string
-     * ): Promise<GraphQLResult>
-     *
-     * The default export as of graphql-anywhere is sync as of 4.0,
-     * but below is an exported alternative that is async.
-     * In the 5.0 version, this will be the only export again
-     * and it will be async
-     *
-     */
-    function graphql$1(resolver, document, rootValue, contextValue, variableValues, execOptions) {
-        if (execOptions === void 0) { execOptions = {}; }
-        var mainDefinition = apolloUtilities.getMainDefinition(document);
-        var fragments = apolloUtilities.getFragmentDefinitions(document);
-        var fragmentMap = apolloUtilities.createFragmentMap(fragments);
-        var resultMapper = execOptions.resultMapper;
-        // Default matcher always matches all fragments
-        var fragmentMatcher = execOptions.fragmentMatcher || (function () { return true; });
-        var execContext = {
-            fragmentMap: fragmentMap,
-            contextValue: contextValue,
-            variableValues: variableValues,
-            resultMapper: resultMapper,
-            resolver: resolver,
-            fragmentMatcher: fragmentMatcher,
-        };
-        return executeSelectionSet$1(mainDefinition.selectionSet, rootValue, execContext);
-    }
-    function executeSelectionSet$1(selectionSet, rootValue, execContext) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var fragmentMap, contextValue, variables, result, execute;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        fragmentMap = execContext.fragmentMap, contextValue = execContext.contextValue, variables = execContext.variableValues;
-                        result = {};
-                        execute = function (selection) { return __awaiter(_this, void 0, void 0, function () {
-                            var fieldResult, resultFieldKey, fragment, typeCondition, fragmentResult;
-                            return __generator(this, function (_a) {
-                                switch (_a.label) {
-                                    case 0:
-                                        if (!apolloUtilities.shouldInclude(selection, variables)) {
-                                            // Skip this entirely
-                                            return [2 /*return*/];
-                                        }
-                                        if (!apolloUtilities.isField(selection)) return [3 /*break*/, 2];
-                                        return [4 /*yield*/, executeField$1(selection, rootValue, execContext)];
-                                    case 1:
-                                        fieldResult = _a.sent();
-                                        resultFieldKey = apolloUtilities.resultKeyNameFromField(selection);
-                                        if (fieldResult !== undefined) {
-                                            if (result[resultFieldKey] === undefined) {
-                                                result[resultFieldKey] = fieldResult;
-                                            }
-                                            else {
-                                                merge(result[resultFieldKey], fieldResult);
-                                            }
-                                        }
-                                        return [2 /*return*/];
-                                    case 2:
-                                        if (apolloUtilities.isInlineFragment(selection)) {
-                                            fragment = selection;
-                                        }
-                                        else {
-                                            // This is a named fragment
-                                            fragment = fragmentMap[selection.name.value];
-                                            if (!fragment) {
-                                                throw new Error("No fragment named " + selection.name.value);
-                                            }
-                                        }
-                                        typeCondition = fragment.typeCondition.name.value;
-                                        if (!execContext.fragmentMatcher(rootValue, typeCondition, contextValue)) return [3 /*break*/, 4];
-                                        return [4 /*yield*/, executeSelectionSet$1(fragment.selectionSet, rootValue, execContext)];
-                                    case 3:
-                                        fragmentResult = _a.sent();
-                                        merge(result, fragmentResult);
-                                        _a.label = 4;
-                                    case 4: return [2 /*return*/];
-                                }
-                            });
-                        }); };
-                        return [4 /*yield*/, Promise.all(selectionSet.selections.map(execute))];
-                    case 1:
-                        _a.sent();
-                        if (execContext.resultMapper) {
-                            return [2 /*return*/, execContext.resultMapper(result, rootValue)];
-                        }
-                        return [2 /*return*/, result];
-                }
-            });
-        });
-    }
-    function executeField$1(field, rootValue, execContext) {
-        return __awaiter(this, void 0, void 0, function () {
-            var variables, contextValue, resolver, fieldName, args, info, result;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        variables = execContext.variableValues, contextValue = execContext.contextValue, resolver = execContext.resolver;
-                        fieldName = field.name.value;
-                        args = apolloUtilities.argumentsObjectFromField(field, variables);
-                        info = {
-                            isLeaf: !field.selectionSet,
-                            resultKey: apolloUtilities.resultKeyNameFromField(field),
-                            directives: apolloUtilities.getDirectiveInfoFromField(field, variables),
-                        };
-                        return [4 /*yield*/, resolver(fieldName, rootValue, args, contextValue, info)];
-                    case 1:
-                        result = _a.sent();
-                        // Handle all scalar types here
-                        if (!field.selectionSet) {
-                            return [2 /*return*/, result];
-                        }
-                        // From here down, the field has a selection set, which means it's trying to
-                        // query a GraphQLObjectType
-                        if (result == null) {
-                            // Basically any field in a GraphQL response can be null, or missing
-                            return [2 /*return*/, result];
-                        }
-                        if (Array.isArray(result)) {
-                            return [2 /*return*/, executeSubSelectedArray$1(field, result, execContext)];
-                        }
-                        // Returned value is an object, and the query has a sub-selection. Recurse.
-                        return [2 /*return*/, executeSelectionSet$1(field.selectionSet, result, execContext)];
-                }
-            });
-        });
-    }
-    function executeSubSelectedArray$1(field, result, execContext) {
-        return Promise.all(result.map(function (item) {
-            // null value in array
-            if (item === null) {
-                return null;
-            }
-            // This is a nested array, recurse
-            if (Array.isArray(item)) {
-                return executeSubSelectedArray$1(field, item, execContext);
-            }
-            // This is an object, run the selection set on it
-            return executeSelectionSet$1(field.selectionSet, item, execContext);
-        }));
-    }
-
-    exports.graphql = graphql$1;
-
-    Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
-//# sourceMappingURL=async.js.map
-
-},{"apollo-utilities":167}],166:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.removeClientSetsFromDocument = removeClientSetsFromDocument;
-
-var _apolloUtilities = require('apollo-utilities');
-
-var connectionRemoveConfig = {
-    test: function (directive) {
-        return directive.name.value === 'client';
-    },
-    remove: true
-};
-var removed = new Map();
-function removeClientSetsFromDocument(query) {
-    var cached = removed.get(query);
-    if (cached) return cached;
-    (0, _apolloUtilities.checkDocument)(query);
-    var docClone = (0, _apolloUtilities.removeDirectivesFromDocument)([connectionRemoveConfig], query);
-    removed.set(query, docClone);
-    return docClone;
+  return details.sort();
 }
-//# sourceMappingURL=utils.js.map
-},{"apollo-utilities":167}],73:[function(require,module,exports) {
+
+exports.default = updateWrapDetails;
+},{"./_arrayEach.js":228,"./_arrayIncludes.js":229}],190:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.withClientState = undefined;
 
-var _apolloLink = require('apollo-link');
+var _getWrapDetails = require('./_getWrapDetails.js');
 
-var _apolloUtilities = require('apollo-utilities');
+var _getWrapDetails2 = _interopRequireDefault(_getWrapDetails);
 
-var _async = require('graphql-anywhere/lib/async');
+var _insertWrapDetails = require('./_insertWrapDetails.js');
 
-var _utils = require('./utils');
+var _insertWrapDetails2 = _interopRequireDefault(_insertWrapDetails);
 
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
+var _setToString = require('./_setToString.js');
 
-var capitalizeFirstLetter = function (str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-};
-var withClientState = exports.withClientState = function (clientStateConfig) {
-    if (clientStateConfig === void 0) {
-        clientStateConfig = { resolvers: {}, defaults: {} };
-    }
-    var resolvers = clientStateConfig.resolvers,
-        defaults = clientStateConfig.defaults,
-        cache = clientStateConfig.cache,
-        typeDefs = clientStateConfig.typeDefs;
-    if (cache && defaults) {
-        cache.writeData({ data: defaults });
-    }
-    return new (function (_super) {
-        __extends(StateLink, _super);
-        function StateLink() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        StateLink.prototype.writeDefaults = function () {
-            if (cache && defaults) {
-                cache.writeData({ data: defaults });
-            }
-        };
-        StateLink.prototype.request = function (operation, forward) {
-            if (forward === void 0) {
-                forward = function () {
-                    return _apolloLink.Observable.of({ data: {} });
-                };
-            }
-            if (typeDefs) {
-                var directives_1 = 'directive @client on FIELD';
-                var definition_1 = typeof typeDefs === 'string' ? typeDefs : typeDefs.map(function (typeDef) {
-                    return typeDef.trim();
-                }).join('\n');
-                operation.setContext(function (_a) {
-                    var _b = _a.schemas,
-                        schemas = _b === void 0 ? [] : _b;
-                    return {
-                        schemas: schemas.concat([{ definition: definition_1, directives: directives_1 }])
-                    };
-                });
-            }
-            var isClient = (0, _apolloUtilities.hasDirectives)(['client'], operation.query);
-            if (!isClient) return forward(operation);
-            var server = (0, _utils.removeClientSetsFromDocument)(operation.query);
-            var query = operation.query;
-            var type = capitalizeFirstLetter(((0, _apolloUtilities.getMainDefinition)(query) || {}).operation) || 'Query';
-            var resolver = function (fieldName, rootValue, args, context, info) {
-                if (rootValue === void 0) {
-                    rootValue = {};
-                }
-                var fieldValue = rootValue[info.resultKey];
-                if (fieldValue !== undefined) return fieldValue;
-                var resolverMap = resolvers[rootValue.__typename || type];
-                if (resolverMap) {
-                    var resolve = resolverMap[fieldName];
-                    if (resolve) return resolve(rootValue, args, context, info);
-                }
-                return defaults[fieldName];
-            };
-            return new _apolloLink.Observable(function (observer) {
-                if (server) operation.query = server;
-                var obs = server && forward ? forward(operation) : _apolloLink.Observable.of({
-                    data: {}
-                });
-                var observerErrorHandler = observer.error.bind(observer);
-                var sub = obs.subscribe({
-                    next: function (_a) {
-                        var data = _a.data,
-                            errors = _a.errors;
-                        var context = operation.getContext();
-                        (0, _async.graphql)(resolver, query, data, context, operation.variables).then(function (nextData) {
-                            observer.next({
-                                data: nextData,
-                                errors: errors
-                            });
-                            observer.complete();
-                        }).catch(observerErrorHandler);
-                    },
-                    error: observerErrorHandler
-                });
-                return function () {
-                    if (sub) sub.unsubscribe();
-                };
-            });
-        };
-        return StateLink;
-    }(_apolloLink.ApolloLink))();
-};
-//# sourceMappingURL=index.js.map
-},{"apollo-link":70,"apollo-utilities":167,"graphql-anywhere/lib/async":168,"./utils":166}],74:[function(require,module,exports) {
+var _setToString2 = _interopRequireDefault(_setToString);
+
+var _updateWrapDetails = require('./_updateWrapDetails.js');
+
+var _updateWrapDetails2 = _interopRequireDefault(_updateWrapDetails);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Sets the `toString` method of `wrapper` to mimic the source of `reference`
+ * with wrapper details in a comment at the top of the source body.
+ *
+ * @private
+ * @param {Function} wrapper The function to modify.
+ * @param {Function} reference The reference function.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @returns {Function} Returns `wrapper`.
+ */
+function setWrapToString(wrapper, reference, bitmask) {
+  var source = reference + '';
+  return (0, _setToString2.default)(wrapper, (0, _insertWrapDetails2.default)(source, (0, _updateWrapDetails2.default)((0, _getWrapDetails2.default)(source), bitmask)));
+}
+
+exports.default = setWrapToString;
+},{"./_getWrapDetails.js":213,"./_insertWrapDetails.js":214,"./_setToString.js":215,"./_updateWrapDetails.js":216}],206:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.ErrorLink = exports.onError = undefined;
 
-var _apolloLink = require('apollo-link');
+var _isLaziable = require('./_isLaziable.js');
 
-var __extends = undefined && undefined.__extends || function () {
-    var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (d, b) {
-        d.__proto__ = b;
-    } || function (d, b) {
-        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() {
-            this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-}();
-var onError = exports.onError = function (errorHandler) {
-    return new _apolloLink.ApolloLink(function (operation, forward) {
-        return new _apolloLink.Observable(function (observer) {
-            var sub;
-            var retriedSub;
-            var retriedResult;
-            try {
-                sub = forward(operation).subscribe({
-                    next: function (result) {
-                        if (result.errors) {
-                            retriedResult = errorHandler({
-                                graphQLErrors: result.errors,
-                                response: result,
-                                operation: operation,
-                                forward: forward
-                            });
-                            if (retriedResult) {
-                                retriedSub = retriedResult.subscribe({
-                                    next: observer.next.bind(observer),
-                                    error: observer.error.bind(observer),
-                                    complete: observer.complete.bind(observer)
-                                });
-                                return;
-                            }
-                        }
-                        observer.next(result);
-                    },
-                    error: function (networkError) {
-                        retriedResult = errorHandler({
-                            operation: operation,
-                            networkError: networkError,
-                            //Network errors can return GraphQL errors on for example a 403
-                            graphQLErrors: networkError.result && networkError.result.errors,
-                            forward: forward
-                        });
-                        if (retriedResult) {
-                            retriedSub = retriedResult.subscribe({
-                                next: observer.next.bind(observer),
-                                error: observer.error.bind(observer),
-                                complete: observer.complete.bind(observer)
-                            });
-                            return;
-                        }
-                        observer.error(networkError);
-                    },
-                    complete: function () {
-                        // disable the previous sub from calling complete on observable
-                        // if retry is in flight.
-                        if (!retriedResult) {
-                            observer.complete.bind(observer)();
-                        }
-                    }
-                });
-            } catch (e) {
-                errorHandler({ networkError: e, operation: operation, forward: forward });
-                observer.error(e);
-            }
-            return function () {
-                if (sub) sub.unsubscribe();
-                if (retriedSub) sub.unsubscribe();
-            };
-        });
-    });
-};
-var ErrorLink = /** @class */function (_super) {
-    __extends(ErrorLink, _super);
-    function ErrorLink(errorHandler) {
-        var _this = _super.call(this) || this;
-        _this.link = onError(errorHandler);
-        return _this;
-    }
-    ErrorLink.prototype.request = function (operation, forward) {
-        return this.link.request(operation, forward);
-    };
-    return ErrorLink;
-}(_apolloLink.ApolloLink);
-exports.ErrorLink = ErrorLink;
-//# sourceMappingURL=index.js.map
-},{"apollo-link":70}],209:[function(require,module,exports) {
+var _isLaziable2 = _interopRequireDefault(_isLaziable);
+
+var _setData = require('./_setData.js');
+
+var _setData2 = _interopRequireDefault(_setData);
+
+var _setWrapToString = require('./_setWrapToString.js');
+
+var _setWrapToString2 = _interopRequireDefault(_setWrapToString);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_BOUND_FLAG = 4,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_PARTIAL_FLAG = 32,
+    WRAP_PARTIAL_RIGHT_FLAG = 64;
+
+/**
+ * Creates a function that wraps `func` to continue currying.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {Function} wrapFunc The function to create the `func` wrapper.
+ * @param {*} placeholder The placeholder value.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to prepend to those provided to
+ *  the new function.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createRecurry(func, bitmask, wrapFunc, placeholder, thisArg, partials, holders, argPos, ary, arity) {
+  var isCurry = bitmask & WRAP_CURRY_FLAG,
+      newHolders = isCurry ? holders : undefined,
+      newHoldersRight = isCurry ? undefined : holders,
+      newPartials = isCurry ? partials : undefined,
+      newPartialsRight = isCurry ? undefined : partials;
+
+  bitmask |= isCurry ? WRAP_PARTIAL_FLAG : WRAP_PARTIAL_RIGHT_FLAG;
+  bitmask &= ~(isCurry ? WRAP_PARTIAL_RIGHT_FLAG : WRAP_PARTIAL_FLAG);
+
+  if (!(bitmask & WRAP_CURRY_BOUND_FLAG)) {
+    bitmask &= ~(WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG);
+  }
+  var newData = [func, bitmask, thisArg, newPartials, newHolders, newPartialsRight, newHoldersRight, argPos, ary, arity];
+
+  var result = wrapFunc.apply(undefined, newData);
+  if ((0, _isLaziable2.default)(func)) {
+    (0, _setData2.default)(result, newData);
+  }
+  result.placeholder = placeholder;
+  return (0, _setWrapToString2.default)(result, func, bitmask);
+}
+
+exports.default = createRecurry;
+},{"./_isLaziable.js":226,"./_setData.js":189,"./_setWrapToString.js":190}],207:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = invariant;
 /**
- * Copyright (c) 2015-present, Facebook, Inc.
+ * Gets the argument placeholder value for `func`.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
+ * @private
+ * @param {Function} func The function to inspect.
+ * @returns {*} Returns the placeholder value.
  */
-
-function invariant(condition, message) {
-  /* istanbul ignore else */
-  if (!condition) {
-    throw new Error(message);
-  }
+function getHolder(func) {
+  var object = func;
+  return object.placeholder;
 }
-},{}],174:[function(require,module,exports) {
+
+exports.default = getHolder;
+},{}],224:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Source = undefined;
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
 
-var _invariant = require('../jsutils/invariant');
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
 
-var _invariant2 = _interopRequireDefault(_invariant);
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  var type = typeof value;
+  length = length == null ? MAX_SAFE_INTEGER : length;
+
+  return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+
+exports.default = isIndex;
+},{}],212:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _copyArray = require('./_copyArray.js');
+
+var _copyArray2 = _interopRequireDefault(_copyArray);
+
+var _isIndex = require('./_isIndex.js');
+
+var _isIndex2 = _interopRequireDefault(_isIndex);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
-                                                                                                                                                           * Copyright (c) 2015-present, Facebook, Inc.
-                                                                                                                                                           *
-                                                                                                                                                           * This source code is licensed under the MIT license found in the
-                                                                                                                                                           * LICENSE file in the root directory of this source tree.
-                                                                                                                                                           *
-                                                                                                                                                           *  strict
-                                                                                                                                                           */
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMin = Math.min;
 
 /**
- * A representation of source input to GraphQL.
- * `name` and `locationOffset` are optional. They are useful for clients who
- * store GraphQL documents in source files; for example, if the GraphQL input
- * starts at line 40 in a file named Foo.graphql, it might be useful for name to
- * be "Foo.graphql" and location to be `{ line: 40, column: 0 }`.
- * line and column in locationOffset are 1-indexed
+ * Reorder `array` according to the specified indexes where the element at
+ * the first index is assigned as the first element, the element at
+ * the second index is assigned as the second element, and so on.
+ *
+ * @private
+ * @param {Array} array The array to reorder.
+ * @param {Array} indexes The arranged array indexes.
+ * @returns {Array} Returns `array`.
  */
-var Source = exports.Source = function Source(body, name, locationOffset) {
-  _classCallCheck(this, Source);
+function reorder(array, indexes) {
+  var arrLength = array.length,
+      length = nativeMin(indexes.length, arrLength),
+      oldArray = (0, _copyArray2.default)(array);
 
-  this.body = body;
-  this.name = name || 'GraphQL request';
-  this.locationOffset = locationOffset || { line: 1, column: 1 };
-  !(this.locationOffset.line > 0) ? (0, _invariant2.default)(0, 'line in locationOffset is 1-indexed and must be positive') : void 0;
-  !(this.locationOffset.column > 0) ? (0, _invariant2.default)(0, 'column in locationOffset is 1-indexed and must be positive') : void 0;
-};
-},{"../jsutils/invariant":209}],208:[function(require,module,exports) {
+  while (length--) {
+    var index = indexes[length];
+    array[length] = (0, _isIndex2.default)(index, arrLength) ? oldArray[index] : undefined;
+  }
+  return array;
+}
+
+exports.default = reorder;
+},{"./_copyArray.js":223,"./_isIndex.js":224}],208:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getLocation = getLocation;
-
+/** Used as the internal argument placeholder. */
+var PLACEHOLDER = '__lodash_placeholder__';
 
 /**
- * Takes a Source and a UTF-8 character offset, and returns the corresponding
- * line and column as a SourceLocation.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
+ * Replaces all `placeholder` elements in `array` with an internal placeholder
+ * and returns an array of their indexes.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {*} placeholder The placeholder to replace.
+ * @returns {Array} Returns the new array of placeholder indexes.
  */
+function replaceHolders(array, placeholder) {
+  var index = -1,
+      length = array.length,
+      resIndex = 0,
+      result = [];
 
-function getLocation(source, position) {
-  var lineRegexp = /\r\n|[\n\r]/g;
-  var line = 1;
-  var column = position + 1;
-  var match = void 0;
-  while ((match = lineRegexp.exec(source.body)) && match.index < position) {
-    line += 1;
-    column = position + 1 - (match.index + match[0].length);
-  }
-  return { line: line, column: column };
-}
-
-/**
- * Represents a location in a Source.
- */
-},{}],200:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.printError = printError;
-
-var _location = require('../language/location');
-
-/**
- * Prints a GraphQLError to a string, representing useful location information
- * about the error's position in the source.
- */
-function printError(error) {
-  var printedLocations = [];
-  if (error.nodes) {
-    error.nodes.forEach(function (node) {
-      if (node.loc) {
-        printedLocations.push(highlightSourceAtLocation(node.loc.source, (0, _location.getLocation)(node.loc.source, node.loc.start)));
-      }
-    });
-  } else if (error.source && error.locations) {
-    var source = error.source;
-    error.locations.forEach(function (location) {
-      printedLocations.push(highlightSourceAtLocation(source, location));
-    });
-  }
-  return printedLocations.length === 0 ? error.message : [error.message].concat(printedLocations).join('\n\n') + '\n';
-}
-
-/**
- * Render a helpful description of the location of the error in the GraphQL
- * Source document.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-function highlightSourceAtLocation(source, location) {
-  var line = location.line;
-  var lineOffset = source.locationOffset.line - 1;
-  var columnOffset = getColumnOffset(source, location);
-  var contextLine = line + lineOffset;
-  var contextColumn = location.column + columnOffset;
-  var prevLineNum = (contextLine - 1).toString();
-  var lineNum = contextLine.toString();
-  var nextLineNum = (contextLine + 1).toString();
-  var padLen = nextLineNum.length;
-  var lines = source.body.split(/\r\n|[\n\r]/g);
-  lines[0] = whitespace(source.locationOffset.column - 1) + lines[0];
-  var outputLines = [source.name + ' (' + contextLine + ':' + contextColumn + ')', line >= 2 && lpad(padLen, prevLineNum) + ': ' + lines[line - 2], lpad(padLen, lineNum) + ': ' + lines[line - 1], whitespace(2 + padLen + contextColumn - 1) + '^', line < lines.length && lpad(padLen, nextLineNum) + ': ' + lines[line]];
-  return outputLines.filter(Boolean).join('\n');
-}
-
-function getColumnOffset(source, location) {
-  return location.line === 1 ? source.locationOffset.column - 1 : 0;
-}
-
-function whitespace(len) {
-  return Array(len + 1).join(' ');
-}
-
-function lpad(len, str) {
-  return whitespace(len - str.length) + str;
-}
-},{"../language/location":208}],197:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.GraphQLError = GraphQLError;
-
-var _printError = require('./printError');
-
-var _location = require('../language/location');
-
-/**
- * A GraphQLError describes an Error found during the parse, validate, or
- * execute phases of performing a GraphQL operation. In addition to a message
- * and stack trace, it also includes information about the locations in a
- * GraphQL document and/or execution result that correspond to the Error.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-function GraphQLError( // eslint-disable-line no-redeclare
-message, nodes, source, positions, path, originalError, extensions) {
-  // Compute list of blame nodes.
-  var _nodes = Array.isArray(nodes) ? nodes.length !== 0 ? nodes : undefined : nodes ? [nodes] : undefined;
-
-  // Compute locations in the source for the given nodes/positions.
-  var _source = source;
-  if (!_source && _nodes) {
-    var node = _nodes[0];
-    _source = node && node.loc && node.loc.source;
-  }
-
-  var _positions = positions;
-  if (!_positions && _nodes) {
-    _positions = _nodes.reduce(function (list, node) {
-      if (node.loc) {
-        list.push(node.loc.start);
-      }
-      return list;
-    }, []);
-  }
-  if (_positions && _positions.length === 0) {
-    _positions = undefined;
-  }
-
-  var _locations = void 0;
-  if (positions && source) {
-    _locations = positions.map(function (pos) {
-      return (0, _location.getLocation)(source, pos);
-    });
-  } else if (_nodes) {
-    _locations = _nodes.reduce(function (list, node) {
-      if (node.loc) {
-        list.push((0, _location.getLocation)(node.loc.source, node.loc.start));
-      }
-      return list;
-    }, []);
-  }
-
-  Object.defineProperties(this, {
-    message: {
-      value: message,
-      // By being enumerable, JSON.stringify will include `message` in the
-      // resulting output. This ensures that the simplest possible GraphQL
-      // service adheres to the spec.
-      enumerable: true,
-      writable: true
-    },
-    locations: {
-      // Coercing falsey values to undefined ensures they will not be included
-      // in JSON.stringify() when not provided.
-      value: _locations || undefined,
-      // By being enumerable, JSON.stringify will include `locations` in the
-      // resulting output. This ensures that the simplest possible GraphQL
-      // service adheres to the spec.
-      enumerable: true
-    },
-    path: {
-      // Coercing falsey values to undefined ensures they will not be included
-      // in JSON.stringify() when not provided.
-      value: path || undefined,
-      // By being enumerable, JSON.stringify will include `path` in the
-      // resulting output. This ensures that the simplest possible GraphQL
-      // service adheres to the spec.
-      enumerable: true
-    },
-    nodes: {
-      value: _nodes || undefined
-    },
-    source: {
-      value: _source || undefined
-    },
-    positions: {
-      value: _positions || undefined
-    },
-    originalError: {
-      value: originalError
-    },
-    extensions: {
-      value: extensions || originalError && originalError.extensions
-    }
-  });
-
-  // Include (non-enumerable) stack trace.
-  if (originalError && originalError.stack) {
-    Object.defineProperty(this, 'stack', {
-      value: originalError.stack,
-      writable: true,
-      configurable: true
-    });
-  } else if (Error.captureStackTrace) {
-    Error.captureStackTrace(this, GraphQLError);
-  } else {
-    Object.defineProperty(this, 'stack', {
-      value: Error().stack,
-      writable: true,
-      configurable: true
-    });
-  }
-}
-
-GraphQLError.prototype = Object.create(Error.prototype, {
-  constructor: { value: GraphQLError },
-  name: { value: 'GraphQLError' },
-  toString: {
-    value: function toString() {
-      return (0, _printError.printError)(this);
+  while (++index < length) {
+    var value = array[index];
+    if (value === placeholder || value === PLACEHOLDER) {
+      array[index] = PLACEHOLDER;
+      result[resIndex++] = index;
     }
   }
-});
-},{"./printError":200,"../language/location":208}],198:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.syntaxError = syntaxError;
-
-var _GraphQLError = require('./GraphQLError');
-
-/**
- * Produces a GraphQLError representing a syntax error, containing useful
- * descriptive information about the syntax error's position in the source.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-function syntaxError(source, position, description) {
-  return new _GraphQLError.GraphQLError('Syntax Error: ' + description, undefined, source, [position]);
+  return result;
 }
-},{"./GraphQLError":197}],199:[function(require,module,exports) {
+
+exports.default = replaceHolders;
+},{}],185:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.locatedError = locatedError;
 
-var _GraphQLError = require('./GraphQLError');
+var _composeArgs = require('./_composeArgs.js');
+
+var _composeArgs2 = _interopRequireDefault(_composeArgs);
+
+var _composeArgsRight = require('./_composeArgsRight.js');
+
+var _composeArgsRight2 = _interopRequireDefault(_composeArgsRight);
+
+var _countHolders = require('./_countHolders.js');
+
+var _countHolders2 = _interopRequireDefault(_countHolders);
+
+var _createCtor = require('./_createCtor.js');
+
+var _createCtor2 = _interopRequireDefault(_createCtor);
+
+var _createRecurry = require('./_createRecurry.js');
+
+var _createRecurry2 = _interopRequireDefault(_createRecurry);
+
+var _getHolder = require('./_getHolder.js');
+
+var _getHolder2 = _interopRequireDefault(_getHolder);
+
+var _reorder = require('./_reorder.js');
+
+var _reorder2 = _interopRequireDefault(_reorder);
+
+var _replaceHolders = require('./_replaceHolders.js');
+
+var _replaceHolders2 = _interopRequireDefault(_replaceHolders);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_CURRY_RIGHT_FLAG = 16,
+    WRAP_ARY_FLAG = 128,
+    WRAP_FLIP_FLAG = 512;
 
 /**
- * Given an arbitrary Error, presumably thrown while attempting to execute a
- * GraphQL operation, produce a new GraphQLError aware of the location in the
- * document responsible for the original Error.
+ * Creates a function that wraps `func` to invoke it with optional `this`
+ * binding of `thisArg`, partial application, and currying.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to prepend to those provided to
+ *  the new function.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [partialsRight] The arguments to append to those provided
+ *  to the new function.
+ * @param {Array} [holdersRight] The `partialsRight` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
  */
-function locatedError(originalError, nodes, path) {
-  // Note: this uses a brand-check to support GraphQL errors originating from
-  // other contexts.
-  // $FlowFixMe(>=0.68.0)
-  if (originalError && Array.isArray(originalError.path)) {
-    return originalError;
-  }
+function createHybrid(func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity) {
+  var isAry = bitmask & WRAP_ARY_FLAG,
+      isBind = bitmask & WRAP_BIND_FLAG,
+      isBindKey = bitmask & WRAP_BIND_KEY_FLAG,
+      isCurried = bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG),
+      isFlip = bitmask & WRAP_FLIP_FLAG,
+      Ctor = isBindKey ? undefined : (0, _createCtor2.default)(func);
 
-  return new _GraphQLError.GraphQLError(originalError && originalError.message, originalError && originalError.nodes || nodes, originalError && originalError.source, originalError && originalError.positions, path, originalError);
-} /**
-   * Copyright (c) 2015-present, Facebook, Inc.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE file in the root directory of this source tree.
-   *
-   *  strict
-   */
-},{"./GraphQLError":197}],201:[function(require,module,exports) {
+  function wrapper() {
+    var length = arguments.length,
+        args = Array(length),
+        index = length;
+
+    while (index--) {
+      args[index] = arguments[index];
+    }
+    if (isCurried) {
+      var placeholder = (0, _getHolder2.default)(wrapper),
+          holdersCount = (0, _countHolders2.default)(args, placeholder);
+    }
+    if (partials) {
+      args = (0, _composeArgs2.default)(args, partials, holders, isCurried);
+    }
+    if (partialsRight) {
+      args = (0, _composeArgsRight2.default)(args, partialsRight, holdersRight, isCurried);
+    }
+    length -= holdersCount;
+    if (isCurried && length < arity) {
+      var newHolders = (0, _replaceHolders2.default)(args, placeholder);
+      return (0, _createRecurry2.default)(func, bitmask, createHybrid, wrapper.placeholder, thisArg, args, newHolders, argPos, ary, arity - length);
+    }
+    var thisBinding = isBind ? thisArg : this,
+        fn = isBindKey ? thisBinding[func] : func;
+
+    length = args.length;
+    if (argPos) {
+      args = (0, _reorder2.default)(args, argPos);
+    } else if (isFlip && length > 1) {
+      args.reverse();
+    }
+    if (isAry && ary < length) {
+      args.length = ary;
+    }
+    if (this && this !== _root2.default && this instanceof wrapper) {
+      fn = Ctor || (0, _createCtor2.default)(fn);
+    }
+    return fn.apply(thisBinding, args);
+  }
+  return wrapper;
+}
+
+exports.default = createHybrid;
+},{"./_composeArgs.js":209,"./_composeArgsRight.js":210,"./_countHolders.js":211,"./_createCtor.js":205,"./_createRecurry.js":206,"./_getHolder.js":207,"./_reorder.js":212,"./_replaceHolders.js":208,"./_root.js":174}],184:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
-                                                                                                                                                                                                                                                                   * Copyright (c) 2015-present, Facebook, Inc.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   * This source code is licensed under the MIT license found in the
-                                                                                                                                                                                                                                                                   * LICENSE file in the root directory of this source tree.
-                                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                                   *  strict
-                                                                                                                                                                                                                                                                   */
+var _apply = require('./_apply.js');
 
-exports.formatError = formatError;
+var _apply2 = _interopRequireDefault(_apply);
 
-var _invariant = require('../jsutils/invariant');
+var _createCtor = require('./_createCtor.js');
 
-var _invariant2 = _interopRequireDefault(_invariant);
+var _createCtor2 = _interopRequireDefault(_createCtor);
+
+var _createHybrid = require('./_createHybrid.js');
+
+var _createHybrid2 = _interopRequireDefault(_createHybrid);
+
+var _createRecurry = require('./_createRecurry.js');
+
+var _createRecurry2 = _interopRequireDefault(_createRecurry);
+
+var _getHolder = require('./_getHolder.js');
+
+var _getHolder2 = _interopRequireDefault(_getHolder);
+
+var _replaceHolders = require('./_replaceHolders.js');
+
+var _replaceHolders2 = _interopRequireDefault(_replaceHolders);
+
+var _root = require('./_root.js');
+
+var _root2 = _interopRequireDefault(_root);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Given a GraphQLError, format it according to the rules described by the
- * Response Format, Errors section of the GraphQL Specification.
+ * Creates a function that wraps `func` to enable currying.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {number} arity The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
  */
-function formatError(error) {
-  !error ? (0, _invariant2.default)(0, 'Received null or undefined error.') : void 0;
-  return _extends({}, error.extensions, {
-    message: error.message || 'An unknown error occurred.',
-    locations: error.locations,
-    path: error.path
-  });
+function createCurry(func, bitmask, arity) {
+  var Ctor = (0, _createCtor2.default)(func);
+
+  function wrapper() {
+    var length = arguments.length,
+        args = Array(length),
+        index = length,
+        placeholder = (0, _getHolder2.default)(wrapper);
+
+    while (index--) {
+      args[index] = arguments[index];
+    }
+    var holders = length < 3 && args[0] !== placeholder && args[length - 1] !== placeholder ? [] : (0, _replaceHolders2.default)(args, placeholder);
+
+    length -= holders.length;
+    if (length < arity) {
+      return (0, _createRecurry2.default)(func, bitmask, _createHybrid2.default, wrapper.placeholder, undefined, args, holders, undefined, undefined, arity - length);
+    }
+    var fn = this && this !== _root2.default && this instanceof wrapper ? Ctor : func;
+    return (0, _apply2.default)(fn, this, args);
+  }
+  return wrapper;
 }
-},{"../jsutils/invariant":209}],192:[function(require,module,exports) {
+
+exports.default = createCurry;
+},{"./_apply.js":204,"./_createCtor.js":205,"./_createHybrid.js":185,"./_createRecurry.js":206,"./_getHolder.js":207,"./_replaceHolders.js":208,"./_root.js":174}],186:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _GraphQLError = require('./GraphQLError');
+var _apply = require('./_apply.js');
 
-Object.defineProperty(exports, 'GraphQLError', {
-  enumerable: true,
-  get: function get() {
-    return _GraphQLError.GraphQLError;
-  }
-});
+var _apply2 = _interopRequireDefault(_apply);
 
-var _syntaxError = require('./syntaxError');
+var _createCtor = require('./_createCtor.js');
 
-Object.defineProperty(exports, 'syntaxError', {
-  enumerable: true,
-  get: function get() {
-    return _syntaxError.syntaxError;
-  }
-});
+var _createCtor2 = _interopRequireDefault(_createCtor);
 
-var _locatedError = require('./locatedError');
+var _root = require('./_root.js');
 
-Object.defineProperty(exports, 'locatedError', {
-  enumerable: true,
-  get: function get() {
-    return _locatedError.locatedError;
-  }
-});
+var _root2 = _interopRequireDefault(_root);
 
-var _printError = require('./printError');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-Object.defineProperty(exports, 'printError', {
-  enumerable: true,
-  get: function get() {
-    return _printError.printError;
-  }
-});
-
-var _formatError = require('./formatError');
-
-Object.defineProperty(exports, 'formatError', {
-  enumerable: true,
-  get: function get() {
-    return _formatError.formatError;
-  }
-});
-},{"./GraphQLError":197,"./syntaxError":198,"./locatedError":199,"./printError":200,"./formatError":201}],218:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = blockStringValue;
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1;
 
 /**
- * Produces the value of a block string from its parsed raw value, similar to
- * Coffeescript's block string, Python's docstring trim or Ruby's strip_heredoc.
+ * Creates a function that wraps `func` to invoke it with the `this` binding
+ * of `thisArg` and `partials` prepended to the arguments it receives.
  *
- * This implements the GraphQL spec's BlockStringValue() static algorithm.
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} partials The arguments to prepend to those provided to
+ *  the new function.
+ * @returns {Function} Returns the new wrapped function.
  */
-function blockStringValue(rawString) {
-  // Expand a block string's raw value into independent lines.
-  var lines = rawString.split(/\r\n|[\n\r]/g);
+function createPartial(func, bitmask, thisArg, partials) {
+  var isBind = bitmask & WRAP_BIND_FLAG,
+      Ctor = (0, _createCtor2.default)(func);
 
-  // Remove common indentation from all lines but first.
-  var commonIndent = null;
-  for (var i = 1; i < lines.length; i++) {
-    var line = lines[i];
-    var indent = leadingWhitespace(line);
-    if (indent < line.length && (commonIndent === null || indent < commonIndent)) {
-      commonIndent = indent;
-      if (commonIndent === 0) {
-        break;
-      }
+  function wrapper() {
+    var argsIndex = -1,
+        argsLength = arguments.length,
+        leftIndex = -1,
+        leftLength = partials.length,
+        args = Array(leftLength + argsLength),
+        fn = this && this !== _root2.default && this instanceof wrapper ? Ctor : func;
+
+    while (++leftIndex < leftLength) {
+      args[leftIndex] = partials[leftIndex];
     }
-  }
-
-  if (commonIndent) {
-    for (var _i = 1; _i < lines.length; _i++) {
-      lines[_i] = lines[_i].slice(commonIndent);
+    while (argsLength--) {
+      args[leftIndex++] = arguments[++argsIndex];
     }
+    return (0, _apply2.default)(fn, isBind ? thisArg : this, args);
   }
-
-  // Remove leading and trailing blank lines.
-  while (lines.length > 0 && isBlank(lines[0])) {
-    lines.shift();
-  }
-  while (lines.length > 0 && isBlank(lines[lines.length - 1])) {
-    lines.pop();
-  }
-
-  // Return a string of the lines joined with U+000A.
-  return lines.join('\n');
+  return wrapper;
 }
 
-function leadingWhitespace(str) {
-  var i = 0;
-  while (i < str.length && (str[i] === ' ' || str[i] === '\t')) {
-    i++;
-  }
-  return i;
-}
-
-function isBlank(str) {
-  return leadingWhitespace(str) === str.length;
-}
-},{}],175:[function(require,module,exports) {
+exports.default = createPartial;
+},{"./_apply.js":204,"./_createCtor.js":205,"./_root.js":174}],188:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TokenKind = undefined;
-exports.createLexer = createLexer;
-exports.getTokenDesc = getTokenDesc;
 
-var _error = require('../error');
+var _composeArgs = require('./_composeArgs.js');
 
-var _blockStringValue = require('./blockStringValue');
+var _composeArgs2 = _interopRequireDefault(_composeArgs);
 
-var _blockStringValue2 = _interopRequireDefault(_blockStringValue);
+var _composeArgsRight = require('./_composeArgsRight.js');
+
+var _composeArgsRight2 = _interopRequireDefault(_composeArgsRight);
+
+var _replaceHolders = require('./_replaceHolders.js');
+
+var _replaceHolders2 = _interopRequireDefault(_replaceHolders);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used as the internal argument placeholder. */
+var PLACEHOLDER = '__lodash_placeholder__';
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_BOUND_FLAG = 4,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_ARY_FLAG = 128,
+    WRAP_REARG_FLAG = 256;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMin = Math.min;
+
+/**
+ * Merges the function metadata of `source` into `data`.
+ *
+ * Merging metadata reduces the number of wrappers used to invoke a function.
+ * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
+ * may be applied regardless of execution order. Methods like `_.ary` and
+ * `_.rearg` modify function arguments, making the order in which they are
+ * executed important, preventing the merging of metadata. However, we make
+ * an exception for a safe combined case where curried functions have `_.ary`
+ * and or `_.rearg` applied.
+ *
+ * @private
+ * @param {Array} data The destination metadata.
+ * @param {Array} source The source metadata.
+ * @returns {Array} Returns `data`.
+ */
+function mergeData(data, source) {
+  var bitmask = data[1],
+      srcBitmask = source[1],
+      newBitmask = bitmask | srcBitmask,
+      isCommon = newBitmask < (WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG | WRAP_ARY_FLAG);
+
+  var isCombo = srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_CURRY_FLAG || srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_REARG_FLAG && data[7].length <= source[8] || srcBitmask == (WRAP_ARY_FLAG | WRAP_REARG_FLAG) && source[7].length <= source[8] && bitmask == WRAP_CURRY_FLAG;
+
+  // Exit early if metadata can't be merged.
+  if (!(isCommon || isCombo)) {
+    return data;
+  }
+  // Use source `thisArg` if available.
+  if (srcBitmask & WRAP_BIND_FLAG) {
+    data[2] = source[2];
+    // Set when currying a bound function.
+    newBitmask |= bitmask & WRAP_BIND_FLAG ? 0 : WRAP_CURRY_BOUND_FLAG;
+  }
+  // Compose partial arguments.
+  var value = source[3];
+  if (value) {
+    var partials = data[3];
+    data[3] = partials ? (0, _composeArgs2.default)(partials, value, source[4]) : value;
+    data[4] = partials ? (0, _replaceHolders2.default)(data[3], PLACEHOLDER) : source[4];
+  }
+  // Compose partial right arguments.
+  value = source[5];
+  if (value) {
+    partials = data[5];
+    data[5] = partials ? (0, _composeArgsRight2.default)(partials, value, source[6]) : value;
+    data[6] = partials ? (0, _replaceHolders2.default)(data[5], PLACEHOLDER) : source[6];
+  }
+  // Use source `argPos` if available.
+  value = source[7];
+  if (value) {
+    data[7] = value;
+  }
+  // Use source `ary` if it's smaller.
+  if (srcBitmask & WRAP_ARY_FLAG) {
+    data[8] = data[8] == null ? source[8] : nativeMin(data[8], source[8]);
+  }
+  // Use source `arity` if one is not provided.
+  if (data[9] == null) {
+    data[9] = source[9];
+  }
+  // Use source `func` and merge bitmasks.
+  data[0] = source[0];
+  data[1] = newBitmask;
+
+  return data;
+}
+
+exports.default = mergeData;
+},{"./_composeArgs.js":209,"./_composeArgsRight.js":210,"./_replaceHolders.js":208}],261:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isObject = require('./isObject.js');
+
+var _isObject2 = _interopRequireDefault(_isObject);
+
+var _isSymbol = require('./isSymbol.js');
+
+var _isSymbol2 = _interopRequireDefault(_isSymbol);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if ((0, _isSymbol2.default)(value)) {
+    return NAN;
+  }
+  if ((0, _isObject2.default)(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = (0, _isObject2.default)(other) ? other + '' : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+}
+
+exports.default = toNumber;
+},{"./isObject.js":142,"./isSymbol.js":120}],258:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _toNumber = require('./toNumber.js');
+
+var _toNumber2 = _interopRequireDefault(_toNumber);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0,
+    MAX_INTEGER = 1.7976931348623157e+308;
+
+/**
+ * Converts `value` to a finite number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.12.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted number.
+ * @example
+ *
+ * _.toFinite(3.2);
+ * // => 3.2
+ *
+ * _.toFinite(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toFinite(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toFinite('3.2');
+ * // => 3.2
+ */
+function toFinite(value) {
+  if (!value) {
+    return value === 0 ? value : 0;
+  }
+  value = (0, _toNumber2.default)(value);
+  if (value === INFINITY || value === -INFINITY) {
+    var sign = value < 0 ? -1 : 1;
+    return sign * MAX_INTEGER;
+  }
+  return value === value ? value : 0;
+}
+
+exports.default = toFinite;
+},{"./toNumber.js":261}],159:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _toFinite = require('./toFinite.js');
+
+var _toFinite2 = _interopRequireDefault(_toFinite);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Given a Source object, this returns a Lexer for that source.
- * A Lexer is a stateful stream generator in that every time
- * it is advanced, it returns the next token in the Source. Assuming the
- * source lexes, the final Token emitted by the lexer will be of kind
- * EOF, after which the lexer will repeatedly return the same EOF token
- * whenever called.
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
+ * Converts `value` to an integer.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * **Note:** This method is loosely based on
+ * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
  *
- *  strict
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted integer.
+ * @example
+ *
+ * _.toInteger(3.2);
+ * // => 3
+ *
+ * _.toInteger(Number.MIN_VALUE);
+ * // => 0
+ *
+ * _.toInteger(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toInteger('3.2');
+ * // => 3
  */
+function toInteger(value) {
+  var result = (0, _toFinite2.default)(value),
+      remainder = result % 1;
 
-function createLexer(source, options) {
-  var startOfFileToken = new Tok(TokenKind.SOF, 0, 0, 0, 0, null);
-  var lexer = {
-    source: source,
-    options: options,
-    lastToken: startOfFileToken,
-    token: startOfFileToken,
-    line: 1,
-    lineStart: 0,
-    advance: advanceLexer,
-    lookahead: lookahead
-  };
-  return lexer;
+  return result === result ? remainder ? result - remainder : result : 0;
 }
 
-function advanceLexer() {
-  this.lastToken = this.token;
-  var token = this.token = this.lookahead();
-  return token;
-}
+exports.default = toInteger;
+},{"./toFinite.js":258}],157:[function(require,module,exports) {
+'use strict';
 
-function lookahead() {
-  var token = this.token;
-  if (token.kind !== TokenKind.EOF) {
-    do {
-      // Note: next is only mutable during parsing, so we cast to allow this.
-      token = token.next || (token.next = readToken(this, token));
-    } while (token.kind === TokenKind.COMMENT);
-  }
-  return token;
-}
-
-/**
- * The return type of createLexer.
- */
-
-
-/**
- * An exported enum describing the different kinds of tokens that the
- * lexer emits.
- */
-var TokenKind = exports.TokenKind = Object.freeze({
-  SOF: '<SOF>',
-  EOF: '<EOF>',
-  BANG: '!',
-  DOLLAR: '$',
-  AMP: '&',
-  PAREN_L: '(',
-  PAREN_R: ')',
-  SPREAD: '...',
-  COLON: ':',
-  EQUALS: '=',
-  AT: '@',
-  BRACKET_L: '[',
-  BRACKET_R: ']',
-  BRACE_L: '{',
-  PIPE: '|',
-  BRACE_R: '}',
-  NAME: 'Name',
-  INT: 'Int',
-  FLOAT: 'Float',
-  STRING: 'String',
-  BLOCK_STRING: 'BlockString',
-  COMMENT: 'Comment'
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-/**
- * The enum type representing the token kinds values.
- */
+var _baseSetData = require('./_baseSetData.js');
 
+var _baseSetData2 = _interopRequireDefault(_baseSetData);
+
+var _createBind = require('./_createBind.js');
+
+var _createBind2 = _interopRequireDefault(_createBind);
+
+var _createCurry = require('./_createCurry.js');
+
+var _createCurry2 = _interopRequireDefault(_createCurry);
+
+var _createHybrid = require('./_createHybrid.js');
+
+var _createHybrid2 = _interopRequireDefault(_createHybrid);
+
+var _createPartial = require('./_createPartial.js');
+
+var _createPartial2 = _interopRequireDefault(_createPartial);
+
+var _getData = require('./_getData.js');
+
+var _getData2 = _interopRequireDefault(_getData);
+
+var _mergeData = require('./_mergeData.js');
+
+var _mergeData2 = _interopRequireDefault(_mergeData);
+
+var _setData = require('./_setData.js');
+
+var _setData2 = _interopRequireDefault(_setData);
+
+var _setWrapToString = require('./_setWrapToString.js');
+
+var _setWrapToString2 = _interopRequireDefault(_setWrapToString);
+
+var _toInteger = require('./toInteger.js');
+
+var _toInteger2 = _interopRequireDefault(_toInteger);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Error message constants. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_BIND_FLAG = 1,
+    WRAP_BIND_KEY_FLAG = 2,
+    WRAP_CURRY_FLAG = 8,
+    WRAP_CURRY_RIGHT_FLAG = 16,
+    WRAP_PARTIAL_FLAG = 32,
+    WRAP_PARTIAL_RIGHT_FLAG = 64;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
 
 /**
- * A helper function to describe a token as a string for debugging
+ * Creates a function that either curries or invokes `func` with optional
+ * `this` binding and partially applied arguments.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to wrap.
+ * @param {number} bitmask The bitmask flags.
+ *    1 - `_.bind`
+ *    2 - `_.bindKey`
+ *    4 - `_.curry` or `_.curryRight` of a bound function
+ *    8 - `_.curry`
+ *   16 - `_.curryRight`
+ *   32 - `_.partial`
+ *   64 - `_.partialRight`
+ *  128 - `_.rearg`
+ *  256 - `_.ary`
+ *  512 - `_.flip`
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to be partially applied.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
  */
-function getTokenDesc(token) {
-  var value = token.value;
-  return value ? token.kind + ' "' + value + '"' : token.kind;
+function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+  var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
+  if (!isBindKey && typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var length = partials ? partials.length : 0;
+  if (!length) {
+    bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
+    partials = holders = undefined;
+  }
+  ary = ary === undefined ? ary : nativeMax((0, _toInteger2.default)(ary), 0);
+  arity = arity === undefined ? arity : (0, _toInteger2.default)(arity);
+  length -= holders ? holders.length : 0;
+
+  if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
+    var partialsRight = partials,
+        holdersRight = holders;
+
+    partials = holders = undefined;
+  }
+  var data = isBindKey ? undefined : (0, _getData2.default)(func);
+
+  var newData = [func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity];
+
+  if (data) {
+    (0, _mergeData2.default)(newData, data);
+  }
+  func = newData[0];
+  bitmask = newData[1];
+  thisArg = newData[2];
+  partials = newData[3];
+  holders = newData[4];
+  arity = newData[9] = newData[9] === undefined ? isBindKey ? 0 : func.length : nativeMax(newData[9] - length, 0);
+
+  if (!arity && bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG)) {
+    bitmask &= ~(WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG);
+  }
+  if (!bitmask || bitmask == WRAP_BIND_FLAG) {
+    var result = (0, _createBind2.default)(func, bitmask, thisArg);
+  } else if (bitmask == WRAP_CURRY_FLAG || bitmask == WRAP_CURRY_RIGHT_FLAG) {
+    result = (0, _createCurry2.default)(func, bitmask, arity);
+  } else if ((bitmask == WRAP_PARTIAL_FLAG || bitmask == (WRAP_BIND_FLAG | WRAP_PARTIAL_FLAG)) && !holders.length) {
+    result = (0, _createPartial2.default)(func, bitmask, thisArg, partials);
+  } else {
+    result = _createHybrid2.default.apply(undefined, newData);
+  }
+  var setter = data ? _baseSetData2.default : _setData2.default;
+  return (0, _setWrapToString2.default)(setter(result, newData), func, bitmask);
 }
 
-var charCodeAt = String.prototype.charCodeAt;
-var slice = String.prototype.slice;
+exports.default = createWrap;
+},{"./_baseSetData.js":182,"./_createBind.js":183,"./_createCurry.js":184,"./_createHybrid.js":185,"./_createPartial.js":186,"./_getData.js":187,"./_mergeData.js":188,"./_setData.js":189,"./_setWrapToString.js":190,"./toInteger.js":159}],126:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createWrap = require('./_createWrap.js');
+
+var _createWrap2 = _interopRequireDefault(_createWrap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used to compose bitmasks for function metadata. */
+var WRAP_CURRY_FLAG = 8;
 
 /**
- * Helper function for constructing the Token object.
+ * Creates a function that accepts arguments of `func` and either invokes
+ * `func` returning its result, if at least `arity` number of arguments have
+ * been provided, or returns a function that accepts the remaining `func`
+ * arguments, and so on. The arity of `func` may be specified if `func.length`
+ * is not sufficient.
+ *
+ * The `_.curry.placeholder` value, which defaults to `_` in monolithic builds,
+ * may be used as a placeholder for provided arguments.
+ *
+ * **Note:** This method doesn't set the "length" property of curried functions.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.0.0
+ * @category Function
+ * @param {Function} func The function to curry.
+ * @param {number} [arity=func.length] The arity of `func`.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+ * @returns {Function} Returns the new curried function.
+ * @example
+ *
+ * var abc = function(a, b, c) {
+ *   return [a, b, c];
+ * };
+ *
+ * var curried = _.curry(abc);
+ *
+ * curried(1)(2)(3);
+ * // => [1, 2, 3]
+ *
+ * curried(1, 2)(3);
+ * // => [1, 2, 3]
+ *
+ * curried(1, 2, 3);
+ * // => [1, 2, 3]
+ *
+ * // Curried with placeholders.
+ * curried(1)(_, 3)(2);
+ * // => [1, 2, 3]
  */
-function Tok(kind, start, end, line, column, prev, value) {
-  this.kind = kind;
-  this.start = start;
-  this.end = end;
-  this.line = line;
-  this.column = column;
-  this.value = value;
-  this.prev = prev;
-  this.next = null;
+function curry(func, arity, guard) {
+  arity = guard ? undefined : arity;
+  var result = (0, _createWrap2.default)(func, WRAP_CURRY_FLAG, undefined, undefined, undefined, undefined, undefined, arity);
+  result.placeholder = curry.placeholder;
+  return result;
 }
 
-// Print a simplified form when appearing in JSON/util.inspect.
-Tok.prototype.toJSON = Tok.prototype.inspect = function toJSON() {
-  return {
-    kind: this.kind,
-    value: this.value,
-    line: this.line,
-    column: this.column
-  };
+// Assign default placeholders.
+curry.placeholder = {};
+
+exports.default = curry;
+},{"./_createWrap.js":157}],88:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _curry = require('lodash-es/curry');
+
+var _curry2 = _interopRequireDefault(_curry);
+
+var _createAction = require('./createAction');
+
+var _createAction2 = _interopRequireDefault(_createAction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (type, payloadCreator) {
+  return (0, _curry2.default)((0, _createAction2.default)(type, payloadCreator), payloadCreator.length);
 };
-
-function printCharCode(code) {
-  return (
-    // NaN/undefined represents access beyond the end of the file.
-    isNaN(code) ? TokenKind.EOF : // Trust JSON for ASCII.
-    code < 0x007f ? JSON.stringify(String.fromCharCode(code)) : // Otherwise print the escaped form.
-    '"\\u' + ('00' + code.toString(16).toUpperCase()).slice(-4) + '"'
-  );
-}
-
-/**
- * Gets the next token from the source starting at the given position.
- *
- * This skips over whitespace and comments until it finds the next lexable
- * token, then lexes punctuators immediately or calls the appropriate helper
- * function for more complicated tokens.
- */
-function readToken(lexer, prev) {
-  var source = lexer.source;
-  var body = source.body;
-  var bodyLength = body.length;
-
-  var pos = positionAfterWhitespace(body, prev.end, lexer);
-  var line = lexer.line;
-  var col = 1 + pos - lexer.lineStart;
-
-  if (pos >= bodyLength) {
-    return new Tok(TokenKind.EOF, bodyLength, bodyLength, line, col, prev);
-  }
-
-  var code = charCodeAt.call(body, pos);
-
-  // SourceCharacter
-  if (code < 0x0020 && code !== 0x0009 && code !== 0x000a && code !== 0x000d) {
-    throw (0, _error.syntaxError)(source, pos, 'Cannot contain the invalid character ' + printCharCode(code) + '.');
-  }
-
-  switch (code) {
-    // !
-    case 33:
-      return new Tok(TokenKind.BANG, pos, pos + 1, line, col, prev);
-    // #
-    case 35:
-      return readComment(source, pos, line, col, prev);
-    // $
-    case 36:
-      return new Tok(TokenKind.DOLLAR, pos, pos + 1, line, col, prev);
-    // &
-    case 38:
-      return new Tok(TokenKind.AMP, pos, pos + 1, line, col, prev);
-    // (
-    case 40:
-      return new Tok(TokenKind.PAREN_L, pos, pos + 1, line, col, prev);
-    // )
-    case 41:
-      return new Tok(TokenKind.PAREN_R, pos, pos + 1, line, col, prev);
-    // .
-    case 46:
-      if (charCodeAt.call(body, pos + 1) === 46 && charCodeAt.call(body, pos + 2) === 46) {
-        return new Tok(TokenKind.SPREAD, pos, pos + 3, line, col, prev);
-      }
-      break;
-    // :
-    case 58:
-      return new Tok(TokenKind.COLON, pos, pos + 1, line, col, prev);
-    // =
-    case 61:
-      return new Tok(TokenKind.EQUALS, pos, pos + 1, line, col, prev);
-    // @
-    case 64:
-      return new Tok(TokenKind.AT, pos, pos + 1, line, col, prev);
-    // [
-    case 91:
-      return new Tok(TokenKind.BRACKET_L, pos, pos + 1, line, col, prev);
-    // ]
-    case 93:
-      return new Tok(TokenKind.BRACKET_R, pos, pos + 1, line, col, prev);
-    // {
-    case 123:
-      return new Tok(TokenKind.BRACE_L, pos, pos + 1, line, col, prev);
-    // |
-    case 124:
-      return new Tok(TokenKind.PIPE, pos, pos + 1, line, col, prev);
-    // }
-    case 125:
-      return new Tok(TokenKind.BRACE_R, pos, pos + 1, line, col, prev);
-    // A-Z _ a-z
-    case 65:
-    case 66:
-    case 67:
-    case 68:
-    case 69:
-    case 70:
-    case 71:
-    case 72:
-    case 73:
-    case 74:
-    case 75:
-    case 76:
-    case 77:
-    case 78:
-    case 79:
-    case 80:
-    case 81:
-    case 82:
-    case 83:
-    case 84:
-    case 85:
-    case 86:
-    case 87:
-    case 88:
-    case 89:
-    case 90:
-    case 95:
-    case 97:
-    case 98:
-    case 99:
-    case 100:
-    case 101:
-    case 102:
-    case 103:
-    case 104:
-    case 105:
-    case 106:
-    case 107:
-    case 108:
-    case 109:
-    case 110:
-    case 111:
-    case 112:
-    case 113:
-    case 114:
-    case 115:
-    case 116:
-    case 117:
-    case 118:
-    case 119:
-    case 120:
-    case 121:
-    case 122:
-      return readName(source, pos, line, col, prev);
-    // - 0-9
-    case 45:
-    case 48:
-    case 49:
-    case 50:
-    case 51:
-    case 52:
-    case 53:
-    case 54:
-    case 55:
-    case 56:
-    case 57:
-      return readNumber(source, pos, code, line, col, prev);
-    // "
-    case 34:
-      if (charCodeAt.call(body, pos + 1) === 34 && charCodeAt.call(body, pos + 2) === 34) {
-        return readBlockString(source, pos, line, col, prev);
-      }
-      return readString(source, pos, line, col, prev);
-  }
-
-  throw (0, _error.syntaxError)(source, pos, unexpectedCharacterMessage(code));
-}
-
-/**
- * Report a message that an unexpected character was encountered.
- */
-function unexpectedCharacterMessage(code) {
-  if (code === 39) {
-    // '
-    return "Unexpected single quote character ('), did you mean to use " + 'a double quote (")?';
-  }
-
-  return 'Cannot parse the unexpected character ' + printCharCode(code) + '.';
-}
-
-/**
- * Reads from body starting at startPosition until it finds a non-whitespace
- * or commented character, then returns the position of that character for
- * lexing.
- */
-function positionAfterWhitespace(body, startPosition, lexer) {
-  var bodyLength = body.length;
-  var position = startPosition;
-  while (position < bodyLength) {
-    var code = charCodeAt.call(body, position);
-    // tab | space | comma | BOM
-    if (code === 9 || code === 32 || code === 44 || code === 0xfeff) {
-      ++position;
-    } else if (code === 10) {
-      // new line
-      ++position;
-      ++lexer.line;
-      lexer.lineStart = position;
-    } else if (code === 13) {
-      // carriage return
-      if (charCodeAt.call(body, position + 1) === 10) {
-        position += 2;
-      } else {
-        ++position;
-      }
-      ++lexer.line;
-      lexer.lineStart = position;
-    } else {
-      break;
-    }
-  }
-  return position;
-}
-
-/**
- * Reads a comment token from the source file.
- *
- * #[\u0009\u0020-\uFFFF]*
- */
-function readComment(source, start, line, col, prev) {
-  var body = source.body;
-  var code = void 0;
-  var position = start;
-
-  do {
-    code = charCodeAt.call(body, ++position);
-  } while (code !== null && (
-  // SourceCharacter but not LineTerminator
-  code > 0x001f || code === 0x0009));
-
-  return new Tok(TokenKind.COMMENT, start, position, line, col, prev, slice.call(body, start + 1, position));
-}
-
-/**
- * Reads a number token from the source file, either a float
- * or an int depending on whether a decimal point appears.
- *
- * Int:   -?(0|[1-9][0-9]*)
- * Float: -?(0|[1-9][0-9]*)(\.[0-9]+)?((E|e)(+|-)?[0-9]+)?
- */
-function readNumber(source, start, firstCode, line, col, prev) {
-  var body = source.body;
-  var code = firstCode;
-  var position = start;
-  var isFloat = false;
-
-  if (code === 45) {
-    // -
-    code = charCodeAt.call(body, ++position);
-  }
-
-  if (code === 48) {
-    // 0
-    code = charCodeAt.call(body, ++position);
-    if (code >= 48 && code <= 57) {
-      throw (0, _error.syntaxError)(source, position, 'Invalid number, unexpected digit after 0: ' + printCharCode(code) + '.');
-    }
-  } else {
-    position = readDigits(source, position, code);
-    code = charCodeAt.call(body, position);
-  }
-
-  if (code === 46) {
-    // .
-    isFloat = true;
-
-    code = charCodeAt.call(body, ++position);
-    position = readDigits(source, position, code);
-    code = charCodeAt.call(body, position);
-  }
-
-  if (code === 69 || code === 101) {
-    // E e
-    isFloat = true;
-
-    code = charCodeAt.call(body, ++position);
-    if (code === 43 || code === 45) {
-      // + -
-      code = charCodeAt.call(body, ++position);
-    }
-    position = readDigits(source, position, code);
-  }
-
-  return new Tok(isFloat ? TokenKind.FLOAT : TokenKind.INT, start, position, line, col, prev, slice.call(body, start, position));
-}
-
-/**
- * Returns the new position in the source after reading digits.
- */
-function readDigits(source, start, firstCode) {
-  var body = source.body;
-  var position = start;
-  var code = firstCode;
-  if (code >= 48 && code <= 57) {
-    // 0 - 9
-    do {
-      code = charCodeAt.call(body, ++position);
-    } while (code >= 48 && code <= 57); // 0 - 9
-    return position;
-  }
-  throw (0, _error.syntaxError)(source, position, 'Invalid number, expected digit but got: ' + printCharCode(code) + '.');
-}
-
-/**
- * Reads a string token from the source file.
- *
- * "([^"\\\u000A\u000D]|(\\(u[0-9a-fA-F]{4}|["\\/bfnrt])))*"
- */
-function readString(source, start, line, col, prev) {
-  var body = source.body;
-  var position = start + 1;
-  var chunkStart = position;
-  var code = 0;
-  var value = '';
-
-  while (position < body.length && (code = charCodeAt.call(body, position)) !== null &&
-  // not LineTerminator
-  code !== 0x000a && code !== 0x000d) {
-    // Closing Quote (")
-    if (code === 34) {
-      value += slice.call(body, chunkStart, position);
-      return new Tok(TokenKind.STRING, start, position + 1, line, col, prev, value);
-    }
-
-    // SourceCharacter
-    if (code < 0x0020 && code !== 0x0009) {
-      throw (0, _error.syntaxError)(source, position, 'Invalid character within String: ' + printCharCode(code) + '.');
-    }
-
-    ++position;
-    if (code === 92) {
-      // \
-      value += slice.call(body, chunkStart, position - 1);
-      code = charCodeAt.call(body, position);
-      switch (code) {
-        case 34:
-          value += '"';
-          break;
-        case 47:
-          value += '/';
-          break;
-        case 92:
-          value += '\\';
-          break;
-        case 98:
-          value += '\b';
-          break;
-        case 102:
-          value += '\f';
-          break;
-        case 110:
-          value += '\n';
-          break;
-        case 114:
-          value += '\r';
-          break;
-        case 116:
-          value += '\t';
-          break;
-        case 117:
-          // u
-          var charCode = uniCharCode(charCodeAt.call(body, position + 1), charCodeAt.call(body, position + 2), charCodeAt.call(body, position + 3), charCodeAt.call(body, position + 4));
-          if (charCode < 0) {
-            throw (0, _error.syntaxError)(source, position, 'Invalid character escape sequence: ' + ('\\u' + body.slice(position + 1, position + 5) + '.'));
-          }
-          value += String.fromCharCode(charCode);
-          position += 4;
-          break;
-        default:
-          throw (0, _error.syntaxError)(source, position, 'Invalid character escape sequence: \\' + String.fromCharCode(code) + '.');
-      }
-      ++position;
-      chunkStart = position;
-    }
-  }
-
-  throw (0, _error.syntaxError)(source, position, 'Unterminated string.');
-}
-
-/**
- * Reads a block string token from the source file.
- *
- * """("?"?(\\"""|\\(?!=""")|[^"\\]))*"""
- */
-function readBlockString(source, start, line, col, prev) {
-  var body = source.body;
-  var position = start + 3;
-  var chunkStart = position;
-  var code = 0;
-  var rawValue = '';
-
-  while (position < body.length && (code = charCodeAt.call(body, position)) !== null) {
-    // Closing Triple-Quote (""")
-    if (code === 34 && charCodeAt.call(body, position + 1) === 34 && charCodeAt.call(body, position + 2) === 34) {
-      rawValue += slice.call(body, chunkStart, position);
-      return new Tok(TokenKind.BLOCK_STRING, start, position + 3, line, col, prev, (0, _blockStringValue2.default)(rawValue));
-    }
-
-    // SourceCharacter
-    if (code < 0x0020 && code !== 0x0009 && code !== 0x000a && code !== 0x000d) {
-      throw (0, _error.syntaxError)(source, position, 'Invalid character within String: ' + printCharCode(code) + '.');
-    }
-
-    // Escape Triple-Quote (\""")
-    if (code === 92 && charCodeAt.call(body, position + 1) === 34 && charCodeAt.call(body, position + 2) === 34 && charCodeAt.call(body, position + 3) === 34) {
-      rawValue += slice.call(body, chunkStart, position) + '"""';
-      position += 4;
-      chunkStart = position;
-    } else {
-      ++position;
-    }
-  }
-
-  throw (0, _error.syntaxError)(source, position, 'Unterminated string.');
-}
-
-/**
- * Converts four hexidecimal chars to the integer that the
- * string represents. For example, uniCharCode('0','0','0','f')
- * will return 15, and uniCharCode('0','0','f','f') returns 255.
- *
- * Returns a negative number on error, if a char was invalid.
- *
- * This is implemented by noting that char2hex() returns -1 on error,
- * which means the result of ORing the char2hex() will also be negative.
- */
-function uniCharCode(a, b, c, d) {
-  return char2hex(a) << 12 | char2hex(b) << 8 | char2hex(c) << 4 | char2hex(d);
-}
-
-/**
- * Converts a hex character to its integer value.
- * '0' becomes 0, '9' becomes 9
- * 'A' becomes 10, 'F' becomes 15
- * 'a' becomes 10, 'f' becomes 15
- *
- * Returns -1 on error.
- */
-function char2hex(a) {
-  return a >= 48 && a <= 57 ? a - 48 // 0-9
-  : a >= 65 && a <= 70 ? a - 55 // A-F
-  : a >= 97 && a <= 102 ? a - 87 // a-f
-  : -1;
-}
-
-/**
- * Reads an alphanumeric + underscore name from the source.
- *
- * [_A-Za-z][_0-9A-Za-z]*
- */
-function readName(source, start, line, col, prev) {
-  var body = source.body;
-  var bodyLength = body.length;
-  var position = start + 1;
-  var code = 0;
-  while (position !== bodyLength && (code = charCodeAt.call(body, position)) !== null && (code === 95 || // _
-  code >= 48 && code <= 57 || // 0-9
-  code >= 65 && code <= 90 || // A-Z
-  code >= 97 && code <= 122) // a-z
-  ) {
-    ++position;
-  }
-  return new Tok(TokenKind.NAME, start, position, line, col, prev, slice.call(body, start, position));
-}
-},{"../error":192,"./blockStringValue":218}],176:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-/**
- * The set of allowed kind values for AST nodes.
- */
-var Kind = exports.Kind = Object.freeze({
-  // Name
-  NAME: 'Name',
-
-  // Document
-  DOCUMENT: 'Document',
-  OPERATION_DEFINITION: 'OperationDefinition',
-  VARIABLE_DEFINITION: 'VariableDefinition',
-  VARIABLE: 'Variable',
-  SELECTION_SET: 'SelectionSet',
-  FIELD: 'Field',
-  ARGUMENT: 'Argument',
-
-  // Fragments
-  FRAGMENT_SPREAD: 'FragmentSpread',
-  INLINE_FRAGMENT: 'InlineFragment',
-  FRAGMENT_DEFINITION: 'FragmentDefinition',
-
-  // Values
-  INT: 'IntValue',
-  FLOAT: 'FloatValue',
-  STRING: 'StringValue',
-  BOOLEAN: 'BooleanValue',
-  NULL: 'NullValue',
-  ENUM: 'EnumValue',
-  LIST: 'ListValue',
-  OBJECT: 'ObjectValue',
-  OBJECT_FIELD: 'ObjectField',
-
-  // Directives
-  DIRECTIVE: 'Directive',
-
-  // Types
-  NAMED_TYPE: 'NamedType',
-  LIST_TYPE: 'ListType',
-  NON_NULL_TYPE: 'NonNullType',
-
-  // Type System Definitions
-  SCHEMA_DEFINITION: 'SchemaDefinition',
-  OPERATION_TYPE_DEFINITION: 'OperationTypeDefinition',
-
-  // Type Definitions
-  SCALAR_TYPE_DEFINITION: 'ScalarTypeDefinition',
-  OBJECT_TYPE_DEFINITION: 'ObjectTypeDefinition',
-  FIELD_DEFINITION: 'FieldDefinition',
-  INPUT_VALUE_DEFINITION: 'InputValueDefinition',
-  INTERFACE_TYPE_DEFINITION: 'InterfaceTypeDefinition',
-  UNION_TYPE_DEFINITION: 'UnionTypeDefinition',
-  ENUM_TYPE_DEFINITION: 'EnumTypeDefinition',
-  ENUM_VALUE_DEFINITION: 'EnumValueDefinition',
-  INPUT_OBJECT_TYPE_DEFINITION: 'InputObjectTypeDefinition',
-
-  // Type Extensions
-  SCALAR_TYPE_EXTENSION: 'ScalarTypeExtension',
-  OBJECT_TYPE_EXTENSION: 'ObjectTypeExtension',
-  INTERFACE_TYPE_EXTENSION: 'InterfaceTypeExtension',
-  UNION_TYPE_EXTENSION: 'UnionTypeExtension',
-  ENUM_TYPE_EXTENSION: 'EnumTypeExtension',
-  INPUT_OBJECT_TYPE_EXTENSION: 'InputObjectTypeExtension',
-
-  // Directive Definitions
-  DIRECTIVE_DEFINITION: 'DirectiveDefinition'
-});
-
-/**
- * The enum type representing the possible kind values of AST nodes.
- */
-},{}],177:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-/**
- * The set of allowed directive location values.
- */
-var DirectiveLocation = exports.DirectiveLocation = Object.freeze({
-  // Request Definitions
-  QUERY: 'QUERY',
-  MUTATION: 'MUTATION',
-  SUBSCRIPTION: 'SUBSCRIPTION',
-  FIELD: 'FIELD',
-  FRAGMENT_DEFINITION: 'FRAGMENT_DEFINITION',
-  FRAGMENT_SPREAD: 'FRAGMENT_SPREAD',
-  INLINE_FRAGMENT: 'INLINE_FRAGMENT',
-  // Type System Definitions
-  SCHEMA: 'SCHEMA',
-  SCALAR: 'SCALAR',
-  OBJECT: 'OBJECT',
-  FIELD_DEFINITION: 'FIELD_DEFINITION',
-  ARGUMENT_DEFINITION: 'ARGUMENT_DEFINITION',
-  INTERFACE: 'INTERFACE',
-  UNION: 'UNION',
-  ENUM: 'ENUM',
-  ENUM_VALUE: 'ENUM_VALUE',
-  INPUT_OBJECT: 'INPUT_OBJECT',
-  INPUT_FIELD_DEFINITION: 'INPUT_FIELD_DEFINITION'
-});
-
-/**
- * The enum type representing the directive location values.
- */
-},{}],164:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.parse = parse;
-exports.parseValue = parseValue;
-exports.parseType = parseType;
-exports.parseConstValue = parseConstValue;
-exports.parseTypeReference = parseTypeReference;
-exports.parseNamedType = parseNamedType;
-
-var _source = require('./source');
-
-var _error = require('../error');
-
-var _lexer = require('./lexer');
-
-var _kinds = require('./kinds');
-
-var _directiveLocation = require('./directiveLocation');
-
-/**
- * Given a GraphQL source, parses it into a Document.
- * Throws GraphQLError if a syntax error is encountered.
- */
-
-
-/**
- * Configuration options to control parser behavior
- */
-function parse(source, options) {
-  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
-  if (!(sourceObj instanceof _source.Source)) {
-    throw new TypeError('Must provide Source. Received: ' + String(sourceObj));
-  }
-  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
-  return parseDocument(lexer);
-}
-
-/**
- * Given a string containing a GraphQL value (ex. `[42]`), parse the AST for
- * that value.
- * Throws GraphQLError if a syntax error is encountered.
- *
- * This is useful within tools that operate upon GraphQL Values directly and
- * in isolation of complete GraphQL documents.
- *
- * Consider providing the results to the utility function: valueFromAST().
- */
-/**
- * Copyright (c) 2015-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *  strict
- */
-
-function parseValue(source, options) {
-  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
-  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
-  expect(lexer, _lexer.TokenKind.SOF);
-  var value = parseValueLiteral(lexer, false);
-  expect(lexer, _lexer.TokenKind.EOF);
-  return value;
-}
-
-/**
- * Given a string containing a GraphQL Type (ex. `[Int!]`), parse the AST for
- * that type.
- * Throws GraphQLError if a syntax error is encountered.
- *
- * This is useful within tools that operate upon GraphQL Types directly and
- * in isolation of complete GraphQL documents.
- *
- * Consider providing the results to the utility function: typeFromAST().
- */
-function parseType(source, options) {
-  var sourceObj = typeof source === 'string' ? new _source.Source(source) : source;
-  var lexer = (0, _lexer.createLexer)(sourceObj, options || {});
-  expect(lexer, _lexer.TokenKind.SOF);
-  var type = parseTypeReference(lexer);
-  expect(lexer, _lexer.TokenKind.EOF);
-  return type;
-}
-
-/**
- * Converts a name lex token into a name parse node.
- */
-function parseName(lexer) {
-  var token = expect(lexer, _lexer.TokenKind.NAME);
-  return {
-    kind: _kinds.Kind.NAME,
-    value: token.value,
-    loc: loc(lexer, token)
-  };
-}
-
-// Implements the parsing rules in the Document section.
-
-/**
- * Document : Definition+
- */
-function parseDocument(lexer) {
-  var start = lexer.token;
-  expect(lexer, _lexer.TokenKind.SOF);
-  var definitions = [];
-  do {
-    definitions.push(parseDefinition(lexer));
-  } while (!skip(lexer, _lexer.TokenKind.EOF));
-
-  return {
-    kind: _kinds.Kind.DOCUMENT,
-    definitions: definitions,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * Definition :
- *   - ExecutableDefinition
- *   - TypeSystemDefinition
- */
-function parseDefinition(lexer) {
-  if (peek(lexer, _lexer.TokenKind.NAME)) {
-    switch (lexer.token.value) {
-      case 'query':
-      case 'mutation':
-      case 'subscription':
-      case 'fragment':
-        return parseExecutableDefinition(lexer);
-      case 'schema':
-      case 'scalar':
-      case 'type':
-      case 'interface':
-      case 'union':
-      case 'enum':
-      case 'input':
-      case 'extend':
-      case 'directive':
-        // Note: The schema definition language is an experimental addition.
-        return parseTypeSystemDefinition(lexer);
-    }
-  } else if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
-    return parseExecutableDefinition(lexer);
-  } else if (peekDescription(lexer)) {
-    // Note: The schema definition language is an experimental addition.
-    return parseTypeSystemDefinition(lexer);
-  }
-
-  throw unexpected(lexer);
-}
-
-/**
- * ExecutableDefinition :
- *   - OperationDefinition
- *   - FragmentDefinition
- */
-function parseExecutableDefinition(lexer) {
-  if (peek(lexer, _lexer.TokenKind.NAME)) {
-    switch (lexer.token.value) {
-      case 'query':
-      case 'mutation':
-      case 'subscription':
-        return parseOperationDefinition(lexer);
-
-      case 'fragment':
-        return parseFragmentDefinition(lexer);
-    }
-  } else if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
-    return parseOperationDefinition(lexer);
-  }
-
-  throw unexpected(lexer);
-}
-
-// Implements the parsing rules in the Operations section.
-
-/**
- * OperationDefinition :
- *  - SelectionSet
- *  - OperationType Name? VariableDefinitions? Directives? SelectionSet
- */
-function parseOperationDefinition(lexer) {
-  var start = lexer.token;
-  if (peek(lexer, _lexer.TokenKind.BRACE_L)) {
-    return {
-      kind: _kinds.Kind.OPERATION_DEFINITION,
-      operation: 'query',
-      name: undefined,
-      variableDefinitions: [],
-      directives: [],
-      selectionSet: parseSelectionSet(lexer),
-      loc: loc(lexer, start)
-    };
-  }
-  var operation = parseOperationType(lexer);
-  var name = void 0;
-  if (peek(lexer, _lexer.TokenKind.NAME)) {
-    name = parseName(lexer);
-  }
-  return {
-    kind: _kinds.Kind.OPERATION_DEFINITION,
-    operation: operation,
-    name: name,
-    variableDefinitions: parseVariableDefinitions(lexer),
-    directives: parseDirectives(lexer, false),
-    selectionSet: parseSelectionSet(lexer),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * OperationType : one of query mutation subscription
- */
-function parseOperationType(lexer) {
-  var operationToken = expect(lexer, _lexer.TokenKind.NAME);
-  switch (operationToken.value) {
-    case 'query':
-      return 'query';
-    case 'mutation':
-      return 'mutation';
-    case 'subscription':
-      return 'subscription';
-  }
-
-  throw unexpected(lexer, operationToken);
-}
-
-/**
- * VariableDefinitions : ( VariableDefinition+ )
- */
-function parseVariableDefinitions(lexer) {
-  return peek(lexer, _lexer.TokenKind.PAREN_L) ? many(lexer, _lexer.TokenKind.PAREN_L, parseVariableDefinition, _lexer.TokenKind.PAREN_R) : [];
-}
-
-/**
- * VariableDefinition : Variable : Type DefaultValue?
- */
-function parseVariableDefinition(lexer) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.VARIABLE_DEFINITION,
-    variable: parseVariable(lexer),
-    type: (expect(lexer, _lexer.TokenKind.COLON), parseTypeReference(lexer)),
-    defaultValue: skip(lexer, _lexer.TokenKind.EQUALS) ? parseValueLiteral(lexer, true) : undefined,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * Variable : $ Name
- */
-function parseVariable(lexer) {
-  var start = lexer.token;
-  expect(lexer, _lexer.TokenKind.DOLLAR);
-  return {
-    kind: _kinds.Kind.VARIABLE,
-    name: parseName(lexer),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * SelectionSet : { Selection+ }
- */
-function parseSelectionSet(lexer) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.SELECTION_SET,
-    selections: many(lexer, _lexer.TokenKind.BRACE_L, parseSelection, _lexer.TokenKind.BRACE_R),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * Selection :
- *   - Field
- *   - FragmentSpread
- *   - InlineFragment
- */
-function parseSelection(lexer) {
-  return peek(lexer, _lexer.TokenKind.SPREAD) ? parseFragment(lexer) : parseField(lexer);
-}
-
-/**
- * Field : Alias? Name Arguments? Directives? SelectionSet?
- *
- * Alias : Name :
- */
-function parseField(lexer) {
-  var start = lexer.token;
-
-  var nameOrAlias = parseName(lexer);
-  var alias = void 0;
-  var name = void 0;
-  if (skip(lexer, _lexer.TokenKind.COLON)) {
-    alias = nameOrAlias;
-    name = parseName(lexer);
-  } else {
-    name = nameOrAlias;
-  }
-
-  return {
-    kind: _kinds.Kind.FIELD,
-    alias: alias,
-    name: name,
-    arguments: parseArguments(lexer, false),
-    directives: parseDirectives(lexer, false),
-    selectionSet: peek(lexer, _lexer.TokenKind.BRACE_L) ? parseSelectionSet(lexer) : undefined,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * Arguments[Const] : ( Argument[?Const]+ )
- */
-function parseArguments(lexer, isConst) {
-  var item = isConst ? parseConstArgument : parseArgument;
-  return peek(lexer, _lexer.TokenKind.PAREN_L) ? many(lexer, _lexer.TokenKind.PAREN_L, item, _lexer.TokenKind.PAREN_R) : [];
-}
-
-/**
- * Argument[Const] : Name : Value[?Const]
- */
-function parseArgument(lexer) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.ARGUMENT,
-    name: parseName(lexer),
-    value: (expect(lexer, _lexer.TokenKind.COLON), parseValueLiteral(lexer, false)),
-    loc: loc(lexer, start)
-  };
-}
-
-function parseConstArgument(lexer) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.ARGUMENT,
-    name: parseName(lexer),
-    value: (expect(lexer, _lexer.TokenKind.COLON), parseConstValue(lexer)),
-    loc: loc(lexer, start)
-  };
-}
-
-// Implements the parsing rules in the Fragments section.
-
-/**
- * Corresponds to both FragmentSpread and InlineFragment in the spec.
- *
- * FragmentSpread : ... FragmentName Directives?
- *
- * InlineFragment : ... TypeCondition? Directives? SelectionSet
- */
-function parseFragment(lexer) {
-  var start = lexer.token;
-  expect(lexer, _lexer.TokenKind.SPREAD);
-  if (peek(lexer, _lexer.TokenKind.NAME) && lexer.token.value !== 'on') {
-    return {
-      kind: _kinds.Kind.FRAGMENT_SPREAD,
-      name: parseFragmentName(lexer),
-      directives: parseDirectives(lexer, false),
-      loc: loc(lexer, start)
-    };
-  }
-  var typeCondition = void 0;
-  if (lexer.token.value === 'on') {
-    lexer.advance();
-    typeCondition = parseNamedType(lexer);
-  }
-  return {
-    kind: _kinds.Kind.INLINE_FRAGMENT,
-    typeCondition: typeCondition,
-    directives: parseDirectives(lexer, false),
-    selectionSet: parseSelectionSet(lexer),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * FragmentDefinition :
- *   - fragment FragmentName on TypeCondition Directives? SelectionSet
- *
- * TypeCondition : NamedType
- */
-function parseFragmentDefinition(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'fragment');
-  // Experimental support for defining variables within fragments changes
-  // the grammar of FragmentDefinition:
-  //   - fragment FragmentName VariableDefinitions? on TypeCondition Directives? SelectionSet
-  if (lexer.options.experimentalFragmentVariables) {
-    return {
-      kind: _kinds.Kind.FRAGMENT_DEFINITION,
-      name: parseFragmentName(lexer),
-      variableDefinitions: parseVariableDefinitions(lexer),
-      typeCondition: (expectKeyword(lexer, 'on'), parseNamedType(lexer)),
-      directives: parseDirectives(lexer, false),
-      selectionSet: parseSelectionSet(lexer),
-      loc: loc(lexer, start)
-    };
-  }
-  return {
-    kind: _kinds.Kind.FRAGMENT_DEFINITION,
-    name: parseFragmentName(lexer),
-    typeCondition: (expectKeyword(lexer, 'on'), parseNamedType(lexer)),
-    directives: parseDirectives(lexer, false),
-    selectionSet: parseSelectionSet(lexer),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * FragmentName : Name but not `on`
- */
-function parseFragmentName(lexer) {
-  if (lexer.token.value === 'on') {
-    throw unexpected(lexer);
-  }
-  return parseName(lexer);
-}
-
-// Implements the parsing rules in the Values section.
-
-/**
- * Value[Const] :
- *   - [~Const] Variable
- *   - IntValue
- *   - FloatValue
- *   - StringValue
- *   - BooleanValue
- *   - NullValue
- *   - EnumValue
- *   - ListValue[?Const]
- *   - ObjectValue[?Const]
- *
- * BooleanValue : one of `true` `false`
- *
- * NullValue : `null`
- *
- * EnumValue : Name but not `true`, `false` or `null`
- */
-function parseValueLiteral(lexer, isConst) {
-  var token = lexer.token;
-  switch (token.kind) {
-    case _lexer.TokenKind.BRACKET_L:
-      return parseList(lexer, isConst);
-    case _lexer.TokenKind.BRACE_L:
-      return parseObject(lexer, isConst);
-    case _lexer.TokenKind.INT:
-      lexer.advance();
-      return {
-        kind: _kinds.Kind.INT,
-        value: token.value,
-        loc: loc(lexer, token)
-      };
-    case _lexer.TokenKind.FLOAT:
-      lexer.advance();
-      return {
-        kind: _kinds.Kind.FLOAT,
-        value: token.value,
-        loc: loc(lexer, token)
-      };
-    case _lexer.TokenKind.STRING:
-    case _lexer.TokenKind.BLOCK_STRING:
-      return parseStringLiteral(lexer);
-    case _lexer.TokenKind.NAME:
-      if (token.value === 'true' || token.value === 'false') {
-        lexer.advance();
-        return {
-          kind: _kinds.Kind.BOOLEAN,
-          value: token.value === 'true',
-          loc: loc(lexer, token)
-        };
-      } else if (token.value === 'null') {
-        lexer.advance();
-        return {
-          kind: _kinds.Kind.NULL,
-          loc: loc(lexer, token)
-        };
-      }
-      lexer.advance();
-      return {
-        kind: _kinds.Kind.ENUM,
-        value: token.value,
-        loc: loc(lexer, token)
-      };
-    case _lexer.TokenKind.DOLLAR:
-      if (!isConst) {
-        return parseVariable(lexer);
-      }
-      break;
-  }
-  throw unexpected(lexer);
-}
-
-function parseStringLiteral(lexer) {
-  var token = lexer.token;
-  lexer.advance();
-  return {
-    kind: _kinds.Kind.STRING,
-    value: token.value,
-    block: token.kind === _lexer.TokenKind.BLOCK_STRING,
-    loc: loc(lexer, token)
-  };
-}
-
-function parseConstValue(lexer) {
-  return parseValueLiteral(lexer, true);
-}
-
-function parseValueValue(lexer) {
-  return parseValueLiteral(lexer, false);
-}
-
-/**
- * ListValue[Const] :
- *   - [ ]
- *   - [ Value[?Const]+ ]
- */
-function parseList(lexer, isConst) {
-  var start = lexer.token;
-  var item = isConst ? parseConstValue : parseValueValue;
-  return {
-    kind: _kinds.Kind.LIST,
-    values: any(lexer, _lexer.TokenKind.BRACKET_L, item, _lexer.TokenKind.BRACKET_R),
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ObjectValue[Const] :
- *   - { }
- *   - { ObjectField[?Const]+ }
- */
-function parseObject(lexer, isConst) {
-  var start = lexer.token;
-  expect(lexer, _lexer.TokenKind.BRACE_L);
-  var fields = [];
-  while (!skip(lexer, _lexer.TokenKind.BRACE_R)) {
-    fields.push(parseObjectField(lexer, isConst));
-  }
-  return {
-    kind: _kinds.Kind.OBJECT,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ObjectField[Const] : Name : Value[?Const]
- */
-function parseObjectField(lexer, isConst) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.OBJECT_FIELD,
-    name: parseName(lexer),
-    value: (expect(lexer, _lexer.TokenKind.COLON), parseValueLiteral(lexer, isConst)),
-    loc: loc(lexer, start)
-  };
-}
-
-// Implements the parsing rules in the Directives section.
-
-/**
- * Directives[Const] : Directive[?Const]+
- */
-function parseDirectives(lexer, isConst) {
-  var directives = [];
-  while (peek(lexer, _lexer.TokenKind.AT)) {
-    directives.push(parseDirective(lexer, isConst));
-  }
-  return directives;
-}
-
-/**
- * Directive[Const] : @ Name Arguments[?Const]?
- */
-function parseDirective(lexer, isConst) {
-  var start = lexer.token;
-  expect(lexer, _lexer.TokenKind.AT);
-  return {
-    kind: _kinds.Kind.DIRECTIVE,
-    name: parseName(lexer),
-    arguments: parseArguments(lexer, isConst),
-    loc: loc(lexer, start)
-  };
-}
-
-// Implements the parsing rules in the Types section.
-
-/**
- * Type :
- *   - NamedType
- *   - ListType
- *   - NonNullType
- */
-function parseTypeReference(lexer) {
-  var start = lexer.token;
-  var type = void 0;
-  if (skip(lexer, _lexer.TokenKind.BRACKET_L)) {
-    type = parseTypeReference(lexer);
-    expect(lexer, _lexer.TokenKind.BRACKET_R);
-    type = {
-      kind: _kinds.Kind.LIST_TYPE,
-      type: type,
-      loc: loc(lexer, start)
-    };
-  } else {
-    type = parseNamedType(lexer);
-  }
-  if (skip(lexer, _lexer.TokenKind.BANG)) {
-    return {
-      kind: _kinds.Kind.NON_NULL_TYPE,
-      type: type,
-      loc: loc(lexer, start)
-    };
-  }
-  return type;
-}
-
-/**
- * NamedType : Name
- */
-function parseNamedType(lexer) {
-  var start = lexer.token;
-  return {
-    kind: _kinds.Kind.NAMED_TYPE,
-    name: parseName(lexer),
-    loc: loc(lexer, start)
-  };
-}
-
-// Implements the parsing rules in the Type Definition section.
-
-/**
- * TypeSystemDefinition :
- *   - SchemaDefinition
- *   - TypeDefinition
- *   - TypeExtension
- *   - DirectiveDefinition
- *
- * TypeDefinition :
- *   - ScalarTypeDefinition
- *   - ObjectTypeDefinition
- *   - InterfaceTypeDefinition
- *   - UnionTypeDefinition
- *   - EnumTypeDefinition
- *   - InputObjectTypeDefinition
- */
-function parseTypeSystemDefinition(lexer) {
-  // Many definitions begin with a description and require a lookahead.
-  var keywordToken = peekDescription(lexer) ? lexer.lookahead() : lexer.token;
-
-  if (keywordToken.kind === _lexer.TokenKind.NAME) {
-    switch (keywordToken.value) {
-      case 'schema':
-        return parseSchemaDefinition(lexer);
-      case 'scalar':
-        return parseScalarTypeDefinition(lexer);
-      case 'type':
-        return parseObjectTypeDefinition(lexer);
-      case 'interface':
-        return parseInterfaceTypeDefinition(lexer);
-      case 'union':
-        return parseUnionTypeDefinition(lexer);
-      case 'enum':
-        return parseEnumTypeDefinition(lexer);
-      case 'input':
-        return parseInputObjectTypeDefinition(lexer);
-      case 'extend':
-        return parseTypeExtension(lexer);
-      case 'directive':
-        return parseDirectiveDefinition(lexer);
-    }
-  }
-
-  throw unexpected(lexer, keywordToken);
-}
-
-function peekDescription(lexer) {
-  return peek(lexer, _lexer.TokenKind.STRING) || peek(lexer, _lexer.TokenKind.BLOCK_STRING);
-}
-
-/**
- * Description : StringValue
- */
-function parseDescription(lexer) {
-  if (peekDescription(lexer)) {
-    return parseStringLiteral(lexer);
-  }
-}
-
-/**
- * SchemaDefinition : schema Directives[Const]? { OperationTypeDefinition+ }
- */
-function parseSchemaDefinition(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'schema');
-  var directives = parseDirectives(lexer, true);
-  var operationTypes = many(lexer, _lexer.TokenKind.BRACE_L, parseOperationTypeDefinition, _lexer.TokenKind.BRACE_R);
-  return {
-    kind: _kinds.Kind.SCHEMA_DEFINITION,
-    directives: directives,
-    operationTypes: operationTypes,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * OperationTypeDefinition : OperationType : NamedType
- */
-function parseOperationTypeDefinition(lexer) {
-  var start = lexer.token;
-  var operation = parseOperationType(lexer);
-  expect(lexer, _lexer.TokenKind.COLON);
-  var type = parseNamedType(lexer);
-  return {
-    kind: _kinds.Kind.OPERATION_TYPE_DEFINITION,
-    operation: operation,
-    type: type,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ScalarTypeDefinition : Description? scalar Name Directives[Const]?
- */
-function parseScalarTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'scalar');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  return {
-    kind: _kinds.Kind.SCALAR_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ObjectTypeDefinition :
- *   Description?
- *   type Name ImplementsInterfaces? Directives[Const]? FieldsDefinition?
- */
-function parseObjectTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'type');
-  var name = parseName(lexer);
-  var interfaces = parseImplementsInterfaces(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseFieldsDefinition(lexer);
-  return {
-    kind: _kinds.Kind.OBJECT_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    interfaces: interfaces,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ImplementsInterfaces :
- *   - implements `&`? NamedType
- *   - ImplementsInterfaces & NamedType
- */
-function parseImplementsInterfaces(lexer) {
-  var types = [];
-  if (lexer.token.value === 'implements') {
-    lexer.advance();
-    // Optional leading ampersand
-    skip(lexer, _lexer.TokenKind.AMP);
-    do {
-      types.push(parseNamedType(lexer));
-    } while (skip(lexer, _lexer.TokenKind.AMP) ||
-    // Legacy support for the SDL?
-    lexer.options.allowLegacySDLImplementsInterfaces && peek(lexer, _lexer.TokenKind.NAME));
-  }
-  return types;
-}
-
-/**
- * FieldsDefinition : { FieldDefinition+ }
- */
-function parseFieldsDefinition(lexer) {
-  // Legacy support for the SDL?
-  if (lexer.options.allowLegacySDLEmptyFields && peek(lexer, _lexer.TokenKind.BRACE_L) && lexer.lookahead().kind === _lexer.TokenKind.BRACE_R) {
-    lexer.advance();
-    lexer.advance();
-    return [];
-  }
-  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseFieldDefinition, _lexer.TokenKind.BRACE_R) : [];
-}
-
-/**
- * FieldDefinition :
- *   - Description? Name ArgumentsDefinition? : Type Directives[Const]?
- */
-function parseFieldDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  var name = parseName(lexer);
-  var args = parseArgumentDefs(lexer);
-  expect(lexer, _lexer.TokenKind.COLON);
-  var type = parseTypeReference(lexer);
-  var directives = parseDirectives(lexer, true);
-  return {
-    kind: _kinds.Kind.FIELD_DEFINITION,
-    description: description,
-    name: name,
-    arguments: args,
-    type: type,
-    directives: directives,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ArgumentsDefinition : ( InputValueDefinition+ )
- */
-function parseArgumentDefs(lexer) {
-  if (!peek(lexer, _lexer.TokenKind.PAREN_L)) {
-    return [];
-  }
-  return many(lexer, _lexer.TokenKind.PAREN_L, parseInputValueDef, _lexer.TokenKind.PAREN_R);
-}
-
-/**
- * InputValueDefinition :
- *   - Description? Name : Type DefaultValue? Directives[Const]?
- */
-function parseInputValueDef(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  var name = parseName(lexer);
-  expect(lexer, _lexer.TokenKind.COLON);
-  var type = parseTypeReference(lexer);
-  var defaultValue = void 0;
-  if (skip(lexer, _lexer.TokenKind.EQUALS)) {
-    defaultValue = parseConstValue(lexer);
-  }
-  var directives = parseDirectives(lexer, true);
-  return {
-    kind: _kinds.Kind.INPUT_VALUE_DEFINITION,
-    description: description,
-    name: name,
-    type: type,
-    defaultValue: defaultValue,
-    directives: directives,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * InterfaceTypeDefinition :
- *   - Description? interface Name Directives[Const]? FieldsDefinition?
- */
-function parseInterfaceTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'interface');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseFieldsDefinition(lexer);
-  return {
-    kind: _kinds.Kind.INTERFACE_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * UnionTypeDefinition :
- *   - Description? union Name Directives[Const]? UnionMemberTypes?
- */
-function parseUnionTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'union');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var types = parseUnionMemberTypes(lexer);
-  return {
-    kind: _kinds.Kind.UNION_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    types: types,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * UnionMemberTypes :
- *   - = `|`? NamedType
- *   - UnionMemberTypes | NamedType
- */
-function parseUnionMemberTypes(lexer) {
-  var types = [];
-  if (skip(lexer, _lexer.TokenKind.EQUALS)) {
-    // Optional leading pipe
-    skip(lexer, _lexer.TokenKind.PIPE);
-    do {
-      types.push(parseNamedType(lexer));
-    } while (skip(lexer, _lexer.TokenKind.PIPE));
-  }
-  return types;
-}
-
-/**
- * EnumTypeDefinition :
- *   - Description? enum Name Directives[Const]? EnumValuesDefinition?
- */
-function parseEnumTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'enum');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var values = parseEnumValuesDefinition(lexer);
-  return {
-    kind: _kinds.Kind.ENUM_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    values: values,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * EnumValuesDefinition : { EnumValueDefinition+ }
- */
-function parseEnumValuesDefinition(lexer) {
-  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseEnumValueDefinition, _lexer.TokenKind.BRACE_R) : [];
-}
-
-/**
- * EnumValueDefinition : Description? EnumValue Directives[Const]?
- *
- * EnumValue : Name
- */
-function parseEnumValueDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  return {
-    kind: _kinds.Kind.ENUM_VALUE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * InputObjectTypeDefinition :
- *   - Description? input Name Directives[Const]? InputFieldsDefinition?
- */
-function parseInputObjectTypeDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'input');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseInputFieldsDefinition(lexer);
-  return {
-    kind: _kinds.Kind.INPUT_OBJECT_TYPE_DEFINITION,
-    description: description,
-    name: name,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * InputFieldsDefinition : { InputValueDefinition+ }
- */
-function parseInputFieldsDefinition(lexer) {
-  return peek(lexer, _lexer.TokenKind.BRACE_L) ? many(lexer, _lexer.TokenKind.BRACE_L, parseInputValueDef, _lexer.TokenKind.BRACE_R) : [];
-}
-
-/**
- * TypeExtension :
- *   - ScalarTypeExtension
- *   - ObjectTypeExtension
- *   - InterfaceTypeExtension
- *   - UnionTypeExtension
- *   - EnumTypeExtension
- *   - InputObjectTypeDefinition
- */
-function parseTypeExtension(lexer) {
-  var keywordToken = lexer.lookahead();
-
-  if (keywordToken.kind === _lexer.TokenKind.NAME) {
-    switch (keywordToken.value) {
-      case 'scalar':
-        return parseScalarTypeExtension(lexer);
-      case 'type':
-        return parseObjectTypeExtension(lexer);
-      case 'interface':
-        return parseInterfaceTypeExtension(lexer);
-      case 'union':
-        return parseUnionTypeExtension(lexer);
-      case 'enum':
-        return parseEnumTypeExtension(lexer);
-      case 'input':
-        return parseInputObjectTypeExtension(lexer);
-    }
-  }
-
-  throw unexpected(lexer, keywordToken);
-}
-
-/**
- * ScalarTypeExtension :
- *   - extend scalar Name Directives[Const]
- */
-function parseScalarTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'scalar');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  if (directives.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.SCALAR_TYPE_EXTENSION,
-    name: name,
-    directives: directives,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * ObjectTypeExtension :
- *  - extend type Name ImplementsInterfaces? Directives[Const]? FieldsDefinition
- *  - extend type Name ImplementsInterfaces? Directives[Const]
- *  - extend type Name ImplementsInterfaces
- */
-function parseObjectTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'type');
-  var name = parseName(lexer);
-  var interfaces = parseImplementsInterfaces(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseFieldsDefinition(lexer);
-  if (interfaces.length === 0 && directives.length === 0 && fields.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.OBJECT_TYPE_EXTENSION,
-    name: name,
-    interfaces: interfaces,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * InterfaceTypeExtension :
- *   - extend interface Name Directives[Const]? FieldsDefinition
- *   - extend interface Name Directives[Const]
- */
-function parseInterfaceTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'interface');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseFieldsDefinition(lexer);
-  if (directives.length === 0 && fields.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.INTERFACE_TYPE_EXTENSION,
-    name: name,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * UnionTypeExtension :
- *   - extend union Name Directives[Const]? UnionMemberTypes
- *   - extend union Name Directives[Const]
- */
-function parseUnionTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'union');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var types = parseUnionMemberTypes(lexer);
-  if (directives.length === 0 && types.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.UNION_TYPE_EXTENSION,
-    name: name,
-    directives: directives,
-    types: types,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * EnumTypeExtension :
- *   - extend enum Name Directives[Const]? EnumValuesDefinition
- *   - extend enum Name Directives[Const]
- */
-function parseEnumTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'enum');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var values = parseEnumValuesDefinition(lexer);
-  if (directives.length === 0 && values.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.ENUM_TYPE_EXTENSION,
-    name: name,
-    directives: directives,
-    values: values,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * InputObjectTypeExtension :
- *   - extend input Name Directives[Const]? InputFieldsDefinition
- *   - extend input Name Directives[Const]
- */
-function parseInputObjectTypeExtension(lexer) {
-  var start = lexer.token;
-  expectKeyword(lexer, 'extend');
-  expectKeyword(lexer, 'input');
-  var name = parseName(lexer);
-  var directives = parseDirectives(lexer, true);
-  var fields = parseInputFieldsDefinition(lexer);
-  if (directives.length === 0 && fields.length === 0) {
-    throw unexpected(lexer);
-  }
-  return {
-    kind: _kinds.Kind.INPUT_OBJECT_TYPE_EXTENSION,
-    name: name,
-    directives: directives,
-    fields: fields,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * DirectiveDefinition :
- *   - Description? directive @ Name ArgumentsDefinition? on DirectiveLocations
- */
-function parseDirectiveDefinition(lexer) {
-  var start = lexer.token;
-  var description = parseDescription(lexer);
-  expectKeyword(lexer, 'directive');
-  expect(lexer, _lexer.TokenKind.AT);
-  var name = parseName(lexer);
-  var args = parseArgumentDefs(lexer);
-  expectKeyword(lexer, 'on');
-  var locations = parseDirectiveLocations(lexer);
-  return {
-    kind: _kinds.Kind.DIRECTIVE_DEFINITION,
-    description: description,
-    name: name,
-    arguments: args,
-    locations: locations,
-    loc: loc(lexer, start)
-  };
-}
-
-/**
- * DirectiveLocations :
- *   - `|`? DirectiveLocation
- *   - DirectiveLocations | DirectiveLocation
- */
-function parseDirectiveLocations(lexer) {
-  // Optional leading pipe
-  skip(lexer, _lexer.TokenKind.PIPE);
-  var locations = [];
-  do {
-    locations.push(parseDirectiveLocation(lexer));
-  } while (skip(lexer, _lexer.TokenKind.PIPE));
-  return locations;
-}
-
-/*
- * DirectiveLocation :
- *   - ExecutableDirectiveLocation
- *   - TypeSystemDirectiveLocation
- *
- * ExecutableDirectiveLocation : one of
- *   `QUERY`
- *   `MUTATION`
- *   `SUBSCRIPTION`
- *   `FIELD`
- *   `FRAGMENT_DEFINITION`
- *   `FRAGMENT_SPREAD`
- *   `INLINE_FRAGMENT`
- *
- * TypeSystemDirectiveLocation : one of
- *   `SCHEMA`
- *   `SCALAR`
- *   `OBJECT`
- *   `FIELD_DEFINITION`
- *   `ARGUMENT_DEFINITION`
- *   `INTERFACE`
- *   `UNION`
- *   `ENUM`
- *   `ENUM_VALUE`
- *   `INPUT_OBJECT`
- *   `INPUT_FIELD_DEFINITION`
- */
-function parseDirectiveLocation(lexer) {
-  var start = lexer.token;
-  var name = parseName(lexer);
-  if (_directiveLocation.DirectiveLocation.hasOwnProperty(name.value)) {
-    return name;
-  }
-  throw unexpected(lexer, start);
-}
-
-// Core parsing utility functions
-
-/**
- * Returns a location object, used to identify the place in
- * the source that created a given parsed object.
- */
-function loc(lexer, startToken) {
-  if (!lexer.options.noLocation) {
-    return new Loc(startToken, lexer.lastToken, lexer.source);
-  }
-}
-
-function Loc(startToken, endToken, source) {
-  this.start = startToken.start;
-  this.end = endToken.end;
-  this.startToken = startToken;
-  this.endToken = endToken;
-  this.source = source;
-}
-
-// Print a simplified form when appearing in JSON/util.inspect.
-Loc.prototype.toJSON = Loc.prototype.inspect = function toJSON() {
-  return { start: this.start, end: this.end };
-};
-
-/**
- * Determines if the next token is of a given kind
- */
-function peek(lexer, kind) {
-  return lexer.token.kind === kind;
-}
-
-/**
- * If the next token is of the given kind, return true after advancing
- * the lexer. Otherwise, do not change the parser state and return false.
- */
-function skip(lexer, kind) {
-  var match = lexer.token.kind === kind;
-  if (match) {
-    lexer.advance();
-  }
-  return match;
-}
-
-/**
- * If the next token is of the given kind, return that token after advancing
- * the lexer. Otherwise, do not change the parser state and throw an error.
- */
-function expect(lexer, kind) {
-  var token = lexer.token;
-  if (token.kind === kind) {
-    lexer.advance();
-    return token;
-  }
-  throw (0, _error.syntaxError)(lexer.source, token.start, 'Expected ' + kind + ', found ' + (0, _lexer.getTokenDesc)(token));
-}
-
-/**
- * If the next token is a keyword with the given value, return that token after
- * advancing the lexer. Otherwise, do not change the parser state and return
- * false.
- */
-function expectKeyword(lexer, value) {
-  var token = lexer.token;
-  if (token.kind === _lexer.TokenKind.NAME && token.value === value) {
-    lexer.advance();
-    return token;
-  }
-  throw (0, _error.syntaxError)(lexer.source, token.start, 'Expected "' + value + '", found ' + (0, _lexer.getTokenDesc)(token));
-}
-
-/**
- * Helper function for creating an error when an unexpected lexed token
- * is encountered.
- */
-function unexpected(lexer, atToken) {
-  var token = atToken || lexer.token;
-  return (0, _error.syntaxError)(lexer.source, token.start, 'Unexpected ' + (0, _lexer.getTokenDesc)(token));
-}
-
-/**
- * Returns a possibly empty list of parse nodes, determined by
- * the parseFn. This list begins with a lex token of openKind
- * and ends with a lex token of closeKind. Advances the parser
- * to the next lex token after the closing token.
- */
-function any(lexer, openKind, parseFn, closeKind) {
-  expect(lexer, openKind);
-  var nodes = [];
-  while (!skip(lexer, closeKind)) {
-    nodes.push(parseFn(lexer));
-  }
-  return nodes;
-}
-
-/**
- * Returns a non-empty list of parse nodes, determined by
- * the parseFn. This list begins with a lex token of openKind
- * and ends with a lex token of closeKind. Advances the parser
- * to the next lex token after the closing token.
- */
-function many(lexer, openKind, parseFn, closeKind) {
-  expect(lexer, openKind);
-  var nodes = [parseFn(lexer)];
-  while (!skip(lexer, closeKind)) {
-    nodes.push(parseFn(lexer));
-  }
-  return nodes;
-}
-},{"./source":174,"../error":192,"./lexer":175,"./kinds":176,"./directiveLocation":177}],75:[function(require,module,exports) {
-var parser = require('graphql/language/parser');
-
-var parse = parser.parse;
-
-// Strip insignificant whitespace
-// Note that this could do a lot more, such as reorder fields etc.
-function normalize(string) {
-  return string.replace(/[\s,]+/g, ' ').trim();
-}
-
-// A map docString -> graphql document
-var docCache = {};
-
-// A map fragmentName -> [normalized source]
-var fragmentSourceMap = {};
-
-function cacheKeyFromLoc(loc) {
-  return normalize(loc.source.body.substring(loc.start, loc.end));
-}
-
-// For testing.
-function resetCaches() {
-  docCache = {};
-  fragmentSourceMap = {};
-}
-
-// Take a unstripped parsed document (query/mutation or even fragment), and
-// check all fragment definitions, checking for name->source uniqueness.
-// We also want to make sure only unique fragments exist in the document.
-var printFragmentWarnings = true;
-function processFragments(ast) {
-  var astFragmentMap = {};
-  var definitions = [];
-
-  for (var i = 0; i < ast.definitions.length; i++) {
-    var fragmentDefinition = ast.definitions[i];
-
-    if (fragmentDefinition.kind === 'FragmentDefinition') {
-      var fragmentName = fragmentDefinition.name.value;
-      var sourceKey = cacheKeyFromLoc(fragmentDefinition.loc);
-
-      // We know something about this fragment
-      if (fragmentSourceMap.hasOwnProperty(fragmentName) && !fragmentSourceMap[fragmentName][sourceKey]) {
-
-        // this is a problem because the app developer is trying to register another fragment with
-        // the same name as one previously registered. So, we tell them about it.
-        if (printFragmentWarnings) {
-          console.warn("Warning: fragment with name " + fragmentName + " already exists.\n"
-            + "graphql-tag enforces all fragment names across your application to be unique; read more about\n"
-            + "this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names");
-        }
-
-        fragmentSourceMap[fragmentName][sourceKey] = true;
-
-      } else if (!fragmentSourceMap.hasOwnProperty(fragmentName)) {
-        fragmentSourceMap[fragmentName] = {};
-        fragmentSourceMap[fragmentName][sourceKey] = true;
-      }
-
-      if (!astFragmentMap[sourceKey]) {
-        astFragmentMap[sourceKey] = true;
-        definitions.push(fragmentDefinition);
-      }
-    } else {
-      definitions.push(fragmentDefinition);
-    }
-  }
-
-  ast.definitions = definitions;
-  return ast;
-}
-
-function disableFragmentWarnings() {
-  printFragmentWarnings = false;
-}
-
-function stripLoc(doc, removeLocAtThisLevel) {
-  var docType = Object.prototype.toString.call(doc);
-
-  if (docType === '[object Array]') {
-    return doc.map(function (d) {
-      return stripLoc(d, removeLocAtThisLevel);
-    });
-  }
-
-  if (docType !== '[object Object]') {
-    throw new Error('Unexpected input.');
-  }
-
-  // We don't want to remove the root loc field so we can use it
-  // for fragment substitution (see below)
-  if (removeLocAtThisLevel && doc.loc) {
-    delete doc.loc;
-  }
-
-  // https://github.com/apollographql/graphql-tag/issues/40
-  if (doc.loc) {
-    delete doc.loc.startToken;
-    delete doc.loc.endToken;
-  }
-
-  var keys = Object.keys(doc);
-  var key;
-  var value;
-  var valueType;
-
-  for (key in keys) {
-    if (keys.hasOwnProperty(key)) {
-      value = doc[keys[key]];
-      valueType = Object.prototype.toString.call(value);
-
-      if (valueType === '[object Object]' || valueType === '[object Array]') {
-        doc[keys[key]] = stripLoc(value, true);
-      }
-    }
-  }
-
-  return doc;
-}
-
-var experimentalFragmentVariables = false;
-function parseDocument(doc) {
-  var cacheKey = normalize(doc);
-
-  if (docCache[cacheKey]) {
-    return docCache[cacheKey];
-  }
-
-  var parsed = parse(doc, { experimentalFragmentVariables: experimentalFragmentVariables });
-  if (!parsed || parsed.kind !== 'Document') {
-    throw new Error('Not a valid GraphQL document.');
-  }
-
-  // check that all "new" fragments inside the documents are consistent with
-  // existing fragments of the same name
-  parsed = processFragments(parsed);
-  parsed = stripLoc(parsed, false);
-  docCache[cacheKey] = parsed;
-
-  return parsed;
-}
-
-function enableExperimentalFragmentVariables() {
-  experimentalFragmentVariables = true;
-}
-
-function disableExperimentalFragmentVariables() {
-  experimentalFragmentVariables = false;
-}
-
-// XXX This should eventually disallow arbitrary string interpolation, like Relay does
-function gql(/* arguments */) {
-  var args = Array.prototype.slice.call(arguments);
-
-  var literals = args[0];
-
-  // We always get literals[0] and then matching post literals for each arg given
-  var result = (typeof(literals) === "string") ? literals : literals[0];
-
-  for (var i = 1; i < args.length; i++) {
-    if (args[i] && args[i].kind && args[i].kind === 'Document') {
-      result += args[i].loc.source.body;
-    } else {
-      result += args[i];
-    }
-
-    result += literals[i];
-  }
-
-  return parseDocument(result);
-}
-
-// Support typescript, which isn't as nice as Babel about default exports
-gql.default = gql;
-gql.resetCaches = resetCaches;
-gql.disableFragmentWarnings = disableFragmentWarnings;
-gql.enableExperimentalFragmentVariables = enableExperimentalFragmentVariables;
-gql.disableExperimentalFragmentVariables = disableExperimentalFragmentVariables;
-
-module.exports = gql;
-
-},{"graphql/language/parser":164}],42:[function(require,module,exports) {
+},{"lodash-es/curry":126,"./createAction":86}],129:[function(require,module,exports) {
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Checks if `value` is `undefined`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
+ * @example
+ *
+ * _.isUndefined(void 0);
+ * // => true
+ *
+ * _.isUndefined(null);
+ * // => false
+ */
+function isUndefined(value) {
+  return value === undefined;
 }
-Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("apollo-client"));
-__export(require("apollo-link"));
-__export(require("apollo-cache-inmemory"));
-var apollo_link_1 = require("apollo-link");
-var apollo_link_http_1 = require("apollo-link-http");
-exports.HttpLink = apollo_link_http_1.HttpLink;
-var apollo_link_state_1 = require("apollo-link-state");
-var apollo_link_error_1 = require("apollo-link-error");
-var apollo_cache_inmemory_1 = require("apollo-cache-inmemory");
-exports.InMemoryCache = apollo_cache_inmemory_1.InMemoryCache;
-var graphql_tag_1 = require("graphql-tag");
-exports.gql = graphql_tag_1.default;
-var apollo_client_1 = require("apollo-client");
-var DefaultClient = (function (_super) {
-    __extends(DefaultClient, _super);
-    function DefaultClient(config) {
-        if (config === void 0) { config = {}; }
-        var _this = this;
-        var request = config.request, uri = config.uri, credentials = config.credentials, headers = config.headers, fetchOptions = config.fetchOptions, clientState = config.clientState, cacheRedirects = config.cacheRedirects, errorCallback = config.onError;
-        var cache = config.cache;
-        if (cache && cacheRedirects) {
-            throw new Error('Incompatible cache configuration. If providing `cache` then ' +
-                'configure the provided instance with `cacheRedirects` instead.');
-        }
-        if (!cache) {
-            cache = cacheRedirects
-                ? new apollo_cache_inmemory_1.InMemoryCache({ cacheRedirects: cacheRedirects })
-                : new apollo_cache_inmemory_1.InMemoryCache();
-        }
-        var stateLink = clientState
-            ? apollo_link_state_1.withClientState(__assign({}, clientState, { cache: cache }))
-            : false;
-        var errorLink = errorCallback
-            ? apollo_link_error_1.onError(errorCallback)
-            : apollo_link_error_1.onError(function (_a) {
-                var graphQLErrors = _a.graphQLErrors, networkError = _a.networkError;
-                if (graphQLErrors) {
-                    graphQLErrors.map(function (_a) {
-                        var message = _a.message, locations = _a.locations, path = _a.path;
-                        return console.log("[GraphQL error]: Message: " + message + ", Location: " +
-                            (locations + ", Path: " + path));
-                    });
-                }
-                if (networkError) {
-                    console.log("[Network error]: " + networkError);
-                }
-            });
-        var requestHandler = request
-            ? new apollo_link_1.ApolloLink(function (operation, forward) {
-                return new apollo_link_1.Observable(function (observer) {
-                    var handle;
-                    Promise.resolve(operation)
-                        .then(function (oper) { return request(oper); })
-                        .then(function () {
-                        handle = forward(operation).subscribe({
-                            next: observer.next.bind(observer),
-                            error: observer.error.bind(observer),
-                            complete: observer.complete.bind(observer),
-                        });
-                    })
-                        .catch(observer.error.bind(observer));
-                    return function () {
-                        if (handle) {
-                            handle.unsubscribe();
-                        }
-                    };
-                });
-            })
-            : false;
-        var httpLink = new apollo_link_http_1.HttpLink({
-            uri: uri || '/graphql',
-            fetchOptions: fetchOptions || {},
-            credentials: credentials || 'same-origin',
-            headers: headers || {},
-        });
-        var link = apollo_link_1.ApolloLink.from([
-            errorLink,
-            requestHandler,
-            stateLink,
-            httpLink,
-        ].filter(function (x) { return !!x; }));
-        _this = _super.call(this, { cache: cache, link: link }) || this;
-        return _this;
+
+exports.default = isUndefined;
+},{}],259:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _arrayMap = require('./_arrayMap.js');
+
+var _arrayMap2 = _interopRequireDefault(_arrayMap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * The base implementation of `_.values` and `_.valuesIn` which creates an
+ * array of `object` property values corresponding to the property names
+ * of `props`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the array of property values.
+ */
+function baseValues(object, props) {
+  return (0, _arrayMap2.default)(props, function (key) {
+    return object[key];
+  });
+}
+
+exports.default = baseValues;
+},{"./_arrayMap.js":179}],264:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+exports.default = baseTimes;
+},{}],262:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseTimes = require('./_baseTimes.js');
+
+var _baseTimes2 = _interopRequireDefault(_baseTimes);
+
+var _isArguments = require('./isArguments.js');
+
+var _isArguments2 = _interopRequireDefault(_isArguments);
+
+var _isArray = require('./isArray.js');
+
+var _isArray2 = _interopRequireDefault(_isArray);
+
+var _isBuffer = require('./isBuffer.js');
+
+var _isBuffer2 = _interopRequireDefault(_isBuffer);
+
+var _isIndex = require('./_isIndex.js');
+
+var _isIndex2 = _interopRequireDefault(_isIndex);
+
+var _isTypedArray = require('./isTypedArray.js');
+
+var _isTypedArray2 = _interopRequireDefault(_isTypedArray);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = (0, _isArray2.default)(value),
+      isArg = !isArr && (0, _isArguments2.default)(value),
+      isBuff = !isArr && !isArg && (0, _isBuffer2.default)(value),
+      isType = !isArr && !isArg && !isBuff && (0, _isTypedArray2.default)(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? (0, _baseTimes2.default)(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && (
+    // Safari 9 has enumerable `arguments.length` in strict mode.
+    key == 'length' ||
+    // Node.js 0.10 has enumerable non-index properties on buffers.
+    isBuff && (key == 'offset' || key == 'parent') ||
+    // PhantomJS 2 has enumerable non-index properties on typed arrays.
+    isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') ||
+    // Skip index properties.
+    (0, _isIndex2.default)(key, length)))) {
+      result.push(key);
     }
-    return DefaultClient;
-}(apollo_client_1.default));
-exports.default = DefaultClient;
-//# sourceMappingURL=index.js.map
-},{"apollo-client":69,"apollo-link":70,"apollo-cache-inmemory":71,"apollo-link-http":72,"apollo-link-state":73,"apollo-link-error":74,"graphql-tag":75}],12:[function(require,module,exports) {
+  }
+  return result;
+}
+
+exports.default = arrayLikeKeys;
+},{"./_baseTimes.js":264,"./isArguments.js":145,"./isArray.js":137,"./isBuffer.js":147,"./_isIndex.js":224,"./isTypedArray.js":149}],260:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _arrayLikeKeys = require('./_arrayLikeKeys.js');
+
+var _arrayLikeKeys2 = _interopRequireDefault(_arrayLikeKeys);
+
+var _baseKeys = require('./_baseKeys.js');
+
+var _baseKeys2 = _interopRequireDefault(_baseKeys);
+
+var _isArrayLike = require('./isArrayLike.js');
+
+var _isArrayLike2 = _interopRequireDefault(_isArrayLike);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return (0, _isArrayLike2.default)(object) ? (0, _arrayLikeKeys2.default)(object) : (0, _baseKeys2.default)(object);
+}
+
+exports.default = keys;
+},{"./_arrayLikeKeys.js":262,"./_baseKeys.js":143,"./isArrayLike.js":146}],160:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseValues = require('./_baseValues.js');
+
+var _baseValues2 = _interopRequireDefault(_baseValues);
+
+var _keys = require('./keys.js');
+
+var _keys2 = _interopRequireDefault(_keys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Creates an array of the own enumerable string keyed property values of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property values.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.values(new Foo);
+ * // => [1, 2] (iteration order is not guaranteed)
+ *
+ * _.values('hi');
+ * // => ['h', 'i']
+ */
+function values(object) {
+  return object == null ? [] : (0, _baseValues2.default)(object, (0, _keys2.default)(object));
+}
+
+exports.default = values;
+},{"./_baseValues.js":259,"./keys.js":260}],130:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _baseIndexOf = require('./_baseIndexOf.js');
+
+var _baseIndexOf2 = _interopRequireDefault(_baseIndexOf);
+
+var _isArrayLike = require('./isArrayLike.js');
+
+var _isArrayLike2 = _interopRequireDefault(_isArrayLike);
+
+var _isString = require('./isString.js');
+
+var _isString2 = _interopRequireDefault(_isString);
+
+var _toInteger = require('./toInteger.js');
+
+var _toInteger2 = _interopRequireDefault(_toInteger);
+
+var _values = require('./values.js');
+
+var _values2 = _interopRequireDefault(_values);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Checks if `value` is in `collection`. If `collection` is a string, it's
+ * checked for a substring of `value`, otherwise
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * is used for equality comparisons. If `fromIndex` is negative, it's used as
+ * the offset from the end of `collection`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object|string} collection The collection to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} [fromIndex=0] The index to search from.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
+ * @returns {boolean} Returns `true` if `value` is found, else `false`.
+ * @example
+ *
+ * _.includes([1, 2, 3], 1);
+ * // => true
+ *
+ * _.includes([1, 2, 3], 1, 2);
+ * // => false
+ *
+ * _.includes({ 'a': 1, 'b': 2 }, 1);
+ * // => true
+ *
+ * _.includes('abcd', 'bc');
+ * // => true
+ */
+function includes(collection, value, fromIndex, guard) {
+  collection = (0, _isArrayLike2.default)(collection) ? collection : (0, _values2.default)(collection);
+  fromIndex = fromIndex && !guard ? (0, _toInteger2.default)(fromIndex) : 0;
+
+  var length = collection.length;
+  if (fromIndex < 0) {
+    fromIndex = nativeMax(length + fromIndex, 0);
+  }
+  return (0, _isString2.default)(collection) ? fromIndex <= length && collection.indexOf(value, fromIndex) > -1 : !!length && (0, _baseIndexOf2.default)(collection, value, fromIndex) > -1;
+}
+
+exports.default = includes;
+},{"./_baseIndexOf.js":158,"./isArrayLike.js":146,"./isString.js":116,"./toInteger.js":159,"./values.js":160}],89:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = handleAction;
+
+var _isFunction = require("lodash-es/isFunction");
+
+var _isFunction2 = _interopRequireDefault(_isFunction);
+
+var _isPlainObject = require("lodash-es/isPlainObject");
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _identity = require("lodash-es/identity");
+
+var _identity2 = _interopRequireDefault(_identity);
+
+var _isNil = require("lodash-es/isNil");
+
+var _isNil2 = _interopRequireDefault(_isNil);
+
+var _isUndefined = require("lodash-es/isUndefined");
+
+var _isUndefined2 = _interopRequireDefault(_isUndefined);
+
+var _includes = require("lodash-es/includes");
+
+var _includes2 = _interopRequireDefault(_includes);
+
+var _invariant = require("invariant");
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _constants = require("./constants");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _slicedToArray = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];var _n = true;var _d = false;var _e = undefined;try {
+      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;_e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }return _arr;
+  }return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+
+function handleAction(type) {
+  var reducer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _identity2.default;
+  var defaultState = arguments[2];
+
+  var types = type.toString().split(_constants.ACTION_TYPE_DELIMITER);
+  (0, _invariant2.default)(!(0, _isUndefined2.default)(defaultState), 'defaultState for reducer handling ' + types.join(', ') + ' should be defined');
+  (0, _invariant2.default)((0, _isFunction2.default)(reducer) || (0, _isPlainObject2.default)(reducer), 'Expected reducer to be a function or object with next and throw reducers');
+
+  var _ref = (0, _isFunction2.default)(reducer) ? [reducer, reducer] : [reducer.next, reducer.throw].map(function (aReducer) {
+    return (0, _isNil2.default)(aReducer) ? _identity2.default : aReducer;
+  }),
+      _ref2 = _slicedToArray(_ref, 2),
+      nextReducer = _ref2[0],
+      throwReducer = _ref2[1];
+
+  return function () {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+    var action = arguments[1];
+    var actionType = action.type;
+
+    if (!actionType || !(0, _includes2.default)(types, actionType.toString())) {
+      return state;
+    }
+
+    return (action.error === true ? throwReducer : nextReducer)(state, action);
+  };
+}
+},{"lodash-es/isFunction":117,"lodash-es/isPlainObject":123,"lodash-es/identity":127,"lodash-es/isNil":128,"lodash-es/isUndefined":129,"lodash-es/includes":130,"invariant":115,"./constants":114}],125:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  for (var _len = arguments.length, reducers = Array(_len), _key = 0; _key < _len; _key++) {
+    reducers[_key] = arguments[_key];
+  }
+
+  return function (previous, current) {
+    return reducers.reduce(function (p, r) {
+      return r(p, current);
+    }, previous);
+  };
+};
+
+module.exports = exports["default"];
+},{}],154:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = hasGeneratorInterface;
+
+var _ownKeys = require('./ownKeys');
+
+var _ownKeys2 = _interopRequireDefault(_ownKeys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function hasGeneratorInterface(handler) {
+  var keys = (0, _ownKeys2.default)(handler);
+  var hasOnlyInterfaceNames = keys.every(function (ownKey) {
+    return ownKey === 'next' || ownKey === 'throw';
+  });
+  return keys.length && keys.length <= 2 && hasOnlyInterfaceNames;
+}
+},{"./ownKeys":121}],122:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _isPlainObject = require('lodash-es/isPlainObject');
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _isMap = require('lodash-es/isMap');
+
+var _isMap2 = _interopRequireDefault(_isMap);
+
+var _hasGeneratorInterface = require('./hasGeneratorInterface');
+
+var _hasGeneratorInterface2 = _interopRequireDefault(_hasGeneratorInterface);
+
+var _flattenWhenNode = require('./flattenWhenNode');
+
+var _flattenWhenNode2 = _interopRequireDefault(_flattenWhenNode);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _flattenWhenNode2.default)(function (node) {
+  return ((0, _isPlainObject2.default)(node) || (0, _isMap2.default)(node)) && !(0, _hasGeneratorInterface2.default)(node);
+});
+},{"lodash-es/isPlainObject":123,"lodash-es/isMap":124,"./hasGeneratorInterface":154,"./flattenWhenNode":155}],90:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = handleActions;
+
+var _isPlainObject = require('lodash-es/isPlainObject');
+
+var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+var _isMap = require('lodash-es/isMap');
+
+var _isMap2 = _interopRequireDefault(_isMap);
+
+var _reduceReducers = require('reduce-reducers');
+
+var _reduceReducers2 = _interopRequireDefault(_reduceReducers);
+
+var _invariant = require('invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _handleAction = require('./handleAction');
+
+var _handleAction2 = _interopRequireDefault(_handleAction);
+
+var _ownKeys = require('./utils/ownKeys');
+
+var _ownKeys2 = _interopRequireDefault(_ownKeys);
+
+var _flattenReducerMap = require('./utils/flattenReducerMap');
+
+var _flattenReducerMap2 = _interopRequireDefault(_flattenReducerMap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }return arr2;
+  } else {
+    return Array.from(arr);
+  }
+}
+
+function get(key, x) {
+  return (0, _isMap2.default)(x) ? x.get(key) : x[key];
+}
+
+function handleActions(handlers, defaultState) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  (0, _invariant2.default)((0, _isPlainObject2.default)(handlers) || (0, _isMap2.default)(handlers), 'Expected handlers to be a plain object.');
+  var flattenedReducerMap = (0, _flattenReducerMap2.default)(handlers, options);
+  var reducers = (0, _ownKeys2.default)(flattenedReducerMap).map(function (type) {
+    return (0, _handleAction2.default)(type, get(type, flattenedReducerMap), defaultState);
+  });
+  var reducer = _reduceReducers2.default.apply(undefined, _toConsumableArray(reducers));
+  return function () {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
+    var action = arguments[1];
+    return reducer(state, action);
+  };
+}
+},{"lodash-es/isPlainObject":123,"lodash-es/isMap":124,"reduce-reducers":125,"invariant":115,"./handleAction":89,"./utils/ownKeys":121,"./utils/flattenReducerMap":122}],71:[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.handleActions = exports.handleAction = exports.createCurriedAction = exports.createActions = exports.createAction = exports.combineActions = undefined;
+
+var _combineActions = require('./combineActions');
+
+var _combineActions2 = _interopRequireDefault(_combineActions);
+
+var _createAction = require('./createAction');
+
+var _createAction2 = _interopRequireDefault(_createAction);
+
+var _createActions = require('./createActions');
+
+var _createActions2 = _interopRequireDefault(_createActions);
+
+var _createCurriedAction = require('./createCurriedAction');
+
+var _createCurriedAction2 = _interopRequireDefault(_createCurriedAction);
+
+var _handleAction = require('./handleAction');
+
+var _handleAction2 = _interopRequireDefault(_handleAction);
+
+var _handleActions = require('./handleActions');
+
+var _handleActions2 = _interopRequireDefault(_handleActions);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.combineActions = _combineActions2.default;
+exports.createAction = _createAction2.default;
+exports.createActions = _createActions2.default;
+exports.createCurriedAction = _createCurriedAction2.default;
+exports.handleAction = _handleAction2.default;
+exports.handleActions = _handleActions2.default;
+},{"./combineActions":85,"./createAction":86,"./createActions":87,"./createCurriedAction":88,"./handleAction":89,"./handleActions":90}],267:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.client = undefined;
+exports.store = exports.decrement = exports.increment = undefined;
 
-var _apolloBoost = require('apollo-boost');
+var _tslib = require('tslib');
 
-var _apolloBoost2 = _interopRequireDefault(_apolloBoost);
+var tslib_1 = _interopRequireWildcard(_tslib);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _redux = require('redux');
 
-var client = exports.client = new _apolloBoost2.default({
-    clientState: {
-        defaults: {
-            isConnected: true,
-            isLoaded: false
-        },
-        resolvers: {
-            Mutation: {
-                updateIsLoaded: function updateIsLoaded(_, _a, _b) {
-                    var isLoaded = _a.isLoaded;
-                    var cache = _b.cache;
-                    cache.writeData({ data: { isLoaded: isLoaded } });
-                    return null;
-                },
-                updateNetworkStatus: function updateNetworkStatus(_, _a, _b) {
-                    var isConnected = _a.isConnected;
-                    var cache = _b.cache;
-                    cache.writeData({ data: { isConnected: isConnected } });
-                    return null;
-                }
-            }
-        }
-    }
-});
-},{"apollo-boost":42}],6:[function(require,module,exports) {
+var _reduxActions = require('redux-actions');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var _a;
+// const defaultState = {
+//   selectedItems: [],
+// }
+// const addSelectedItem = createAction('ADD_SELECTED_ITEM');
+// const reducer = handleAction(addSelectedItem, (state:any, action:any) => ({
+//     ...state,
+//     selectedItems: state.selectedItems.push(action)
+//   }),
+//   defaultState
+// );
+// const store = createStore(reducer, defaultState);
+// import { createAction, handleAction, createStore } from 'redux-actions'
+// import { InventoryItem } from '../inventory/variables';
+
+var defaultState = { counter: 10 };
+var increment = exports.increment = (0, _reduxActions.createAction)('INCREMENT');
+var decrement = exports.decrement = (0, _reduxActions.createAction)('DECREMENT');
+var reducer = (0, _reduxActions.handleActions)((_a = {}, _a[(0, _reduxActions.combineActions)(increment, decrement)] = function (state, _a) {
+    var amount = _a.payload.amount;
+    return tslib_1.__assign({}, state, { counter: state.counter + amount });
+}, _a), defaultState);
+var store = exports.store = (0, _redux.createStore)(reducer, defaultState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+exports.default = store;
+},{"tslib":70,"redux":196,"redux-actions":71}],6:[function(require,module,exports) {
 'use strict';
 
 require('aframe');
@@ -138774,7 +137335,7 @@ var registerSelectable = function registerSelectable() {
 };
 
 module.exports = registerSelectable();
-},{"aframe":7}],51:[function(require,module,exports) {
+},{"aframe":9}],73:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138792,7 +137353,7 @@ var registerCameraDirector = function registerCameraDirector() {
     });
 };
 exports.default = registerCameraDirector();
-},{"aframe":7}],16:[function(require,module,exports) {
+},{"aframe":9}],19:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -138820,7 +137381,7 @@ var positions = exports.positions = [{
         x: 0, y: 90, z: 0
     }
 }];
-},{}],110:[function(require,module,exports) {
+},{}],69:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -138834,7 +137395,7 @@ exports.default = function (position) {
         return i.id === position;
     });
 };
-},{"./variables":16}],52:[function(require,module,exports) {
+},{"./variables":19}],74:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138869,13 +137430,13 @@ var updateCameraPosition = function updateCameraPosition(el, position) {
     el.setAttribute('rotation', p.rotation);
 };
 exports.default = registerComponent();
-},{"aframe":7,"./getCameraPosition":110}],26:[function(require,module,exports) {
+},{"aframe":9,"./getCameraPosition":69}],34:[function(require,module,exports) {
 'use strict';
 
 require('./camera-director');
 
 require('./camera-cycle-component');
-},{"./camera-director":51,"./camera-cycle-component":52}],43:[function(require,module,exports) {
+},{"./camera-director":73,"./camera-cycle-component":74}],20:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138898,7 +137459,7 @@ exports.default = function (position) {
         camera.setAttribute('rotation', p.rotation);
     }
 };
-},{"./variables":16,"./getCameraPosition":110}],13:[function(require,module,exports) {
+},{"./variables":19,"./getCameraPosition":69}],16:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138921,9 +137482,10 @@ var register = function register() {
          * Initial creation and setting of the mesh.
          */
         init: function init() {
+            var _this = this;
             // add event listener for scene changes
             this.el.addEventListener('click', function (e) {
-                var id = e.target.id;
+                var id = _this.el.id;
                 if (id) {
                     if (id === 'hud-default-jump') {
                         (0, _switchCameraPosition2.default)(_variables.Positions.default);
@@ -138939,18 +137501,7 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":7,"../camera/switchCameraPosition":43,"../camera/variables":16}],44:[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-var InventoryList = exports.InventoryList = undefined;
-(function (InventoryList) {
-    InventoryList["bottle1"] = "bottle1";
-    InventoryList["bottle2"] = "bottle2";
-})(InventoryList || (exports.InventoryList = InventoryList = {}));
-},{}],14:[function(require,module,exports) {
+},{"aframe":9,"../camera/switchCameraPosition":20,"../camera/variables":19}],17:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -138959,21 +137510,57 @@ Object.defineProperty(exports, "__esModule", {
 
 require('aframe');
 
-var _variables = require('./variables');
+var _store = require('../store');
 
 var register = function register() {
     AFRAME.registerComponent('inventory-item', {
-        schema: {
-            id: { type: 'string', default: '' }
-        },
         init: function init() {
-            // check to make sure it's in the inventory list
-            var exists = Object.values(_variables.InventoryList).includes(this.data.id);
+            var el = this.el;
+            // add the gui interactive
+            el.setAttribute('gui-interactable', '');
+            // Create the label
+            var addButtonNode = this.makeButton();
+            var menu = el.appendChild(addButtonNode);
+            // Animate in the menu
+            el.addEventListener('mouseenter', function (e) {
+                var animateNode = document.createElement('a-animation');
+                animateNode.setAttribute('attribute', 'scale');
+                animateNode.setAttribute('dur', '300');
+                animateNode.setAttribute('to', '1 1 1');
+                menu.appendChild(animateNode);
+            });
+            // Animate out the menu
+            el.addEventListener('mouseleave', function (e) {
+                var animateNode = document.createElement('a-animation');
+                animateNode.setAttribute('attribute', 'scale');
+                animateNode.setAttribute('dur', '300');
+                animateNode.setAttribute('to', '0 0 0');
+                menu.appendChild(animateNode);
+            });
+        },
+        selectItem: function selectItem() {
+            _store.store.dispatch((0, _store.increment)({ amount: 1 }));
+        },
+        makeButton: function makeButton(props) {
+            var _this = this;
+            var node = document.createElement('a-gui-button');
+            node.setAttribute('width', '2');
+            node.setAttribute('rotation', '0 90 0');
+            node.setAttribute('position', '0 .7 0');
+            node.setAttribute('height', '0.75');
+            node.setAttribute('value', 'Select Item');
+            node.setAttribute('font-family', 'Helvetica');
+            node.setAttribute('scale', '0 0 0');
+            node.setAttribute('look-at', '[camera]');
+            node.addEventListener('click', function (e) {
+                _this.selectItem();
+            });
+            return node;
         }
     });
 };
 exports.default = register();
-},{"aframe":7,"./variables":44}],53:[function(require,module,exports) {
+},{"aframe":9,"../store":267}],72:[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -139935,7 +138522,7 @@ function makeCallDirty(arr, fn) {
 /***/ })
 /******/ ]);
 });
-},{}],15:[function(require,module,exports) {
+},{}],18:[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -139957,10 +138544,34 @@ var register = function register() {
     });
 };
 exports.default = register();
-},{"aframe":7,"aframe-state-component":53}],4:[function(require,module,exports) {
+},{"aframe":9,"aframe-state-component":72}],7:[function(require,module,exports) {
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['\n        query isLoaded {\n          isLoaded\n        }\n      '], ['\n        query isLoaded {\n          isLoaded\n        }\n      ']);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+require('aframe');
+
+var register = function register() {
+    AFRAME.registerComponent('bottle', {
+        init: function init() {
+            var geometry = new THREE.SphereBufferGeometry(100, 32, 16);
+            var shader = THREE.FresnelShader;
+            var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+            var material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: shader.vertexShader,
+                fragmentShader: shader.fragmentShader
+            });
+            var mesh = new THREE.Mesh(geometry, material);
+            this.el.setObject3D('mesh', mesh);
+        }
+    });
+};
+exports.default = register();
+},{"aframe":9}],4:[function(require,module,exports) {
+'use strict';
 
 require('aframe');
 
@@ -139970,11 +138581,13 @@ require('aframe-extras');
 
 require('aframe-look-at-component');
 
-var _graphql = require('./state/graphql');
+require('aframe-gui');
+
+require('./shaders/FresnelShader');
+
+var _store = require('./store');
 
 require('./selectable-component');
-
-var _apolloBoost = require('apollo-boost');
 
 require('./camera');
 
@@ -139984,29 +138597,30 @@ require('./inventory/inventory-item-component');
 
 require('./lab-table/lab-table-component');
 
+require('./bottle/bottle-component.ts');
+
 var _variables = require('./camera/variables');
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var _switchCameraPosition = require('./camera/switchCameraPosition');
+
+var _switchCameraPosition2 = _interopRequireDefault(_switchCameraPosition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // import 'aframe-html-shader'
 // import 'aframe-animation-timeline-component'
-
-
 document.addEventListener('DOMContentLoaded', function () {
   var scene = document.querySelector('a-scene');
   scene.addEventListener('loaded', function (e) {
-    AFRAME.scenes[0].emit('changeCameraPosition', _variables.Positions.default);
-
-    // change the state to is loaded
-    _graphql.client.query({
-      query: (0, _apolloBoost.gql)(_templateObject)
-    }).then(function (data) {
-      return console.log(data);
-    }).catch(function (error) {
-      return console.error(error);
-    });
+    (0, _switchCameraPosition2.default)(_variables.Positions.stockroom);
   });
+
+  console.log(_store.store);
 });
-},{"aframe":7,"three":8,"aframe-extras":9,"aframe-look-at-component":10,"./state/graphql":12,"./selectable-component":6,"apollo-boost":42,"./camera":26,"./hud/hud-button-component":13,"./inventory/inventory-item-component":14,"./lab-table/lab-table-component":15,"./camera/variables":16}],225:[function(require,module,exports) {
+// import './state/byhand'
+
+// import { client } from './state/graphql'
+},{"aframe":9,"three":10,"aframe-extras":11,"aframe-look-at-component":12,"aframe-gui":13,"./shaders/FresnelShader":8,"./store":267,"./selectable-component":6,"./camera":34,"./hud/hud-button-component":16,"./inventory/inventory-item-component":17,"./lab-table/lab-table-component":18,"./bottle/bottle-component.ts":7,"./camera/variables":19,"./camera/switchCameraPosition":20}],265:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -140035,7 +138649,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58907' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52874' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -140176,5 +138790,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[225,4], null)
+},{}]},{},[265,4], null)
 //# sourceMappingURL=/app.febdb068.map
