@@ -1,5 +1,6 @@
 import 'aframe'
 import 'aframe-template-component'
+import 'super-hands'
 import { addSelectedItem, store } from '../store'
 declare const AFRAME: any
 
@@ -11,6 +12,11 @@ const register = () => {
 
       // add the gui interactive
       el.setAttribute('gui-interactable', '')
+      el.setAttribute('hoverable', '')
+      el.setAttribute('grabbable', '')
+      el.setAttribute('draggable', '')
+      // el.setAttribute('dynamic-body', '')
+      el.setAttribute('shadow', '')
 
       // add the model
       const model = document.createElement('a-entity')
