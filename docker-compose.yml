@@ -2,7 +2,7 @@ version: '3'
 services:
 
   parcel:
-    image: heymp/chemical-reaction-lab
+    image: heymp/chemical-reaction-lab:${TAG}
     volumes:
       - .:/home/node/html
     ports:

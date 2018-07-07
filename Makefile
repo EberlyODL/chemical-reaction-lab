@@ -3,7 +3,7 @@ include .env
 export $(shell sed 's/=.*//' .env)
 USER=$(shell whoami)
 
-prod:
+start:
 	docker-compose up
 
 dev:
