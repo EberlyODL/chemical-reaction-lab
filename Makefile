@@ -1,5 +1,6 @@
 SHELL := /usr/bin/env bash
-
+include .env
+export $(shell sed 's/=.*//' .env)
 USER=$(shell whoami)
 
 prod:
