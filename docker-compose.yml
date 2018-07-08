@@ -5,6 +5,7 @@ services:
     image: heymp/chemical-reaction-lab:${TAG}
     volumes:
       - .:/home/node/html
+      - /home/node/html/node_modules
     ports:
       - ${PORT}:${PORT}
       - ${HMR_PORT}:${HMR_PORT}

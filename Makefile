@@ -4,7 +4,7 @@ export $(shell sed 's/=.*//' .env)
 USER=$(shell whoami)
 
 start:
-	docker-compose up
+	docker-compose up -d
 
 dev:
 	make clean
