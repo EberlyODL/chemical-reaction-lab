@@ -27,3 +27,6 @@ getboxfiles:
 
 deploy:
 	surge -d odl-crl.surge.sh dist
+
+deploy-tag:
+	surge -d odl-crl.surge.sh dist

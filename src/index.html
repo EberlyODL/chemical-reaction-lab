@@ -21,7 +21,7 @@
                 event-set__hoveroff="_event: hover-end; material.opacity: 0; transparent: false"
                 event-set__dragon="_event: dragover-start; wireframe: true"
                 event-set__dragoff="_event: dragover-end; wireframe: false"
-                dynamic-body="angularDamping:1;linearDamping:.5;" shadow></a-mixin>
+                dynamic-body="angularDamping:.9;linearDamping:.9;mass:10" shadow></a-mixin>
         <a-mixin id="transformer" color-randomizer droppable static-body
                  collision-filter="collisionForces: false"
                  geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"></a-mixin>
@@ -55,7 +55,7 @@
 
     <a-entity class="cube" mixin="cube" geometry="primitive:box" material="opacity:0" position="-22.203 4.134243489980758 5.01">
       <a-entity
-        gltf-model="#3MHCl-object" scale=".3 .3 .3" position="0 .3 0" rotation="0 90 0"></a-entity>
+        gltf-model="#3MHCl-object" scale=".2 .2 .2" position="0 .1 0" rotation="0 90 0" look-at="camera"></a-entity>
     </a-entity>
 
     <a-box id="floor" static-body width=100 height=0.001 depth=100 visible="false"></a-box>
