@@ -29,6 +29,6 @@ import './touching/touching-component'
 document.addEventListener('DOMContentLoaded', function () {
   const scene = document.querySelector('a-scene')
   scene.addEventListener('loaded', (e) => {
-    
+
   })
 })

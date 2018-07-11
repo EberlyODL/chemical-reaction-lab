@@ -53,8 +53,7 @@ const register = () => {
       this.subscribe = store.subscribe(() => {
         const state = store.getState()
         const selectedItems = state.selectedItems
-        selectedItems.forEach((id:string, index:number) => {
-        })
+        // const isSelected = selectedItems.find((i:string) => i === this.)
       })
     },
 

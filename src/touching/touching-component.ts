@@ -30,8 +30,7 @@ const register = () => {
 
       // Calculate the distance.
       var distance = directionVec3.length()
-
-      // Don't go any closer if a close proximity has been reached.
+      // find out if the two items are within the 'touching' distance of each other
       const touching = (distance < this.data.distance)
       // dirty check to find out when we switch to a new state
       if (touching !== this._touching) {
