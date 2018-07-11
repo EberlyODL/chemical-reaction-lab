@@ -25,6 +25,7 @@ import './lab-table/lab-table-component'
 import './bottle/bottle-component.ts'
 import './follow/follow-component'
 import './touching/touching-component'
+import './video-player/video-player-component'
 
 document.addEventListener('DOMContentLoaded', function () {
   const scene = document.querySelector('a-scene')
