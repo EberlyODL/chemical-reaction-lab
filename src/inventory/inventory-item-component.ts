@@ -1,7 +1,7 @@
 import 'aframe'
 import 'aframe-template-component'
 import 'super-hands'
-import { addSelectedItem, store } from '../store'
+import { addSelectedItem, store } from '../state/redux'
 declare const AFRAME: any
 
 const register = () => {

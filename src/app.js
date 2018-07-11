@@ -1,10 +1,12 @@
 import 'aframe'
 import 'aframe-extras'
 import 'aframe-look-at-component'
-import 'aframe-gui'
+// import 'aframe-gui'
 import 'aframe-physics-system'
 import 'aframe-event-set-component'
 import 'aframe-physics-extras'
+import 'aframe-motion-capture-components'
+import 'aframe-log-component'
 import 'three'
 import 'tslib'
 // import 'aframe-html-shader'
@@ -12,7 +14,8 @@ import 'tslib'
 // import { client } from './state/graphql'
 import './shaders/FresnelShader'
 // import './state/byhand'
-import { store, addSelectedItem } from './store'
+// import { store, addSelectedItem } from './store'
+// import { selectedItemsObservable, addSelectedItem } from './state/microstates'
 import './selectable-component'
 import './camera'
 import './hud/hud-button-component'
@@ -21,15 +24,11 @@ import './inventory/inventory-item-component'
 import './lab-table/lab-table-component'
 import './bottle/bottle-component.ts'
 import './follow/follow-component'
-import { Positions } from './camera/variables';
-import switchCameraPosition from './camera/switchCameraPosition';
+import './touching/touching-component'
 
 document.addEventListener('DOMContentLoaded', function () {
   const scene = document.querySelector('a-scene')
   scene.addEventListener('loaded', (e) => {
-    // start in the stockroom
-    switchCameraPosition(Positions.stockroom)
-    // add items to the selected items
-    store.dispatch(addSelectedItem('3MHCl'))
+    
   })
 })
