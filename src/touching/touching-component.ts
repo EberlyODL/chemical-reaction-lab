@@ -7,7 +7,7 @@ const register = () => {
   AFRAME.registerComponent('touching', {
     schema: {
       target: { type: 'selector' },
-      distance: { type: 'number', default: 2 },
+      distance: { type: 'number', default: 1 },
     },
 
     init: function () {
