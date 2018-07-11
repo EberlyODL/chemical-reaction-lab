@@ -5,7 +5,7 @@
     chemical-reaction-lab
   </title>
   <meta name="description" content="chemical-reaction-lab">
-  <script src="/app.febdb068.js"></script>
+  <script src="/app.78938e1f.js"></script>
 </head>
 
 <body>
@@ -55,10 +55,27 @@
 
     <!-- Surfaces -->
     <a-box id="floor" static-body="" width="100" height="0.001" depth="100" visible="false"></a-box>
-    <a-box id="lab-table" lab-table="" mixin="lab-table-mixin" static-body="" position="4.880 3.697 -3.779" geometry="width: 2.02; height: 0.001; depth: 5.05" visible="true"></a-box>
+    <a-box id="lab-table" lab-table="" mixin="lab-table-mixin" static-body="" position="5.306169819726233 3.7400302088632267 -3.684" geometry="width:2.02;height:0.001;depth:5.05" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
+    <a-box id="lab-table-2" lab-table="" mixin="lab-table-mixin" static-body="" position="5.306 3.74 5.709206888896392" geometry="width:2.02;height:0.001;depth:5.05" visible="true" scale="1.4 1 1.32" droppable=""></a-box>
+    <a-box id="counter-cube-1" droppable="" static-body="sphereRadius:NaN" position="5.486 1.7307183794169922 1.022" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.1 15 1.59"></a-box>
+    <a-box id="counter-cube-2" droppable="" static-body="sphereRadius:NaN" position="6.942684344932919 3.9395950285063233 0.9949989769798131" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="true" rotation="0 0 90" scale="0.3 1.6 1.61"></a-box>
+    <a-box id="cabinet-cube" droppable="" static-body="sphereRadius:NaN" position="6.001998003423236 7.591735717206429 0.9706942652160826" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.3 10 1.59"></a-box>
+    <a-box id="lab-wall-1" droppable="" static-body="sphereRadius:NaN" position="-0.5 5.942415778207673 -9.974687672434799" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-2" droppable="" static-body="sphereRadius:NaN" position="-0.49754233523271935 5.930396328895224 10.033313161806557" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-3" droppable="" static-body="sphereRadius:NaN" position="-7.992320023898882 6.004174108680734 -4.514686644104824" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 1.08"></a-box>
+    <a-box id="lab-wall-4" droppable="" static-body="sphereRadius:NaN" position="-7.92 5.978 6.984131584500425" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 0.59"></a-box>
+    <a-box id="lab-wall-5" droppable="" static-body="sphereRadius:NaN" position="-8.005 10.023577992343242 2.48" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3005"></a-box>
+    <a-box id="lab-wall-6" droppable="" static-body="sphereRadius:NaN" position="6.932238758932265 6.0619211100377175 0.022311436510410676" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1.98"></a-box>
+    <a-box id="stockroom-wall-1" droppable="" static-body="sphereRadius:NaN" position="-15.93704173109042 5.994 -0.06701135828178277" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-2" droppable="" static-body="sphereRadius:NaN" position="-15.937 5.994 10.054867134911351" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-3" droppable="" static-body="sphereRadius:NaN" position="-23.555594807773062 6.007045499991121 4.910897496114819" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1"></a-box>
+    <a-box id="stockroom-wall-4" droppable="" static-body="sphereRadius:NaN" position="-8.434000000000017 6.0230640830568145 6.9965046332318535" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.59"></a-box>
+    <a-box id="stockroom-wall-5" droppable="" static-body="sphereRadius:NaN" position="-8.404363985214019 6.023 0.4951661711531061" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.1"></a-box>
+    <a-box id="stockroom-wall-6" droppable="" static-body="sphereRadius:NaN" position="-8.432820679332744 10.008757533631579 2.5107725059454316" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3"></a-box>
     <a-box id="stockroom-shelf-1" droppable="" static-body="sphereRadius:NaN" position="-22.69 4.134243489980758 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
     <a-box id="stockroom-shelf-2" droppable="" static-body="sphereRadius:NaN" position="-22.69 5.597969640669048 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
     <a-box id="stockroom-shelf-3" droppable="" static-body="sphereRadius:NaN" position="-22.69 7.103421505770071 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    
 
     <!-- Camera / Hands -->
     <a-entity position="0 4 0" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
