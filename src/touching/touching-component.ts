@@ -13,6 +13,7 @@ const touching:any = {
   init: function () {
     this.directionVec3 = new THREE.Vector3()
     this._inventoryId = this.el.getAttribute('data-inventory-id')
+    this._touching = false
   },
 
   tick: function () {

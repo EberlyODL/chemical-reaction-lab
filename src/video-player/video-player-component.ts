@@ -36,7 +36,7 @@ const videoPlayer:any = {
     node.setAttribute('data-src', video)
     this.el.appendChild(node)
     // Dim the lights
-    this.el.sceneEl.querySelector('#light-lab').setAttribute('visible', false)
+    // this.el.sceneEl.querySelector('#light-lab').setAttribute('visible', false)
     // find the video source and click play
     this.el.sceneEl.querySelector(video).play()
     this._isPlaying = video
@@ -46,7 +46,7 @@ const videoPlayer:any = {
     // Destroy the template
     this.el.innerHTML = ''
     // Dim the lights
-    this.el.sceneEl.querySelector('#light-lab').setAttribute('visible', true)
+    // this.el.sceneEl.querySelector('#light-lab').setAttribute('visible', true)
     // find the video source and click play
     this.el.sceneEl.querySelector(video).pause()
     this._isPlaying = null
@@ -65,8 +65,6 @@ const videoPlayer:any = {
       return includes
     })
     // If we have an active combination then place in the video back in
-    console.log(state)
-    console.log(this._isPlaying)
     if (activeCombination && !this._isPlaying) {
       this.playVideo(activeCombination.video)
     }
