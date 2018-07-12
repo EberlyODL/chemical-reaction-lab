@@ -43,9 +43,9 @@
 
       <!-- Templates -->
       <script id="videoPlayerTemplate" type="text/html">
-        <a-entity position="0 4 -4" rotation="0 0 0">
-          <a-plane src="${src}" geometry="width:16;height:9;" scale=".5 .5 .5" ></a-plane>
-          <a-entity video-controls="src:${src}" position="0 0.760 2.638"></a-entity>
+        <a-plane id="video-plane" src="${src}" scale=".7 .7 .7" geometry="width:16;height:9;"></a-plane>
+        <a-entity position="0 -5.632  2">
+          <a-entity id="video-controls" video-controls="src:${src}" scale="4 4 4"></a-entity>
         </a-entity>
       </script> 
       <script id="dimLightsTemplate" type="text/html">
@@ -109,7 +109,7 @@
     <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
 
     <!-- Video Player -->
-    <a-entity id="videoPlayer" video-player follow="target:a-camera;speed:8"></a-entity>
+    <a-entity id="videoPlayer" video-player position="-.5 6 -9"></a-entity>
 
     <!-- Surfaces -->
     <a-box id="floor" static-body width=100 height=0.001 depth=100 visible="false"></a-box>
