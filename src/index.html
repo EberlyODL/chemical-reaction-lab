@@ -47,10 +47,6 @@
                 cube-mixin
                 tabindex="0"
                 hoverable grabbable stretchable draggable
-                event-set__hoveron="_event: hover-start; material.opacity: 0.2; transparent: true"
-                event-set__hoveroff="_event: hover-end; material.opacity: 0; transparent: false"
-                event-set__dragon="_event: dragover-start; wireframe: true"
-                event-set__dragoff="_event: dragover-end; wireframe: false"
                 dynamic-body="shape:box;angularDamping:.9;linearDamping:.9;mass:100"
                 shadow></a-mixin>
         <a-mixin id="lab-table-mixin"
@@ -101,6 +97,7 @@
     <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
     <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 5.446 5.01"></a-entity>
     <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
+    <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
 
     <!-- Video Player -->
     <a-entity id="videoPlayer" video-player follow="target:a-camera;speed:8"></a-entity>
