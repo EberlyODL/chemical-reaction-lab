@@ -20,6 +20,7 @@
     "aframe-physics-system": "^3.1.2",
     "aframe-state-component": "^3.5.4",
     "aframe-template-component": "^3.2.1",
+    "aframe-video-controls": "^0.3.0",
     "animejs": "^2.2.0",
     "apollo-boost": "^0.1.10",
     "graphql": "^0.13.2",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.3",
+    "remote-redux-devtools": "^0.5.12",
     "tslib": "^1.9.3",
     "typescript": "^2.9.2",
     "typescript-lit-html-plugin": "^0.3.1"

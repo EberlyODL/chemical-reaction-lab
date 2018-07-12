@@ -20,7 +20,10 @@ import { createStore } from 'redux'
 import { createAction, handleActions, combineActions } from 'redux-actions';
 import { filter } from '../../node_modules/@types/async';
 
-const defaultState = { counter: 10, selectedItems: [] };
+const defaultState = {
+  counter: 10,
+  selectedItems: [],
+};
 
 export const increment = createAction('INCREMENT')
 export const decrement = createAction('DECREMENT')
