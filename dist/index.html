@@ -41,6 +41,9 @@
           <a-entity video-controls="src:${src}" position="0 0.760 2.638"></a-entity>
         </a-entity>
       </script> 
+      <script id="dimLightsTemplate" type="text/html">
+      </script>
+
 
       <!-- Mixins -->
         <a-mixin id="cube" cube-mixin="" tabindex="0" hoverable="" grabbable="" stretchable="" draggable="" dynamic-body="shape:box;angularDamping:.9;linearDamping:.9;mass:100" shadow=""></a-mixin>
@@ -59,13 +62,12 @@
                               colliderState:"></a-mixin>
     </a-asset-item></a-assets>
 
-
     <!-- Layout -->
     <a-entity rotation="-180 0 -180" gltf-model="#chemlablayout.gltf"></a-entity>
 
     <!-- Lights -->
-    <a-light id="light-lab" position="0 10 0" light="intensity:1.85;type:point"></a-light>
-    <a-light id="light-stockroom" position="-14 10 5.024185750537663" light="intensity:1.85;type:point"></a-light>
+    <a-light id="light-lab" lab-light="" position="0 10 0" light="intensity:1.85;type:point"></a-light>
+    <a-light id="light-stockroom" lab-light="" position="-14 10 5.024185750537663" light="intensity:1.85;type:point"></a-light>
 
     <!-- Bottle -->
     <a-entity id="bottle-01MCaCl2" data-inventory-id="01MCaCl2" gltf-model="#01MCaCl2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 9.01"></a-entity>
