@@ -29,10 +29,10 @@ import './follow/follow-component'
 import './touching/touching-component'
 import './video-player/video-player-component'
 import './lab-light/lab-light-component'
+import './state/orchestration'
 
-document.addEventListener('DOMContentLoaded', function () {
-  const scene = document.querySelector('a-scene')
-  scene.addEventListener('loaded', (e) => {
-
-  })
-})
+// document.addEventListener('DOMContentLoaded', function () {
+//   const scene = document.querySelector('a-scene')
+//   scene.addEventListener('loaded', (e) => {
+//   })
+// })
