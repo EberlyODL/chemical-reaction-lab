@@ -5,7 +5,7 @@
     chemical-reaction-lab
   </title>
   <meta name="description" content="chemical-reaction-lab">
-  <script src="/app.febdb068.js"></script>
+  <script src="/app.78938e1f.js"></script>
 </head>
 
 <body>
@@ -28,18 +28,20 @@
       <a-asset-item id="copperstrips-object" src="assets/bottles/copperstrips.gltf"></a-asset-item>
       <a-asset-item id="CuOH2-object" src="assets/bottles/CuOH2.gltf"></a-asset-item>
       <a-asset-item id="magnesiumstrips.gltf" src="assets/bottles/magnesiumstrips.gltf"></a-asset-item>
+      <a-asset-item id="bunsenburner.gltf" src="assets/bunsenburner.gltf"></a-asset-item>
+
 
       <!-- Video Imports -->
-      <video id="reagentvid-3" loop="" src="/reaction_3.481e40fb.mp4"></video>
-      <video id="reagentvid-7" loop="" src="/reaction_7.9782ee89.mp4"></video>
-      <video id="reagentvid-9" loop="" src="/reaction_9.09db8510.mp4"></video>
-      <video id="reagentvid-10" loop="" src="/reaction_10.386671a8.mp4"></video>
-      <video id="reagentvid-13" loop="" src="/reaction_13.31959ffb.mp4"></video>
-      <video id="reagentvid-14" loop="" src="/reaction_14.18c944a3.mp4"></video>
-      <video id="reagentvid-15" loop="" src="/reaction_15.38c4a0a2.mp4"></video>
-      <video id="reagentvid-16" loop="" src="/reaction_16.af574352.mp4"></video>
-      <video id="reagentvid-17" loop="" src="/reaction_17.38d06d97.mp4"></video>
-      <video id="reagentvid-18" loop="" src="/reaction_18.7a20749f.mp4"></video>
+      <video id="reagentvid-3" loop="" src="/reaction_3.e0cfba5c.mp4"></video>
+      <video id="reagentvid-7" loop="" src="/reaction_7.bca7e54c.mp4"></video>
+      <video id="reagentvid-9" loop="" src="/reaction_9.4e02e444.mp4"></video>
+      <video id="reagentvid-10" loop="" src="/reaction_10.5300909f.mp4"></video>
+      <video id="reagentvid-13" loop="" src="/reaction_13.01fdd8f4.mp4"></video>
+      <video id="reagentvid-14" loop="" src="/reaction_14.c21403bc.mp4"></video>
+      <video id="reagentvid-15" loop="" src="/reaction_15.463c6f0c.mp4"></video>
+      <video id="reagentvid-16" loop="" src="/reaction_16.7f52b670.mp4"></video>
+      <video id="reagentvid-17" loop="" src="/reaction_17.70eeed76.mp4"></video>
+      <video id="reagentvid-18" loop="" src="/reaction_18.02496f36.mp4"></video>
 
       <!-- Templates -->
       <script id="dimLightsDownTemplate" type="text/html">
@@ -105,7 +107,7 @@
     <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
     <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 5.446 5.01"></a-entity>
     <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
-    <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
+    <a-entity id="bunsenburner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" gltf-model="assets/bunsenburner.gltf" rotation="0 90 0" position="-4.548164839925188 2.695742721134091 -1.7681722765189336" scale="0.5 0.5 0.5"></a-entity>
 
     <!-- Video Player -->
     <a-entity id="videoPlayer" video-player="" position="-.5 6 -9"></a-entity>
