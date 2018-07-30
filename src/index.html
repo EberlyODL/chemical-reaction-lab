@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <a-scene physics="gravity: -51; debug:true">
+  <a-scene physics="gravity: -51; debug:false">
     <a-assets>
 
       <!-- Objects -->
@@ -122,7 +122,7 @@
     <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
     <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 5.446 5.01"></a-entity>
     <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
-    <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
+    <!-- <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity> -->
 
     <!-- Video Player -->
     <a-entity id="videoPlayer" video-player position="-.5 6 -9"></a-entity>
