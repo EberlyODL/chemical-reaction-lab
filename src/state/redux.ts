@@ -27,7 +27,8 @@ export interface State {
   counter?: number,
   selectedItems?: string[]
   videoPlayer?: VideoPlayer
-  lights?: Lights
+  lights?: Lights,
+  position?: Object
 }
 
 // State
@@ -40,7 +41,7 @@ export const defaultState:State = {
   },
   lights: {
     status: LightStates.on
-  }
+  },
 }
 
 interface VideoMatrixItem {
@@ -71,6 +72,7 @@ export const removeSelectedItem = createAction('REMOVE_SELECTED_ITEM')
 export const startVideo = createAction('START_VIDEO')
 export const stopVideo = createAction('STOP_VIDEO')
 export const dimLights = createAction('DIM_LIGHTS')
+export const updatePosition = createAction('UPDATE_POSITION')
 
 // Functions
 export const findActiveCombination = (state:any) => {
