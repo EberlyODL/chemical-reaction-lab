@@ -1,5 +1,7 @@
 import 'aframe'
 import { store, getVideoSrc, VideoPlayerStatus, findActiveCombination } from '../state/redux';
+import client from '../apollo/client'
+import gql from 'graphql-tag'
 import registerComponent from '../utils/registerComponent';
 declare const AFRAME: any
 declare const THREE: any
@@ -11,10 +13,17 @@ const videoPlayer:any = {
   init: function () {
     this._isPlaying = false
     // check the store and subscribe to any changes
-    this._stateChanged()
-    this.subscribe = store.subscribe(() => {
-      this._stateChanged()
+    client.watchQuery({ query: GET_LATEST_POSITION })
+    .subscribe(res => {
+      // const el = document.querySelector('track-position')
+      // const p = res.data.positions[0]
+      // el.innerHTML = `x: ${p.x} y: ${p.y} id: ${p.id}`
     })
+    
+    // this._stateChanged()
+    // this.subscribe = store.subscribe(() => {
+    //   this._stateChanged()
+    // })
   },
 
   _stateChanged: function () {

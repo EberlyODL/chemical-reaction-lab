@@ -1,30 +1,9 @@
-type User {
+type Video {
   id: ID! @unique
-  email: String @unique
-  name: String!
-  posts: [Post!]!
+  name: String! @unique
 }
 
-type Post {
+type VideoCombination {
   id: ID! @unique
-  title: String!
-  published: Boolean! @default(value: "false")
-  author: User
-}
-
-type Position {
-  id: ID! @unique
-  x: String!
-  y: String!
-  z: String!
-}
-
-type Click {
-  id: ID! @unique
-  target: String!
-}
-
-type Message {
-  id: ID! @unique
-  text: String!
+  videos: [Video!]!
 }

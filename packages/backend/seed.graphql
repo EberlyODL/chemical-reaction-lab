@@ -1,0 +1,32 @@
+mutation {
+  createVideo(data: {
+    name: "reagentvid-3"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-7"
+  }) { id }
+  createVideo(data: {
+   name: "reagentvid-9"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-10"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-13"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-14"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-15"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-16"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-17"
+  }) { id }
+  createVideo(data: {
+    name: "reagentvid-18"
+  }) { id }
+}

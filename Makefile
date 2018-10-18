@@ -16,6 +16,7 @@ start-dev:
 	make prisma-update
 
 start-backend:
+	docker-compose build
 	docker-compose up -d
 	make prisma-update
 

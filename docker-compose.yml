@@ -4,11 +4,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-node
-    volumes:
-      - /home/node/html/node_modules
-      - /home/node/html/packages/backend/node_modules
-      - /home/node/html/packages/frontend/node_modules
-      - /home/node/html/packages/frontend/.cache
+    # volumes:
+      # - /home/node/html/node_modules
+      # - /home/node/html/packages/backend/node_modules
+      # - /home/node/html/packages/frontend/node_modules
+      # - /home/node/html/packages/frontend/.cache
   prisma:
     image: prismagraphql/prisma:1.17
     restart: always

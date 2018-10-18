@@ -1,4 +1,5 @@
-import { ApolloClient, gql } from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
+import { gql } from 'apollo-boost';
 
 export const UPDATE_NETWORK_STATUS = gql`
   mutation updateNetworkStatus($isConnected: Boolean) {
@@ -7,7 +8,7 @@ export const UPDATE_NETWORK_STATUS = gql`
 `
 
 export const client = new ApolloClient({
-  uri: 'https://fakerql.com/graphql',
+  uri: "http://localhost:4466",
   clientState: {
     defaults: {
       isConnected: true
