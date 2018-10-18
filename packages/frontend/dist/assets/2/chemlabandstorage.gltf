@@ -1,0 +1,195 @@
+{
+    "accessors": [
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1496,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "name": "accessor_buffer_Cube.008_NORMAL_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1496,
+            "max": [
+                0.9850605726242065,
+                0.9666275829076767
+            ],
+            "min": [
+                0.022502794861793518,
+                0.01613461971282959
+            ],
+            "name": "accessor_buffer_Cube.008_TEXCOORD_0_0",
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1496,
+            "max": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                -4.133333206176758,
+                -2.0,
+                -2.0
+            ],
+            "name": "accessor_buffer_Cube.008_POSITION_0",
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 6432,
+            "max": [
+                1495
+            ],
+            "min": [
+                0
+            ],
+            "name": "accessor_buffer_Cube.008_0",
+            "type": "SCALAR"
+        }
+    ],
+    "asset": {
+        "copyright": "",
+        "generator": "blendergltf v1.2.0",
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 17952,
+            "byteOffset": 0,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Cube.008_POSITION_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 17952,
+            "byteOffset": 17952,
+            "byteStride": 12,
+            "name": "bufferView_buffer_Cube.008_NORMAL_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 11968,
+            "byteOffset": 35904,
+            "byteStride": 8,
+            "name": "bufferView_buffer_Cube.008_TEXCOORD_0_0",
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 12868,
+            "byteOffset": 47872,
+            "name": "bufferView_buffer_Cube.008_0",
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 60740,
+            "name": "buffer_chemlabandstorage",
+            "uri": "buffer_chemlabandstorage.bin"
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": false,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "Material.002",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.64000004529953,
+                    0.64000004529953,
+                    0.64000004529953,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Cube.008",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 0,
+                        "POSITION": 2,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 3,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "mesh": 0,
+            "name": "Cube",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                7.5,
+                6.0,
+                10.0
+            ],
+            "translation": [
+                7.0,
+                12.0,
+                10.0
+            ]
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "extras": {
+                "background_color": [
+                    0.05087608844041824,
+                    0.05087608844041824,
+                    0.05087608844041824
+                ],
+                "frames_per_second": 24,
+                "thumbs_mats_dielectrics": 17,
+                "thumbs_mats_dielectrics_node": 2
+            },
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ]
+}
