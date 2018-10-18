@@ -3,30 +3,28 @@ include .env
 export $(shell sed 's/=.*//' .env)
 USER=$(shell whoami)
 
-start:
+start-prod:
+	docker-compose -f docker-compose.yml -f docker-compose-prod.yml build
+	make build-frontend
+	docker-compose -f docker-compose.yml -f docker-compose-prod.yml build
+	docker-compose -f docker-compose.yml -f docker-compose-prod.yml up -d
+	make prisma-update
+
+start-dev:
+	docker-compose -f docker-compose.yml -f docker-compose-dev.yml build
+	docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+	make prisma-update
+
+start-backend:
 	docker-compose up -d
+	make prisma-update
 
-dev:
-	make clean
-	docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build
+build-frontend:
+	docker-compose run --rm node npm run frontend:parcel:build
 
-connect:
-	docker-compose run parcel bash
+prisma-update:
+	docker-compose run --rm node npm run backend:prisma:update
 
-clear-cache:
-	rm -rf ./.cache
-
-clean:
-	rm -rf ./.cache
-	rm -rf node_modules
-	docker-compose down --remove-orphans -v
-
-getboxfiles:
-	cp /Users/$(USER)/Box\ Sync/b-odl\ Shared/Chemical\ Reaction\ Lab/chemlablayout.gltf dist/assets/chemlablayout.gltf
-	cp /Users/$(USER)/Box\ Sync/b-odl\ Shared/Chemical\ Reaction\ Lab/OBJs/ dist/assets/OBJs
-
-deploy:
-	surge -d odl-crl.surge.sh dist
-
-deploy-tag:
-	surge -d odl-crl.surge.sh dist
+# Forces an update
+prisma-update-force:
+	docker-compose run --rm node npm run backend:prisma:update:force

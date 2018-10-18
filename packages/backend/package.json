@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.9",
+  "scripts": {
+    "graphql:schema:generate": "graphql schema",
+    "prisma:update": "prisma deploy && prisma generate",
+    "prisma:update:force": "prisma deploy --force && prisma generate"
+  },
+  "dependencies": {
+    "graphql-cli": "^2.16.7",
+    "prisma": "^1.18.1"
+  }
+}

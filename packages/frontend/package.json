@@ -1,0 +1,59 @@
+{
+  "name": "frontend",
+  "version": "1.0.9",
+  "main": "index.js",
+  "repository": "https://github.com/EberlyODL/chemical-reaction-lab.git",
+  "author": "Michael Potter <mgp140@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "aframe": "^0.8.2",
+    "aframe-animation-timeline-component": "^1.5.0",
+    "aframe-event-set-component": "^4.1.1",
+    "aframe-extras": "^4.1.2",
+    "aframe-gui": "^0.1.5",
+    "aframe-html-shader": "^0.2.0",
+    "aframe-log-component": "^1.0.7",
+    "aframe-look-at-component": "^0.6.0",
+    "aframe-motion-capture-components": "^0.2.7",
+    "aframe-mouse-cursor-component": "^0.5.2",
+    "aframe-physics-extras": "^0.1.3",
+    "aframe-physics-system": "^3.1.2",
+    "aframe-state-component": "^3.5.4",
+    "aframe-template-component": "^3.2.1",
+    "aframe-video-controls": "^0.3.0",
+    "animejs": "^2.2.0",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^4.0.0",
+    "lit-html": "0.10.2",
+    "reducers": "^3.0.0-alpha",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.1",
+    "super-hands": "^2.1.0",
+    "three": "^0.94.0",
+    "apollo-cache-inmemory": "^1.3.5",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
+    "apollo-link-error": "^1.1.1",
+    "apollo-link-http": "^1.5.5",
+    "apollo-link-state": "^0.4.2",
+    "apollo-link-ws": "^1.0.9",
+    "graphql-tag": "^2.10.0",
+    "subscriptions-transport-ws": "^0.9.15"
+  },
+  "scripts": {
+    "parcel": "parcel -d dist --hmr-port 37195 src/index.html",
+    "parcel:build": "parcel build -d dist src/index.html"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.10.3",
+    "remote-redux-devtools": "^0.5.13",
+    "tslib": "^1.9.3",
+    "typescript": "^2.9.2",
+    "typescript-lit-html-plugin": "^0.3.1"
+  }
+}

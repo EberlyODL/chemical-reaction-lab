@@ -1,12 +1,8 @@
 version: '3'
 services:
-
-  parcel:
-    build: .
-    volumes:
-      - .:/home/node/html
-      - /home/node/html/node_modules
+  node:
     ports:
-      - ${PORT}:${PORT}
-      - ${HMR_PORT}:${HMR_PORT}
-    command: ["parcel", "src/index.html", "-p", "${PORT}", "--hmr-port", "${HMR_PORT}"]
+      - "1234:1234"
+      - "37195:37195"
+    working_dir: "/home/node/html/packages/frontend"
+    command: ["npm", "run", "parcel"]

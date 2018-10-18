@@ -1,12 +1,37 @@
 version: '3'
 services:
-
-  parcel:
-    image: heymp/chemical-reaction-lab:${TAG}
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile-node
     volumes:
-      - .:/home/node/html
       - /home/node/html/node_modules
+      - /home/node/html/packages/backend/node_modules
+      - /home/node/html/packages/frontend/node_modules
+      - /home/node/html/packages/frontend/.cache
+  prisma:
+    image: prismagraphql/prisma:1.17
+    restart: always
     ports:
-      - ${PORT}:${PORT}
-      - ${HMR_PORT}:${HMR_PORT}
-    command: ["parcel", "src/index.html", "-p", "${PORT}", "--hmr-port", "${HMR_PORT}"]
+      - "4466:4466"
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        databases:
+          default:
+            connector: postgres
+            host: postgres
+            port: 5432
+            user: "${PRISMA_USER}"
+            password: "${PRISMA_PASSWORD}"
+            migrations: true
+  postgres:
+    image: postgres:10.5
+    restart: always
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+volumes:
+  postgres:
