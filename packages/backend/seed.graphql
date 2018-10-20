@@ -1,32 +1,138 @@
 mutation {
-  createVideo(data: {
-    name: "reagentvid-3"
+  objectone: createObject(data: {
+    name: "CuOH2"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-7"
+  objecttwo: createObject(data: {
+    name: "bunsenburner"
   }) { id }
-  createVideo(data: {
-   name: "reagentvid-9"
+  objectthree: createObject(data: {
+    name: "magnesiumstrips"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-10"
+  objectfour: createObject(data: {
+    name: "3MHCl"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-13"
+  objectfive: createObject(data: {
+    name: "1MNa2CO3"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-14"
+  objectsix: createObject(data: {
+    name: "013CuSO4"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-15"
+  objectseven: createObject(data: {
+    name: "01MCaCl2"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-16"
+  objecteight: createObject(data: {
+    name: "3MNaOH"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-17"
+  objectnine: createObject(data: {
+    name: "03MAgNO3"
   }) { id }
-  createVideo(data: {
-    name: "reagentvid-18"
+  objecttwelve: createObject(data: {
+    name: "01MNaBr"
+  }) { id }
+  objectthirteen: createObject(data: {
+    name: "01MKI"
+  }) { id }
+  objectfourteen: createObject(data: {
+    name: "01MNa2CO3"
+  }) { id }
+
+  videoone: createVideo(data: {
+    name: "reagentvid-3",
+    triggers: {
+      connect: [
+        { name: "CuOH2"},
+        { name: "bunsenburner"}
+      ]
+    }
+  }) { id }
+
+  videotwo: createVideo(data: {
+    name: "reagentvid-7",
+    triggers: {
+      connect: [
+        { name: "magnesiumstrips"},
+        { name: "bunsenburner"}
+      ]
+    }
+  }) { id }
+
+  videothree: createVideo(data: {
+    name: "reagentvid-9",
+    triggers: {
+      connect: [
+        { name: "3MHCl"},
+        { name: "1MNa2CO3"}
+      ]
+    }
+  }) { id }
+
+  # videofour: createVideo(data: {
+  #   name: "reagentvid-10",
+  #   triggers: {
+  #     connect: [
+  #       { name: "CuOH2"},
+  #       { name: "bunsenburner"},
+  #     ]
+  #   }
+  # }) { id }
+
+  videofive: createVideo(data: {
+    name: "reagentvid-13",
+    triggers: {
+      connect: [
+        { name: "013CuSO4"},
+        { name: "magnesiumstrips"}
+      ]
+    }
+  }) { id }
+
+  videosix: createVideo(data: {
+    name: "reagentvid-14",
+    triggers: {
+      connect: [
+        { name: "01MCaCl2"},
+        { name: "01MNa2CO3"}
+      ]
+    }
+  }) { id }
+
+  videoseven: createVideo(data: {
+    name: "reagentvid-15",
+    triggers: {
+      connect: [
+        { name: "3MHCl"},
+        { name: "3MNaOH"}
+      ]
+    }
+  }) { id }
+
+  videoeight: createVideo(data: {
+    name: "reagentvid-16",
+    triggers: {
+      connect: [
+        { name: "03MAgNO3"},
+        { name: "01MCaCl2"}
+      ]
+    }
+  }) { id }
+
+  videonine: createVideo(data: {
+    name: "reagentvid-17",
+    triggers: {
+      connect: [
+        { name: "03MAgNO3"},
+        { name: "01MNaBr"}
+      ]
+    }
+  }) { id }
+
+  videoten: createVideo(data: {
+    name: "reagentvid-18",
+    triggers: {
+      connect: [
+        { name: "03MAgNO3"},
+        { name: "01MKI"}
+      ]
+    }
   }) { id }
 }

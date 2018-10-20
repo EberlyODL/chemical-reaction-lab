@@ -1,9 +1,10 @@
 type Video {
   id: ID! @unique
   name: String! @unique
+  triggers: @relation [Object!]!
 }
 
-type VideoCombination {
+type Object {
   id: ID! @unique
-  videos: [Video!]!
+  name: String! @unique
 }
