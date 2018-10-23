@@ -6,6 +6,29 @@ import registerComponent from '../utils/registerComponent';
 declare const AFRAME: any
 declare const THREE: any
 
+const GET_VIDEOS = gql`
+  query {
+    videos {
+      id
+      name
+    }
+  }
+`;
+
+const GET_USER = gql`
+  query {
+    user @client {
+      id
+    }
+  }
+`
+
+// const UPDATE_NETWORK_STATUS = gql`
+//   mutation updateNetworkStatus($isConnected: Boolean) {
+//     updateNetworkStatus(isConnected: $isConnected) @client
+//   }
+// `;
+
 const videoPlayer:any = {
   schema: {
   },
@@ -13,17 +36,9 @@ const videoPlayer:any = {
   init: function () {
     this._isPlaying = false
     // check the store and subscribe to any changes
-    client.watchQuery({ query: GET_LATEST_POSITION })
-    .subscribe(res => {
-      // const el = document.querySelector('track-position')
-      // const p = res.data.positions[0]
-      // el.innerHTML = `x: ${p.x} y: ${p.y} id: ${p.id}`
+    client.watchQuery({ query: GET_USER })
+    .subscribe(( {data: {user: { id }}}) => {
     })
-    
-    // this._stateChanged()
-    // this.subscribe = store.subscribe(() => {
-    //   this._stateChanged()
-    // })
   },
 
   _stateChanged: function () {

@@ -1,7 +1,12 @@
+type User {
+  id: ID! @unique
+  object: [Object!]!
+}
+
 type Video {
   id: ID! @unique
   name: String! @unique
-  triggers: @relation [Object!]!
+  triggers: [Object!]!
 }
 
 type Object {
