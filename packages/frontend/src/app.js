@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
   scene.addEventListener('loaded', (e) => {
     // listen for bottles touching each other
     scene.addEventListener('touching-initiated', e => {
-      ///______________ here
       const inventoryId = e.target.dataset.inventoryId
       console.log('inventoryId', inventoryId);
       selectObject(inventoryId)

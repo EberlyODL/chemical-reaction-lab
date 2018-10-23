@@ -1,6 +1,6 @@
 type User {
   id: ID! @unique
-  object: [Object!]!
+  selectedObjects: [Object!]!
 }
 
 type Video {
