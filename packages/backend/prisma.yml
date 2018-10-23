@@ -1,4 +1,4 @@
-endpoint: http://prisma:4466
+endpoint: https://us1.prisma.sh/heymp/chemlab/dev
 datamodel: datamodel.prisma
 generate:
   - generator: javascript-client

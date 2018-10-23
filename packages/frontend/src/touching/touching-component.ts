@@ -38,11 +38,11 @@ const touching:any = {
       // if we switched to a new state then we need to notify the store
       switch (touching) {
         case true:
-          store.dispatch(addSelectedItem(this._inventoryId))
+          this.el.emit('touching-initiated', { distance: this.data.distance, target: this.data.target }, true)
           break;
 
         case false:
-          store.dispatch(removeSelectedItem(this._inventoryId))
+          this.el.emit('touching-ended', {}, true)
           break;
 
         default:

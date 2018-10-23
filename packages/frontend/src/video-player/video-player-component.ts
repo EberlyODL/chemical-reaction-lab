@@ -38,6 +38,7 @@ const videoPlayer:any = {
     // check the store and subscribe to any changes
     client.watchQuery({ query: GET_USER })
     .subscribe(( {data: {user: { id }}}) => {
+
     })
   },
 

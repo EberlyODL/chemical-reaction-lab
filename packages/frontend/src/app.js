@@ -23,6 +23,7 @@ import './lab-light/lab-light-component'
 // import './state/orchestration'
 import './track-movement/track-movement'
 import { login } from "./apollo/user";
+import { selectObject } from "./apollo/selectedObject";
 // // import 'aframe-html-shader'
 // // import 'aframe-animation-timeline-component'
 // // import { client } from './state/graphql'
@@ -34,11 +35,16 @@ import { login } from "./apollo/user";
 // // import './hud/hud-selected-items'
 
 document.addEventListener('DOMContentLoaded', function () {
-  // const scene = document.querySelector('a-scene')
-  // scene.addEventListener('loaded', (e) => {
-    // const newUser = await prisma.createUser({ name: 'Alice' })
-    // console.log(`Created new user: ${newUser.name} (ID: ${newUser.id})`)
-    // const allUsers = await prisma.users()
-    // console.log(allUsers)
-  // })
+  const scene = document.querySelector('a-scene')
+  scene.addEventListener('loaded', (e) => {
+    // listen for bottles touching each other
+    scene.addEventListener('touching-initiated', e => {
+      ///______________ here
+      const inventoryId = e.target.dataset.inventoryId
+      console.log('inventoryId', inventoryId);
+      selectObject(inventoryId)
+    })
+    scene.addEventListener('touching-ended', e => {
+    })
+  })
 })

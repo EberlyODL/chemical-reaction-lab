@@ -10,12 +10,12 @@ import { login } from './user';
 
 // Create an http link:
 const httpLink = new HttpLink({
-  uri: `http://${process.env.HOST_URL}:4466/`,
+  uri: `http://${process.env.HOST_URL}`,
 })
 
 // Create a Websocket link;
 const wsLink = new WebSocketLink({
-  uri: `ws://${process.env.HOST_URL}:4466/`,
+  uri: `wss://${process.env.HOST_URL}`,
   options: {
     reconnect: true
   }
