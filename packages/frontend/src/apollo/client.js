@@ -10,14 +10,14 @@ import { login } from './user';
 
 // Create an http link:
 const httpLink = new HttpLink({
-  uri: `http://${process.env.HOST_URL}`,
+  uri: `${process.env.GRAPHQL_HTTP_URL}`,
 })
 
 // Create a Websocket link;
 const wsLink = new WebSocketLink({
-  uri: `wss://${process.env.HOST_URL}`,
+  uri: `${process.env.GRAPHQL_WS_URL}`,
   options: {
-    reconnect: true
+    reconnect: false
   }
 });
 
@@ -57,7 +57,7 @@ const stateLink = withClientState({
     user: {
       __typename: 'User',
       // retrieve the userId from local storage
-      id: login()
+      id: localStorage.getItem('userId') || null
     }
   }
 });
