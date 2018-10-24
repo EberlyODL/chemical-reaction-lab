@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import client from "./client";
 
-const CREATE_USER = gql`
+export const CREATE_USER = gql`
   mutation {
     createUser(data: {}) {
       id
@@ -9,7 +9,7 @@ const CREATE_USER = gql`
   }
 `
 
-const USER_ID = gql`
+export const USER_ID = gql`
   query {
     user @client {
       id
@@ -17,15 +17,7 @@ const USER_ID = gql`
   }
 `
 
-// const GET_SELLECTED_OBJECTS = gql`
-//   query($sessionID: String!) {
-//     selectedObjects(where: { sessionID: $sessionID }) {
-//       id
-//     }
-//   }
-// `
-
-const SELECT_OBJECT = gql`
+export const SELECT_OBJECT = gql`
   mutation($id: ID!, $objectName: String!) {
     updateUser(
       where: {
@@ -44,7 +36,7 @@ const SELECT_OBJECT = gql`
   }
 `
 
-const UNSELECT_OBJECT = gql`
+export const UNSELECT_OBJECT = gql`
   mutation($id: ID!, $objectName: String!) {
     updateUser(
       where: {
@@ -56,6 +48,35 @@ const UNSELECT_OBJECT = gql`
             name: $objectName
           }
         }
+      }
+    ) {
+      id
+    }
+  }
+`
+
+export const UPDATE_OBJECT_POSITION = gql`
+  mutation($objectPositionName: String!, $userId: ID!, $objectName: String!, $position: Json!) {
+    upsertObjectPosition(
+      where: {
+        name: $objectPositionName
+      },
+      create: {
+        name: $objectPositionName,
+        position: $position
+        object: {
+          connect: {
+            name: $objectName
+          }
+        },
+        user: {
+          connect: {
+            id: $userId
+          }
+        }
+      },
+      update: {
+        position: $position
       }
     ) {
       id
@@ -78,24 +99,6 @@ export const login = () => {
   return userId
 }
 
-export const selectedObjects = () => {
-  // get the current user id
-  client.watchQuery({
-    query: USER_ID
-  })
-    .subscribe(({ data: { user: { id } } }) => {
-      // get the current selected Objects
-      client.watchQuery({
-        query: GET_SELLECTED_OBJECTS,
-        variables: {
-          sessionID: id
-        }
-      })
-        .subscribe(({ data: { selectObjects } }) => {
-        })
-    })
-}
-
 export const selectObject = (objectName) => {
   // get the current user id
   client.watchQuery({
@@ -107,6 +110,7 @@ export const selectObject = (objectName) => {
         client.mutate({
           mutation: SELECT_OBJECT,
           variables: {
+            objectPositionId: `${id}-${objectName}`,
             id: id,
             objectName: objectName
           }

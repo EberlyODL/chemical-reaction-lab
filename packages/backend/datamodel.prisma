@@ -1,6 +1,7 @@
 type User {
   id: ID! @unique
   selectedObjects: [Object!]!
+  trackedElements: [TrackedElement!]!
 }
 
 type Video {
@@ -12,4 +13,15 @@ type Video {
 type Object {
   id: ID! @unique
   name: String! @unique
+}
+
+type TrackedElement {
+  id: ID! @unique
+  # this is a combo of userid and elementId
+  # example: cjnlr54x700x30886qbc1fnr4-bottle1
+  # until this gets fixed https://github.com/prisma/prisma/issues/1300
+  name: String! @unique
+  properties: Json!
+  elementId: String!
+  user: User!
 }

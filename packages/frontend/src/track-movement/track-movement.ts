@@ -1,10 +1,12 @@
 import 'aframe'
 import registerComponent from '../utils/registerComponent';
-import { store, updatePosition } from '../state/redux';
 declare const AFRAME: any
 declare const THREE: any
 
 const trackMovement: any = {
+  schema: {
+    threshold: { type: 'number', default: 50 }
+  },
 
   /**
    * Initial creation and setting of the mesh.
@@ -20,15 +22,21 @@ const trackMovement: any = {
   },
 
   updatePosition: function () {
+    const threshold = this.data.threshold
     // get current position
-    const _currentPosition = Object.assign({}, this.el.object3D.position)
-    // diff the objects to check if the user moved
+    const _currentPosition = Object.assign({}, {
+      x: Math.round(threshold*this.el.object3D.position.x) / threshold,
+      y: Math.round(threshold*this.el.object3D.position.y) / threshold,
+      z: Math.round(threshold*this.el.object3D.position.z) / threshold
+    })
+    // and if the current position is different from the old position
+    const changed =  (JSON.stringify(_currentPosition) !== JSON.stringify(this.currentPosition) && this.currentPosition !== null)
     // store the position for diffing
     this.currentPosition = Object.assign({}, _currentPosition);
-    this.storePosition(_currentPosition)
-  },
-
-  storePosition: function (position: any) {
+    if (changed) {
+      // then emit change event
+      this.el.emit('track-movement', { position: this.currentPosition, rotation: this.el.getAttribute('rotation') }, true)
+    }
   }
 }
 

@@ -71,6 +71,7 @@
       <!-- Mixins -->
         <a-mixin id="cube"
                 cube-mixin
+                track-movement
                 tabindex="0"
                 hoverable grabbable stretchable draggable
                 dynamic-body="shape:box;angularDamping:.9;linearDamping:.9;mass:100"
@@ -156,7 +157,7 @@
       <!-- listing controller entities to set IDs for MoCap replay optional for normal use -->
       <a-entity id="rhand" class="right-controller"></a-entity>
       <a-entity id="lhand" class="left-controller"></a-entity>
-      <a-camera track-movement wasd-controls="acceleration:220" look-controls="pointerLockEnabled:true">
+      <a-camera id="camera" track-movement wasd-controls="acceleration:220" look-controls="pointerLockEnabled:true">
       </a-camera>
     </a-entity>
 
