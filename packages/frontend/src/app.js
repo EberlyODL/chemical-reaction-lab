@@ -23,7 +23,7 @@ import './lab-light/lab-light-component'
 // import './state/orchestration'
 import './track-movement/track-movement'
 import { login, selectObject, unselectObject } from "./apollo/user";
-import { setElementsTrackedPositions, updateTrackedElement } from './apollo/trackedElements'
+import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
 // // import 'aframe-html-shader'
 // // import 'aframe-animation-timeline-component'
 // // import { client } from './state/graphql'
@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // first we need to login
   login()
   // when the app loads, set the default positions
-  setElementsTrackedPositions({ scene })
-
+  // setElementsTrackedPositions({ scene })
   scene.addEventListener('loaded', (e) => {
     // listen for bottles touching each other
     scene.addEventListener('touching-initiated', e => {
@@ -56,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const properties = e.detail
       const elementId = e.target.id
       updateTrackedElement({ properties, elementId })
+    })
+    scene.addEventListener('track-movement-reset', e => {
+      resetTrackedElements()
     })
   })
 })

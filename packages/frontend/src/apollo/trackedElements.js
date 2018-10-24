@@ -38,6 +38,20 @@ export const UPDATE_TRACKED_ELEMENT = gql`
   }
 `
 
+export const RESET_TRACKED_ELEMENTS = gql`
+  mutation($userId: ID!) {
+    deleteManyTrackedElements(
+      where: {
+        user: {
+          id: $userId
+        }
+      }
+    ) {
+      count
+    }
+  }
+`
+
 
 export const updateTrackedElement = ({ elementId, properties }) => {
   client.watchQuery({ query: USER_ID })
@@ -81,6 +95,20 @@ export const setElementsTrackedPositions = ({ scene }) => {
               });
             }
           })
+      }
+    })
+}
+
+export const resetTrackedElements = () => {
+  client.watchQuery({ query: USER_ID })
+    .subscribe(({ data: { user: { id } } }) => {
+      if (id) {
+        client.mutate({
+          mutation: RESET_TRACKED_ELEMENTS,
+          variables: {
+            userId: id,
+          }
+        })
       }
     })
 }

@@ -9,12 +9,13 @@
 </head>
 
 <body>
-  <a-scene physics="gravity: -51; debug:false">
+  <a-scene physics="gravity: -51; debug:true" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
     <a-assets>
 
       <!-- Objects -->
       <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item>
       <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item>
+      <a-asset-item id="drawers.gltf" src="assets/alldrawersANIMATED.gltf">
       <a-asset-item id="chemlablayout.gltf" src="assets/chemlablayout.gltf">
       <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item>
       <a-asset-item id="01MKI-object" src="assets/bottles/01MKI.gltf"></a-asset-item>
@@ -83,55 +84,67 @@
         <a-mixin id="mytouch" physics-collider="" phase-shift="" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions; colliderEventProperty: els;
                               colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;
                               colliderState:"></a-mixin>
-    </a-asset-item></a-assets>
+    </a-asset-item></a-asset-item></a-assets>
 
     <!-- Layout -->
-    <a-entity rotation="-180 0 -180" gltf-model="#chemlablayout.gltf"></a-entity>
+    <!-- <a-entity rotation="-180 0 -180" gltf-model="#chemlablayout.gltf"></a-entity> -->
+    <a-entity id="drawers" dirotation="-180 0 -180" gltf-model="#drawers.gltf">
+      <!-- Surfaces -->
+      <a-box id="lab-table" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-9.459530372134438 3.387915855722533 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
+      <a-box id="lab-table-right" material="opacity: 0;" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-0.5769794454621264 3.387915855722533 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" scale="1.4 1 1.32" droppable="">
+      </a-box>
+    </a-entity>
+
 
     <!-- Lights -->
-    <a-light id="light-lab" lab-light="" position="0 10 0" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light>
-    <a-light id="light-stockroom" lab-light="" position="-14 10 5.024185750537663" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light>
+    <!-- <a-light id="light-lab" lab-light position="0 10 0" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light>
+    <a-light id="light-stockroom" lab-light position="-14 10 5.024185750537663" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light> -->
+    <a-entity id="overall-light" light="intensity:5;castShadow:true;distance:0" position="0 20 20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:5;castShadow:true;distance:0" position="0 20 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:5;castShadow:true;distance:0" position="-20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:5;castShadow:true;distance:0" position="20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
 
     <!-- Bottle -->
-    <a-entity id="bottle-01MCaCl2" data-inventory-id="01MCaCl2" gltf-model="#01MCaCl2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 9.01"></a-entity>
-    <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 8.01"></a-entity>
-    <a-entity id="bottle-01MNa2CO3" data-inventory-id="01MNa2CO3" gltf-model="#01MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 7.01"></a-entity>
-    <a-entity id="bottle-1MNa2CO3" data-inventory-id="1MNa2CO3" gltf-model="#1MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 6.01"></a-entity>
-    <a-entity id="bottle-01MNaBr" data-inventory-id="01MNaBr" gltf-model="#01MNaBr-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 5.01"></a-entity>
-    <a-entity id="bottle-03MAgNO3" data-inventory-id="03MAgNO3" gltf-model="#03MAgNO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 4.01"></a-entity>
-    <a-entity id="bottle-3MHCl" data-inventory-id="3MHCl" gltf-model="#3MHCl-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 3.01"></a-entity>
-    <a-entity id="bottle-3MNaOH" data-inventory-id="3MNaOH" gltf-model="#3MNaOH-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 2.01"></a-entity>
-    <a-entity id="bottle-013CuSO4" data-inventory-id="013CuSO4" gltf-model="#013CuSO4-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 4.134243489980758 1.01"></a-entity>
-    <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
-    <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.7 5.446 5.01"></a-entity>
-    <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity>
-    <!-- <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity> -->
+    <a-entity id="bottle-container" position="-0.5769794454621264 3.387915855722533 -6.8842553482862305">
+      <a-entity id="bottle-01MCaCl2" data-inventory-id="01MCaCl2" gltf-model="#01MCaCl2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 0 0"></a-entity>
+      <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-01MNa2CO3" data-inventory-id="01MNa2CO3" gltf-model="#01MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-1MNa2CO3" data-inventory-id="1MNa2CO3" gltf-model="#1MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-01MNaBr" data-inventory-id="01MNaBr" gltf-model="#01MNaBr-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-03MAgNO3" data-inventory-id="03MAgNO3" gltf-model="#03MAgNO3-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-3MHCl" data-inventory-id="3MHCl" gltf-model="#3MHCl-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-3MNaOH" data-inventory-id="3MNaOH" gltf-model="#3MNaOH-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-013CuSO4" data-inventory-id="013CuSO4" gltf-model="#013CuSO4-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="7 7 7"></a-entity>
+      <!-- <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" rotation="0 90 0" position="-22.706 5.629 4.025"></a-entity> -->
+    </a-entity>
 
     <!-- Video Player -->
     <a-entity id="videoPlayer" video-player="" position="-.5 6 -9"></a-entity>
 
     <!-- Surfaces -->
     <a-box id="floor" static-body="" width="100" height="0.001" depth="100" visible="false"></a-box>
-    <a-box id="lab-table" lab-table="" mixin="lab-table-mixin" static-body="" position="5.306169819726233 3.7400302088632267 -3.684" geometry="width:2.02;height:0.001;depth:5.05" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
-    <a-box id="lab-table-2" static-body="" position="5.306 3.74 5.709206888896392" geometry="width:2.02;height:0.001;depth:5.05" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
-    <a-box id="counter-cube-1" droppable="" static-body="sphereRadius:NaN" position="5.486 1.7307183794169922 1.022" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.1 15 1.59"></a-box>
-    <a-box id="counter-cube-2" droppable="" static-body="sphereRadius:NaN" position="6.942684344932919 3.9395950285063233 0.9949989769798131" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="0.3 1.6 1.61"></a-box>
-    <a-box id="cabinet-cube" droppable="" static-body="sphereRadius:NaN" position="6.001998003423236 7.591735717206429 0.9706942652160826" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.3 10 1.59"></a-box>
-    <a-box id="lab-wall-1" droppable="" static-body="sphereRadius:NaN" position="-0.5 5.942415778207673 -9.974687672434799" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
-    <a-box id="lab-wall-2" droppable="" static-body="sphereRadius:NaN" position="-0.49754233523271935 5.930396328895224 10.033313161806557" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
-    <a-box id="lab-wall-3" droppable="" static-body="sphereRadius:NaN" position="-7.992320023898882 6.004174108680734 -4.514686644104824" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 1.08"></a-box>
-    <a-box id="lab-wall-4" droppable="" static-body="sphereRadius:NaN" position="-7.92 5.978 6.984131584500425" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 0.59"></a-box>
-    <a-box id="lab-wall-5" droppable="" static-body="sphereRadius:NaN" position="-8.005 10.023577992343242 2.48" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3005"></a-box>
-    <a-box id="lab-wall-6" droppable="" static-body="sphereRadius:NaN" position="6.932238758932265 6.0619211100377175 0.022311436510410676" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1.98"></a-box>
-    <a-box id="stockroom-wall-1" droppable="" static-body="sphereRadius:NaN" position="-15.93704173109042 5.994 -0.06701135828178277" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
-    <a-box id="stockroom-wall-2" droppable="" static-body="sphereRadius:NaN" position="-15.937 5.994 10.054867134911351" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
-    <a-box id="stockroom-wall-3" droppable="" static-body="sphereRadius:NaN" position="-23.555594807773062 6.007045499991121 4.910897496114819" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1"></a-box>
-    <a-box id="stockroom-wall-4" droppable="" static-body="sphereRadius:NaN" position="-8.434000000000017 6.0230640830568145 6.9965046332318535" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.59"></a-box>
-    <a-box id="stockroom-wall-5" droppable="" static-body="sphereRadius:NaN" position="-8.404363985214019 6.023 0.4951661711531061" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.1"></a-box>
-    <a-box id="stockroom-wall-6" droppable="" static-body="sphereRadius:NaN" position="-8.432820679332744 10.008757533631579 2.5107725059454316" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3"></a-box>
-    <a-box id="stockroom-shelf-1" droppable="" static-body="sphereRadius:NaN" position="-22.69 4.134243489980758 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
-    <a-box id="stockroom-shelf-2" droppable="" static-body="sphereRadius:NaN" position="-22.69 5.597969640669048 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
-    <a-box id="stockroom-shelf-3" droppable="" static-body="sphereRadius:NaN" position="-22.69 7.103421505770071 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    <!-- <a-box id="lab-table-2" static-body position="5.306 3.74 5.709206888896392" geometry="width:2.02;height:0.001;depth:5.05" visible="false" scale="1.4 1 1.32" droppable></a-box>
+    <a-box id="counter-cube-1" droppable static-body="sphereRadius:NaN" position="5.486 1.7307183794169922 1.022" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.1 15 1.59"></a-box>
+    <a-box id="counter-cube-2" droppable static-body="sphereRadius:NaN" position="6.942684344932919 3.9395950285063233 0.9949989769798131" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="0.3 1.6 1.61"></a-box>
+    <a-box id="cabinet-cube" droppable static-body="sphereRadius:NaN" position="6.001998003423236 7.591735717206429 0.9706942652160826" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.3 10 1.59"></a-box>
+    <a-box id="lab-wall-1" droppable static-body="sphereRadius:NaN" position="-0.5 5.942415778207673 -9.974687672434799" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-2" droppable static-body="sphereRadius:NaN" position="-0.49754233523271935 5.930396328895224 10.033313161806557" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-3" droppable static-body="sphereRadius:NaN" position="-7.992320023898882 6.004174108680734 -4.514686644104824" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 1.08"></a-box>
+    <a-box id="lab-wall-4" droppable static-body="sphereRadius:NaN" position="-7.92 5.978 6.984131584500425" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 0.59"></a-box>
+    <a-box id="lab-wall-5" droppable static-body="sphereRadius:NaN" position="-8.005 10.023577992343242 2.48" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3005"></a-box>
+    <a-box id="lab-wall-6" droppable static-body="sphereRadius:NaN" position="6.932238758932265 6.0619211100377175 0.022311436510410676" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1.98"></a-box>
+    <a-box id="stockroom-wall-1" droppable static-body="sphereRadius:NaN" position="-15.93704173109042 5.994 -0.06701135828178277" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-2" droppable static-body="sphereRadius:NaN" position="-15.937 5.994 10.054867134911351" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-3" droppable static-body="sphereRadius:NaN" position="-23.555594807773062 6.007045499991121 4.910897496114819" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1"></a-box>
+    <a-box id="stockroom-wall-4" droppable static-body="sphereRadius:NaN" position="-8.434000000000017 6.0230640830568145 6.9965046332318535" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.59"></a-box>
+    <a-box id="stockroom-wall-5" droppable static-body="sphereRadius:NaN" position="-8.404363985214019 6.023 0.4951661711531061" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.1"></a-box>
+    <a-box id="stockroom-wall-6" droppable static-body="sphereRadius:NaN" position="-8.432820679332744 10.008757533631579 2.5107725059454316" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3"></a-box>
+    <a-box id="stockroom-shelf-1" droppable static-body="sphereRadius:NaN" position="-22.69 4.134243489980758 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    <a-box id="stockroom-shelf-2" droppable static-body="sphereRadius:NaN" position="-22.69 5.597969640669048 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    <a-box id="stockroom-shelf-3" droppable static-body="sphereRadius:NaN" position="-22.69 7.103421505770071 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box> -->
     
 
     <!-- Camera / Hands -->
@@ -142,6 +155,8 @@
       <a-camera id="camera" track-movement="" wasd-controls="acceleration:220" look-controls="pointerLockEnabled:true">
       </a-camera>
     </a-entity>
+
+    <a-sky material="color: blue;"></a-sky>
 
   </a-scene>
 </body>
