@@ -52,7 +52,6 @@ export const RESET_TRACKED_ELEMENTS = gql`
   }
 `
 
-
 export const updateTrackedElement = ({ elementId, properties }) => {
   client.watchQuery({ query: USER_ID })
     .subscribe(({ data: { user: { id } } }) => {

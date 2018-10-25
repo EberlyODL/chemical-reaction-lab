@@ -39,16 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // first we need to login
   login()
   // when the app loads, set the default positions
-  // setElementsTrackedPositions({ scene })
+  setElementsTrackedPositions({ scene })
+  scene.addEventListener('touching-ended', e => {
+    const inventoryId = e.target.dataset.inventoryId
+    if (inventoryId) {
+      // unselectObject(inventoryId)
+    }
+  })
   scene.addEventListener('loaded', (e) => {
     // listen for bottles touching each other
     scene.addEventListener('touching-initiated', e => {
       const inventoryId = e.target.dataset.inventoryId
-      selectObject(inventoryId)
-    })
-    scene.addEventListener('touching-ended', e => {
-      const inventoryId = e.target.dataset.inventoryId
-      unselectObject(inventoryId)
+      // selectObject(inventoryId)
     })
     // update track position when an element moves in the scene
     scene.addEventListener('track-movement', e => {

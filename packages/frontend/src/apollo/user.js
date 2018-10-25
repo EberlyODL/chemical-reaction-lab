@@ -5,6 +5,24 @@ export const CREATE_USER = gql`
   mutation {
     createUser(data: {}) {
       id
+      selectedObjects
+      trackedElements
+    }
+  }
+`
+
+export const GET_USER = gql`
+  query($userId: ID!) {
+    user(
+      where: {
+        id: $userId
+      }
+    ) {
+      id
+      selectedObjects {
+        id
+        name
+      }
     }
   }
 `
@@ -41,13 +59,6 @@ export const UNSELECT_OBJECT = gql`
     updateUser(
       where: {
         id: $id
-      },
-      data:{
-        selectedObjects:{
-          disconnect: {
-            name: $objectName
-          }
-        }
       }
     ) {
       id
@@ -92,6 +103,7 @@ export const login = () => {
       mutation: CREATE_USER,
       update: (store, { data: { createUser } }) => {
         localStorage.setItem('userId', createUser.id)
+        const data = store.readQuery({ query: GET_USER })
         userId = createUser.id
       }
     })
@@ -101,22 +113,17 @@ export const login = () => {
 
 export const selectObject = (objectName) => {
   // get the current user id
-  client.watchQuery({
-    query: USER_ID
-  })
-    .subscribe(({ data: { user: { id } } }) => {
-      if (id) {
-        // get the current selected Objects
-        client.mutate({
-          mutation: SELECT_OBJECT,
-          variables: {
-            objectPositionId: `${id}-${objectName}`,
-            id: id,
-            objectName: objectName
-          }
-        })
-      }
-    })
+  const store = client.readQuery({ query: GET_USER })
+      // if (store.user.id) {
+      //   // get the current selected Objects
+      //   client.mutate({
+      //     mutation: SELECT_OBJECT,
+      //     variables: {
+      //       objectPositionId: `${id}-${objectName}`,
+      //       id: id,
+      //       objectName: objectName
+      //     }
+      //   })
 }
 
 export const unselectObject = (objectName) => {
@@ -126,14 +133,18 @@ export const unselectObject = (objectName) => {
   })
     .subscribe(({ data: { user: { id } } }) => {
       if (id) {
-        // get the current selected Objects
-        client.mutate({
-          mutation: UNSELECT_OBJECT,
+        client.watchQuery({
+          query: GET_USER,
           variables: {
-            id: id,
-            objectName: objectName
+            userId: id
           }
         })
+          .subscribe(({ data: { user } }) => {
+            const selectedObject = user.selectedObjects.find(i => i.name === objectName)
+            if (selectedObject) {
+              console.log('selectedObject', selectedObject);
+            }
+          })
       }
     })
 }
