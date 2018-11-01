@@ -10,20 +10,21 @@ import 'aframe-log-component'
 import 'aframe-template-component'
 import 'aframe-video-controls'
 import 'three'
-import 'tslib'
 import './selectable-component'
-import './camera'
+import './camera/index'
 import './inventory/inventory-item-component'
 import './lab-table/lab-table-component'
-import './bottle/bottle-component.ts'
+import './bottle/bottle-component'
 import './follow/follow-component'
 import './touching/touching-component'
 import './video-player/video-player-component'
 import './lab-light/lab-light-component'
 // import './state/orchestration'
 import './track-movement/track-movement'
-import { login, selectObject, unselectObject } from "./apollo/user";
 import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
+import client from './apollo/client';
+import { login } from "./apollo/user";
+import { selectedObjects, selectObject, unselectObject } from './apollo/selectedObjects';
 // // import 'aframe-html-shader'
 // // import 'aframe-animation-timeline-component'
 // // import { client } from './state/graphql'
@@ -34,32 +35,38 @@ import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements
 // // import './hud/hud-button-component'
 // // import './hud/hud-selected-items'
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async () => {
+  // login
+  const userId = await login()
+  console.log('userId', userId);
+  // get the scene
   const scene = document.querySelector('a-scene')
   // first we need to login
-  login()
   // when the app loads, set the default positions
-  setElementsTrackedPositions({ scene })
+  await setElementsTrackedPositions({ scene })
+  // select objects
+  await selectedObjects()
+
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
     if (inventoryId) {
-      // unselectObject(inventoryId)
+      unselectObject(inventoryId)
     }
   })
-  scene.addEventListener('loaded', (e) => {
-    // listen for bottles touching each other
-    scene.addEventListener('touching-initiated', e => {
-      const inventoryId = e.target.dataset.inventoryId
-      // selectObject(inventoryId)
-    })
-    // update track position when an element moves in the scene
-    scene.addEventListener('track-movement', e => {
-      const properties = e.detail
-      const elementId = e.target.id
-      updateTrackedElement({ properties, elementId })
-    })
-    scene.addEventListener('track-movement-reset', e => {
-      resetTrackedElements()
-    })
-  })
+  // scene.addEventListener('loaded', (e) => {
+  //   // listen for bottles touching each other
+  //   scene.addEventListener('touching-initiated', e => {
+  //     const inventoryId = e.target.dataset.inventoryId
+  //     selectObject(inventoryId)
+  //   })
+  //   // update track position when an element moves in the scene
+  //   scene.addEventListener('track-movement', e => {
+  //     const properties = e.detail
+  //     const elementId = e.target.id
+  //     updateTrackedElement({ properties, elementId })
+  //   })
+  //   scene.addEventListener('track-movement-reset', e => {
+  //     // resetTrackedElements()
+  //   })
+  // })
 })

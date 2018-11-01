@@ -1,10 +1,11 @@
 import gql from 'graphql-tag'
 import client from "./client";
-import { USER_ID } from "./user";
+import { login } from './user'
 
 export const GET_TRACKED_POSITIONS = gql`
   query($userId: ID!) {
     user(where: { id: $userId }) {
+      id
       trackedElements {
         elementId
         properties
@@ -52,62 +53,50 @@ export const RESET_TRACKED_ELEMENTS = gql`
   }
 `
 
-export const updateTrackedElement = ({ elementId, properties }) => {
-  client.watchQuery({ query: USER_ID })
-    .subscribe(({ data: { user: { id } } }) => {
-      if (id) {
-        client.mutate({
-          mutation: UPDATE_TRACKED_ELEMENT,
-          variables: {
-            userId: id,
-            // this is the unique name of the tracked element
-            // segmented by user until this is fixed
-            // https://github.com/prisma/prisma/issues/1300
-            name: `${id}-${elementId}`,
-            elementId: elementId,
-            properties: properties
-          }
-        })
-      }
-    })
+export const updateTrackedElement = async ({ elementId, properties }) => {
+  const userId = await login()
+  client.mutate({
+    mutation: UPDATE_TRACKED_ELEMENT,
+    variables: {
+      userId: userId,
+      // this is the unique name of the tracked element
+      // segmented by user until this is fixed
+      // https://github.com/prisma/prisma/issues/1300
+      name: `${userId}-${elementId}`,
+      elementId: elementId,
+      properties: properties
+    }
+  })
 }
 
-export const setElementsTrackedPositions = ({ scene }) => {
-  client.watchQuery({ query: USER_ID })
-    .subscribe(({ data: { user: { id } } }) => {
-      if (id) {
-        client.watchQuery({
-          query: GET_TRACKED_POSITIONS,
-          variables: {
-            userId: id
+export const setElementsTrackedPositions = async ({ scene }) => {
+  const userId = await login()
+  client.watchQuery({
+    query: GET_TRACKED_POSITIONS,
+    variables: {
+      userId: userId
+    }
+  })
+  .subscribe(({ data: { user: { trackedElements } } }) => {
+    if (trackedElements) {
+      trackedElements.forEach(element => {
+        const node = document.getElementById(element.elementId)
+        if (node) {
+          for (let prop in element.properties) {
+            node.setAttribute(prop, element.properties[prop])
           }
-        })
-          .subscribe(({ data: { user: { trackedElements } } }) => {
-            if (trackedElements) {
-              trackedElements.forEach(element => {
-                const node = document.getElementById(element.elementId)
-                if (node) {
-                  for (let prop in element.properties) {
-                    node.setAttribute(prop, element.properties[prop])
-                  }
-                }
-              });
-            }
-          })
-      }
-    })
+        }
+      });
+    }
+  })
 }
 
-export const resetTrackedElements = () => {
-  client.watchQuery({ query: USER_ID })
-    .subscribe(({ data: { user: { id } } }) => {
-      if (id) {
-        client.mutate({
-          mutation: RESET_TRACKED_ELEMENTS,
-          variables: {
-            userId: id,
-          }
-        })
-      }
-    })
+export const resetTrackedElements = async () => {
+  const userId = await login()
+  client.mutate({
+    mutation: RESET_TRACKED_ELEMENTS,
+    variables: {
+      userId: userId,
+    }
+  })
 }

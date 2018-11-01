@@ -6,7 +6,6 @@ import { ApolloLink, split } from 'apollo-link';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import { withClientState } from 'apollo-link-state';
-import { login } from './user';
 
 // Create an http link:
 const httpLink = new HttpLink({
