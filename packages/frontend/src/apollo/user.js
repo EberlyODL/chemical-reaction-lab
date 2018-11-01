@@ -32,7 +32,8 @@ export const login = () => {
           variables: {
             userId: userId
           }
-        }).subscribe((res) => {
+        }).subscribe(({ data: { user } }) => {
+          userId = id
         })
       } catch (error) {
         userId = null
