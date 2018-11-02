@@ -64,48 +64,40 @@ export const UNSELECT_OBJECT = gql`
 
 export const selectedObjects = async () => {
   const userId = await login()
-  console.log('userId', userId);
   client.watchQuery({
     query: GET_SELECTED_OBJECTS,
     variables: {
       id: userId
     }
-  }).subscribe(({ data: { user: { selectedObjects } } }) => {
-    console.log('Currently Selected', selectedObjects);
+  }).subscribe(({ data: { user } }) => {
+    console.log('SELECTED_OBJECTS', user);
   })
 }
 
 export const selectObject = async (objectName) => {
   // get the current user id
   const userId = await login()
+  console.log('userId', userId);
   // get the current selected Objects
-  try {
-    client.mutate({
-      mutation: SELECT_OBJECT,
-      variables: {
-        objectPositionId: `${userId}-${objectName}`,
-        id: userId,
-        objectName: objectName
-      }
-    })
-  } catch (error) {
-    console.error(error)
-  }
+  client.mutate({
+    mutation: SELECT_OBJECT,
+    variables: {
+      objectPositionId: `${userId}-${objectName}`,
+      id: userId,
+      objectName: objectName
+    }
+  })
 }
 
 export const unselectObject = async (objectName) => {
   // get the current user id
   const userId = await login()
-  try {
-    client.mutate({
-      mutation: UNSELECT_OBJECT,
-      variables: {
-        objectPositionId: `${userId}-${objectName}`,
-        id: userId,
-        objectName: objectName
-      }
-    })
-  } catch (error) {
-    console.error(error)
-  }
+  client.mutate({
+    mutation: UNSELECT_OBJECT,
+    variables: {
+      objectPositionId: `${userId}-${objectName}`,
+      id: userId,
+      objectName: objectName
+    }
+  })
 }

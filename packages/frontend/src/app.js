@@ -36,37 +36,36 @@ import { selectedObjects, selectObject, unselectObject } from './apollo/selected
 // // import './hud/hud-selected-items'
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // login
-  const userId = await login()
-  console.log('userId', userId);
   // get the scene
   const scene = document.querySelector('a-scene')
-  // first we need to login
-  // when the app loads, set the default positions
-  await setElementsTrackedPositions({ scene })
-  // select objects
-  await selectedObjects()
-
+  // login
+  const userId = await login()
+  if (userId) {
+    // when the app loads, set the default positions
+    // await setElementsTrackedPositions({ scene })
+    // select objects
+    // await selectedObjects()
+  }
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
     if (inventoryId) {
       unselectObject(inventoryId)
     }
   })
-  // scene.addEventListener('loaded', (e) => {
-  //   // listen for bottles touching each other
-  //   scene.addEventListener('touching-initiated', e => {
-  //     const inventoryId = e.target.dataset.inventoryId
-  //     selectObject(inventoryId)
-  //   })
-  //   // update track position when an element moves in the scene
-  //   scene.addEventListener('track-movement', e => {
-  //     const properties = e.detail
-  //     const elementId = e.target.id
-  //     updateTrackedElement({ properties, elementId })
-  //   })
-  //   scene.addEventListener('track-movement-reset', e => {
-  //     // resetTrackedElements()
-  //   })
-  // })
+  scene.addEventListener('loaded', (e) => {
+    // listen for bottles touching each other
+    scene.addEventListener('touching-initiated', e => {
+      const inventoryId = e.target.dataset.inventoryId
+      selectObject(inventoryId)
+    })
+    // update track position when an element moves in the scene
+    scene.addEventListener('track-movement', e => {
+      const properties = e.detail
+      const elementId = e.target.id
+      // updateTrackedElement({ properties, elementId })
+    })
+    scene.addEventListener('track-movement-reset', e => {
+      // resetTrackedElements()
+    })
+  })
 })

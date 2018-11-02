@@ -6,6 +6,7 @@ import { ApolloLink, split } from 'apollo-link';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 import { withClientState } from 'apollo-link-state';
+import { GET_LOCAL_USER } from './user';
 
 // Create an http link:
 const httpLink = new HttpLink({
@@ -38,26 +39,9 @@ const cache = new InMemoryCache();
 // set up link state for local
 const stateLink = withClientState({
   cache,
-  resolvers: {
-    Mutation: {
-      updateUser: (_, { user }, { cache }) => {
-        const data = {
-          user: {
-            __typename: 'User',
-            id: user.id
-          },
-        };
-        cache.writeData({ data });
-        return null;
-      },
-    },
-  },
   defaults: {
-    user: {
-      __typename: 'User',
-      // retrieve the userId from local storage
-      id: localStorage.getItem('userId') || null
-    }
+  },
+  resolvers: {
   }
 });
 

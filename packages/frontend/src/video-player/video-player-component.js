@@ -33,10 +33,10 @@ const videoPlayer = {
   init: function () {
     this._isPlaying = false
     // check the store and subscribe to any changes
-    client.watchQuery({ query: GET_USER })
-    .subscribe(( {data: {user: { id }}}) => {
+    // client.watchQuery({ query: GET_USER })
+    // .subscribe(( {data: {user: { id }}}) => {
 
-    })
+    // })
   },
 
   _stateChanged: function () {
