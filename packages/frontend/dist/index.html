@@ -31,7 +31,6 @@
       <a-asset-item id="magnesiumstrips.gltf" src="assets/bottles/magnesiumstrips.gltf"></a-asset-item>
 
       <!-- Chem Lab Assets -->
-      <a-asset-item id="wallsfloorceiling.gltf" src="assets/chem-lab/wallsfloorceiling.gltf"></a-asset-item>
       <a-asset-item id="acidcab_a.gltf" src="assets/chem-lab/acidcab_a.gltf"></a-asset-item>
       <a-asset-item id="acidcab_b.gltf" src="assets/chem-lab/acidcab_b.gltf"></a-asset-item>
       <a-asset-item id="acidcab_c.gltf" src="assets/chem-lab/acidcab_c.gltf"></a-asset-item>
@@ -78,6 +77,12 @@
       <a-asset-item id="fumehood_knob_right_yellow.gltf" src="assets/chem-lab/fumehood_knob_right_yellow.gltf"></a-asset-item>
       <a-asset-item id="fumehood.gltf" src="assets/chem-lab/fumehood.gltf"></a-asset-item>
       <a-asset-item id="wallshelves.gltf" src="assets/chem-lab/wallshelves.gltf"></a-asset-item>
+      <a-asset-item id="bottle.gltf" src="assets/chem-lab/bottle.gltf"></a-asset-item>
+      <a-asset-item id="bunsenburner.gltf" src="assets/chem-lab/bunsenburner.gltf"></a-asset-item>
+      <a-asset-item id="doors.gltf" src="assets/chem-lab/doors.gltf"></a-asset-item>
+      <a-asset-item id="goggles.gltf" src="assets/chem-lab/goggles.gltf"></a-asset-item>
+      <a-asset-item id="room.gltf" src="assets/chem-lab/room.gltf"></a-asset-item>
+      <a-asset-item id="scale.gltf" src="assets/chem-lab/scale.gltf"></a-asset-item>
 
       <!-- Video Imports -->
       <video id="reagentvid-3" loop="" src="/reaction_3.392bd3a0.mp4"></video>
@@ -140,7 +145,6 @@
     <a-box id="lab-table-right" material="opacity: 0;" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-0.5769794454621264 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" scale="1.4 1 1.32" droppable=""></a-box>
 
     <!-- Chem lab -->
-    <a-entity id="wallsfloorceiling.gltf" gltf-model="#wallsfloorceiling.gltf"></a-entity>
     <a-entity id="acidcab_a.gltf" gltf-model="#acidcab_a.gltf"></a-entity>
     <a-entity id="acidcab_b.gltf" gltf-model="#acidcab_b.gltf"></a-entity>
     <a-entity id="acidcab_c.gltf" gltf-model="#acidcab_c.gltf"></a-entity>
@@ -187,14 +191,44 @@
     <a-entity id="fumehood_knob_right_yellow.gltf" gltf-model="#fumehood_knob_right_yellow.gltf"></a-entity>
     <a-entity id="fumehood.gltf" gltf-model="#fumehood.gltf"></a-entity>
     <a-entity id="wallshelves.gltf" gltf-model="#wallshelves.gltf"></a-entity>
+    <a-entity id="bunsenburner.gltf" gltf-model="#bunsenburner.gltf"></a-entity>
+    <a-entity id="doors.gltf" gltf-model="#doors.gltf"></a-entity>
+    <a-entity id="goggles.gltf" gltf-model="#goggles.gltf"></a-entity>
+    <a-entity id="room.gltf" gltf-model="#room.gltf"></a-entity>
+    <a-entity id="scale.gltf" gltf-model="#scale.gltf"></a-entity>
 
     <!-- Lights -->
     <!-- <a-light id="light-lab" lab-light position="0 10 0" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light>
     <a-light id="light-stockroom" lab-light position="-14 10 5.024185750537663" light="intensity:1.85;type:point" template="src:#dimLightsUpTemplate" data-intensity-down=".5" data-intensity-up="1.8"></a-light> -->
-    <a-entity id="overall-light" light="intensity:.5;castShadow:true;distance:0" position="0 20 20" data-aframe-default-light="" aframe-injected=""></a-entity>
-    <a-entity id="overall-light" light="intensity:.5;castShadow:true;distance:0" position="0 20 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
-    <a-entity id="overall-light" light="intensity:.5;castShadow:true;distance:0" position="-20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
-    <a-entity id="overall-light" light="intensity:.5;castShadow:true;distance:0" position="20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+
+    <!-- Top Light -->
+    <!-- <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 20 20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 20 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="-20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="20 20 0" data-aframe-default-light="" aframe-injected=""></a-entity> -->
+
+    
+    <!-- <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 -20 20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 -20 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="-20 -20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="20 -20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 0 20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 0 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="-20 0 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="20 0 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 -20 20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="0 -20 -20" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="-20 -20 0" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity id="overall-light" light="intensity:.1;castShadow:true;distance:0" position="20 -20 0" data-aframe-default-light="" aframe-injected=""></a-entity> -->
+
+    <!-- <a-entity light="color:#BBB;type:ambient" data-aframe-default-light="" aframe-injected=""></a-entity> -->
+    <a-entity id="light-top" light="intensity:3;castShadow:true;color:#848484;" position="0 20 0"></a-entity>
+    <a-entity id="light-bottom" light="intensity:3;castShadow:true;color:#848484;" position="0 -20 0"></a-entity>
+    <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="-20 0 0"></a-entity>
+    <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="20 0 0"></a-entity>
+    <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="0 0 20"></a-entity>
+    <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="0 0 -20"></a-entity>
+
 
     <!-- Bottle -->
     <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="7 7 7" rotation="0 0 0" position="0 3.793 -6.877"></a-entity>
@@ -241,11 +275,8 @@
       <!-- listing controller entities to set IDs for MoCap replay optional for normal use -->
       <a-entity id="rhand" class="right-controller"></a-entity>
       <a-entity id="lhand" class="left-controller"></a-entity>
-      <a-camera id="camera" track-movement="" wasd-controls="acceleration:220" look-controls="pointerLockEnabled:true">
-      </a-camera>
+      <a-camera id="camera" track-movement="" wasd-controls="acceleration:220;fly:false;" look-controls="pointerLockEnabled:true"></a-camera>
     </a-entity>
-
-    <a-sky material="color: blue;"></a-sky>
 
   </a-scene>
 </body>
