@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // when the app loads, set the default positions
     // await setElementsTrackedPositions({ scene })
     // select objects
-    // await selectedObjects()
+    await selectedObjects()
   }
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
