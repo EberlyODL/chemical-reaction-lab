@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const userId = await login()
   if (userId) {
     // when the app loads, set the default positions
-    // await setElementsTrackedPositions({ scene })
+    await setElementsTrackedPositions({ scene })
     // select objects
     await selectedObjects()
   }
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     scene.addEventListener('track-movement', e => {
       const properties = e.detail
       const elementId = e.target.id
-      // updateTrackedElement({ properties, elementId })
+      updateTrackedElement({ properties, elementId })
     })
     scene.addEventListener('track-movement-reset', e => {
       // resetTrackedElements()
