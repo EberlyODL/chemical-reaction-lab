@@ -71,25 +71,28 @@ export const updateTrackedElement = async ({ elementId, properties }) => {
 }
 
 export const setElementsTrackedPositions = async ({ scene }) => {
-  const userId = await login()
-  const variables = {
-    userId: userId
-  }
-  try {
-    const { data: { user: { trackedElements } } } = await client.query({
-      query: GET_TRACKED_POSITIONS,
-      variables
-    })
-    trackedElements.forEach(element => {
-      const node = document.getElementById(element.elementId)
-      if (node) {
-        for (let prop in element.properties) {
-          node.setAttribute(prop, element.properties[prop])
+  return new Promise(async (resolve, reject) => {
+    const userId = await login()
+    const variables = {
+      userId: userId
+    }
+    try {
+      const { data: { user: { trackedElements } } } = await client.query({
+        query: GET_TRACKED_POSITIONS,
+        variables
+      })
+      trackedElements.forEach(element => {
+        const node = document.getElementById(element.elementId)
+        if (node) {
+          for (let prop in element.properties) {
+            node.setAttribute(prop, element.properties[prop])
+          }
         }
-      }
-    })
-  } catch (error) {
-  }
+      })
+    } catch (error) {
+    }
+    resolve()
+  })
 }
 
 export const resetTrackedElements = async () => {
