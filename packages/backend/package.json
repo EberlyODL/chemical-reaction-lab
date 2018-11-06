@@ -9,7 +9,7 @@
     "graphql:schema:generate": "graphql schema",
     "prisma:update": "prisma deploy && prisma generate",
     "prisma:seed": "prisma seed",
-    "prisma:update:force": "prisma deploy --force && prisma generate"
+    "prisma:update:force": "prisma reset && prisma deploy --force && prisma generate && prisma seed"
   },
   "dependencies": {
     "graphql-cli": "^2.16.7",

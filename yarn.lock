@@ -682,6 +682,13 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
   integrity sha512-yprFYuno9FtNsSHVlSWd+nRlmGoAbqbeCwOryP6sC/zoCjhpArcRMYp19EvpSUSizJAlsXEwJv+wcWS9XaXdMw==
 
+"@odl/aframe-raycaster-follower-component@^1.0.8-alpha.0":
+  version "1.0.8-alpha.0"
+  resolved "https://registry.yarnpkg.com/@odl/aframe-raycaster-follower-component/-/aframe-raycaster-follower-component-1.0.8-alpha.0.tgz#e25d92358654b6353636ae744b6cf7e9b31512f3"
+  integrity sha512-6RnmCJU/+YlocgTyfLuLW3oigYcIThtr/OvKI335eWGxwFIQPz5dBt2xCuA6BQsJMxeAi0Mjnelzf6Ge58cBgw==
+  dependencies:
+    aframe "^0.8.2"
+
 "@tweenjs/tween.js@^16.8.0":
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-16.11.0.tgz#6e7a8a3d6c78a057ecd5605087930406d4e05800"
@@ -956,6 +963,13 @@ adm-zip@^0.4.7:
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.4.11.tgz#2aa54c84c4b01a9d0fb89bb11982a51f13e3d62a"
   integrity sha512-L8vcjDTCOIJk7wFvmlEUN7AsSb8T+2JrdP7KINBjzr24TJ5Mwj590sLu3BC7zNZowvJWa/JtPmD8eJCzdtDWjA==
 
+aframe-animation-component@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/aframe-animation-component/-/aframe-animation-component-5.1.2.tgz#f08becfcde91b0c9d2bf308b03cbdacd85c320d0"
+  integrity sha512-DGUsRGB6TaN0rRKGYRrU0M1eblhpnMMYR1Vhulh0d5TxQRNszWJ5I1aHB/YW6wcj0gO89hLabSe5Is5NFpUeGg==
+  dependencies:
+    animejs "2.2.0"
+
 aframe-animation-timeline-component@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aframe-animation-timeline-component/-/aframe-animation-timeline-component-1.6.0.tgz#5c21580d016a9a39a6b0a16458a48c54b670656d"
@@ -1129,7 +1143,7 @@ an-array@^1.0.0:
   resolved "https://registry.yarnpkg.com/an-array/-/an-array-1.0.0.tgz#c125a5bb8257778e35f4b4f6aa9c7d0fa9e42665"
   integrity sha1-wSWlu4JXd4419LT2qpx9D6nkJmU=
 
-animejs@^2.2.0:
+animejs@2.2.0, animejs@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
   integrity sha1-Ne79/FNbgZScnLBvCz5gwC5v3IA=

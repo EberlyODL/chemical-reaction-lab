@@ -10,7 +10,9 @@
     "access": "public"
   },
   "dependencies": {
+    "@odl/aframe-raycaster-follower-component": "^1.0.8-alpha.0",
     "aframe": "^0.8.2",
+    "aframe-animation-component": "^5.1.2",
     "aframe-animation-timeline-component": "^1.5.0",
     "aframe-event-set-component": "^4.1.1",
     "aframe-extras": "^4.1.2",
@@ -47,6 +49,7 @@
   },
   "scripts": {
     "parcel": "parcel -d dist --hmr-port 37195 src/index.html --no-cache",
+    "parcel:test": "parcel src/tests.html --no-cache",
     "parcel:build": "parcel build -d dist src/index.html"
   },
   "devDependencies": {
