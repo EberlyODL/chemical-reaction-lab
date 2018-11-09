@@ -1,6 +1,7 @@
 import gql from 'graphql-tag'
 import client from "./client";
 import { login } from './user'
+import { Observable, from } from 'rxjs';
 
 export const GET_SELECTED_OBJECTS = gql`
   query($id: ID!) {
@@ -64,15 +65,20 @@ export const UNSELECT_OBJECT = gql`
   }
 `
 
-export const selectedObjects = async () => {
+export const $selectedObjects = Observable.create(async observer => {
   const userId = await login()
-  return client.watchQuery({
+  client.watchQuery({
     query: GET_SELECTED_OBJECTS,
     variables: {
       id: userId
     }
+  }).subscribe(res => {
+    observer.next(res)
   })
-}
+})
+//   return from(async () => {
+//   });
+// }
 
 export const selectObject = async (objectName) => {
   // get the current user id

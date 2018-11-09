@@ -119,8 +119,13 @@
           <a-entity id="video-controls" video-controls="src:${src}" scale="4 4 4"></a-entity>
         </a-entity>
       </script> 
-      <script id="dimLightsTemplate" type="text/html">
-      </script>
+      <script id="hudTemplate" type="text/x-nunjucks-template">
+        {% for x in range(0, 10) %}
+          <a-entity scale=".4 .4 .4">
+            <a-text value="{{ x }}" position="0 {{ x * -0.2 }} 0">
+          </a-entity>
+        {% endfor %}
+      </script> 
 
 
       <!-- Mixins -->
@@ -255,8 +260,6 @@
         easing: linear; loop: true; to: 0 360 0"></a-entity>
     </a-entity>
 
-
-
     <!-- Camera / Hands -->
     <!-- @todo: incorportate hands -->
     <!-- <a-entity position="0 4 0" rotation="0 0 0" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
@@ -267,7 +270,13 @@
 
     <!-- Default Camera -->
     <a-entity id="camera" position="0 6 0" camera="active:true" wasd-controls="acceleration:220;fly:false;" look-controls="pointerLockEnabled:false">
-      <a-entity geometry="primitive:plane;" hud="" width="2" position="0 -1.2 -1" rotation="-20 0 0"></a-entity>
+      <a-entity geometry="primitive:plane;" hud="" width="2" position="0 -1 -1" rotation="-20 0 0" material="color:#333333;">
+        <a-entity position="-.5 .47 0">
+          <a-entity scale=".4 .4 .4">
+            <a-entity template="src: #hudTemplate"></a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
       <!-- @todo: add this for vr -->
       <!-- <a-cursor material="color:orange;"></a-cursor> -->
     </a-entity>

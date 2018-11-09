@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
-import { selectedObjects } from '../apollo/selectedObjects'
+import '../apollo/selectedObjects'
+import { selectedObjects } from '../apollo/selectedObjects';
 
 AFRAME.registerComponent('hud', {
   schema: {
@@ -9,13 +10,18 @@ AFRAME.registerComponent('hud', {
   /**
    * Initial creation and setting of the mesh.
    */
-  init: function () {
+  init: async function () {
     this.vec3 = new THREE.Vector3()
     this._camera = this.el.sceneEl.querySelector('#camera');
     this._initialPosition = this.el.object3D.position
+
+    $selectedObjects.subscribe(res => {
+      console.log('res', res);
+    })
   },
 
   update: function () {
+    this.renderHub()
   },
 
   tick: function () {
@@ -34,6 +40,13 @@ AFRAME.registerComponent('hud', {
       const newPosition =  Object.assign({}, this._initialPosition, { y: cameraDirectionY })
       this.el.setAttribute('position', newPosition)
     }
+  },
+
+  renderHub: function () {
+    this.renderSelectedObjects()
+  },
+
+  renderSelectedObjects: function () {
   },
 
 })

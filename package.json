@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "factories/EberlyODL-vr/elements/*"
   ],
   "scripts": {
     "frontend:parcel": "cd packages/frontend && npm run parcel",
