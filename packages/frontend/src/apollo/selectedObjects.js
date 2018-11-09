@@ -66,13 +66,11 @@ export const UNSELECT_OBJECT = gql`
 
 export const selectedObjects = async () => {
   const userId = await login()
-  client.watchQuery({
+  return client.watchQuery({
     query: GET_SELECTED_OBJECTS,
     variables: {
       id: userId
     }
-  }).subscribe(({ data: { user: { selectedObjects } } }) => {
-    console.log('SELECTED_OBJECTS', selectedObjects);
   })
 }
 

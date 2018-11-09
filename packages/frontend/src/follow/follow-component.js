@@ -3,7 +3,7 @@ import 'aframe'
 const register = () => {
   AFRAME.registerComponent('follow', {
     schema: {
-      target: { type: 'selector' },
+      target: { type: 'string' },
       speed: { type: 'number', default: 4 },
     },
 
@@ -15,7 +15,8 @@ const register = () => {
       var directionVec3 = this.directionVec3
 
       // Grab position vectors (THREE.Vector3) from the entities' three.js objects.
-      var targetPosition = this.data.target.object3D.position
+      const target = this.el.sceneEl.querySelector(this.data.target)
+      var targetPosition = target.object3D.position
       var currentPosition = this.el.object3D.position
       // convert offset string into vector
       // var offset = new THREE.Vector3(...this.data.offset.split(' '))

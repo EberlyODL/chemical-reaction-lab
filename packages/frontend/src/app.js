@@ -10,6 +10,7 @@ import 'aframe-log-component'
 import 'aframe-template-component'
 import 'aframe-video-controls'
 import 'aframe-animation-component'
+import '@odl/aframe-droppable-surface-component'
 import '@odl/aframe-raycaster-follower-component'
 import 'three'
 import './selectable-component'
@@ -21,7 +22,8 @@ import './follow/follow-component'
 import './touching/touching-component'
 import './video-player/video-player-component'
 import './lab-light/lab-light-component'
-import './active-indicator/active-indicator'
+import './active-item-indicator/active-item-indicator'
+import './hud/hud'
 // import './state/orchestration'
 import './track-movement/track-movement'
 import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
@@ -45,9 +47,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const userId = await login()
   if (userId) {
     // when the app loads, set the default positions
-    await setElementsTrackedPositions({ scene })
+    // await setElementsTrackedPositions({ scene })
     // select objects
-    await selectedObjects()
+    const $selectedObjects = await selectedObjects()
+    $selectedObjects.subscribe(res => {
+      console.log(res)
+    })
   }
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
