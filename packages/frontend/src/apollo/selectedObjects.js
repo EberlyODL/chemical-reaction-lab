@@ -72,45 +72,49 @@ export const $selectedObjects = Observable.create(async observer => {
     variables: {
       id: userId
     }
-  }).subscribe(res => {
-    observer.next(res)
+  }).subscribe(({ data: { user: { selectedObjects } } }) => {
+    observer.next(selectedObjects)
   })
 })
-//   return from(async () => {
-//   });
-// }
 
 export const selectObject = async (objectName) => {
   // get the current user id
   const userId = await login()
+  const variables = {
+    id: userId,
+    objectName: objectName
+  }
   // get the current selected Objects
   client.mutate({
     mutation: SELECT_OBJECT,
-    variables: {
-      id: userId,
-      objectName: objectName
-    }
+    variables,
+    optimisticResponse: {
+      __typename: "Mutation",
+      updateUser: Object.assign({}, variables, { __typename: "Object", id: "optomistic_ui_id" } )
+    },
   })
 }
 
 export const unselectObject = async (objectName) => {
   // get the current user id
   const userId = await login()
+  const variables = {
+    id: userId,
+    objectName: objectName
+  }
   const selectedObjectsQuery = await client.readQuery({
     query: GET_SELECTED_OBJECTS,
-    variables: {
-      id: userId,
-      objectName: objectName
-    }
+    variables
   })
   const objectIsSelected = selectedObjectsQuery.user.selectedObjects.find(i => i.name === objectName)
   if (objectIsSelected) {
     client.mutate({
       mutation: UNSELECT_OBJECT,
-      variables: {
-        id: userId,
-        objectName: objectName
-      }
+      variables,
+      optimisticResponse: {
+        __typename: "Mutation",
+        updateUser: Object.assign({}, variables, { __typename: "Object", id: "optomistic_ui_id" } )
+      },
     })
   }
 }

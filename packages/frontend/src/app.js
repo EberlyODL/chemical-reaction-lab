@@ -30,7 +30,7 @@ import './track-movement/track-movement'
 import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
 import client from './apollo/client';
 import { login } from "./apollo/user";
-import { selectedObjects, selectObject, unselectObject } from './apollo/selectedObjects';
+import { $selectedObjects, selectObject, unselectObject } from './apollo/selectedObjects';
 
 document.addEventListener('DOMContentLoaded', async () => {
   // get the scene
@@ -39,9 +39,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const userId = await login()
   if (userId) {
     // when the app loads, set the default positions
-    // await setElementsTrackedPositions({ scene })
+    await setElementsTrackedPositions({ scene })
     // select objects
+    $selectedObjects.subscribe(res => res)
   }
+
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
     if (inventoryId) {
@@ -52,8 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // listen for bottles touching each other
     scene.addEventListener('touching-initiated', e => {
       const inventoryId = e.target.dataset.inventoryId
-      scene.emit('selectObject', inventoryId)
-      // selectObject(inventoryId)
+      selectObject(inventoryId)
     })
     // update track position when an element moves in the scene
     scene.addEventListener('track-movement', e => {
