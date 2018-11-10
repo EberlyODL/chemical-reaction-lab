@@ -2,10 +2,7 @@ import * as d3 from 'd3'
 import '../apollo/selectedObjects'
 import client from '../apollo/client'
 import { login } from '../apollo/user'
-import { GET_SELECTED_OBJECTS } from '../apollo/selectedObjects';
-import '../state/constants'
-import { videoMatrix } from '../state/constants';
-import { isEqual } from 'lodash';
+import { GET_SELECTED_OBJECTS, findVideo } from '../apollo/selectedObjects';
 
 AFRAME.registerComponent('hud', {
   schema: {
@@ -26,6 +23,7 @@ AFRAME.registerComponent('hud', {
         id: userId
       }
     }).subscribe(({ data: { user: { selectedObjects } } }) => {
+      // get slected Objects
       this._selectedObjects = selectedObjects
       this.renderHub()
     })
@@ -43,10 +41,10 @@ AFRAME.registerComponent('hud', {
    */
   updatePosition: function () {
     if (this._camera) {
-      const positionScale = d3.scaleLinear().domain([0.4, 0.6]).range([-2, -0.5])
+      const positionScale = d3.scaleLinear().domain([0.4, 0.8]).range([-2, -0.5])
       const cameraDirection = this._camera.object3D.getWorldDirection()
       // hook up y
-      if (cameraDirection.y > 0.4 && cameraDirection.y < 0.6) {
+      if (cameraDirection.y > 0.4 && cameraDirection.y < 0.8) {
         const cameraDirectionY = positionScale(cameraDirection.y)
         let newPosition = Object.assign({}, this._initialPosition, { y: cameraDirectionY })
         this.el.setAttribute('position', newPosition)
@@ -74,12 +72,16 @@ AFRAME.registerComponent('hud', {
   },
 
   renderReagentsMixtureButtonTemplate() {
-    const selectedObjectIds = this._selectedObjects.map(i => i.name)
-    // set the mix reagents button
-    const video = videoMatrix.find(video => {
-      return isEqual(video.combination, selectedObjectIds)
-    })
-    const template = this.el.querySelector('.reagentsMixtureButtonTemplate')
+    const video = findVideo(this._selectedObjects)
+    const button = this.el.querySelector('#mixReagentsButton')
+    if (video) {
+      button.querySelector('.message').setAttribute('visible', false)
+      button.querySelector('.box').setAttribute('material', 'color: green')
+    }
+    else {
+      button.querySelector('.message').setAttribute('visible', true)
+      button.querySelector('.box').setAttribute('material', 'color: gray')
+    }
   }
 
 })

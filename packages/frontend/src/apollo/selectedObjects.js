@@ -2,6 +2,8 @@ import gql from 'graphql-tag'
 import client from "./client";
 import { login } from './user'
 import { Observable, from } from 'rxjs';
+import { videoMatrix } from '../state/constants';
+import { isEqual } from 'lodash'
 
 export const GET_SELECTED_OBJECTS = gql`
   query($id: ID!) {
@@ -117,4 +119,13 @@ export const unselectObject = async (objectName) => {
       },
     })
   }
+}
+
+/**
+ * Finds a video combo from selected Objects state
+ */
+export const findVideo = (selectedObjects) => {
+  const selectedObjectsNames = selectedObjects.map(i => i.name)
+  const video = videoMatrix.find(v => isEqual(v.combination, selectedObjectsNames))
+  return video
 }

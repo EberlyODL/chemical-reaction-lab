@@ -122,13 +122,6 @@
           <a-entity id="video-controls" video-controls="src:${src}" scale="4 4 4"></a-entity>
         </a-entity>
       </script>
-          <script id="hudTemplate" type="text/x-nunjucks-template">
-        {% for object in selectedObjects %}
-          <a-entity scale=".4 .4 .4">
-            <a-text value="{{ object }}" position="0 {{ index * -0.2 }} 0">
-          </a-entity>
-        {% endfor %}
-      </script>
 
 
           <!-- Mixins -->
@@ -298,7 +291,7 @@
       <!-- <a-cursor material="color:orange;"></a-cursor> -->
 
       <!-- HUD -->
-      <a-entity geometry="primitive:plane;width:4" hud position="0 -2 -1.5" rotation="-4 0 0" material="color:#333333;">
+      <a-entity geometry="primitive:plane;width:4" hud position="0 -2 -1.8" rotation="-4 0 0" material="color:#333333;opacity:0.5;">
         <a-entity position="-1.95 .43 0">
           <a-entity scale=".4 .4 .4">
             <a-text value="Reagents" scale="1.5 1.5 1.5"></a-text>
@@ -308,8 +301,9 @@
         <a-entity position="1.3 0 0">
           <a-entity scale=".4 .4 .4">
             <a-entity id="mixReagentsButton">
-              <a-entity geometry="depth: 0.1; height: 1; width: 2" material="color: gray">
-                <a-entity text="value:Mix Reagents;align:center;" position="-.5 0 .3" scale="3 3 3"></a-entity>
+              <a-entity class="message" text="value:Invalid reagent combination; align:center;" scale="5 5 5" position="0 .7 0"></a-entity>
+              <a-entity class="box" geometry="depth: 0.1; height: 1; width: 2" material="color: gray">
+                <a-entity class="button-text" text="value:Mix Reagents;align:center;" position="-.2 .1 .3" scale="5 5 5"></a-entity>
               </a-entity>
             </a-entity>
           </a-entity>
