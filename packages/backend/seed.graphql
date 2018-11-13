@@ -1,4 +1,4 @@
-mutation {
+mutation {  
   objectone: createObject(data: {
     name: "CuOH2"
   }) { id }
@@ -34,6 +34,9 @@ mutation {
   }) { id }
   objectfourteen: createObject(data: {
     name: "01MNa2CO3"
+  }) { id }
+  objectfifteen: createObject(data: {
+    name: "copperstrips"
   }) { id }
 
   videoone: createVideo(data: {
