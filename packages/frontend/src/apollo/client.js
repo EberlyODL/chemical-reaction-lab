@@ -40,8 +40,24 @@ const cache = new InMemoryCache();
 const stateLink = withClientState({
   cache,
   defaults: {
+    video: {
+      __typename: 'Video',
+      status: 'off',
+      id: null
+    }
   },
   resolvers: {
+    Mutation: {
+      playVideo: (_, { videoId }, { cache }) => {
+        const video = {
+          __typename: 'Video',
+          status: 'off',
+          id: videoId
+        }
+        cache.writeData({ data: video });
+        return null;
+      }
+    }
   }
 });
 

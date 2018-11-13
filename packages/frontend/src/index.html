@@ -52,6 +52,7 @@
           <a-asset-item id="case_3.gltf" src="assets/chem-lab/case_3.gltf"></a-asset-item>
           <a-asset-item id="case_4.gltf" src="assets/chem-lab/case_4.gltf"></a-asset-item>
           <a-asset-item id="case_5.gltf" src="assets/chem-lab/case_5.gltf"></a-asset-item>
+          <a-asset-item id="chemlab_UI.gltf" src="assets/chem-lab/chemlab_UI.gltf"></a-asset-item>
           <a-asset-item id="countertop.gltf" src="assets/chem-lab/countertop.gltf"></a-asset-item>
           <a-asset-item id="deskchaircomp.gltf" src="assets/chem-lab/deskchaircomp.gltf"></a-asset-item>
           <a-asset-item id="deskchaircomputer.gltf" src="assets/chem-lab/deskchaircomputer.gltf"></a-asset-item>
@@ -88,7 +89,7 @@
           <a-asset-item id="scale.gltf" src="assets/chem-lab/scale.gltf"></a-asset-item>
 
           <!-- Video Imports -->
-          <video id="reagentvid-3" loop src="assets/movies/reaction_3.mp4"></video>
+          <video id="reagentvid-3" autoplay loop src="assets/movies/reaction_3.mp4"></video>
           <video id="reagentvid-7" loop src="assets/movies/reaction_7.mp4"></video>
           <video id="reagentvid-9" loop src="assets/movies/reaction_9.mp4"></video>
           <video id="reagentvid-10" loop src="assets/movies/reaction_10.mp4"></video>
@@ -276,6 +277,8 @@
     </a-entity>
 
 
+
+
     <!-- Camera / Hands -->
     <!-- @todo: incorportate hands -->
     <!-- <a-entity position="0 4 0" rotation="0 0 0" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
@@ -290,8 +293,13 @@
       <!-- @todo: add this for vr -->
       <!-- <a-cursor material="color:orange;"></a-cursor> -->
 
+      <a-entity hud gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".2 .2 .2" position="0 -1.174 -0.5">
+        <a-entity video-player material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity>
+      </a-entity>
+
+
       <!-- HUD -->
-      <a-entity geometry="primitive:plane;width:4" hud position="0 -2 -1.8" rotation="-4 0 0" material="color:#333333;opacity:0.5;">
+      <!-- <a-entity geometry="primitive:plane;width:4" hud position="0 -2 -1.8" rotation="-4 0 0" material="color:#333333;opacity:0.5;">
         <a-entity position="-1.95 .43 0">
           <a-entity scale=".4 .4 .4">
             <a-text value="Reagents" scale="1.5 1.5 1.5"></a-text>
@@ -308,7 +316,7 @@
             </a-entity>
           </a-entity>
         </a-entity>
-      </a-entity>
+      </a-entity> -->
 
     </a-entity>
 

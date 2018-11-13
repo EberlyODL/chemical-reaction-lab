@@ -21,14 +21,14 @@ import './lab-table/lab-table-component'
 import './bottle/bottle-component'
 import './follow/follow-component'
 import './touching/touching-component'
-import './video-player/video-player-component'
+import './video-player/video-player'
 import './lab-light/lab-light-component'
 import './active-item-indicator/active-item-indicator'
 import './hud/hud'
+import './video-player/video-player'
 // import './state/orchestration'
 import './track-movement/track-movement'
 import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
-import client from './apollo/client';
 import { login } from "./apollo/user";
 import { $selectedObjects, selectObject, unselectObject } from './apollo/selectedObjects';
 
@@ -65,5 +65,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     scene.addEventListener('track-movement-reset', e => {
       // resetTrackedElements()
     })
+
+
+    // just do old school state management
+    
   })
 })

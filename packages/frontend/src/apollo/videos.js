@@ -1,3 +1,54 @@
+
+import gql from "graphql-tag";
+import client from "../apollo/client";
+import { Subject } from 'rxjs';
+import { scan, shareReplay, startWith } from 'rxjs/operators';
+
+let initialState = {
+  videoId: null,
+  status: "off"
+}
+
+// export const playVideo = (video) => {
+//   const state = {
+//     status: 'on',
+//     videoId: video.video
+//   }
+//   stateSubject.next(state)
+// }
+
+// export const dispatch = (payload) => {
+//   stateSubject.next(payload)
+// }
+
+// export const VIDEO_STATE = gql`
+//   query {
+//     video @client {
+//       status
+//     }
+//   }
+// `
+
+// export const PLAY_VIDEO = gql`
+//   mutation ($id: ID!) {
+//     playVideo(id: $id) @client {
+//       id
+//     }
+//   }
+// `
+
+// export const playVideo = async (video) => {
+//   console.log('video', video);
+//   const variables = {
+//     id: video.id,
+//   }
+//   // get the current selected Objects
+//   client.mutate({
+//     mutation: PLAY_VIDEO,
+//     variables,
+//   })
+// }
+
 export const videoMatrix = [
   { id: 3, combination: ['CuOH2', 'bunsenburner'], video: '#reagentvid-3' },
   { id: 7, combination: ['magnesiumstrips', 'bunsenburner'], video: '#reagentvid-7' },
