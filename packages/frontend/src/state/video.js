@@ -1,31 +1,26 @@
+import { observable, autorun } from 'mobx'
 
-import gql from "graphql-tag";
-import client from "../apollo/client";
-import { Subject } from 'rxjs';
-import { scan, shareReplay, startWith } from 'rxjs/operators';
-import { state, store$ } from './state'
-
-export const initialState = {
+export const videoState = observable({
   videoId: null,
   status: "off"
-}
+})
 
-export const playVideo = (_, payload) => {
-  state.next(Object.assign({}, _, _.video, {
-    video: {
-      status: 'on',
-      videoId: payload.video
-    }
-  }))
-}
+// export const playVideo = (payload) => {
+//   state.next(Object.assign({}, _, _.video, {
+//     video: {
+//       status: 'on',
+//       videoId: payload.video
+//     }
+//   }))
+// }
 
-export const stopVideo = (_) => {
-  state.next(Object.assign({}, _, _.video, {
-    video: {
-      status: 'off'
-    }
-  }))
-}
+// export const stopVideo = (_) => {
+//   state.next(Object.assign({}, _, _.video, {
+//     video: {
+//       status: 'off'
+//     }
+//   }))
+// }
 
 // export const dispatch = (payload) => {
 //   stateSubject.next(payload)

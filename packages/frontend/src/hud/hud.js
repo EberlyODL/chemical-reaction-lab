@@ -1,12 +1,14 @@
-import * as d3 from 'd3'
 import '../apollo/selectedObjects'
 import client from '../apollo/client'
 import { login } from '../apollo/user'
 import { GET_SELECTED_OBJECTS, findVideo } from '../apollo/selectedObjects';
-import { playVideo, stopVideo } from '../state/video'
-import { store$ } from '../state/state';
+import { videoState } from '../state/video';
+import { autorun, observe } from 'mobx';
+import { observable } from 'rxjs';
+import { bringUpHudOnLookDown, panOnLeftRight } from './hud-movements';
+import registerComponent from '../utils/registerComponent';
 
-AFRAME.registerComponent('hud', {
+const hud = {
   schema: {
   },
 
@@ -16,7 +18,7 @@ AFRAME.registerComponent('hud', {
   init: async function () {
     this.vec3 = new THREE.Vector3()
     this._camera = this.el.sceneEl.querySelector('#camera');
-    this._initialPosition = this.el.object3D.position
+    this._initialPosition = Object.assign({}, this.el.object3D.position)
     this._video = null
 
     const userId = await login()
@@ -26,13 +28,11 @@ AFRAME.registerComponent('hud', {
         id: userId
       }
     }).subscribe(({ data: { user: { selectedObjects } } }) => {
-      // get slected Objects
       this._selectedObjects = selectedObjects
-      this.renderHub()
     })
 
-    store$.subscribe(state => {
-      this._state = state
+    observe(videoState, 'status', (change) => {
+      this.videoStatusChanged(change)
     })
 
     this.el.addEventListener('click', this.hudClicked.bind(this))
@@ -54,60 +54,27 @@ AFRAME.registerComponent('hud', {
    */
   updatePosition: function () {
     if (this._camera) {
-      // calculate a domain range to get xDomain.
       const cameraDirection = this._camera.object3D.getWorldDirection()
-      const positionScale = d3.scaleLinear().domain([0.4, 0.8]).range([-1.174, -0.3])
-      // hook up y
-      if (
-        cameraDirection.y > 0.4 && cameraDirection.y < 0.8
-      ) {
-        const cameraDirectionY = positionScale(cameraDirection.y)
-        let newPosition = Object.assign({}, this._initialPosition, { y: cameraDirectionY })
-        this.el.setAttribute('position', newPosition)
+      const el = this.el
+      const initialPosition = this._initialPosition
+      if (videoState.status === 'off') {
+        bringUpHudOnLookDown({ cameraDirection, el, initialPosition })
+      }
+      if (videoState.status === 'on') {
+        panOnLeftRight({ cameraDirection, el })
       }
     }
   },
 
-  renderHub: function () {
-    // this.renderSelectedObjects()
-    // this.renderReagentsMixtureButtonTemplate()
-  },
-
-  renderSelectedObjects: function () {
-    const container = document.createElement('a-entity')
-    // set the reagents text
-    this._selectedObjects.forEach((object, index) => {
-      const node = document.createElement('a-text')
-      node.setAttribute('value', object.name)
-      node.setAttribute('position', `0 ${index * -.3} 0`)
-      container.appendChild(node)
-    });
-    const template = this.el.querySelector('.reagentsTemplate')
-    template.innerHTML = ''
-    template.appendChild(container)
-  },
-
-  renderReagentsMixtureButtonTemplate: function () {
-    this._video = findVideo(this._selectedObjects)
-    const button = this.el.querySelector('#mixReagentsButton')
-    if (this._video) {
-      button.querySelector('.message').setAttribute('visible', false)
-      button.querySelector('.box').setAttribute('material', 'color: green')
-    }
-    else {
-      button.querySelector('.message').setAttribute('visible', true)
-      button.querySelector('.box').setAttribute('material', 'color: gray')
-    }
-  },
-
   hudClicked: function (e) {
-    const state = this._state
     const video = findVideo(this._selectedObjects)
-    if (this._state.video.status === 'off') {
-      playVideo(state, video)
+    const _videoStatus = videoState.status
+    if (_videoStatus === 'off') {
+      videoState.videoId = video.video
+      videoState.status = 'on'
     }
-    if (state.video.status === 'on') {
-      stopVideo(state)
+    if (_videoStatus === 'on') {
+      videoState.status = 'off'
     }
     // // convert path NodeList to array
     // var parents = [].slice.call(e.path);
@@ -116,6 +83,18 @@ AFRAME.registerComponent('hud', {
     // if (mixReagentsbutton && this._video) {
     //   playVideo(this._video)
     // }
+  },
+
+  videoStatusChanged: function ({newValue, oldValue}) {
+    console.log(this._initialPosition)
+    if (newValue === 'on') {
+      this.el.setAttribute('position', Object.assign({}, this.el.object3D.position, { y: 0, z: -0.16 }))
+    }
+    if (newValue === 'off') {
+      this.el.setAttribute('position', Object.assign({}, this._initialPosition))
+    }
   }
 
-})
+}
+
+export default registerComponent('hud', hud)

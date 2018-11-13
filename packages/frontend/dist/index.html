@@ -5,14 +5,12 @@
     chemical-reaction-lab
   </title>
   <meta name="description" content="chemical-reaction-lab">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/2.3.0/nunjucks.min.js"></script>
   <script src="/app.c328ef1a.js"></script>
 </head>
 
 <body>
   <a-scene physics="gravity: -51; debug:true" cursor="rayOrigin: mouse" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
     <a-assets>
-
       <!-- Objects -->
       <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item>
       <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item>
@@ -40,6 +38,7 @@
           <a-asset-item id="acidcab_case_1.gltf" src="assets/chem-lab/acidcab_case_1.gltf"></a-asset-item>
           <a-asset-item id="acidcab_case_2.gltf" src="assets/chem-lab/acidcab_case_2.gltf"></a-asset-item>
           <a-asset-item id="acidcab_case_3.gltf" src="assets/chem-lab/acidcab_case_3.gltf"></a-asset-item>
+          <a-asset-item id="background.gltf" src="assets/chem-lab/background.gltf"></a-asset-item>
           <a-asset-item id="cab_base.gltf" src="assets/chem-lab/cab_base.gltf"></a-asset-item>
           <a-asset-item id="cabinet_a1.gltf" src="assets/chem-lab/cabinet_a1.gltf"></a-asset-item>
           <a-asset-item id="cabinet_a2.gltf" src="assets/chem-lab/cabinet_a2.gltf"></a-asset-item>
@@ -153,6 +152,7 @@
     <a-entity id="acidcab_case_1.gltf" gltf-model="#acidcab_case_1.gltf"></a-entity>
     <a-entity id="acidcab_case_2.gltf" gltf-model="#acidcab_case_2.gltf"></a-entity>
     <a-entity id="acidcab_case_3.gltf" gltf-model="#acidcab_case_3.gltf"></a-entity>
+    <a-entity id="background.gltf" material="src:https://picsum.photos/200/300" gltf-model="#background.gltf"></a-entity>
     <a-entity id="cab_base.gltf" gltf-model="#cab_base.gltf"></a-entity>
     <a-entity id="cabinet_a1.gltf" gltf-model="#cabinet_a1.gltf"></a-entity>
     <a-entity id="cabinet_a2.gltf" gltf-model="#cabinet_a2.gltf"></a-entity>
