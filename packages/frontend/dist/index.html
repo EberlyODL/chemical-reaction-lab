@@ -99,31 +99,6 @@
           <video id="reagentvid-17" loop="" src="/reaction_17.ff9224f7.mp4"></video>
           <video id="reagentvid-18" loop="" src="/reaction_18.7d67a51a.mp4"></video>
 
-          <!-- Templates -->
-          <script id="dimLightsDownTemplate" type="text/html">
-        <a-animation
-          attribute="light.intensity"
-          to="${intensityDown}"
-          dur="3000"
-          easing="linear">
-        </a-animation>
-      </script>
-          <script id="dimLightsUpTemplate" type="text/html">
-        <a-animation
-          attribute="light.intensity"
-          to="${intensityUp}"
-          dur="3000"
-          easing="linear">
-        </a-animation>
-      </script>
-          <script id="videoPlayerTemplate" type="text/html">
-        <a-plane id="video-plane" src="${src}" scale=".7 .7 .7" geometry="width:16;height:9;"></a-plane>
-        <a-entity position="0 -5.632  2">
-          <a-entity id="video-controls" video-controls="src:${src}" scale="4 4 4"></a-entity>
-        </a-entity>
-      </script>
-
-
           <!-- Mixins -->
           <a-mixin id="cube" cube-mixin="" track-movement="" droppable-item="" tabindex="0" shadow=""></a-mixin>
           <a-mixin id="lab-table-mixin" droppable="" event-set__dragon="_event: dragover-start; wireframe: true" event-set__dragoff="_event: dragover-end; wireframe: false;"></a-mixin>
@@ -152,7 +127,7 @@
     <a-entity id="acidcab_case_1.gltf" gltf-model="#acidcab_case_1.gltf"></a-entity>
     <a-entity id="acidcab_case_2.gltf" gltf-model="#acidcab_case_2.gltf"></a-entity>
     <a-entity id="acidcab_case_3.gltf" gltf-model="#acidcab_case_3.gltf"></a-entity>
-    <a-entity id="background.gltf" material="src:https://picsum.photos/200/300" gltf-model="#background.gltf"></a-entity>
+    <a-entity id="background.gltf" gltf-model="#background.gltf"></a-entity>
     <a-entity id="cab_base.gltf" gltf-model="#cab_base.gltf"></a-entity>
     <a-entity id="cabinet_a1.gltf" gltf-model="#cabinet_a1.gltf"></a-entity>
     <a-entity id="cabinet_a2.gltf" gltf-model="#cabinet_a2.gltf"></a-entity>
