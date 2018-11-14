@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <a-scene physics="gravity: -51; debug:false;" cursor="rayOrigin: mouse" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
+  <a-scene physics="gravity: -51; debug:false;" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
     <a-assets>
       <!-- Objects -->
       <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item>
@@ -235,9 +235,8 @@
     </a-entity> -->
 
     <!-- Default Camera -->
-    <a-entity id="camera" position="0 6 0" camera="active:true" wasd-controls="acceleration:220;fly:false;"
-      look-controls="pointerLockEnabled:false" movement-controls="controls:checkpoint" checkpoint-controls="mode:teleport">
-      <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
+    <a-entity id="camera" position="0 6 0" look-controls="pointerLockEnabled:true" camera="active:true" wasd-controls="acceleration:220;fly:false;" movement-controls="controls:checkpoint" checkpoint-controls="mode:teleport">
+      <a-entity id="vr-cursor" cursor position="0 0 -0.1" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;" material="color: #CCC; shader: flat;"></a-entity>
       <a-entity hud gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".2 .2 .2" position="0 -1.174 -0.5">
         <a-entity video-player material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998"
           position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity>
