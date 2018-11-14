@@ -1,9 +1,282 @@
-<html> <head> <title> chemical-reaction-lab </title> <meta name="description" content="chemical-reaction-lab"> <script src="/app.1d9731e3.js"></script> </head> <body> <a-scene physics="gravity: -51; debug:true" cursor="rayOrigin: mouse" renderer="antialias: true; gammaOutput: true; sortObjects: true;"> <a-assets>  <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item> <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item> <a-asset-item id="drawers.gltf" src="assets/alldrawersANIMATED.gltf">  <a-asset-item id="chemlablayout.gltf" src="assets/chemlablayout.gltf">  <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item> <a-asset-item id="01MKI-object" src="assets/bottles/01MKI.gltf"></a-asset-item> <a-asset-item id="01MNa2CO3-object" src="assets/bottles/01MNa2CO3.gltf"></a-asset-item> <a-asset-item id="1MNa2CO3-object" src="assets/bottles/1MNa2CO3.gltf"></a-asset-item> <a-asset-item id="01MNaBr-object" src="assets/bottles/01MNaBr.gltf"></a-asset-item> <a-asset-item id="03MAgNO3-object" src="assets/bottles/03MAgNO3.gltf"></a-asset-item> <a-asset-item id="3MHCl-object" src="assets/bottles/3MHCl.gltf"></a-asset-item> <a-asset-item id="3MNaOH-object" src="assets/bottles/3MNaOH.gltf"></a-asset-item> <a-asset-item id="013CuSO4-object" src="assets/bottles/013CuSO4.gltf"></a-asset-item> <a-asset-item id="copperstrips-object" src="assets/bottles/copperstrips.gltf"></a-asset-item> <a-asset-item id="CuOH2-object" src="assets/bottles/CuOH2.gltf"></a-asset-item> <a-asset-item id="magnesiumstrips.gltf" src="assets/bottles/magnesiumstrips.gltf"></a-asset-item>  <a-asset-item id="acidcab_a.gltf" src="assets/chem-lab/acidcab_a.gltf"></a-asset-item> <a-asset-item id="acidcab_b.gltf" src="assets/chem-lab/acidcab_b.gltf"></a-asset-item> <a-asset-item id="acidcab_c.gltf" src="assets/chem-lab/acidcab_c.gltf"></a-asset-item> <a-asset-item id="acidcab_case_1.gltf" src="assets/chem-lab/acidcab_case_1.gltf"></a-asset-item> <a-asset-item id="acidcab_case_2.gltf" src="assets/chem-lab/acidcab_case_2.gltf"></a-asset-item> <a-asset-item id="acidcab_case_3.gltf" src="assets/chem-lab/acidcab_case_3.gltf"></a-asset-item> <a-asset-item id="background.gltf" src="assets/chem-lab/background.gltf"></a-asset-item> <a-asset-item id="cab_base.gltf" src="assets/chem-lab/cab_base.gltf"></a-asset-item> <a-asset-item id="cabinet_a1.gltf" src="assets/chem-lab/cabinet_a1.gltf"></a-asset-item> <a-asset-item id="cabinet_a2.gltf" src="assets/chem-lab/cabinet_a2.gltf"></a-asset-item> <a-asset-item id="cabinet_b1.gltf" src="assets/chem-lab/cabinet_b1.gltf"></a-asset-item> <a-asset-item id="cabinet_b2.gltf" src="assets/chem-lab/cabinet_b2.gltf"></a-asset-item> <a-asset-item id="cabinet_c1.gltf" src="assets/chem-lab/cabinet_c1.gltf"></a-asset-item> <a-asset-item id="cabinet_c2.gltf" src="assets/chem-lab/cabinet_c2.gltf"></a-asset-item> <a-asset-item id="case_1.gltf" src="assets/chem-lab/case_1.gltf"></a-asset-item> <a-asset-item id="case_2.gltf" src="assets/chem-lab/case_2.gltf"></a-asset-item> <a-asset-item id="case_3.gltf" src="assets/chem-lab/case_3.gltf"></a-asset-item> <a-asset-item id="case_4.gltf" src="assets/chem-lab/case_4.gltf"></a-asset-item> <a-asset-item id="case_5.gltf" src="assets/chem-lab/case_5.gltf"></a-asset-item> <a-asset-item id="chemlab_UI.gltf" src="assets/chem-lab/chemlab_UI.gltf"></a-asset-item> <a-asset-item id="countertop.gltf" src="assets/chem-lab/countertop.gltf"></a-asset-item> <a-asset-item id="deskchaircomp.gltf" src="assets/chem-lab/deskchaircomp.gltf"></a-asset-item> <a-asset-item id="deskchaircomputer.gltf" src="assets/chem-lab/deskchaircomputer.gltf"></a-asset-item> <a-asset-item id="drawer_a.gltf" src="assets/chem-lab/drawer_a.gltf"></a-asset-item> <a-asset-item id="drawer_b.gltf" src="assets/chem-lab/drawer_b.gltf"></a-asset-item> <a-asset-item id="drawer_c.gltf" src="assets/chem-lab/drawer_c.gltf"></a-asset-item> <a-asset-item id="drawer_d.gltf" src="assets/chem-lab/drawer_d.gltf"></a-asset-item> <a-asset-item id="drawer_e.gltf" src="assets/chem-lab/drawer_e.gltf"></a-asset-item> <a-asset-item id="drawer_f.gltf" src="assets/chem-lab/drawer_f.gltf"></a-asset-item> <a-asset-item id="drawer_g.gltf" src="assets/chem-lab/drawer_g.gltf"></a-asset-item> <a-asset-item id="drawer_h.gltf" src="assets/chem-lab/drawer_h.gltf"></a-asset-item> <a-asset-item id="drawer_i.gltf" src="assets/chem-lab/drawer_i.gltf"></a-asset-item> <a-asset-item id="drawer_j.gltf" src="assets/chem-lab/drawer_j.gltf"></a-asset-item> <a-asset-item id="drawer_k.gltf" src="assets/chem-lab/drawer_k.gltf"></a-asset-item> <a-asset-item id="drawer_l.gltf" src="assets/chem-lab/drawer_l.gltf"></a-asset-item> <a-asset-item id="drawer_m.gltf" src="assets/chem-lab/drawer_m.gltf"></a-asset-item> <a-asset-item id="drawercabbase.gltf" src="assets/chem-lab/drawercabbase.gltf"></a-asset-item> <a-asset-item id="faucet.gltf" src="assets/chem-lab/faucet.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_left_black.gltf" src="assets/chem-lab/fumehood_knob_left_black.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_left_blue.gltf" src="assets/chem-lab/fumehood_knob_left_blue.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_left_green.gltf" src="assets/chem-lab/fumehood_knob_left_green.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_left_yellow.gltf" src="assets/chem-lab/fumehood_knob_left_yellow.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_right_black.gltf" src="assets/chem-lab/fumehood_knob_right_black.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_right_blue.gltf" src="assets/chem-lab/fumehood_knob_right_blue.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_right_green.gltf" src="assets/chem-lab/fumehood_knob_right_green.gltf"></a-asset-item> <a-asset-item id="fumehood_knob_right_yellow.gltf" src="assets/chem-lab/fumehood_knob_right_yellow.gltf"></a-asset-item> <a-asset-item id="fumehood.gltf" src="assets/chem-lab/fumehood.gltf"></a-asset-item> <a-asset-item id="wallshelves.gltf" src="assets/chem-lab/wallshelves.gltf"></a-asset-item> <a-asset-item id="bottle.gltf" src="assets/chem-lab/bottle.gltf"></a-asset-item> <a-asset-item id="bunsenburner.gltf" src="assets/chem-lab/bunsenburner.gltf"></a-asset-item> <a-asset-item id="doors.gltf" src="assets/chem-lab/doors.gltf"></a-asset-item> <a-asset-item id="goggles.gltf" src="assets/chem-lab/goggles.gltf"></a-asset-item> <a-asset-item id="room.gltf" src="assets/chem-lab/room.gltf"></a-asset-item> <a-asset-item id="scale.gltf" src="assets/chem-lab/scale.gltf"></a-asset-item>  <video id="reagentvid-3" autoplay loop src="/reaction_3.37e02edc.mp4"></video> <video id="reagentvid-7" loop src="/reaction_7.a596be46.mp4"></video> <video id="reagentvid-9" loop src="/reaction_9.8211a213.mp4"></video> <video id="reagentvid-10" loop src="/reaction_10.263c4c56.mp4"></video> <video id="reagentvid-13" loop src="/reaction_13.ab0b3d33.mp4"></video> <video id="reagentvid-14" loop src="/reaction_14.40e7ed77.mp4"></video> <video id="reagentvid-15" loop src="/reaction_15.706ef0cc.mp4"></video> <video id="reagentvid-16" loop src="/reaction_16.8cfeb34f.mp4"></video> <video id="reagentvid-17" loop src="/reaction_17.d17cddce.mp4"></video> <video id="reagentvid-18" loop src="/reaction_18.54dc7dc8.mp4"></video>  <a-mixin id="cube" cube-mixin="" track-movement="" droppable-item="" tabindex="0" shadow=""></a-mixin> <a-mixin id="lab-table-mixin" droppable="" event-set__dragon="_event: dragover-start; wireframe: true" event-set__dragoff="_event: dragover-end; wireframe: false;"></a-mixin> <a-mixin id="transformer" color-randomizer="" droppable="" static-body="" collision-filter="collisionForces: false" geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"></a-mixin>  <a-mixin id="mycursor" position="0 0 -0.5" raycaster="" geometry="primitive: ring; radiusOuter: 0.008; radiusInner: 0.005; segmentsTheta: 32" material="color: white; shader: flat" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection;
+<html>
+
+<head>
+  <title>
+    chemical-reaction-lab
+  </title>
+  <meta name="description" content="chemical-reaction-lab">
+  <script src="/app.c328ef1a.js"></script>
+</head>
+
+<body>
+  <a-scene physics="gravity: -51; debug:true" cursor="rayOrigin: mouse" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
+    <a-assets>
+      <!-- Objects -->
+      <a-asset-item id="labbottlebrownglass.mtl" src="assets/OBJs/labbottlebrownglass.mtl"></a-asset-item>
+      <a-asset-item id="labbottlebrownglass.obj" src="assets/OBJs/labbottlebrownglass.obj"></a-asset-item>
+      <a-asset-item id="drawers.gltf" src="assets/alldrawersANIMATED.gltf">
+        
+        <a-asset-item id="chemlablayout.gltf" src="assets/chemlablayout.gltf">
+          
+          <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item>
+          <a-asset-item id="01MKI-object" src="assets/bottles/01MKI.gltf"></a-asset-item>
+          <a-asset-item id="01MNa2CO3-object" src="assets/bottles/01MNa2CO3.gltf"></a-asset-item>
+          <a-asset-item id="1MNa2CO3-object" src="assets/bottles/1MNa2CO3.gltf"></a-asset-item>
+          <a-asset-item id="01MNaBr-object" src="assets/bottles/01MNaBr.gltf"></a-asset-item>
+          <a-asset-item id="03MAgNO3-object" src="assets/bottles/03MAgNO3.gltf"></a-asset-item>
+          <a-asset-item id="3MHCl-object" src="assets/bottles/3MHCl.gltf"></a-asset-item>
+          <a-asset-item id="3MNaOH-object" src="assets/bottles/3MNaOH.gltf"></a-asset-item>
+          <a-asset-item id="013CuSO4-object" src="assets/bottles/013CuSO4.gltf"></a-asset-item>
+          <a-asset-item id="copperstrips-object" src="assets/bottles/copperstrips.gltf"></a-asset-item>
+          <a-asset-item id="CuOH2-object" src="assets/bottles/CuOH2.gltf"></a-asset-item>
+          <a-asset-item id="magnesiumstrips.gltf" src="assets/bottles/magnesiumstrips.gltf"></a-asset-item>
+
+          <!-- Chem Lab Assets -->
+          <a-asset-item id="acidcab_a.gltf" src="assets/chem-lab/acidcab_a.gltf"></a-asset-item>
+          <a-asset-item id="acidcab_b.gltf" src="assets/chem-lab/acidcab_b.gltf"></a-asset-item>
+          <a-asset-item id="acidcab_c.gltf" src="assets/chem-lab/acidcab_c.gltf"></a-asset-item>
+          <a-asset-item id="acidcab_case_1.gltf" src="assets/chem-lab/acidcab_case_1.gltf"></a-asset-item>
+          <a-asset-item id="acidcab_case_2.gltf" src="assets/chem-lab/acidcab_case_2.gltf"></a-asset-item>
+          <a-asset-item id="acidcab_case_3.gltf" src="assets/chem-lab/acidcab_case_3.gltf"></a-asset-item>
+          <a-asset-item id="background.gltf" src="assets/chem-lab/background.gltf"></a-asset-item>
+          <a-asset-item id="cab_base.gltf" src="assets/chem-lab/cab_base.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_a1.gltf" src="assets/chem-lab/cabinet_a1.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_a2.gltf" src="assets/chem-lab/cabinet_a2.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_b1.gltf" src="assets/chem-lab/cabinet_b1.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_b2.gltf" src="assets/chem-lab/cabinet_b2.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_c1.gltf" src="assets/chem-lab/cabinet_c1.gltf"></a-asset-item>
+          <a-asset-item id="cabinet_c2.gltf" src="assets/chem-lab/cabinet_c2.gltf"></a-asset-item>
+          <a-asset-item id="case_1.gltf" src="assets/chem-lab/case_1.gltf"></a-asset-item>
+          <a-asset-item id="case_2.gltf" src="assets/chem-lab/case_2.gltf"></a-asset-item>
+          <a-asset-item id="case_3.gltf" src="assets/chem-lab/case_3.gltf"></a-asset-item>
+          <a-asset-item id="case_4.gltf" src="assets/chem-lab/case_4.gltf"></a-asset-item>
+          <a-asset-item id="case_5.gltf" src="assets/chem-lab/case_5.gltf"></a-asset-item>
+          <a-asset-item id="chemlab_UI.gltf" src="assets/chem-lab/chemlab_UI.gltf"></a-asset-item>
+          <a-asset-item id="countertop.gltf" src="assets/chem-lab/countertop.gltf"></a-asset-item>
+          <a-asset-item id="deskchaircomp.gltf" src="assets/chem-lab/deskchaircomp.gltf"></a-asset-item>
+          <a-asset-item id="deskchaircomputer.gltf" src="assets/chem-lab/deskchaircomputer.gltf"></a-asset-item>
+          <a-asset-item id="drawer_a.gltf" src="assets/chem-lab/drawer_a.gltf"></a-asset-item>
+          <a-asset-item id="drawer_b.gltf" src="assets/chem-lab/drawer_b.gltf"></a-asset-item>
+          <a-asset-item id="drawer_c.gltf" src="assets/chem-lab/drawer_c.gltf"></a-asset-item>
+          <a-asset-item id="drawer_d.gltf" src="assets/chem-lab/drawer_d.gltf"></a-asset-item>
+          <a-asset-item id="drawer_e.gltf" src="assets/chem-lab/drawer_e.gltf"></a-asset-item>
+          <a-asset-item id="drawer_f.gltf" src="assets/chem-lab/drawer_f.gltf"></a-asset-item>
+          <a-asset-item id="drawer_g.gltf" src="assets/chem-lab/drawer_g.gltf"></a-asset-item>
+          <a-asset-item id="drawer_h.gltf" src="assets/chem-lab/drawer_h.gltf"></a-asset-item>
+          <a-asset-item id="drawer_i.gltf" src="assets/chem-lab/drawer_i.gltf"></a-asset-item>
+          <a-asset-item id="drawer_j.gltf" src="assets/chem-lab/drawer_j.gltf"></a-asset-item>
+          <a-asset-item id="drawer_k.gltf" src="assets/chem-lab/drawer_k.gltf"></a-asset-item>
+          <a-asset-item id="drawer_l.gltf" src="assets/chem-lab/drawer_l.gltf"></a-asset-item>
+          <a-asset-item id="drawer_m.gltf" src="assets/chem-lab/drawer_m.gltf"></a-asset-item>
+          <a-asset-item id="drawercabbase.gltf" src="assets/chem-lab/drawercabbase.gltf"></a-asset-item>
+          <a-asset-item id="faucet.gltf" src="assets/chem-lab/faucet.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_left_black.gltf" src="assets/chem-lab/fumehood_knob_left_black.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_left_blue.gltf" src="assets/chem-lab/fumehood_knob_left_blue.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_left_green.gltf" src="assets/chem-lab/fumehood_knob_left_green.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_left_yellow.gltf" src="assets/chem-lab/fumehood_knob_left_yellow.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_right_black.gltf" src="assets/chem-lab/fumehood_knob_right_black.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_right_blue.gltf" src="assets/chem-lab/fumehood_knob_right_blue.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_right_green.gltf" src="assets/chem-lab/fumehood_knob_right_green.gltf"></a-asset-item>
+          <a-asset-item id="fumehood_knob_right_yellow.gltf" src="assets/chem-lab/fumehood_knob_right_yellow.gltf"></a-asset-item>
+          <a-asset-item id="fumehood.gltf" src="assets/chem-lab/fumehood.gltf"></a-asset-item>
+          <a-asset-item id="wallshelves.gltf" src="assets/chem-lab/wallshelves.gltf"></a-asset-item>
+          <a-asset-item id="bottle.gltf" src="assets/chem-lab/bottle.gltf"></a-asset-item>
+          <a-asset-item id="bunsenburner.gltf" src="assets/chem-lab/bunsenburner.gltf"></a-asset-item>
+          <a-asset-item id="doors.gltf" src="assets/chem-lab/doors.gltf"></a-asset-item>
+          <a-asset-item id="goggles.gltf" src="assets/chem-lab/goggles.gltf"></a-asset-item>
+          <a-asset-item id="room.gltf" src="assets/chem-lab/room.gltf"></a-asset-item>
+          <a-asset-item id="scale.gltf" src="assets/chem-lab/scale.gltf"></a-asset-item>
+
+          <!-- Video Imports -->
+          <video id="reagentvid-3" autoplay="" loop="" src="/reaction_3.392bd3a0.mp4"></video>
+          <video id="reagentvid-7" loop="" src="/reaction_7.986fa9d2.mp4"></video>
+          <video id="reagentvid-9" loop="" src="/reaction_9.425c2256.mp4"></video>
+          <video id="reagentvid-10" loop="" src="/reaction_10.0dc22421.mp4"></video>
+          <video id="reagentvid-13" loop="" src="/reaction_13.478a4c2e.mp4"></video>
+          <video id="reagentvid-14" loop="" src="/reaction_14.a64ee8d1.mp4"></video>
+          <video id="reagentvid-15" loop="" src="/reaction_15.6baf79c2.mp4"></video>
+          <video id="reagentvid-16" loop="" src="/reaction_16.f98de791.mp4"></video>
+          <video id="reagentvid-17" loop="" src="/reaction_17.ff9224f7.mp4"></video>
+          <video id="reagentvid-18" loop="" src="/reaction_18.7d67a51a.mp4"></video>
+
+          <!-- Mixins -->
+          <a-mixin id="cube" cube-mixin="" track-movement="" droppable-item="" tabindex="0" shadow=""></a-mixin>
+          <a-mixin id="lab-table-mixin" droppable="" event-set__dragon="_event: dragover-start; wireframe: true" event-set__dragoff="_event: dragover-end; wireframe: false;"></a-mixin>
+          <a-mixin id="transformer" color-randomizer="" droppable="" static-body="" collision-filter="collisionForces: false" geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"></a-mixin>
+          <!-- to customize gaze cursor appearance. must list all components
+             because override property is set on progressive-controls -->
+          <a-mixin id="mycursor" position="0 0 -0.5" raycaster="" geometry="primitive: ring; radiusOuter: 0.008; radiusInner: 0.005; segmentsTheta: 32" material="color: white; shader: flat" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection;
                               colliderEventProperty: els;
                               colliderEndEvent:raycaster-intersection-cleared;
                               colliderEndEventProperty: clearedEls;
-                              colliderState:"></a-mixin>  <a-mixin id="mytouch" physics-collider="" phase-shift="" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions; colliderEventProperty: els;
+                              colliderState:"></a-mixin>
+          <!-- to change touch mode collider -->
+          <a-mixin id="mytouch" physics-collider="" phase-shift="" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions; colliderEventProperty: els;
                               colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;
-                              colliderState:"></a-mixin> </a-asset-item></a-asset-item></a-assets>  <a-box id="lab-table" droppable-surface="" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-9.459530372134438 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" visible scale="1.4 1 1.32" droppable=""></a-box>   <a-entity id="acidcab_a.gltf" gltf-model="#acidcab_a.gltf"></a-entity> <a-entity id="acidcab_b.gltf" gltf-model="#acidcab_b.gltf"></a-entity> <a-entity id="acidcab_c.gltf" gltf-model="#acidcab_c.gltf"></a-entity> <a-entity id="acidcab_case_1.gltf" gltf-model="#acidcab_case_1.gltf"></a-entity> <a-entity id="acidcab_case_2.gltf" gltf-model="#acidcab_case_2.gltf"></a-entity> <a-entity id="acidcab_case_3.gltf" gltf-model="#acidcab_case_3.gltf"></a-entity> <a-entity id="background.gltf" gltf-model="#background.gltf"></a-entity> <a-entity id="cab_base.gltf" gltf-model="#cab_base.gltf"></a-entity> <a-entity id="cabinet_a1.gltf" gltf-model="#cabinet_a1.gltf"></a-entity> <a-entity id="cabinet_a2.gltf" gltf-model="#cabinet_a2.gltf"></a-entity> <a-entity id="cabinet_b1.gltf" gltf-model="#cabinet_b1.gltf"></a-entity> <a-entity id="cabinet_b2.gltf" gltf-model="#cabinet_b2.gltf"></a-entity> <a-entity id="cabinet_c1.gltf" gltf-model="#cabinet_c1.gltf"></a-entity> <a-entity id="cabinet_c2.gltf" gltf-model="#cabinet_c2.gltf"></a-entity> <a-entity id="case_1.gltf" gltf-model="#case_1.gltf"></a-entity> <a-entity id="case_2.gltf" gltf-model="#case_2.gltf"></a-entity> <a-entity id="case_3.gltf" gltf-model="#case_3.gltf"></a-entity> <a-entity id="case_4.gltf" gltf-model="#case_4.gltf"></a-entity> <a-entity id="case_5.gltf" gltf-model="#case_5.gltf"></a-entity> <a-entity id="countertop.gltf" droppable-surface="" gltf-model="#countertop.gltf"></a-entity> <a-entity id="deskchaircomp.gltf" droppable-surface="" gltf-model="#deskchaircomp.gltf"></a-entity> <a-entity id="deskchaircomputer.gltf" droppable-surface="" gltf-model="#deskchaircomputer.gltf"></a-entity> <a-entity id="drawer_a.gltf" gltf-model="#drawer_a.gltf"></a-entity> <a-entity id="drawer_b.gltf" gltf-model="#drawer_b.gltf"></a-entity> <a-entity id="drawer_c.gltf" gltf-model="#drawer_c.gltf"></a-entity> <a-entity id="drawer_d.gltf" gltf-model="#drawer_d.gltf"></a-entity> <a-entity id="drawer_e.gltf" gltf-model="#drawer_e.gltf"></a-entity> <a-entity id="drawer_f.gltf" gltf-model="#drawer_f.gltf"></a-entity> <a-entity id="drawer_g.gltf" gltf-model="#drawer_g.gltf"></a-entity> <a-entity id="drawer_h.gltf" gltf-model="#drawer_h.gltf"></a-entity> <a-entity id="drawer_i.gltf" gltf-model="#drawer_i.gltf"></a-entity> <a-entity id="drawer_j.gltf" gltf-model="#drawer_j.gltf"></a-entity> <a-entity id="drawer_k.gltf" gltf-model="#drawer_k.gltf"></a-entity> <a-entity id="drawer_l.gltf" gltf-model="#drawer_l.gltf"></a-entity> <a-entity id="drawer_m.gltf" gltf-model="#drawer_m.gltf"></a-entity> <a-entity id="drawercabbase.gltf" gltf-model="#drawercabbase.gltf"></a-entity> <a-entity id="faucet.gltf" gltf-model="#faucet.gltf"></a-entity> <a-entity id="fumehood_knob_left_black.gltf" gltf-model="#fumehood_knob_left_black.gltf"></a-entity> <a-entity id="fumehood_knob_left_blue.gltf" gltf-model="#fumehood_knob_left_blue.gltf"></a-entity> <a-entity id="fumehood_knob_left_green.gltf" gltf-model="#fumehood_knob_left_green.gltf"></a-entity> <a-entity id="fumehood_knob_left_yellow.gltf" gltf-model="#fumehood_knob_left_yellow.gltf"></a-entity> <a-entity id="fumehood_knob_right_black.gltf" gltf-model="#fumehood_knob_right_black.gltf"></a-entity> <a-entity id="fumehood_knob_right_blue.gltf" gltf-model="#fumehood_knob_right_blue.gltf"></a-entity> <a-entity id="fumehood_knob_right_green.gltf" gltf-model="#fumehood_knob_right_green.gltf"></a-entity> <a-entity id="fumehood_knob_right_yellow.gltf" gltf-model="#fumehood_knob_right_yellow.gltf"></a-entity> <a-entity id="fumehood.gltf" droppable-surface="" gltf-model="#fumehood.gltf"></a-entity> <a-entity id="wallshelves.gltf" droppable-surface="" gltf-model="#wallshelves.gltf"></a-entity> <a-entity id="bunsenburner.gltf" gltf-model="#bunsenburner.gltf"></a-entity> <a-entity id="doors.gltf" gltf-model="#doors.gltf"></a-entity> <a-entity id="goggles.gltf" gltf-model="#goggles.gltf"></a-entity> <a-entity id="room.gltf" gltf-model="#room.gltf"></a-entity> <a-entity id="scale.gltf" droppable-surface="" gltf-model="#scale.gltf"></a-entity>  <a-entity id="point-light-1" light="type:point;decay:.5;intensity:.6;" position="-4 5.526 0"></a-entity> <a-entity id="point-light-2" light="type:point;decay:.5;intensity:.6;" position="4 5.526 0"></a-entity> <a-entity id="lab-light-1" light="type:spot;penumbra:1;castShadow:true;decay:0.6;intensity:0.3"></a-entity>        <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" rotation="0 0 0" position="-10 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-01MNa2CO3" data-inventory-id="01MNa2CO3" gltf-model="#01MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9.5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-1MNa2CO3" data-inventory-id="1MNa2CO3" gltf-model="#1MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-01MNaBr" data-inventory-id="01MNaBr" gltf-model="#01MNaBr-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8.5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-03MAgNO3" data-inventory-id="03MAgNO3" gltf-model="#03MAgNO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-3MHCl" data-inventory-id="3MHCl" gltf-model="#3MHCl-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7.5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-3MNaOH" data-inventory-id="3MNaOH" gltf-model="#3MNaOH-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-013CuSO4" data-inventory-id="013CuSO4" gltf-model="#013CuSO4-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6.5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5.5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5 5.723517532020134 -7.613044906943596"></a-entity> <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" position="-4.706 5.629 4.025"></a-entity>    <a-box id="floor" static-body="" width="100" height="0.001" depth="100" visible></a-box>  <a-entity id="active-item-indicator" active-item-indicator="offset:0 -.4 0;" scale=".3 .3 .3"> <a-entity id="indicator-2" geometry="primitive:octahedron;radius:0.73" material="color:#bd1f4f;width:300;roughness:.5;metalness:1;" animation="property: position; dir: alternate; dur: 500;
+                              colliderState:"></a-mixin>
+    </a-asset-item></a-asset-item></a-assets>
+
+    <!-- Surfaces -->
+    <a-box id="lab-table" droppable-surface="" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-9.459530372134438 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
+    <!-- <a-box id="lab-table-right" droppable-surface material="opacity: 0;" lab-table mixin="lab-table-mixin" static-body rotation="0 90 0" position="-0.6769794454621264 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" scale="1.4 1 1.32" droppabld></a-box> -->
+
+    <!-- Chem lab -->
+    <a-entity id="acidcab_a.gltf" gltf-model="#acidcab_a.gltf"></a-entity>
+    <a-entity id="acidcab_b.gltf" gltf-model="#acidcab_b.gltf"></a-entity>
+    <a-entity id="acidcab_c.gltf" gltf-model="#acidcab_c.gltf"></a-entity>
+    <a-entity id="acidcab_case_1.gltf" gltf-model="#acidcab_case_1.gltf"></a-entity>
+    <a-entity id="acidcab_case_2.gltf" gltf-model="#acidcab_case_2.gltf"></a-entity>
+    <a-entity id="acidcab_case_3.gltf" gltf-model="#acidcab_case_3.gltf"></a-entity>
+    <a-entity id="background.gltf" gltf-model="#background.gltf"></a-entity>
+    <a-entity id="cab_base.gltf" gltf-model="#cab_base.gltf"></a-entity>
+    <a-entity id="cabinet_a1.gltf" gltf-model="#cabinet_a1.gltf"></a-entity>
+    <a-entity id="cabinet_a2.gltf" gltf-model="#cabinet_a2.gltf"></a-entity>
+    <a-entity id="cabinet_b1.gltf" gltf-model="#cabinet_b1.gltf"></a-entity>
+    <a-entity id="cabinet_b2.gltf" gltf-model="#cabinet_b2.gltf"></a-entity>
+    <a-entity id="cabinet_c1.gltf" gltf-model="#cabinet_c1.gltf"></a-entity>
+    <a-entity id="cabinet_c2.gltf" gltf-model="#cabinet_c2.gltf"></a-entity>
+    <a-entity id="case_1.gltf" gltf-model="#case_1.gltf"></a-entity>
+    <a-entity id="case_2.gltf" gltf-model="#case_2.gltf"></a-entity>
+    <a-entity id="case_3.gltf" gltf-model="#case_3.gltf"></a-entity>
+    <a-entity id="case_4.gltf" gltf-model="#case_4.gltf"></a-entity>
+    <a-entity id="case_5.gltf" gltf-model="#case_5.gltf"></a-entity>
+    <a-entity id="countertop.gltf" droppable-surface="" gltf-model="#countertop.gltf"></a-entity>
+    <a-entity id="deskchaircomp.gltf" droppable-surface="" gltf-model="#deskchaircomp.gltf"></a-entity>
+    <a-entity id="deskchaircomputer.gltf" droppable-surface="" gltf-model="#deskchaircomputer.gltf"></a-entity>
+    <a-entity id="drawer_a.gltf" gltf-model="#drawer_a.gltf"></a-entity>
+    <a-entity id="drawer_b.gltf" gltf-model="#drawer_b.gltf"></a-entity>
+    <a-entity id="drawer_c.gltf" gltf-model="#drawer_c.gltf"></a-entity>
+    <a-entity id="drawer_d.gltf" gltf-model="#drawer_d.gltf"></a-entity>
+    <a-entity id="drawer_e.gltf" gltf-model="#drawer_e.gltf"></a-entity>
+    <a-entity id="drawer_f.gltf" gltf-model="#drawer_f.gltf"></a-entity>
+    <a-entity id="drawer_g.gltf" gltf-model="#drawer_g.gltf"></a-entity>
+    <a-entity id="drawer_h.gltf" gltf-model="#drawer_h.gltf"></a-entity>
+    <a-entity id="drawer_i.gltf" gltf-model="#drawer_i.gltf"></a-entity>
+    <a-entity id="drawer_j.gltf" gltf-model="#drawer_j.gltf"></a-entity>
+    <a-entity id="drawer_k.gltf" gltf-model="#drawer_k.gltf"></a-entity>
+    <a-entity id="drawer_l.gltf" gltf-model="#drawer_l.gltf"></a-entity>
+    <a-entity id="drawer_m.gltf" gltf-model="#drawer_m.gltf"></a-entity>
+    <a-entity id="drawercabbase.gltf" gltf-model="#drawercabbase.gltf"></a-entity>
+    <a-entity id="faucet.gltf" gltf-model="#faucet.gltf"></a-entity>
+    <a-entity id="fumehood_knob_left_black.gltf" gltf-model="#fumehood_knob_left_black.gltf"></a-entity>
+    <a-entity id="fumehood_knob_left_blue.gltf" gltf-model="#fumehood_knob_left_blue.gltf"></a-entity>
+    <a-entity id="fumehood_knob_left_green.gltf" gltf-model="#fumehood_knob_left_green.gltf"></a-entity>
+    <a-entity id="fumehood_knob_left_yellow.gltf" gltf-model="#fumehood_knob_left_yellow.gltf"></a-entity>
+    <a-entity id="fumehood_knob_right_black.gltf" gltf-model="#fumehood_knob_right_black.gltf"></a-entity>
+    <a-entity id="fumehood_knob_right_blue.gltf" gltf-model="#fumehood_knob_right_blue.gltf"></a-entity>
+    <a-entity id="fumehood_knob_right_green.gltf" gltf-model="#fumehood_knob_right_green.gltf"></a-entity>
+    <a-entity id="fumehood_knob_right_yellow.gltf" gltf-model="#fumehood_knob_right_yellow.gltf"></a-entity>
+    <a-entity id="fumehood.gltf" droppable-surface="" gltf-model="#fumehood.gltf"></a-entity>
+    <a-entity id="wallshelves.gltf" droppable-surface="" gltf-model="#wallshelves.gltf"></a-entity>
+    <a-entity id="bunsenburner.gltf" gltf-model="#bunsenburner.gltf"></a-entity>
+    <a-entity id="doors.gltf" gltf-model="#doors.gltf"></a-entity>
+    <a-entity id="goggles.gltf" gltf-model="#goggles.gltf"></a-entity>
+    <a-entity id="room.gltf" gltf-model="#room.gltf"></a-entity>
+    <a-entity id="scale.gltf" droppable-surface="" gltf-model="#scale.gltf"></a-entity>
+
+    <!-- Lights -->
+    <a-entity id="point-light-1" light="type:point;decay:.5;intensity:.6;" position="-4 5.526 0"></a-entity>
+    <a-entity id="point-light-2" light="type:point;decay:.5;intensity:.6;" position="4 5.526 0"></a-entity>
+
+    <a-entity id="lab-light-1" light="type:spot;penumbra:1;castShadow:true;decay:0.6;intensity:0.3"></a-entity>
+
+    <!-- <a-entity id="light-top" light="intensity:3;castShadow:true;color:#848484;" position="0 20 0"></a-entity> -->
+    <!-- <a-entity id="light-bottom" light="intensity:3;castShadow:true;color:#848484;" position="0 -20 0"></a-entity> -->
+    <!-- <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="-20 0 0"></a-entity> -->
+    <!-- <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="20 0 0"></a-entity> -->
+    <!-- <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="0 0 20"></a-entity> -->
+    <!-- <a-entity light="intensity:.8;castShadow:true;color:#848484;" position="0 0 -20"></a-entity> -->
+
+    <!-- Bottle -->
+    <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" rotation="0 0 0" position="-10 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-01MNa2CO3" data-inventory-id="01MNa2CO3" gltf-model="#01MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-1MNa2CO3" data-inventory-id="1MNa2CO3" gltf-model="#1MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-01MNaBr" data-inventory-id="01MNaBr" gltf-model="#01MNaBr-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-03MAgNO3" data-inventory-id="03MAgNO3" gltf-model="#03MAgNO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-3MHCl" data-inventory-id="3MHCl" gltf-model="#3MHCl-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-3MNaOH" data-inventory-id="3MNaOH" gltf-model="#3MNaOH-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-013CuSO4" data-inventory-id="013CuSO4" gltf-model="#013CuSO4-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" position="-4.706 5.629 4.025"></a-entity>
+
+    <!-- Video Player -->
+    <!-- <a-cylinder id="videoPlayer" video-player position="-.5 6 -9"></a-cylinder> -->
+
+    <!-- Surfaces -->
+    <a-box id="floor" static-body="" width="100" height="0.001" depth="100" material="visible:false;"></a-box>
+    <!-- <a-box id="lab-table-2" static-body position="5.306 3.74 5.709206888896392" geometry="width:2.02;height:0.001;depth:5.05" visible="false" scale="1.4 1 1.32" droppable></a-box>
+    <a-box id="counter-cube-1" droppable static-body="sphereRadius:NaN" position="5.486 1.7307183794169922 1.022" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.1 15 1.59"></a-box>
+    <a-box id="counter-cube-2" droppable static-body="sphereRadius:NaN" position="6.942684344932919 3.9395950285063233 0.9949989769798131" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="0.3 1.6 1.61"></a-box>
+    <a-box id="cabinet-cube" droppable static-body="sphereRadius:NaN" position="6.001998003423236 7.591735717206429 0.9706942652160826" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.3 10 1.59"></a-box>
+    <a-box id="lab-wall-1" droppable static-body="sphereRadius:NaN" position="-0.5 5.942415778207673 -9.974687672434799" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-2" droppable static-body="sphereRadius:NaN" position="-0.49754233523271935 5.930396328895224 10.033313161806557" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9 1 1.18"></a-box>
+    <a-box id="lab-wall-3" droppable static-body="sphereRadius:NaN" position="-7.992320023898882 6.004174108680734 -4.514686644104824" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 1.08"></a-box>
+    <a-box id="lab-wall-4" droppable static-body="sphereRadius:NaN" position="-7.92 5.978 6.984131584500425" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.3 1 0.59"></a-box>
+    <a-box id="lab-wall-5" droppable static-body="sphereRadius:NaN" position="-8.005 10.023577992343242 2.48" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3005"></a-box>
+    <a-box id="lab-wall-6" droppable static-body="sphereRadius:NaN" position="6.932238758932265 6.0619211100377175 0.022311436510410676" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1.98"></a-box>
+    <a-box id="stockroom-wall-1" droppable static-body="sphereRadius:NaN" position="-15.93704173109042 5.994 -0.06701135828178277" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-2" droppable static-body="sphereRadius:NaN" position="-15.937 5.994 10.054867134911351" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="90 0 0" scale="9.3 1 1.18"></a-box>
+    <a-box id="stockroom-wall-3" droppable static-body="sphereRadius:NaN" position="-23.555594807773062 6.007045499991121 4.910897496114819" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.31 1 1"></a-box>
+    <a-box id="stockroom-wall-4" droppable static-body="sphereRadius:NaN" position="-8.434000000000017 6.0230640830568145 6.9965046332318535" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.59"></a-box>
+    <a-box id="stockroom-wall-5" droppable static-body="sphereRadius:NaN" position="-8.404363985214019 6.023 0.4951661711531061" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="7.4 1 0.1"></a-box>
+    <a-box id="stockroom-wall-6" droppable static-body="sphereRadius:NaN" position="-8.432820679332744 10.008757533631579 2.5107725059454316" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false" rotation="0 0 90" scale="2.47 1 0.3"></a-box>
+    <a-box id="stockroom-shelf-1" droppable static-body="sphereRadius:NaN" position="-22.69 4.134243489980758 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    <a-box id="stockroom-shelf-2" droppable static-body="sphereRadius:NaN" position="-22.69 5.597969640669048 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box>
+    <a-box id="stockroom-shelf-3" droppable static-body="sphereRadius:NaN" position="-22.69 7.103421505770071 5.01" material="color:pink" geometry="width:1.61;height:0.2;depth:10.05" visible="false"></a-box> -->
+
+    <a-entity id="active-item-indicator" active-item-indicator="offset:0 -.4 0;" scale=".3 .3 .3">
+      <a-entity id="indicator-2" geometry="primitive:octahedron;radius:0.73" material="color:#bd1f4f;width:300;roughness:.5;metalness:1;" animation="property: position; dir: alternate; dur: 500;
         easing: easeInSine; loop: true; to: 0 1.3 0" animation__rotation="property: rotation; dir: forward; dur: 3300;
-        easing: linear; loop: true; to: 0 360 0"></a-entity> </a-entity>     <a-entity id="camera" position="0 6 0" camera="active:true" wasd-controls="acceleration:220;fly:false;" look-controls="pointerLockEnabled:false">   <a-entity hud="" gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".2 .2 .2" position="0 -1.174 -0.5"> <a-entity video-player="" material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity> </a-entity>   </a-entity> </a-scene> </body> </html>
+        easing: linear; loop: true; to: 0 360 0"></a-entity>
+    </a-entity>
+
+
+
+
+    <!-- Camera / Hands -->
+    <!-- @todo: incorportate hands -->
+    <!-- <a-entity position="0 4 0" rotation="0 0 0" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
+      <a-entity id="rhand" class="right-controller"></a-entity>
+      <a-entity id="lhand" class="left-controller"></a-entity>
+      <a-entity id="camera" position="0 0 0" camera track-movement wasd-controls="acceleration:220;fly:false;" look-controls="pointerLockEnabled:true"></a-entity>
+    </a-entity> -->
+
+    <!-- Default Camera -->
+    <a-entity id="camera" position="0 6 0" camera="active:true" wasd-controls="acceleration:220;fly:false;" look-controls="pointerLockEnabled:false">
+      <!-- @todo: add this for vr -->
+      <!-- <a-cursor material="color:orange;"></a-cursor> -->
+
+      <a-entity hud="" gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".2 .2 .2" position="0 -1.174 -0.5">
+        <a-entity video-player="" material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity>
+      </a-entity>
+
+
+      <!-- HUD -->
+      <!-- <a-entity geometry="primitive:plane;width:4" hud position="0 -2 -1.8" rotation="-4 0 0" material="color:#333333;opacity:0.5;">
+        <a-entity position="-1.95 .43 0">
+          <a-entity scale=".4 .4 .4">
+            <a-text value="Reagents" scale="1.5 1.5 1.5"></a-text>
+            <a-entity class="reagentsTemplate" position="0 -.4 0"></a-entity>
+          </a-entity>
+        </a-entity>
+        <a-entity position="1.3 0 0">
+          <a-entity scale=".4 .4 .4">
+            <a-entity id="mixReagentsButton">
+              <a-entity class="message" text="value:Invalid reagent combination; align:center;" scale="5 5 5" position="0 .7 0"></a-entity>
+              <a-entity class="box" geometry="depth: 0.1; height: 1; width: 2" material="color: gray">
+                <a-entity class="button-text" text="value:Mix Reagents;align:center;" position="-.2 .1 .3" scale="5 5 5"></a-entity>
+              </a-entity>
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity> -->
+
+    </a-entity>
+
+
+  </a-scene>
+</body>
+
+</html>

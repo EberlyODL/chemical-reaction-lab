@@ -35,6 +35,7 @@ AFRAME.registerComponent("active-item-indicator", {
     this.el.setAttribute("visible", false);
 
     this.el.sceneEl.addEventListener("droppable-surface-active-item-added", e => {
+      console.log('e', e);
       this.updateIndicator(e.detail)
     });
 
