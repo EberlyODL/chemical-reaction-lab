@@ -1,34 +1,28 @@
 import 'aframe'
-import client from '../apollo/client'
 import registerComponent from '../utils/registerComponent';
-import { isEqual } from 'lodash'
-import { autorun } from 'mobx';
-import { videoState } from '../state/video';
-// import { store$ } from '../state/state';
+import { observe, autorun } from 'mobx';
+import { store } from '../state/state';
 
 const videoPlayer = {
   schema: {
   },
 
   init: function () {
-    autorun(() => {
-      this.update()
-    })
+    observe(store.video, change => this.updateVideoPlayer(store.video))
   },
 
-  update: function () {
-    const video = Object.assign({}, videoState)
+  updateVideoPlayer: function (video) {
     if (video.status === 'off') {
       this.el.setAttribute('visible', false)
-      if (video.videoId) {
-        const videoEl = this.el.sceneEl.querySelector(video.videoId)
+      if (video.video) {
+        const videoEl = this.el.sceneEl.querySelector(video.video)
         videoEl.stop()
       }
     }
     if (video.status === 'on') {
-      const videoEl = this.el.sceneEl.querySelector(video.videoId)
+      const videoEl = this.el.sceneEl.querySelector(video.video)
       this.el.setAttribute('visible', true)
-      this.el.setAttribute('material', `src:${video.videoId};`)
+      this.el.setAttribute('material', `src:${video.video};`)
       videoEl.play()
     }
   }

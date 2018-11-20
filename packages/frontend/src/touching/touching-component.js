@@ -32,7 +32,6 @@ const touching = {
     const touching = (distance < this.data.distance)
     // dirty check to find out when we switch to a new state
     if (touching !== this._touching) {
-      console.log(touching)
       // if we switched to a new state then we need to notify the store
       switch (touching) {
         case true:

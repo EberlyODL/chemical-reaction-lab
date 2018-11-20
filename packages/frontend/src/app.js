@@ -9,6 +9,7 @@ import 'aframe-motion-capture-components'
 import 'aframe-log-component'
 import 'aframe-video-controls'
 import 'aframe-animation-component'
+import 'aframe-gltf-part-component'
 import '@odl/aframe-droppable-surface-component'
 import '@odl/aframe-raycaster-follower-component'
 import 'three'
@@ -29,7 +30,10 @@ import './video-player/video-player'
 import './track-movement/track-movement'
 import { setElementsTrackedPositions, updateTrackedElement, resetTrackedElements } from './apollo/trackedElements'
 import { login } from "./apollo/user";
-import { $selectedObjects, selectObject, unselectObject } from './apollo/selectedObjects';
+import { $selectedObjects, selectObject, unselectObject, findVideo } from './apollo/selectedObjects';
+import { store } from './state/state';
+import { videoMatrix } from './state/constants'
+import { autorun, observe } from 'mobx';
 
 document.addEventListener('DOMContentLoaded', async () => {
   // get the scene
@@ -46,27 +50,42 @@ document.addEventListener('DOMContentLoaded', async () => {
   scene.addEventListener('touching-ended', e => {
     const inventoryId = e.target.dataset.inventoryId
     if (inventoryId) {
-      unselectObject(inventoryId)
+      store.selectedObjects.remove(inventoryId)
+      // unselectObject(inventoryId)
     }
   })
-  scene.addEventListener('loaded', (e) => {
-    // listen for bottles touching each other
-    scene.addEventListener('touching-initiated', e => {
-      const inventoryId = e.target.dataset.inventoryId
-      selectObject(inventoryId)
-    })
-    // update track position when an element moves in the scene
-    scene.addEventListener('track-movement', e => {
-      const properties = e.detail
-      const elementId = e.target.id
-      updateTrackedElement({ properties, elementId })
-    })
-    scene.addEventListener('track-movement-reset', e => {
-      // resetTrackedElements()
-    })
 
+  // listen for bottles touching each other
+  scene.addEventListener('touching-initiated', e => {
+    const inventoryId = e.target.dataset.inventoryId
+    const exists = store.selectedObjects.find(i => i === inventoryId)
+    if (!exists) {
+      store.selectedObjects.push(inventoryId)
+    }
+    // selectObject(inventoryId)
+  })
+  // update track position when an element moves in the scene
+  scene.addEventListener('track-movement', e => {
+    const properties = e.detail
+    const elementId = e.target.id
+    updateTrackedElement({ properties, elementId })
+  })
+  scene.addEventListener('track-movement-reset', e => {
+    // resetTrackedElements()
+  })
 
-    // just do old school state management
-    
+  scene.addEventListener('hud-button-initiate-clicked', e => {
+    // if the video is off then we want to find out if this i
+    if (store.video.status === 'off') {
+      if (store.activeVideoCombination) {
+        store.video.video = store.activeVideoCombination
+        store.video.status = 'on'
+      }
+    }
+    if (store.video.status === 'on') {
+      store.video.status = 'off'
+    }
   })
 })
+
+window.CRL_STATE = store

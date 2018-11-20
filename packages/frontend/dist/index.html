@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <a-scene physics="gravity: -51; debug:false;" renderer="antialias: true; gammaOutput: true; sortObjects: true;">
+  <a-scene loading-screen="dotsColor:red; backgroundColor:black; enabled:true" cursor="rayOrigin: mouse;" physics="gravity: -51; debug:false;" renderer="antialias: true; gammaOutput: true; gammaFactor: 2.2; sortObjects: true;">
     <a-assets>
       <!-- Objects -->
       <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item>
@@ -112,7 +112,6 @@
 
     <!-- Surfaces -->
     <a-box id="lab-table" droppable-surface="" lab-table="" mixin="lab-table-mixin" static-body="" rotation="0 90 0" position="-9.459530372134438 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" visible="false" scale="1.4 1 1.32" droppable=""></a-box>
-    <!-- <a-box id="lab-table-right" droppable-surface material="opacity: 0;" lab-table mixin="lab-table-mixin" static-body rotation="0 90 0" position="-0.6769794454621264 3.881 -6.8842553482862305" geometry="width:1.71;height:0.001;depth:5" scale="1.4 1 1.32" droppabld></a-box> -->
 
     <!-- Chem lab -->
     <a-entity id="acidcab_a.gltf" gltf-model="#acidcab_a.gltf"></a-entity>
@@ -121,7 +120,6 @@
     <a-entity id="acidcab_case_1.gltf" gltf-model="#acidcab_case_1.gltf"></a-entity>
     <a-entity id="acidcab_case_2.gltf" gltf-model="#acidcab_case_2.gltf"></a-entity>
     <a-entity id="acidcab_case_3.gltf" gltf-model="#acidcab_case_3.gltf"></a-entity>
-    <a-entity id="background.gltf" gltf-model="#background.gltf"></a-entity>
     <a-entity id="cab_base.gltf" gltf-model="#cab_base.gltf"></a-entity>
     <a-entity id="cabinet_a1.gltf" gltf-model="#cabinet_a1.gltf"></a-entity>
     <a-entity id="cabinet_a2.gltf" gltf-model="#cabinet_a2.gltf"></a-entity>
@@ -206,7 +204,6 @@
         easing: linear; loop: true; to: 0 360 0"></a-entity>
     </a-entity>
 
-
     <!-- Camera / Hands -->
     <!-- @todo: incorportate hands -->
     <!-- <a-entity position="0 4 0" rotation="0 0 0" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
@@ -216,13 +213,20 @@
     </a-entity> -->
 
     <!-- Default Camera -->
-    <a-entity id="camera" position="0 6 0" look-controls="pointerLockEnabled:true" camera="active:true" wasd-controls="acceleration:220;fly:false;" movement-controls="controls:checkpoint" checkpoint-controls="mode:teleport">
-      <a-entity id="vr-cursor" cursor="" position="0 0 -0.1" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;" material="color: #CCC; shader: flat;"></a-entity>
-      <a-entity hud="" gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".2 .2 .2" position="0 -1.174 -0.5">
-        <a-entity video-player="" material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity>
+    <a-entity id="camera" position="0 6 0" look-controls="pointerLockEnabled:false" camera="active:true" wasd-controls="acceleration:220;fly:false;" movement-controls="controls:checkpoint" checkpoint-controls="mode:teleport">
+      <!-- <a-entity id="vr-cursor" cursor position="0 0 -0.1" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;" material="color: #CCC; shader: flat;"></a-entity> -->
+      <a-entity hud="" gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".1 .1 .1" position="0 -0.6 -0.8">
+        <a-text hud-reagents="" value="hey
+        there
+        everyone" rotation="-18.359915698322236 106.78607197088832 -5.69439422851283" text="" position="-1.3838973914076411 -0.11896461691933975 5.781030367041764"> </a-text>
+        <a-entity hud-button-initiate="" gltf-part="src:#chemlab_UI.gltf;part:button_initiate" position="0.03311036825145217 0.03706075433533758 0.01550400048195931" material="visible:false"></a-entity>
+        <a-entity video-player="" material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity> 
+        <a-entity id="hud-lights-greenLight" geometry="primitive:sphere" material="color:green;" position="-2.57 1.626 -1.79" scale="0.181 0.181 0.181"></a-entity>
+        <a-entity id="hud-lights-redLight" geometry="primitive:sphere" material="color:red;" position="-2.495727412390534 1.1862354462609086 -1.7996116816989953" scale="0.181 0.181 0.181"></a-entity>
+        <a-entity id="hud-activate-arrow" hud-arrow="" position="-2.556 2.839 -0.406"></a-entity>
+        <a-entity id="hud-deactivate-arrow" hud-arrow="" position="-1.336 -1.123 -0.01" rotation="0 0 180"></a-entity>
       </a-entity>
     </a-entity>
-
 
   </a-scene>
 </body>

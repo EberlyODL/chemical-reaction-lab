@@ -17,6 +17,7 @@
     "aframe-animation-component": "^5.1.2",
     "aframe-event-set-component": "^4.1.1",
     "aframe-extras": "^4.1.2",
+    "aframe-gltf-part-component": "^1.2.0",
     "aframe-gui": "^0.2.1",
     "aframe-log-component": "^1.0.7",
     "aframe-look-at-component": "^0.6.0",
