@@ -216,15 +216,13 @@
     <a-entity id="camera" position="0 6 0" look-controls="pointerLockEnabled:false" camera="active:true" wasd-controls="acceleration:220;fly:false;" movement-controls="controls:checkpoint" checkpoint-controls="mode:teleport">
       <!-- <a-entity id="vr-cursor" cursor position="0 0 -0.1" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002;" material="color: #CCC; shader: flat;"></a-entity> -->
       <a-entity hud="" gltf-model="#chemlab_UI.gltf" rotation="0 -90 0" scale=".1 .1 .1" position="0 -0.6 -0.8">
-        <a-text hud-reagents="" value="hey
-        there
-        everyone" rotation="-18.359915698322236 106.78607197088832 -5.69439422851283" text="" position="-1.3838973914076411 -0.11896461691933975 5.781030367041764"> </a-text>
+        <a-text hud-reagents="" value="" rotation="-18.359915698322236 106.78607197088832 -5.69439422851283" text="" position="-1.3838973914076411 -0.11896461691933975 5.781030367041764"> </a-text>
         <a-entity hud-button-initiate="" gltf-part="src:#chemlab_UI.gltf;part:button_initiate" position="0.03311036825145217 0.03706075433533758 0.01550400048195931" material="visible:false"></a-entity>
         <a-entity video-player="" material="src:#reagentvid-3;" geometry="width:0.001;depth:5.13;height:2.2399999999999998" position="-2.05 -0.2099999999999999 0.63" rotation="0 0 14.999999999999998"></a-entity> 
-        <a-entity id="hud-lights-greenLight" geometry="primitive:sphere" material="color:green;" position="-2.57 1.626 -1.79" scale="0.181 0.181 0.181"></a-entity>
-        <a-entity id="hud-lights-redLight" geometry="primitive:sphere" material="color:red;" position="-2.495727412390534 1.1862354462609086 -1.7996116816989953" scale="0.181 0.181 0.181"></a-entity>
-        <a-entity id="hud-activate-arrow" hud-arrow="" position="-2.556 2.839 -0.406"></a-entity>
-        <a-entity id="hud-deactivate-arrow" hud-arrow="" position="-1.336 -1.123 -0.01" rotation="0 0 180"></a-entity>
+        <a-entity id="hud-lights-greenLight" hud-light="light:greenLight" geometry="primitive:sphere" material="color:green;opacity:0.9" position="-2.5670972986400145 1.6349799124596773 -1.8059205015431607" scale="0.1515400201818506 0.1515400201818506 0.1515400201818506"></a-entity>
+        <a-entity id="hud-lights-redLight" hud-light="light:redLight" geometry="primitive:sphere" material="color:red;opacity:0.9" position="-2.497243342044656 1.1991073643366739 -1.8156550286089754" scale="0.15833074755666748 0.15833074755666748 0.15833074755666748" visible=""></a-entity>
+        <a-entity id="hud-activate-arrow" hud-arrow="" position="-2.9107365022362313 2.021223710233268 0.6199970402749964"></a-entity>
+        <a-entity id="hud-deactivate-arrow" hud-arrow="" position="-1.7072216773187106 -1.9514653751540192 0.6200000000000002" rotation="0 0 37.849"></a-entity>
       </a-entity>
     </a-entity>
 

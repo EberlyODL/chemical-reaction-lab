@@ -1,6 +1,7 @@
 import './hud-reagents'
 import './hud-button-initiate'
 import './hud-arrow'
+import './hud-lights'
 import { videoState } from '../state/video';
 import { observe } from 'mobx';
 import { bringUpHudOnLookDown, panOnLeftRight } from './hud-movements';
@@ -20,9 +21,6 @@ const hud = {
     this._initialPosition = Object.assign({}, this.el.object3D.position)
     this._initialRotation = Object.assign({}, this.el.object3D.rotation)
 
-    observe(store.hud.lights, (change) => {
-      this.toggleLight(change.name, newValue)
-    })
     observe(store.video, 'status', (change) => {
       this.videoStatusChanged(change)
     })
@@ -45,13 +43,6 @@ const hud = {
     this.updatePosition()
   },
 
-  /**
-   * Toggles the light animations on the hud on and off.
-   * @param {string} light 
-   */
-  toggleLight: function (light, action) {
-    const el = this.el.getElementById(`hub-lights-${light}`)
-  },
 
   /**
    * @todo: needs work

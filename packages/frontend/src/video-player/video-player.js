@@ -1,6 +1,6 @@
 import 'aframe'
 import registerComponent from '../utils/registerComponent';
-import { observe, autorun } from 'mobx';
+import { observe } from 'mobx';
 import { store } from '../state/state';
 
 const videoPlayer = {
@@ -8,21 +8,26 @@ const videoPlayer = {
   },
 
   init: function () {
-    observe(store.video, change => this.updateVideoPlayer(store.video))
+    observe(store.video, 'status', (change) => {
+      const video = store.video
+      this.updateVideoPlayer(video)
+    })
   },
 
   updateVideoPlayer: function (video) {
-    if (video.status === 'off') {
+    const status = video.status
+    const selector = video.selector
+    if (status === false) {
       this.el.setAttribute('visible', false)
-      if (video.video) {
-        const videoEl = this.el.sceneEl.querySelector(video.video)
+      if (selector) {
+        const videoEl = this.el.sceneEl.querySelector(selector)
         videoEl.stop()
       }
     }
-    if (video.status === 'on') {
-      const videoEl = this.el.sceneEl.querySelector(video.video)
+    if (status === true) {
+      const videoEl = this.el.sceneEl.querySelector(selector)
       this.el.setAttribute('visible', true)
-      this.el.setAttribute('material', `src:${video.video};`)
+      this.el.setAttribute('material', `src:${selector};`)
       videoEl.play()
     }
   }

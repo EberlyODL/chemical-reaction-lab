@@ -7,8 +7,8 @@ const hudArrow = {
    * Initial creation and setting of the mesh.
    */
   init: function () {
-    this.el.setAttribute('geometry', '')
-    this.el.setAttribute('material', 'color:pink; side:both')
+    this.el.setAttribute('geometry', 'height:2; depth:13.71')
+    this.el.setAttribute('material', 'color:pink; side:both; opacity:0')
     this.el.setAttribute('scale', '0.4 0.4 0.4')
     this.el.addEventListener('click', this.clickHandler.bind(this))
 

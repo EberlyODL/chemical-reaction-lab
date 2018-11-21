@@ -76,14 +76,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   scene.addEventListener('hud-button-initiate-clicked', e => {
     // if the video is off then we want to find out if this i
-    if (store.video.status === 'off') {
+    const status = store.video.status
+    if (status === false) {
       if (store.activeVideoCombination) {
-        store.video.video = store.activeVideoCombination
-        store.video.status = 'on'
+        store.video.selector = store.activeVideoCombination.video
+        store.video.id = store.activeVideoCombination.id
+        store.video.status = true
       }
     }
-    if (store.video.status === 'on') {
-      store.video.status = 'off'
+    if (status === true) {
+      store.video.status = false
     }
   })
 })
