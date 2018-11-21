@@ -832,6 +832,11 @@ aframe-extras@^4.1.2:
   dependencies:
     three-pathfinding "^0.7.0"
 
+aframe-gltf-part-component@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/aframe-gltf-part-component/-/aframe-gltf-part-component-1.2.0.tgz#f828fcb74d675a606baf1bbdb361926bb874e9aa"
+  integrity sha512-VopKzYXg5V+mT6///hK/2t+m0ro0qBj6BjahaxwvY+9I6KG5ihS/0IP6M5frZ8aS6OsZRSqQRGlhWPoqT6eYSg==
+
 aframe-gui@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/aframe-gui/-/aframe-gui-0.2.1.tgz#bf6e57e48667b556aa5294b9203db38497e014ad"
