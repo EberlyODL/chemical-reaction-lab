@@ -1,0 +1,95 @@
+<html>
+
+<head>
+  <title>
+    chemical-reaction-lab
+  </title>
+  <meta name="description" content="chemical-reaction-lab">
+  <script src="/app.c328ef1a.js"></script>
+</head>
+
+<body>
+  <a-scene loading-screen="dotsColor:red; backgroundColor:black; enabled:true" cursor="rayOrigin: mouse;" physics="gravity: -51; debug:false;" renderer="antialias: true; gammaOutput: true; gammaFactor: 2.2; sortObjects: true;">
+    <a-assets>
+
+      <!-- Objects -->
+      <a-asset-item id="01MCaCl2-object" src="assets/bottles/01MCaCl2.gltf"></a-asset-item>
+      <a-asset-item id="01MKI-object" src="assets/bottles/01MKI.gltf"></a-asset-item>
+      <a-asset-item id="01MNa2CO3-object" src="assets/bottles/01MNa2CO3.gltf"></a-asset-item>
+      <a-asset-item id="1MNa2CO3-object" src="assets/bottles/1MNa2CO3.gltf"></a-asset-item>
+      <a-asset-item id="01MNaBr-object" src="assets/bottles/01MNaBr.gltf"></a-asset-item>
+      <a-asset-item id="03MAgNO3-object" src="assets/bottles/03MAgNO3.gltf"></a-asset-item>
+      <a-asset-item id="3MHCl-object" src="assets/bottles/3MHCl.gltf"></a-asset-item>
+      <a-asset-item id="3MNaOH-object" src="assets/bottles/3MNaOH.gltf"></a-asset-item>
+      <a-asset-item id="013CuSO4-object" src="assets/bottles/013CuSO4.gltf"></a-asset-item>
+      <a-asset-item id="copperstrips-object" src="assets/bottles/copperstrips.gltf"></a-asset-item>
+      <a-asset-item id="CuOH2-object" src="assets/bottles/CuOH2.gltf"></a-asset-item>
+      <a-asset-item id="magnesiumstrips.gltf" src="assets/bottles/magnesiumstrips.gltf"></a-asset-item>
+
+      <!-- Chem Lab Assets -->
+      <a-asset-item id="acidcab_a.gltf" src="assets/chem-lab/acidcab_a.gltf"></a-asset-item>
+      <a-asset-item id="acidcab_b.gltf" src="assets/chem-lab/acidcab_b.gltf"></a-asset-item>
+      <a-asset-item id="acidcab_c.gltf" src="assets/chem-lab/acidcab_c.gltf"></a-asset-item>
+      <a-asset-item id="acidcab_case_1.gltf" src="assets/chem-lab/acidcab_case_1.gltf"></a-asset-item>
+      <a-asset-item id="acidcab_case_2.gltf" src="assets/chem-lab/acidcab_case_2.gltf"></a-asset-item>
+      <a-asset-item id="acidcab_case_3.gltf" src="assets/chem-lab/acidcab_case_3.gltf"></a-asset-item>
+      <a-asset-item id="cab_base.gltf" src="assets/chem-lab/cab_base.gltf"></a-asset-item>
+      <a-asset-item id="chemlab_UI.gltf" src="assets/chem-lab/chemlab_UI.gltf"></a-asset-item>
+      <a-asset-item id="deskchaircomp.gltf" src="assets/chem-lab/deskchaircomp.gltf"></a-asset-item>
+      <a-asset-item id="deskchaircomputer.gltf" src="assets/chem-lab/deskchaircomputer.gltf"></a-asset-item>
+      <a-asset-item id="faucet.gltf" src="assets/chem-lab/faucet.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_left_black.gltf" src="assets/chem-lab/fumehood_knob_left_black.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_left_blue.gltf" src="assets/chem-lab/fumehood_knob_left_blue.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_left_green.gltf" src="assets/chem-lab/fumehood_knob_left_green.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_left_yellow.gltf" src="assets/chem-lab/fumehood_knob_left_yellow.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_right_black.gltf" src="assets/chem-lab/fumehood_knob_right_black.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_right_blue.gltf" src="assets/chem-lab/fumehood_knob_right_blue.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_right_green.gltf" src="assets/chem-lab/fumehood_knob_right_green.gltf"></a-asset-item>
+      <a-asset-item id="fumehood_knob_right_yellow.gltf" src="assets/chem-lab/fumehood_knob_right_yellow.gltf"></a-asset-item>
+      <a-asset-item id="fumehood.gltf" src="assets/chem-lab/fumehood.gltf"></a-asset-item>
+      <a-asset-item id="wallshelves.gltf" src="assets/chem-lab/wallshelves.gltf"></a-asset-item>
+      <a-asset-item id="bottle.gltf" src="assets/chem-lab/bottle.gltf"></a-asset-item>
+      <a-asset-item id="bunsenburner.gltf" src="assets/chem-lab/bunsenburner.gltf"></a-asset-item>
+      <a-asset-item id="doors.gltf" src="assets/chem-lab/doors.gltf"></a-asset-item>
+      <a-asset-item id="goggles.gltf" src="assets/chem-lab/goggles.gltf"></a-asset-item>
+      <a-asset-item id="room.gltf" src="assets/chem-lab/room.gltf"></a-asset-item>
+      <a-asset-item id="scale.gltf" src="assets/chem-lab/scale.gltf"></a-asset-item>
+      <a-asset-item id="drawerscabinets_all.gltf" src="assets/chem-lab/drawerscabinets_all.gltf"></a-asset-item>
+
+      <!-- Video Imports -->
+      <video id="reagentvid-3" preload="none" src="/reaction_3.392bd3a0.mp4"></video>
+      <video id="reagentvid-7" preload="none" src="/reaction_7.986fa9d2.mp4"></video>
+      <video id="reagentvid-9" preload="none" src="/reaction_9.425c2256.mp4"></video>
+      <video id="reagentvid-10" preload="none" src="/reaction_10.0dc22421.mp4"></video>
+      <video id="reagentvid-13" preload="none" src="/reaction_13.478a4c2e.mp4"></video>
+      <video id="reagentvid-14" preload="none" src="/reaction_14.a64ee8d1.mp4"></video>
+      <video id="reagentvid-15" preload="none" src="/reaction_15.6baf79c2.mp4"></video>
+      <video id="reagentvid-16" preload="none" src="/reaction_16.f98de791.mp4"></video>
+      <video id="reagentvid-17" preload="none" src="/reaction_17.ff9224f7.mp4"></video>
+      <video id="reagentvid-18" preload="none" src="/reaction_18.7d67a51a.mp4"></video>
+
+      <!-- Mixins -->
+      <a-mixin id="cube" cube-mixin="" track-movement="" droppable-item="" tabindex="0" shadow=""></a-mixin>
+      <a-mixin id="lab-table-mixin" droppable="" event-set__dragon="_event: dragover-start; wireframe: true" event-set__dragoff="_event: dragover-end; wireframe: false;"></a-mixin>
+      <a-mixin id="transformer" color-randomizer="" droppable="" static-body="" collision-filter="collisionForces: false" geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.5"></a-mixin>
+      <!-- to customize gaze cursor appearance. must list all components
+             because override property is set on progressive-controls -->
+      <a-mixin id="mycursor" position="0 0 -0.5" raycaster="" geometry="primitive: ring; radiusOuter: 0.008; radiusInner: 0.005; segmentsTheta: 32" material="color: white; shader: flat" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection;
+                              colliderEventProperty: els;
+                              colliderEndEvent:raycaster-intersection-cleared;
+                              colliderEndEventProperty: clearedEls;
+                              colliderState:"></a-mixin>
+      <!-- to change touch mode collider -->
+      <a-mixin id="mytouch" physics-collider="" phase-shift="" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions; colliderEventProperty: els;
+                              colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;
+                              colliderState:"></a-mixin>
+    </a-assets>
+
+    <a-entity scale="5 5 5" position="0 1 -1">
+      <a-entity gltf-model="#01MCaCl2-object"></a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
