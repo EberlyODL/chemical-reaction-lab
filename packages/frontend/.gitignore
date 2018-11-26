@@ -1,2 +1,2 @@
-dist/
-!dist/**.gltf
+dist
+# !dist/assets/
