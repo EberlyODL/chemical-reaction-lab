@@ -4,7 +4,7 @@ import registerComponent from '../utils/registerComponent';
 const touching = {
   schema: {
     target: { type: 'selector' },
-    distance: { type: 'number', default: 2 },
+    distance: { type: 'number', default: 1 },
   },
 
   init: function () {

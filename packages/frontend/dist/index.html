@@ -68,6 +68,17 @@
       <video id="reagentvid-17" preload="none" src="/reaction_17.ff9224f7.mp4"></video>
       <video id="reagentvid-18" preload="none" src="/reaction_18.7d67a51a.mp4"></video>
 
+      <!-- Bottle Labels -->
+      <img id="01MKI-label" src="/01MKI.62b612c3.jpg">
+      <img id="01MNa2CO3-label" src="/01MNa2CO3.5406393d.jpg">
+      <img id="1MNa2CO3-label" src="/1MNa2CO3.201be19f.jpg">
+      <img id="01MNaBr-label" src="/01MNaBr.7b5c36d6.jpg">
+      <img id="03MAgNO3-label" src="/03MAgNO3.b8b69487.jpg">
+      <img id="3MHCl-label" src="/3MHCl.56ce9c80.jpg">
+      <img id="3MNaOH-label" src="/3MNaOH.ca4b05c6.jpg">
+      <!-- <img id="013CuSO4-label" src="assets/chem-lab/bottle-labels/013CuSO4.jpg"> -->
+      <img id="CuOH2-label" src="/CuOH2.9ab956fe.jpg">
+
       <!-- Mixins -->
       <a-mixin id="cube" cube-mixin="" track-movement="" droppable-item="" tabindex="0" shadow=""></a-mixin>
       <a-mixin id="lab-table-mixin" droppable="" event-set__dragon="_event: dragover-start; wireframe: true" event-set__dragoff="_event: dragover-end; wireframe: false;"></a-mixin>
@@ -129,16 +140,16 @@
 
 
     <!-- Bottle -->
-    <a-entity id="bottle-01MKI" data-inventory-id="01MKI" gltf-model="#01MKI-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" rotation="0 0 0" position="-10 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-01MNa2CO3" data-inventory-id="01MNa2CO3" gltf-model="#01MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9.5 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-1MNa2CO3" data-inventory-id="1MNa2CO3" gltf-model="#1MNa2CO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-9 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-01MNaBr" data-inventory-id="01MNaBr" gltf-model="#01MNaBr-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8.5 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-03MAgNO3" data-inventory-id="03MAgNO3" gltf-model="#03MAgNO3-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-8 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-3MHCl" data-inventory-id="3MHCl" gltf-model="#3MHCl-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7.5 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-3MNaOH" data-inventory-id="3MNaOH" gltf-model="#3MNaOH-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-7 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-013CuSO4" data-inventory-id="013CuSO4" gltf-model="#013CuSO4-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:01MKI" position="-10 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:01MNa2CO3" position="-9.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:1MNa2CO3" position="-9 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:01MNaBr" position="-8.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:03MAgNO3" position="-8 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:3MHCl" position="-7.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:3MNaOH" position="-7 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:013CuSO4" position="-6.5 5.723517532020134 -7.613044906943596"></a-entity>
+    <a-entity bottle="id:CuOH2" position="-5.5 5.723517532020134 -7.613044906943596"></a-entity>
     <a-entity id="bottle-copperstrips" data-inventory-id="copperstrips" gltf-model="#copperstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-6 5.723517532020134 -7.613044906943596"></a-entity>
-    <a-entity id="bottle-CuOH2" data-inventory-id="CuOH2" gltf-model="#CuOH2-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5.5 5.723517532020134 -7.613044906943596"></a-entity>
     <a-entity id="bottle-magnesiumstrips" data-inventory-id="magnesiumstrips" gltf-model="#magnesiumstrips-object" touching="target:#lab-table" mixin="cube" scale="5 5 5" position="-5 5.723517532020134 -7.613044906943596"></a-entity>
     <a-entity id="bunsen-burner" data-inventory-id="bunsenburner" touching="target:#lab-table" mixin="cube" geometry="primative:box;width:.5,height:1;depth:.5" position="-4.706 5.629 4.025"></a-entity>
 

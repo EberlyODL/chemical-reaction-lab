@@ -239,7 +239,7 @@
             }
         },
         {
-            "name" : "Material.002",
+            "name" : "Material_002",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     0.5390870571136475,
@@ -252,7 +252,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Cylinder.000",
+            "name" : "Cylinder_000",
             "primitives" : [
                 {
                     "attributes" : {
@@ -267,7 +267,7 @@
             ]
         },
         {
-            "name" : "Cylinder.003",
+            "name" : "Cylinder_003",
             "primitives" : [
                 {
                     "attributes" : {
@@ -285,7 +285,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "bottle.000",
+            "name" : "bottle_000",
             "scale" : [
                 0.029657546430826187,
                 0.029657471925020218,
@@ -299,7 +299,7 @@
         },
         {
             "mesh" : 1,
-            "name" : "bottle.002",
+            "name" : "bottle_002",
             "scale" : [
                 0.029657546430826187,
                 0.029657471925020218,

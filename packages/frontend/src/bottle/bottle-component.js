@@ -1,20 +1,38 @@
-import 'aframe'
+import registerComponent from '../utils/registerComponent';
 
-const register = () => {
-  AFRAME.registerComponent('bottle', {
-    init: function () {
-      var geometry = new THREE.SphereBufferGeometry( 100, 32, 16 )
-      var shader = THREE.FresnelShader
-      var uniforms = THREE.UniformsUtils.clone( shader.uniforms )
-      var material = new THREE.ShaderMaterial({
-        uniforms: uniforms,
-        vertexShader: shader.vertexShader,
-        fragmentShader: shader.fragmentShader
-      })
-      var mesh = new THREE.Mesh( geometry, material );
-      this.el.setObject3D('mesh', mesh)
-    },
-  })
+const bottle = {
+  schema: {
+    id: { type: 'string' }
+  },
+
+  init: function () {
+    const data = this.data
+    const el = this.el
+
+    // set up the bottle
+    el.id = `bottle-${data.id}`
+    el.dataset.inventoryId = data.id
+    el.setAttribute('track-movement', '')
+    el.setAttribute('droppable-item', '')
+    el.setAttribute('tabindex', '0')
+    el.setAttribute('touching', 'target: #lab-table')
+    el.setAttribute('scale', '5 5 5')
+    // load the bottle
+    el.setAttribute('gltf-model', '#bottle.gltf')
+
+    // add a dynaimc label
+    const labelEl = document.createElement('a-entity')
+    labelEl.data
+    labelEl.className = 'label'
+    labelEl.setAttribute('gltf-part', 'src:#01MCaCl2-object; part:3MHCl;')
+    labelEl.setAttribute('position', '0 0 0.001')
+    labelEl.setAttribute('material', `
+      src:#${this.data.id}-label;
+      repeat: 1 -1;
+    `)
+    this._labelEl = el.appendChild(labelEl)
+  }
+
 }
 
-export default register()
+export default registerComponent('bottle', bottle)
