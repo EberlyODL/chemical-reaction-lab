@@ -1,3 +1,4 @@
+import {html, render} from 'lit-html';
 import registerComponent from '../utils/registerComponent';
 
 const bottle = {
@@ -6,6 +7,9 @@ const bottle = {
   },
 
   init: function () {
+  },
+
+  update: function () {
     const data = this.data
     const el = this.el
 
@@ -17,20 +21,14 @@ const bottle = {
     el.setAttribute('tabindex', '0')
     el.setAttribute('touching', 'target: #lab-table')
     el.setAttribute('scale', '5 5 5')
-    // load the bottle
     el.setAttribute('gltf-model', '#bottle.gltf')
+    render(this._template(this.data), this.el);
+  },
 
-    // add a dynaimc label
-    const labelEl = document.createElement('a-entity')
-    labelEl.data
-    labelEl.className = 'label'
-    labelEl.setAttribute('gltf-part', 'src:#01MCaCl2-object; part:3MHCl;')
-    labelEl.setAttribute('position', '0 0 0.001')
-    labelEl.setAttribute('material', `
-      src:#${this.data.id}-label;
-      repeat: 1 -1;
-    `)
-    this._labelEl = el.appendChild(labelEl)
+  _template: (data) => {
+    return html`
+      <a-entity class="label" gltf-part="src:#01MCaCl2-object; part:3MHCl;" position="0 0 0.001" material="src:#${data.id}-label; repeat: 1 -1;"></a-entity>
+    `
   }
 
 }
