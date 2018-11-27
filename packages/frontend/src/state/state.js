@@ -20,13 +20,16 @@ export const store = observable({
     return videoMatrix.find(v => {
       const selectedObjects = this.selectedObjects 
       const combination = v.combination
-      // see
+      let combo = true
+      // make sure then the selected objects are the same length
       if (selectedObjects.length !== combination.length) return false
       // see if one isn't in the selected object
       selectedObjects.forEach(i => {
-        if (!combination.includes(i)) return false 
+        if (!combination.includes(i)) {
+          combo = false
+        }
       })
-      return true
+      return combo
     })
   }
 });
