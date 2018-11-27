@@ -1,3 +1,2 @@
-# !dist/assets/
-dist
-!dist/assets/*
+# Ingore all direct children in the dist folder.
+dist/*.* 
