@@ -1,6 +1,5 @@
 import { observable, reaction, autorun, trace, observe } from 'mobx';
 import { videoMatrix } from './constants'
-import { isEqual } from 'lodash'
 
 export const store = observable({
   video: {
@@ -17,7 +16,18 @@ export const store = observable({
   },
   selectedObjects: [],
   get activeVideoCombination() {
-    return videoMatrix.find(v => isEqual(v.combination, this.selectedObjects))
+    // return videoMatrix.find(v => v.combination, this.selectedObjects)
+    return videoMatrix.find(v => {
+      const selectedObjects = this.selectedObjects 
+      const combination = v.combination
+      // see
+      if (selectedObjects.length !== combination.length) return false
+      // see if one isn't in the selected object
+      selectedObjects.forEach(i => {
+        if (!combination.includes(i)) return false 
+      })
+      return true
+    })
   }
 });
 
