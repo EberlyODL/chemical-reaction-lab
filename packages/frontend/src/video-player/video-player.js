@@ -21,7 +21,8 @@ const videoPlayer = {
       this.el.setAttribute('visible', false)
       if (selector) {
         const videoEl = this.el.sceneEl.querySelector(selector)
-        videoEl.stop()
+        videoEl.pause()
+        videoEl.currentTime = 0
       }
     }
     if (status === true) {

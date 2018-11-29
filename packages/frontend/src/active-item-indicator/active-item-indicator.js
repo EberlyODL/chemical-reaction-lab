@@ -39,6 +39,7 @@ AFRAME.registerComponent("active-item-indicator", {
     });
 
     this.el.sceneEl.addEventListener("droppable-surface-new-active-item-removed", e => {
+      console.log('shutting off')
       this.el.setAttribute("visible", false);
     });
   },
@@ -49,25 +50,26 @@ AFRAME.registerComponent("active-item-indicator", {
   },
 
   tick: function () {
-    if (this._activeEl.el && this._activeEl.elSize) {
-      // get position of activeEl
-      const el = this._activeEl.el
-      const elSize = this._activeEl.elSize
-      const newPosition = this.vec3.copy(el.object3D.position).add({x:0, y: elSize.y, z:0}).sub(this.data.offset)
-      this.el.setAttribute('position', newPosition)
-    }
+    // if (this._activeEl.el && this._activeEl.elSize) {
+    //   // get position of activeEl
+    //   const el = this._activeEl.el
+    //   const elSize = this._activeEl.elSize
+    //   const newPosition = this.vec3.copy(el.object3D.position).add({x:0, y: elSize.y, z:0}).sub(this.data.offset)
+    //   this.el.setAttribute('position', newPosition)
+    // }
   },
 
   updateIndicator: function (el) {
     // const targets = this.data.targets.split(",").map(i => i.trim());
     // const isValid = targets.find(i => el.matches(i));
     // if (typeof isValid !== "undefined" && isValid) {
-      // set it to visible
-      this.el.setAttribute("visible", true);
-      // get the coordinates of the selected element and position set it there.
-      const targetPosition = el.object3D.position;
-      const elMesh = el.getObject3D('mesh')
-      var elSize = this.box3.setFromObject(elMesh).getSize();
-      this._activeEl = Object.assign({}, {el, elSize})
+    // set it to visible
+    this.el.setAttribute("visible", '');
+    // get the coordinates of the selected element and position set it there.
+    const elMesh = el.getObject3D('mesh')
+    var elSize = this.box3.setFromObject(elMesh).getSize();
+    const newPosition = this.vec3.copy(el.object3D.position).add({x:0, y: elSize.y, z:0}).sub(this.data.offset)
+    this.el.setAttribute('position', newPosition)
+    this.el.setAttribute("visible", '');
   }
 });
