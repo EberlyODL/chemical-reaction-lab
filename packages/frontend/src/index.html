@@ -5,11 +5,24 @@
     chemical-reaction-lab
   </title>
   <meta name="description" content="chemical-reaction-lab">
+  <style>
+    a-scene {
+      display: none;
+    }
+  </style>
   <script src="app.js"></script>
 </head>
 
 <body>
-  <a-scene loading-screen="dotsColor:red; backgroundColor:black; enabled:true" cursor="rayOrigin: mouse;" physics="gravity: -51; debug:false;" renderer="antialias: true; gammaOutput: true; gammaFactor: 2.2; sortObjects: true;">
+
+    <crl-intro></crl-intro>
+
+    <a-scene 
+    preloader="debug:true;"
+    loading-screen="dotsColor:red; backgroundColor:black; enabled:true"
+    cursor="rayOrigin: mouse;"
+    renderer="antialias: true; gammaOutput: true; gammaFactor: 2.2; sortObjects: true;">
+
     <a-assets>
 
       <!-- Objects -->
@@ -99,6 +112,7 @@
                               colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;
                               colliderState:"></a-mixin>
     </a-assets>
+
 
     <!-- Surfaces -->
     <a-box id="lab-table" droppable-surface lab-table mixin="lab-table-mixin" static-body rotation="0 90 0" position="-9.459530372134438 3.881 -6.8842553482862305"
@@ -199,6 +213,7 @@
     </a-entity>
 
   </a-scene>
+
 </body>
 
 </html>

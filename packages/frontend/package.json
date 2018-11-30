@@ -13,6 +13,8 @@
     "@gladeye/aframe-preloader-component": "^1.0.2",
     "@odl/aframe-droppable-surface-component": "^1.0.11-alpha.0",
     "@odl/aframe-raycaster-follower-component": "^1.0.11-alpha.0",
+    "@polymer/lit-element": "^0.6.3",
+    "@webcomponents/webcomponentsjs": "^2.2.1",
     "aframe": "^0.8.2",
     "aframe-animation-component": "^5.1.2",
     "aframe-event-set-component": "^4.1.1",
@@ -53,6 +55,7 @@
     "parcel:build": "parcel build -d dist src/index.html"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
