@@ -2,6 +2,7 @@ import { observable, reaction, autorun, trace, observe } from 'mobx';
 import { videoMatrix } from './constants'
 
 export const store = observable({
+  activePage: 'intro',
   video: {
     status: false,
     selector: null,

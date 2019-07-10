@@ -1,7 +1,4 @@
-#hud {
-  display: block;
-  width: 500px;
-  height: 100px;
-  background: blue;
-  stroke: 2px solid white;
+body {
+  margin: 0;
+  padding: 0;
 }
