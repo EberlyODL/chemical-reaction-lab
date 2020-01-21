@@ -1,5 +1,7 @@
 # PRISM Demo
 
+![](screenshot.png)
+
 An application that demos how Apollo and Prisma GraphQL working together in vanilla javascript.
 
 ## Install PROD
