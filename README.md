@@ -1,4 +1,4 @@
-# PRISM Demo
+# Chemical Reaction Lab
 
 ![](screenshot.png)
 
