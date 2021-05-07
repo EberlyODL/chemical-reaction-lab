@@ -45,7 +45,7 @@
     "graphql-tag": "^2.10.0",
     "graphql-tools": "^4.0.0",
     "lit-html": "^0.14.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mobx": "^5.6.0",
     "subscriptions-transport-ws": "^0.9.15",
     "super-hands": "^2.1.0",
